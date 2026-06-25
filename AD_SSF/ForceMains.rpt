@@ -1,0 +1,286 @@
+
+  EPA STORM WATER MANAGEMENT MODEL - VERSION 5.2 (Build 5.2.4)
+  ------------------------------------------------------------
+
+  
+  *************
+  Element Count
+  *************
+  Number of rain gages ...... 0
+  Number of subcatchments ... 0
+  Number of nodes ........... 6
+  Number of links ........... 5
+  Number of pollutants ...... 0
+  Number of land uses ....... 0
+  
+  
+  ************
+  Node Summary
+  ************
+                                           Invert      Max.    Ponded    External
+  Name                 Type                 Elev.     Depth      Area    Inflow  
+  -------------------------------------------------------------------------------
+  Jun-1                JUNCTION             20.00      2.00       0.0    Yes
+  Jun-2                JUNCTION             20.00      2.00       0.0
+  Jun-3                JUNCTION              8.00      2.00       0.0    Yes
+  Jun-4                JUNCTION              8.00      2.00       0.0
+  Jun-5                JUNCTION              9.00      1.00       0.0
+  Jun-6                OUTFALL              15.00      1.00       0.0
+  
+  
+  ************
+  Link Summary
+  ************
+  Name             From Node        To Node          Type            Length    %Slope Roughness
+  ---------------------------------------------------------------------------------------------
+  Con-1            Jun-2            Jun-5            CONDUIT        16300.0    0.0675    0.0150
+  Con-2            Jun-4            Jun-5            CONDUIT         2000.0   -0.0500    0.0150
+  Con-3            Jun-5            Jun-6            CONDUIT        17000.0   -0.0353    0.0090
+  Pump-1           Jun-1            Jun-2            TYPE3 PUMP  
+  Pump-2           Jun-3            Jun-4            TYPE3 PUMP  
+  
+  
+  *********************
+  Cross Section Summary
+  *********************
+                                        Full     Full     Hyd.     Max.   No. of     Full
+  Conduit          Shape               Depth     Area     Rad.    Width  Barrels     Flow
+  ---------------------------------------------------------------------------------------
+  Con-1            FORCE_MAIN           0.50     0.20     0.12     0.50        1     0.12
+  Con-2            FORCE_MAIN           1.00     0.79     0.25     1.00        1     0.63
+  Con-3            FORCE_MAIN           1.00     0.79     0.25     1.00        1     0.52
+  
+  
+  ****************
+  Analysis Options
+  ****************
+  Flow Units ............... MGD
+  Process Models:
+    Rainfall/Runoff ........ NO
+    RDII ................... NO
+    Snowmelt ............... NO
+    Groundwater ............ NO
+    Flow Routing ........... YES
+    Ponding Allowed ........ YES
+    Water Quality .......... NO
+  Flow Routing Method ...... DYNWAVE
+  Surcharge Method ......... EXTRAN
+  Starting Date ............ 09/04/2008 00:00:00
+  Ending Date .............. 09/05/2008 00:00:00
+  Antecedent Dry Days ...... 0.0
+  Report Time Step ......... 00:01:00
+  Routing Time Step ........ 60.00 sec
+  Variable Time Step ....... YES
+  Maximum Trials ........... 8
+  Number of Threads ........ 1
+  Head Tolerance ........... 0.005000 ft
+  
+  
+  *********************
+  Control Actions Taken
+  *********************
+
+  
+  **************************        Volume        Volume
+  Flow Routing Continuity        acre-feet      10^6 gal
+  **************************     ---------     ---------
+  Dry Weather Inflow .......         0.000         0.000
+  Wet Weather Inflow .......         0.000         0.000
+  Groundwater Inflow .......         0.000         0.000
+  RDII Inflow ..............         0.000         0.000
+  External Inflow ..........         4.760         1.551
+  External Outflow .........         1.622         0.529
+  Flooding Loss ............         2.815         0.917
+  Evaporation Loss .........         0.000         0.000
+  Exfiltration Loss ........         0.000         0.000
+  Initial Stored Volume ....         0.000         0.000
+  Final Stored Volume ......         0.323         0.105
+  Continuity Error (%) .....         0.010
+  
+  
+  *************************
+  Highest Continuity Errors
+  *************************
+  Node Jun-2 (20.94%)
+  Node Jun-5 (13.10%)
+  Node Jun-4 (1.12%)
+  
+  
+  ***************************
+  Time-Step Critical Elements
+  ***************************
+  None
+  
+  
+  ********************************
+  Highest Flow Instability Indexes
+  ********************************
+  All links are stable.
+  
+  
+  *********************************
+  Most Frequent Nonconverging Nodes
+  *********************************
+  Node Jun-4 (1.46%)
+  Node Jun-6 (1.46%)
+  Node Jun-5 (1.32%)
+  Node Jun-2 (0.62%)
+  
+  
+  *************************
+  Routing Time Step Summary
+  *************************
+  Minimum Time Step           :    18.49 sec
+  Average Time Step           :    59.88 sec
+  Maximum Time Step           :    60.00 sec
+  % of Time in Steady State   :     0.00
+  Average Iterations per Step :     2.30
+  % of Steps Not Converging   :     1.46
+  Time Step Frequencies       :
+     60.000 - 23.031 sec      :    99.79 %
+     23.031 -  8.841 sec      :     0.21 %
+      8.841 -  3.393 sec      :     0.00 %
+      3.393 -  1.303 sec      :     0.00 %
+      1.303 -  0.500 sec      :     0.00 %
+  
+  
+  ******************
+  Node Depth Summary
+  ******************
+  
+  ---------------------------------------------------------------------------------
+                                 Average  Maximum  Maximum  Time of Max    Reported
+                                   Depth    Depth      HGL   Occurrence   Max Depth
+  Node                 Type         Feet     Feet     Feet  days hr:min        Feet
+  ---------------------------------------------------------------------------------
+  Jun-1                JUNCTION     0.00     0.00    20.00     0  00:00        0.00
+  Jun-2                JUNCTION     9.09    15.11    35.11     0  04:53       13.63
+  Jun-3                JUNCTION    71.68    72.00    80.00     0  00:11       72.00
+  Jun-4                JUNCTION    18.65    21.63    29.63     0  10:13       21.63
+  Jun-5                JUNCTION    16.67    19.70    28.70     1  00:00       19.70
+  Jun-6                OUTFALL      0.35     0.41    15.41     0  10:13        0.41
+  
+  
+  *******************
+  Node Inflow Summary
+  *******************
+  
+  -------------------------------------------------------------------------------------------------
+                                  Maximum  Maximum                  Lateral       Total        Flow
+                                  Lateral    Total  Time of Max      Inflow      Inflow     Balance
+                                   Inflow   Inflow   Occurrence      Volume      Volume       Error
+  Node                 Type           MGD      MGD  days hr:min    10^6 gal    10^6 gal     Percent
+  -------------------------------------------------------------------------------------------------
+  Jun-1                JUNCTION     0.051    0.051     0  00:00       0.051       0.051       0.000
+  Jun-2                JUNCTION     0.000    0.125     0  04:39           0       0.055      26.493
+  Jun-3                JUNCTION     1.500    1.500     0  00:00         1.5         1.5       0.467
+  Jun-4                JUNCTION     0.000    0.576     0  00:00           0       0.576       1.135
+  Jun-5                JUNCTION     0.000    0.627     0  10:07           0       0.613      15.077
+  Jun-6                OUTFALL      0.000    0.627     0  10:14           0       0.529       0.000
+  
+  
+  **********************
+  Node Surcharge Summary
+  **********************
+  
+  Surcharging occurs when water rises above the top of the highest conduit.
+  ---------------------------------------------------------------------
+                                               Max. Height   Min. Depth
+                                   Hours       Above Crown    Below Rim
+  Node                 Type      Surcharged           Feet         Feet
+  ---------------------------------------------------------------------
+  Jun-1                JUNCTION       24.00          0.000        2.000
+  Jun-2                JUNCTION       19.14         14.613        0.000
+  Jun-3                JUNCTION       24.00         72.000        0.000
+  Jun-4                JUNCTION       23.76         20.633        0.000
+  Jun-5                JUNCTION       20.58         18.704        0.000
+  
+  
+  *********************
+  Node Flooding Summary
+  *********************
+  
+  Flooding refers to all water that overflows a node, whether it ponds or not.
+  --------------------------------------------------------------------------
+                                                             Total   Maximum
+                                 Maximum   Time of Max       Flood    Ponded
+                        Hours       Rate    Occurrence      Volume     Depth
+  Node                 Flooded       MGD   days hr:min    10^6 gal      Feet
+  --------------------------------------------------------------------------
+  Jun-3                  23.83     0.924      0  00:11       0.917    70.000
+  
+  
+  ***********************
+  Outfall Loading Summary
+  ***********************
+  
+  -----------------------------------------------------------
+                         Flow       Avg       Max       Total
+                         Freq      Flow      Flow      Volume
+  Outfall Node           Pcnt       MGD       MGD    10^6 gal
+  -----------------------------------------------------------
+  Jun-6                 85.45     0.618     0.627       0.529
+  -----------------------------------------------------------
+  System                85.45     0.618     0.627       0.529
+  
+  
+  ********************
+  Link Flow Summary
+  ********************
+  
+  -----------------------------------------------------------------------------
+                                 Maximum  Time of Max   Maximum    Max/    Max/
+                                  |Flow|   Occurrence   |Veloc|    Full    Full
+  Link                 Type          MGD  days hr:min    ft/sec    Flow   Depth
+  -----------------------------------------------------------------------------
+  Con-1                CONDUIT     0.074     0  04:39      0.65    0.62    1.00
+  Con-2                CONDUIT     0.580     0  03:33      2.21    0.92    1.00
+  Con-3                CONDUIT     0.627     0  10:14      1.64    1.19    0.71
+  Pump-1               PUMP        0.051     0  00:00              0.09
+  Pump-2               PUMP        0.576     0  00:00              1.00
+  
+  
+  ***************************
+  Flow Classification Summary
+  ***************************
+  
+  -------------------------------------------------------------------------------------
+                      Adjusted    ---------- Fraction of Time in Flow Class ---------- 
+                       /Actual         Up    Down  Sub   Sup   Up    Down  Norm  Inlet 
+  Conduit               Length    Dry  Dry   Dry   Crit  Crit  Crit  Crit  Ltd   Ctrl  
+  -------------------------------------------------------------------------------------
+  Con-1                   1.00   0.00  0.00  0.00  1.00  0.00  0.00  0.00  0.13  0.00
+  Con-2                   1.00   0.00  0.00  0.00  1.00  0.00  0.00  0.00  0.01  0.00
+  Con-3                   1.00   0.00  0.14  0.00  0.86  0.00  0.00  0.00  0.00  0.00
+  
+  
+  *************************
+  Conduit Surcharge Summary
+  *************************
+  
+  ----------------------------------------------------------------------------
+                                                           Hours        Hours 
+                         --------- Hours Full --------   Above Full   Capacity
+  Conduit                Both Ends  Upstream  Dnstream   Normal Flow   Limited
+  ----------------------------------------------------------------------------
+  Con-1                      19.14     19.14     22.19      0.01         0.01
+  Con-2                      20.58     20.58     23.76      0.01         0.01
+  Con-3                       0.01      0.01     20.54     19.11         0.01
+  
+  
+  ***************
+  Pumping Summary
+  ***************
+  
+  ---------------------------------------------------------------------------------------------------------
+                                                  Min       Avg       Max     Total     Power    % Time Off
+                        Percent   Number of      Flow      Flow      Flow    Volume     Usage    Pump Curve
+  Pump                 Utilized   Start-Ups       MGD       MGD       MGD  10^6 gal     Kw-hr    Low   High
+  ---------------------------------------------------------------------------------------------------------
+  Pump-1                 100.00           1      0.00      0.05      0.05     0.051      1.46    0.0   20.3
+  Pump-2                 100.00           1      0.00      0.58      0.58     0.576     96.03    0.0  100.0
+  
+
+  Analysis begun on:  Tue Jun 23 20:32:30 2026
+  Analysis ended on:  Tue Jun 23 20:32:30 2026
+  Total elapsed time: < 1 sec

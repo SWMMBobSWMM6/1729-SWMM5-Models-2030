@@ -1,0 +1,54 @@
+# 💧 Broomfield LID Underdrain Example US units.inp
+
+![flow units](https://img.shields.io/badge/flow_units-CFS-blue) ![routing](https://img.shields.io/badge/routing-Dynwave-2ea44f) ![infiltration](https://img.shields.io/badge/infiltration-Modified__Green__Ampt-9cf) ![nodes](https://img.shields.io/badge/nodes-1-informational) ![links](https://img.shields.io/badge/links-0-informational) ![subcatchments](https://img.shields.io/badge/subcatchments-2-informational) ![status](https://img.shields.io/badge/status-1_error-red)
+
+> [!CAUTION]
+> **Run failed** -- 1 fatal error(s) in `Broomfield LID Underdrain Example US units.rpt`.<br>ERROR 305: cannot open report file.at line 85 of [LID_USAGE] section:
+
+**Title:** Example 5 A simple groundwater example.  
+**Location:** `LID/Broomfield LID Underdrain Example US units.inp`
+
+## ⚙️ Configuration
+
+| Setting | Value |
+|---|---|
+| Flow units | CFS |
+| Infiltration | MODIFIED_GREEN_AMPT |
+| Flow routing | DYNWAVE |
+| Simulation start | 09/13/2014 00:00:00 |
+| Simulation end | 09/15/2014 00:00:00 |
+| Duration | 2 days |
+| Report step | 01:00:00 |
+| Routing step | 0:00:30 s |
+
+## 💧 Hydrology
+
+| Item | Count |
+|---|--:|
+| Subcatchments | 2 |
+| Total area (ac) | 10.00 |
+| Raingages | 1 |
+
+## 🔧 Hydraulics
+
+| Nodes | Count | Links | Count |
+|---|--:|---|--:|
+| Junctions | 0 | Conduits | 0 |
+| Outfalls | 1 | Pumps | 0 |
+| Storage | 0 | Orifices | 0 |
+| Dividers | 0 | Weirs | 0 |
+| **Total nodes** | **1** | Outlets | 0 |
+|  |  | **Total links** | **0** |
+
+## 🌿 LID Controls
+
+LID control definitions: **1** &nbsp;|&nbsp; Subcatchment deployments: **1**
+
+## 📈 Forcing & Data
+
+| Item | Count |
+|---|--:|
+| Time series | 1 |
+
+---
+<sub>📄 Auto-generated 2026-06-24 • summary of `Broomfield LID Underdrain Example US units.inp`</sub>

@@ -1,0 +1,209 @@
+[TITLE]
+;;Project Title/Notes
+Demonstrates the fix for a v5.1.013 parsing bug that incorrectly interpreted an ID name in the [REPORT]
+section begining with "ALL" as the "ALL" keyword (with the same behavior for the "NONE" keyword). Running this
+file shows that the entries "ALL_C1_3" and "ALL_C1_4" in the [REPORT] section are now recognized as link IDs.
+
+[OPTIONS]
+;;Option             Value
+FLOW_UNITS           CMS
+INFILTRATION         HORTON
+FLOW_ROUTING         DYNWAVE
+LINK_OFFSETS         DEPTH
+MIN_SLOPE            0
+ALLOW_PONDING        NO
+SKIP_STEADY_STATE    NO
+
+START_DATE           04/08/2008
+START_TIME           10:00:00
+REPORT_START_DATE    04/08/2008
+REPORT_START_TIME    10:00:00
+END_DATE             04/08/2008
+END_TIME             22:00:00
+SWEEP_START          01/01
+SWEEP_END            12/31
+DRY_DAYS             0
+REPORT_STEP          00:01:00
+WET_STEP             00:05:00
+DRY_STEP             00:05:00
+ROUTING_STEP         0:00:05 
+RULE_STEP            00:00:00
+
+INERTIAL_DAMPING     PARTIAL
+NORMAL_FLOW_LIMITED  BOTH
+FORCE_MAIN_EQUATION  H-W
+VARIABLE_STEP        0.75
+LENGTHENING_STEP     0
+MIN_SURFAREA         0
+MAX_TRIALS           8
+HEAD_TOLERANCE       0.0015
+SYS_FLOW_TOL         5
+LAT_FLOW_TOL         5
+MINIMUM_STEP         0.5
+THREADS              6
+
+[EVAPORATION]
+;;Data Source    Parameters
+;;-------------- ----------------
+CONSTANT         0.0
+DRY_ONLY         NO
+
+[RAINGAGES]
+;;Name           Format    Interval SCF      Source    
+;;-------------- --------- ------ ------ ----------
+Chicago_3h       INTENSITY 0:05     1.0      TIMESERIES Chicago_3h      
+
+[SUBCATCHMENTS]
+;;Name           Rain Gage        Outlet           Area     %Imperv  Width    %Slope   CurbLen  SnowPack        
+;;-------------- ---------------- ---------------- -------- -------- -------- -------- -------- ----------------
+S1               Chicago_3h       J1               7.3877   25       500      0.5      0                        
+
+[SUBAREAS]
+;;Subcatchment   N-Imperv   N-Perv     S-Imperv   S-Perv     PctZero    RouteTo    PctRouted 
+;;-------------- ---------- ---------- ---------- ---------- ---------- ---------- ----------
+S1               0.01       0.1        0.05       0.05       25         OUTLET    
+
+[INFILTRATION]
+;;Subcatchment   MaxRate    MinRate    Decay      DryTime    MaxInfil  
+;;-------------- ---------- ---------- ---------- ---------- ----------
+S1               3          0.5        4          7          0         
+
+[JUNCTIONS]
+;;Name           Elevation  MaxDepth   InitDepth  SurDepth   Aponded   
+;;-------------- ---------- ---------- ---------- ---------- ----------
+J1               2.14       2          0          0          0         
+J10              0.257      1.2        0          0          0         
+J11              0.342      1.6        0          0          0         
+J3               1.712      2          0          0          0         
+J4               1.284      2          0          0          0         
+J5               0.856      2          0          0          0         
+J6               0.428      2          0          0          0         
+J7               0          0          0          0          0         
+J8               0.086      0.4        0          0          0         
+J9               0.171      0.8        0          0          0         
+
+[OUTFALLS]
+;;Name           Elevation  Type       Stage Data       Gated    Route To        
+;;-------------- ---------- ---------- ---------------- -------- ----------------
+J2               0          FREE                        NO                       
+
+[CONDUITS]
+;;Name           From Node        To Node          Length     Roughness  InOffset   OutOffset  InitFlow   MaxFlow   
+;;-------------- ---------------- ---------------- ---------- ---------- ---------- ---------- ---------- ----------
+ALL_C1_1         J1               J3               213.862    0.01       0          0          0          0         
+ALL_C1_2         J3               J4               213.862    0.01       0          0          0          0         
+ALL_C1_3         J4               J5               213.862    0.01       0          0          0          0         
+ALL_C1_4         J5               J6               213.862    0.01       0          0          0          0         
+ALL_C1_5         J6               J2               213.861    0.01       0          0          0          0         
+C1_1             J7               J8               180.866    0.01       0          0          0          0         
+C1_2             J8               J9               180.866    0.01       0          0          0          0         
+C1_3             J9               J10              180.866    0.01       0          0          0          0         
+C1_4             J10              J11              180.866    0.01       0          0          0          0         
+C1_5             J11              J6               180.866    0.01       0          0          0          0         
+
+[XSECTIONS]
+;;Link           Shape        Geom1            Geom2      Geom3      Geom4      Barrels    Culvert   
+;;-------------- ------------ ---------------- ---------- ---------- ---------- ---------- ----------
+ALL_C1_1         CIRCULAR     1                0          0          0          1                    
+ALL_C1_2         CIRCULAR     1                0          0          0          1                    
+ALL_C1_3         CIRCULAR     1                0          0          0          1                    
+ALL_C1_4         CIRCULAR     1                0          0          0          1                    
+ALL_C1_5         CIRCULAR     1                0          0          0          1                    
+C1_1             CIRCULAR     1                0          0          0          1                    
+C1_2             CIRCULAR     1                0          0          0          1                    
+C1_3             CIRCULAR     1                0          0          0          1                    
+C1_4             CIRCULAR     1                0          0          0          1                    
+C1_5             CIRCULAR     1                0          0          0          1                    
+
+[DWF]
+;;Node           Constituent      Baseline   Patterns  
+;;-------------- ---------------- ---------- ----------
+J1               FLOW             1          "" "" ""
+
+[TIMESERIES]
+;;Name           Date       Time       Value     
+;;-------------- ---------- ---------- ----------
+;Rainfall (mm/hr)
+Chicago_3h       04/08/2008 10:00:00   4.812     
+Chicago_3h       04/08/2008 10:05:00   5.093     
+Chicago_3h       04/08/2008 10:10:00   5.419     
+Chicago_3h       04/08/2008 10:15:00   5.803     
+Chicago_3h       04/08/2008 10:20:00   6.264     
+Chicago_3h       04/08/2008 10:25:00   6.831     
+Chicago_3h       04/08/2008 10:30:00   7.549     
+Chicago_3h       04/08/2008 10:35:00   8.494     
+Chicago_3h       04/08/2008 10:40:00   9.811     
+Chicago_3h       04/08/2008 10:45:00   11.81     
+Chicago_3h       04/08/2008 10:50:00   15.336    
+Chicago_3h       04/08/2008 10:55:00   24.162    
+Chicago_3h       04/08/2008 11:00:00   142.91    
+Chicago_3h       04/08/2008 11:05:00   38.247    
+Chicago_3h       04/08/2008 11:10:00   24.639    
+Chicago_3h       04/08/2008 11:15:00   18.532    
+Chicago_3h       04/08/2008 11:20:00   15.221    
+Chicago_3h       04/08/2008 11:25:00   13.09     
+Chicago_3h       04/08/2008 11:30:00   11.582    
+Chicago_3h       04/08/2008 11:35:00   10.448    
+Chicago_3h       04/08/2008 11:40:00   9.558     
+Chicago_3h       04/08/2008 11:45:00   8.838     
+Chicago_3h       04/08/2008 11:50:00   8.241     
+Chicago_3h       04/08/2008 11:55:00   7.736     
+Chicago_3h       04/08/2008 12:00:00   7.303     
+Chicago_3h       04/08/2008 12:05:00   6.926     
+Chicago_3h       04/08/2008 12:10:00   6.594     
+Chicago_3h       04/08/2008 12:15:00   6.3       
+Chicago_3h       04/08/2008 12:20:00   6.037     
+Chicago_3h       04/08/2008 12:25:00   5.801     
+Chicago_3h       04/08/2008 12:30:00   5.586     
+Chicago_3h       04/08/2008 12:35:00   5.39      
+Chicago_3h       04/08/2008 12:40:00   5.211     
+Chicago_3h       04/08/2008 12:45:00   5.046     
+Chicago_3h       04/08/2008 12:50:00   4.893     
+Chicago_3h       04/08/2008 12:55:00   4.752     
+Chicago_3h       04/08/2008 13:00:00   0         
+
+[REPORT]
+;;Reporting Options
+INPUT      YES
+SUBCATCHMENTS NONE
+NODES NONE
+LINKS ALL_C1_3 ALL_C1_4 C1_1 C1_2
+
+[TAGS]
+
+[MAP]
+DIMENSIONS 912285.064 4113610.333 913167.961 4114783.026
+Units      Meters
+
+[COORDINATES]
+;;Node           X-Coord            Y-Coord           
+;;-------------- ------------------ ------------------
+J1               912500.755         4114628.533       
+J10              912974.815         4114204.307       
+J11              912923.810         4114030.462       
+J3               912593.768         4114435.554       
+J4               912686.780         4114242.575       
+J5               912779.792         4114049.595       
+J6               912872.805         4113856.616       
+J7               913127.829         4114725.844       
+J8               913076.824         4114551.999       
+J9               913025.819         4114378.153       
+J2               912965.817         4113663.637       
+
+[VERTICES]
+;;Link           X-Coord            Y-Coord           
+;;-------------- ------------------ ------------------
+
+[Polygons]
+;;Subcatchment   X-Coord            Y-Coord           
+;;-------------- ------------------ ------------------
+S1               912325.196         4114714.212       
+S1               912685.799         4114729.722       
+S1               912693.554         4114566.868       
+S1               912387.235         4114446.667       
+S1               912325.196         4114714.212       
+
+[SYMBOLS]
+;;Gage           X-Coord            Y-Coord           
+;;-------------- ------------------ ------------------
+

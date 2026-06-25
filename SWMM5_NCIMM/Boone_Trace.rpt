@@ -1,0 +1,229 @@
+
+  EPA STORM WATER MANAGEMENT MODEL - VERSION 5.2 (Build 5.2.4)
+  ------------------------------------------------------------
+
+  
+  ****************
+  Analysis Options
+  ****************
+  Flow Units ............... GPM
+  Process Models:
+    Rainfall/Runoff ........ NO
+    RDII ................... NO
+    Snowmelt ............... NO
+    Groundwater ............ NO
+    Flow Routing ........... YES
+    Ponding Allowed ........ NO
+    Water Quality .......... NO
+  Flow Routing Method ...... DYNWAVE
+  Surcharge Method ......... EXTRAN
+  Starting Date ............ 01/01/2002 00:00:00
+  Ending Date .............. 01/04/2002 00:00:00
+  Antecedent Dry Days ...... 5.0
+  Report Time Step ......... 00:01:00
+  Routing Time Step ........ 10.00 sec
+  Variable Time Step ....... YES
+  Maximum Trials ........... 4
+  Number of Threads ........ 1
+  Head Tolerance ........... 0.005000 ft
+  
+  
+  **************************        Volume        Volume
+  Flow Routing Continuity        acre-feet      10^6 gal
+  **************************     ---------     ---------
+  Dry Weather Inflow .......         0.000         0.000
+  Wet Weather Inflow .......         0.000         0.000
+  Groundwater Inflow .......         0.000         0.000
+  RDII Inflow ..............         0.000         0.000
+  External Inflow ..........         0.994         0.324
+  External Outflow .........         0.820         0.267
+  Flooding Loss ............         0.000         0.000
+  Evaporation Loss .........         0.000         0.000
+  Exfiltration Loss ........         0.000         0.000
+  Initial Stored Volume ....         0.000         0.000
+  Final Stored Volume ......         0.232         0.075
+  Continuity Error (%) .....        -5.765
+  
+  
+  *************************
+  Highest Continuity Errors
+  *************************
+  Node JCT-14 (17.11%)
+  Node JCT-12 (1.44%)
+  
+  
+  ***************************
+  Time-Step Critical Elements
+  ***************************
+  None
+  
+  
+  ********************************
+  Highest Flow Instability Indexes
+  ********************************
+  All links are stable.
+  
+  
+  *********************************
+  Most Frequent Nonconverging Nodes
+  *********************************
+  Node OFALL-10 (11.86%)
+  Node JCT-12 (11.85%)
+  Node JCT-14 (10.86%)
+  Node STOR-10 (6.48%)
+  
+  
+  *************************
+  Routing Time Step Summary
+  *************************
+  Minimum Time Step           :     0.98 sec
+  Average Time Step           :    10.00 sec
+  Maximum Time Step           :    10.00 sec
+  % of Time in Steady State   :     0.00
+  Average Iterations per Step :     2.25
+  % of Steps Not Converging   :    11.86
+  Time Step Frequencies       :
+     10.000 -  1.585 sec      :   100.00 %
+      1.585 -  0.251 sec      :     0.00 %
+      0.251 -  0.040 sec      :     0.00 %
+      0.040 -  0.006 sec      :     0.00 %
+      0.006 -  0.001 sec      :     0.00 %
+  
+  
+  ******************
+  Node Depth Summary
+  ******************
+  
+  ---------------------------------------------------------------------------------
+                                 Average  Maximum  Maximum  Time of Max    Reported
+                                   Depth    Depth      HGL   Occurrence   Max Depth
+  Node                 Type         Feet     Feet     Feet  days hr:min        Feet
+  ---------------------------------------------------------------------------------
+  JCT-12               JUNCTION    37.59   278.52   797.52     0  03:06      189.49
+  JCT-14               JUNCTION    24.89   243.83   788.83     0  09:08      161.80
+  JCT-16               JUNCTION     0.12     0.15   627.15     0  14:55        0.15
+  OFALL-10             OUTFALL      0.12     0.15   535.15     0  14:54        0.15
+  STOR-10              STORAGE      3.63     7.13   523.13     0  12:59        7.04
+  
+  
+  *******************
+  Node Inflow Summary
+  *******************
+  
+  -------------------------------------------------------------------------------------------------
+                                  Maximum  Maximum                  Lateral       Total        Flow
+                                  Lateral    Total  Time of Max      Inflow      Inflow     Balance
+                                   Inflow   Inflow   Occurrence      Volume      Volume       Error
+  Node                 Type           GPM      GPM  days hr:min    10^6 gal    10^6 gal     Percent
+  -------------------------------------------------------------------------------------------------
+  JCT-12               JUNCTION      0.00  3000.00     0  00:09           0       0.331       1.459
+  JCT-14               JUNCTION      0.00  2370.24     0  08:39           0       0.327      20.638
+  JCT-16               JUNCTION      0.00   877.21     0  14:54           0       0.271       1.331
+  OFALL-10             OUTFALL       0.00    80.35     0  14:54           0       0.267       0.000
+  STOR-10              STORAGE      75.00    75.00     0  00:00       0.324       0.324      -2.236
+  
+  
+  **********************
+  Node Surcharge Summary
+  **********************
+  
+  Surcharging occurs when water rises above the top of the highest conduit.
+  ---------------------------------------------------------------------
+                                               Max. Height   Min. Depth
+                                   Hours       Above Crown    Below Rim
+  Node                 Type      Surcharged           Feet         Feet
+  ---------------------------------------------------------------------
+  JCT-12               JUNCTION       69.04        277.519        0.000
+  JCT-14               JUNCTION       63.02        242.827        0.000
+  
+  
+  *********************
+  Node Flooding Summary
+  *********************
+  
+  No nodes were flooded.
+  
+  
+  **********************
+  Storage Volume Summary
+  **********************
+  
+  ------------------------------------------------------------------------------------------------
+                         Average    Avg   Evap  Exfil     Maximum    Max    Time of Max    Maximum
+                          Volume   Pcnt   Pcnt   Pcnt      Volume   Pcnt     Occurrence    Outflow
+  Storage Unit          1000 ft³   Full   Loss   Loss    1000 ft³   Full    days hr:min        GPM
+  ------------------------------------------------------------------------------------------------
+  STOR-10                  0.000    0.0    0.0    0.0       0.000    0.0       0  00:00    3000.00
+  
+  
+  ***********************
+  Outfall Loading Summary
+  ***********************
+  
+  -----------------------------------------------------------
+                         Flow       Avg       Max       Total
+                         Freq      Flow      Flow      Volume
+  Outfall Node           Pcnt       GPM       GPM    10^6 gal
+  -----------------------------------------------------------
+  OFALL-10              87.09     71.02     80.35       0.267
+  -----------------------------------------------------------
+  System                87.09     71.02     80.35       0.267
+  
+  
+  ********************
+  Link Flow Summary
+  ********************
+  
+  -----------------------------------------------------------------------------
+                                 Maximum  Time of Max   Maximum    Max/    Max/
+                                  |Flow|   Occurrence   |Veloc|    Full    Full
+  Link                 Type          GPM  days hr:min    ft/sec    Flow   Depth
+  -----------------------------------------------------------------------------
+  CDT-11               CONDUIT   2370.24     0  08:39      7.82    1.93    1.00
+  CDT-13               CONDUIT    877.21     0  14:54      4.27    0.48    0.58
+  CDT-15               CONDUIT     80.35     0  14:54      2.41    0.05    0.15
+  PUMP-13              PUMP      3000.00     0  00:09              1.00
+  
+  
+  ***************************
+  Flow Classification Summary
+  ***************************
+  
+  -------------------------------------------------------------------------------------
+                      Adjusted    ---------- Fraction of Time in Flow Class ---------- 
+                       /Actual         Up    Down  Sub   Sup   Up    Down  Norm  Inlet 
+  Conduit               Length    Dry  Dry   Dry   Crit  Crit  Crit  Crit  Ltd   Ctrl  
+  -------------------------------------------------------------------------------------
+  CDT-11                  1.00   0.00  0.04  0.00  0.95  0.00  0.00  0.00  0.03  0.00
+  CDT-13                  1.00   0.04  0.08  0.00  0.83  0.05  0.00  0.00  0.76  0.00
+  CDT-15                  1.00   0.13  0.00  0.00  0.00  0.87  0.00  0.00  0.00  0.00
+  
+  
+  *************************
+  Conduit Surcharge Summary
+  *************************
+  
+  ----------------------------------------------------------------------------
+                                                           Hours        Hours 
+                         --------- Hours Full --------   Above Full   Capacity
+  Conduit                Both Ends  Upstream  Dnstream   Normal Flow   Limited
+  ----------------------------------------------------------------------------
+  CDT-11                     63.01     63.02     68.50      0.33         0.01
+  CDT-13                      0.01      0.01     62.87      0.01         0.01
+  
+  
+  ***************
+  Pumping Summary
+  ***************
+  
+  ---------------------------------------------------------------------------------------------------------
+                                                  Min       Avg       Max     Total     Power    % Time Off
+                        Percent   Number of      Flow      Flow      Flow    Volume     Usage    Pump Curve
+  Pump                 Utilized   Start-Ups       GPM       GPM       GPM  10^6 gal     Kw-hr    Low   High
+  ---------------------------------------------------------------------------------------------------------
+  PUMP-13                  8.35         459      0.00    920.84   3000.00     0.331    178.39    0.0    0.0
+  
+
+  Analysis begun on:  Fri Mar  6 14:28:17 2026
+  Analysis ended on:  Fri Mar  6 14:28:17 2026
+  Total elapsed time: < 1 sec

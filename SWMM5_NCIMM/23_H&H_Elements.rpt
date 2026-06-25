@@ -1,0 +1,129 @@
+
+  EPA STORM WATER MANAGEMENT MODEL - VERSION 5.2 (Build 5.2.4)
+  ------------------------------------------------------------
+
+  
+  *************
+  Element Count
+  *************
+  Number of rain gages ...... 1
+  Number of subcatchments ... 3
+  Number of nodes ........... 11
+  Number of links ........... 10
+  Number of pollutants ...... 0
+  Number of land uses ....... 0
+  
+  
+  ****************
+  Raingage Summary
+  ****************
+                                                      Data       Recording
+  Name                 Data Source                    Type       Interval 
+  ------------------------------------------------------------------------
+  GAGE5                D:\SWMMandSoftware\SWMM5.013_June2018\EPASWMM5.1.013\Swmm5.1.013UpdateTests\DataFiles\RG_05_Test.txt
+  
+  
+  ********************
+  Subcatchment Summary
+  ********************
+  Name                       Area     Width   %Imperv    %Slope Rain Gage            Outlet              
+  -----------------------------------------------------------------------------------------------------------
+  S20-A1_shed              138.84   4918.00     61.17    3.9668 GAGE5                TS20-112            
+  S20-A2_shed               72.05   3543.00     63.19    5.2243 GAGE5                TS20-120            
+  S20-B_shed                88.66   3930.00     58.95    3.4210 GAGE5                TS20-134            
+  
+  
+  ************
+  Node Summary
+  ************
+                                           Invert      Max.    Ponded    External
+  Name                 Type                 Elev.     Depth      Area    Inflow  
+  -------------------------------------------------------------------------------
+  IS20-002             JUNCTION            -18.99     43.99       0.0
+  OS20-000             JUNCTION             -1.39     14.09       0.0
+  TS20-112             JUNCTION             10.69     20.11       0.0    Yes
+  TS20-120             JUNCTION             27.64     18.76       0.0    Yes
+  TS20-134             JUNCTION             47.17     77.83       0.0    Yes
+  S20Z                 JUNCTION             -1.94     26.94       0.0
+  CS20-000             JUNCTION             -4.01     29.01       0.0
+  OS20-999             OUTFALL              -8.20      7.00       0.0
+  IS20-004             OUTFALL             -19.37      4.50       0.0
+  IS14-012             STORAGE             -18.46     38.46       0.0
+  S20                  STORAGE              -1.93     26.93       0.0
+  
+  
+  ************
+  Link Summary
+  ************
+  Name             From Node        To Node          Type            Length    %Slope Roughness
+  ---------------------------------------------------------------------------------------------
+  CS20-000         CS20-000         IS14-012         CONDUIT          978.0    0.7741    0.0130
+  IS14-012         IS14-012         IS20-002         CONDUIT          260.0    0.2038    0.0130
+  IS20-002         IS20-002         IS20-004         CONDUIT          185.6    0.2047    0.0130
+  OS20-000         OS20-000         OS20-999         CONDUIT          992.5    0.6862    0.0130
+  S20W             S20              OS20-000         CONDUIT          200.0    0.0050    0.0024
+  TS20-112         TS20-112         S20              CONDUIT          963.0    1.2358    0.0150
+  TS20-120         TS20-120         TS20-112         CONDUIT         1250.0    1.3561    0.0140
+  TS20-134         TS20-134         TS20-120         CONDUIT         1449.0    1.3479    0.0150
+  OR1atS20Z-CS20-000 S20Z             CS20-000         CONDUIT          100.0    2.0704    0.0130
+  OR1atS20-S20Z    S20              S20Z             ORIFICE     
+  
+  
+  *********************
+  Cross Section Summary
+  *********************
+                                        Full     Full     Hyd.     Max.   No. of     Full
+  Conduit          Shape               Depth     Area     Rad.    Width  Barrels     Flow
+  ---------------------------------------------------------------------------------------
+  CS20-000         CIRCULAR             2.50     4.91     0.62     2.50        1    36.09
+  IS14-012         CIRCULAR             4.00    12.57     1.00     4.00        1    64.85
+  IS20-002         CIRCULAR             4.50    15.90     1.12     4.50        1    88.98
+  OS20-000         RECT_CLOSED          7.00    45.50     1.69     6.50        1   610.10
+  S20W             RECT_CLOSED          5.25    39.38     1.54     7.50        1   229.35
+  TS20-112         CIRCULAR             6.50    33.18     1.62     6.50        1   505.11
+  TS20-120         RECT_CLOSED         10.00    85.00     2.30     8.50        1  1829.24
+  TS20-134         CIRCULAR             5.00    19.63     1.25     5.00        1   262.41
+  OR1atS20Z-CS20-000 CIRCULAR             1.00     0.79     0.25     1.00        1     5.13
+  
+  
+  ****************
+  Analysis Options
+  ****************
+  Flow Units ............... CFS
+  Process Models:
+    Rainfall/Runoff ........ YES
+    RDII ................... NO
+    Snowmelt ............... NO
+    Groundwater ............ NO
+    Flow Routing ........... YES
+    Ponding Allowed ........ NO
+    Water Quality .......... NO
+  Infiltration Method ...... GREEN_AMPT
+  Flow Routing Method ...... DYNWAVE
+  Surcharge Method ......... EXTRAN
+  Starting Date ............ 10/07/2005 00:00:00
+  Ending Date .............. 10/10/2005 00:00:00
+  Antecedent Dry Days ...... 0.0
+  Report Time Step ......... 00:01:00
+  Wet Time Step ............ 00:05:00
+  Dry Time Step ............ 00:05:00
+  Routing Time Step ........ 2.00 sec
+  Variable Time Step ....... YES
+  Maximum Trials ........... 8
+  Number of Threads ........ 1
+  Head Tolerance ........... 0.005000 ft
+  
+  
+  *********************
+  Rainfall File Summary
+  *********************
+  Station    First        Last         Recording   Periods    Periods    Periods
+  ID         Date         Date         Frequency  w/Precip    Missing    Malfunc.
+  -------------------------------------------------------------------------------
+  
+  
+  ERROR 317: cannot open rainfall data file D:\SWMMandSoftware\SWMM5.013_June2018\EPASWMM5.1.013\Swmm5.1.013UpdateTests\DataFiles\RG_05_Test.txt.
+
+  Analysis begun on:  Wed Jun 24 09:40:12 2026
+  Analysis ended on:  Wed Jun 24 09:40:12 2026
+  Total elapsed time: < 1 sec

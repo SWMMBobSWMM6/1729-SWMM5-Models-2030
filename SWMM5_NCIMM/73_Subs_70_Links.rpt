@@ -1,0 +1,1081 @@
+
+  EPA STORM WATER MANAGEMENT MODEL - VERSION 5.2 (Build 5.2.4)
+  ------------------------------------------------------------
+
+  
+  *************
+  Element Count
+  *************
+  Number of rain gages ...... 1
+  Number of subcatchments ... 73
+  Number of nodes ........... 84
+  Number of links ........... 74
+  Number of pollutants ...... 0
+  Number of land uses ....... 0
+  
+  
+  ****************
+  Raingage Summary
+  ****************
+                                                      Data       Recording
+  Name                 Data Source                    Type       Interval 
+  ------------------------------------------------------------------------
+  SSFL_GAGE            6HR-1.0                        CUMULATIVE   7 min.
+  
+  
+  ********************
+  Subcatchment Summary
+  ********************
+  Name                       Area     Width   %Imperv    %Slope Rain Gage            Outlet              
+  -----------------------------------------------------------------------------------------------------------
+  SUB-100                   28.88    768.00      3.63    9.9180 SSFL_GAGE            OUTFALL-001         
+  SUB-1000                   0.80     96.00     20.00   30.0200 SSFL_GAGE            JCT-1000            
+  SUB-1001                   2.13    200.00     15.00   18.0070 SSFL_GAGE            JCT-1001            
+  SUB-1002                   2.41     77.00      5.00   14.8730 SSFL_GAGE            JCT-1002            
+  SUB-101                   40.90   1165.00     22.49   24.6190 SSFL_GAGE            JCT-101             
+  SUB-102                   26.88    708.00     12.89   17.2842 SSFL_GAGE            JCT-102             
+  SUB-103                   28.91    618.00      2.35   12.0659 SSFL_GAGE            JCT-103             
+  SUB-104                   13.07    506.00      2.87   16.9844 SSFL_GAGE            JCT-104             
+  SUB-105                   49.69   1209.00      4.08   18.2291 SSFL_GAGE            JCT-105             
+  SUB-106                   33.44    924.00      4.03   14.9442 SSFL_GAGE            JCT-106             
+  SUB-107                   15.41    708.00      4.37   21.6779 SSFL_GAGE            JCT-107             
+  SUB-108                   14.20    600.00      1.26   27.4818 SSFL_GAGE            JCT-108             
+  SUB-109                   25.46    579.00     13.85    7.8063 SSFL_GAGE            JCT-109             
+  SUB-110                   29.09    831.00      5.00   20.9067 SSFL_GAGE            JCT-110             
+  SUB-1100                  39.23    893.00     25.57   19.1990 SSFL_GAGE            11_PERIMETER_POND   
+  SUB-1101                  35.47    836.00     35.61    8.4753 SSFL_GAGE            JCT-1101            
+  SUB-1102                  42.51   1244.00     15.92   16.3942 SSFL_GAGE            JCT-1102            
+  SUB-1103                  41.10   1266.00     18.44   16.4312 SSFL_GAGE            15-R-1_POND         
+  SUB-1104                  33.56    869.00     16.29   20.7532 SSFL_GAGE            JCT-1104            
+  SUB-1105                  31.42    694.00     21.43   19.9749 SSFL_GAGE            JCT-1105            
+  SUB-1106                  33.31   1186.00      5.35   17.7150 SSFL_GAGE            JCT-1106            
+  SUB-1107                  34.17   1225.00      6.39   18.5221 SSFL_GAGE            JCT-1107            
+  SUB-1800                  34.26   1028.00     23.17   10.7236 SSFL_GAGE            2-POND2             
+  SUB-1801                  39.46    865.00     13.44   12.7668 SSFL_GAGE            JCT-1801            
+  SUB-1802                  25.84    650.00     59.57    6.5425 SSFL_GAGE            JCT-1802            
+  SUB-1803                  33.68   1041.00     27.10    9.4739 SSFL_GAGE            JCT-1803            
+  SUB-1804                  31.26    874.00     30.32   19.0785 SSFL_GAGE            JCT-1804            
+  SUB-1805                  27.96    880.00     28.31   19.4211 SSFL_GAGE            JCT-1805            
+  SUB-1806                  28.78   1096.00     16.37   24.3881 SSFL_GAGE            JCT-1806            
+  SUB-1807                  38.22   1151.00     18.85   18.4884 SSFL_GAGE            JCT-1807            
+  SUB-1808                  46.01   1201.00     27.06   17.0326 SSFL_GAGE            JCT-1808            
+  SUB-1809                  47.03   1213.00     26.75    6.2515 SSFL_GAGE            JCT-1809            
+  SUB-1810                  35.41    531.00     22.91   11.7014 SSFL_GAGE            JCT-1810            
+  SUB-1811                  35.33   1003.00     16.75   18.4202 SSFL_GAGE            SILVERDALE_POND     
+  SUB-1812                  38.82   1010.00     26.39   12.8112 SSFL_GAGE            JCT-1812            
+  SUB-1813                  38.96   1029.00     27.60   21.9060 SSFL_GAGE            JCT-1813            
+  SUB-1814                  38.16   1103.00     54.11    6.2663 SSFL_GAGE            JCT-1814            
+  SUB-200                   39.65    958.00      0.83   17.5953 SSFL_GAGE            OUTFALL-002         
+  SUB-201                   43.70    770.00     11.43   16.3250 SSFL_GAGE            JCT-201             
+  SUB-202                   26.94    778.00      5.42   15.1055 SSFL_GAGE            JCT-202             
+  SUB-203                   40.86   1114.00      1.81   18.5513 SSFL_GAGE            JCT-203             
+  SUB-204                   47.95   1043.00      7.55   16.2599 SSFL_GAGE            JCT-204             
+  SUB-205                   46.77   1263.00      9.49   19.9544 SSFL_GAGE            JCT-205             
+  SUB-206                   24.33    713.00      1.88   20.5046 SSFL_GAGE            JCT-206             
+  SUB-207                   53.69   1171.00      2.61   20.2433 SSFL_GAGE            JCT-207             
+  SUB-208                   35.86    805.00      2.15   17.2501 SSFL_GAGE            JCT-208             
+  SUB-300                   13.95    400.00      5.00   17.0000 SSFL_GAGE            JCT-301             
+  SUB-400                    3.59    150.00      2.00   15.0000 SSFL_GAGE            JCT-401             
+  SUB-401                    2.94    125.00      2.00   10.0000 SSFL_GAGE            JCT-401             
+  SUB-500                    0.26     99.85      2.00   18.5670 SSFL_GAGE            JCT-501             
+  SUB-600                   12.88    100.00      5.00   17.1200 SSFL_GAGE            JCT-601             
+  SUB-700                    2.82    458.57     10.00   11.5960 SSFL_GAGE            JCT-701             
+  SUB-800                   36.55    970.00      9.92   18.5655 SSFL_GAGE            OUTFALL-008         
+  SUB-801                   25.62    800.00     15.61   19.6466 SSFL_GAGE            JCT-801             
+  SUB-900                   38.02    735.00      7.42   13.9774 SSFL_GAGE            OUTFALL-009         
+  SUB-901                   34.06    875.00      9.60   12.7251 SSFL_GAGE            JCT-901             
+  SUB-902                   42.10   1111.00     43.59   11.3029 SSFL_GAGE            JCT-902             
+  SUB-903                    4.79    369.00     78.33    7.9003 SSFL_GAGE            JCT-903             
+  SUB-904                   19.32    448.00     15.00   13.3345 SSFL_GAGE            JCT-904             
+  SUB-905                   34.19    902.00     14.57   21.4221 SSFL_GAGE            JCT-905             
+  SUB-906                   18.50    626.00     34.50   13.8356 SSFL_GAGE            JCT-906             
+  SUB-907                   33.29    673.00      7.29   15.2578 SSFL_GAGE            JCT-907             
+  SUB-908                   29.48    620.00     22.46    9.5722 SSFL_GAGE            JCT-908             
+  SUB-909                   22.19    812.00     10.87   17.7450 SSFL_GAGE            JCT-909             
+  SUB-910                    9.07    402.00     60.72   13.7463 SSFL_GAGE            JCT-910             
+  SUB-911                    3.42    277.00     90.33   10.7983 SSFL_GAGE            JCT-911             
+  SUB-912                   25.73    773.00     19.25   16.6292 SSFL_GAGE            JCT-912             
+  SUB-913                   43.42   1119.00     15.71   16.3925 SSFL_GAGE            JCT-913             
+  SUB-914                   44.00    841.00     11.54   11.5502 SSFL_GAGE            JCT-914             
+  SUB-915                   24.30    680.00      9.64   14.5668 SSFL_GAGE            JCT-915             
+  SUB-916                   46.46   1001.00     10.39   15.1524 SSFL_GAGE            JCT-916             
+  SUB-917                   31.21    774.00      8.82   18.2812 SSFL_GAGE            JCT-917             
+  SUB-918                   32.15    862.00      8.36   23.3358 SSFL_GAGE            JCT-918             
+  
+  
+  ************
+  Node Summary
+  ************
+                                           Invert      Max.    Ponded    External
+  Name                 Type                 Elev.     Depth      Area    Inflow  
+  -------------------------------------------------------------------------------
+  JCT-1000             JUNCTION           1859.96     10.00       0.0
+  JCT-1001             JUNCTION           1855.00     10.00       0.0
+  JCT-1002             JUNCTION           1845.00     10.00       0.0
+  JCT-100A             JUNCTION           1583.29     10.00       0.0
+  JCT-100B             JUNCTION           1588.76     10.00       0.0
+  JCT-100C             JUNCTION           1589.84     10.00       0.0
+  JCT-101              JUNCTION           1745.81     10.00       0.0
+  JCT-102              JUNCTION           1722.47     10.00       0.0
+  JCT-103              JUNCTION           1721.00     10.00       0.0
+  JCT-104              JUNCTION           1711.01     10.00       0.0
+  JCT-105              JUNCTION           1593.81     10.00       0.0
+  JCT-106              JUNCTION           1603.22     10.00       0.0
+  JCT-107              JUNCTION           1601.13     10.00       0.0
+  JCT-108              JUNCTION           1590.74     10.00       0.0
+  JCT-109              JUNCTION           1714.26     10.00       0.0
+  JCT-110              JUNCTION           1641.31     10.00       0.0
+  JCT-1101             JUNCTION           1837.83     10.00       0.0
+  JCT-1102             JUNCTION           1819.48     10.00       0.0
+  JCT-1104             JUNCTION           1780.72     10.00       0.0
+  JCT-1105             JUNCTION           1763.45     10.00       0.0
+  JCT-1106             JUNCTION           1762.27     10.00       0.0
+  JCT-1107             JUNCTION           1790.38     10.00       0.0
+  JCT-1801             JUNCTION           1749.82     10.00       0.0
+  JCT-1802             JUNCTION           1787.24     10.00       0.0
+  JCT-1803             JUNCTION           1716.75     10.00       0.0
+  JCT-1804             JUNCTION           1839.93     10.00       0.0
+  JCT-1805             JUNCTION           1700.78     10.00       0.0
+  JCT-1806             JUNCTION           1861.80     10.00       0.0
+  JCT-1807             JUNCTION           1924.68     10.00       0.0
+  JCT-1808             JUNCTION           1822.45     10.00       0.0
+  JCT-1809             JUNCTION           1791.87     10.00       0.0
+  JCT-1810             JUNCTION           1771.70     10.00       0.0
+  JCT-1812             JUNCTION           1745.15     10.00       0.0
+  JCT-1813             JUNCTION           1744.70     10.00       0.0
+  JCT-1814             JUNCTION           1768.31     10.00       0.0
+  JCT-200A             JUNCTION           1543.91     10.00       0.0
+  JCT-201              JUNCTION           1660.06     10.00       0.0
+  JCT-202              JUNCTION           1645.53     10.00       0.0
+  JCT-203              JUNCTION           1796.29     10.00       0.0
+  JCT-204              JUNCTION           1610.83     10.00       0.0
+  JCT-205              JUNCTION           1685.02     10.00       0.0
+  JCT-206              JUNCTION           1560.94     10.00       0.0
+  JCT-207              JUNCTION           1600.65     10.00       0.0
+  JCT-208              JUNCTION           1579.81     10.00       0.0
+  JCT-301              JUNCTION           1798.00     10.00       0.0
+  JCT-401              JUNCTION           1850.00     10.00       0.0
+  JCT-501              JUNCTION           1840.00     10.00       0.0
+  JCT-601              JUNCTION           1835.00     10.00       0.0
+  JCT-701              JUNCTION           1817.00     10.00       0.0
+  JCT-801              JUNCTION           1769.43     10.00       0.0
+  JCT-900A             JUNCTION           1614.01     10.00       0.0
+  JCT-900B             JUNCTION           1679.29     10.00       0.0
+  JCT-901              JUNCTION           1882.41     10.00       0.0
+  JCT-902              JUNCTION           1874.75     10.00       0.0
+  JCT-903              JUNCTION           1895.33     10.00       0.0
+  JCT-904              JUNCTION           1773.08     10.00       0.0
+  JCT-905              JUNCTION           1742.66     10.00       0.0
+  JCT-906              JUNCTION           1822.83     10.00       0.0
+  JCT-907              JUNCTION           1740.15     10.00       0.0
+  JCT-908              JUNCTION           1770.45     10.00       0.0
+  JCT-909              JUNCTION           1710.83     10.00       0.0
+  JCT-910              JUNCTION           1774.26     10.00       0.0
+  JCT-911              JUNCTION           1799.33     10.00       0.0
+  JCT-912              JUNCTION           1845.71     10.00       0.0
+  JCT-913              JUNCTION           1783.73     10.00       0.0
+  JCT-914              JUNCTION           1851.14     10.00       0.0
+  JCT-915              JUNCTION           1835.22     10.00       0.0
+  JCT-916              JUNCTION           1744.15     10.00       0.0
+  JCT-917              JUNCTION           1689.54     10.00       0.0
+  JCT-918              JUNCTION           1760.74     10.00       0.0
+  OFALL-003            OUTFALL            1762.00     10.00       0.0
+  OFALL-004            OUTFALL            1820.00     10.00       0.0
+  OFALL-005            OUTFALL            1816.00     10.00       0.0
+  OFALL-006            OUTFALL            1790.00     10.00       0.0
+  OFALL-007            OUTFALL            1809.00     10.00       0.0
+  OFALL-10             OUTFALL            1830.00     10.00       0.0
+  OUTFALL-001          OUTFALL            1579.77     10.00       0.0
+  OUTFALL-002          OUTFALL            1538.60     10.00       0.0
+  OUTFALL-008          OUTFALL            1744.55     10.00       0.0
+  OUTFALL-009          OUTFALL            1608.57     10.00       0.0
+  11_PERIMETER_POND    STORAGE            1720.00     22.00       0.0
+  15-R-1_POND          STORAGE            1780.00     27.00       0.0
+  2-POND2              STORAGE            1677.00     28.00       0.0
+  SILVERDALE_POND      STORAGE            1744.00     23.00       0.0
+  
+  
+  ************
+  Link Summary
+  ************
+  Name             From Node        To Node          Type            Length    %Slope Roughness
+  ---------------------------------------------------------------------------------------------
+  CDT-1-1          JCT-101          JCT-102          CONDUIT          472.0    4.9510    0.0700
+  CDT-1-10         JCT-110          JCT-106          CONDUIT          731.0    5.2178    0.0700
+  CDT-1-11         JCT-107          JCT-100B         CONDUIT          133.7    9.2940    0.0700
+  CDT-1-12         JCT-108          JCT-100A         CONDUIT           76.3    9.8162    0.0700
+  CDT-1-13         JCT-100A         OUTFALL-001      CONDUIT          270.8    1.3001    0.0700
+  CDT-1-2          JCT-102          JCT-109          CONDUIT          329.0    2.4962    0.0700
+  CDT-1-3          JCT-103          JCT-109          CONDUIT          323.0    2.0871    0.0700
+  CDT-1-4          JCT-104          JCT-110          CONDUIT         1682.0    4.1474    0.0700
+  CDT-1-5          JCT-105          JCT-100C         CONDUIT          314.5    1.2625    0.0700
+  CDT-1-6          JCT-106          JCT-100C         CONDUIT          220.1    6.0909    0.0700
+  CDT-1-7          JCT-100C         JCT-100B         CONDUIT          250.1    0.4319    0.0700
+  CDT-1-8          JCT-100B         JCT-100A         CONDUIT          802.5    0.6817    0.0700
+  CDT-1-9          JCT-109          JCT-105          CONDUIT         1760.0    6.8598    0.0700
+  CDT-10-1         JCT-1000         JCT-1002         CONDUIT          179.9    8.3463    0.0700
+  CDT-10-2         JCT-1001         JCT-1002         CONDUIT          166.6    6.0136    0.0700
+  CDT-10-3         JCT-1002         OFALL-10         CONDUIT          116.2   13.0126    0.0700
+  CDT-11-1         11_PERIMETER_POND JCT-109          CONDUIT         1327.0    1.2616    0.0700
+  CDT-11-2         JCT-1101         JCT-1102         CONDUIT          822.0    2.2329    0.0700
+  CDT-11-3         JCT-1102         15-R-1_POND      CONDUIT          838.0    4.7165    0.0700
+  CDT-11-4         15-R-1_POND      JCT-1104         CONDUIT          990.0    1.5436    0.0700
+  CDT-11-5         JCT-1104         JCT-1105         CONDUIT          375.0    4.6102    0.0700
+  CDT-11-6         JCT-1105         11_PERIMETER_POND CONDUIT         1016.0    4.2805    0.0700
+  CDT-11-7         JCT-1106         11_PERIMETER_POND CONDUIT          780.0    5.4272    0.0700
+  CDT-11-8         JCT-1107         JCT-1106         CONDUIT          871.0    3.2290    0.0700
+  CDT-18-1         2-POND2          JCT-204          CONDUIT         1965.0    4.2364    0.0700
+  CDT-18-10        JCT-1809         JCT-1810         CONDUIT          902.0    2.2367    0.0700
+  CDT-18-11        JCT-1810         SILVERDALE_POND  CONDUIT          534.0    5.1943    0.0700
+  CDT-18-12        SILVERDALE_POND  JCT-1812         CONDUIT          927.0    1.1705    0.0700
+  CDT-18-13        JCT-1812         2-POND2          CONDUIT         1453.0    4.6955    0.0700
+  CDT-18-14        JCT-1813         2-POND2          CONDUIT          962.0    7.0549    0.0700
+  CDT-18-15        JCT-1814         JCT-1803         CONDUIT          772.0    6.6937    0.0700
+  CDT-18-2         JCT-1801         JCT-1803         CONDUIT          585.0    5.6620    0.0700
+  CDT-18-3         JCT-1802         JCT-1814         CONDUIT          548.0    3.4564    0.0700
+  CDT-18-4         JCT-1803         2-POND2          CONDUIT          997.0    3.9901    0.0700
+  CDT-18-5         JCT-1804         JCT-1813         CONDUIT         1538.0    6.2037    0.0700
+  CDT-18-6         JCT-1805         2-POND2          CONDUIT          270.0    8.8418    0.0700
+  CDT-18-7         JCT-1806         JCT-1808         CONDUIT         1238.0    3.1801    0.0700
+  CDT-18-8         JCT-1807         JCT-1808         CONDUIT         1912.0    5.3544    0.0700
+  CDT-18-9         JCT-1808         JCT-1810         CONDUIT         2134.0    2.3788    0.0700
+  CDT-2-0          JCT-200A         OUTFALL-002      CONDUIT          110.0    4.8329    0.0700
+  CDT-2-1          JCT-201          JCT-204          CONDUIT         1316.0    3.7435    0.0700
+  CDT-2-2          JCT-202          JCT-204          CONDUIT          769.0    4.5170    0.0700
+  CDT-2-3          JCT-203          JCT-207          CONDUIT         1667.0   11.8177    0.0700
+  CDT-2-4          JCT-204          JCT-207          CONDUIT          532.0    1.9139    0.0700
+  CDT-2-5          JCT-205          JCT-208          CONDUIT         1459.0    7.2299    0.0700
+  CDT-2-6          JCT-206          JCT-200A         CONDUIT          116.0   14.8419    0.0700
+  CDT-2-7          JCT-207          JCT-200A         CONDUIT         1746.0    3.2514    0.0700
+  CDT-2-8          JCT-208          JCT-200A         CONDUIT          980.0    3.6657    0.0700
+  CDT-3-1          JCT-301          OFALL-003        CONDUIT          505.1    7.1460    0.0700
+  CDT-4-1          JCT-401          OFALL-004        CONDUIT          485.4    6.1924    0.0700
+  CDT-5-1          JCT-501          OFALL-005        CONDUIT           92.7   26.8104    0.0700
+  CDT-6-1          JCT-601          OFALL-006        CONDUIT          586.1    7.7010    0.0700
+  CDT-7-1          JCT-701          OFALL-007        CONDUIT           40.0   20.4380    0.0700
+  CDT-8-1          JCT-801          OUTFALL-008      CONDUIT          518.0    4.8086    0.0700
+  CDT-9-1          JCT-901          JCT-912          CONDUIT         1358.0    2.7035    0.0700
+  CDT-9-10         JCT-910          JCT-909          CONDUIT          727.0    8.7583    0.0700
+  CDT-9-11         JCT-911          JCT-900A         CONDUIT          745.0   25.6824    0.0700
+  CDT-9-12         JCT-912          JCT-913          CONDUIT         1020.0    6.0877    0.0700
+  CDT-9-13         JCT-913          JCT-916          CONDUIT         1207.0    3.2810    0.0700
+  CDT-9-14         JCT-914          JCT-915          CONDUIT          698.0    2.2814    0.0700
+  CDT-9-15         JCT-915          JCT-916          CONDUIT         1323.0    6.9000    0.0700
+  CDT-9-16         JCT-916          JCT-905          CONDUIT         1052.0    0.1416    0.0700
+  CDT-9-17         JCT-917          JCT-900B         CONDUIT          347.1    2.9546    0.0700
+  CDT-9-18         JCT-918          JCT-905          CONDUIT          284.0    6.3791    0.0700
+  CDT-9-2          JCT-902          JCT-912          CONDUIT          712.0    4.0820    0.0700
+  CDT-9-3          JCT-903          JCT-913          CONDUIT         1160.0    9.6655    0.0700
+  CDT-9-4          JCT-904          JCT-905          CONDUIT          987.0    3.0835    0.0700
+  CDT-9-5          JCT-905          JCT-917          CONDUIT         1039.0    5.1193    0.0700
+  CDT-9-6          JCT-906          JCT-900B         CONDUIT          875.3   16.6238    0.0700
+  CDT-9-7          JCT-907          JCT-909          CONDUIT          394.0    7.4623    0.0700
+  CDT-9-8          JCT-908          JCT-909          CONDUIT          751.0    7.9639    0.0700
+  CDT-9-9          JCT-909          JCT-900A         CONDUIT          574.1   17.1088    0.0700
+  CDT-9-A          JCT-900A         OUTFALL-009      CONDUIT          140.8    3.8665    0.0700
+  CDT-9-B          JCT-900B         JCT-900A         CONDUIT         1102.9    5.9293    0.0700
+  
+  
+  *********************
+  Cross Section Summary
+  *********************
+                                        Full     Full     Hyd.     Max.   No. of     Full
+  Conduit          Shape               Depth     Area     Rad.    Width  Barrels     Flow
+  ---------------------------------------------------------------------------------------
+  CDT-1-1          TRAPEZOIDAL         10.00   240.00     4.93    44.00        1  3282.00
+  CDT-1-10         TRAPEZOIDAL         10.00   240.00     4.93    44.00        1  3369.27
+  CDT-1-11         TRAPEZOIDAL         10.00   240.00     4.93    44.00        1  4496.71
+  CDT-1-12         TRAPEZOIDAL         10.00   240.00     4.93    44.00        1  4621.30
+  CDT-1-13         TRAPEZOIDAL         10.00   240.00     4.93    44.00        1  1681.80
+  CDT-1-2          TRAPEZOIDAL         10.00   240.00     4.93    44.00        1  2330.42
+  CDT-1-3          TRAPEZOIDAL         10.00   240.00     4.93    44.00        1  2130.93
+  CDT-1-4          TRAPEZOIDAL         10.00   240.00     4.93    44.00        1  3003.88
+  CDT-1-5          TRAPEZOIDAL         10.00   240.00     4.93    44.00        1  1657.30
+  CDT-1-6          TRAPEZOIDAL         10.00   240.00     4.93    44.00        1  3640.27
+  CDT-1-7          TRAPEZOIDAL         10.00   240.00     4.93    44.00        1   969.32
+  CDT-1-8          TRAPEZOIDAL         10.00   240.00     4.93    44.00        1  1217.81
+  CDT-1-9          TRAPEZOIDAL         10.00   240.00     4.93    44.00        1  3863.23
+  CDT-10-1         TRAPEZOIDAL         10.00   240.00     4.93    44.00        1  4261.27
+  CDT-10-2         TRAPEZOIDAL         10.00   240.00     4.93    44.00        1  3617.09
+  CDT-10-3         TRAPEZOIDAL         10.00   240.00     4.93    44.00        1  5320.77
+  CDT-11-1         TRAPEZOIDAL         10.00   240.00     4.93    44.00        1  1656.73
+  CDT-11-2         TRAPEZOIDAL         10.00   240.00     4.93    44.00        1  2204.09
+  CDT-11-3         TRAPEZOIDAL         10.00   240.00     4.93    44.00        1  3203.33
+  CDT-11-4         TRAPEZOIDAL         10.00   240.00     4.93    44.00        1  1832.58
+  CDT-11-5         TRAPEZOIDAL         10.00   240.00     4.93    44.00        1  3167.05
+  CDT-11-6         TRAPEZOIDAL         10.00   240.00     4.93    44.00        1  3051.69
+  CDT-11-7         TRAPEZOIDAL         10.00   240.00     4.93    44.00        1  3436.22
+  CDT-11-8         TRAPEZOIDAL         10.00   240.00     4.93    44.00        1  2650.50
+  CDT-18-1         TRAPEZOIDAL         10.00   240.00     4.93    44.00        1  3035.92
+  CDT-18-10        TRAPEZOIDAL         10.00   240.00     4.93    44.00        1  2205.96
+  CDT-18-11        TRAPEZOIDAL         10.00   240.00     4.93    44.00        1  3361.67
+  CDT-18-12        TRAPEZOIDAL         10.00   240.00     4.93    44.00        1  1595.82
+  CDT-18-13        TRAPEZOIDAL         10.00   240.00     4.93    44.00        1  3196.19
+  CDT-18-14        TRAPEZOIDAL         10.00   240.00     4.93    44.00        1  3917.77
+  CDT-18-15        TRAPEZOIDAL         10.00   240.00     4.93    44.00        1  3816.16
+  CDT-18-2         TRAPEZOIDAL         10.00   240.00     4.93    44.00        1  3509.78
+  CDT-18-3         TRAPEZOIDAL         10.00   240.00     4.93    44.00        1  2742.26
+  CDT-18-4         TRAPEZOIDAL         10.00   240.00     4.93    44.00        1  2946.37
+  CDT-18-5         TRAPEZOIDAL         10.00   240.00     4.93    44.00        1  3673.83
+  CDT-18-6         TRAPEZOIDAL         10.00   240.00     4.93    44.00        1  4385.94
+  CDT-18-7         TRAPEZOIDAL         10.00   240.00     4.93    44.00        1  2630.36
+  CDT-18-8         TRAPEZOIDAL         10.00   240.00     4.93    44.00        1  3413.10
+  CDT-18-9         TRAPEZOIDAL         10.00   240.00     4.93    44.00        1  2274.97
+  CDT-2-0          TRAPEZOIDAL         10.00   240.00     4.93    44.00        1  3242.63
+  CDT-2-1          TRAPEZOIDAL         10.00   240.00     4.93    44.00        1  2853.86
+  CDT-2-2          TRAPEZOIDAL         10.00   240.00     4.93    44.00        1  3134.85
+  CDT-2-3          TRAPEZOIDAL         10.00   240.00     4.93    44.00        1  5070.61
+  CDT-2-4          TRAPEZOIDAL         10.00   240.00     4.93    44.00        1  2040.57
+  CDT-2-5          TRAPEZOIDAL         10.00   240.00     4.93    44.00        1  3966.07
+  CDT-2-6          TRAPEZOIDAL         10.00   240.00     4.93    44.00        1  5682.47
+  CDT-2-7          TRAPEZOIDAL         10.00   240.00     4.93    44.00        1  2659.69
+  CDT-2-8          TRAPEZOIDAL         10.00   240.00     4.93    44.00        1  2824.06
+  CDT-3-1          TRAPEZOIDAL         10.00   240.00     4.93    44.00        1  3942.99
+  CDT-4-1          TRAPEZOIDAL         10.00   240.00     4.93    44.00        1  3670.47
+  CDT-5-1          TRAPEZOIDAL         10.00   240.00     4.93    44.00        1  7637.39
+  CDT-6-1          TRAPEZOIDAL         10.00   240.00     4.93    44.00        1  4093.23
+  CDT-7-1          TRAPEZOIDAL         10.00   240.00     4.93    44.00        1  6668.25
+  CDT-8-1          TRAPEZOIDAL         10.00   240.00     4.93    44.00        1  3234.48
+  CDT-9-1          TRAPEZOIDAL         10.00   240.00     4.93    44.00        1  2425.25
+  CDT-9-10         TRAPEZOIDAL         10.00   240.00     4.93    44.00        1  4365.19
+  CDT-9-11         TRAPEZOIDAL         10.00   240.00     4.93    44.00        1  7475.00
+  CDT-9-12         TRAPEZOIDAL         10.00   240.00     4.93    44.00        1  3639.32
+  CDT-9-13         TRAPEZOIDAL         10.00   240.00     4.93    44.00        1  2671.74
+  CDT-9-14         TRAPEZOIDAL         10.00   240.00     4.93    44.00        1  2227.89
+  CDT-9-15         TRAPEZOIDAL         10.00   240.00     4.93    44.00        1  3874.51
+  CDT-9-16         TRAPEZOIDAL         10.00   240.00     4.93    44.00        1   555.11
+  CDT-9-17         TRAPEZOIDAL         10.00   240.00     4.93    44.00        1  2535.37
+  CDT-9-18         TRAPEZOIDAL         10.00   240.00     4.93    44.00        1  3725.41
+  CDT-9-2          TRAPEZOIDAL         10.00   240.00     4.93    44.00        1  2980.11
+  CDT-9-3          TRAPEZOIDAL         10.00   240.00     4.93    44.00        1  4585.70
+  CDT-9-4          TRAPEZOIDAL         10.00   240.00     4.93    44.00        1  2590.11
+  CDT-9-5          TRAPEZOIDAL         10.00   240.00     4.93    44.00        1  3337.33
+  CDT-9-6          TRAPEZOIDAL         10.00   240.00     4.93    44.00        1  6013.93
+  CDT-9-7          TRAPEZOIDAL         10.00   240.00     4.93    44.00        1  4029.30
+  CDT-9-8          TRAPEZOIDAL         10.00   240.00     4.93    44.00        1  4162.51
+  CDT-9-9          TRAPEZOIDAL         10.00   240.00     4.93    44.00        1  6101.03
+  CDT-9-A          TRAPEZOIDAL         10.00   240.00     4.93    44.00        1  2900.37
+  CDT-9-B          TRAPEZOIDAL         10.00   240.00     4.93    44.00        1  3591.65
+  
+  
+  ****************
+  Analysis Options
+  ****************
+  Flow Units ............... CFS
+  Process Models:
+    Rainfall/Runoff ........ YES
+    RDII ................... NO
+    Snowmelt ............... NO
+    Groundwater ............ YES
+    Flow Routing ........... YES
+    Ponding Allowed ........ NO
+    Water Quality .......... NO
+  Infiltration Method ...... GREEN_AMPT
+  Flow Routing Method ...... DYNWAVE
+  Surcharge Method ......... EXTRAN
+  Starting Date ............ 01/01/2008 00:00:00
+  Ending Date .............. 01/06/2008 00:00:00
+  Antecedent Dry Days ...... 0.0
+  Report Time Step ......... 00:30:00
+  Wet Time Step ............ 00:07:30
+  Dry Time Step ............ 00:15:00
+  Routing Time Step ........ 60.00 sec
+  Variable Time Step ....... YES
+  Maximum Trials ........... 8
+  Number of Threads ........ 1
+  Head Tolerance ........... 0.005000 ft
+  
+  
+  *********************
+  Control Actions Taken
+  *********************
+
+  
+  **************************        Volume         Depth
+  Runoff Quantity Continuity     acre-feet        inches
+  **************************     ---------       -------
+  Total Precipitation ......       177.939         1.000
+  Evaporation Loss .........        11.872         0.067
+  Infiltration Loss ........       156.396         0.879
+  Surface Runoff ...........         3.460         0.019
+  Final Storage ............         6.393         0.036
+  Continuity Error (%) .....        -0.102
+  
+  
+  **************************        Volume         Depth
+  Groundwater Continuity         acre-feet        inches
+  **************************     ---------       -------
+  Initial Storage ..........      3355.569        18.858
+  Infiltration .............       156.396         0.879
+  Upper Zone ET ............         3.835         0.022
+  Lower Zone ET ............         4.506         0.025
+  Deep Percolation .........         2.333         0.013
+  Groundwater Flow .........      1528.494         8.590
+  Final Storage ............      1967.708        11.058
+  Continuity Error (%) .....         0.145
+  
+  
+  **************************        Volume        Volume
+  Flow Routing Continuity        acre-feet      10^6 gal
+  **************************     ---------     ---------
+  Dry Weather Inflow .......         0.000         0.000
+  Wet Weather Inflow .......         3.460         1.128
+  Groundwater Inflow .......      1528.282       498.013
+  RDII Inflow ..............         0.000         0.000
+  External Inflow ..........         0.000         0.000
+  External Outflow .........      1468.147       478.418
+  Flooding Loss ............         0.000         0.000
+  Evaporation Loss .........         0.466         0.152
+  Exfiltration Loss ........         0.000         0.000
+  Initial Stored Volume ....         6.079         1.981
+  Final Stored Volume ......        59.655        19.439
+  Continuity Error (%) .....         0.621
+  
+  
+  *************************
+  Highest Continuity Errors
+  *************************
+  Node 2-POND2 (4.80%)
+  Node 15-R-1_POND (4.09%)
+  Node 11_PERIMETER_POND (2.07%)
+  
+  
+  ***************************
+  Time-Step Critical Elements
+  ***************************
+  Link CDT-2-0 (99.84%)
+  
+  
+  ********************************
+  Highest Flow Instability Indexes
+  ********************************
+  Link CDT-5-1 (12)
+  
+  
+  *********************************
+  Most Frequent Nonconverging Nodes
+  *********************************
+  Convergence obtained at all time steps.
+  
+  
+  *************************
+  Routing Time Step Summary
+  *************************
+  Minimum Time Step           :     2.48 sec
+  Average Time Step           :     9.68 sec
+  Maximum Time Step           :    60.00 sec
+  % of Time in Steady State   :     0.00
+  Average Iterations per Step :     2.01
+  % of Steps Not Converging   :     0.00
+  Time Step Frequencies       :
+     60.000 - 23.031 sec      :     3.64 %
+     23.031 -  8.841 sec      :    36.20 %
+      8.841 -  3.393 sec      :    60.16 %
+      3.393 -  1.303 sec      :     0.00 %
+      1.303 -  0.500 sec      :     0.00 %
+  
+  
+  ***************************
+  Subcatchment Runoff Summary
+  ***************************
+  
+  ------------------------------------------------------------------------------------------------------------------------------
+                            Total      Total      Total      Total     Imperv       Perv      Total       Total     Peak  Runoff
+                           Precip      Runon       Evap      Infil     Runoff     Runoff     Runoff      Runoff   Runoff   Coeff
+  Subcatchment                 in         in         in         in         in         in         in    10^6 gal      CFS
+  ------------------------------------------------------------------------------------------------------------------------------
+  SUB-100                    1.00       0.00       0.02       0.96       0.00       0.00       0.00        0.00     0.00   0.000
+  SUB-1000                   1.00       0.00       0.36       0.16       0.00       0.28       0.28        0.01     0.15   0.276
+  SUB-1001                   1.00       0.00       0.36       0.16       0.00       0.29       0.29        0.02     0.29   0.286
+  SUB-1002                   1.00       0.00       0.36       0.16       0.00       0.28       0.28        0.02     0.16   0.285
+  SUB-101                    1.00       0.00       0.08       0.79       0.02       0.00       0.00        0.00     0.00   0.000
+  SUB-102                    1.00       0.00       0.05       0.88       0.01       0.00       0.00        0.00     0.00   0.000
+  SUB-103                    1.00       0.00       0.01       0.97       0.00       0.00       0.00        0.00     0.00   0.000
+  SUB-104                    1.00       0.00       0.02       0.97       0.00       0.00       0.00        0.00     0.00   0.000
+  SUB-105                    1.00       0.00       0.02       0.96       0.00       0.00       0.00        0.00     0.00   0.000
+  SUB-106                    1.00       0.00       0.02       0.96       0.00       0.00       0.00        0.00     0.00   0.000
+  SUB-107                    1.00       0.00       0.02       0.95       0.00       0.00       0.00        0.00     0.00   0.000
+  SUB-108                    1.00       0.00       0.01       0.98       0.00       0.00       0.00        0.00     0.00   0.000
+  SUB-109                    1.00       0.00       0.05       0.87       0.01       0.00       0.00        0.00     0.00   0.000
+  SUB-110                    1.00       0.00       0.02       0.95       0.00       0.00       0.00        0.00     0.00   0.000
+  SUB-1100                   1.00       0.00       0.10       0.85       0.11       0.00       0.00        0.00     0.00   0.000
+  SUB-1101                   1.00       0.00       0.15       0.78       0.15       0.00       0.00        0.00     0.00   0.000
+  SUB-1102                   1.00       0.00       0.08       0.89       0.07       0.00       0.00        0.00     0.00   0.000
+  SUB-1103                   1.00       0.00       0.08       0.88       0.08       0.00       0.00        0.00     0.00   0.000
+  SUB-1104                   1.00       0.00       0.07       0.89       0.07       0.00       0.00        0.00     0.00   0.000
+  SUB-1105                   1.00       0.00       0.09       0.86       0.09       0.00       0.00        0.00     0.00   0.000
+  SUB-1106                   1.00       0.00       0.03       0.96       0.02       0.00       0.00        0.00     0.00   0.000
+  SUB-1107                   1.00       0.00       0.04       0.94       0.03       0.00       0.00        0.00     0.00   0.000
+  SUB-1800                   1.00       0.00       0.09       0.86       0.10       0.00       0.00        0.00     0.00   0.000
+  SUB-1801                   1.00       0.00       0.05       0.92       0.06       0.00       0.00        0.00     0.00   0.000
+  SUB-1802                   1.00       0.00       0.22       0.65       0.25       0.00       0.00        0.00     0.00   0.000
+  SUB-1803                   1.00       0.00       0.10       0.84       0.12       0.00       0.00        0.00     0.00   0.000
+  SUB-1804                   1.00       0.00       0.13       0.81       0.13       0.00       0.00        0.00     0.00   0.000
+  SUB-1805                   1.00       0.00       0.12       0.82       0.12       0.00       0.00        0.00     0.00   0.000
+  SUB-1806                   1.00       0.00       0.08       0.89       0.07       0.00       0.00        0.00     0.00   0.000
+  SUB-1807                   1.00       0.00       0.09       0.87       0.08       0.00       0.00        0.00     0.00   0.000
+  SUB-1808                   1.00       0.00       0.11       0.84       0.12       0.00       0.00        0.00     0.00   0.000
+  SUB-1809                   1.00       0.00       0.10       0.84       0.11       0.00       0.00        0.00     0.00   0.000
+  SUB-1810                   1.00       0.00       0.09       0.86       0.10       0.00       0.00        0.00     0.00   0.000
+  SUB-1811                   1.00       0.00       0.07       0.90       0.07       0.00       0.00        0.00     0.00   0.000
+  SUB-1812                   1.00       0.00       0.10       0.85       0.11       0.00       0.00        0.00     0.00   0.000
+  SUB-1813                   1.00       0.00       0.12       0.82       0.12       0.00       0.00        0.00     0.00   0.000
+  SUB-1814                   1.00       0.00       0.20       0.68       0.23       0.00       0.00        0.00     0.00   0.000
+  SUB-200                    1.00       0.00       0.02       0.97       0.00       0.00       0.00        0.00     0.00   0.000
+  SUB-201                    1.00       0.00       0.05       0.89       0.01       0.00       0.00        0.00     0.00   0.000
+  SUB-202                    1.00       0.00       0.03       0.94       0.00       0.00       0.00        0.00     0.00   0.000
+  SUB-203                    1.00       0.00       0.01       0.98       0.00       0.00       0.00        0.00     0.00   0.000
+  SUB-204                    1.00       0.00       0.04       0.92       0.01       0.00       0.00        0.00     0.00   0.000
+  SUB-205                    1.00       0.00       0.05       0.90       0.01       0.00       0.00        0.00     0.00   0.000
+  SUB-206                    1.00       0.00       0.03       0.96       0.00       0.00       0.00        0.00     0.00   0.000
+  SUB-207                    1.00       0.00       0.02       0.97       0.00       0.00       0.00        0.00     0.00   0.000
+  SUB-208                    1.00       0.00       0.03       0.96       0.00       0.00       0.00        0.00     0.00   0.000
+  SUB-300                    1.00       0.00       0.36       0.16       0.00       0.28       0.28        0.11     0.92   0.283
+  SUB-400                    1.00       0.00       0.36       0.16       0.00       0.31       0.31        0.03     0.30   0.305
+  SUB-401                    1.00       0.00       0.36       0.16       0.00       0.30       0.30        0.02     0.22   0.298
+  SUB-500                    1.00       0.00       0.36       0.16       0.00       0.27       0.27        0.00     0.06   0.265
+  SUB-600                    1.00       0.00       0.36       0.16       0.01       0.14       0.14        0.05     0.19   0.141
+  SUB-700                    1.00       0.00       0.36       0.16       0.01       0.32       0.32        0.02     0.49   0.320
+  SUB-800                    1.00       0.00       0.03       0.95       0.09       0.02       0.02        0.02     0.57   0.022
+  SUB-801                    1.00       0.00       0.04       0.91       0.14       0.05       0.05        0.03     0.81   0.047
+  SUB-900                    1.00       0.00       0.03       0.96       0.07       0.01       0.01        0.01     0.29   0.010
+  SUB-901                    1.00       0.00       0.03       0.95       0.08       0.02       0.02        0.02     0.42   0.017
+  SUB-902                    1.00       0.00       0.07       0.71       0.38       0.22       0.22        0.25     4.84   0.221
+  SUB-903                    1.00       0.00       0.10       0.24       0.69       0.66       0.66        0.09     2.48   0.659
+  SUB-904                    1.00       0.00       0.04       0.93       0.13       0.03       0.03        0.02     0.38   0.030
+  SUB-905                    1.00       0.00       0.04       0.92       0.13       0.04       0.04        0.04     0.88   0.039
+  SUB-906                    1.00       0.00       0.06       0.77       0.30       0.17       0.17        0.08     1.82   0.166
+  SUB-907                    1.00       0.00       0.03       0.96       0.06       0.01       0.01        0.01     0.27   0.011
+  SUB-908                    1.00       0.00       0.03       0.97       0.20       0.00       0.00        0.00     0.00   0.000
+  SUB-909                    1.00       0.00       0.02       0.98       0.10       0.00       0.00        0.00     0.00   0.000
+  SUB-910                    1.00       0.00       0.08       0.72       0.53       0.20       0.20        0.05     1.72   0.201
+  SUB-911                    1.00       0.00       0.11       0.20       0.79       0.69       0.69        0.06     2.34   0.686
+  SUB-912                    1.00       0.00       0.05       0.90       0.17       0.06       0.06        0.04     0.97   0.060
+  SUB-913                    1.00       0.00       0.04       0.92       0.14       0.04       0.04        0.05     1.08   0.038
+  SUB-914                    1.00       0.00       0.04       0.95       0.10       0.02       0.02        0.02     0.48   0.016
+  SUB-915                    1.00       0.00       0.03       0.95       0.09       0.02       0.02        0.01     0.34   0.020
+  SUB-916                    1.00       0.00       0.04       0.95       0.09       0.02       0.02        0.02     0.57   0.018
+  SUB-917                    1.00       0.00       0.03       0.95       0.08       0.02       0.02        0.01     0.40   0.018
+  SUB-918                    1.00       0.00       0.03       0.95       0.07       0.02       0.02        0.02     0.47   0.019
+  
+  
+  *******************
+  Groundwater Summary
+  *******************
+  
+  -----------------------------------------------------------------------------------------------------
+                                            Total    Total  Maximum  Average  Average    Final    Final
+                          Total    Total    Lower  Lateral  Lateral    Upper    Water    Upper    Water
+                          Infil     Evap  Seepage  Outflow  Outflow   Moist.    Table   Moist.    Table
+  Subcatchment               in       in       in       in      CFS                ft                ft
+  -----------------------------------------------------------------------------------------------------
+  SUB-100                  0.96     0.06     0.01     8.81    12.66     0.26     0.59     0.26     0.01
+  SUB-1000                 0.16     0.00     0.12     0.00     0.00     0.35     3.50     0.35     3.50
+  SUB-1001                 0.16     0.00     0.12     0.00     0.00     0.35     3.50     0.36     3.50
+  SUB-1002                 0.16     0.00     0.12     0.00     0.00     0.35     3.50     0.36     3.50
+  SUB-101                  0.79     0.05     0.01     8.66    19.80     0.26     0.52     0.26     0.00
+  SUB-102                  0.88     0.05     0.01     8.74    12.84     0.26     0.54     0.26     0.00
+  SUB-103                  0.97     0.06     0.01     8.83    13.80     0.26     0.54     0.26     0.00
+  SUB-104                  0.97     0.06     0.01     8.82     6.20     0.26     0.54     0.26     0.00
+  SUB-105                  0.96     0.06     0.01     8.81    21.99     0.26     0.58     0.26     0.01
+  SUB-106                  0.96     0.06     0.01     8.81    14.88     0.26     0.58     0.26     0.00
+  SUB-107                  0.95     0.06     0.01     8.81     6.85     0.26     0.58     0.26     0.00
+  SUB-108                  0.98     0.07     0.01     8.83     6.27     0.26     0.59     0.26     0.01
+  SUB-109                  0.87     0.05     0.01     8.73    12.11     0.26     0.54     0.26     0.00
+  SUB-110                  0.95     0.06     0.01     8.80    13.25     0.26     0.57     0.26     0.00
+  SUB-1100                 0.85     0.04     0.01     8.72    18.75     0.26     0.53     0.26     0.00
+  SUB-1101                 0.78     0.03     0.01     8.66    18.07     0.26     0.50     0.26     0.00
+  SUB-1102                 0.89     0.04     0.01     8.76    21.44     0.26     0.51     0.26     0.00
+  SUB-1103                 0.88     0.04     0.01     8.75    20.33     0.26     0.51     0.26     0.00
+  SUB-1104                 0.89     0.05     0.01     8.76    16.57     0.26     0.52     0.26     0.00
+  SUB-1105                 0.86     0.04     0.01     8.73    15.36     0.26     0.52     0.26     0.00
+  SUB-1106                 0.96     0.06     0.01     8.82    16.28     0.26     0.53     0.26     0.00
+  SUB-1107                 0.94     0.05     0.01     8.81    16.96     0.26     0.52     0.26     0.00
+  SUB-1800                 0.86     0.05     0.01     8.72    15.97     0.26     0.54     0.26     0.00
+  SUB-1801                 0.92     0.05     0.01     8.78    19.15     0.26     0.53     0.26     0.00
+  SUB-1802                 0.65     0.00     0.01     8.54    12.80     0.26     0.50     0.26     0.00
+  SUB-1803                 0.84     0.04     0.01     8.71    16.03     0.26     0.54     0.26     0.00
+  SUB-1804                 0.81     0.04     0.01     8.68    15.94     0.26     0.50     0.26     0.00
+  SUB-1805                 0.82     0.04     0.01     8.69    13.19     0.26     0.54     0.26     0.00
+  SUB-1806                 0.89     0.04     0.01     8.76    14.85     0.26     0.50     0.26     0.00
+  SUB-1807                 0.87     0.04     0.01     8.75    20.38     0.26     0.48     0.26     0.00
+  SUB-1808                 0.84     0.04     0.01     8.71    23.24     0.26     0.50     0.26     0.00
+  SUB-1809                 0.84     0.04     0.01     8.71    23.36     0.26     0.51     0.26     0.00
+  SUB-1810                 0.86     0.04     0.01     8.73    17.39     0.26     0.52     0.26     0.00
+  SUB-1811                 0.90     0.05     0.01     8.76    17.11     0.26     0.53     0.26     0.00
+  SUB-1812                 0.85     0.04     0.01     8.71    18.79     0.26     0.53     0.26     0.00
+  SUB-1813                 0.82     0.04     0.01     8.70    18.85     0.26     0.53     0.26     0.00
+  SUB-1814                 0.68     0.00     0.01     8.57    18.70     0.26     0.51     0.26     0.00
+  SUB-200                  0.97     0.06     0.01     8.82    16.94     0.26     0.60     0.26     0.01
+  SUB-201                  0.89     0.06     0.01     8.75    20.13     0.26     0.56     0.26     0.00
+  SUB-202                  0.94     0.06     0.01     8.80    12.30     0.26     0.56     0.26     0.00
+  SUB-203                  0.98     0.06     0.01     8.84    20.35     0.26     0.52     0.26     0.00
+  SUB-204                  0.92     0.06     0.01     8.77    21.44     0.26     0.57     0.26     0.00
+  SUB-205                  0.90     0.05     0.01     8.76    21.86     0.26     0.55     0.26     0.00
+  SUB-206                  0.96     0.06     0.01     8.81    10.54     0.26     0.60     0.26     0.01
+  SUB-207                  0.97     0.06     0.01     8.82    23.86     0.26     0.58     0.26     0.00
+  SUB-208                  0.96     0.06     0.01     8.81    15.73     0.26     0.59     0.26     0.01
+  SUB-300                  0.16     0.00     0.12     0.00     0.00     0.35     3.50     0.36     3.50
+  SUB-400                  0.16     0.00     0.12     0.00     0.00     0.35     3.50     0.36     3.50
+  SUB-401                  0.16     0.00     0.12     0.00     0.00     0.35     3.50     0.36     3.50
+  SUB-500                  0.16     0.00     0.12     0.00     0.00     0.35     3.50     0.36     3.50
+  SUB-600                  0.16     0.00     0.12     0.00     0.00     0.35     3.50     0.36     3.50
+  SUB-700                  0.16     0.00     0.12     0.00     0.00     0.35     3.50     0.36     3.50
+  SUB-800                  0.95     0.05     0.01     8.81    17.69     0.26     0.53     0.26     0.00
+  SUB-801                  0.91     0.05     0.01     8.78    12.57     0.26     0.52     0.26     0.00
+  SUB-900                  0.96     0.06     0.01     8.82    16.97     0.26     0.58     0.26     0.00
+  SUB-901                  0.95     0.05     0.01     8.82    17.77     0.26     0.49     0.26     0.00
+  SUB-902                  0.71     0.02     0.01     8.59    21.86     0.26     0.48     0.26     0.00
+  SUB-903                  0.24     0.00     0.01     8.13     2.52     0.26     0.45     0.26     0.00
+  SUB-904                  0.93     0.05     0.01     8.80     9.50     0.26     0.52     0.26     0.00
+  SUB-905                  0.92     0.05     0.01     8.79    16.52     0.26     0.53     0.26     0.00
+  SUB-906                  0.77     0.03     0.01     8.65     9.35     0.26     0.50     0.26     0.00
+  SUB-907                  0.96     0.05     0.01     8.82    16.07     0.26     0.54     0.26     0.00
+  SUB-908                  0.97     0.04     0.01     8.84    14.47     0.26     0.53     0.26     0.00
+  SUB-909                  0.98     0.05     0.01     8.84    10.53     0.26     0.54     0.26     0.00
+  SUB-910                  0.72     0.01     0.01     8.61     4.46     0.26     0.51     0.26     0.00
+  SUB-911                  0.20     0.00     0.01     8.10     1.70     0.26     0.48     0.26     0.00
+  SUB-912                  0.90     0.04     0.01     8.77    13.16     0.26     0.50     0.26     0.00
+  SUB-913                  0.92     0.05     0.01     8.79    21.47     0.26     0.52     0.26     0.00
+  SUB-914                  0.95     0.05     0.01     8.82    22.58     0.26     0.50     0.26     0.00
+  SUB-915                  0.95     0.05     0.01     8.82    12.36     0.26     0.51     0.26     0.00
+  SUB-916                  0.95     0.05     0.01     8.81    22.47     0.26     0.53     0.26     0.00
+  SUB-917                  0.95     0.05     0.01     8.81    14.63     0.26     0.55     0.26     0.00
+  SUB-918                  0.95     0.05     0.01     8.81    15.70     0.26     0.53     0.26     0.00
+  
+  
+  ******************
+  Node Depth Summary
+  ******************
+  
+  ---------------------------------------------------------------------------------
+                                 Average  Maximum  Maximum  Time of Max    Reported
+                                   Depth    Depth      HGL   Occurrence   Max Depth
+  Node                 Type         Feet     Feet     Feet  days hr:min        Feet
+  ---------------------------------------------------------------------------------
+  JCT-1000             JUNCTION     0.00     0.05  1860.01     0  05:08        0.04
+  JCT-1001             JUNCTION     0.00     0.08  1855.08     0  05:16        0.07
+  JCT-1002             JUNCTION     0.01     0.09  1845.09     0  05:18        0.09
+  JCT-100A             JUNCTION     2.35     4.69  1587.98     0  05:33        4.69
+  JCT-100B             JUNCTION     2.23     4.76  1593.52     0  05:32        4.76
+  JCT-100C             JUNCTION     2.44     5.07  1594.91     0  05:31        5.07
+  JCT-101              JUNCTION     0.35     0.93  1746.74     0  00:18        0.93
+  JCT-102              JUNCTION     0.56     1.70  1724.17     0  00:18        1.45
+  JCT-103              JUNCTION     0.37     1.25  1722.25     0  00:15        0.96
+  JCT-104              JUNCTION     0.19     0.51  1711.52     0  00:38        0.51
+  JCT-105              JUNCTION     1.76     3.82  1597.63     0  05:33        3.82
+  JCT-106              JUNCTION     0.47     1.17  1604.39     0  00:40        1.16
+  JCT-107              JUNCTION     0.17     0.43  1601.56     0  00:15        0.43
+  JCT-108              JUNCTION     0.16     0.41  1591.15     0  00:15        0.40
+  JCT-109              JUNCTION     1.08     2.45  1716.71     0  05:31        2.45
+  JCT-110              JUNCTION     0.35     0.90  1642.21     0  00:41        0.90
+  JCT-1101             JUNCTION     0.40     1.11  1838.94     0  00:17        1.09
+  JCT-1102             JUNCTION     0.50     1.35  1820.83     0  00:30        1.35
+  JCT-1104             JUNCTION     0.69     1.67  1782.39     0  05:24        1.67
+  JCT-1105             JUNCTION     0.79     1.87  1765.32     0  05:22        1.87
+  JCT-1106             JUNCTION     0.45     1.19  1763.46     0  00:30        1.19
+  JCT-1107             JUNCTION     0.36     0.98  1791.36     0  00:17        0.96
+  JCT-1801             JUNCTION     0.33     0.88  1750.70     0  00:19        0.88
+  JCT-1802             JUNCTION     0.29     0.81  1788.05     0  00:20        0.81
+  JCT-1803             JUNCTION     0.71     1.83  1718.58     0  00:34        1.83
+  JCT-1804             JUNCTION     0.28     0.77  1840.70     0  00:27        0.77
+  JCT-1805             JUNCTION     0.24     0.64  1701.42     0  00:17        0.63
+  JCT-1806             JUNCTION     0.32     0.89  1862.69     0  00:26        0.89
+  JCT-1807             JUNCTION     0.32     0.92  1925.60     0  00:30        0.92
+  JCT-1808             JUNCTION     0.74     1.93  1824.38     0  00:59        1.93
+  JCT-1809             JUNCTION     0.47     1.50  1793.37     0  00:18        1.25
+  JCT-1810             JUNCTION     0.80     2.07  1773.77     0  01:00        2.07
+  JCT-1812             JUNCTION     0.95     2.25  1747.40     0  04:48        2.25
+  JCT-1813             JUNCTION     0.43     1.14  1745.84     0  00:36        1.13
+  JCT-1814             JUNCTION     0.41     1.10  1769.41     0  00:24        1.10
+  JCT-200A             JUNCTION     1.75     3.80  1547.71     0  04:46        3.79
+  JCT-201              JUNCTION     0.39     1.01  1661.07     0  00:25        1.01
+  JCT-202              JUNCTION     0.29     0.74  1646.27     0  00:21        0.73
+  JCT-203              JUNCTION     0.27     0.74  1797.03     0  00:25        0.74
+  JCT-204              JUNCTION     1.92     4.26  1615.09     0  04:45        4.25
+  JCT-205              JUNCTION     0.34     0.88  1685.90     0  00:25        0.88
+  JCT-206              JUNCTION     0.19     0.50  1561.44     0  00:15        0.48
+  JCT-207              JUNCTION     1.77     3.95  1604.60     0  04:47        3.95
+  JCT-208              JUNCTION     0.57     1.40  1581.21     0  00:36        1.40
+  JCT-301              JUNCTION     0.02     0.16  1798.16     0  06:07        0.16
+  JCT-401              JUNCTION     0.01     0.12  1850.12     0  06:07        0.12
+  JCT-501              JUNCTION     0.00     0.00  1840.00     0  06:25        0.00
+  JCT-601              JUNCTION     0.01     0.06  1835.06     0  06:14        0.06
+  JCT-701              JUNCTION     0.00     0.07  1817.07     0  05:07        0.07
+  JCT-801              JUNCTION     0.31     0.79  1770.22     0  00:19        0.79
+  JCT-900A             JUNCTION     1.48     3.46  1617.47     0  01:27        3.45
+  JCT-900B             JUNCTION     1.13     2.78  1682.07     0  01:27        2.78
+  JCT-901              JUNCTION     0.37     1.03  1883.44     0  00:29        1.03
+  JCT-902              JUNCTION     0.37     1.11  1875.86     0  00:16        1.03
+  JCT-903              JUNCTION     0.08     0.32  1895.65     0  05:10        0.29
+  JCT-904              JUNCTION     0.26     0.71  1773.79     0  00:28        0.71
+  JCT-905              JUNCTION     1.10     2.71  1745.37     0  01:25        2.71
+  JCT-906              JUNCTION     0.16     0.44  1823.27     0  00:16        0.44
+  JCT-907              JUNCTION     0.28     0.74  1740.89     0  00:17        0.74
+  JCT-908              JUNCTION     0.25     0.69  1771.14     0  00:20        0.69
+  JCT-909              JUNCTION     0.40     1.04  1711.87     0  00:25        1.04
+  JCT-910              JUNCTION     0.12     0.37  1774.63     0  05:15        0.36
+  JCT-911              JUNCTION     0.05     0.22  1799.55     0  05:08        0.19
+  JCT-912              JUNCTION     0.54     1.46  1847.17     0  00:36        1.46
+  JCT-913              JUNCTION     0.79     2.05  1785.78     0  00:46        2.05
+  JCT-914              JUNCTION     0.47     1.48  1852.62     0  00:17        1.28
+  JCT-915              JUNCTION     0.42     1.16  1836.38     0  00:26        1.15
+  JCT-916              JUNCTION     2.65     5.79  1749.94     0  01:23        5.79
+  JCT-917              JUNCTION     1.42     3.37  1692.91     0  01:25        3.37
+  JCT-918              JUNCTION     0.28     0.78  1761.52     0  00:15        0.76
+  OFALL-003            OUTFALL      0.01     0.12  1762.12     0  06:08        0.11
+  OFALL-004            OUTFALL      0.01     0.08  1820.08     0  06:07        0.08
+  OFALL-005            OUTFALL      0.00     0.06  1816.06     0  05:11        0.06
+  OFALL-006            OUTFALL      0.01     0.04  1790.04     0  06:14        0.04
+  OFALL-007            OUTFALL      0.00     0.12  1809.12     0  04:52        0.07
+  OFALL-10             OUTFALL      0.01     0.08  1830.08     0  05:18        0.08
+  OUTFALL-001          OUTFALL      1.26     2.87  1582.64     0  05:33        2.87
+  OUTFALL-002          OUTFALL      1.55     3.57  1542.17     0  04:46        3.57
+  OUTFALL-008          OUTFALL      0.21     0.60  1745.15     0  00:19        0.60
+  OUTFALL-009          OUTFALL      1.19     3.00  1611.57     0  01:27        3.00
+  11_PERIMETER_POND    STORAGE     12.58    14.67  1734.67     0  05:40       14.67
+  15-R-1_POND          STORAGE     16.68    18.18  1798.18     0  05:32       18.18
+  2-POND2              STORAGE     18.16    20.17  1697.17     0  04:45       20.17
+  SILVERDALE_POND      STORAGE     13.33    15.46  1759.46     0  04:48       15.46
+  
+  
+  *******************
+  Node Inflow Summary
+  *******************
+  
+  -------------------------------------------------------------------------------------------------
+                                  Maximum  Maximum                  Lateral       Total        Flow
+                                  Lateral    Total  Time of Max      Inflow      Inflow     Balance
+                                   Inflow   Inflow   Occurrence      Volume      Volume       Error
+  Node                 Type           CFS      CFS  days hr:min    10^6 gal    10^6 gal     Percent
+  -------------------------------------------------------------------------------------------------
+  JCT-1000             JUNCTION      0.15     0.15     0  05:07     0.00599     0.00599      -0.013
+  JCT-1001             JUNCTION      0.29     0.29     0  05:15      0.0166      0.0166      -0.007
+  JCT-1002             JUNCTION      0.16     0.56     0  05:16      0.0186      0.0412      -0.001
+  JCT-100A             JUNCTION      0.00   212.65     0  05:32           0         128       0.008
+  JCT-100B             JUNCTION      0.00   207.57     0  05:30           0         125      -0.001
+  JCT-100C             JUNCTION      0.00   202.03     0  05:29           0         121      -0.001
+  JCT-101              JUNCTION     19.80    19.80     0  00:15        9.62        9.62      -0.003
+  JCT-102              JUNCTION     12.84    32.53     0  00:18        6.38          16      -0.012
+  JCT-103              JUNCTION     13.80    13.80     0  00:15        6.93        6.93      -0.026
+  JCT-104              JUNCTION      6.20     6.20     0  00:15        3.13        3.13      -0.003
+  JCT-105              JUNCTION     21.99   174.39     0  05:29        11.9         103       0.005
+  JCT-106              JUNCTION     14.88    33.64     0  00:38           8        18.1      -0.011
+  JCT-107              JUNCTION      6.85     6.85     0  00:15        3.68        3.68      -0.017
+  JCT-108              JUNCTION      6.27     6.27     0  00:15        3.41        3.41      -0.011
+  JCT-109              JUNCTION     12.11   156.47     0  05:28        6.04        91.3      -0.007
+  JCT-110              JUNCTION     13.25    19.11     0  00:33        6.96        10.1       0.007
+  JCT-1101             JUNCTION     18.07    18.07     0  00:15        8.34        8.34      -0.013
+  JCT-1102             JUNCTION     21.44    39.86     0  00:17        10.1        18.5      -0.121
+  JCT-1104             JUNCTION     16.57    58.49     0  05:22        7.98        31.8      -0.007
+  JCT-1105             JUNCTION     15.36    70.41     0  05:19        7.45        39.2      -0.064
+  JCT-1106             JUNCTION     16.28    33.74     0  00:17        7.98        16.2      -0.113
+  JCT-1107             JUNCTION     16.96    16.96     0  00:15        8.17        8.17      -0.011
+  JCT-1801             JUNCTION     19.15    19.15     0  00:15        9.41        9.41      -0.013
+  JCT-1802             JUNCTION     12.80    12.80     0  00:15        5.99        5.99      -0.003
+  JCT-1803             JUNCTION     16.03    66.11     0  00:23        7.97        32.3      -0.130
+  JCT-1804             JUNCTION     15.94    15.94     0  00:15        7.37        7.37      -0.011
+  JCT-1805             JUNCTION     13.19    13.19     0  00:15         6.6         6.6      -0.066
+  JCT-1806             JUNCTION     14.85    14.85     0  00:15        6.85        6.85      -0.039
+  JCT-1807             JUNCTION     20.38    20.38     0  00:15        9.08        9.08      -0.043
+  JCT-1808             JUNCTION     23.24    57.63     0  00:28        10.9        26.8       0.022
+  JCT-1809             JUNCTION     23.36    23.36     0  00:15        11.1        11.1      -0.037
+  JCT-1810             JUNCTION     17.39    95.45     0  00:55         8.4        46.3      -0.053
+  JCT-1812             JUNCTION     18.79   107.85     0  04:44        9.19          58      -0.053
+  JCT-1813             JUNCTION     18.85    34.37     0  00:26         9.2        16.6      -0.154
+  JCT-1814             JUNCTION     18.70    31.34     0  00:19        8.88        14.9      -0.005
+  JCT-200A             JUNCTION      0.00   332.60     0  04:43           0         190       0.007
+  JCT-201              JUNCTION     20.13    20.13     0  00:15        10.4        10.4      -0.094
+  JCT-202              JUNCTION     12.30    12.30     0  00:15        6.44        6.44      -0.068
+  JCT-203              JUNCTION     20.35    20.35     0  00:15         9.8         9.8      -0.089
+  JCT-204              JUNCTION     21.44   256.81     0  04:40        11.4         142       0.010
+  JCT-205              JUNCTION     21.86    21.86     0  00:15        11.1        11.1      -0.012
+  JCT-206              JUNCTION     10.54    10.54     0  00:15        5.82        5.82      -0.009
+  JCT-207              JUNCTION     23.86   292.98     0  04:43        12.9         165       0.008
+  JCT-208              JUNCTION     15.73    37.24     0  00:24        8.58        19.7      -0.027
+  JCT-301              JUNCTION      0.92     0.92     0  06:07       0.107       0.107      -0.000
+  JCT-401              JUNCTION      0.51     0.51     0  06:07      0.0535      0.0535      -0.001
+  JCT-501              JUNCTION      0.06     0.06     0  05:07     0.00186     0.00186     -79.873
+  JCT-601              JUNCTION      0.19     0.19     0  06:07      0.0494      0.0494      -0.002
+  JCT-701              JUNCTION      0.49     0.49     0  05:07      0.0245      0.0245      -3.749
+  JCT-801              JUNCTION     12.57    12.57     0  00:15        6.14        6.14       0.002
+  JCT-900A             JUNCTION      0.00   233.22     0  01:25           0         119       0.005
+  JCT-900B             JUNCTION      0.00   188.74     0  01:25           0        95.9       0.006
+  JCT-901              JUNCTION     17.77    17.77     0  00:15        8.17        8.17      -0.019
+  JCT-902              JUNCTION     21.86    21.86     0  00:15        10.1        10.1      -0.015
+  JCT-903              JUNCTION      4.34     4.34     0  05:07        1.14        1.14      -0.057
+  JCT-904              JUNCTION      9.50     9.50     0  00:15        4.63        4.63      -0.054
+  JCT-905              JUNCTION     16.52   166.22     0  01:21         8.2          84      -0.001
+  JCT-906              JUNCTION      9.35     9.35     0  00:15        4.43        4.43      -0.049
+  JCT-907              JUNCTION     16.07    16.07     0  00:15        7.99        7.99      -0.003
+  JCT-908              JUNCTION     14.47    14.47     0  00:15        7.07        7.07      -0.005
+  JCT-909              JUNCTION     10.53    45.26     0  00:20        5.33        22.6      -0.015
+  JCT-910              JUNCTION      5.17     5.17     0  05:15        2.17        2.17      -0.004
+  JCT-911              JUNCTION      3.61     3.61     0  05:07       0.815       0.815      -0.089
+  JCT-912              JUNCTION     13.16    52.10     0  00:26        6.17        24.4       0.005
+  JCT-913              JUNCTION     21.47    75.28     0  00:35        10.4          36      -0.038
+  JCT-914              JUNCTION     22.58    22.58     0  00:15        10.6        10.6      -0.012
+  JCT-915              JUNCTION     12.36    36.39     0  00:20        5.83        16.4      -0.085
+  JCT-916              JUNCTION     22.47   130.79     0  00:44        11.1        63.5       0.074
+  JCT-917              JUNCTION     14.63   179.98     0  01:24        7.48        91.5       0.000
+  JCT-918              JUNCTION     15.70    15.70     0  00:15        7.71        7.71      -0.014
+  OFALL-003            OUTFALL       0.00     0.92     0  06:08           0       0.107       0.000
+  OFALL-004            OUTFALL       0.00     0.51     0  06:07           0      0.0534       0.000
+  OFALL-005            OUTFALL       0.00     0.46     0  05:11           0     0.00922       0.000
+  OFALL-006            OUTFALL       0.00     0.19     0  06:14           0      0.0492       0.000
+  OFALL-007            OUTFALL       0.00     1.06     0  04:52           0      0.0255       0.000
+  OFALL-10             OUTFALL       0.00     0.56     0  05:18           0      0.0411       0.000
+  OUTFALL-001          OUTFALL      12.66   222.95     0  05:32        6.91         135       0.000
+  OUTFALL-002          OUTFALL      16.94   346.72     0  04:45         9.5         200       0.000
+  OUTFALL-008          OUTFALL      17.69    30.13     0  00:18        8.77        14.9       0.000
+  OUTFALL-009          OUTFALL      16.97   249.26     0  01:26        9.11         128       0.000
+  11_PERIMETER_POND    STORAGE      18.75   111.43     0  05:10        9.29          65       2.113
+  15-R-1_POND          STORAGE      20.33    58.97     0  00:29        9.76        28.6       4.269
+  2-POND2              STORAGE      15.97   213.00     0  04:29        8.12         122       5.042
+  SILVERDALE_POND      STORAGE      17.11   111.81     0  00:59        8.41        55.1       0.996
+  
+  
+  **********************
+  Node Surcharge Summary
+  **********************
+  
+  No nodes were surcharged.
+  
+  
+  *********************
+  Node Flooding Summary
+  *********************
+  
+  No nodes were flooded.
+  
+  
+  **********************
+  Storage Volume Summary
+  **********************
+  
+  ------------------------------------------------------------------------------------------------
+                         Average    Avg   Evap  Exfil     Maximum    Max    Time of Max    Maximum
+                          Volume   Pcnt   Pcnt   Pcnt      Volume   Pcnt     Occurrence    Outflow
+  Storage Unit          1000 ft³   Full   Loss   Loss    1000 ft³   Full    days hr:min        CFS
+  ------------------------------------------------------------------------------------------------
+  11_PERIMETER_POND      217.664   50.1    0.0    0.0     265.633   61.2       0  05:40     110.49
+  15-R-1_POND            517.854   52.5    0.0    0.0     585.785   59.4       0  05:32      45.68
+  2-POND2                352.752   59.0    0.0    0.0     402.381   67.3       0  04:45     212.37
+  SILVERDALE_POND        867.792   52.2    0.0    0.0    1042.252   62.7       0  04:48      92.80
+  
+  
+  ***********************
+  Outfall Loading Summary
+  ***********************
+  
+  -----------------------------------------------------------
+                         Flow       Avg       Max       Total
+                         Freq      Flow      Flow      Volume
+  Outfall Node           Pcnt       CFS       CFS    10^6 gal
+  -----------------------------------------------------------
+  OFALL-003             30.90      0.20      0.92       0.107
+  OFALL-004             27.92      0.11      0.51       0.053
+  OFALL-005              4.18      0.13      0.46       0.009
+  OFALL-006             45.12      0.06      0.19       0.049
+  OFALL-007             13.55      0.11      1.06       0.025
+  OFALL-10              27.45      0.09      0.56       0.041
+  OUTFALL-001           99.98     67.65    222.95     135.224
+  OUTFALL-002           99.98     99.87    346.72     199.560
+  OUTFALL-008           99.98      7.49     30.13      14.911
+  OUTFALL-009           99.98     64.81    249.26     128.402
+  -----------------------------------------------------------
+  System                54.90    240.52    812.64     478.382
+  
+  
+  ********************
+  Link Flow Summary
+  ********************
+  
+  -----------------------------------------------------------------------------
+                                 Maximum  Time of Max   Maximum    Max/    Max/
+                                  |Flow|   Occurrence   |Veloc|    Full    Full
+  Link                 Type          CFS  days hr:min    ft/sec    Flow   Depth
+  -----------------------------------------------------------------------------
+  CDT-1-1              CONDUIT     19.73     0  00:18      2.80    0.01    0.13
+  CDT-1-10             CONDUIT     19.04     0  00:41      5.93    0.01    0.10
+  CDT-1-11             CONDUIT      6.85     0  00:15      3.10    0.00    0.26
+  CDT-1-12             CONDUIT      6.29     0  00:15      3.37    0.00    0.25
+  CDT-1-13             CONDUIT    212.65     0  05:33      4.87    0.13    0.38
+  CDT-1-2              CONDUIT     34.82     0  00:21      7.47    0.01    0.19
+  CDT-1-3              CONDUIT     16.19     0  00:17      2.52    0.01    0.17
+  CDT-1-4              CONDUIT      6.08     0  00:38      4.43    0.00    0.07
+  CDT-1-5              CONDUIT    174.37     0  05:33      3.04    0.11    0.44
+  CDT-1-6              CONDUIT     33.63     0  00:40      2.67    0.01    0.31
+  CDT-1-7              CONDUIT    202.02     0  05:30      2.97    0.21    0.49
+  CDT-1-8              CONDUIT    207.56     0  05:32      3.27    0.17    0.47
+  CDT-1-9              CONDUIT    156.45     0  05:31     10.04    0.04    0.31
+  CDT-10-1             CONDUIT      0.15     0  05:08      0.54    0.00    0.01
+  CDT-10-2             CONDUIT      0.29     0  05:16      0.82    0.00    0.01
+  CDT-10-3             CONDUIT      0.56     0  05:18      1.53    0.00    0.01
+  CDT-11-1             CONDUIT    110.49     0  05:37      3.56    0.07    0.31
+  CDT-11-2             CONDUIT     18.48     0  00:17      2.66    0.01    0.12
+  CDT-11-3             CONDUIT     38.93     0  00:31      1.14    0.01    0.57
+  CDT-11-4             CONDUIT     45.68     0  05:29      3.02    0.02    0.19
+  CDT-11-5             CONDUIT     58.49     0  05:24      4.39    0.02    0.18
+  CDT-11-6             CONDUIT     70.41     0  05:22      0.91    0.02    0.59
+  CDT-11-7             CONDUIT     32.78     0  00:31      1.00    0.01    0.56
+  CDT-11-8             CONDUIT     17.50     0  00:17      2.99    0.01    0.11
+  CDT-18-1             CONDUIT    212.36     0  04:45      5.00    0.07    0.37
+  CDT-18-10            CONDUIT     27.60     0  00:21      2.99    0.01    0.16
+  CDT-18-11            CONDUIT     95.33     0  01:00      3.14    0.03    0.60
+  CDT-18-12            CONDUIT     92.79     0  04:48      3.35    0.06    0.29
+  CDT-18-13            CONDUIT    107.82     0  04:48      1.08    0.03    0.61
+  CDT-18-14            CONDUIT     34.13     0  00:36      1.26    0.01    0.56
+  CDT-18-15            CONDUIT     31.21     0  00:24      3.95    0.01    0.15
+  CDT-18-2             CONDUIT     19.07     0  00:19      3.60    0.01    0.14
+  CDT-18-3             CONDUIT     12.73     0  00:20      2.36    0.00    0.10
+  CDT-18-4             CONDUIT     65.55     0  00:34      2.05    0.02    0.59
+  CDT-18-5             CONDUIT     15.73     0  00:28      3.24    0.00    0.10
+  CDT-18-6             CONDUIT     13.16     0  00:17      0.86    0.00    0.53
+  CDT-18-7             CONDUIT     14.67     0  00:26      2.76    0.01    0.14
+  CDT-18-8             CONDUIT     20.05     0  00:30      3.48    0.01    0.14
+  CDT-18-9             CONDUIT     56.17     0  00:59      7.60    0.02    0.20
+  CDT-2-0              CONDUIT    332.58     0  04:46      7.95    0.10    0.37
+  CDT-2-1              CONDUIT     19.95     0  00:25      3.23    0.01    0.26
+  CDT-2-2              CONDUIT     12.23     0  00:21      2.99    0.00    0.25
+  CDT-2-3              CONDUIT     20.13     0  00:25      4.10    0.00    0.23
+  CDT-2-4              CONDUIT    256.73     0  04:46     14.27    0.13    0.41
+  CDT-2-5              CONDUIT     21.65     0  00:25      3.83    0.01    0.11
+  CDT-2-6              CONDUIT     10.70     0  00:15      5.15    0.00    0.21
+  CDT-2-7              CONDUIT    292.91     0  04:47      6.44    0.11    0.39
+  CDT-2-8              CONDUIT     36.96     0  00:36      3.60    0.01    0.25
+  CDT-3-1              CONDUIT      0.92     0  06:08      1.57    0.00    0.01
+  CDT-4-1              CONDUIT      0.51     0  06:07      1.21    0.00    0.01
+  CDT-5-1              CONDUIT      0.46     0  05:11      2.17    0.00    0.01
+  CDT-6-1              CONDUIT      0.19     0  06:14      0.89    0.00    0.01
+  CDT-7-1              CONDUIT      1.06     0  04:52      2.84    0.00    0.01
+  CDT-8-1              CONDUIT     12.51     0  00:19      3.33    0.00    0.07
+  CDT-9-1              CONDUIT     17.50     0  00:29     12.81    0.01    0.12
+  CDT-9-10             CONDUIT      5.16     0  05:15      1.47    0.00    0.07
+  CDT-9-11             CONDUIT      3.48     0  05:08      1.59    0.00    0.18
+  CDT-9-12             CONDUIT     51.75     0  00:36      7.56    0.01    0.18
+  CDT-9-13             CONDUIT     74.76     0  00:46      7.67    0.03    0.39
+  CDT-9-14             CONDUIT     24.10     0  00:20      2.95    0.01    0.13
+  CDT-9-15             CONDUIT     35.00     0  00:26      5.69    0.01    0.35
+  CDT-9-16             CONDUIT    126.80     0  01:24      3.92    0.23    0.42
+  CDT-9-17             CONDUIT    179.98     0  01:25      5.77    0.07    0.31
+  CDT-9-18             CONDUIT     16.04     0  00:15      3.93    0.00    0.17
+  CDT-9-2              CONDUIT     23.62     0  00:17      3.65    0.01    0.12
+  CDT-9-3              CONDUIT      4.19     0  05:10      0.97    0.00    0.11
+  CDT-9-4              CONDUIT      9.38     0  00:28      4.52    0.00    0.17
+  CDT-9-5              CONDUIT    166.14     0  01:25      7.44    0.05    0.30
+  CDT-9-6              CONDUIT      9.36     0  00:16      4.74    0.00    0.16
+  CDT-9-7              CONDUIT     16.03     0  00:17      3.84    0.00    0.09
+  CDT-9-8              CONDUIT     14.39     0  00:20      3.28    0.00    0.09
+  CDT-9-9              CONDUIT     45.09     0  00:25      7.21    0.01    0.22
+  CDT-9-A              CONDUIT    233.17     0  01:27      6.91    0.08    0.32
+  CDT-9-B              CONDUIT    188.71     0  01:27      5.92    0.05    0.31
+  
+  
+  ***************************
+  Flow Classification Summary
+  ***************************
+  
+  -------------------------------------------------------------------------------------
+                      Adjusted    ---------- Fraction of Time in Flow Class ---------- 
+                       /Actual         Up    Down  Sub   Sup   Up    Down  Norm  Inlet 
+  Conduit               Length    Dry  Dry   Dry   Crit  Crit  Crit  Crit  Ltd   Ctrl  
+  -------------------------------------------------------------------------------------
+  CDT-1-1                 1.00   0.00  0.00  0.00  1.00  0.00  0.00  0.00  1.00  0.00
+  CDT-1-10                1.00   0.00  0.00  0.00  1.00  0.00  0.00  0.00  1.00  0.00
+  CDT-1-11                1.00   0.00  0.00  0.00  1.00  0.00  0.00  0.00  1.00  0.00
+  CDT-1-12                1.00   0.00  0.00  0.00  1.00  0.00  0.00  0.00  1.00  0.00
+  CDT-1-13                1.00   0.00  0.00  0.00  1.00  0.00  0.00  0.00  0.00  0.00
+  CDT-1-2                 1.00   0.00  0.00  0.00  1.00  0.00  0.00  0.00  1.00  0.00
+  CDT-1-3                 1.00   0.00  0.00  0.00  1.00  0.00  0.00  0.00  1.00  0.00
+  CDT-1-4                 1.00   0.00  0.00  0.00  1.00  0.00  0.00  0.00  1.00  0.00
+  CDT-1-5                 1.00   0.00  0.00  0.00  1.00  0.00  0.00  0.00  1.00  0.00
+  CDT-1-6                 1.00   0.00  0.00  0.00  1.00  0.00  0.00  0.00  1.00  0.00
+  CDT-1-7                 1.00   0.00  0.00  0.00  1.00  0.00  0.00  0.00  0.00  0.00
+  CDT-1-8                 1.00   0.00  0.00  0.00  1.00  0.00  0.00  0.00  0.95  0.00
+  CDT-1-9                 1.00   0.00  0.00  0.00  1.00  0.00  0.00  0.00  1.00  0.00
+  CDT-10-1                1.00   0.80  0.13  0.00  0.08  0.00  0.00  0.00  0.96  0.00
+  CDT-10-2                1.00   0.80  0.10  0.00  0.10  0.00  0.00  0.00  0.96  0.00
+  CDT-10-3                1.00   0.80  0.00  0.00  0.20  0.00  0.00  0.00  0.78  0.00
+  CDT-11-1                1.00   0.00  0.01  0.00  0.99  0.00  0.00  0.00  0.00  0.00
+  CDT-11-2                1.00   0.00  0.00  0.00  1.00  0.00  0.00  0.00  1.00  0.00
+  CDT-11-3                1.00   0.00  0.00  0.00  1.00  0.00  0.00  0.00  1.00  0.00
+  CDT-11-4                1.00   0.00  0.03  0.00  0.97  0.00  0.00  0.00  0.00  0.00
+  CDT-11-5                1.00   0.00  0.00  0.00  1.00  0.00  0.00  0.00  1.00  0.00
+  CDT-11-6                1.00   0.00  0.00  0.00  1.00  0.00  0.00  0.00  1.00  0.00
+  CDT-11-7                1.00   0.00  0.00  0.00  1.00  0.00  0.00  0.00  1.00  0.00
+  CDT-11-8                1.00   0.00  0.00  0.00  1.00  0.00  0.00  0.00  1.00  0.00
+  CDT-18-1                1.00   0.00  0.02  0.00  0.98  0.00  0.00  0.00  0.98  0.00
+  CDT-18-10               1.00   0.00  0.00  0.00  1.00  0.00  0.00  0.00  1.00  0.00
+  CDT-18-11               1.00   0.00  0.00  0.00  1.00  0.00  0.00  0.00  1.00  0.00
+  CDT-18-12               1.00   0.00  0.02  0.00  0.98  0.00  0.00  0.00  0.00  0.00
+  CDT-18-13               1.00   0.00  0.00  0.00  1.00  0.00  0.00  0.00  1.00  0.00
+  CDT-18-14               1.00   0.00  0.00  0.00  1.00  0.00  0.00  0.00  1.00  0.00
+  CDT-18-15               1.00   0.00  0.00  0.00  1.00  0.00  0.00  0.00  1.00  0.00
+  CDT-18-2                1.00   0.00  0.00  0.00  1.00  0.00  0.00  0.00  1.00  0.00
+  CDT-18-3                1.00   0.00  0.00  0.00  1.00  0.00  0.00  0.00  1.00  0.00
+  CDT-18-4                1.00   0.00  0.00  0.00  1.00  0.00  0.00  0.00  1.00  0.00
+  CDT-18-5                1.00   0.00  0.00  0.00  1.00  0.00  0.00  0.00  1.00  0.00
+  CDT-18-6                1.00   0.00  0.00  0.00  1.00  0.00  0.00  0.00  1.00  0.00
+  CDT-18-7                1.00   0.00  0.00  0.00  1.00  0.00  0.00  0.00  1.00  0.00
+  CDT-18-8                1.00   0.00  0.00  0.00  1.00  0.00  0.00  0.00  1.00  0.00
+  CDT-18-9                1.00   0.00  0.00  0.00  1.00  0.00  0.00  0.00  1.00  0.00
+  CDT-2-0                 1.00   0.00  0.00  0.00  1.00  0.00  0.00  0.00  0.00  0.00
+  CDT-2-1                 1.00   0.00  0.00  0.00  1.00  0.00  0.00  0.00  1.00  0.00
+  CDT-2-2                 1.00   0.00  0.00  0.00  1.00  0.00  0.00  0.00  1.00  0.00
+  CDT-2-3                 1.00   0.00  0.00  0.00  1.00  0.00  0.00  0.00  1.00  0.00
+  CDT-2-4                 1.00   0.00  0.00  0.00  1.00  0.00  0.00  0.00  0.02  0.00
+  CDT-2-5                 1.00   0.00  0.00  0.00  1.00  0.00  0.00  0.00  1.00  0.00
+  CDT-2-6                 1.00   0.00  0.00  0.00  1.00  0.00  0.00  0.00  1.00  0.00
+  CDT-2-7                 1.00   0.00  0.00  0.00  1.00  0.00  0.00  0.00  0.72  0.00
+  CDT-2-8                 1.00   0.00  0.00  0.00  1.00  0.00  0.00  0.00  1.00  0.00
+  CDT-3-1                 1.00   0.79  0.00  0.00  0.21  0.00  0.00  0.00  0.76  0.00
+  CDT-4-1                 1.00   0.81  0.00  0.00  0.19  0.00  0.00  0.00  0.78  0.00
+  CDT-5-1                 1.00   0.97  0.01  0.00  0.02  0.01  0.00  0.00  0.00  0.00
+  CDT-6-1                 1.00   0.68  0.00  0.00  0.32  0.00  0.00  0.00  0.65  0.00
+  CDT-7-1                 1.00   0.92  0.00  0.00  0.07  0.01  0.00  0.00  0.88  0.00
+  CDT-8-1                 1.00   0.00  0.00  0.00  1.00  0.00  0.00  0.00  0.00  0.00
+  CDT-9-1                 1.00   0.00  0.00  0.00  1.00  0.00  0.00  0.00  1.00  0.00
+  CDT-9-10                1.00   0.00  0.00  0.00  1.00  0.00  0.00  0.00  1.00  0.00
+  CDT-9-11                1.00   0.00  0.00  0.00  1.00  0.00  0.00  0.00  1.00  0.00
+  CDT-9-12                1.00   0.00  0.00  0.00  1.00  0.00  0.00  0.00  1.00  0.00
+  CDT-9-13                1.00   0.00  0.00  0.00  1.00  0.00  0.00  0.00  1.00  0.00
+  CDT-9-14                1.00   0.00  0.00  0.00  1.00  0.00  0.00  0.00  0.00  0.00
+  CDT-9-15                1.00   0.00  0.00  0.00  1.00  0.00  0.00  0.00  1.00  0.00
+  CDT-9-16                1.00   0.00  0.00  0.00  1.00  0.00  0.00  0.00  0.00  0.00
+  CDT-9-17                1.00   0.00  0.00  0.00  1.00  0.00  0.00  0.00  0.00  0.00
+  CDT-9-18                1.00   0.00  0.00  0.00  1.00  0.00  0.00  0.00  1.00  0.00
+  CDT-9-2                 1.00   0.00  0.00  0.00  1.00  0.00  0.00  0.00  1.00  0.00
+  CDT-9-3                 1.00   0.00  0.00  0.00  1.00  0.00  0.00  0.00  1.00  0.00
+  CDT-9-4                 1.00   0.00  0.00  0.00  1.00  0.00  0.00  0.00  1.00  0.00
+  CDT-9-5                 1.00   0.00  0.00  0.00  1.00  0.00  0.00  0.00  1.00  0.00
+  CDT-9-6                 1.00   0.00  0.00  0.00  1.00  0.00  0.00  0.00  1.00  0.00
+  CDT-9-7                 1.00   0.00  0.00  0.00  1.00  0.00  0.00  0.00  1.00  0.00
+  CDT-9-8                 1.00   0.00  0.00  0.00  1.00  0.00  0.00  0.00  1.00  0.00
+  CDT-9-9                 1.00   0.00  0.00  0.00  1.00  0.00  0.00  0.00  1.00  0.00
+  CDT-9-A                 1.00   0.00  0.00  0.00  1.00  0.00  0.00  0.00  0.00  0.00
+  CDT-9-B                 1.00   0.00  0.00  0.00  1.00  0.00  0.00  0.00  1.00  0.00
+  
+  
+  *************************
+  Conduit Surcharge Summary
+  *************************
+  
+  ----------------------------------------------------------------------------
+                                                           Hours        Hours 
+                         --------- Hours Full --------   Above Full   Capacity
+  Conduit                Both Ends  Upstream  Dnstream   Normal Flow   Limited
+  ----------------------------------------------------------------------------
+  CDT-11-3                    0.01      0.01    118.64      0.01         0.01
+  CDT-11-6                    0.01      0.01    118.87      0.01         0.01
+  CDT-11-7                    0.01      0.01    118.87      0.01         0.01
+  CDT-18-11                   0.01      0.01    118.13      0.01         0.01
+  CDT-18-13                   0.01      0.01    118.86      0.01         0.01
+  CDT-18-14                   0.01      0.01    118.86      0.01         0.01
+  CDT-18-4                    0.01      0.01    118.86      0.01         0.01
+  CDT-18-6                    0.01      0.01    118.86      0.01         0.01
+  
+
+  Analysis begun on:  Fri Mar  6 12:34:50 2026
+  Analysis ended on:  Fri Mar  6 12:34:51 2026
+  Total elapsed time: 00:00:01

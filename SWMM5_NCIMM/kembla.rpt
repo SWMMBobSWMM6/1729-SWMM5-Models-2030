@@ -1,0 +1,229 @@
+
+  EPA STORM WATER MANAGEMENT MODEL - VERSION 5.2 (Build 5.2.4)
+  ------------------------------------------------------------
+
+  Scenario Run :  BASE 
+  SCE Site Old Port Road Full Water Balance RUN 
+  WARNING 02: maximum depth increased for Node 13
+  WARNING 02: maximum depth increased for Node 1PC
+  WARNING 02: maximum depth increased for Node 3
+  WARNING 02: maximum depth increased for Node 9
+  WARNING 02: maximum depth increased for Node OLD_PORT_RD_PIT
+  WARNING 02: maximum depth increased for Node SINK
+  
+  *************
+  Element Count
+  *************
+  Number of rain gages ...... 1
+  Number of subcatchments ... 11
+  Number of nodes ........... 30
+  Number of links ........... 38
+  Number of pollutants ...... 6
+  Number of land uses ....... 4
+  
+  
+  *****************
+  Pollutant Summary
+  *****************
+                               Ppt.      GW         Kdecay
+  Name                 Units   Concen.   Concen.    1/days    CoPollutant
+  -----------------------------------------------------------------------
+  ZINC                  UG/L      0.00      0.00      0.00
+  SULPHATE              MG/L      0.00      0.00      0.00
+  IRON                  UG/L      0.00      0.00      0.00
+  TSS                   MG/L      0.00      0.00      0.00
+  TN                    MG/L      0.00      0.00      0.00
+  TP                    MG/L      0.00      0.00      0.00
+  
+  
+  ***************
+  Landuse Summary
+  ***************
+                         Sweeping   Maximum      Last
+  Name                   Interval   Removal     Swept
+  ---------------------------------------------------
+  GBFS_STOCKPILE             0.00      0.00      0.00
+  GYPSUM_STOCKPILE           0.00      0.00      0.00
+  SITE_ROADWAY               0.00      0.00      0.00
+  GRASSED_BERM               0.00      0.00      0.00
+  
+  
+  ****************
+  Raingage Summary
+  ****************
+                                                      Data       Recording
+  Name                 Data Source                    Type       Interval 
+  ------------------------------------------------------------------------
+  PORT_KEMBLA-1990     C:\Users\dickinre\Downloads\KEMBLA_1990_swmm.txt
+  
+  
+  ********************
+  Subcatchment Summary
+  ********************
+  Name                       Area     Width   %Imperv    %Slope Rain Gage            Outlet              
+  -----------------------------------------------------------------------------------------------------------
+  CULDESAC                   0.48     20.00     95.00    0.5000 PORT_KEMBLA-1990     1PB                 
+  DRIVEWAY_ENTRY             0.20     25.00     95.00    0.5000 PORT_KEMBLA-1990     3                   
+  DRV_WEIGHBRIDGE            0.05     25.00     90.00    0.5000 PORT_KEMBLA-1990     9                   
+  DRV_WEIGH_BRIDGE           0.01     25.00     90.00    0.5000 PORT_KEMBLA-1990     12                  
+  DRV_WHEELWASH              0.10     40.00     90.00    0.5000 PORT_KEMBLA-1990     7                   
+  MOUND_S                    0.06    100.00     10.00    0.5000 PORT_KEMBLA-1990     3                   
+  OFF_CARPARK                0.10      5.00     85.00    0.5000 PORT_KEMBLA-1990     CHRISTY_RD_PIT      
+  SITE-W_EDGE                0.45    250.00     15.00    0.5000 PORT_KEMBLA-1990     OLD_PORT_RD_PIT     
+  STOCKPILE_1                0.43     40.00     90.00    0.5000 PORT_KEMBLA-1990     2                   
+  STOCKPILE_2                0.60     90.00     95.00    0.5000 PORT_KEMBLA-1990     1                   
+  STOCKPILE_3                0.50     90.00     95.00    0.5000 PORT_KEMBLA-1990     1PA                 
+  
+  
+  ************
+  Node Summary
+  ************
+                                           Invert      Max.    Ponded    External
+  Name                 Type                 Elev.     Depth      Area    Inflow  
+  -------------------------------------------------------------------------------
+  1                    JUNCTION              5.10      1.00       0.0    Yes
+  10                   JUNCTION              4.60      1.00       0.0
+  12                   JUNCTION              3.30      1.50       0.0
+  13                   JUNCTION              3.05      2.40       0.0
+  1PA                  JUNCTION              5.10      1.00       0.0    Yes
+  1PB                  JUNCTION              4.70      1.00       0.0
+  1PC                  JUNCTION              4.50      1.40       0.0
+  2                    JUNCTION              4.40      1.00       0.0
+  3                    JUNCTION              4.10      1.60    1000.0
+  7                    JUNCTION              4.80      1.00       0.0    Yes
+  9                    JUNCTION              4.60      1.40       0.0
+  CHRISTY_RD_PIT       JUNCTION              3.00      1.37     500.0
+  OLD_PORT_RD_PIT      JUNCTION              1.82      2.85     100.0
+  SINK                 JUNCTION              1.70      3.80    1000.0
+  OUTLET               OUTFALL               1.50      1.00       0.0
+  PUMP_OUTFALL1        OUTFALL               0.00      0.00       0.0
+  PUMP_OUTFALL_2       OUTFALL               0.00      0.00       0.0
+  BF1                  STORAGE               3.15      2.00       0.0
+  BF2                  STORAGE               3.00      2.00       0.0
+  BF3                  STORAGE               3.80      1.50       0.0
+  FF1                  STORAGE               3.15      2.00       0.0
+  FF2                  STORAGE               3.00      2.10       0.0
+  FF3                  STORAGE               3.80      1.20       0.0
+  OF1                  STORAGE               3.15      2.00       0.0
+  OF2                  STORAGE               3.00      2.00       0.0
+  OF3                  STORAGE               3.80      2.00       0.0
+  PW1                  STORAGE               3.15      2.00       0.0
+  PW2                  STORAGE               3.00      2.00       0.0
+  WT1                  STORAGE               4.00      4.00       0.0
+  WT2                  STORAGE               4.00      2.50       0.0
+  
+  
+  ************
+  Link Summary
+  ************
+  Name             From Node        To Node          Type            Length    %Slope Roughness
+  ---------------------------------------------------------------------------------------------
+  12               OLD_PORT_RD_PIT  SINK             CONDUIT           50.0    0.2400    0.0120
+  18               OF1              13               CONDUIT           35.0    0.2857    0.0100
+  1DN1             1PA              1PB              CONDUIT           75.0    0.5333    0.0150
+  1DN2             1PB              1PC              CONDUIT           57.0    0.3509    0.0150
+  21               12               CHRISTY_RD_PIT   CONDUIT           10.0    3.0014    0.0150
+  22               CHRISTY_RD_PIT   SINK             CONDUIT          150.0    0.8667    0.0130
+  23               OF2              OLD_PORT_RD_PIT  CONDUIT           10.0   11.3728    0.0120
+  25               13               OLD_PORT_RD_PIT  CONDUIT          120.0    1.0251    0.0120
+  26               13               OLD_PORT_RD_PIT  CONDUIT          125.0    0.8240    0.0300
+  27               OLD_PORT_RD_PIT  SINK             CONDUIT           25.0   -3.3218    0.0200
+  DE1              1                2                CONDUIT          120.0    0.5833    0.0150
+  DE2              2                3                CONDUIT           70.0    0.4286    0.0150
+  DNE1             7                9                CONDUIT           50.0    0.4000    0.0150
+  DSE1             10               12               CONDUIT          100.0    0.3000    0.0150
+  OFLOW1           1PC              13               CONDUIT          100.0    1.8503    0.0200
+  OFLOW_2          3                SINK             CONDUIT           25.0   12.0873    0.0200
+  OFLOW_3          9                CHRISTY_RD_PIT   CONDUIT          200.0    1.0001    0.0250
+  TOTALSITEOUTFLOW SINK             OUTLET           CONDUIT           50.0    0.4000    0.0130
+  UF1A             FF1              BF1              CONDUIT            0.3    1.6669    0.0130
+  UF2A             FF2              BF2              CONDUIT            0.3    1.0001    0.0150
+  P1               PW1              WT1              TYPE4 PUMP  
+  P1REUSE          WT1              PUMP_OUTFALL1    TYPE4 PUMP  
+  P2               PW2              WT2              TYPE4 PUMP  
+  P2REUSE          WT2              PUMP_OUTFALL_2   TYPE4 PUMP  
+  UF1B             BF1              PW1              ORIFICE     
+  UF2B             BF2              PW2              ORIFICE     
+  UF3A             FF3              BF3              ORIFICE     
+  UF3B             BF3              OF3              ORIFICE     
+  30               OF3              10               WEIR        
+  IF1              1PC              FF1              WEIR        
+  IF2              3                FF2              WEIR        
+  IF3              9                FF3              WEIR        
+  OF1A             FF1              BF1              WEIR        
+  OF1B             BF1              OF1              WEIR        
+  OF2A             FF2              BF2              WEIR        
+  OF2B             BF2              OF2              WEIR        
+  OF3A             FF3              BF3              WEIR        
+  OF3B             BF3              OF3              WEIR        
+  
+  
+  *********************
+  Cross Section Summary
+  *********************
+                                        Full     Full     Hyd.     Max.   No. of     Full
+  Conduit          Shape               Depth     Area     Rad.    Width  Barrels     Flow
+  ---------------------------------------------------------------------------------------
+  12               CIRCULAR             1.00     0.79     0.25     1.00        1  1272.53
+  18               CIRCULAR             0.23     0.04     0.06     0.23        1    31.20
+  1DN1             TRIANGULAR           0.50     1.25     0.25     5.00        1  2383.95
+  1DN2             TRIANGULAR           0.50     2.00     0.25     8.00        1  3118.36
+  21               CIRCULAR             0.50     0.20     0.12     0.50        1   566.97
+  22               CIRCULAR             0.60     0.28     0.15     0.60        1   571.66
+  23               CIRCULAR             0.23     0.04     0.06     0.23        1   164.05
+  25               CIRCULAR             0.38     0.11     0.09     0.38        1   192.32
+  26               TRAPEZOIDAL          1.00    12.00     0.66    18.00        1 27543.09
+  27               TRAPEZOIDAL          1.00    12.00     0.66    18.00        1 82951.02
+  DE1              TRIANGULAR           0.50     2.50     0.25    10.00        1  5035.28
+  DE2              TRIANGULAR           0.50     3.00     0.25    12.00        1  5184.35
+  DNE1             TRIANGULAR           0.50     0.50     0.22     2.00        1   776.71
+  DSE1             TRIANGULAR           0.50     0.50     0.22     2.00        1   672.65
+  OFLOW1           TRAPEZOIDAL          1.00     7.00     0.62    11.00        1 34709.24
+  OFLOW_2          TRAPEZOIDAL          1.00     8.00     0.65    12.00        1 104707.33
+  OFLOW_3          TRAPEZOIDAL          1.00     7.00     0.62    11.00        1 20413.76
+  TOTALSITEOUTFLOW CIRCULAR             1.00     0.79     0.25     1.00        1  1516.46
+  UF1A             CIRCULAR             0.15     0.02     0.04     0.15        6    19.66
+  UF2A             CIRCULAR             0.15     0.02     0.04     0.15        6    13.20
+  
+  
+  ****************
+  Analysis Options
+  ****************
+  Flow Units ............... LPS
+  Process Models:
+    Rainfall/Runoff ........ YES
+    RDII ................... NO
+    Snowmelt ............... NO
+    Groundwater ............ NO
+    Flow Routing ........... YES
+    Ponding Allowed ........ YES
+    Water Quality .......... YES
+  Infiltration Method ...... HORTON
+  Flow Routing Method ...... DYNWAVE
+  Surcharge Method ......... EXTRAN
+  Starting Date ............ 01/01/1990 00:00:00
+  Ending Date .............. 12/31/1990 00:00:00
+  Antecedent Dry Days ...... 0.0
+  Report Time Step ......... 00:15:00
+  Wet Time Step ............ 00:05:00
+  Dry Time Step ............ 00:05:00
+  Routing Time Step ........ 5.00 sec
+  Variable Time Step ....... YES
+  Maximum Trials ........... 8
+  Number of Threads ........ 1
+  Head Tolerance ........... 0.000100 m
+  
+  
+  *********************
+  Rainfall File Summary
+  *********************
+  Station    First        Last         Recording   Periods    Periods    Periods
+  ID         Date         Date         Frequency  w/Precip    Missing    Malfunc.
+  -------------------------------------------------------------------------------
+  
+  
+  ERROR 317: cannot open rainfall data file C:\Users\dickinre\Downloads\KEMBLA_1990_swmm.txt.
+
+  Analysis begun on:  Fri Mar  6 14:35:21 2026
+  Analysis ended on:  Fri Mar  6 14:35:21 2026
+  Total elapsed time: < 1 sec

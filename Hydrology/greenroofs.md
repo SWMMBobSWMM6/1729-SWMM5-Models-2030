@@ -1,0 +1,61 @@
+# 💧 greenroofs.inp
+
+![flow units](https://img.shields.io/badge/flow_units-CMS-blue) ![routing](https://img.shields.io/badge/routing-Kinwave-yellowgreen) ![infiltration](https://img.shields.io/badge/infiltration-Curve__Number-9cf) ![nodes](https://img.shields.io/badge/nodes-19-informational) ![links](https://img.shields.io/badge/links-17-informational) ![subcatchments](https://img.shields.io/badge/subcatchments-16-informational) ![status](https://img.shields.io/badge/status-clean_run-2ea44f)
+
+> [!TIP]
+> Ran clean -- no errors or warnings reported.<br>Continuity error(s): -0.481, 0.072, -0.107 %
+
+**Title:** _(no title in [TITLE] section)_  
+**Location:** `Hydrology/greenroofs.inp`
+
+## ⚙️ Configuration
+
+| Setting | Value |
+|---|---|
+| Flow units | CMS |
+| Infiltration | CURVE_NUMBER |
+| Flow routing | KINWAVE |
+| Simulation start | 12/07/2007 00:00:00 |
+| Simulation end | 12/09/2007 12:00:00 |
+| Duration | 2 days 12 hr |
+| Report step | 00:30:00 |
+| Routing step | 0:00:30 s |
+
+## 💧 Hydrology
+
+| Item | Count |
+|---|--:|
+| Subcatchments | 16 |
+| Total area (ha) | 9630.60 |
+| Raingages | 5 |
+
+## 🔧 Hydraulics
+
+| Nodes | Count | Links | Count |
+|---|--:|---|--:|
+| Junctions | 19 | Conduits | 17 |
+| Outfalls | 0 | Pumps | 0 |
+| Storage | 0 | Orifices | 0 |
+| Dividers | 0 | Weirs | 0 |
+| **Total nodes** | **19** | Outlets | 0 |
+|  |  | **Total links** | **17** |
+
+> Cross-sections: **17**
+
+## 🌿 LID Controls
+
+LID control definitions: **7** &nbsp;|&nbsp; Subcatchment deployments: **4**
+
+## ⚗️ Water Quality
+
+Pollutants: **3** &nbsp;|&nbsp; Land uses: **2**
+
+## 📈 Forcing & Data
+
+| Item | Count |
+|---|--:|
+| Dry-weather inflows | 1 |
+| Time series | 3 |
+
+---
+<sub>📄 Auto-generated 2026-06-24 • summary of `greenroofs.inp`</sub>

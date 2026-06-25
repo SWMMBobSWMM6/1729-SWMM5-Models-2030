@@ -1,0 +1,264 @@
+[TITLE]
+;;Project Title/Notes
+
+[OPTIONS]
+;;Option             Value
+FLOW_UNITS           LPS
+INFILTRATION         CURVE_NUMBER
+FLOW_ROUTING         DYNWAVE
+LINK_OFFSETS         ELEVATION
+MIN_SLOPE            0
+ALLOW_PONDING        NO
+SKIP_STEADY_STATE    NO
+
+START_DATE           03/07/2018
+START_TIME           12:01:00
+REPORT_START_DATE    03/07/2018
+REPORT_START_TIME    12:01:00
+END_DATE             03/09/2018
+END_TIME             12:01:00
+SWEEP_START          01/01
+SWEEP_END            12/31
+DRY_DAYS             0
+REPORT_STEP          00:01:00
+WET_STEP             00:01:00
+DRY_STEP             00:05:00
+ROUTING_STEP         0:00:01 
+RULE_STEP            00:00:00
+
+INERTIAL_DAMPING     PARTIAL
+NORMAL_FLOW_LIMITED  BOTH
+FORCE_MAIN_EQUATION  H-W
+VARIABLE_STEP        0.75
+LENGTHENING_STEP     0
+MIN_SURFAREA         0
+MAX_TRIALS           8
+HEAD_TOLERANCE       0.0015
+SYS_FLOW_TOL         5
+LAT_FLOW_TOL         5
+MINIMUM_STEP         0.5
+THREADS              4
+
+[EVAPORATION]
+;;Data Source    Parameters
+;;-------------- ----------------
+CONSTANT         0.0
+DRY_ONLY         NO
+
+[RAINGAGES]
+;;Name           Format    Interval SCF      Source    
+;;-------------- --------- ------ ------ ----------
+40mm_Constant    INTENSITY 0:15     1.0      TIMESERIES 40mm_Constant   
+
+[SUBCATCHMENTS]
+;;Name           Rain Gage        Outlet           Area     %Imperv  Width    %Slope   CurbLen  SnowPack        
+;;-------------- ---------------- ---------------- -------- -------- -------- -------- -------- ----------------
+201              40mm_Constant    Uncontrolled_208 13.32    55       333      1        0                        
+
+[SUBAREAS]
+;;Subcatchment   N-Imperv   N-Perv     S-Imperv   S-Perv     PctZero    RouteTo    PctRouted 
+;;-------------- ---------- ---------- ---------- ---------- ---------- ---------- ----------
+201              0.014      0.25       1          60         0          OUTLET    
+
+[INFILTRATION]
+;;Subcatchment   CurveNum              DryTime   
+;;-------------- ---------- ---------- ----------
+201              66         0          7         
+
+[LID_CONTROLS]
+;;Name           Type/Layer Parameters
+;;-------------- ---------- ----------
+Bioretention     BC
+Bioretention     SURFACE    300        .4         0.1        .5         5         
+Bioretention     SOIL       1000       0.437      0.105      0.047      30         8          61        
+Bioretention     STORAGE    300        .4         0          0         
+Bioretention     DRAIN      1.5        0.5        100        6          0          0                    
+
+RooftopDisconnection RD
+RooftopDisconnection SURFACE    1          0.0        0.013      1.0        5         
+RooftopDisconnection DRAIN      0          0.5        6          6          0          0                    
+
+[LID_USAGE]
+;;Subcatchment   LID Process      Number  Area       Width      InitSat    FromImp    ToPerv     RptFile                  DrainTo          FromPerv  
+;;-------------- ---------------- ------- ---------- ---------- ---------- ---------- ---------- ------------------------ ---------------- ----------
+201              RooftopDisconnection 100     147        1          0          20         1          *                        *                0               
+201              Bioretention     1       100        0          0          0          0          *                        *                0               
+
+[OUTFALLS]
+;;Name           Elevation  Type       Stage Data       Gated    Route To        
+;;-------------- ---------- ---------- ---------------- -------- ----------------
+Uncontrolled_208 0          FREE                        NO                       
+
+[TIMESERIES]
+;;Name           Date       Time       Value     
+;;-------------- ---------- ---------- ----------
+;40mm_Constant
+40mm_Constant               0:00       1.666666667
+40mm_Constant               0:15       1.666666667
+40mm_Constant               0:30       1.666666667
+40mm_Constant               0:45       1.666666667
+40mm_Constant               1:00       1.666666667
+40mm_Constant               1:15       1.666666667
+40mm_Constant               1:30       1.666666667
+40mm_Constant               1:45       1.666666667
+40mm_Constant               2:00       1.666666667
+40mm_Constant               2:15       1.666666667
+40mm_Constant               2:30       1.666666667
+40mm_Constant               2:45       1.666666667
+40mm_Constant               3:00       1.666666667
+40mm_Constant               3:15       1.666666667
+40mm_Constant               3:30       1.666666667
+40mm_Constant               3:45       1.666666667
+40mm_Constant               4:00       1.666666667
+40mm_Constant               4:15       1.666666667
+40mm_Constant               4:30       1.666666667
+40mm_Constant               4:45       1.666666667
+40mm_Constant               5:00       1.666666667
+40mm_Constant               5:15       1.666666667
+40mm_Constant               5:30       1.666666667
+40mm_Constant               5:45       1.666666667
+40mm_Constant               6:00       1.666666667
+40mm_Constant               6:15       1.666666667
+40mm_Constant               6:30       1.666666667
+40mm_Constant               6:45       1.666666667
+40mm_Constant               7:00       1.666666667
+40mm_Constant               7:15       1.666666667
+40mm_Constant               7:30       1.666666667
+40mm_Constant               7:45       1.666666667
+40mm_Constant               8:00       1.666666667
+40mm_Constant               8:15       1.666666667
+40mm_Constant               8:30       1.666666667
+40mm_Constant               8:45       1.666666667
+40mm_Constant               9:00       1.666666667
+40mm_Constant               9:15       1.666666667
+40mm_Constant               9:30       1.666666667
+40mm_Constant               9:45       1.666666667
+40mm_Constant               10:00      1.666666667
+40mm_Constant               10:15      1.666666667
+40mm_Constant               10:30      1.666666667
+40mm_Constant               10:45      1.666666667
+40mm_Constant               11:00      1.666666667
+40mm_Constant               11:15      1.666666667
+40mm_Constant               11:30      1.666666667
+40mm_Constant               11:45      1.666666667
+40mm_Constant               12:00      1.666666667
+40mm_Constant               12:15      1.666666667
+40mm_Constant               12:30      1.666666667
+40mm_Constant               12:45      1.666666667
+40mm_Constant               13:00      1.666666667
+40mm_Constant               13:15      1.666666667
+40mm_Constant               13:30      1.666666667
+40mm_Constant               13:45      1.666666667
+40mm_Constant               14:00      1.666666667
+40mm_Constant               14:15      1.666666667
+40mm_Constant               14:30      1.666666667
+40mm_Constant               14:45      1.666666667
+40mm_Constant               15:00      1.666666667
+40mm_Constant               15:15      1.666666667
+40mm_Constant               15:30      1.666666667
+40mm_Constant               15:45      1.666666667
+40mm_Constant               16:00      1.666666667
+40mm_Constant               16:15      1.666666667
+40mm_Constant               16:30      1.666666667
+40mm_Constant               16:45      1.666666667
+40mm_Constant               17:00      1.666666667
+40mm_Constant               17:15      1.666666667
+40mm_Constant               17:30      1.666666667
+40mm_Constant               17:45      1.666666667
+40mm_Constant               18:00      1.666666667
+40mm_Constant               18:15      1.666666667
+40mm_Constant               18:30      1.666666667
+40mm_Constant               18:45      1.666666667
+40mm_Constant               19:00      1.666666667
+40mm_Constant               19:15      1.666666667
+40mm_Constant               19:30      1.666666667
+40mm_Constant               19:45      1.666666667
+40mm_Constant               20:00      1.666666667
+40mm_Constant               20:15      1.666666667
+40mm_Constant               20:30      1.666666667
+40mm_Constant               20:45      1.666666667
+40mm_Constant               21:00      1.666666667
+40mm_Constant               21:15      1.666666667
+40mm_Constant               21:30      1.666666667
+40mm_Constant               21:45      1.666666667
+40mm_Constant               22:00      1.666666667
+40mm_Constant               22:15      1.666666667
+40mm_Constant               22:30      1.666666667
+40mm_Constant               22:45      1.666666667
+40mm_Constant               23:00      1.666666667
+40mm_Constant               23:15      1.666666667
+40mm_Constant               23:30      1.666666667
+40mm_Constant               23:45      1.666666667
+
+[REPORT]
+;;Reporting Options
+SUBCATCHMENTS ALL
+NODES ALL
+LINKS ALL
+
+[TAGS]
+
+[MAP]
+DIMENSIONS 577995.536 4756622.761 578548.953 4757133.490
+Units      Meters
+
+[COORDINATES]
+;;Node           X-Coord            Y-Coord           
+;;-------------- ------------------ ------------------
+Uncontrolled_208 578550.513         4756746.199       
+
+[VERTICES]
+;;Link           X-Coord            Y-Coord           
+;;-------------- ------------------ ------------------
+
+[Polygons]
+;;Subcatchment   X-Coord            Y-Coord           
+;;-------------- ------------------ ------------------
+201              578430.782         4756646.311       
+201              578401.408         4756645.976       
+201              578401.323         4756646.742       
+201              578389.956         4756647.939       
+201              578353.462         4756660.503       
+201              578324.146         4756673.664       
+201              578037.071         4756814.261       
+201              578062.675         4756861.655       
+201              578077.834         4756889.812       
+201              578056.817         4756900.710       
+201              578083.432         4756943.301       
+201              578020.691         4756982.724       
+201              578055.840         4757021.291       
+201              578073.903         4757042.771       
+201              578084.740         4757055.087       
+201              578059.583         4757068.632       
+201              578053.399         4757110.275       
+201              578127.115         4757075.479       
+201              578512.097         4756889.206       
+201              578520.053         4756879.378       
+201              578523.797         4756870.486       
+201              578518.649         4756857.850       
+201              578513.501         4756847.554       
+201              578506.481         4756833.514       
+201              578491.973         4756803.093       
+201              578481.209         4756791.393       
+201              578472.317         4756782.501       
+201              578460.617         4756780.161       
+201              578462.021         4756767.525       
+201              578463.893         4756753.017       
+201              578459.681         4756679.073       
+201              578455.001         4756669.245       
+201              578461.085         4756665.033       
+201              578460.003         4756653.491       
+201              578451.876         4756653.225       
+201              578439.645         4756651.097       
+201              578430.782         4756646.311       
+
+[SYMBOLS]
+;;Gage           X-Coord            Y-Coord           
+;;-------------- ------------------ ------------------
+
+
+[PROFILES]
+;;Name           Links     
+;;-------------- ----------
+"Major to Pond 1 " Major_to_DryPond1 Orifice_Pond_1_STM_Sew
+"Stormtech to Pond 1" Orifice_to_Stormtech Stormtech_to_Pond_1 Orifice_Pond_1_STM_Sew

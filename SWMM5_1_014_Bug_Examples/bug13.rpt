@@ -1,0 +1,41 @@
+
+  EPA STORM WATER MANAGEMENT MODEL - VERSION 5.2 (Build 5.2.4)
+  ------------------------------------------------------------
+
+  Demonstrates the fix for a v5.1.013 bug that skipped the first rain gage when checking if two gages have 
+  the same station ID but use different data files. Running this file now correctly produces "Error 156: 
+  ambiguous station ID for Rain Gage 2" since Gage 2 has the same station ID as Gage 1 but a different rainfall file. 
+  
+  ****************
+  Analysis Options
+  ****************
+  Flow Units ............... CFS
+  Process Models:
+    Rainfall/Runoff ........ YES
+    RDII ................... NO
+    Snowmelt ............... NO
+    Groundwater ............ NO
+    Flow Routing ........... NO
+    Water Quality .......... NO
+  Infiltration Method ...... HORTON
+  Starting Date ............ 06/09/2019 00:00:00
+  Ending Date .............. 06/09/2019 06:00:00
+  Antecedent Dry Days ...... 0.0
+  Report Time Step ......... 00:15:00
+  Wet Time Step ............ 00:05:00
+  Dry Time Step ............ 01:00:00
+  
+  
+  *********************
+  Rainfall File Summary
+  *********************
+  Station    First        Last         Recording   Periods    Periods    Periods
+  ID         Date         Date         Frequency  w/Precip    Missing    Malfunc.
+  -------------------------------------------------------------------------------
+  
+  
+  ERROR 317: cannot open rainfall data file C:\Xing_Test_Programs\SWMM5_1_014_Bug_Examples\sta310301.dat.
+
+  Analysis begun on:  Tue Jun 23 21:35:05 2026
+  Analysis ended on:  Tue Jun 23 21:35:05 2026
+  Total elapsed time: < 1 sec

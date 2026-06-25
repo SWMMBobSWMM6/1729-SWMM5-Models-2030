@@ -1,0 +1,436 @@
+[TITLE]
+;;Project Title/Notes
+Alternate 3 - Demonstrates the fix for a v5.1.013 bug that produced incorrect rainfall when the same time series was used by
+one rain gage assigned to a Unit Hydrograph and another assigned to a subcatchment. The results for total RDII
+volume and total watershed rainfall for this data set now match the correct values produced by release 5.1.012.
+
+[OPTIONS]
+;;Option             Value
+FLOW_UNITS           CFS
+INFILTRATION         GREEN_AMPT
+FLOW_ROUTING         DYNWAVE
+LINK_OFFSETS         DEPTH
+MIN_SLOPE            0
+ALLOW_PONDING        NO
+SKIP_STEADY_STATE    NO
+
+START_DATE           06/03/2019
+START_TIME           00:00:00
+REPORT_START_DATE    06/03/2019
+REPORT_START_TIME    00:00:00
+END_DATE             06/04/2019
+END_TIME             06:00:00
+SWEEP_START          01/01
+SWEEP_END            12/31
+DRY_DAYS             0
+REPORT_STEP          00:15:00
+WET_STEP             00:05:00
+DRY_STEP             01:00:00
+ROUTING_STEP         0:00:30 
+RULE_STEP            00:00:00
+
+INERTIAL_DAMPING     NONE
+NORMAL_FLOW_LIMITED  BOTH
+FORCE_MAIN_EQUATION  H-W
+VARIABLE_STEP        0.50
+LENGTHENING_STEP     0
+MIN_SURFAREA         12.566
+MAX_TRIALS           8
+HEAD_TOLERANCE       0.005
+SYS_FLOW_TOL         5
+LAT_FLOW_TOL         5
+MINIMUM_STEP         0.5
+THREADS              1
+
+[FILES]
+;;Interfacing Files
+
+[EVAPORATION]
+;;Data Source    Parameters
+;;-------------- ----------------
+CONSTANT         0.0
+DRY_ONLY         NO
+
+[RAINGAGES]
+;;Name           Format    Interval SCF      Source    
+;;-------------- --------- ------ ------ ----------
+RG_RDII-002      VOLUME    0:15     1        TIMESERIES DesignEvent-1yr 
+RG_RDII-004      VOLUME    0:15     1        TIMESERIES DesignEvent-1yr 
+RG_Shed1         VOLUME    0:15     1        TIMESERIES aDesignEvent-1yr 
+RG_Shed2         VOLUME    0:15     1        TIMESERIES DesignEvent-1yr 
+
+[SUBCATCHMENTS]
+;;Name           Rain Gage        Outlet           Area     %Imperv  Width    %Slope   CurbLen  SnowPack        
+;;-------------- ---------------- ---------------- -------- -------- -------- -------- -------- ----------------
+Shed1            RG_Shed1         1                50       25       500      0.5      0                        
+Shed2            RG_Shed2         1                50       25       500      0.5      0                        
+
+[SUBAREAS]
+;;Subcatchment   N-Imperv   N-Perv     S-Imperv   S-Perv     PctZero    RouteTo    PctRouted 
+;;-------------- ---------- ---------- ---------- ---------- ---------- ---------- ----------
+Shed1            0.01       0.1        0.05       0.05       25         OUTLET    
+Shed2            0.01       0.1        0.05       0.05       25         OUTLET    
+
+[INFILTRATION]
+;;Subcatchment   Suction    Ksat       IMD       
+;;-------------- ---------- ---------- ----------
+Shed1            3          0.5        4         
+Shed2            3          0.5        4         
+
+[JUNCTIONS]
+;;Name           Elevation  MaxDepth   InitDepth  SurDepth   Aponded   
+;;-------------- ---------- ---------- ---------- ---------- ----------
+1                0          0          0          0          0         
+RDII-1           0          0          0          0          0         
+RDII-2           0          0          0          0          0         
+
+[OUTFALLS]
+;;Name           Elevation  Type       Stage Data       Gated    Route To        
+;;-------------- ---------- ---------- ---------------- -------- ----------------
+2                -1         FREE                        NO                       
+
+[CONDUITS]
+;;Name           From Node        To Node          Length     Roughness  InOffset   OutOffset  InitFlow   MaxFlow   
+;;-------------- ---------------- ---------------- ---------- ---------- ---------- ---------- ---------- ----------
+1                1                2                400        0.01       0          0          0          0         
+2                RDII-1           1                400        0.01       0          0          0          0         
+3                RDII-2           1                400        0.01       0          0          0          0         
+
+[XSECTIONS]
+;;Link           Shape        Geom1            Geom2      Geom3      Geom4      Barrels    Culvert   
+;;-------------- ------------ ---------------- ---------- ---------- ---------- ---------- ----------
+1                CIRCULAR     5                0          0          0          1                    
+2                CIRCULAR     5                0          0          0          1                    
+3                CIRCULAR     5                0          0          0          1                    
+
+[HYDROGRAPHS]
+;;Hydrograph     Rain Gage/Month  Response R        T        K        Dmax     Drecov   Dinit   
+;;-------------- ---------------- -------- -------- -------- -------- -------- -------- --------
+RDII-002_RTK     RG_RDII-002     
+RDII-002_RTK     Jan              Short    0.021    0.25     0.5      0        0        0       
+RDII-002_RTK     Jan              Medium   0.016    0.875    1.25     0        0        0       
+RDII-002_RTK     Jan              Long     0.016    3        4.5      0        0        0       
+RDII-002_RTK     Feb              Short    0.019    0.25     0.5      0        0        0       
+RDII-002_RTK     Feb              Medium   0.015    0.875    1.25     0        0        0       
+RDII-002_RTK     Feb              Long     0.016    3        4.5      0        0        0       
+RDII-002_RTK     Mar              Short    0.019    0.25     0.5      0        0        0       
+RDII-002_RTK     Mar              Medium   0.015    0.875    1.25     0        0        0       
+RDII-002_RTK     Mar              Long     0.015    2.75     3        0        0        0       
+RDII-002_RTK     Apr              Short    0.017    0.25     0.5      0        0        0       
+RDII-002_RTK     Apr              Medium   0.012    0.875    1.25     0        0        0       
+RDII-002_RTK     Apr              Long     0.014    2.75     3        0        0        0       
+RDII-002_RTK     May              Short    0.016    0.25     0.5      0        0        0       
+RDII-002_RTK     May              Medium   0.008    0.875    1.25     0        0        0       
+RDII-002_RTK     May              Long     0.011    2.75     3        0        0        0       
+RDII-002_RTK     Jun              Short    0.016    0.25     0.5      0        0        0       
+RDII-002_RTK     Jun              Medium   0.009    0.875    1.25     0        0        0       
+RDII-002_RTK     Jun              Long     0.011    2.75     3        0        0        0       
+RDII-002_RTK     Jul              Short    0.016    0.25     0.5      0        0        0       
+RDII-002_RTK     Jul              Medium   0.007    0.875    1.25     0        0        0       
+RDII-002_RTK     Jul              Long     0.007    2.75     3        0        0        0       
+RDII-002_RTK     Aug              Short    0.016    0.25     0.5      0        0        0       
+RDII-002_RTK     Aug              Medium   0.006    0.875    1.25     0        0        0       
+RDII-002_RTK     Aug              Long     0.006    2.75     3        0        0        0       
+RDII-002_RTK     Sep              Short    0.016    0.25     0.5      0        0        0       
+RDII-002_RTK     Sep              Medium   0.007    0.875    1.25     0        0        0       
+RDII-002_RTK     Sep              Long     0.008    2.75     3        0        0        0       
+RDII-002_RTK     Oct              Short    0.016    0.25     0.5      0        0        0       
+RDII-002_RTK     Oct              Medium   0.01     0.875    1.25     0        0        0       
+RDII-002_RTK     Oct              Long     0.011    2.75     3        0        0        0       
+RDII-002_RTK     Nov              Short    0.016    0.25     0.5      0        0        0       
+RDII-002_RTK     Nov              Medium   0.011    0.875    1.25     0        0        0       
+RDII-002_RTK     Nov              Long     0.017    3        3        0        0        0       
+RDII-002_RTK     Dec              Short    0.017    0.25     0.5      0        0        0       
+RDII-002_RTK     Dec              Medium   0.014    0.875    1.25     0        0        0       
+RDII-002_RTK     Dec              Long     0.021    3        4.5      0        0        0       
+RDII-004_RTK     RG_RDII-004     
+RDII-004_RTK     Jan              Short    0.021    0.25     0.5      0        0        0       
+RDII-004_RTK     Jan              Medium   0.016    0.875    1.25     0        0        0       
+RDII-004_RTK     Jan              Long     0.016    3        4.5      0        0        0       
+RDII-004_RTK     Feb              Short    0.019    0.25     0.5      0        0        0       
+RDII-004_RTK     Feb              Medium   0.015    0.875    1.25     0        0        0       
+RDII-004_RTK     Feb              Long     0.016    3        4.5      0        0        0       
+RDII-004_RTK     Mar              Short    0.019    0.25     0.5      0        0        0       
+RDII-004_RTK     Mar              Medium   0.015    0.875    1.25     0        0        0       
+RDII-004_RTK     Mar              Long     0.015    2.75     3        0        0        0       
+RDII-004_RTK     Apr              Short    0.017    0.25     0.5      0        0        0       
+RDII-004_RTK     Apr              Medium   0.012    0.875    1.25     0        0        0       
+RDII-004_RTK     Apr              Long     0.014    2.75     3        0        0        0       
+RDII-004_RTK     May              Short    0.016    0.25     0.5      0        0        0       
+RDII-004_RTK     May              Medium   0.008    0.875    1.25     0        0        0       
+RDII-004_RTK     May              Long     0.011    2.75     3        0        0        0       
+RDII-004_RTK     Jun              Short    0.016    0.25     0.5      0        0        0       
+RDII-004_RTK     Jun              Medium   0.009    0.875    1.25     0        0        0       
+RDII-004_RTK     Jun              Long     0.011    2.75     3        0        0        0       
+RDII-004_RTK     Jul              Short    0.016    0.25     0.5      0        0        0       
+RDII-004_RTK     Jul              Medium   0.007    0.875    1.25     0        0        0       
+RDII-004_RTK     Jul              Long     0.007    2.75     3        0        0        0       
+RDII-004_RTK     Aug              Short    0.016    0.25     0.5      0        0        0       
+RDII-004_RTK     Aug              Medium   0.006    0.875    1.25     0        0        0       
+RDII-004_RTK     Aug              Long     0.006    2.75     3        0        0        0       
+RDII-004_RTK     Sep              Short    0.016    0.25     0.5      0        0        0       
+RDII-004_RTK     Sep              Medium   0.007    0.875    1.25     0        0        0       
+RDII-004_RTK     Sep              Long     0.008    2.75     3        0        0        0       
+RDII-004_RTK     Oct              Short    0.016    0.25     0.5      0        0        0       
+RDII-004_RTK     Oct              Medium   0.01     0.875    1.25     0        0        0       
+RDII-004_RTK     Oct              Long     0.011    2.75     3        0        0        0       
+RDII-004_RTK     Nov              Short    0.016    0.25     0.5      0        0        0       
+RDII-004_RTK     Nov              Medium   0.011    0.875    1.25     0        0        0       
+RDII-004_RTK     Nov              Long     0.017    3        3        0        0        0       
+RDII-004_RTK     Dec              Short    0.017    0.25     0.5      0        0        0       
+RDII-004_RTK     Dec              Medium   0        1        1        0        0        0       
+RDII-004_RTK     Dec              Long     0.021    3        4.5      0        0        0       
+
+
+[RDII]
+;;Node           Unit Hydrograph  Sewer Area
+;;-------------- ---------------- ----------
+RDII-1           RDII-002_RTK     100       
+RDII-2           RDII-004_RTK     100       
+
+[TIMESERIES]
+;;Name           Date       Time       Value     
+;;-------------- ---------- ---------- ----------
+DesignEvent-1yr             0:00       0.00708   
+DesignEvent-1yr             0:15       0.00708   
+DesignEvent-1yr             0:30       0.00708   
+DesignEvent-1yr             0:45       0.00708   
+DesignEvent-1yr             1:00       0.00708   
+DesignEvent-1yr             1:15       0.00708   
+DesignEvent-1yr             1:30       0.00708   
+DesignEvent-1yr             1:45       0.00708   
+DesignEvent-1yr             2:00       0.00708   
+DesignEvent-1yr             2:15       0.00708   
+DesignEvent-1yr             2:30       0.00708   
+DesignEvent-1yr             2:45       0.00708   
+DesignEvent-1yr             3:00       0.00708   
+DesignEvent-1yr             3:15       0.00708   
+DesignEvent-1yr             3:30       0.00708   
+DesignEvent-1yr             3:45       0.00708   
+DesignEvent-1yr             4:00       0.00708   
+DesignEvent-1yr             4:15       0.00708   
+DesignEvent-1yr             4:30       0.00708   
+DesignEvent-1yr             4:45       0.00708   
+DesignEvent-1yr             5:00       0.00708   
+DesignEvent-1yr             5:15       0.00708   
+DesignEvent-1yr             5:30       0.00708   
+DesignEvent-1yr             5:45       0.00708   
+DesignEvent-1yr             6:00       0.01708   
+DesignEvent-1yr             6:15       0.01708   
+DesignEvent-1yr             6:30       0.01708   
+DesignEvent-1yr             6:45       0.01708   
+DesignEvent-1yr             7:00       0.01708   
+DesignEvent-1yr             7:15       0.01708   
+DesignEvent-1yr             7:30       0.01708   
+DesignEvent-1yr             7:45       0.01708   
+DesignEvent-1yr             8:00       0.01708   
+DesignEvent-1yr             8:15       0.01708   
+DesignEvent-1yr             8:30       0.01708   
+DesignEvent-1yr             8:45       0.01708   
+DesignEvent-1yr             9:00       0.03083   
+DesignEvent-1yr             9:15       0.03083   
+DesignEvent-1yr             9:30       0.03083   
+DesignEvent-1yr             9:45       0.03083   
+DesignEvent-1yr             10:00      0.03083   
+DesignEvent-1yr             10:15      0.03083   
+DesignEvent-1yr             10:30      0.0325    
+DesignEvent-1yr             10:45      0.0325    
+DesignEvent-1yr             11:00      0.06      
+DesignEvent-1yr             11:15      0.06      
+DesignEvent-1yr             11:30      0.12      
+DesignEvent-1yr             11:45      0.69      
+DesignEvent-1yr             12:00      0.26      
+DesignEvent-1yr             12:15      0.12      
+DesignEvent-1yr             12:30      0.06      
+DesignEvent-1yr             12:45      0.06      
+DesignEvent-1yr             13:00      0.0325    
+DesignEvent-1yr             13:15      0.0325    
+DesignEvent-1yr             13:30      0.03083   
+DesignEvent-1yr             13:45      0.03083   
+DesignEvent-1yr             14:00      0.03083   
+DesignEvent-1yr             14:15      0.03083   
+DesignEvent-1yr             14:30      0.03083   
+DesignEvent-1yr             14:45      0.03083   
+DesignEvent-1yr             15:00      0.01708   
+DesignEvent-1yr             15:15      0.01708   
+DesignEvent-1yr             15:30      0.01708   
+DesignEvent-1yr             15:45      0.01708   
+DesignEvent-1yr             16:00      0.01708   
+DesignEvent-1yr             16:15      0.01708   
+DesignEvent-1yr             16:30      0.01708   
+DesignEvent-1yr             16:45      0.01708   
+DesignEvent-1yr             17:00      0.01708   
+DesignEvent-1yr             17:15      0.01708   
+DesignEvent-1yr             17:30      0.01708   
+DesignEvent-1yr             17:45      0.01708   
+DesignEvent-1yr             18:00      0.00708   
+DesignEvent-1yr             18:15      0.00708   
+DesignEvent-1yr             18:30      0.00708   
+DesignEvent-1yr             18:45      0.00708   
+DesignEvent-1yr             19:00      0.00708   
+DesignEvent-1yr             19:15      0.00708   
+DesignEvent-1yr             19:30      0.00708   
+DesignEvent-1yr             19:45      0.00708   
+DesignEvent-1yr             20:00      0.00708   
+DesignEvent-1yr             20:15      0.00708   
+DesignEvent-1yr             20:30      0.00708   
+DesignEvent-1yr             20:45      0.00708   
+DesignEvent-1yr             21:00      0.00708   
+DesignEvent-1yr             21:15      0.00708   
+DesignEvent-1yr             21:30      0.00708   
+DesignEvent-1yr             21:45      0.00708   
+DesignEvent-1yr             22:00      0.00708   
+DesignEvent-1yr             22:15      0.00708   
+DesignEvent-1yr             22:30      0.00708   
+DesignEvent-1yr             22:45      0.00708   
+DesignEvent-1yr             23:00      0.00708   
+DesignEvent-1yr             23:15      0.00708   
+DesignEvent-1yr             23:30      0.00708   
+DesignEvent-1yr             23:45      0.00708   
+
+aDesignEvent-1yr             0:00       0.00708   
+aDesignEvent-1yr             0:15       0.00708   
+aDesignEvent-1yr             0:30       0.00708   
+aDesignEvent-1yr             0:45       0.00708   
+aDesignEvent-1yr             1:00       0.00708   
+aDesignEvent-1yr             1:15       0.00708   
+aDesignEvent-1yr             1:30       0.00708   
+aDesignEvent-1yr             1:45       0.00708   
+aDesignEvent-1yr             2:00       0.00708   
+aDesignEvent-1yr             2:15       0.00708   
+aDesignEvent-1yr             2:30       0.00708   
+aDesignEvent-1yr             2:45       0.00708   
+aDesignEvent-1yr             3:00       0.00708   
+aDesignEvent-1yr             3:15       0.00708   
+aDesignEvent-1yr             3:30       0.00708   
+aDesignEvent-1yr             3:45       0.00708   
+aDesignEvent-1yr             4:00       0.00708   
+aDesignEvent-1yr             4:15       0.00708   
+aDesignEvent-1yr             4:30       0.00708   
+aDesignEvent-1yr             4:45       0.00708   
+aDesignEvent-1yr             5:00       0.00708   
+aDesignEvent-1yr             5:15       0.00708   
+aDesignEvent-1yr             5:30       0.00708   
+aDesignEvent-1yr             5:45       0.00708   
+aDesignEvent-1yr             6:00       0.01708   
+aDesignEvent-1yr             6:15       0.01708   
+aDesignEvent-1yr             6:30       0.01708   
+aDesignEvent-1yr             6:45       0.01708   
+aDesignEvent-1yr             7:00       0.01708   
+aDesignEvent-1yr             7:15       0.01708   
+aDesignEvent-1yr             7:30       0.01708   
+aDesignEvent-1yr             7:45       0.01708   
+aDesignEvent-1yr             8:00       0.01708   
+aDesignEvent-1yr             8:15       0.01708   
+aDesignEvent-1yr             8:30       0.01708   
+aDesignEvent-1yr             8:45       0.01708   
+aDesignEvent-1yr             9:00       0.03083   
+aDesignEvent-1yr             9:15       0.03083   
+aDesignEvent-1yr             9:30       0.03083   
+aDesignEvent-1yr             9:45       0.03083   
+aDesignEvent-1yr             10:00      0.03083   
+aDesignEvent-1yr             10:15      0.03083   
+aDesignEvent-1yr             10:30      0.0325    
+aDesignEvent-1yr             10:45      0.0325    
+aDesignEvent-1yr             11:00      0.06      
+aDesignEvent-1yr             11:15      0.06      
+aDesignEvent-1yr             11:30      0.12      
+aDesignEvent-1yr             11:45      0.69      
+aDesignEvent-1yr             12:00      0.26      
+aDesignEvent-1yr             12:15      0.12      
+aDesignEvent-1yr             12:30      0.06      
+aDesignEvent-1yr             12:45      0.06      
+aDesignEvent-1yr             13:00      0.0325    
+aDesignEvent-1yr             13:15      0.0325    
+aDesignEvent-1yr             13:30      0.03083   
+aDesignEvent-1yr             13:45      0.03083   
+aDesignEvent-1yr             14:00      0.03083   
+aDesignEvent-1yr             14:15      0.03083   
+aDesignEvent-1yr             14:30      0.03083   
+aDesignEvent-1yr             14:45      0.03083   
+aDesignEvent-1yr             15:00      0.01708   
+aDesignEvent-1yr             15:15      0.01708   
+aDesignEvent-1yr             15:30      0.01708   
+aDesignEvent-1yr             15:45      0.01708   
+aDesignEvent-1yr             16:00      0.01708   
+aDesignEvent-1yr             16:15      0.01708   
+aDesignEvent-1yr             16:30      0.01708   
+aDesignEvent-1yr             16:45      0.01708   
+aDesignEvent-1yr             17:00      0.01708   
+aDesignEvent-1yr             17:15      0.01708   
+aDesignEvent-1yr             17:30      0.01708   
+aDesignEvent-1yr             17:45      0.01708   
+aDesignEvent-1yr             18:00      0.00708   
+aDesignEvent-1yr             18:15      0.00708   
+aDesignEvent-1yr             18:30      0.00708   
+aDesignEvent-1yr             18:45      0.00708   
+aDesignEvent-1yr             19:00      0.00708   
+aDesignEvent-1yr             19:15      0.00708   
+aDesignEvent-1yr             19:30      0.00708   
+aDesignEvent-1yr             19:45      0.00708   
+aDesignEvent-1yr             20:00      0.00708   
+aDesignEvent-1yr             20:15      0.00708   
+aDesignEvent-1yr             20:30      0.00708   
+aDesignEvent-1yr             20:45      0.00708   
+aDesignEvent-1yr             21:00      0.00708   
+aDesignEvent-1yr             21:15      0.00708   
+aDesignEvent-1yr             21:30      0.00708   
+aDesignEvent-1yr             21:45      0.00708   
+aDesignEvent-1yr             22:00      0.00708   
+aDesignEvent-1yr             22:15      0.00708   
+aDesignEvent-1yr             22:30      0.00708   
+aDesignEvent-1yr             22:45      0.00708   
+aDesignEvent-1yr             23:00      0.00708   
+aDesignEvent-1yr             23:15      0.00708   
+aDesignEvent-1yr             23:30      0.00708   
+aDesignEvent-1yr             23:45      0.00708   
+
+
+
+[REPORT]
+;;Reporting Options
+INPUT      YES
+SUBCATCHMENTS ALL
+NODES ALL
+LINKS ALL
+
+[TAGS]
+
+[MAP]
+DIMENSIONS -2276.531 4412.245 3919.388 9036.735
+Units      None
+
+[COORDINATES]
+;;Node           X-Coord            Y-Coord           
+;;-------------- ------------------ ------------------
+1                1229.592           6642.857          
+RDII-1           1229.592           5500.000          
+RDII-2           1400.000           5500.000          
+2                3637.755           6520.408          
+
+[VERTICES]
+;;Link           X-Coord            Y-Coord           
+;;-------------- ------------------ ------------------
+
+[Polygons]
+;;Subcatchment   X-Coord            Y-Coord           
+;;-------------- ------------------ ------------------
+Shed1            -770.408           8520.408          
+Shed1            -770.408           8520.408          
+Shed1            494.898            8826.531          
+Shed1            903.061            8306.122          
+Shed1            535.714            7408.163          
+Shed1            -362.245           7306.122          
+Shed1            -801.020           8530.612          
+Shed2            -1260.204          6030.612          
+Shed2            -1260.204          6030.612          
+Shed2            -1994.898          5785.714          
+Shed2            -1913.265          4755.102          
+Shed2            -494.898           4622.449          
+Shed2            -219.388           5836.735          
+Shed2            -1362.245          6020.408          
+
+[SYMBOLS]
+;;Gage           X-Coord            Y-Coord           
+;;-------------- ------------------ ------------------
+

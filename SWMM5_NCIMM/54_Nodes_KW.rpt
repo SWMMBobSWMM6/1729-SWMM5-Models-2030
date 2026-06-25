@@ -1,0 +1,465 @@
+
+  EPA STORM WATER MANAGEMENT MODEL - VERSION 5.2 (Build 5.2.4)
+  ------------------------------------------------------------
+
+  
+  *************
+  Element Count
+  *************
+  Number of rain gages ...... 0
+  Number of subcatchments ... 0
+  Number of nodes ........... 54
+  Number of links ........... 53
+  Number of pollutants ...... 0
+  Number of land uses ....... 0
+  
+  
+  ************
+  Node Summary
+  ************
+                                           Invert      Max.    Ponded    External
+  Name                 Type                 Elev.     Depth      Area    Inflow  
+  -------------------------------------------------------------------------------
+  PS-119               JUNCTION              0.11     11.09       0.0    Yes
+  SM2001               JUNCTION              0.13     11.07       0.0    Yes
+  SM2003               JUNCTION              0.15     11.05       0.0    Yes
+  SM2004               JUNCTION              0.16     11.04       0.0    Yes
+  SM2005               JUNCTION              0.18     11.02       0.0    Yes
+  SM2006               JUNCTION              0.20     11.00       0.0    Yes
+  SM2007               JUNCTION              0.71     10.49       0.0    Yes
+  SM2008               JUNCTION              0.76     10.44       0.0    Yes
+  SM2009               JUNCTION              0.87     10.33       0.0    Yes
+  SM2010               JUNCTION              7.70      3.50       0.0    Yes
+  SM2011               JUNCTION              6.80      4.40       0.0    Yes
+  SM2012               JUNCTION              7.50      3.70       0.0    Yes
+  SM2013               JUNCTION              7.30      3.90       0.0    Yes
+  SM2014               JUNCTION              2.20      9.00       0.0    Yes
+  SM2015               JUNCTION              6.20      5.00       0.0    Yes
+  SM2016               JUNCTION              7.35      3.85       0.0    Yes
+  SM2017               JUNCTION              7.09      4.11       0.0    Yes
+  SM2018               JUNCTION              7.20      4.00       0.0    Yes
+  SM2019               JUNCTION              6.62      4.58       0.0    Yes
+  SM2020               JUNCTION              7.03      4.17       0.0    Yes
+  SM2021               JUNCTION              8.00      3.20       0.0    Yes
+  SM2022               JUNCTION              1.60      9.60       0.0    Yes
+  SM2023               JUNCTION              1.20     10.00       0.0    Yes
+  SM2024               JUNCTION              7.78      3.42       0.0    Yes
+  SM2501               JUNCTION             12.03      4.17       0.0    Yes
+  SM2502               JUNCTION             11.12      5.08       0.0    Yes
+  SM2503               JUNCTION             10.53      5.67       0.0    Yes
+  SM2504               JUNCTION              8.20      6.00       0.0    Yes
+  SM2505               JUNCTION              1.80      9.40       0.0    Yes
+  SM2506               JUNCTION              2.00      9.20       0.0    Yes
+  SM2507               JUNCTION              2.10      9.10       0.0    Yes
+  SM2508               JUNCTION              2.20      9.00       0.0    Yes
+  SM2509               JUNCTION              2.40      8.80       0.0    Yes
+  SM2510               JUNCTION              3.28      7.92       0.0    Yes
+  SM2511               JUNCTION              4.45      6.75       0.0    Yes
+  SM2512               JUNCTION              5.20      6.00       0.0    Yes
+  SM2513               JUNCTION              7.20      4.00       0.0    Yes
+  SM2514               JUNCTION              5.10      6.10       0.0    Yes
+  SM2515               JUNCTION              7.03      4.17       0.0    Yes
+  SM2516               JUNCTION              6.78      4.42       0.0    Yes
+  SM2517               JUNCTION             11.20      5.00       0.0    Yes
+  SM2518               JUNCTION              8.40      7.80       0.0    Yes
+  SM2519               JUNCTION              8.38      7.82       0.0    Yes
+  SM2520               JUNCTION              8.35      7.85       0.0    Yes
+  SM2521               JUNCTION             13.37      2.83       0.0    Yes
+  SM2522               JUNCTION             13.03      3.17       0.0    Yes
+  SM2523               JUNCTION             11.45      4.75       0.0    Yes
+  SM2524               JUNCTION             11.03      5.17       0.0    Yes
+  SM2525               JUNCTION              8.78      7.42       0.0    Yes
+  SM2526               JUNCTION              9.78      6.42       0.0    Yes
+  SM2527               JUNCTION             10.40      5.80       0.0    Yes
+  SM2528               JUNCTION             12.20      4.00       0.0    Yes
+  SM2529               JUNCTION             11.87      4.33       0.0    Yes
+  SM2530               JUNCTION             13.03      3.20       0.0    Yes
+  
+  
+  ************
+  Link Summary
+  ************
+  Name             From Node        To Node          Type            Length    %Slope Roughness
+  ---------------------------------------------------------------------------------------------
+  C1               SM2513           SM2512           CONDUIT          412.0    0.4854    0.0100
+  C10              SM2502           SM2503           CONDUIT          315.5    0.1870    0.0100
+  C11              SM2503           SM2504           CONDUIT          236.1    0.9869    0.0100
+  C12              SM2504           SM2505           CONDUIT          236.8    2.7037    0.0100
+  C13              SM2505           SM2022           CONDUIT          289.2    0.0692    0.0100
+  C14              SM2022           SM2023           CONDUIT          271.7    0.1472    0.0100
+  C15              SM2024           SM2023           CONDUIT          340.0    1.9357    0.0100
+  C16              SM2010           SM2011           CONDUIT          203.7    0.4418    0.0100
+  C17              SM2012           SM2011           CONDUIT          185.6    0.3772    0.0100
+  C18              SM2011           SM2014           CONDUIT          144.0    3.1961    0.0100
+  C19              SM2015           SM2014           CONDUIT          196.1    2.0402    0.0100
+  C2               SM2512           SM2511           CONDUIT          250.5    0.2994    0.0100
+  C20              SM2013           SM2014           CONDUIT          202.2    2.5231    0.0100
+  C21              SM2014           SM2006           CONDUIT          121.0    1.6531    0.0100
+  C22              SM2006           SM2005           CONDUIT          109.6    0.0182    0.0100
+  C23              SM2005           SM2004           CONDUIT          262.8    0.0076    0.0100
+  C24              SM2004           SM2003           CONDUIT          257.0    0.0039    0.0100
+  C25              SM2023           SM2009           CONDUIT          101.5    0.3251    0.0100
+  C26              SM2009           SM2008           CONDUIT           42.0    0.2619    0.0100
+  C27              SM2008           SM2007           CONDUIT          112.7    0.0444    0.0100
+  C28              SM2007           SM2006           CONDUIT          151.6    0.3364    0.0100
+  C29              SM2018           SM2003           CONDUIT          365.0    1.9320    0.0100
+  C3               SM2511           SM2510           CONDUIT          256.2    0.4567    0.0100
+  C30              SM2019           SM2004           CONDUIT          364.0    1.7750    0.0100
+  C31              SM2020           SM2005           CONDUIT          353.1    1.9403    0.0100
+  C32              SM2001           PS-119           CONDUIT          200.0    0.0100    0.0100
+  C33              SM2021           SM2007           CONDUIT          353.8    2.0609    0.0100
+  C34              SM2003           SM2001           CONDUIT          200.4    0.0100    0.0100
+  C35              SM2016           SM2017           CONDUIT          347.4    0.0748    0.0100
+  C36              SM2017           SM2001           CONDUIT           98.1    7.1098    0.0100
+  C38              SM2515           SM2514           CONDUIT          282.3    0.6837    0.0100
+  C39              SM2514           SM2511           CONDUIT          286.8    0.2266    0.0100
+  C4               SM2510           SM2509           CONDUIT          262.4    0.3354    0.0100
+  C40              SM2517           SM2518           CONDUIT          281.7    0.9940    0.0100
+  C41              SM2518           SM2519           CONDUIT           66.0    0.0303    0.0100
+  C42              SM2519           SM2520           CONDUIT           67.7    0.0443    0.0100
+  C43              SM2520           SM2504           CONDUIT           96.2    0.1559    0.0100
+  C44              SM2530           SM2523           CONDUIT          375.0    0.4213    0.0100
+  C45              SM2523           SM2524           CONDUIT          227.8    0.1844    0.0100
+  C46              SM2524           SM2525           CONDUIT          199.0    1.1307    0.0100
+  C47              SM2516           SM2509           CONDUIT          216.1    2.0273    0.0100
+  C48              SM2521           SM2522           CONDUIT          275.5    0.1234    0.0100
+  C49              SM2522           SM2523           CONDUIT          266.6    0.5927    0.0100
+  C5               SM2509           SM2508           CONDUIT          263.1    0.0760    0.0100
+  C50              SM2529           SM2526           CONDUIT          199.5    1.0477    0.0100
+  C51              SM2528           SM2527           CONDUIT          354.5    0.5078    0.0100
+  C52              SM2527           SM2526           CONDUIT          247.8    0.2502    0.0100
+  C53              SM2526           SM2525           CONDUIT          246.5    0.4057    0.0100
+  C54              SM2525           SM2518           CONDUIT          254.0    0.1496    0.0100
+  C6               SM2508           SM2507           CONDUIT           82.1    0.1218    0.0100
+  C7               SM2507           SM2506           CONDUIT           60.2    0.1661    0.0100
+  C8               SM2506           SM2505           CONDUIT          103.0    0.1942    0.0100
+  C9               SM2501           SM2502           CONDUIT          284.1    0.3203    0.0100
+  
+  
+  *********************
+  Cross Section Summary
+  *********************
+                                        Full     Full     Hyd.     Max.   No. of     Full
+  Conduit          Shape               Depth     Area     Rad.    Width  Barrels     Flow
+  ---------------------------------------------------------------------------------------
+  C1               CIRCULAR             0.67     0.35     0.17     0.67        1   497.84
+  C10              CIRCULAR             0.67     0.35     0.17     0.67        1   308.99
+  C11              CIRCULAR             0.67     0.35     0.17     0.67        1   709.84
+  C12              CIRCULAR             0.67     0.35     0.17     0.67        1  1174.89
+  C13              CIRCULAR             0.67     0.35     0.17     0.67        1   187.90
+  C14              CIRCULAR             0.67     0.35     0.17     0.67        1   274.16
+  C15              CIRCULAR             0.67     0.35     0.17     0.67        1   994.10
+  C16              CIRCULAR             0.67     0.35     0.17     0.67        1   474.95
+  C17              CIRCULAR             0.67     0.35     0.17     0.67        1   438.81
+  C18              CIRCULAR             0.67     0.35     0.17     0.67        1  1277.40
+  C19              CIRCULAR             0.67     0.35     0.17     0.67        1  1020.60
+  C2               CIRCULAR             0.67     0.35     0.17     0.67        1   390.97
+  C20              CIRCULAR             0.67     0.35     0.17     0.67        1  1134.96
+  C21              CIRCULAR             0.67     0.35     0.17     0.67        1   918.69
+  C22              CIRCULAR             0.83     0.54     0.21     0.83        1   170.86
+  C23              CIRCULAR             0.83     0.54     0.21     0.83        1   110.34
+  C24              CIRCULAR             0.83     0.54     0.21     0.83        1    78.90
+  C25              CIRCULAR             0.83     0.54     0.21     0.83        1   721.19
+  C26              CIRCULAR             0.83     0.54     0.21     0.83        1   647.29
+  C27              CIRCULAR             0.83     0.54     0.21     0.83        1   266.41
+  C28              CIRCULAR             0.83     0.54     0.21     0.83        1   733.61
+  C29              CIRCULAR             0.67     0.35     0.17     0.67        1   993.17
+  C3               CIRCULAR             0.67     0.35     0.17     0.67        1   482.86
+  C30              CIRCULAR             0.67     0.35     0.17     0.67        1   951.96
+  C31              CIRCULAR             0.67     0.35     0.17     0.67        1   995.30
+  C32              CIRCULAR             0.67     0.35     0.17     0.67        1    71.45
+  C33              CIRCULAR             0.67     0.35     0.17     0.67        1  1025.77
+  C34              CIRCULAR             0.83     0.54     0.21     0.83        1   126.35
+  C35              CIRCULAR             0.67     0.35     0.17     0.67        1   195.47
+  C36              CIRCULAR             0.67     0.35     0.17     0.67        1  1905.23
+  C38              CIRCULAR             0.67     0.35     0.17     0.67        1   590.81
+  C39              CIRCULAR             0.67     0.35     0.17     0.67        1   340.16
+  C4               CIRCULAR             0.67     0.35     0.17     0.67        1   413.79
+  C40              CIRCULAR             0.67     0.35     0.17     0.67        1   712.38
+  C41              CIRCULAR             0.67     0.35     0.17     0.67        1   124.38
+  C42              CIRCULAR             0.67     0.35     0.17     0.67        1   150.41
+  C43              CIRCULAR             0.67     0.35     0.17     0.67        1   282.15
+  C44              CIRCULAR             0.67     0.35     0.17     0.67        1   463.80
+  C45              CIRCULAR             0.67     0.35     0.17     0.67        1   306.81
+  C46              CIRCULAR             0.67     0.35     0.17     0.67        1   759.79
+  C47              CIRCULAR             0.67     0.35     0.17     0.67        1  1017.35
+  C48              CIRCULAR             0.67     0.35     0.17     0.67        1   251.01
+  C49              CIRCULAR             0.67     0.35     0.17     0.67        1   550.07
+  C5               CIRCULAR             0.67     0.35     0.17     0.67        1   197.00
+  C50              CIRCULAR             0.67     0.35     0.17     0.67        1   731.36
+  C51              CIRCULAR             0.67     0.35     0.17     0.67        1   509.15
+  C52              CIRCULAR             0.67     0.35     0.17     0.67        1   357.41
+  C53              CIRCULAR             0.67     0.35     0.17     0.67        1   455.10
+  C54              CIRCULAR             0.67     0.35     0.17     0.67        1   276.37
+  C6               CIRCULAR             0.67     0.35     0.17     0.67        1   249.37
+  C7               CIRCULAR             0.67     0.35     0.17     0.67        1   291.24
+  C8               CIRCULAR             0.67     0.35     0.17     0.67        1   314.86
+  C9               CIRCULAR             0.67     0.35     0.17     0.67        1   404.39
+  
+  
+  ****************
+  Analysis Options
+  ****************
+  Flow Units ............... GPM
+  Process Models:
+    Rainfall/Runoff ........ NO
+    RDII ................... NO
+    Snowmelt ............... NO
+    Groundwater ............ NO
+    Flow Routing ........... YES
+    Ponding Allowed ........ NO
+    Water Quality .......... NO
+  Flow Routing Method ...... KINWAVE
+  Starting Date ............ 05/29/2016 23:59:00
+  Ending Date .............. 09/30/2016 23:59:00
+  Antecedent Dry Days ...... 7.0
+  Report Time Step ......... 00:01:00
+  Routing Time Step ........ 5.00 sec
+  
+  
+  **************************        Volume        Volume
+  Flow Routing Continuity        acre-feet      10^6 gal
+  **************************     ---------     ---------
+  Dry Weather Inflow .......        19.669         6.409
+  Wet Weather Inflow .......         0.000         0.000
+  Groundwater Inflow .......         0.000         0.000
+  RDII Inflow ..............         0.000         0.000
+  External Inflow ..........         0.000         0.000
+  External Outflow .........        19.662         6.407
+  Flooding Loss ............         0.000         0.000
+  Evaporation Loss .........         0.000         0.000
+  Exfiltration Loss ........         0.000         0.000
+  Initial Stored Volume ....         0.000         0.000
+  Final Stored Volume ......         0.007         0.002
+  Continuity Error (%) .....        -0.001
+  
+  
+  ********************************
+  Highest Flow Instability Indexes
+  ********************************
+  All links are stable.
+  
+  
+  *************************
+  Routing Time Step Summary
+  *************************
+  Minimum Time Step           :     5.00 sec
+  Average Time Step           :     5.00 sec
+  Maximum Time Step           :     5.00 sec
+  % of Time in Steady State   :     0.00
+  Average Iterations per Step :     1.00
+  % of Steps Not Converging   :     0.00
+  
+  
+  ******************
+  Node Depth Summary
+  ******************
+  
+  ---------------------------------------------------------------------------------
+                                 Average  Maximum  Maximum  Time of Max    Reported
+                                   Depth    Depth      HGL   Occurrence   Max Depth
+  Node                 Type         Feet     Feet     Feet  days hr:min        Feet
+  ---------------------------------------------------------------------------------
+  PS-119               JUNCTION     0.33     0.44     0.55     0  13:20        0.44
+  SM2001               JUNCTION     0.33     0.44     0.57     0  13:15        0.44
+  SM2003               JUNCTION     0.36     0.48     0.63     0  13:10        0.48
+  SM2004               JUNCTION     0.36     0.48     0.64     0  13:05        0.48
+  SM2005               JUNCTION     0.29     0.38     0.56     0  13:01        0.38
+  SM2006               JUNCTION     0.23     0.29     0.49     0  13:01        0.29
+  SM2007               JUNCTION     0.16     0.21     0.92     0  13:01        0.21
+  SM2008               JUNCTION     0.16     0.21     0.97     0  13:01        0.21
+  SM2009               JUNCTION     0.10     0.13     1.00     0  13:01        0.13
+  SM2010               JUNCTION     0.02     0.02     7.72     0  12:01        0.02
+  SM2011               JUNCTION     0.02     0.02     6.82     0  14:01        0.02
+  SM2012               JUNCTION     0.02     0.02     7.52     0  12:01        0.02
+  SM2013               JUNCTION     0.01     0.02     7.32     0  12:01        0.02
+  SM2014               JUNCTION     0.03     0.04     2.24     0  13:01        0.04
+  SM2015               JUNCTION     0.01     0.02     6.22     0  12:01        0.02
+  SM2016               JUNCTION     0.03     0.04     7.39     0  12:01        0.04
+  SM2017               JUNCTION     0.03     0.04     7.13     0  14:01        0.04
+  SM2018               JUNCTION     0.01     0.02     7.22     0  12:01        0.02
+  SM2019               JUNCTION     0.01     0.02     6.64     0  12:01        0.02
+  SM2020               JUNCTION     0.01     0.02     7.05     0  12:01        0.02
+  SM2021               JUNCTION     0.01     0.02     8.02     0  12:01        0.02
+  SM2022               JUNCTION     0.14     0.19     1.79     0  13:02        0.19
+  SM2023               JUNCTION     0.12     0.16     1.36     0  13:01        0.16
+  SM2024               JUNCTION     0.01     0.02     7.80     0  12:01        0.02
+  SM2501               JUNCTION     0.02     0.03    12.06     0  12:01        0.03
+  SM2502               JUNCTION     0.03     0.04    11.16     0  13:01        0.04
+  SM2503               JUNCTION     0.03     0.04    10.57     0  14:01        0.04
+  SM2504               JUNCTION     0.08     0.10     8.30     0  13:01        0.10
+  SM2505               JUNCTION     0.14     0.19     1.99     0  13:01        0.19
+  SM2506               JUNCTION     0.07     0.09     2.09     0  13:01        0.09
+  SM2507               JUNCTION     0.07     0.09     2.19     0  13:01        0.09
+  SM2508               JUNCTION     0.07     0.09     2.29     0  13:02        0.09
+  SM2509               JUNCTION     0.07     0.09     2.49     0  13:01        0.09
+  SM2510               JUNCTION     0.04     0.06     3.34     0  13:01        0.06
+  SM2511               JUNCTION     0.04     0.05     4.50     0  13:01        0.05
+  SM2512               JUNCTION     0.03     0.04     5.24     0  13:01        0.04
+  SM2513               JUNCTION     0.02     0.02     7.22     0  12:01        0.02
+  SM2514               JUNCTION     0.03     0.04     5.14     0  13:01        0.04
+  SM2515               JUNCTION     0.02     0.02     7.05     0  12:01        0.02
+  SM2516               JUNCTION     0.01     0.02     6.80     0  12:01        0.02
+  SM2517               JUNCTION     0.02     0.02    11.22     0  12:01        0.02
+  SM2518               JUNCTION     0.11     0.14     8.54     0  13:01        0.14
+  SM2519               JUNCTION     0.11     0.14     8.52     0  13:01        0.14
+  SM2520               JUNCTION     0.11     0.14     8.49     0  13:01        0.14
+  SM2521               JUNCTION     0.02     0.03    13.40     0  12:01        0.03
+  SM2522               JUNCTION     0.02     0.03    13.06     0  14:01        0.03
+  SM2523               JUNCTION     0.04     0.05    11.50     0  13:01        0.05
+  SM2524               JUNCTION     0.04     0.05    11.08     0  13:02        0.05
+  SM2525               JUNCTION     0.07     0.09     8.87     0  13:01        0.09
+  SM2526               JUNCTION     0.04     0.05     9.83     0  13:01        0.05
+  SM2527               JUNCTION     0.03     0.04    10.44     0  13:01        0.04
+  SM2528               JUNCTION     0.02     0.02    12.22     0  12:01        0.02
+  SM2529               JUNCTION     0.01     0.02    11.89     0  12:01        0.02
+  SM2530               JUNCTION     0.02     0.02    13.05     0  12:01        0.02
+  
+  
+  *******************
+  Node Inflow Summary
+  *******************
+  
+  -------------------------------------------------------------------------------------------------
+                                  Maximum  Maximum                  Lateral       Total        Flow
+                                  Lateral    Total  Time of Max      Inflow      Inflow     Balance
+                                   Inflow   Inflow   Occurrence      Volume      Volume       Error
+  Node                 Type           GPM      GPM  days hr:min    10^6 gal    10^6 gal     Percent
+  -------------------------------------------------------------------------------------------------
+  PS-119               JUNCTION      1.04    56.34     0  13:20       0.118        6.41       0.000
+  SM2001               JUNCTION      1.04    55.30     0  13:15       0.118        6.29       0.000
+  SM2003               JUNCTION      1.04    52.19     0  13:10       0.118        5.93       0.000
+  SM2004               JUNCTION      1.04    50.11     0  13:05       0.118         5.7       0.000
+  SM2005               JUNCTION      1.04    48.03     0  13:01       0.118        5.46       0.000
+  SM2006               JUNCTION      1.04    45.94     0  13:01       0.118        5.22       0.000
+  SM2007               JUNCTION      1.04    38.63     0  13:01       0.118        4.39       0.000
+  SM2008               JUNCTION      1.04    36.54     0  13:01       0.118        4.15       0.000
+  SM2009               JUNCTION      1.04    35.50     0  13:01       0.118        4.03       0.000
+  SM2010               JUNCTION      1.04     1.04     0  12:01       0.118       0.119       0.000
+  SM2011               JUNCTION      1.04     3.13     0  14:01       0.118       0.356       0.000
+  SM2012               JUNCTION      1.04     1.04     0  12:01       0.118       0.119       0.000
+  SM2013               JUNCTION      1.04     1.04     0  12:01       0.118       0.119       0.000
+  SM2014               JUNCTION      1.04     6.27     0  13:01       0.118       0.712       0.000
+  SM2015               JUNCTION      1.04     1.04     0  12:01       0.118       0.119       0.000
+  SM2016               JUNCTION      1.04     1.04     0  12:01       0.118       0.119       0.000
+  SM2017               JUNCTION      1.04     2.09     0  13:01       0.118       0.237       0.000
+  SM2018               JUNCTION      1.04     1.04     0  12:01       0.118       0.119       0.000
+  SM2019               JUNCTION      1.04     1.04     0  12:01       0.118       0.119       0.000
+  SM2020               JUNCTION      1.04     1.04     0  12:01       0.118       0.119       0.000
+  SM2021               JUNCTION      1.04     1.04     0  12:01       0.118       0.119       0.000
+  SM2022               JUNCTION      1.04    32.37     0  13:01       0.118        3.68       0.000
+  SM2023               JUNCTION      1.04    34.46     0  13:01       0.118        3.92       0.000
+  SM2024               JUNCTION      1.04     1.04     0  12:01       0.118       0.119       0.000
+  SM2501               JUNCTION      1.04     1.04     0  12:01       0.118       0.119       0.000
+  SM2502               JUNCTION      1.04     2.09     0  13:01       0.118       0.237       0.000
+  SM2503               JUNCTION      1.04     3.13     0  13:01       0.118       0.356       0.000
+  SM2504               JUNCTION      1.04    18.79     0  13:01       0.118        2.14       0.000
+  SM2505               JUNCTION      1.04    31.32     0  13:01       0.118        3.56       0.000
+  SM2506               JUNCTION      1.04    11.49     0  13:01       0.118        1.31       0.000
+  SM2507               JUNCTION      1.04    10.44     0  13:01       0.118        1.19       0.000
+  SM2508               JUNCTION      1.04     9.40     0  13:01       0.118        1.07       0.000
+  SM2509               JUNCTION      1.04     8.35     0  13:01       0.118       0.949       0.000
+  SM2510               JUNCTION      1.04     6.26     0  13:01       0.118       0.712       0.000
+  SM2511               JUNCTION      1.04     5.22     0  13:01       0.118       0.593       0.000
+  SM2512               JUNCTION      1.04     2.09     0  13:01       0.118       0.237       0.000
+  SM2513               JUNCTION      1.04     1.04     0  12:01       0.118       0.119       0.000
+  SM2514               JUNCTION      1.04     2.09     0  13:01       0.118       0.237       0.000
+  SM2515               JUNCTION      1.04     1.04     0  12:01       0.118       0.119       0.000
+  SM2516               JUNCTION      1.04     1.04     0  12:01       0.118       0.119       0.000
+  SM2517               JUNCTION      1.04     1.04     0  12:01       0.118       0.119       0.000
+  SM2518               JUNCTION      1.04    12.53     0  13:01       0.118        1.42       0.000
+  SM2519               JUNCTION      1.04    13.57     0  13:01       0.118        1.54       0.000
+  SM2520               JUNCTION      1.04    14.62     0  13:01       0.118        1.66       0.000
+  SM2521               JUNCTION      1.04     1.04     0  12:01       0.118       0.119       0.000
+  SM2522               JUNCTION      1.04     2.09     0  13:01       0.118       0.237       0.000
+  SM2523               JUNCTION      1.04     4.18     0  13:01       0.118       0.475       0.000
+  SM2524               JUNCTION      1.04     5.22     0  13:01       0.118       0.593       0.000
+  SM2525               JUNCTION      1.04    10.44     0  13:01       0.118        1.19       0.000
+  SM2526               JUNCTION      1.04     4.18     0  13:01       0.118       0.475       0.000
+  SM2527               JUNCTION      1.04     2.09     0  13:01       0.118       0.237       0.000
+  SM2528               JUNCTION      1.04     1.04     0  12:01       0.118       0.119       0.000
+  SM2529               JUNCTION      1.04     1.04     0  12:01       0.118       0.119       0.000
+  SM2530               JUNCTION      1.04     1.04     0  12:01       0.118       0.119       0.000
+  
+  
+  *********************
+  Node Flooding Summary
+  *********************
+  
+  No nodes were flooded.
+  
+  
+  ********************
+  Link Flow Summary
+  ********************
+  
+  -----------------------------------------------------------------------------
+                                 Maximum  Time of Max   Maximum    Max/    Max/
+                                  |Flow|   Occurrence   |Veloc|    Full    Full
+  Link                 Type          GPM  days hr:min    ft/sec    Flow   Depth
+  -----------------------------------------------------------------------------
+  C1                   CONDUIT      1.08     0  14:01      0.67    0.00    0.03
+  C10                  CONDUIT      2.10     0  14:01      0.56    0.01    0.06
+  C11                  CONDUIT      3.15     0  14:01      1.12    0.00    0.05
+  C12                  CONDUIT     18.80     0  13:01      2.76    0.02    0.09
+  C13                  CONDUIT     31.33     0  13:02      0.88    0.17    0.28
+  C14                  CONDUIT     32.37     0  13:01      1.16    0.12    0.23
+  C15                  CONDUIT      1.08     0  14:01      1.09    0.00    0.02
+  C16                  CONDUIT      1.08     0  14:01      0.64    0.00    0.03
+  C17                  CONDUIT      1.08     0  14:01      0.61    0.00    0.04
+  C18                  CONDUIT      3.13     0  13:01      1.70    0.00    0.04
+  C19                  CONDUIT      1.08     0  14:01      1.11    0.00    0.02
+  C2                   CONDUIT      2.09     0  14:01      0.65    0.01    0.05
+  C20                  CONDUIT      1.08     0  14:01      1.19    0.00    0.02
+  C21                  CONDUIT      6.27     0  13:01      1.66    0.01    0.06
+  C22                  CONDUIT     45.94     0  13:01      0.60    0.27    0.35
+  C23                  CONDUIT     48.03     0  13:05      0.44    0.44    0.46
+  C24                  CONDUIT     50.11     0  13:10      0.34    0.64    0.58
+  C25                  CONDUIT     34.46     0  13:01      1.53    0.05    0.15
+  C26                  CONDUIT     35.50     0  13:01      1.43    0.05    0.16
+  C27                  CONDUIT     36.55     0  13:01      0.77    0.14    0.25
+  C28                  CONDUIT     38.63     0  13:01      1.60    0.05    0.16
+  C29                  CONDUIT      1.08     0  14:01      1.09    0.00    0.02
+  C3                   CONDUIT      5.22     0  13:01      1.00    0.01    0.07
+  C30                  CONDUIT      1.08     0  14:01      1.06    0.00    0.03
+  C31                  CONDUIT      1.08     0  14:01      1.09    0.00    0.02
+  C32                  CONDUIT     55.30     0  13:20      0.50    0.77    0.66
+  C33                  CONDUIT      1.08     0  14:01      1.11    0.00    0.02
+  C34                  CONDUIT     52.18     0  13:15      0.50    0.41    0.45
+  C35                  CONDUIT      1.08     0  14:01      0.35    0.01    0.05
+  C36                  CONDUIT      2.09     0  13:01      1.98    0.00    0.03
+  C38                  CONDUIT      1.08     0  14:01      0.75    0.00    0.03
+  C39                  CONDUIT      2.10     0  14:01      0.60    0.01    0.06
+  C4                   CONDUIT      6.27     0  13:01      0.95    0.02    0.09
+  C40                  CONDUIT      1.08     0  14:01      0.86    0.00    0.03
+  C41                  CONDUIT     12.53     0  13:01      0.50    0.10    0.21
+  C42                  CONDUIT     13.58     0  13:01      0.59    0.09    0.20
+  C43                  CONDUIT     14.62     0  13:01      0.94    0.05    0.15
+  C44                  CONDUIT      1.08     0  14:01      0.63    0.00    0.04
+  C45                  CONDUIT      4.18     0  13:02      0.69    0.01    0.08
+  C46                  CONDUIT      5.23     0  14:01      1.38    0.01    0.06
+  C47                  CONDUIT      1.08     0  14:01      1.10    0.00    0.02
+  C48                  CONDUIT      1.08     0  14:01      0.42    0.00    0.05
+  C49                  CONDUIT      2.09     0  14:01      0.83    0.00    0.04
+  C5                   CONDUIT      8.36     0  13:02      0.62    0.04    0.14
+  C50                  CONDUIT      1.08     0  14:01      0.87    0.00    0.03
+  C51                  CONDUIT      1.08     0  14:01      0.68    0.00    0.03
+  C52                  CONDUIT      2.09     0  14:01      0.62    0.01    0.05
+  C53                  CONDUIT      4.18     0  13:01      0.90    0.01    0.07
+  C54                  CONDUIT     10.44     0  13:01      0.84    0.04    0.13
+  C6                   CONDUIT      9.40     0  13:01      0.76    0.04    0.13
+  C7                   CONDUIT     10.44     0  13:01      0.87    0.04    0.13
+  C8                   CONDUIT     11.49     0  13:01      0.95    0.04    0.13
+  C9                   CONDUIT      1.08     0  14:01      0.58    0.00    0.04
+  
+  
+  *************************
+  Conduit Surcharge Summary
+  *************************
+  
+  No conduits were surcharged.
+  
+
+  Analysis begun on:  Wed Jun 24 12:22:50 2026
+  Analysis ended on:  Wed Jun 24 12:24:24 2026
+  Total elapsed time: 00:01:34

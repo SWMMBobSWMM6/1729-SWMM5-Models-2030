@@ -1,0 +1,452 @@
+
+  EPA STORM WATER MANAGEMENT MODEL - VERSION 5.2 (Build 5.2.4)
+  ------------------------------------------------------------
+
+  Scenario Run :  NEW_HOPE_NW_LAKE_N_EXAMPLE_100YR 
+  
+  *************
+  Element Count
+  *************
+  Number of rain gages ...... 1
+  Number of subcatchments ... 12
+  Number of nodes ........... 19
+  Number of links ........... 19
+  Number of pollutants ...... 0
+  Number of land uses ....... 0
+  
+  
+  ****************
+  Raingage Summary
+  ****************
+                                                      Data       Recording
+  Name                 Data Source                    Type       Interval 
+  ------------------------------------------------------------------------
+  NEWRAINGAGE          NEW_HOPE_NW_LAKE_N_EXAMPLE_100YR CUMULATIVE   6 min.
+  
+  
+  ********************
+  Subcatchment Summary
+  ********************
+  Name                       Area     Width   %Imperv    %Slope Rain Gage            Outlet              
+  -----------------------------------------------------------------------------------------------------------
+  ST1?#1                     2.42      1.00     58.00    1.0000 NEWRAINGAGE          ST1?                
+  ST2325#1                   2.50      1.00     43.00    1.0000 NEWRAINGAGE          ST2325              
+  ST2327#1                   3.73      1.00     43.00    1.0000 NEWRAINGAGE          ST2327              
+  ST2336#1                   6.94      1.00     12.00    1.0000 NEWRAINGAGE          ST2336              
+  ST2337#1                   0.89    270.00     22.00    0.0400 NEWRAINGAGE          ST2337              
+  ST2338#1                   0.48      1.00     46.00    1.0000 NEWRAINGAGE          ST2338              
+  ST2339#1                   1.62      1.00     53.00    1.0000 NEWRAINGAGE          ST2339              
+  ST2367#1                   0.78      1.00     45.00    1.0000 NEWRAINGAGE          ST2367              
+  ST2368#1                   1.73      1.00     42.00    1.0000 NEWRAINGAGE          ST2368              
+  ST2369#1                   1.04      1.00     54.00    1.0000 NEWRAINGAGE          ST2369              
+  ST2?#1                     2.40      1.00     57.00    1.0000 NEWRAINGAGE          ST2?                
+  ST366#1                    2.54      1.00     22.00    1.0000 NEWRAINGAGE          ST366               
+  
+  
+  ************
+  Node Summary
+  ************
+                                           Invert      Max.    Ponded    External
+  Name                 Type                 Elev.     Depth      Area    Inflow  
+  -------------------------------------------------------------------------------
+  ST1?                 JUNCTION            897.02      2.19       0.0
+  ST2325               JUNCTION            895.91      5.29       0.0
+  ST2326               JUNCTION            893.58      7.62       0.0
+  ST2327               JUNCTION            897.17      4.03       0.0
+  ST2328               JUNCTION            896.17      5.03       0.0
+  ST2337               JUNCTION            888.04      3.46       0.0
+  ST2338               JUNCTION            894.90      3.10       0.0
+  ST2339               JUNCTION            894.20      3.82       0.0
+  ST2367               JUNCTION            892.80      3.30       0.0
+  ST2368               JUNCTION            893.10      3.00       0.0
+  ST2369               JUNCTION            884.86     10.94       0.0
+  ST2428               JUNCTION            887.25     10.85       0.0
+  ST2429               JUNCTION            893.10      7.20       0.0
+  ST2430               JUNCTION            885.61     11.49       0.0
+  ST2439               JUNCTION            884.90     11.40       0.0
+  ST2?                 JUNCTION            896.73      2.39       0.0
+  ST366                JUNCTION            895.70      4.91       0.0
+  ST634                OUTFALL             884.19      2.50       0.0
+  ST2336               STORAGE             888.05      3.95       0.0
+  
+  
+  ************
+  Link Summary
+  ************
+  Name             From Node        To Node          Type            Length    %Slope Roughness
+  ---------------------------------------------------------------------------------------------
+  334.1            ST2336           ST2337           CONDUIT            5.0    0.2000    0.0130
+  LINK103          ST1?             ST2?             CONDUIT           30.5    0.8525    0.0130
+  STP1952          ST2326           ST2336           CONDUIT          162.0    2.0498    0.0130
+  STP1953          ST2328           ST2326           CONDUIT           34.5    7.4993    0.0130
+  STP2144          ST2339           ST2428           CONDUIT           26.0    8.1034    0.0130
+  STP2145          ST2338           ST2428           CONDUIT            8.0   37.3632    0.0130
+  STP2146          ST2367           ST2439           CONDUIT           12.0   18.6494    0.0130
+  STP2147          ST2368           ST2439           CONDUIT           30.0   13.1113    0.0130
+  STP2148          ST2369           ST634            CONDUIT          120.0    0.5583    0.0130
+  STP2149          ST2439           ST2369           CONDUIT           35.0    0.1143    0.0130
+  STP2150          ST2430           ST2439           CONDUIT          117.0    0.4103    0.0130
+  STP2153          ST2429           ST2430           CONDUIT          167.0    4.3034    0.0130
+  STP2154          ST2428           ST2430           CONDUIT           76.0    1.8951    0.0130
+  STP510           ST2?             ST366            CONDUIT          126.5    0.8143    0.0130
+  STP511           ST366            ST2429           CONDUIT           10.0    8.0257    0.0130
+  STP512           ST2325           ST2326           CONDUIT           10.5   16.1098    0.0130
+  STP513           ST2327           ST2328           CONDUIT           11.5    7.4993    0.0130
+  STP514           ST2337           ST2428           CONDUIT          262.6    0.3008    0.0130
+  INLET            ST2336           ST2337           ORIFICE     
+  
+  
+  *********************
+  Cross Section Summary
+  *********************
+                                        Full     Full     Hyd.     Max.   No. of     Full
+  Conduit          Shape               Depth     Area     Rad.    Width  Barrels     Flow
+  ---------------------------------------------------------------------------------------
+  334.1            CIRCULAR             1.75     2.41     0.44     1.75        1     7.09
+  LINK103          CIRCULAR             1.00     0.79     0.25     1.00        1     3.29
+  STP1952          CIRCULAR             1.50     1.77     0.38     1.50        1    15.04
+  STP1953          CIRCULAR             1.50     1.77     0.38     1.50        1    28.77
+  STP2144          CIRCULAR             1.00     0.79     0.25     1.00        1    10.14
+  STP2145          CIRCULAR             1.00     0.79     0.25     1.00        1    21.78
+  STP2146          CIRCULAR             1.00     0.79     0.25     1.00        1    15.39
+  STP2147          CIRCULAR             1.00     0.79     0.25     1.00        1    12.90
+  STP2148          CIRCULAR             2.50     4.91     0.62     2.50        1    30.65
+  STP2149          CIRCULAR             2.50     4.91     0.62     2.50        1    13.87
+  STP2150          CIRCULAR             2.00     3.14     0.50     2.00        1    14.49
+  STP2153          CIRCULAR             1.50     1.77     0.38     1.50        1    21.79
+  STP2154          CIRCULAR             1.75     2.41     0.44     1.75        1    21.81
+  STP510           CIRCULAR             1.00     0.79     0.25     1.00        1     3.21
+  STP511           CIRCULAR             1.50     1.77     0.38     1.50        1    29.76
+  STP512           CIRCULAR             1.25     1.23     0.31     1.25        1    25.93
+  STP513           CIRCULAR             1.25     1.23     0.31     1.25        1    17.69
+  STP514           CIRCULAR             1.75     2.41     0.44     1.75        1     8.69
+  
+  
+  ****************
+  Analysis Options
+  ****************
+  Flow Units ............... CFS
+  Process Models:
+    Rainfall/Runoff ........ YES
+    RDII ................... NO
+    Snowmelt ............... NO
+    Groundwater ............ NO
+    Flow Routing ........... YES
+    Ponding Allowed ........ NO
+    Water Quality .......... NO
+  Infiltration Method ...... HORTON
+  Flow Routing Method ...... DYNWAVE
+  Surcharge Method ......... EXTRAN
+  Starting Date ............ 01/01/2016 00:00:00
+  Ending Date .............. 01/03/2016 00:00:00
+  Antecedent Dry Days ...... 5.0
+  Report Time Step ......... 00:01:00
+  Wet Time Step ............ 00:01:00
+  Dry Time Step ............ 00:00:00
+  Routing Time Step ........ 10.00 sec
+  Variable Time Step ....... YES
+  Maximum Trials ........... 8
+  Number of Threads ........ 1
+  Head Tolerance ........... 0.001000 ft
+  
+  
+  **************************        Volume         Depth
+  Runoff Quantity Continuity     acre-feet        inches
+  **************************     ---------       -------
+  Total Precipitation ......        16.649         7.380
+  Evaporation Loss .........         0.000         0.000
+  Infiltration Loss ........         0.000         0.000
+  Surface Runoff ...........        15.353         6.805
+  Final Storage ............         1.298         0.575
+  Continuity Error (%) .....        -0.006
+  
+  
+  **************************        Volume        Volume
+  Flow Routing Continuity        acre-feet      10^6 gal
+  **************************     ---------     ---------
+  Dry Weather Inflow .......         0.000         0.000
+  Wet Weather Inflow .......        15.351         5.002
+  Groundwater Inflow .......         0.000         0.000
+  RDII Inflow ..............         0.000         0.000
+  External Inflow ..........         0.000         0.000
+  External Outflow .........        14.800         4.823
+  Flooding Loss ............         0.273         0.089
+  Evaporation Loss .........         0.000         0.000
+  Exfiltration Loss ........         0.000         0.000
+  Initial Stored Volume ....         0.000         0.000
+  Final Stored Volume ......         0.278         0.091
+  Continuity Error (%) .....        -0.003
+  
+  
+  ***************************
+  Time-Step Critical Elements
+  ***************************
+  Link 334.1 (53.21%)
+  Link STP2149 (31.21%)
+  
+  
+  ********************************
+  Highest Flow Instability Indexes
+  ********************************
+  All links are stable.
+  
+  
+  *********************************
+  Most Frequent Nonconverging Nodes
+  *********************************
+  Node ST634 (0.79%)
+  Node ST2326 (0.26%)
+  Node ST2430 (0.26%)
+  Node ST1? (0.22%)
+  Node ST2? (0.22%)
+  
+  
+  *************************
+  Routing Time Step Summary
+  *************************
+  Minimum Time Step           :     0.17 sec
+  Average Time Step           :     6.53 sec
+  Maximum Time Step           :    10.00 sec
+  % of Time in Steady State   :     0.00
+  Average Iterations per Step :     2.13
+  % of Steps Not Converging   :     0.79
+  Time Step Frequencies       :
+     10.000 -  1.585 sec      :    97.55 %
+      1.585 -  0.251 sec      :     2.30 %
+      0.251 -  0.040 sec      :     0.16 %
+      0.040 -  0.006 sec      :     0.00 %
+      0.006 -  0.001 sec      :     0.00 %
+  
+  
+  ***************************
+  Subcatchment Runoff Summary
+  ***************************
+  
+  ------------------------------------------------------------------------------------------------------------------------------
+                            Total      Total      Total      Total     Imperv       Perv      Total       Total     Peak  Runoff
+                           Precip      Runon       Evap      Infil     Runoff     Runoff     Runoff      Runoff   Runoff   Coeff
+  Subcatchment                 in         in         in         in         in         in         in    10^6 gal      CFS
+  ------------------------------------------------------------------------------------------------------------------------------
+  ST1?#1                     7.38       0.00       0.00       0.00       3.15       3.08       6.23        0.41     7.67   0.844
+  ST2325#1                   7.38       0.00       0.00       0.00       2.52       4.17       6.69        0.45     9.24   0.907
+  ST2327#1                   7.38       0.00       0.00       0.00       2.24       4.17       6.41        0.65    11.30   0.868
+  ST2336#1                   7.38       0.00       0.00       0.00       0.74       6.41       7.16        1.35    17.94   0.970
+  ST2337#1                   7.38       0.00       0.00       0.00       1.62       5.72       7.34        0.18    10.42   0.994
+  ST2338#1                   7.38       0.00       0.00       0.00       3.27       3.96       7.23        0.09     3.00   0.980
+  ST2339#1                   7.38       0.00       0.00       0.00       3.26       3.44       6.70        0.30     6.46   0.908
+  ST2367#1                   7.38       0.00       0.00       0.00       3.11       4.03       7.14        0.15     4.40   0.968
+  ST2368#1                   7.38       0.00       0.00       0.00       2.67       4.25       6.92        0.33     7.61   0.937
+  ST2369#1                   7.38       0.00       0.00       0.00       3.56       3.37       6.94        0.20     4.73   0.940
+  ST2?#1                     7.38       0.00       0.00       0.00       3.12       3.15       6.27        0.41     7.73   0.850
+  ST366#1                    7.38       0.00       0.00       0.00       1.45       5.71       7.16        0.49    10.90   0.971
+  
+  
+  ******************
+  Node Depth Summary
+  ******************
+  
+  ---------------------------------------------------------------------------------
+                                 Average  Maximum  Maximum  Time of Max    Reported
+                                   Depth    Depth      HGL   Occurrence   Max Depth
+  Node                 Type         Feet     Feet     Feet  days hr:min        Feet
+  ---------------------------------------------------------------------------------
+  ST1?                 JUNCTION     0.30     2.19   899.21     0  12:00        2.19
+  ST2325               JUNCTION     0.11     0.84   896.75     0  12:08        0.81
+  ST2326               JUNCTION     0.28     4.48   898.06     0  12:10        4.39
+  ST2327               JUNCTION     0.19     1.76   898.93     0  12:12        1.75
+  ST2328               JUNCTION     0.14     0.67   896.84     0  12:12        0.65
+  ST2337               JUNCTION     0.72     1.90   889.94     0  13:48        1.90
+  ST2338               JUNCTION     0.04     0.44   895.34     0  12:12        0.44
+  ST2339               JUNCTION     0.11     0.71   894.91     0  12:12        0.70
+  ST2367               JUNCTION     0.07     0.61   893.41     0  12:12        0.61
+  ST2368               JUNCTION     0.10     0.60   893.70     0  12:12        0.60
+  ST2369               JUNCTION     0.67     2.77   887.63     0  12:12        2.76
+  ST2428               JUNCTION     0.44     2.15   889.40     0  12:12        2.13
+  ST2429               JUNCTION     0.23     0.91   894.01     0  12:12        0.90
+  ST2430               JUNCTION     0.79     3.56   889.17     0  12:12        3.54
+  ST2439               JUNCTION     0.82     3.00   887.90     0  12:12        2.98
+  ST2?                 JUNCTION     0.41     2.39   899.12     0  12:01        2.39
+  ST366                JUNCTION     0.28     1.91   897.61     0  12:12        1.90
+  ST634                OUTFALL      0.66     2.13   886.32     0  12:12        2.12
+  ST2336               STORAGE      0.72     1.91   889.96     0  13:48        1.91
+  
+  
+  *******************
+  Node Inflow Summary
+  *******************
+  
+  -------------------------------------------------------------------------------------------------
+                                  Maximum  Maximum                  Lateral       Total        Flow
+                                  Lateral    Total  Time of Max      Inflow      Inflow     Balance
+                                   Inflow   Inflow   Occurrence      Volume      Volume       Error
+  Node                 Type           CFS      CFS  days hr:min    10^6 gal    10^6 gal     Percent
+  -------------------------------------------------------------------------------------------------
+  ST1?                 JUNCTION      7.67     7.67     0  12:12       0.409       0.409       0.004
+  ST2325               JUNCTION      9.24     9.24     0  12:12       0.454       0.454       0.061
+  ST2326               JUNCTION      0.00    20.43     0  12:12           0         1.1       0.004
+  ST2327               JUNCTION     11.30    11.30     0  12:12        0.65        0.65      -0.000
+  ST2328               JUNCTION      0.00    11.30     0  12:12           0        0.65       0.002
+  ST2337               JUNCTION     10.42    10.66     0  12:12       0.176        2.58       0.003
+  ST2338               JUNCTION      3.00     3.00     0  12:12      0.0938      0.0938      -0.002
+  ST2339               JUNCTION      6.46     6.46     0  12:12       0.296       0.296       0.001
+  ST2367               JUNCTION      4.40     4.40     0  12:12       0.152       0.152      -0.001
+  ST2368               JUNCTION      7.61     7.61     0  12:12       0.325       0.325       0.000
+  ST2369               JUNCTION      4.73    40.14     0  12:12       0.195        4.82       0.003
+  ST2428               JUNCTION      0.00    12.56     0  12:09           0        2.93       0.007
+  ST2429               JUNCTION      0.00    14.82     0  12:12           0        1.22       0.008
+  ST2430               JUNCTION      0.00    24.07     0  12:24           0        4.15      -0.014
+  ST2439               JUNCTION      0.00    35.44     0  12:12           0        4.63       0.006
+  ST2?                 JUNCTION      7.73     9.67     0  12:12       0.408       0.769       0.007
+  ST366                JUNCTION     10.90    14.82     0  12:12       0.495        1.22       0.001
+  ST634                OUTFALL       0.00    40.15     0  12:12           0        4.82       0.000
+  ST2336               STORAGE      17.94    48.17     0  12:12        1.35        2.49       0.006
+  
+  
+  **********************
+  Node Surcharge Summary
+  **********************
+  
+  Surcharging occurs when water rises above the top of the highest conduit.
+  ---------------------------------------------------------------------
+                                               Max. Height   Min. Depth
+                                   Hours       Above Crown    Below Rim
+  Node                 Type      Surcharged           Feet         Feet
+  ---------------------------------------------------------------------
+  ST1?                 JUNCTION        1.04          1.190        0.000
+  ST2326               JUNCTION        0.19          2.568        3.142
+  ST2327               JUNCTION        0.27          0.513        2.267
+  ST2337               JUNCTION        2.23          0.154        1.556
+  ST2369               JUNCTION        0.11          0.270        8.170
+  ST2430               JUNCTION        1.01          1.560        7.930
+  ST2?                 JUNCTION        1.09          1.360        0.000
+  ST366                JUNCTION        0.29          0.409        3.001
+  
+  
+  *********************
+  Node Flooding Summary
+  *********************
+  
+  Flooding refers to all water that overflows a node, whether it ponds or not.
+  --------------------------------------------------------------------------
+                                                             Total   Maximum
+                                 Maximum   Time of Max       Flood    Ponded
+                        Hours       Rate    Occurrence      Volume     Depth
+  Node                 Flooded       CFS   days hr:min    10^6 gal      Feet
+  --------------------------------------------------------------------------
+  ST1?                    0.75      5.73      0  12:12       0.049     0.000
+  ST2?                    0.65      5.75      0  12:12       0.040     0.000
+  
+  
+  **********************
+  Storage Volume Summary
+  **********************
+  
+  ------------------------------------------------------------------------------------------------
+                         Average    Avg   Evap  Exfil     Maximum    Max    Time of Max    Maximum
+                          Volume   Pcnt   Pcnt   Pcnt      Volume   Pcnt     Occurrence    Outflow
+  Storage Unit          1000 ft³   Full   Loss   Loss    1000 ft³   Full    days hr:min        CFS
+  ------------------------------------------------------------------------------------------------
+  ST2336                  45.349   12.3    0.0    0.0     131.940   35.9       0  13:48      10.08
+  
+  
+  ***********************
+  Outfall Loading Summary
+  ***********************
+  
+  -----------------------------------------------------------
+                         Flow       Avg       Max       Total
+                         Freq      Flow      Flow      Volume
+  Outfall Node           Pcnt       CFS       CFS    10^6 gal
+  -----------------------------------------------------------
+  ST634                 97.53      6.45     40.15       4.822
+  -----------------------------------------------------------
+  System                97.53      6.45     40.15       4.822
+  
+  
+  ********************
+  Link Flow Summary
+  ********************
+  
+  -----------------------------------------------------------------------------
+                                 Maximum  Time of Max   Maximum    Max/    Max/
+                                  |Flow|   Occurrence   |Veloc|    Full    Full
+  Link                 Type          CFS  days hr:min    ft/sec    Flow   Depth
+  -----------------------------------------------------------------------------
+  334.1                CONDUIT     10.06     0  13:50      5.19    1.42    1.00
+  LINK103              CONDUIT      2.35     0  12:00      3.04    0.72    1.00
+  STP1952              CONDUIT     20.43     0  12:12     11.56    1.36    1.00
+  STP1953              CONDUIT     11.30     0  12:12      8.43    0.39    0.72
+  STP2144              CONDUIT      6.39     0  12:12     12.37    0.63    0.64
+  STP2145              CONDUIT      2.96     0  12:12     13.14    0.14    0.35
+  STP2146              CONDUIT      4.34     0  12:12     12.30    0.28    0.49
+  STP2147              CONDUIT      7.57     0  12:12     16.18    0.59    0.58
+  STP2148              CONDUIT     40.15     0  12:12      8.46    1.31    0.93
+  STP2149              CONDUIT     35.54     0  12:12      7.24    2.56    1.00
+  STP2150              CONDUIT     24.07     0  12:24      7.66    1.66    1.00
+  STP2153              CONDUIT     14.81     0  12:12      9.74    0.68    0.80
+  STP2154              CONDUIT     12.86     0  12:39      6.97    0.59    1.00
+  STP510               CONDUIT      4.79     0  12:01      6.10    1.49    1.00
+  STP511               CONDUIT     14.82     0  12:12     10.43    0.50    0.75
+  STP512               CONDUIT      9.23     0  12:12     16.26    0.36    0.71
+  STP513               CONDUIT     11.30     0  12:12     10.86    0.64    0.79
+  STP514               CONDUIT     10.35     0  13:43      5.30    1.19    0.88
+  INLET                ORIFICE      2.13     0  12:12                          
+  
+  
+  ***************************
+  Flow Classification Summary
+  ***************************
+  
+  -------------------------------------------------------------------------------------
+                      Adjusted    ---------- Fraction of Time in Flow Class ---------- 
+                       /Actual         Up    Down  Sub   Sup   Up    Down  Norm  Inlet 
+  Conduit               Length    Dry  Dry   Dry   Crit  Crit  Crit  Crit  Ltd   Ctrl  
+  -------------------------------------------------------------------------------------
+  334.1                  10.45   0.00  0.02  0.00  0.98  0.00  0.00  0.00  0.00  0.00
+  LINK103                 1.62   0.01  0.00  0.00  0.93  0.01  0.00  0.05  0.91  0.00
+  STP1952                 1.00   0.02  0.00  0.00  0.00  0.00  0.00  0.98  0.00  0.00
+  STP1953                 3.37   0.02  0.00  0.00  0.00  0.96  0.00  0.02  0.96  0.00
+  STP2144                 3.57   0.01  0.00  0.00  0.00  0.00  0.00  0.99  0.00  0.00
+  STP2145                20.88   0.01  0.00  0.00  0.00  0.00  0.00  0.99  0.00  0.00
+  STP2146                10.53   0.01  0.00  0.00  0.00  0.00  0.00  0.99  0.00  0.00
+  STP2147                 3.68   0.01  0.00  0.00  0.00  0.00  0.00  0.99  0.00  0.00
+  STP2148                 1.00   0.01  0.00  0.00  0.05  0.94  0.00  0.00  0.12  0.00
+  STP2149                 1.69   0.01  0.00  0.00  0.99  0.00  0.00  0.00  0.01  0.00
+  STP2150                 1.00   0.01  0.00  0.00  0.03  0.00  0.00  0.96  0.00  0.00
+  STP2153                 1.00   0.02  0.00  0.00  0.14  0.24  0.00  0.60  0.37  0.00
+  STP2154                 1.09   0.01  0.00  0.00  0.03  0.34  0.00  0.63  0.36  0.00
+  STP510                  1.00   0.01  0.00  0.00  0.07  0.92  0.00  0.00  0.04  0.00
+  STP511                 11.89   0.01  0.00  0.00  0.00  0.00  0.00  0.99  0.00  0.00
+  STP512                 13.08   0.01  0.00  0.00  0.00  0.01  0.00  0.98  0.01  0.00
+  STP513                  9.03   0.01  0.00  0.00  0.00  0.00  0.00  0.99  0.00  0.00
+  STP514                  1.00   0.00  0.00  0.00  0.50  0.50  0.00  0.00  0.10  0.00
+  
+  
+  *************************
+  Conduit Surcharge Summary
+  *************************
+  
+  ----------------------------------------------------------------------------
+                                                           Hours        Hours 
+                         --------- Hours Full --------   Above Full   Capacity
+  Conduit                Both Ends  Upstream  Dnstream   Normal Flow   Limited
+  ----------------------------------------------------------------------------
+  334.1                       2.23      2.29      2.23      4.90         2.23
+  LINK103                     1.04      1.04      1.09      0.01         0.01
+  STP1952                     0.16      0.26      0.16      0.30         0.16
+  STP1953                     0.01      0.01      0.26      0.01         0.01
+  STP2148                     0.01      0.11      0.01      0.40         0.01
+  STP2149                     0.11      0.19      0.11      3.21         0.11
+  STP2150                     0.44      1.01      0.44      2.05         0.44
+  STP2153                     0.01      0.01      1.35      0.01         0.01
+  STP2154                     0.23      0.23      1.06      0.01         0.01
+  STP510                      1.02      1.10      1.02      1.19         1.02
+  STP511                      0.01      0.28      0.01      0.01         0.01
+  STP512                      0.01      0.01      0.19      0.01         0.01
+  STP513                      0.01      0.27      0.01      0.01         0.01
+  STP514                      0.01      2.23      0.23      3.88         0.01
+  
+
+  Analysis begun on:  Fri Mar  6 15:02:32 2026
+  Analysis ended on:  Fri Mar  6 15:02:32 2026
+  Total elapsed time: < 1 sec

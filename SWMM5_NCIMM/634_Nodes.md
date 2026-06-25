@@ -1,0 +1,56 @@
+# 💧 634_Nodes.inp
+
+![flow units](https://img.shields.io/badge/flow_units-CMS-blue) ![routing](https://img.shields.io/badge/routing-Dynwave-2ea44f) ![infiltration](https://img.shields.io/badge/infiltration-Green__Ampt-9cf) ![nodes](https://img.shields.io/badge/nodes-634-informational) ![links](https://img.shields.io/badge/links-638-informational) ![subcatchments](https://img.shields.io/badge/subcatchments-1846-informational) ![status](https://img.shields.io/badge/status-1_error-red)
+
+> [!CAUTION]
+> **Run failed** -- 1 fatal error(s) in `634_Nodes.rpt`.<br>ERROR 317: cannot open rainfall data file D:\2017\My2016\SEYMOUR_EXIST_10YR_20161003B.ISDB\JAN01_DN64scale_10yr.dat.
+
+**Title:** Scenario Run :  BASE DNV SWMM 9 Watershed Model.  
+**Location:** `SWMM5_NCIMM/634_Nodes.inp`
+
+## ⚙️ Configuration
+
+| Setting | Value |
+|---|---|
+| Flow units | CMS |
+| Infiltration | GREEN_AMPT |
+| Flow routing | DYNWAVE |
+| Simulation start | 01/03/2001 19:25:00 |
+| Simulation end | 01/05/2001 03:00:00 |
+| Duration | 1 day 7 hr 35 min |
+| Report step | 00:05:00 |
+| Routing step | 0:00:05 s |
+
+## 💧 Hydrology
+
+| Item | Count |
+|---|--:|
+| Subcatchments | 1846 |
+| Total area (ha) | 419.11 |
+| Raingages | 2 |
+| Aquifers | 5320 |
+| Groundwater links | 1846 |
+
+## 🔧 Hydraulics
+
+| Nodes | Count | Links | Count |
+|---|--:|---|--:|
+| Junctions | 627 | Conduits | 631 |
+| Outfalls | 7 | Pumps | 7 |
+| Storage | 0 | Orifices | 0 |
+| Dividers | 0 | Weirs | 0 |
+| **Total nodes** | **634** | Outlets | 0 |
+|  |  | **Total links** | **638** |
+
+> Cross-sections: **631**
+
+## 📈 Forcing & Data
+
+| Item | Count |
+|---|--:|
+| Direct inflows | 3 |
+| Time series | 2 |
+| Curves | 4 |
+
+---
+<sub>📄 Auto-generated 2026-06-24 • summary of `634_Nodes.inp`</sub>

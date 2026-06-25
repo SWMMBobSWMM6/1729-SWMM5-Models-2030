@@ -1,0 +1,406 @@
+;; Autodesk® Storm and Sanitary Analysis 2021 - Version 
+[TITLE]
+2008 Mahoning Township Sewerage Project
+Lawrence County, Pennsylvania
+
+[OPTIONS]
+ FLOW_UNITS            CFS
+ INFILTRATION          HORTON
+ FLOW_ROUTING          DYNWAVE
+ START_DATE            01/25/2008
+ START_TIME            06:00:00
+ REPORT_START_DATE     01/25/2008
+ REPORT_START_TIME     06:00:00
+ END_DATE              01/27/2008
+ END_TIME              06:00:00
+ SWEEP_START           01/01
+ SWEEP_END             12/31
+ DRY_DAYS              0
+ REPORT_STEP           00:05:00
+ WET_STEP              00:05:00
+ DRY_STEP              01:00:00
+ ROUTING_STEP          0:00:05 
+ ALLOW_PONDING         YES
+ INERTIAL_DAMPING      PARTIAL
+ VARIABLE_STEP         0.75
+ LENGTHENING_STEP      0
+ MIN_SURFAREA          0
+ NORMAL_FLOW_LIMITED   SLOPE
+ SKIP_STEADY_STATE     NO
+ FORCE_MAIN_EQUATION   H-W
+ LINK_OFFSETS          DEPTH
+ MIN_SLOPE             0
+
+[JUNCTIONS]
+;;                 Invert     Max.       Init.      Surcharge  Ponded    
+;;Name             Elev.      Depth      Depth      Depth      Area      
+;;------------------------------------------------------------------------
+  MH-C1            1112.00    15         0          0          0         
+  MH-C2            1109.92    21         0          0          0         
+  MH-C3            1107.84    6.16       0          0          0         
+  MH-C4            1105.94    9.06       0          0          0         
+  MH-C5            1091.00    4          0          0          0         
+  MH-C6            1088.99    33.01      0          0          0         
+  MH-C7            1087.41    31.59      0          0          0         
+  MH-R1            832.00     6          0          0          0         
+  MH-R10           938.00     10         0          0          0         
+  MH-R11           940.28     12.36      0          0          0         
+  MH-R12           949.77     12         0          0          0         
+  MH-R13           964.37     12         0          0          0         
+  MH-R14           975.28     12         0          0          0         
+  MH-R15           983.10     12         0          0          0         
+  MH-R16           989.76     12         0          0          0         
+  MH-R17           1002.00    12         0          0          0         
+  MH-R18           1004.00    14         0          0          0         
+  MH-R19           1010.25    12         0          0          0         
+  MH-R1a           842.32     6.5        0          0          0         
+  MH-R2            902.25     8          0          0          0         
+  MH-R20           1028.16    12         0          0          0         
+  MH-R21           1056.27    12         0          0          0         
+  MH-R22           1067.12    16.88      0          0          0         
+  MH-R23           1069.40    19.6       0          0          0         
+  MH-R24           1070.82    16.18      0          0          0         
+  MH-R25           1071.81    15.19      0          0          0         
+  MH-R26           1072.90    17.6       0          0          0         
+  MH-R27           1074.38    20.62      0          0          0         
+  MH-R28           1075.86    20.14      0          0          0         
+  MH-R29           1078.14    14.86      0          0          0         
+  MH-R3            922.25     8          0          0          0         
+  MH-R30           1080.00    10         0          0          0         
+  MH-R4            926.50     8          0          0          0         
+  MH-R5            929.05     11.95      0          0          0         
+  MH-R6            931.33     16.98      0          0          0         
+  MH-R7            933.61     15.89      0          0          0         
+  MH-R8            935.36     12.64      0          0          0         
+  MH-R9            937.16     13         0          0          0         
+;River-Siphon vert.elbow
+  RS-1             819.0      1          0          0          0         
+;River-Siphon horiz.elbow
+  RS-10            779        1          0          20         0         
+;River-Siphon horiz.elbow
+  RS-11            779        1          0          20         0         
+;River-Siphon horiz.elbow
+  RS-12            784        1          0          15         0         
+;River-Siphon horiz.elbow
+  RS-13            785        1          0          14         0         
+;River-Siphon horiz.elbow
+  RS-14            785        1          0          14         0         
+;River-Siphon horiz.elbow
+  RS-15            786        1          0          13         0         
+;River-Siphon horiz.elbow
+  RS-16            787        1          0          12         0         
+;River-Siphon vert.elbow
+  RS-2             811        1          0          0          0         
+;River-Siphon vert.elbow
+  RS-3             808.5      1          0          0          0         
+;River-Siphon vert.elbow
+  RS-4             793        1          0          6          0         
+;River-Siphon vert.elbow
+  RS-5             786        1          0          13         0         
+;River-Siphon vert.elbow
+  RS-6             769        1          0          30         0         
+;River-Siphon vert.elbow
+  RS-7             769        1          0          30         0         
+;River-Siphon vert.elbow
+  RS-8             779        1          0          20         0         
+;River-Siphon elbow
+  RS-9             779        1          0          20         0         
+;River-Siphon convergence chamber
+  SC-River         828.50     7.5        0          0          0         
+;Treatment-Plant Inflow-Manhole
+  TP-Inflow        799        3          0          0          0         
+
+[OUTFALLS]
+;;                 Invert     Outfall    Stage/Table      Tide
+;;Name             Elev.      Type       Time Series      Gate
+;;------------------------------------------------------------
+  MH-315           798.5      NORMAL                      NO
+
+[CONDUITS]
+;;                 Inlet            Outlet                      Manning    Inlet      Outlet     Init.      Maximum
+;;Name             Node             Node             Length     N          Height     Height     Flow       Flow
+;;------------------------------------------------------------------------------------------------------------------------
+  Pipe-326         TP-Inflow        MH-315           33.55      0.013      0          0          0          0         
+  Pipe-336         MH-R30           MH-R29           159.53     0.013      0          0.3        0          0         
+  Pipe-337         MH-R29           MH-R28           400.04     0.013      0          0.3        0          0         
+  Pipe-338         MH-R28           MH-R27           240.09     0.013      0          0.3        0          0         
+  Pipe-339         MH-R27           MH-R26           247.09     0.013      0          0.3        0          0         
+  Pipe-340         MH-R26           MH-R25           158.56     0.013      0          0.3        0          0         
+  Pipe-341         MH-R25           MH-R24           142.14     0.013      0          0.3        0          0         
+  Pipe-342         MH-R24           MH-R23           228.08     0.013      0          0.3        0          0         
+  Pipe-343         MH-R23           MH-R22           400.06     0.013      0          0.3        0          0         
+  Pipe-344         MH-R22           MH-R21           400.00     0.013      0          0.3        0          0         
+  Pipe-345         MH-R21           MH-R20           399.97     0.013      0          0.3        0          0         
+  Pipe-346         MH-R20           MH-R19           400.04     0.013      0          0.3        0          0         
+  Pipe-347         MH-R19           MH-R18           151.58     0.013      0          0.3        0          0         
+  Pipe-348         MH-R18           MH-R17           59.17      0.013      0          0.3        0          0         
+  Pipe-349         MH-R17           MH-R16           400.00     0.013      0          0.3        0          0         
+  Pipe-350         MH-R16           MH-R15           399.99     0.013      0          0.3        0          0         
+  Pipe-351         MH-R15           MH-R14           400.01     0.013      0          0.3        0          0         
+  Pipe-352         MH-R14           MH-R13           401.34     0.013      0          0.3        0          0         
+  Pipe-353         MH-R13           MH-R12           400.01     0.013      0          0.3        0          0         
+  Pipe-354         MH-R12           MH-R11           399.98     0.013      0          0.3        0          0         
+  Pipe-355         MH-R11           MH-R10           400.01     0.013      0          0.3        0          0         
+  Pipe-356         MH-R10           MH-R9            57.97      0.013      0          0.3        0          0         
+  Pipe-357         MH-R9            MH-R8            235.64     0.013      0          0.3        0          0         
+  Pipe-358         MH-R8            MH-R7            293.52     0.013      0          0.3        0          0         
+  Pipe-359         MH-R7            MH-R6            400.01     0.013      0          0.3        0          0         
+  Pipe-360         MH-R6            MH-R5            399.99     0.013      0          0.3        0          0         
+  Pipe-361         MH-R5            MH-R4            399.99     0.013      0          0.3        0          0         
+  Pipe-362         MH-R4            MH-R3            198.70     0.013      0          0.3        0          0         
+  Pipe-363         MH-R3            MH-R2            143.27     0.013      0          0.3        0          0         
+  Pipe-364         MH-R2            MH-R1a           276.26     0.013      0          0.2        0          0         
+  Pipe-365         MH-R1a           MH-R1            41.37      0.013      0          0.2        0          0         
+  Pipe-366         MH-R1            SC-River         41.61      0.013      0          3          0          0         
+  Pipe-394         MH-C7            MH-R30           400.00     0.013      0          0.3        0          0         
+  Pipe-395         MH-C6            MH-C7            259.82     0.013      0          0.3        0          0         
+  Pipe-396         MH-C5            MH-C6            345.58     0.013      0          0.3        0          0         
+  Pipe-397         MH-C4            MH-C5            80.51      0.013      0          0.3        0          0         
+  Pipe-398         MH-C3            MH-C4            324.27     0.013      0          0.3        0          0         
+  Pipe-399         MH-C2            MH-C3            360.39     0.013      0          0.3        0          0         
+  Pipe-400         MH-C1            MH-C2            360.42     0.013      0          0.3        0          0         
+  RS-1             SC-River         RS-1             75.16      0.013      0          0          0          0         
+  RS-10            RS-9             RS-10            400.13     0.013      0          0          0          0         
+  RS-11            RS-10            RS-11            191.18     0.013      0          0          0          0         
+  RS-12            RS-11            RS-12            726.11     0.013      0          0          0          0         
+  RS-13            RS-12            RS-13            93.99      0.013      0          0          0          0         
+  RS-14            RS-13            RS-14            110.33     0.013      0          0          0          0         
+  RS-15            RS-14            RS-15            258.43     0.013      0          0          0          0         
+  RS-16            RS-15            RS-16            58.60      0.013      0          0          0          0         
+  RS-17            RS-16            TP-Inflow        209.79     0.013      0          0          0          0         
+  RS-2             RS-1             RS-2             14.44      0.013      0          0          0          0         
+  RS-3             RS-2             RS-3             27.99      0.013      0          0          0          0         
+  RS-4             RS-3             RS-4             27.86      0.013      0          0          0          0         
+  RS-5             RS-4             RS-5             98.44      0.013      0          0          0          0         
+  RS-6             RS-5             RS-6             62.44      0.013      0          0          0          0         
+  RS-7             RS-6             RS-7             101.17     0.013      0          0          0          0         
+  RS-8             RS-7             RS-8             81.25      0.013      0          0          0          0         
+  RS-9             RS-8             RS-9             87.87      0.013      0          0          0          0         
+
+[XSECTIONS]
+;;Link             Type         Geom1      Geom2      Geom3      Geom4      Barrels      CulvertCode    
+;;------------------------------------------------------------------------------------------------------
+  Pipe-326         CIRCULAR     1          0          1          1          1                    
+  Pipe-336         CIRCULAR     1          0          1          1          1                    
+  Pipe-337         CIRCULAR     1          0          1          1          1                    
+  Pipe-338         CIRCULAR     1          0          1          1          1                    
+  Pipe-339         CIRCULAR     1          0          1          1          1                    
+  Pipe-340         CIRCULAR     1          0          1          1          1                    
+  Pipe-341         CIRCULAR     1          0          1          1          1                    
+  Pipe-342         CIRCULAR     1          0          1          1          1                    
+  Pipe-343         CIRCULAR     1          0          1          1          1                    
+  Pipe-344         CIRCULAR     1          0          1          1          1                    
+  Pipe-345         CIRCULAR     1          0          1          1          1                    
+  Pipe-346         CIRCULAR     1          0          1          1          1                    
+  Pipe-347         CIRCULAR     1          0          1          1          1                    
+  Pipe-348         CIRCULAR     1          0          1          1          1                    
+  Pipe-349         CIRCULAR     1          0          1          1          1                    
+  Pipe-350         CIRCULAR     1          0          1          1          1                    
+  Pipe-351         CIRCULAR     1          0          1          1          1                    
+  Pipe-352         CIRCULAR     1          0          1          1          1                    
+  Pipe-353         CIRCULAR     1          0          1          1          1                    
+  Pipe-354         CIRCULAR     1          0          1          1          1                    
+  Pipe-355         CIRCULAR     1          0          1          1          1                    
+  Pipe-356         CIRCULAR     1          0          1          1          1                    
+  Pipe-357         CIRCULAR     1          0          1          1          1                    
+  Pipe-358         CIRCULAR     1          0          1          1          1                    
+  Pipe-359         CIRCULAR     1          0          1          1          1                    
+  Pipe-360         CIRCULAR     1          0          1          1          1                    
+  Pipe-361         CIRCULAR     1          0          1          1          1                    
+  Pipe-362         CIRCULAR     1          0          1          1          1                    
+  Pipe-363         CIRCULAR     1          0          1          1          1                    
+  Pipe-364         CIRCULAR     1          0          1          1          1                    
+  Pipe-365         CIRCULAR     1          0          1          1          1                    
+  Pipe-366         CIRCULAR     1          0          1          1          1                    
+  Pipe-394         CIRCULAR     0.833333333333333 0          1          1          1                    
+  Pipe-395         CIRCULAR     0.833333333333333 0          1          1          1                    
+  Pipe-396         CIRCULAR     0.833333333333333 0          1          1          1                    
+  Pipe-397         CIRCULAR     0.833333333333333 0          1          1          1                    
+  Pipe-398         CIRCULAR     0.833333333333333 0          1          1          1                    
+  Pipe-399         CIRCULAR     0.833333333333333 0          1          1          1                    
+  Pipe-400         CIRCULAR     0.833333333333333 0          1          1          1                    
+  RS-1             CIRCULAR     1          0          1          1          1                    
+  RS-10            CIRCULAR     1          0          1          1          1                    
+  RS-11            CIRCULAR     1          0          1          1          1                    
+  RS-12            CIRCULAR     1          0          1          1          1                    
+  RS-13            CIRCULAR     1          0          1          1          1                    
+  RS-14            CIRCULAR     1          0          1          1          1                    
+  RS-15            CIRCULAR     1          0          1          1          1                    
+  RS-16            CIRCULAR     1          0          1          1          1                    
+  RS-17            CIRCULAR     1          0          1          1          1                    
+  RS-2             CIRCULAR     1          0          1          1          1                    
+  RS-3             CIRCULAR     1          0          1          1          1                    
+  RS-4             CIRCULAR     1          0          1          1          1                    
+  RS-5             CIRCULAR     1          0          1          1          1                    
+  RS-6             CIRCULAR     1          0          1          1          1                    
+  RS-7             CIRCULAR     1          0          1          1          1                    
+  RS-8             CIRCULAR     1          0          1          1          1                    
+  RS-9             CIRCULAR     1          0          1          1          1                    
+
+[LOSSES]
+;;Link             Inlet      Outlet     Average    Flap Gate
+;;-------------------------------------------------------------
+  Pipe-326         0.9        0.5        0          NO        
+  Pipe-336         0.9        0.5        0          NO        
+  Pipe-337         0.9        0.5        0          NO        
+  Pipe-338         0.9        0.5        0          NO        
+  Pipe-339         0.9        0.5        0          NO        
+  Pipe-340         0.9        0.5        0          NO        
+  Pipe-341         0.9        0.5        0          NO        
+  Pipe-342         0.9        0.5        0          NO        
+  Pipe-343         0.9        0.5        0          NO        
+  Pipe-344         0.9        0.5        0          NO        
+  Pipe-345         0.9        0.5        0          NO        
+  Pipe-346         0.9        0.5        0          NO        
+  Pipe-347         0.9        0.5        0          NO        
+  Pipe-348         0.9        0.5        0          NO        
+  Pipe-349         0.9        0.5        0          NO        
+  Pipe-350         0.9        0.5        0          NO        
+  Pipe-351         0.9        0.5        0          NO        
+  Pipe-352         0.9        0.5        0          NO        
+  Pipe-353         0.9        0.5        0          NO        
+  Pipe-354         0.9        0.5        0          NO        
+  Pipe-355         0.9        0.5        0          NO        
+  Pipe-356         0.9        0.5        0          NO        
+  Pipe-357         0.9        0.5        0          NO        
+  Pipe-358         0.9        0.5        0          NO        
+  Pipe-359         0.9        0.5        0          NO        
+  Pipe-360         0.9        0.5        0          NO        
+  Pipe-361         0.9        0.5        0          NO        
+  Pipe-362         0.9        0.5        0          NO        
+  Pipe-363         0.9        0.5        0          NO        
+  Pipe-364         0.9        0.5        0          NO        
+  Pipe-365         0.9        0.5        0          NO        
+  Pipe-366         0.9        0.5        0          NO        
+  Pipe-394         0.9        0.5        0          NO        
+  Pipe-395         0.9        0.5        0          NO        
+  Pipe-396         0.9        0.5        0          NO        
+  Pipe-397         0.9        0.5        0          NO        
+  Pipe-398         0.9        0.5        0          NO        
+  Pipe-399         0.9        0.5        0          NO        
+  Pipe-400         0.9        0.5        0          NO        
+  RS-1             0.9        0.5        0          NO        
+  RS-10            0.5        0.5        0          NO        
+  RS-11            0.5        0.5        0          NO        
+  RS-12            0.5        0.5        0          NO        
+  RS-13            0.5        0.5        0          NO        
+  RS-14            0.5        0.5        0          NO        
+  RS-15            0.5        0.5        0          NO        
+  RS-16            0.5        0.5        0          NO        
+  RS-17            0.5        1.0        0          NO        
+  RS-2             0.5        0.5        0          NO        
+  RS-3             0.5        0.5        0          NO        
+  RS-4             0.5        0.5        0          NO        
+  RS-5             0.5        0.5        0          NO        
+  RS-6             0.5        0.5        0          NO        
+  RS-7             0.5        0.5        0          NO        
+  RS-8             0.5        0.5        0          NO        
+  RS-9             0.5        0.5        0          NO        
+
+[DWF]
+;;                                Average    Time      
+;;Node           Parameter        Value      Patterns  
+;;-------------- ---------------- ---------- ----------
+MH-C6            FLOW             0.703989036 "San-D-4"
+MH-R10           FLOW             0.000386807 "San-D-4"
+MH-R11           FLOW             0.000386807 "San-D-4"
+MH-R13           FLOW             0.000386807 "San-D-4"
+MH-R14           FLOW             0.000386807 "San-D-4"
+MH-R16           FLOW             0.000773614 "San-D-4"
+MH-R17           FLOW             0.001160421 "San-D-4"
+MH-R2            FLOW             0.000386807 "San-D-4"
+MH-R20           FLOW             0.001934035 "San-D-4"
+MH-R26           FLOW             0.000386807 "San-D-4"
+MH-R30           FLOW             0.000386807 "San-D-4"
+MH-R5            FLOW             0.000386807 "San-D-4"
+MH-R9            FLOW             0.000386807 "San-D-4"
+
+[CURVES]
+;;Name             Type       X-Value    Y-Value   
+;;-------------------------------------------------
+;Trial Pump
+  PC-1             Pump1      50         0.1       
+  PC-1                        100        0.2       
+  PC-1                        150        0.4       
+  PC-1                        200        0.6       
+  PC-1                        250        0.8       
+  PC-1                        350        1         
+
+[PATTERNS]
+;;Name             Type       Multipliers
+;;----------------------------------------------------------------------
+  San-D-4          DAILY      4     4     4     4     4     4     4    
+
+[REPORT]
+ INPUT     YES
+ CONTROLS  YES
+
+[TAGS]
+
+[MAP]
+ DIMENSIONS      1224357.56       623381.16        1226751.31       635409.90       
+ UNITS           Feet
+
+[COORDINATES]
+;;Node             X-Coord          Y-Coord
+  MH-C1            1225081.28       634863.14       
+  MH-C2            1225438.86       634817.97       
+  MH-C3            1225796.41       634772.82       
+  MH-C4            1225808.13       634448.76       
+  MH-C5            1225811.06       634368.30       
+  MH-C6            1225823.67       634022.95       
+  MH-C7            1226077.67       633968.26       
+  MH-R1            1225249.30       626131.01       
+  MH-R10           1225854.44       628030.50       
+  MH-R11           1225853.55       628430.51       
+  MH-R12           1225852.68       628830.49       
+  MH-R13           1225851.80       629230.50       
+  MH-R14           1225850.94       629631.84       
+  MH-R15           1225850.05       630031.85       
+  MH-R16           1225849.19       630431.84       
+  MH-R17           1225849.21       630831.84       
+  MH-R18           1225809.90       630876.06       
+  MH-R19           1225854.14       631021.04       
+  MH-R1a           1225268.82       626167.49       
+  MH-R2            1225268.81       626443.75       
+  MH-R20           1226020.23       631384.97       
+  MH-R21           1226182.82       631750.40       
+  MH-R22           1226350.22       632113.69       
+  MH-R23           1226517.69       632477.01       
+  MH-R24           1226613.15       632684.15       
+  MH-R25           1226642.50       632823.23       
+  MH-R26           1226635.68       632981.64       
+  MH-R27           1226595.03       633225.36       
+  MH-R28           1226557.61       633462.52       
+  MH-R29           1226498.38       633858.15       
+  MH-R3            1225268.83       626587.02       
+  MH-R30           1226474.82       634015.93       
+  MH-R4            1225268.89       626785.72       
+  MH-R5            1225269.00       627185.71       
+  MH-R6            1225268.94       627585.70       
+  MH-R7            1225269.03       627985.71       
+  MH-R8            1225561.69       628008.10       
+  MH-R9            1225796.64       628026.07       
+  RS-1             1225194.71       626027.79       
+  RS-10            1224665.26       625312.53       
+  RS-11            1224575.00       625143.99       
+  RS-12            1224466.37       624426.05       
+  RS-13            1224482.46       624333.45       
+  RS-14            1224566.65       624262.15       
+  RS-15            1224811.44       624179.29       
+  RS-16            1224837.24       624126.68       
+  RS-2             1225187.82       626015.10       
+  RS-3             1225174.74       625990.35       
+  RS-4             1225161.56       625965.81       
+  RS-5             1225114.77       625879.20       
+  RS-6             1225084.97       625824.33       
+  RS-7             1225036.72       625735.40       
+  RS-8             1224998.88       625663.50       
+  RS-9             1224957.23       625586.13       
+  SC-River         1225229.56       626094.38       
+  TP-Inflow        1224770.09       623927.92       
+  MH-315           1224740.54       623943.80       
+
+[VERTICES]
+;;Link             X-Coord          Y-Coord
+

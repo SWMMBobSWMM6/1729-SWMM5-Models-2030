@@ -1,0 +1,189 @@
+
+  EPA STORM WATER MANAGEMENT MODEL - VERSION 5.2 (Build 5.2.4)
+  ------------------------------------------------------------
+
+  'EXTRAN USER''S MANUAL EXAMPLE 3' ; 
+  'BASIC PIPE SYSTEM WITH SUMP ORIFICE AT JUNCTION 82309 FROM FIG 3-3' ; 
+  
+  ****************
+  Analysis Options
+  ****************
+  Flow Units ............... CFS
+  Process Models:
+    Rainfall/Runoff ........ NO
+    RDII ................... NO
+    Snowmelt ............... NO
+    Groundwater ............ NO
+    Flow Routing ........... YES
+    Ponding Allowed ........ NO
+    Water Quality .......... NO
+  Flow Routing Method ...... DYNWAVE
+  Surcharge Method ......... EXTRAN
+  Starting Date ............ 01/01/2002 00:00:00
+  Ending Date .............. 01/01/2002 08:00:00
+  Antecedent Dry Days ...... 0.0
+  Report Time Step ......... 00:00:30
+  Routing Time Step ........ 30.00 sec
+  Variable Time Step ....... YES
+  Maximum Trials ........... 8
+  Number of Threads ........ 1
+  Head Tolerance ........... 0.005000 ft
+  
+  
+  **************************        Volume        Volume
+  Flow Routing Continuity        acre-feet      10^6 gal
+  **************************     ---------     ---------
+  Dry Weather Inflow .......         0.000         0.000
+  Wet Weather Inflow .......         0.000         0.000
+  Groundwater Inflow .......         0.000         0.000
+  RDII Inflow ..............         0.000         0.000
+  External Inflow ..........        12.388         4.037
+  External Outflow .........        12.337         4.020
+  Flooding Loss ............         0.000         0.000
+  Evaporation Loss .........         0.000         0.000
+  Exfiltration Loss ........         0.000         0.000
+  Initial Stored Volume ....         0.000         0.000
+  Final Stored Volume ......         0.069         0.023
+  Continuity Error (%) .....        -0.149
+  
+  
+  ***************************
+  Time-Step Critical Elements
+  ***************************
+  Link 1630 (44.66%)
+  
+  
+  ********************************
+  Highest Flow Instability Indexes
+  ********************************
+  All links are stable.
+  
+  
+  *********************************
+  Most Frequent Nonconverging Nodes
+  *********************************
+  Convergence obtained at all time steps.
+  
+  
+  *************************
+  Routing Time Step Summary
+  *************************
+  Minimum Time Step           :    23.01 sec
+  Average Time Step           :    27.20 sec
+  Maximum Time Step           :    30.00 sec
+  % of Time in Steady State   :     0.00
+  Average Iterations per Step :     2.01
+  % of Steps Not Converging   :     0.00
+  Time Step Frequencies       :
+     30.000 - 13.228 sec      :   100.00 %
+     13.228 -  5.833 sec      :     0.00 %
+      5.833 -  2.572 sec      :     0.00 %
+      2.572 -  1.134 sec      :     0.00 %
+      1.134 -  0.500 sec      :     0.00 %
+  
+  
+  ******************
+  Node Depth Summary
+  ******************
+  
+  ---------------------------------------------------------------------------------
+                                 Average  Maximum  Maximum  Time of Max    Reported
+                                   Depth    Depth      HGL   Occurrence   Max Depth
+  Node                 Type         Feet     Feet     Feet  days hr:min        Feet
+  ---------------------------------------------------------------------------------
+  81009                JUNCTION     1.22     2.85   131.05     0  00:32        2.85
+  81309                JUNCTION     1.42     3.03   120.53     0  00:57        3.03
+  10309                JUNCTION     1.14     1.99   103.59     0  01:44        1.99
+  15009                JUNCTION     1.31     2.64   114.14     0  01:22        2.64
+  16009                JUNCTION     1.18     2.12   104.12     0  01:36        2.12
+  10208                OUTFALL      0.97     1.78    91.68     0  01:44        1.78
+  
+  
+  *******************
+  Node Inflow Summary
+  *******************
+  
+  -------------------------------------------------------------------------------------------------
+                                  Maximum  Maximum                  Lateral       Total        Flow
+                                  Lateral    Total  Time of Max      Inflow      Inflow     Balance
+                                   Inflow   Inflow   Occurrence      Volume      Volume       Error
+  Node                 Type           CFS      CFS  days hr:min    10^6 gal    10^6 gal     Percent
+  -------------------------------------------------------------------------------------------------
+  81009                JUNCTION     50.00    50.00     0  00:15        4.04        4.04      -0.504
+  81309                JUNCTION      0.00    53.72     0  00:40           0        4.06       0.292
+  10309                JUNCTION      0.00    50.78     0  01:34           0        4.02       0.113
+  15009                JUNCTION      0.00    51.46     0  01:08           0        4.05      -0.028
+  16009                JUNCTION      0.00    50.97     0  01:26           0        4.05       0.542
+  10208                OUTFALL       0.00    50.60     0  01:44           0        4.02       0.000
+  
+  
+  **********************
+  Node Surcharge Summary
+  **********************
+  
+  No nodes were surcharged.
+  
+  
+  *********************
+  Node Flooding Summary
+  *********************
+  
+  No nodes were flooded.
+  
+  
+  ***********************
+  Outfall Loading Summary
+  ***********************
+  
+  -----------------------------------------------------------
+                         Flow       Avg       Max       Total
+                         Freq      Flow      Flow      Volume
+  Outfall Node           Pcnt       CFS       CFS    10^6 gal
+  -----------------------------------------------------------
+  10208                 93.20     22.65     50.60       4.020
+  -----------------------------------------------------------
+  System                93.20     22.65     50.60       4.020
+  
+  
+  ********************
+  Link Flow Summary
+  ********************
+  
+  -----------------------------------------------------------------------------
+                                 Maximum  Time of Max   Maximum    Max/    Max/
+                                  |Flow|   Occurrence   |Veloc|    Full    Full
+  Link                 Type          CFS  days hr:min    ft/sec    Flow   Depth
+  -----------------------------------------------------------------------------
+  8100                 CONDUIT     53.72     0  00:40      6.47    0.69    0.63
+  8130                 CONDUIT     51.46     0  01:08      5.57    0.73    0.62
+  1030                 CONDUIT     50.60     0  01:44      4.74    0.02    0.21
+  1570                 CONDUIT     50.97     0  01:26      5.19    0.41    0.43
+  1630                 CONDUIT     50.78     0  01:34      4.89    0.02    0.23
+  
+  
+  ***************************
+  Flow Classification Summary
+  ***************************
+  
+  -------------------------------------------------------------------------------------
+                      Adjusted    ---------- Fraction of Time in Flow Class ---------- 
+                       /Actual         Up    Down  Sub   Sup   Up    Down  Norm  Inlet 
+  Conduit               Length    Dry  Dry   Dry   Crit  Crit  Crit  Crit  Ltd   Ctrl  
+  -------------------------------------------------------------------------------------
+  8100                    1.00   0.00  0.00  0.00  0.97  0.03  0.00  0.00  0.92  0.00
+  8130                    1.00   0.00  0.00  0.00  0.98  0.02  0.00  0.00  0.60  0.00
+  1030                    1.00   0.05  0.00  0.00  0.95  0.00  0.00  0.00  0.00  0.00
+  1570                    1.00   0.00  0.00  0.00  0.98  0.02  0.00  0.00  0.56  0.00
+  1630                    1.00   0.00  0.00  0.00  0.96  0.04  0.00  0.00  0.49  0.00
+  
+  
+  *************************
+  Conduit Surcharge Summary
+  *************************
+  
+  No conduits were surcharged.
+  
+
+  Analysis begun on:  Fri Mar  6 15:34:11 2026
+  Analysis ended on:  Fri Mar  6 15:34:11 2026
+  Total elapsed time: < 1 sec

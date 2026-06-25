@@ -1,0 +1,41 @@
+# 💧 1year.inp
+
+![flow units](https://img.shields.io/badge/flow_units-CFS-blue) ![routing](https://img.shields.io/badge/routing-Dynwave-2ea44f) ![infiltration](https://img.shields.io/badge/infiltration-Horton-9cf) ![nodes](https://img.shields.io/badge/nodes-1075-informational) ![links](https://img.shields.io/badge/links-1137-informational) ![subcatchments](https://img.shields.io/badge/subcatchments-0-informational) ![status](https://img.shields.io/badge/status-no_report-lightgrey)
+
+> [!NOTE]
+> No `1year.rpt` found next to this model -- it may not have been run yet.
+
+**Title:** Hartford MDC CSO Project  
+**Location:** `XPSWMM/1year.inp`
+
+## ⚙️ Configuration
+
+| Setting | Value |
+|---|---|
+| Flow units | CFS |
+| Infiltration | HORTON |
+| Flow routing | DYNWAVE |
+| Routing step | 00:00:15 s |
+
+## 🔧 Hydraulics
+
+| Nodes | Count | Links | Count |
+|---|--:|---|--:|
+| Junctions | 860 | Conduits | 1024 |
+| Outfalls | 0 | Pumps | 1 |
+| Storage | 215 | Orifices | 14 |
+| Dividers | 0 | Weirs | 98 |
+| **Total nodes** | **1075** | Outlets | 0 |
+|  |  | **Total links** | **1137** |
+
+> Cross-sections: **1136**
+
+## 📈 Forcing & Data
+
+| Item | Count |
+|---|--:|
+| Direct inflows | 176 |
+| Curves | 1 |
+
+---
+<sub>📄 Auto-generated 2026-06-24 • summary of `1year.inp`</sub>

@@ -1,0 +1,300 @@
+[TITLE]
+;;Project Title/Notes
+As explained in Normann, 1985 (also known as HDS-5), the discharge through a culvert is controlled by either inlet or outlet conditions.
+Inlet control means that flow through the culvert is limited by culvert entrance characteristics.
+Outlet control means that flow through the culvert is limited by friction between the flowing water and the culvert barrel.
+The term "outlet control" is a bit of a misnomer because friction along the entire length of the culvert is as important as the actual outlet condition (the tailwater depth).
+Inlet control most often occurs for short, smooth, or greatly downward sloping culverts. Outlet control governs for long, rough, or slightly sloping culverts.
+The type of control also depends on the flowrate.
+For a given culvert installation, inlet control may govern for a certain range of flows while outlet control may govern for other flowrates.
+If the flowrate is large enough, water could go over the road (or dam).
+In this case, the calculation automatically computes the amount of water going over the road and through each culvert, as well as the headwater depth.
+
+[OPTIONS]
+;;Option             Value
+FLOW_UNITS           CFS
+INFILTRATION         HORTON
+FLOW_ROUTING         DYNWAVE
+LINK_OFFSETS         DEPTH
+MIN_SLOPE            0
+ALLOW_PONDING        NO
+SKIP_STEADY_STATE    NO
+
+START_DATE           01/01/2010
+START_TIME           00:00:00
+REPORT_START_DATE    01/01/2010
+REPORT_START_TIME    00:00:00
+END_DATE             01/01/2010
+END_TIME             05:00:00
+SWEEP_START          01/01
+SWEEP_END            12/31
+DRY_DAYS             0
+REPORT_STEP          00:01:00
+WET_STEP             00:15:00
+DRY_STEP             01:00:00
+ROUTING_STEP         0:00:30 
+RULE_STEP            00:00:00
+
+INERTIAL_DAMPING     NONE
+NORMAL_FLOW_LIMITED  BOTH
+FORCE_MAIN_EQUATION  H-W
+VARIABLE_STEP        0.75
+LENGTHENING_STEP     5
+MIN_SURFAREA         12.557
+MAX_TRIALS           8
+HEAD_TOLERANCE       0.005
+SYS_FLOW_TOL         5
+LAT_FLOW_TOL         5
+MINIMUM_STEP         0.5
+THREADS              1
+
+[EVAPORATION]
+;;Data Source    Parameters
+;;-------------- ----------------
+CONSTANT         0.0
+DRY_ONLY         NO
+
+[JUNCTIONS]
+;;Name           Elevation  MaxDepth   InitDepth  SurDepth   Aponded   
+;;-------------- ---------- ---------- ---------- ---------- ----------
+in1              10.1       10         0          0          0         
+in2              10.1       5          0          0          0         
+in3              10.1       5          0          0          0         
+in4              10.1       5          0          0          0         
+in5              10.1       5          0          0          0         
+up1              10         10         0          0          0         
+up2              10         10         0          0          0         
+up3              10         10         0          0          0         
+up4              10         10         0          0          0         
+up5              10         10         0          0          0         
+dn1              9.5        10         0          0          0         
+dn2              9.5        10         0          0          0         
+dn3              9.5        10         0          0          0         
+dn4              9.5        10         0          0          0         
+dn5              9.5        10         0          0          0         
+
+[OUTFALLS]
+;;Name           Elevation  Type       Stage Data       Gated    Route To        
+;;-------------- ---------- ---------- ---------------- -------- ----------------
+out1             9          FREE                        NO                       
+out2             9          FREE                        NO                       
+out3             9          FREE                        NO                       
+out4             9          FREE                        NO                       
+out5             9          FREE                        NO                       
+
+[CONDUITS]
+;;Name           From Node        To Node          Length     Roughness  InOffset   OutOffset  InitFlow   MaxFlow   
+;;-------------- ---------------- ---------------- ---------- ---------- ---------- ---------- ---------- ----------
+upstream1        in1              up1              500        0.01       0          0          0          0         
+upstream2        in2              up2              500        0.01       0          0          0          0         
+upstream3        in3              up3              500        0.01       0          0          0          0         
+upstream4        in4              up4              500        0.01       0          0          0          0         
+upstream5        in5              up5              500        0.01       0          0          0          0         
+culvert1         up1              dn1              100        0.01       0          0          0          0         
+culvert2         up2              dn2              100        0.02       0          0          0          0         
+culvert3         up3              dn3              100        0.01       0          0          0          0         
+culvert4         up4              dn4              100        0.01       0          0          0          0         
+culvert5         up5              dn5              100        0.01       0          0          0          0         
+downstream1      dn1              out1             500        0.01       0          0          0          0         
+downstream2      dn2              out2             500        0.01       0          0          0          0         
+downstream3      dn3              out3             500        0.01       0          0          0          0         
+downstream4      dn4              out4             500        0.01       0          0          0          0         
+downstream5      dn5              out5             500        0.01       0          0          0          0         
+
+[XSECTIONS]
+;;Link           Shape        Geom1            Geom2      Geom3      Geom4      Barrels    Culvert   
+;;-------------- ------------ ---------------- ---------- ---------- ---------- ---------- ----------
+upstream1        TRIANGULAR   4                4          0          0          1                    
+upstream2        TRIANGULAR   4                4          0          0          1                    
+upstream3        TRIANGULAR   4                4          0          0          1                    
+upstream4        TRIANGULAR   4                4          0          0          1                    
+upstream5        TRIANGULAR   4                4          0          0          1                    
+culvert1         CIRCULAR     2                0          0          0          1          1         
+culvert2         CIRCULAR     2                0          0          0          1          1         
+culvert3         CIRCULAR     2                0          0          0          1          1         
+culvert4         CIRCULAR     2                0          0          0          1          1         
+culvert5         CIRCULAR     2                0          0          0          1          1         
+downstream1      TRIANGULAR   4                4          0          0          1                    
+downstream2      TRIANGULAR   4                4          0          0          1                    
+downstream3      TRIANGULAR   4                4          0          0          1                    
+downstream4      TRIANGULAR   4                4          0          0          1                    
+downstream5      TRIANGULAR   4                4          0          0          1                    
+
+[LOSSES]
+;;Link           Kentry     Kexit      Kavg       Flap Gate  Seepage   
+;;-------------- ---------- ---------- ---------- ---------- ----------
+culvert1         0.5        1          0          NO         0         
+culvert2         0.5        1          0          NO         0         
+culvert4         0          1          0          NO         0         
+culvert5         0.5        0          0          NO         0         
+
+[CONTROLS]
+;;Control Rules
+; //   FORM   K       M     C        Y
+;//------------------------------------
+;    {0.0, 0.0,    0.0,  0.0,    0.00},
+;
+;    //Circular concrete
+;    {1.0, 0.0098, 2.00, 0.0398, 0.67},  //Square edge w/headwall
+;    {1.0, 0.0018, 2.00, 0.0292, 0.74},  //Groove end w/headwall
+;    {1.0, 0.0045, 2.00, 0.0317, 0.69},  //Groove end projecting
+;
+;    //Circular Corrugated Metal Pipe
+;    {1.0, 0.0078, 2.00, 0.0379, 0.69},  //Headwall
+;    {1.0, 0.0210, 1.33, 0.0463, 0.75},  //Mitered to slope
+;    {1.0, 0.0340, 1.50, 0.0553, 0.54},  //Projecting
+;
+;    //Circular Pipe, Beveled Ring Entrance
+;    {1.0, 0.0018, 2.50, 0.0300, 0.74},  //Beveled ring, 45 deg bevels
+;    {1.0, 0.0018, 2.50, 0.0243, 0.83},  //Beveled ring, 33.7 deg bevels
+;
+;    //Rectangular Box with Flared Wingwalls
+;    {1.0, 0.026, 1.0,   0.0347, 0.81},  //30-75 deg. wingwall flares
+;    {1.0, 0.061, 0.75,  0.0400, 0.80},  //90 or 15 deg. wingwall flares
+;    {1.0, 0.061, 0.75,  0.0423, 0.82},  //0 deg. wingwall flares (striaght sides)
+;
+;    //Rectanglar Box with Flared Wingwalls & Top Edge Bevel
+;    {2.0, 0.510, 0.667, 0.0309, 0.80},  //45 deg. flare; 0.43D top edge bevel
+;    {2.0, 0.486, 0.667, 0.0249, 0.83},  //18-33.7 deg flare; 0.083D top edge bevel
+;
+;    //Rectangular Box; 90-deg Headwall; Chamfered or Beveled Inlet Edges
+;    {2.0, 0.515, 0.667, 0.0375, 0.79},  //chamfered 3/4-in
+;    {2.0, 0.495, 0.667, 0.0314, 0.82},  //beveled 1/2-in/ft at 45 deg (1:1)
+;    {2.0, 0.486, 0.667, 0.0252, 0.865}, //beveled 1-in/ft at 33.7 deg (1:1.5)
+;
+;   //Rectangular Box; Skewed Headwall; Chamfered or Beveled Inlet Edges
+;    {2.0, 0.545, 0.667, 0.04505,0.73},  //3/4" chamfered edge, 45 deg skewed headwall
+;    {2.0, 0.533, 0.667, 0.0425, 0.705}, //3/4" chamfered edge, 30 deg skewed headwall
+;    {2.0, 0.522, 0.667, 0.0402, 0.68},  //3/4" chamfered edge, 15 deg skewed headwall
+;    {2.0, 0.498, 0.667, 0.0327, 0.75},  //45 deg beveled edge, 10-45 deg skewed headwall
+;
+;    //Rectangular box, Non-offset Flared Wingwalls; 3/4" Chamfer at Top of Inlet
+;    {2.0, 0.497, 0.667, 0.0339, 0.803}, //45 deg (1:1) wingwall flare
+;    {2.0, 0.493, 0.667, 0.0361, 0.806}, //18.4 deg (3:1) wingwall flare
+;    {2.0, 0.495, 0.667, 0.0386, 0.71},  //18.4 deg (3:1) wingwall flare, 30 deg inlet skew
+;
+;    //Rectangular box, Offset Flared Wingwalls, Beveled Edge at Inlet Top
+;    {2.0, 0.497, 0.667, 0.0302, 0.835},  //45 deg (1:1) flare, 0.042D top edge bevel
+;    {2.0, 0.495, 0.667, 0.0252, 0.881},  //33.7 deg (1.5:1) flare, 0.083D top edge bevel
+;    {2.0, 0.493, 0.667, 0.0227, 0.887},  //18.4 deg (3:1) flare, 0.083D top edge bevel
+;
+;    // Corrugated Metal Box
+;    {1.0, 0.0083, 2.00, 0.0379, 0.69},  //90 deg headwall
+;    {1.0, 0.0145, 1.75, 0.0419, 0.64},  //Thick wall projecting
+;    {1.0, 0.0340, 1.50, 0.0496, 0.57},  //Thin wall projecting
+;
+;    // Horizontal Ellipse Concrete
+;    {1.0, 0.0100, 2.00, 0.0398, 0.67},  //Square edge w/headwall
+;    {1.0, 0.0018, 2.50, 0.0292, 0.74},  //Grooved end w/headwall
+;    {1.0, 0.0045, 2.00, 0.0317, 0.69},  //Grooved end projecting
+;
+;    // Vertical Ellipse Concrete
+;    {1.0, 0.0100, 2.00, 0.0398, 0.67},  //Square edge w/headwall
+;    {1.0, 0.0018, 2.50, 0.0292, 0.74},  //Grooved end w/headwall
+;    {1.0, 0.0095, 2.00, 0.0317, 0.69},  //Grooved end projecting
+;
+;    // Pipe Arch, 18" Corner Radius, Corrugated Metal
+;    {1.0, 0.0083, 2.00, 0.0379, 0.69},  //90 deg headwall
+;    {1.0, 0.0300, 1.00, 0.0463, 0.75},  //Mitered to slope
+;    {1.0, 0.0340, 1.50, 0.0496, 0.57},  //Projecting
+;
+;    // Pipe Arch, 18" Corner Radius, Corrugated Metal
+;    {1.0, 0.0300, 1.50, 0.0496, 0.57},  //Projecting
+;    {1.0, 0.0088, 2.00, 0.0368, 0.68},  //No bevels
+;    {1.0, 0.0030, 2.00, 0.0269, 0.77},  //33.7 deg bevels
+;
+;    // Pipe Arch, 31" Corner Radius, Corrugated Metal
+;    {1.0, 0.0300, 1.50, 0.0496, 0.57},  //Projecting
+;    {1.0, 0.0088, 2.00, 0.0368, 0.68},  //No bevels
+;    {1.0, 0.0030, 2.00, 0.0269, 0.77},  //33.7 deg. bevels
+;
+;    // Arch, Corrugated Metal
+;    {1.0, 0.0083, 2.00, 0.0379, 0.69},  //90 deg headwall
+;   {1.0, 0.0300, 1.00, 0.0463, 0.75},  //Mitered to slope
+;    {1.0, 0.0340, 1.50, 0.0496, 0.57},  //Thin wall projecting
+;
+;    // Circular Culvert
+;    {2.0, 0.534, 0.555, 0.0196, 0.90},  //Smooth tapered inlet throat
+;    {2.0, 0.519, 0.640, 0.0210, 0.90},  //Rough tapered inlet throat
+;
+;    // Elliptical Inlet Face
+;    {2.0, 0.536, 0.622, 0.0368, 0.83},  //Tapered inlet, beveled edges
+;    {2.0, 0.5035,0.719, 0.0478, 0.80},  //Tapered inlet, square edges
+;    {2.0, 0.547, 0.800, 0.0598, 0.75},  //Tapered inlet, thin edge projecting
+;
+;    // Rectangular
+;
+;    // Rectangular Concrete
+;    {2.0, 0.560, 0.667, 0.0446, 0.85},  //Side tapered, less favorable edges
+;    {2.0, 0.560, 0.667, 0.0378, 0.87},  //Side tapered, more favorable edges;
+;
+;    // Rectangular Concrete
+;    {2.0, 0.500, 0.667, 0.0446, 0.65}, //Slope tapered, less favorable edges
+;    {2.0, 0.500, 0.667, 0.0378, 0.71}  //Slope tapered, more favorable edges
+
+
+
+
+
+
+
+
+[INFLOWS]
+;;Node           Constituent      Time Series      Type     Mfactor  Sfactor  Baseline Pattern
+;;-------------- ---------------- ---------------- -------- -------- -------- -------- --------
+in1              FLOW             Inflow           FLOW     1.0      2                
+in2              FLOW             Inflow           FLOW     1.0      2                
+in3              FLOW             Inflow           FLOW     1.0      2                
+in4              FLOW             Inflow           FLOW     1.0      2                
+in5              FLOW             Inflow           FLOW     1.0      2                
+
+[TIMESERIES]
+;;Name           Date       Time       Value     
+;;-------------- ---------- ---------- ----------
+Inflow           01/01/2010 0:0        0         
+Inflow                      1:0        10        
+Inflow                      2          10        
+Inflow                      3          10        
+
+[REPORT]
+;;Reporting Options
+INPUT      YES
+CONTROLS   YES
+SUBCATCHMENTS ALL
+NODES ALL
+LINKS ALL
+
+[TAGS]
+
+[MAP]
+DIMENSIONS -196.269 7596.119 8882.836 13854.627
+Units      None
+
+[COORDINATES]
+;;Node           X-Coord            Y-Coord           
+;;-------------- ------------------ ------------------
+in1              216.418            7880.597          
+in2              216.418            7980.597          
+in3              216.418            8080.597          
+in4              216.418            8180.597          
+in5              216.418            8280.597          
+up1              2902.985           7910.448          
+up2              2902.985           8010.448          
+up3              2902.985           8110.448          
+up4              2902.985           8210.448          
+up5              2902.985           8310.448          
+dn1              5350.746           7925.373          
+dn2              5350.746           8025.373          
+dn3              5350.746           8125.373          
+dn4              5350.746           8225.373          
+dn5              5350.746           8325.373          
+out1             8470.149           7970.149          
+out2             8470.149           8070.149          
+out3             8470.149           8170.149          
+out4             8470.149           8270.149          
+out5             8470.149           8370.149          
+
+[VERTICES]
+;;Link           X-Coord            Y-Coord           
+;;-------------- ------------------ ------------------
+

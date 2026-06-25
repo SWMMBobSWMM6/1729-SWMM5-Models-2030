@@ -1,0 +1,25 @@
+# ─────────────────────────────────────────────────────────────
+#  1729-SWMM5-Models — .gitignore
+#  Keeps large, regenerable SWMM5 binary outputs ON DISK but OUT
+#  of git history, so the repo stays small. Re-running a model
+#  recreates these files.
+# ─────────────────────────────────────────────────────────────
+
+# SWMM5 binary results files (~8.8 GB across the repo) — regenerable
+*.out
+*.OUT
+
+# Hot-start / routing interface files (binary, regenerable)
+*.hsf
+*.HSF
+*.rdii
+*.RDII
+
+# Scratch / temp run artifacts
+*.tmp
+~*
+
+# OS / editor cruft
+.DS_Store
+Thumbs.db
+desktop.ini

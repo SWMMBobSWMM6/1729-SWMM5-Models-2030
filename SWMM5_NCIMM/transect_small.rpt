@@ -1,0 +1,211 @@
+
+  EPA STORM WATER MANAGEMENT MODEL - VERSION 5.2 (Build 5.2.4)
+  ------------------------------------------------------------
+
+  WARNING 04: minimum elevation drop used for Conduit PURG_L4
+  WARNING 02: maximum depth increased for Node DS_DELLROAD
+  WARNING 02: maximum depth increased for Node PURGATORY_7
+  WARNING 02: maximum depth increased for Node PURGATORY_8
+  WARNING 02: maximum depth increased for Node PURG_US_DELL
+  
+  ****************
+  Analysis Options
+  ****************
+  Flow Units ............... CFS
+  Process Models:
+    Rainfall/Runoff ........ NO
+    RDII ................... NO
+    Snowmelt ............... NO
+    Groundwater ............ NO
+    Flow Routing ........... YES
+    Ponding Allowed ........ NO
+    Water Quality .......... NO
+  Flow Routing Method ...... DYNWAVE
+  Surcharge Method ......... EXTRAN
+  Starting Date ............ 05/01/2003 00:00:00
+  Ending Date .............. 05/02/2003 00:00:00
+  Antecedent Dry Days ...... 5.0
+  Report Time Step ......... 00:15:00
+  Routing Time Step ........ 10.00 sec
+  Variable Time Step ....... YES
+  Maximum Trials ........... 8
+  Number of Threads ........ 1
+  Head Tolerance ........... 0.005000 ft
+  
+  
+  **************************        Volume        Volume
+  Flow Routing Continuity        acre-feet      10^6 gal
+  **************************     ---------     ---------
+  Dry Weather Inflow .......         0.000         0.000
+  Wet Weather Inflow .......         0.000         0.000
+  Groundwater Inflow .......         0.000         0.000
+  RDII Inflow ..............         0.000         0.000
+  External Inflow ..........      1983.393       646.318
+  External Outflow .........      1368.669       446.001
+  Flooding Loss ............         0.000         0.000
+  Evaporation Loss .........         0.206         0.067
+  Exfiltration Loss ........         0.000         0.000
+  Initial Stored Volume ....         0.000         0.000
+  Final Stored Volume ......       446.748       145.580
+  Continuity Error (%) .....         8.459
+  
+  
+  *************************
+  Highest Continuity Errors
+  *************************
+  Node PURG_US_DELL (17.00%)
+  Node PURGATORY_7 (6.70%)
+  
+  
+  ***************************
+  Time-Step Critical Elements
+  ***************************
+  Link PURG_DELLROAD_CULVERT (99.88%)
+  
+  
+  ********************************
+  Highest Flow Instability Indexes
+  ********************************
+  All links are stable.
+  
+  
+  *********************************
+  Most Frequent Nonconverging Nodes
+  *********************************
+  Convergence obtained at all time steps.
+  
+  
+  *************************
+  Routing Time Step Summary
+  *************************
+  Minimum Time Step           :     1.55 sec
+  Average Time Step           :     2.12 sec
+  Maximum Time Step           :    10.00 sec
+  % of Time in Steady State   :     0.00
+  Average Iterations per Step :     2.00
+  % of Steps Not Converging   :     0.00
+  Time Step Frequencies       :
+     10.000 -  5.493 sec      :     0.19 %
+      5.493 -  3.017 sec      :     2.98 %
+      3.017 -  1.657 sec      :    96.83 %
+      1.657 -  0.910 sec      :     0.00 %
+      0.910 -  0.500 sec      :     0.00 %
+  
+  
+  ******************
+  Node Depth Summary
+  ******************
+  
+  ---------------------------------------------------------------------------------
+                                 Average  Maximum  Maximum  Time of Max    Reported
+                                   Depth    Depth      HGL   Occurrence   Max Depth
+  Node                 Type         Feet     Feet     Feet  days hr:min        Feet
+  ---------------------------------------------------------------------------------
+  DS_DELLROAD          JUNCTION     4.57     5.05   884.17     1  00:00        5.05
+  PURGATORY_7          JUNCTION    42.94    54.36   934.51     1  00:00       54.36
+  PURGATORY_8          JUNCTION     4.64     5.10   884.22     1  00:00        5.10
+  PURG_CHANNEL2        JUNCTION    41.44    52.85   934.51     1  00:00       52.85
+  PURG_US_DELL         JUNCTION    42.77    54.19   934.51     1  00:00       54.19
+  JCT-90               OUTFALL      1.44     1.55   880.55     1  00:00        1.55
+  
+  
+  *******************
+  Node Inflow Summary
+  *******************
+  
+  -------------------------------------------------------------------------------------------------
+                                  Maximum  Maximum                  Lateral       Total        Flow
+                                  Lateral    Total  Time of Max      Inflow      Inflow     Balance
+                                   Inflow   Inflow   Occurrence      Volume      Volume       Error
+  Node                 Type           CFS      CFS  days hr:min    10^6 gal    10^6 gal     Percent
+  -------------------------------------------------------------------------------------------------
+  DS_DELLROAD          JUNCTION      0.00   859.32     1  00:00           0         449       0.654
+  PURGATORY_7          JUNCTION      0.00   884.52     0  23:59           0         483       7.180
+  PURGATORY_8          JUNCTION      0.00   859.73     1  00:00           0         450       0.293
+  PURG_CHANNEL2        JUNCTION   1000.00  1000.00     0  00:00         646         646      11.148
+  PURG_US_DELL         JUNCTION      0.00  1073.01     0  00:03           0         581      20.486
+  JCT-90               OUTFALL       0.00   858.32     1  00:00           0         446       0.000
+  
+  
+  **********************
+  Node Surcharge Summary
+  **********************
+  
+  Surcharging occurs when water rises above the top of the highest conduit.
+  ---------------------------------------------------------------------
+                                               Max. Height   Min. Depth
+                                   Hours       Above Crown    Below Rim
+  Node                 Type      Surcharged           Feet         Feet
+  ---------------------------------------------------------------------
+  PURG_CHANNEL2        JUNCTION        0.58          0.355        9.175
+  
+  
+  *********************
+  Node Flooding Summary
+  *********************
+  
+  No nodes were flooded.
+  
+  
+  ***********************
+  Outfall Loading Summary
+  ***********************
+  
+  -----------------------------------------------------------
+                         Flow       Avg       Max       Total
+                         Freq      Flow      Flow      Volume
+  Outfall Node           Pcnt       CFS       CFS    10^6 gal
+  -----------------------------------------------------------
+  JCT-90                99.78    718.72    858.32     445.968
+  -----------------------------------------------------------
+  System                99.78    718.72    858.32     445.968
+  
+  
+  ********************
+  Link Flow Summary
+  ********************
+  
+  -----------------------------------------------------------------------------
+                                 Maximum  Time of Max   Maximum    Max/    Max/
+                                  |Flow|   Occurrence   |Veloc|    Full    Full
+  Link                 Type          CFS  days hr:min    ft/sec    Flow   Depth
+  -----------------------------------------------------------------------------
+  CDT-521              CHANNEL    884.52     0  23:59      4.39    0.00    0.88
+  CDT-523              CHANNEL    858.32     1  00:00      1.34    0.00    0.05
+  CDT-559              CHANNEL   1073.01     0  00:03     17.62    0.00    1.00
+  PURG_DELLROAD_CULVERT CONDUIT    859.73     1  00:00     36.62    2.70    0.96
+  PURG_L4              CHANNEL    859.32     1  00:00      1.59    0.02    0.08
+  
+  
+  ***************************
+  Flow Classification Summary
+  ***************************
+  
+  -------------------------------------------------------------------------------------
+                      Adjusted    ---------- Fraction of Time in Flow Class ---------- 
+                       /Actual         Up    Down  Sub   Sup   Up    Down  Norm  Inlet 
+  Conduit               Length    Dry  Dry   Dry   Crit  Crit  Crit  Crit  Ltd   Ctrl  
+  -------------------------------------------------------------------------------------
+  CDT-521                 4.10   0.00  0.00  0.00  1.00  0.00  0.00  0.00  0.00  0.00
+  CDT-523                 1.00   0.01  0.00  0.00  0.99  0.00  0.00  0.00  0.00  0.00
+  CDT-559                 1.00   0.00  0.00  0.00  1.00  0.00  0.00  0.00  0.00  0.00
+  PURG_DELLROAD_CULVERT    1.17   0.00  0.00  0.00  0.01  0.99  0.00  0.00  0.00  0.00
+  PURG_L4                 3.68   0.00  0.00  0.00  1.00  0.00  0.00  0.00  0.00  0.00
+  
+  
+  *************************
+  Conduit Surcharge Summary
+  *************************
+  
+  ----------------------------------------------------------------------------
+                                                           Hours        Hours 
+                         --------- Hours Full --------   Above Full   Capacity
+  Conduit                Both Ends  Upstream  Dnstream   Normal Flow   Limited
+  ----------------------------------------------------------------------------
+  CDT-559                     0.58      0.58      2.75      0.01         0.01
+  PURG_DELLROAD_CULVERT        0.01     23.87      0.01     23.27         0.01
+  
+
+  Analysis begun on:  Fri Mar  6 15:34:10 2026
+  Analysis ended on:  Fri Mar  6 15:34:11 2026
+  Total elapsed time: 00:00:01

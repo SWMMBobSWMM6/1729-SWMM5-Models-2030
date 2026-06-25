@@ -1,0 +1,46 @@
+# 💧 Session49_sea_level_pump_model_290_H_Elements.inp
+
+![flow units](https://img.shields.io/badge/flow_units-GPM-blue) ![routing](https://img.shields.io/badge/routing-Dynwave-2ea44f) ![infiltration](https://img.shields.io/badge/infiltration-Horton-9cf) ![nodes](https://img.shields.io/badge/nodes-145-informational) ![links](https://img.shields.io/badge/links-143-informational) ![subcatchments](https://img.shields.io/badge/subcatchments-0-informational) ![status](https://img.shields.io/badge/status-1_error-red)
+
+> [!CAUTION]
+> **Run failed** -- 1 fatal error(s) in `Session49_sea_level_pump_model_290_H_Elements.rpt`.<br>ERROR 333: incompatible data found in hot start interface file.
+
+**Title:** Scenario Run :  BASE  
+**Location:** `NCIMM_Training/Session_4_50_Examples/Session49_sea_level_pump_model_290_H_Elements.inp`
+
+## ⚙️ Configuration
+
+| Setting | Value |
+|---|---|
+| Flow units | GPM |
+| Infiltration | HORTON |
+| Flow routing | DYNWAVE |
+| Simulation start | 01/01/2002 00:00:00 |
+| Simulation end | 01/02/2002 06:00:00 |
+| Duration | 1 day 6 hr |
+| Report step | 00:01:00 |
+| Routing step | 0:00:01 s |
+
+## 🔧 Hydraulics
+
+| Nodes | Count | Links | Count |
+|---|--:|---|--:|
+| Junctions | 133 | Conduits | 132 |
+| Outfalls | 1 | Pumps | 11 |
+| Storage | 11 | Orifices | 0 |
+| Dividers | 0 | Weirs | 0 |
+| **Total nodes** | **145** | Outlets | 0 |
+|  |  | **Total links** | **143** |
+
+> Cross-sections: **132**
+
+## 📈 Forcing & Data
+
+| Item | Count |
+|---|--:|
+| Direct inflows | 11 |
+| Dry-weather inflows | 11 |
+| Curves | 6 |
+
+---
+<sub>📄 Auto-generated 2026-06-24 • summary of `Session49_sea_level_pump_model_290_H_Elements.inp`</sub>

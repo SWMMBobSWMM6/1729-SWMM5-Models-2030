@@ -1,0 +1,56 @@
+# 💧 3815_Nodes.inp
+
+![flow units](https://img.shields.io/badge/flow_units-CFS-blue) ![routing](https://img.shields.io/badge/routing-Dynwave-2ea44f) ![infiltration](https://img.shields.io/badge/infiltration-Horton-9cf) ![nodes](https://img.shields.io/badge/nodes-3857-informational) ![links](https://img.shields.io/badge/links-3885-informational) ![subcatchments](https://img.shields.io/badge/subcatchments-65089-informational) ![status](https://img.shields.io/badge/status-100_errors-red)
+
+> [!CAUTION]
+> **Run failed** -- 100 fatal error(s) in `3815_Nodes.rpt`.<br>ERROR 209: undefined object 1 at line 52 of [SUBCATCHMENT] section:; ERROR 209: undefined object 1 at line 53 of [SUBCATCHMENT] section:
+
+**Title:** 2015 Flat  
+**Location:** `SWMM5_NCIMM/3815_Nodes.inp`
+
+## ⚙️ Configuration
+
+| Setting | Value |
+|---|---|
+| Flow units | CFS |
+| Infiltration | HORTON |
+| Flow routing | DYNWAVE |
+| Simulation start | 12/11/2018 00:00:00 |
+| Simulation end | 12/11/2018 00:00:00 |
+| Duration | 0 min |
+| Report step | 00:15:00 |
+| Routing step | 0:00:30 s |
+
+## 💧 Hydrology
+
+| Item | Count |
+|---|--:|
+| Subcatchments | 65089 |
+| Total area (ac) | 30296.51 |
+| Raingages | 0 |
+
+## 🔧 Hydraulics
+
+| Nodes | Count | Links | Count |
+|---|--:|---|--:|
+| Junctions | 3815 | Conduits | 3846 |
+| Outfalls | 3 | Pumps | 39 |
+| Storage | 39 | Orifices | 0 |
+| Dividers | 0 | Weirs | 0 |
+| **Total nodes** | **3857** | Outlets | 0 |
+|  |  | **Total links** | **3885** |
+
+> Cross-sections: **3846**
+
+## 🎛️ Control Rules
+
+Real-time control rules: **78**
+
+## 📈 Forcing & Data
+
+| Item | Count |
+|---|--:|
+| Curves | 78 |
+
+---
+<sub>📄 Auto-generated 2026-06-24 • summary of `3815_Nodes.inp`</sub>

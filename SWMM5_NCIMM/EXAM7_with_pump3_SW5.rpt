@@ -1,0 +1,251 @@
+
+  EPA STORM WATER MANAGEMENT MODEL - VERSION 5.2 (Build 5.2.4)
+  ------------------------------------------------------------
+
+                  EXTRAN USER''S MANUAL EXAMPLE 7 with Type 3 Pump Station 
+                  Type 3 Pump Station AT JUNCTION 82309 FROM FIGURE 3-7 
+  
+  ****************
+  Analysis Options
+  ****************
+  Flow Units ............... CFS
+  Process Models:
+    Rainfall/Runoff ........ NO
+    RDII ................... NO
+    Snowmelt ............... NO
+    Groundwater ............ NO
+    Flow Routing ........... YES
+    Ponding Allowed ........ NO
+    Water Quality .......... NO
+  Flow Routing Method ...... DYNWAVE
+  Surcharge Method ......... EXTRAN
+  Starting Date ............ 01/01/1988 00:00:00
+  Ending Date .............. 01/01/1988 08:00:00
+  Antecedent Dry Days ...... 0.0
+  Report Time Step ......... 00:03:20
+  Routing Time Step ........ 20.00 sec
+  Variable Time Step ....... YES
+  Maximum Trials ........... 8
+  Number of Threads ........ 1
+  Head Tolerance ........... 0.005000 ft
+  
+  
+  **************************        Volume        Volume
+  Flow Routing Continuity        acre-feet      10^6 gal
+  **************************     ---------     ---------
+  Dry Weather Inflow .......         0.000         0.000
+  Wet Weather Inflow .......         0.000         0.000
+  Groundwater Inflow .......         0.000         0.000
+  RDII Inflow ..............         0.000         0.000
+  External Inflow ..........        33.468        10.906
+  External Outflow .........        29.947         9.759
+  Flooding Loss ............         3.419         1.114
+  Evaporation Loss .........         0.000         0.000
+  Exfiltration Loss ........         0.000         0.000
+  Initial Stored Volume ....         0.000         0.000
+  Final Stored Volume ......         0.124         0.040
+  Continuity Error (%) .....        -0.067
+  
+  
+  *************************
+  Highest Continuity Errors
+  *************************
+  Node 80608 (1.54%)
+  
+  
+  ***************************
+  Time-Step Critical Elements
+  ***************************
+  Link 1630 (31.94%)
+  
+  
+  ********************************
+  Highest Flow Instability Indexes
+  ********************************
+  Link 8060 (2)
+  Link 8040 (1)
+  
+  
+  *********************************
+  Most Frequent Nonconverging Nodes
+  *********************************
+  Node 10208 (3.50%)
+  Node 82309 (3.02%)
+  Node 80608 (1.99%)
+  Node 80408 (0.62%)
+  
+  
+  *************************
+  Routing Time Step Summary
+  *************************
+  Minimum Time Step           :    17.88 sec
+  Average Time Step           :    19.74 sec
+  Maximum Time Step           :    20.00 sec
+  % of Time in Steady State   :     0.00
+  Average Iterations per Step :     2.36
+  % of Steps Not Converging   :     3.50
+  Time Step Frequencies       :
+     20.000 -  9.564 sec      :   100.00 %
+      9.564 -  4.573 sec      :     0.00 %
+      4.573 -  2.187 sec      :     0.00 %
+      2.187 -  1.046 sec      :     0.00 %
+      1.046 -  0.500 sec      :     0.00 %
+  
+  
+  ******************
+  Node Depth Summary
+  ******************
+  
+  ---------------------------------------------------------------------------------
+                                 Average  Maximum  Maximum  Time of Max    Reported
+                                   Depth    Depth      HGL   Occurrence   Max Depth
+  Node                 Type         Feet     Feet     Feet  days hr:min        Feet
+  ---------------------------------------------------------------------------------
+  10309                JUNCTION     1.49     2.72   104.32     0  01:45        2.72
+  15009                JUNCTION     1.40     3.02   114.52     0  01:22        3.02
+  16009                JUNCTION     1.55     2.87   104.87     0  01:41        2.87
+  16109                JUNCTION     1.22     2.51   105.31     0  01:46        2.51
+  80408                JUNCTION     4.22    13.40   138.00     0  00:38       12.75
+  80608                JUNCTION     5.70    16.70   135.00     0  00:38       16.70
+  81009                JUNCTION     1.13     2.85   131.05     0  00:32        2.84
+  81309                JUNCTION     1.27     2.96   120.46     0  00:52        2.96
+  82309                JUNCTION     8.00    22.31   134.61     0  00:38       21.88
+  10208                OUTFALL      1.32     2.50    92.40     0  01:46        2.50
+  
+  
+  *******************
+  Node Inflow Summary
+  *******************
+  
+  -------------------------------------------------------------------------------------------------
+                                  Maximum  Maximum                  Lateral       Total        Flow
+                                  Lateral    Total  Time of Max      Inflow      Inflow     Balance
+                                   Inflow   Inflow   Occurrence      Volume      Volume       Error
+  Node                 Type           CFS      CFS  days hr:min    10^6 gal    10^6 gal     Percent
+  -------------------------------------------------------------------------------------------------
+  10309                JUNCTION      0.00   118.67     0  01:38           0        9.77       0.097
+  15009                JUNCTION      0.00    72.01     0  01:03           0        5.78       0.158
+  16009                JUNCTION      0.00   118.72     0  01:34           0        9.79       0.208
+  16109                JUNCTION      0.00    68.31     0  01:46           0        5.77       0.271
+  80408                JUNCTION     45.00    45.00     0  00:15        3.64        3.64      -0.350
+  80608                JUNCTION      0.00    46.16     0  00:21           0        3.64       1.569
+  81009                JUNCTION     50.00    50.00     0  00:15        4.04        4.04      -0.508
+  81309                JUNCTION      0.00    53.63     0  00:40           0        4.06       0.267
+  82309                JUNCTION     40.00    83.80     0  00:32        3.23        5.71      -0.956
+  10208                OUTFALL       0.00   118.62     0  01:46           0        9.76       0.000
+  
+  
+  **********************
+  Node Surcharge Summary
+  **********************
+  
+  Surcharging occurs when water rises above the top of the highest conduit.
+  ---------------------------------------------------------------------
+                                               Max. Height   Min. Depth
+                                   Hours       Above Crown    Below Rim
+  Node                 Type      Surcharged           Feet         Feet
+  ---------------------------------------------------------------------
+  80408                JUNCTION        2.47          9.400        0.000
+  80608                JUNCTION        2.61         12.700        0.000
+  82309                JUNCTION        2.76         16.107       20.393
+  
+  
+  *********************
+  Node Flooding Summary
+  *********************
+  
+  Flooding refers to all water that overflows a node, whether it ponds or not.
+  --------------------------------------------------------------------------
+                                                             Total   Maximum
+                                 Maximum   Time of Max       Flood    Ponded
+                        Hours       Rate    Occurrence      Volume     Depth
+  Node                 Flooded       CFS   days hr:min    10^6 gal      Feet
+  --------------------------------------------------------------------------
+  80408                   0.01     19.56      0  00:38       0.004     0.000
+  80608                   2.42     21.91      0  00:39       1.110     0.000
+  
+  
+  ***********************
+  Outfall Loading Summary
+  ***********************
+  
+  -----------------------------------------------------------
+                         Flow       Avg       Max       Total
+                         Freq      Flow      Flow      Volume
+  Outfall Node           Pcnt       CFS       CFS    10^6 gal
+  -----------------------------------------------------------
+  10208                 94.45     48.84    118.62       9.758
+  -----------------------------------------------------------
+  System                94.45     48.84    118.62       9.758
+  
+  
+  ********************
+  Link Flow Summary
+  ********************
+  
+  -----------------------------------------------------------------------------
+                                 Maximum  Time of Max   Maximum    Max/    Max/
+                                  |Flow|   Occurrence   |Veloc|    Full    Full
+  Link                 Type          CFS  days hr:min    ft/sec    Flow   Depth
+  -----------------------------------------------------------------------------
+  8040                 CONDUIT     46.16     0  00:21      7.19    0.63    1.00
+  8060                 CONDUIT     43.80     0  00:32      4.75    0.82    1.00
+  8100                 CONDUIT     53.63     0  00:40      6.48    0.69    0.62
+  8130                 CONDUIT     52.71     0  01:03      5.70    0.75    0.65
+  1030                 CONDUIT    118.62     0  01:46      5.81    0.04    0.29
+  1570                 CONDUIT     69.91     0  01:26      5.41    0.57    0.53
+  1600                 CONDUIT     49.01     0  01:53      5.65    0.33    0.45
+  1630                 CONDUIT    118.67     0  01:38      6.19    0.05    0.31
+  1602                 CONDUIT     68.31     0  01:46      4.33    1.57    0.75
+  PUMP@16109-15009     PUMP        20.00     0  00:37              1.00
+  
+  
+  ***************************
+  Flow Classification Summary
+  ***************************
+  
+  -------------------------------------------------------------------------------------
+                      Adjusted    ---------- Fraction of Time in Flow Class ---------- 
+                       /Actual         Up    Down  Sub   Sup   Up    Down  Norm  Inlet 
+  Conduit               Length    Dry  Dry   Dry   Crit  Crit  Crit  Crit  Ltd   Ctrl  
+  -------------------------------------------------------------------------------------
+  8040                    1.00   0.00  0.00  0.00  0.97  0.03  0.00  0.00  0.63  0.00
+  8060                    1.00   0.00  0.00  0.00  0.45  0.00  0.00  0.55  0.09  0.00
+  8100                    1.00   0.00  0.00  0.00  0.97  0.03  0.00  0.00  0.92  0.00
+  8130                    1.00   0.00  0.00  0.00  0.97  0.03  0.00  0.00  0.87  0.00
+  1030                    1.00   0.03  0.00  0.00  0.97  0.00  0.00  0.00  0.00  0.00
+  1570                    1.00   0.00  0.00  0.00  1.00  0.00  0.00  0.00  0.62  0.00
+  1600                    1.00   0.00  0.00  0.00  0.97  0.03  0.00  0.00  0.48  0.00
+  1630                    1.00   0.00  0.00  0.00  0.96  0.04  0.00  0.00  0.44  0.00
+  1602                    1.00   0.00  0.00  0.00  1.00  0.00  0.00  0.00  0.00  0.00
+  
+  
+  *************************
+  Conduit Surcharge Summary
+  *************************
+  
+  ----------------------------------------------------------------------------
+                                                           Hours        Hours 
+                         --------- Hours Full --------   Above Full   Capacity
+  Conduit                Both Ends  Upstream  Dnstream   Normal Flow   Limited
+  ----------------------------------------------------------------------------
+  8040                        2.47      2.47      2.61      0.01         0.01
+  8060                        2.61      2.61      2.76      0.01         0.01
+  1602                        0.01      3.01      0.01      2.79         0.01
+  
+  
+  ***************
+  Pumping Summary
+  ***************
+  
+  ---------------------------------------------------------------------------------------------------------
+                                                  Min       Avg       Max     Total     Power    % Time Off
+                        Percent   Number of      Flow      Flow      Flow    Volume     Usage    Pump Curve
+  Pump                 Utilized   Start-Ups       CFS       CFS       CFS  10^6 gal     Kw-hr    Low   High
+  ---------------------------------------------------------------------------------------------------------
+  PUMP@16109-15009        41.59           1      0.00     19.31     20.00     1.730     49.89    0.0    0.3
+  
+
+  Analysis begun on:  Fri Mar  6 14:32:05 2026
+  Analysis ended on:  Fri Mar  6 14:32:05 2026
+  Total elapsed time: < 1 sec

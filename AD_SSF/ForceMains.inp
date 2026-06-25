@@ -1,0 +1,121 @@
+;; Autodesk® Storm and Sanitary Analysis 2021 - Version 
+[TITLE]
+
+[OPTIONS]
+ FLOW_UNITS            MGD
+ INFILTRATION          HORTON
+ FLOW_ROUTING          DYNWAVE
+ START_DATE            09/04/2008
+ START_TIME            00:00:00
+ REPORT_START_DATE     09/04/2008
+ REPORT_START_TIME     00:00:00
+ END_DATE              09/05/2008
+ END_TIME              00:00:00
+ SWEEP_START           01/01
+ SWEEP_END             12/31
+ DRY_DAYS              0
+ REPORT_STEP           00:01:00
+ WET_STEP              00:05:00
+ DRY_STEP              01:00:00
+ ROUTING_STEP          0:01:00 
+ ALLOW_PONDING         YES
+ INERTIAL_DAMPING      PARTIAL
+ VARIABLE_STEP         0.75
+ LENGTHENING_STEP      0
+ MIN_SURFAREA          0
+ NORMAL_FLOW_LIMITED   SLOPE
+ SKIP_STEADY_STATE     NO
+ FORCE_MAIN_EQUATION   H-W
+ LINK_OFFSETS          DEPTH
+ MIN_SLOPE             0
+
+[JUNCTIONS]
+;;                 Invert     Max.       Init.      Surcharge  Ponded    
+;;Name             Elev.      Depth      Depth      Depth      Area      
+;;------------------------------------------------------------------------
+  Jun-1            20         2          0          28         0         
+  Jun-2            20         2          0          58         0         
+  Jun-3            8          2          0          70         0         
+  Jun-4            8          2          0          40         0         
+  Jun-5            9          1          0          40         0         
+
+[OUTFALLS]
+;;                 Invert     Outfall    Stage/Table      Tide
+;;Name             Elev.      Type       Time Series      Gate
+;;------------------------------------------------------------
+  Jun-6            15         FREE                        NO
+
+[CONDUITS]
+;;                 Inlet            Outlet                      Manning    Inlet      Outlet     Init.      Maximum
+;;Name             Node             Node             Length     N          Height     Height     Flow       Flow
+;;------------------------------------------------------------------------------------------------------------------------
+  Con-1            Jun-2            Jun-5            16300      0.015      0          0          0          0         
+  Con-2            Jun-4            Jun-5            2000       0.015      0          0          0          0         
+  Con-3            Jun-5            Jun-6            17000      0.009      0          0          0          0         
+
+[PUMPS]
+;;                 Inlet            Outlet           Pump             Initial
+;;Name             Node             Node             Curve            Status 
+;;---------------------------------------------------------------------------
+  Pump-1           Jun-1            Jun-2            PC-2             ON     0        0       
+  Pump-2           Jun-3            Jun-4            PC-1             ON     0        0       
+
+[XSECTIONS]
+;;Link             Type         Geom1      Geom2      Geom3      Geom4      Barrels      CulvertCode    
+;;------------------------------------------------------------------------------------------------------
+  Con-1            FORCE_MAIN   0.5        125        1          1          1                    
+  Con-2            FORCE_MAIN   1          130        1          1          1                    
+  Con-3            FORCE_MAIN   1          130        1          1          1                    
+
+[LOSSES]
+;;Link             Inlet      Outlet     Average    Flap Gate
+;;-------------------------------------------------------------
+  Con-2            0          0          0          YES       
+  Con-3            0          0          0          YES       
+
+[INFLOWS]
+;;                                                 Param    Units    Scale    Baseline Baseline
+;;Node           Parameter        Time Series      Type     Factor   Factor   Value    Pattern 
+;;-------------- ---------------- ---------------- -------- -------- -------- -------- --------
+Jun-1            FLOW             ""               FLOW     1.0      1.0      0.051   
+Jun-3            FLOW             ""               FLOW     1.0      1.0      1.5     
+
+[CURVES]
+;;Name             Type       X-Value    Y-Value   
+;;-------------------------------------------------
+  PC-1             Pump3      5.00       0.57584404
+  PC-1                        8.25       0.52202684
+  PC-1                        13.50      0.41977416
+  PC-1                        17.50      0.31752148
+  PC-1                        19.50      0.20988708
+  PC-1                        22.50      0.1076344 
+
+  PC-2             Pump3      5.00       0.57584404
+  PC-2                        8.25       0.52202684
+  PC-2                        13.50      0.41977416
+  PC-2                        17.50      0.31752148
+  PC-2                        19.50      0.20988708
+  PC-2                        22.50      0.1076344 
+
+[REPORT]
+ INPUT     YES
+ CONTROLS  YES
+
+[TAGS]
+
+[MAP]
+ DIMENSIONS      -206.61          2192.75          8350.92          9092.17         
+ UNITS           Feet
+
+[COORDINATES]
+;;Node             X-Coord          Y-Coord
+  Jun-1            1511.17          8778.56         
+  Jun-2            1860.28          8511.56         
+  Jun-3            182.37           4677.01         
+  Jun-4            591.26           4383.03         
+  Jun-5            1864.87          4375.58         
+  Jun-6            7961.94          2506.36         
+
+[VERTICES]
+;;Link             X-Coord          Y-Coord
+

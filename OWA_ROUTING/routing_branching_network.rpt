@@ -1,0 +1,196 @@
+
+  EPA STORM WATER MANAGEMENT MODEL - VERSION 5.2 (Build 5.2.4)
+  ------------------------------------------------------------
+
+  TEST - BRANCHING NETWORK 
+  Two branches merging into one trunk 
+  
+  ****************
+  Analysis Options
+  ****************
+  Flow Units ............... CFS
+  Process Models:
+    Rainfall/Runoff ........ NO
+    RDII ................... NO
+    Snowmelt ............... NO
+    Groundwater ............ NO
+    Flow Routing ........... YES
+    Ponding Allowed ........ NO
+    Water Quality .......... NO
+  Flow Routing Method ...... DYNWAVE
+  Surcharge Method ......... EXTRAN
+  Starting Date ............ 02/02/2002 00:00:00
+  Ending Date .............. 02/02/2002 08:00:00
+  Antecedent Dry Days ...... 0.0
+  Report Time Step ......... 00:01:00
+  Routing Time Step ........ 5.00 sec
+  Variable Time Step ....... NO
+  Maximum Trials ........... 8
+  Number of Threads ........ 1
+  Head Tolerance ........... 0.005000 ft
+  
+  
+  **************************        Volume        Volume
+  Flow Routing Continuity        acre-feet      10^6 gal
+  **************************     ---------     ---------
+  Dry Weather Inflow .......         0.000         0.000
+  Wet Weather Inflow .......         0.000         0.000
+  Groundwater Inflow .......         0.000         0.000
+  RDII Inflow ..............         0.000         0.000
+  External Inflow ..........        20.867         6.800
+  External Outflow .........        20.867         6.800
+  Flooding Loss ............         0.000         0.000
+  Evaporation Loss .........         0.000         0.000
+  Exfiltration Loss ........         0.000         0.000
+  Initial Stored Volume ....         0.000         0.000
+  Final Stored Volume ......         0.000         0.000
+  Continuity Error (%) .....        -0.000
+  
+  
+  ********************************
+  Highest Flow Instability Indexes
+  ********************************
+  All links are stable.
+  
+  
+  *********************************
+  Most Frequent Nonconverging Nodes
+  *********************************
+  Node B1 (0.05%)
+  Node Out (0.05%)
+  Node B2 (0.02%)
+  
+  
+  *************************
+  Routing Time Step Summary
+  *************************
+  Minimum Time Step           :     5.00 sec
+  Average Time Step           :     5.00 sec
+  Maximum Time Step           :     5.00 sec
+  % of Time in Steady State   :     0.00
+  Average Iterations per Step :     2.04
+  % of Steps Not Converging   :     0.05
+  
+  
+  ******************
+  Node Depth Summary
+  ******************
+  
+  ---------------------------------------------------------------------------------
+                                 Average  Maximum  Maximum  Time of Max    Reported
+                                   Depth    Depth      HGL   Occurrence   Max Depth
+  Node                 Type         Feet     Feet     Feet  days hr:min        Feet
+  ---------------------------------------------------------------------------------
+  A1                   JUNCTION     0.57     2.13    16.13     0  00:15        2.12
+  A2                   JUNCTION     0.76     2.48    15.48     0  00:31        2.48
+  B1                   JUNCTION     1.47     4.23    18.23     0  00:30        4.19
+  B2                   JUNCTION     1.27     3.58    16.58     0  00:30        3.57
+  M1                   JUNCTION     1.03     2.98    14.98     0  00:32        2.98
+  M2                   JUNCTION     1.04     3.00    14.00     0  00:33        3.00
+  Out                  OUTFALL      0.99     2.84    12.84     0  00:35        2.84
+  
+  
+  *******************
+  Node Inflow Summary
+  *******************
+  
+  -------------------------------------------------------------------------------------------------
+                                  Maximum  Maximum                  Lateral       Total        Flow
+                                  Lateral    Total  Time of Max      Inflow      Inflow     Balance
+                                   Inflow   Inflow   Occurrence      Volume      Volume       Error
+  Node                 Type           CFS      CFS  days hr:min    10^6 gal    10^6 gal     Percent
+  -------------------------------------------------------------------------------------------------
+  A1                   JUNCTION     40.00    40.00     0  00:15        2.15        2.15      -0.019
+  A2                   JUNCTION      0.00    40.14     0  00:15           0        2.16       0.002
+  B1                   JUNCTION     60.00    60.00     0  00:30        4.65        4.65      -0.006
+  B2                   JUNCTION      0.00    60.04     0  00:30           0        4.65       0.001
+  M1                   JUNCTION      0.00   100.02     0  00:31           0         6.8      -0.002
+  M2                   JUNCTION      0.00   100.01     0  00:32           0         6.8       0.010
+  Out                  OUTFALL       0.00   100.00     0  00:35           0         6.8       0.000
+  
+  
+  **********************
+  Node Surcharge Summary
+  **********************
+  
+  Surcharging occurs when water rises above the top of the highest conduit.
+  ---------------------------------------------------------------------
+                                               Max. Height   Min. Depth
+                                   Hours       Above Crown    Below Rim
+  Node                 Type      Surcharged           Feet         Feet
+  ---------------------------------------------------------------------
+  B1                   JUNCTION        2.60          1.225        5.775
+  B2                   JUNCTION        2.58          0.576        6.424
+  
+  
+  *********************
+  Node Flooding Summary
+  *********************
+  
+  No nodes were flooded.
+  
+  
+  ***********************
+  Outfall Loading Summary
+  ***********************
+  
+  -----------------------------------------------------------
+                         Flow       Avg       Max       Total
+                         Freq      Flow      Flow      Volume
+  Outfall Node           Pcnt       CFS       CFS    10^6 gal
+  -----------------------------------------------------------
+  Out                   49.38     63.92    100.00       6.799
+  -----------------------------------------------------------
+  System                49.38     63.92    100.00       6.799
+  
+  
+  ********************
+  Link Flow Summary
+  ********************
+  
+  -----------------------------------------------------------------------------
+                                 Maximum  Time of Max   Maximum    Max/    Max/
+                                  |Flow|   Occurrence   |Veloc|    Full    Full
+  Link                 Type          CFS  days hr:min    ft/sec    Flow   Depth
+  -----------------------------------------------------------------------------
+  CA1                  CONDUIT     40.14     0  00:15      7.52    0.85    0.77
+  CA2                  CONDUIT     40.03     0  00:31      7.00    0.85    0.91
+  CB1                  CONDUIT     60.04     0  00:30      8.49    1.27    1.00
+  CB2                  CONDUIT     60.10     0  02:02      9.23    1.27    1.00
+  CM1                  CONDUIT    100.01     0  00:32      8.19    0.67    0.60
+  CM2                  CONDUIT    100.00     0  00:35      8.39    0.67    0.58
+  
+  
+  ***************************
+  Flow Classification Summary
+  ***************************
+  
+  -------------------------------------------------------------------------------------
+                      Adjusted    ---------- Fraction of Time in Flow Class ---------- 
+                       /Actual         Up    Down  Sub   Sup   Up    Down  Norm  Inlet 
+  Conduit               Length    Dry  Dry   Dry   Crit  Crit  Crit  Crit  Ltd   Ctrl  
+  -------------------------------------------------------------------------------------
+  CA1                     1.00   0.54  0.03  0.00  0.40  0.03  0.00  0.00  0.87  0.00
+  CA2                     1.00   0.52  0.02  0.00  0.45  0.01  0.00  0.00  0.63  0.00
+  CB1                     1.00   0.53  0.02  0.00  0.40  0.05  0.00  0.00  0.62  0.00
+  CB2                     1.00   0.52  0.02  0.00  0.44  0.03  0.00  0.00  0.63  0.00
+  CM1                     1.00   0.00  0.52  0.00  0.46  0.02  0.00  0.00  0.92  0.00
+  CM2                     1.00   0.00  0.00  0.00  0.94  0.06  0.00  0.00  0.01  0.00
+  
+  
+  *************************
+  Conduit Surcharge Summary
+  *************************
+  
+  ----------------------------------------------------------------------------
+                                                           Hours        Hours 
+                         --------- Hours Full --------   Above Full   Capacity
+  Conduit                Both Ends  Upstream  Dnstream   Normal Flow   Limited
+  ----------------------------------------------------------------------------
+  CB1                         2.58      2.60      2.58      2.66         2.58
+  CB2                         0.01      2.58      0.01      2.66         0.01
+  
+
+  Analysis begun on:  Tue Jun 23 21:10:42 2026
+  Analysis ended on:  Tue Jun 23 21:10:42 2026
+  Total elapsed time: < 1 sec

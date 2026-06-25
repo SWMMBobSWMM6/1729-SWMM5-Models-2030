@@ -1,0 +1,239 @@
+[TITLE]
+;;Project Title/Notes
+
+[OPTIONS]
+;;Option             Value
+FLOW_UNITS           CMS
+INFILTRATION         HORTON
+FLOW_ROUTING         DYNWAVE
+LINK_OFFSETS         ELEVATION
+MIN_SLOPE            0
+ALLOW_PONDING        NO
+SKIP_STEADY_STATE    NO
+
+START_DATE           11/02/2020
+START_TIME           00:00:00
+REPORT_START_DATE    11/02/2020
+REPORT_START_TIME    00:00:00
+END_DATE             11/02/2020
+END_TIME             02:00:00
+SWEEP_START          01/01
+SWEEP_END            12/31
+DRY_DAYS             0.000000
+REPORT_STEP          00:01:00
+WET_STEP             00:05:00
+DRY_STEP             01:00:00
+ROUTING_STEP         0:00:15 
+RULE_STEP            00:00:00
+
+INERTIAL_DAMPING     PARTIAL
+NORMAL_FLOW_LIMITED  BOTH
+FORCE_MAIN_EQUATION  H-W
+VARIABLE_STEP        0.75
+LENGTHENING_STEP     0
+MIN_SURFAREA         0
+MAX_TRIALS           8
+HEAD_TOLERANCE       0.001500
+SYS_FLOW_TOL         5.000000
+LAT_FLOW_TOL         5.000000
+MINIMUM_STEP         0.500000
+THREADS              1
+
+[EVAPORATION]
+;;Data Source    Parameters
+;;-------------- ----------------
+CONSTANT         0.0
+DRY_ONLY         NO
+
+[JUNCTIONS]
+;;Name           Elevation  MaxDepth   InitDepth  SurDepth   Aponded   
+;;-------------- ---------- ---------- ---------- ---------- ----------
+Inflow           9.5        0.5        0.0        999.0      0.0       
+Inflowa          9.5        0.5        0.0        999.0      0.0       
+Inflowb          9.5        0.5        0.0        999.0      0.0       
+Inflowc          9.5        0.5        0.0        999.0      0.0       
+N1               9.25       0.75       0.0        999.0      0.0       
+N1a              9.25       0.75       0.0        999.0      0.0       
+N1b              9.25       0.75       0.0        999.0      0.0       
+N1c              9.25       0.75       0.0        999.0      0.0       
+N2               9.0        1.0        0.0        5          0.0       
+N2a              9.0        1.0        0.0        5          0.0       
+N2b              9.0        1.0        0.0        5          0.0       
+N2c              9.0        1.0        0.0        5          0.0       
+N3               8.75       1.25       0.0        999.0      0.0       
+N3!              8.75       1.25       0.0        999.0      0.0       
+N3!a             8.75       1.25       0.0        999.0      0.0       
+N3!b             8.75       1.25       0.0        999.0      0.0       
+N3!c             8.75       1.25       0.0        999.0      0.0       
+N3a              8.75       1.25       0.0        999.0      0.0       
+N3b              8.75       1.25       0.0        999.0      0.0       
+N3c              8.75       1.25       0.0        999.0      0.0       
+
+[OUTFALLS]
+;;Name           Elevation  Type       Stage Data       Gated    Route To        
+;;-------------- ---------- ---------- ---------------- -------- ----------------
+Outfall          8.5        FREE                        NO                       
+Outfalla         8.5        FREE                        NO                       
+Outfallb         8.5        FREE                        NO                       
+Outfallc         8.5        FREE                        NO                       
+
+[STORAGE]
+;;Name           Elev.    MaxDepth   InitDepth  Shape      Curve Name/Params            N/A      Fevap    Psi      Ksat     IMD     
+;;-------------- -------- ---------- ----------- ---------- ---------------------------- -------- --------          -------- --------
+Surface          10       9.99       0          FUNCTIONAL 100       0         0        0        0       
+Surfacea         10       9.99       0          FUNCTIONAL 100       0         0        0        0       
+Surfaceb         10       9.99       0          FUNCTIONAL 100       0         0        0        0       
+Surfacec         10       9.99       0          FUNCTIONAL 100       0         0        0        0       
+
+[CONDUITS]
+;;Name           From Node        To Node          Length     Roughness  InOffset   OutOffset  InitFlow   MaxFlow   
+;;-------------- ---------------- ---------------- ---------- ---------- ---------- ---------- ---------- ----------
+Inflow.1         Inflow           N1               50.0       0.015      9.5        9.25       0.0        0.0       
+N1.1             N1               N2               50.0       0.015      9.25       9.0        0.0        0.0       
+N2.1             N2               N3               50.0       0.015      9.0        8.75       0.0        0.0       
+N3!.1            N3!              Outfall          50.0       0.015      8.75       8.5        0.0        0.0       
+Inflow.1a        Inflowa          N1a              50.0       0.015      9.5        9.25       0.0        0.0       
+N1.1a            N1a              N2a              50.0       0.015      9.25       9.0        0.0        0.0       
+N2.1a            N2a              N3a              50.0       0.015      9.0        8.75       0.0        0.0       
+N3!.1a           N3!a             Outfalla         50.0       0.015      8.75       8.5        0.0        0.0       
+Inflow.1b        Inflowb          N1b              50.0       0.015      9.5        9.25       0.0        0.0       
+N1.1b            N1b              N2b              50.0       0.015      9.25       9.0        0.0        0.0       
+N2.1b            N2b              N3b              50.0       0.015      9.0        8.75       0.0        0.0       
+N3!.1b           N3!b             Outfallb         50.0       0.015      8.75       8.5        0.0        0.0       
+Inflow.1c        Inflowc          N1c              50.0       0.015      9.5        9.25       0.0        0.0       
+N1.1c            N1c              N2c              50.0       0.015      9.25       9.0        0.0        0.0       
+N2.1c            N2c              N3c              50.0       0.015      9.0        8.75       0.0        0.0       
+N3!.1c           N3!c             Outfallc         50.0       0.015      8.75       8.5        0.0        0.0       
+
+[ORIFICES]
+;;Name           From Node        To Node          Type         Offset     Qcoeff     Gated    CloseTime 
+;;-------------- ---------------- ---------------- ------------ ---------- ---------- -------- ----------
+N3.1             N3               N3!              SIDE         8.75       0.7        NO       0.0       
+O1               N2               Surface          BOTTOM       10         0.9        NO       0         
+N3.1a            N3a              N3!a             SIDE         8.75       0.7        NO       0.0       
+O1a              N2a              Surfacea         BOTTOM       10         0.8        NO       0         
+N3.1b            N3b              N3!b             SIDE         8.75       0.7        NO       0.0       
+O1b              N2b              Surfaceb         BOTTOM       10         0.7        NO       0         
+N3.1c            N3c              N3!c             SIDE         8.75       0.7        NO       0.0       
+O1c              N2c              Surfacec         BOTTOM       10         0.6        NO       0         
+
+[XSECTIONS]
+;;Link           Shape        Geom1            Geom2      Geom3      Geom4      Barrels    Culvert   
+;;-------------- ------------ ---------------- ---------- ---------- ---------- ---------- ----------
+Inflow.1         CIRCULAR     0.3              0.0        0.0        0.0        1          0         
+N1.1             CIRCULAR     0.3              0.0        0.0        0.0        1          0         
+N2.1             CIRCULAR     0.3              0.0        0.0        0.0        1          0         
+N3!.1            CIRCULAR     0.3              0.0        0.0        0.0        1          0         
+Inflow.1a        CIRCULAR     0.3              0.0        0.0        0.0        1          0         
+N1.1a            CIRCULAR     0.3              0.0        0.0        0.0        1          0         
+N2.1a            CIRCULAR     0.3              0.0        0.0        0.0        1          0         
+N3!.1a           CIRCULAR     0.3              0.0        0.0        0.0        1          0         
+Inflow.1b        CIRCULAR     0.3              0.0        0.0        0.0        1          0         
+N1.1b            CIRCULAR     0.3              0.0        0.0        0.0        1          0         
+N2.1b            CIRCULAR     0.3              0.0        0.0        0.0        1          0         
+N3!.1b           CIRCULAR     0.3              0.0        0.0        0.0        1          0         
+Inflow.1c        CIRCULAR     0.3              0.0        0.0        0.0        1          0         
+N1.1c            CIRCULAR     0.3              0.0        0.0        0.0        1          0         
+N2.1c            CIRCULAR     0.3              0.0        0.0        0.0        1          0         
+N3!.1c           CIRCULAR     0.3              0.0        0.0        0.0        1          0         
+N3.1             CIRCULAR     0.2              0          0          0
+O1               CIRCULAR     1.22             0          0          0
+N3.1a            CIRCULAR     0.2              0          0          0
+O1a              CIRCULAR     1.22             0          0          0
+N3.1b            CIRCULAR     0.2              0          0          0
+O1b              CIRCULAR     1.22             0          0          0
+N3.1c            CIRCULAR     0.2              0          0          0
+O1c              CIRCULAR     1.22             0          0          0
+
+[LOSSES]
+;;Link           Kentry     Kexit      Kavg       Flap Gate  Seepage   
+;;-------------- ---------- ---------- ---------- ---------- ----------
+Inflow.1         0.15       0.015      0.0        NO         0.0       
+N1.1             0.15       0.015      0.0        NO         0.0       
+N2.1             0.15       0.015      0.0        NO         0.0       
+N3!.1            0.15       0.015      0.0        NO         0.0       
+Inflow.1a        0.15       0.015      0.0        NO         0.0       
+N1.1a            0.15       0.015      0.0        NO         0.0       
+N2.1a            0.15       0.015      0.0        NO         0.0       
+N3!.1a           0.15       0.015      0.0        NO         0.0       
+Inflow.1b        0.15       0.015      0.0        NO         0.0       
+N1.1b            0.15       0.015      0.0        NO         0.0       
+N2.1b            0.15       0.015      0.0        NO         0.0       
+N3!.1b           0.15       0.015      0.0        NO         0.0       
+Inflow.1c        0.15       0.015      0.0        NO         0.0       
+N1.1c            0.15       0.015      0.0        NO         0.0       
+N2.1c            0.15       0.015      0.0        NO         0.0       
+N3!.1c           0.15       0.015      0.0        NO         0.0       
+
+[CONTROLS]
+
+
+
+[INFLOWS]
+;;Node           Constituent      Time Series      Type     Mfactor  Sfactor  Baseline Pattern
+;;-------------- ---------------- ---------------- -------- -------- -------- -------- --------
+Inflow           FLOW             QIN#Inflow       FLOW     1.0      1.0      0.0     
+Inflowa          FLOW             QIN#Inflow       FLOW     1.0      1.0      0.0     
+Inflowb          FLOW             QIN#Inflow       FLOW     1.0      1.0      0.0     
+Inflowc          FLOW             QIN#Inflow       FLOW     1.0      1.0      0.0     
+
+[TIMESERIES]
+;;Name           Date       Time       Value     
+;;-------------- ---------- ---------- ----------
+; QIN#Inflow   12/30/1899   00:00        0.0         ;; need to edit the date!!!
+QIN#Inflow       11/02/2020 00:00      0.0       
+QIN#Inflow                  00:05      0.25      
+QIN#Inflow                  00:10      0.25      
+QIN#Inflow                  00:15      0.25      
+QIN#Inflow                  00:20      0.25      
+QIN#Inflow                  00:25      0.25      
+QIN#Inflow                  00:30      0.0       
+
+[REPORT]
+;;Reporting Options
+SUBCATCHMENTS ALL
+NODES ALL
+LINKS ALL
+
+[TAGS]
+
+[MAP]
+DIMENSIONS -4.962 -1.655 14.842 6.924
+Units      None
+
+[COORDINATES]
+;;Node           X-Coord            Y-Coord           
+;;-------------- ------------------ ------------------
+Inflow           -3.732             4.895             
+Inflowa          -3.913             2.737             
+Inflowb          -4.062             0.173             
+Inflowc          -4.039             -1.265            
+N1               0.546              4.924             
+N1a              0.538              2.956             
+N1b              0.641              0.334             
+N1c              0.664              -1.230            
+N2               5.025              5.010             
+N2a              5.115              2.967             
+N2b              5.218              0.391             
+N2c              5.195              -1.230            
+N3               8.921              5.003             
+N3!              9.650              4.985             
+N3!a             10.154             3.084             
+N3!b             10.677             0.592             
+N3!c             10.802             -1.023            
+N3a              8.891              3.095             
+N3b              9.004              0.501             
+N3c              8.993              -1.103            
+Outfall          13.697             5.039             
+Outfalla         13.806             3.175             
+Outfallb         13.809             0.782             
+Outfallc         13.942             -0.921            
+Surface          4.915              6.534             
+Surfacea         5.069              3.621             
+Surfaceb         5.184              1.264             
+Surfacec         5.184              -0.345            
+
+[VERTICES]
+;;Link           X-Coord            Y-Coord           
+;;-------------- ------------------ ------------------
+

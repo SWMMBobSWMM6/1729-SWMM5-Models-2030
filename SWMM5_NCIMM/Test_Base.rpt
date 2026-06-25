@@ -1,0 +1,944 @@
+
+  EPA STORM WATER MANAGEMENT MODEL - VERSION 5.2 (Build 5.2.4)
+  ------------------------------------------------------------
+
+  Scenario Run :  BASEEvansville East WWTP/Wetland/VTU operational strategy model - Typical Year. Based on East XPSWMM model (ALT 7-12) and simulated flow inputs. 
+  WARNING 02: maximum depth increased for Node BS2
+  WARNING 02: maximum depth increased for Node BS5
+  WARNING 02: maximum depth increased for Node BS6
+  WARNING 02: maximum depth increased for Node WETLAND1
+  WARNING 02: maximum depth increased for Node WETLAND2
+  WARNING 02: maximum depth increased for Node WETLAND3
+  WARNING 02: maximum depth increased for Node WETLAND4
+  
+  *************
+  Element Count
+  *************
+  Number of rain gages ...... 1
+  Number of subcatchments ... 2
+  Number of nodes ........... 49
+  Number of links ........... 59
+  Number of pollutants ...... 0
+  Number of land uses ....... 0
+  
+  
+  ****************
+  Raingage Summary
+  ****************
+                                                      Data       Recording
+  Name                 Data Source                    Type       Interval 
+  ------------------------------------------------------------------------
+  YEAR2000             RN#52                          VOLUME      60 min.
+  
+  
+  ********************
+  Subcatchment Summary
+  ********************
+  Name                       Area     Width   %Imperv    %Slope Rain Gage            Outlet              
+  -----------------------------------------------------------------------------------------------------------
+  BEESLOUGH#1              105.00   1000.00     10.00    1.0000 YEAR2000             BEESLOUGH           
+  STORMNEARCSO001           30.00   1000.00     10.00    1.0000 YEAR2000             CSO_#1_1            
+  
+  
+  ************
+  Node Summary
+  ************
+                                           Invert      Max.    Ponded    External
+  Name                 Type                 Elev.     Depth      Area    Inflow  
+  -------------------------------------------------------------------------------
+  413                  JUNCTION            341.42     28.66       0.0
+  415                  JUNCTION            341.47     22.44       0.0
+  BEESLOUGH            JUNCTION            342.00     38.00       0.0
+  BS2                  JUNCTION            351.30     18.80       0.0
+  BS3                  JUNCTION            350.00     20.00       0.0
+  BS5                  JUNCTION            346.90     24.20       0.0
+  BS6                  JUNCTION            344.90     32.20       0.0
+  CSO#5                JUNCTION            355.58     19.73       0.0    Yes
+  CSO002               JUNCTION            348.30     21.70       0.0
+  CSO4PS               JUNCTION            350.00     40.00       0.0
+  CSO_#1               JUNCTION            352.90     27.10       0.0
+  CSO_#1_1             JUNCTION            352.00     27.10       0.0
+  CSO_#1_2             JUNCTION            352.00     27.10       0.0
+  DIV_396              JUNCTION            341.55     27.77       0.0    Yes
+  NODE243              JUNCTION            339.41     40.59       0.0
+  NODE245              JUNCTION            341.46     38.54       0.0
+  NODE282              JUNCTION            338.30     41.70       0.0
+  PLANTEFF             JUNCTION            344.00     27.60       0.0
+  PUMPSTAK-4           JUNCTION            339.50     36.75       0.0
+  VTUEFFLUENT          JUNCTION            318.00     51.00       0.0
+  VTU_IN               JUNCTION            340.00     30.00       0.0    Yes
+  WETLAND1             JUNCTION            358.50     40.00       0.0
+  WETLAND2             JUNCTION            357.50     40.00       0.0
+  WETLAND3             JUNCTION            356.50     40.00       0.0
+  WETLAND4             JUNCTION            355.50     40.00       0.0
+  WETLANDEFF           JUNCTION            353.50     50.00       0.0
+  CSO_#103             OUTFALL             341.35      7.00       0.0
+  CSO_#4               OUTFALL             338.20     20.00       0.0
+  28MGD_IN             STORAGE             342.00     79.00       0.0
+  40MGDPRIMARYBYPASS   STORAGE             348.00     73.00       0.0
+  40MGDPRIMARYBYPASS_1 STORAGE             349.00     73.00       0.0
+  40MGD_IN             STORAGE             348.00     73.00       0.0
+  40MGD_IN_1           STORAGE             349.00     73.00       0.0
+  445                  STORAGE             341.65     27.60       0.0
+  CSO4W                STORAGE             339.46     40.54       0.0
+  EASTPLANT28MGD       STORAGE             345.00     50.00       0.0
+  EASTPLANT40MGD       STORAGE             345.00     50.00       0.0
+  EASTPLANTEFFPS_WW    STORAGE             341.46     50.00       0.0
+  EASTPLANTSPLITTER    STORAGE             351.00     70.00       0.0
+  EASTWWTP             STORAGE             328.17     31.85       0.0
+  STRUCTURE2           STORAGE             346.60     31.00       0.0
+  STRUCTURE3           STORAGE             345.79     31.00       0.0
+  VTU                  STORAGE             233.00    137.00       0.0
+  WETLANDEFF1          STORAGE             348.50     50.00       0.0
+  WETLANDEFF2          STORAGE             347.00     50.00       0.0
+  WETLANDPS            STORAGE             342.00     31.85       0.0
+  WETLANDPSDIVERT      STORAGE             342.90     31.85       0.0
+  WETLANDSPLITTER      STORAGE             358.50     50.00       0.0
+  WETLANDSPLITTER1     STORAGE             359.50     50.00       0.0
+  
+  
+  ************
+  Link Summary
+  ************
+  Name             From Node        To Node          Type            Length    %Slope Roughness
+  ---------------------------------------------------------------------------------------------
+  28MGD_DS         EASTPLANT28MGD   PLANTEFF         CONDUIT          200.0    0.5000    0.0130
+  28MGD_IN         EASTPLANTSPLITTER 28MGD_IN         CONDUIT           10.0   31.4485    0.0130
+  400.1.1          CSO#5            CSO_#1           CONDUIT         2170.0    0.1235    0.0170
+  40MGDPRIMARYBYPASS_1 40MGDPRIMARYBYPASS_1 40MGDPRIMARYBYPASS CONDUIT           20.0    5.0063    0.0130
+  40MGD_DS         EASTPLANT40MGD   PLANTEFF         CONDUIT          200.0    0.5000    0.0130
+  40MGD_IN_1       40MGD_IN_1       40MGD_IN         CONDUIT           20.0    5.0063    0.0130
+  410.1            DIV_396          EASTWWTP         CONDUIT          511.0    0.1076    0.0150
+  437.1            NODE243          NODE282          CONDUIT          643.7    0.1718    0.0150
+  439.1            413              PUMPSTAK-4       CONDUIT          524.3    0.3658    0.0150
+  441.1            NODE245          CSO_#103         CONDUIT          666.4    0.0167    0.0150
+  442.1            445              415              CONDUIT         2079.0    0.0087    0.0150
+  445.1            BEESLOUGH        413              CONDUIT          115.9    0.5020    0.0150
+  CSO1_OVERFLOW    CSO_#1           CSO_#1_1         CONDUIT          223.0    4.4438    0.0130
+  CSO1_WETLAND     CSO_#1           CSO_#1_2         CONDUIT          102.3    0.8795    0.0130
+  CSO1_WETLAND1    CSO_#1_2         STRUCTURE2       CONDUIT         1244.0    0.4341    0.0130
+  CSO1_WETLAND2    STRUCTURE2       STRUCTURE3       CONDUIT          427.2    0.1896    0.0130
+  CSO1_WETLAND3    STRUCTURE3       WETLANDPS        CONDUIT         1441.0    0.1936    0.0130
+  CSO4FM           CSO4PS           NODE282          CONDUIT           40.0   12.5988    0.0140
+  LINK231          415              PUMPSTAK-4       CONDUIT          302.0    0.1987    0.0140
+  LINK303          NODE282          CSO_#4           CONDUIT          100.0    0.1000    0.0150
+  PLANTEFFLUENT    PLANTEFF         445              CONDUIT          790.0    0.1266    0.0130
+  PSINTERCONNECTION WETLANDPSDIVERT  EASTWWTP         CONDUIT          840.0    0.2262    0.0130
+  VTUEFFLUENT      VTU              VTUEFFLUENT      CONDUIT           20.0    5.0063    0.0130
+  VTU_IN           VTU_IN           VTU              CONDUIT         1300.0    4.3888    0.0130
+  WETLAND1         WETLANDSPLITTER1 WETLAND1         CONDUIT          431.9    0.2315    1.2500
+  WETLAND2         WETLAND1         WETLAND2         CONDUIT          431.9    0.2315    1.2500
+  WETLAND3         WETLAND2         WETLAND3         CONDUIT          431.9    0.2315    1.2500
+  WETLAND4         WETLAND3         WETLAND4         CONDUIT          431.9    0.2315    1.2500
+  WETLAND5         WETLAND4         WETLANDEFF       CONDUIT          431.9    0.2315    1.2500
+  WETLANDEFFLUENT  WETLANDEFF1      WETLANDEFF2      CONDUIT          450.0    0.3333    0.0130
+  XS15             CSO_#1_1         BS2              CONDUIT          925.0    0.0757    0.0150
+  XS25             BS2              BS3              CONDUIT          991.0    0.1312    0.0150
+  XS35             BS3              CSO002           CONDUIT          996.9    0.1705    0.0150
+  XS45             CSO002           BS5              CONDUIT          995.6    0.1406    0.0150
+  XS55             BS5              BS6              CONDUIT         1001.4    0.1997    0.0150
+  XS65             BS6              BEESLOUGH        CONDUIT          822.8    0.1702    0.0150
+  28MGD_US         28MGD_IN         EASTPLANT28MGD   IDEAL PUMP  
+  40MGDPRIMARYBYPASS_P 40MGDPRIMARYBYPASS WETLANDSPLITTER1 IDEAL PUMP  
+  40MGD_US         40MGD_IN         EASTPLANT40MGD   IDEAL PUMP  
+  90011            EASTWWTP         EASTPLANTSPLITTER TYPE4 PUMP  
+  EASTPLANTEFFPS_P EASTPLANTEFFPS_WW NODE245          TYPE4 PUMP  
+  K4P1             CSO4W            CSO4PS           TYPE3 PUMP  
+  K4P2             CSO4W            CSO4PS           TYPE3 PUMP  
+  LINK350          VTUEFFLUENT      BS5              IDEAL PUMP  
+  VTUDRAIN         VTU              EASTWWTP         TYPE4 PUMP  
+  WETLANDPS        WETLANDPS        WETLANDSPLITTER  TYPE4 PUMP  
+  WETLANDTOPLANT   WETLANDSPLITTER  EASTPLANTSPLITTER TYPE4 PUMP  
+  409.1            DIV_396          VTU_IN           WEIR        
+  40MGDPRIMARYBYPASS EASTPLANTSPLITTER 40MGDPRIMARYBYPASS_1 WEIR        
+  40MGD_IN         EASTPLANTSPLITTER 40MGD_IN_1       WEIR        
+  637.1            PUMPSTAK-4       CSO4W            WEIR        
+  CSO3G            415              NODE245          WEIR        
+  CSO4ORG.1        PUMPSTAK-4       NODE243          WEIR        
+  EASTPLANTEFFPS   415              EASTPLANTEFFPS_WW WEIR        
+  WETLANDEFF       WETLANDEFF       WETLANDEFF1      WEIR        
+  WETLANDEFF1      WETLANDEFF2      BS5              WEIR        
+  WETLANDPSDIVERT  WETLANDPS        WETLANDPSDIVERT  WEIR        
+  WETLANDSPLITTER  WETLANDSPLITTER  WETLANDSPLITTER1 WEIR        
+  WETLANDTOPLANTEFFLUENTPS WETLANDEFF1      445              WEIR        
+  
+  
+  *********************
+  Cross Section Summary
+  *********************
+                                        Full     Full     Hyd.     Max.   No. of     Full
+  Conduit          Shape               Depth     Area     Rad.    Width  Barrels     Flow
+  ---------------------------------------------------------------------------------------
+  28MGD_DS         CIRCULAR             5.00    19.63     1.25     5.00        1   119.03
+  28MGD_IN         CIRCULAR             6.00    28.27     1.50     6.00        1  1535.01
+  400.1.1          CIRCULAR             9.00    63.62     2.25     9.00        1   216.88
+  40MGDPRIMARYBYPASS_1 CIRCULAR             6.00    28.27     1.50     6.00        1   612.44
+  40MGD_DS         CIRCULAR             5.00    19.63     1.25     5.00        1   119.03
+  40MGD_IN_1       CIRCULAR             6.00    28.27     1.50     6.00        1   612.44
+  410.1            CIRCULAR             4.50    15.90     1.12     4.50        1    36.14
+  437.1            CIRCULAR            15.00   176.71     3.75    15.00        1  1132.02
+  439.1            CIRCULAR            15.00   176.71     3.75    15.00        1  1651.80
+  441.1            CIRCULAR             7.00    38.48     1.75     7.00        1    46.18
+  442.1            CIRCULAR             6.00    28.27     1.50     6.00        1    22.07
+  445.1            CIRCULAR            15.00   176.71     3.75    15.00        1  1935.01
+  CSO1_OVERFLOW    CIRCULAR             9.00    63.62     2.25     9.00        1  1701.24
+  CSO1_WETLAND     CIRCULAR             9.00    63.62     2.25     9.00        1   756.86
+  CSO1_WETLAND1    CIRCULAR             9.00    63.62     2.25     9.00        1   531.71
+  CSO1_WETLAND2    CIRCULAR             9.00    63.62     2.25     9.00        1   351.42
+  CSO1_WETLAND3    CIRCULAR             9.00    63.62     2.25     9.00        1   355.11
+  CSO4FM           CIRCULAR             4.00    12.57     1.00     4.00        1   305.99
+  LINK231          CIRCULAR             5.00    19.63     1.25     5.00        1    69.67
+  LINK303          CIRCULAR            20.00   314.16     5.00    20.00        1  1859.97
+  PLANTEFFLUENT    CIRCULAR             4.50    15.90     1.12     4.50        1    45.22
+  PSINTERCONNECTION CIRCULAR             4.50    15.90     1.12     4.50        1    60.45
+  VTUEFFLUENT      CIRCULAR             6.00    28.27     1.50     6.00        1   612.44
+  VTU_IN           CIRCULAR             5.00    19.63     1.25     5.00        1   352.64
+  WETLAND1         WETLAND             40.00 13000.00    31.97   325.00        1  4841.24
+  WETLAND2         WETLAND             40.00 13000.00    31.97   325.00        1  4841.24
+  WETLAND3         WETLAND             40.00 13000.00    31.97   325.00        1  4841.24
+  WETLAND4         WETLAND             40.00 13000.00    31.97   325.00        1  4841.24
+  WETLAND5         WETLAND             40.00 13000.00    31.97   325.00        1  4841.24
+  WETLANDEFFLUENT  CIRCULAR             4.00    12.57     1.00     4.00        1    53.60
+  XS15             XS15                18.80  1607.70     7.98   150.00        1 11312.19
+  XS25             XS25                17.30  2490.65     5.89   253.00        1 18834.22
+  XS35             XS35                18.80  2422.13     6.29   248.00        1 21834.19
+  XS45             XS45                21.50  1905.25     9.00   183.00        1 19786.74
+  XS55             XS55                24.20  1745.65    11.88   130.00        1 26004.54
+  XS65             XS65                32.20  3381.03    15.24   190.00        1 54882.37
+  
+  
+  ****************
+  Transect Summary
+  ****************
+
+  Transect WETLAND
+  Area:  
+              0.0200     0.0400     0.0600     0.0800     0.1000 
+              0.1200     0.1400     0.1600     0.1800     0.2000 
+              0.2200     0.2400     0.2600     0.2800     0.3000 
+              0.3200     0.3400     0.3600     0.3800     0.4000 
+              0.4200     0.4400     0.4600     0.4800     0.5000 
+              0.5200     0.5400     0.5600     0.5800     0.6000 
+              0.6200     0.6400     0.6600     0.6800     0.7000 
+              0.7200     0.7400     0.7600     0.7800     0.8000 
+              0.8200     0.8400     0.8600     0.8800     0.9000 
+              0.9200     0.9400     0.9600     0.9800     1.0000 
+  Hrad:  
+              0.0248     0.0494     0.0737     0.0978     0.1216 
+              0.1452     0.1686     0.1918     0.2148     0.2375 
+              0.2601     0.2824     0.3045     0.3264     0.3481 
+              0.3697     0.3910     0.4121     0.4330     0.4538 
+              0.4743     0.4947     0.5149     0.5349     0.5548 
+              0.5745     0.5940     0.6133     0.6325     0.6515 
+              0.6703     0.6890     0.7075     0.7259     0.7441 
+              0.7622     0.7801     0.7978     0.8154     0.8329 
+              0.8502     0.8674     0.8845     0.9014     0.9181 
+              0.9348     0.9513     0.9676     0.9839     1.0000 
+  Width: 
+              1.0000     1.0000     1.0000     1.0000     1.0000 
+              1.0000     1.0000     1.0000     1.0000     1.0000 
+              1.0000     1.0000     1.0000     1.0000     1.0000 
+              1.0000     1.0000     1.0000     1.0000     1.0000 
+              1.0000     1.0000     1.0000     1.0000     1.0000 
+              1.0000     1.0000     1.0000     1.0000     1.0000 
+              1.0000     1.0000     1.0000     1.0000     1.0000 
+              1.0000     1.0000     1.0000     1.0000     1.0000 
+              1.0000     1.0000     1.0000     1.0000     1.0000 
+              1.0000     1.0000     1.0000     1.0000     1.0000 
+
+  Transect XS15
+  Area:  
+              0.0037     0.0078     0.0123     0.0172     0.0225 
+              0.0282     0.0343     0.0408     0.0476     0.0549 
+              0.0626     0.0707     0.0791     0.0880     0.0973 
+              0.1071     0.1184     0.1311     0.1454     0.1611 
+              0.1784     0.1971     0.2169     0.2371     0.2580 
+              0.2796     0.3020     0.3251     0.3489     0.3735 
+              0.3988     0.4248     0.4515     0.4790     0.5072 
+              0.5361     0.5658     0.5962     0.6273     0.6591 
+              0.6917     0.7250     0.7587     0.7927     0.8268 
+              0.8611     0.8955     0.9302     0.9650     1.0000 
+  Hrad:  
+              0.0441     0.0837     0.1200     0.1539     0.1859 
+              0.2163     0.2456     0.2739     0.3014     0.3282 
+              0.3545     0.3802     0.4056     0.4306     0.4553 
+              0.4840     0.5094     0.5284     0.5423     0.5525 
+              0.5600     0.5657     0.5737     0.5897     0.6094 
+              0.6284     0.6468     0.6646     0.6819     0.6987 
+              0.7150     0.7309     0.7464     0.7614     0.7762 
+              0.7905     0.8046     0.8183     0.8318     0.8450 
+              0.8579     0.8706     0.8854     0.9008     0.9165 
+              0.9327     0.9491     0.9659     0.9828     1.0000 
+  Width: 
+              0.1113     0.1226     0.1339     0.1453     0.1566 
+              0.1679     0.1792     0.1905     0.2018     0.2132 
+              0.2245     0.2358     0.2471     0.2584     0.2697 
+              0.2991     0.3419     0.3847     0.4275     0.4703 
+              0.5131     0.5559     0.5690     0.5857     0.6065 
+              0.6272     0.6480     0.6688     0.6896     0.7103 
+              0.7311     0.7519     0.7726     0.7934     0.8142 
+              0.8349     0.8557     0.8765     0.8972     0.9180 
+              0.9388     0.9596     0.9649     0.9699     0.9749 
+              0.9799     0.9850     0.9900     0.9950     1.0000 
+
+  Transect XS25
+  Area:  
+              0.0022     0.0046     0.0073     0.0102     0.0134 
+              0.0168     0.0204     0.0243     0.0284     0.0327 
+              0.0373     0.0421     0.0471     0.0524     0.0580 
+              0.0637     0.0697     0.0760     0.0824     0.0892 
+              0.0961     0.1183     0.1426     0.1674     0.1927 
+              0.2185     0.2447     0.2719     0.3004     0.3300 
+              0.3607     0.3922     0.4245     0.4571     0.4899 
+              0.5229     0.5560     0.5892     0.6226     0.6561 
+              0.6898     0.7237     0.7577     0.7919     0.8262 
+              0.8606     0.8952     0.9300     0.9649     1.0000 
+  Hrad:  
+              0.0551     0.1047     0.1502     0.1927     0.2329 
+              0.2712     0.3080     0.3436     0.3783     0.4121 
+              0.4452     0.4777     0.5097     0.5413     0.5725 
+              0.6033     0.6339     0.6641     0.6942     0.7240 
+              0.7537     0.6595     0.6028     0.5731     0.5587 
+              0.5536     0.5556     0.5661     0.5770     0.5886 
+              0.6027     0.6173     0.6328     0.6500     0.6685 
+              0.6879     0.7081     0.7290     0.7503     0.7721 
+              0.7941     0.8165     0.8390     0.8617     0.8845 
+              0.9075     0.9305     0.9536     0.9768     1.0000 
+  Width: 
+              0.0660     0.0728     0.0796     0.0863     0.0931 
+              0.0998     0.1066     0.1133     0.1201     0.1268 
+              0.1336     0.1403     0.1471     0.1538     0.1606 
+              0.1674     0.1741     0.1809     0.1876     0.1944 
+              0.2011     0.6847     0.6985     0.7124     0.7263 
+              0.7401     0.7566     0.7917     0.8268     0.8594 
+              0.8841     0.9087     0.9264     0.9307     0.9350 
+              0.9394     0.9437     0.9480     0.9524     0.9567 
+              0.9610     0.9654     0.9697     0.9740     0.9783 
+              0.9827     0.9870     0.9913     0.9957     1.0000 
+
+  Transect XS35
+  Area:  
+              0.0024     0.0051     0.0080     0.0112     0.0146 
+              0.0182     0.0221     0.0262     0.0305     0.0351 
+              0.0399     0.0450     0.0503     0.0558     0.0615 
+              0.0675     0.0738     0.0802     0.0869     0.0939 
+              0.1010     0.1085     0.1162     0.1314     0.1581 
+              0.1881     0.2183     0.2485     0.2789     0.3094 
+              0.3402     0.3713     0.4029     0.4348     0.4672 
+              0.4999     0.5331     0.5666     0.6005     0.6349 
+              0.6696     0.7047     0.7402     0.7762     0.8125 
+              0.8492     0.8863     0.9238     0.9617     1.0000 
+  Hrad:  
+              0.0561     0.1068     0.1535     0.1970     0.2381 
+              0.2772     0.3148     0.3510     0.3862     0.4205 
+              0.4540     0.4869     0.5192     0.5510     0.5823 
+              0.6133     0.6440     0.6743     0.7044     0.7343 
+              0.7639     0.7933     0.8232     0.7965     0.7089 
+              0.6494     0.6179     0.6028     0.5980     0.6002 
+              0.6134     0.6291     0.6462     0.6645     0.6836 
+              0.7034     0.7236     0.7443     0.7652     0.7862 
+              0.8075     0.8288     0.8503     0.8717     0.8932 
+              0.9146     0.9360     0.9574     0.9787     1.0000 
+  Width: 
+              0.0666     0.0728     0.0789     0.0851     0.0912 
+              0.0973     0.1035     0.1096     0.1158     0.1219 
+              0.1281     0.1342     0.1403     0.1465     0.1526 
+              0.1588     0.1649     0.1711     0.1772     0.1833 
+              0.1895     0.1956     0.2405     0.5498     0.7777 
+              0.7810     0.7843     0.7876     0.7909     0.7942 
+              0.8041     0.8144     0.8247     0.8350     0.8454 
+              0.8557     0.8660     0.8763     0.8866     0.8969 
+              0.9072     0.9175     0.9278     0.9381     0.9485 
+              0.9588     0.9691     0.9794     0.9897     1.0000 
+
+  Transect XS45
+  Area:  
+              0.0036     0.0076     0.0120     0.0168     0.0221 
+              0.0277     0.0337     0.0402     0.0471     0.0544 
+              0.0620     0.0701     0.0787     0.0876     0.0969 
+              0.1066     0.1168     0.1274     0.1383     0.1497 
+              0.1615     0.1737     0.1863     0.1996     0.2143 
+              0.2305     0.2481     0.2672     0.2890     0.3141 
+              0.3415     0.3697     0.3985     0.4281     0.4584 
+              0.4895     0.5213     0.5538     0.5870     0.6209 
+              0.6556     0.6910     0.7271     0.7639     0.8015 
+              0.8398     0.8788     0.9185     0.9590     1.0000 
+  Hrad:  
+              0.0445     0.0842     0.1204     0.1540     0.1857 
+              0.2159     0.2448     0.2729     0.3001     0.3267 
+              0.3527     0.3782     0.4034     0.4282     0.4527 
+              0.4770     0.5011     0.5249     0.5486     0.5721 
+              0.5955     0.6187     0.6419     0.6709     0.6971 
+              0.7182     0.7353     0.7499     0.7666     0.7751 
+              0.7806     0.7881     0.7969     0.8068     0.8174 
+              0.8285     0.8400     0.8519     0.8639     0.8761 
+              0.8884     0.9007     0.9131     0.9254     0.9378 
+              0.9501     0.9624     0.9746     0.9870     1.0000 
+  Width: 
+              0.0919     0.1018     0.1118     0.1217     0.1316 
+              0.1415     0.1515     0.1614     0.1713     0.1812 
+              0.1912     0.2011     0.2110     0.2210     0.2309 
+              0.2408     0.2507     0.2607     0.2706     0.2805 
+              0.2904     0.3004     0.3103     0.3389     0.3740 
+              0.4091     0.4441     0.4841     0.5718     0.6431 
+              0.6728     0.6904     0.7079     0.7254     0.7429 
+              0.7605     0.7780     0.7955     0.8130     0.8306 
+              0.8481     0.8656     0.8831     0.9007     0.9182 
+              0.9357     0.9532     0.9708     0.9875     1.0000 
+
+  Transect XS55
+  Area:  
+              0.0044     0.0094     0.0150     0.0210     0.0277 
+              0.0349     0.0426     0.0509     0.0597     0.0691 
+              0.0790     0.0895     0.1006     0.1121     0.1243 
+              0.1370     0.1502     0.1640     0.1783     0.1932 
+              0.2087     0.2247     0.2412     0.2583     0.2759 
+              0.2941     0.3129     0.3321     0.3523     0.3768 
+              0.4023     0.4285     0.4552     0.4826     0.5105 
+              0.5391     0.5683     0.5980     0.6284     0.6594 
+              0.6910     0.7231     0.7559     0.7893     0.8233 
+              0.8579     0.8930     0.9284     0.9641     1.0000 
+  Hrad:  
+              0.0377     0.0710     0.1012     0.1292     0.1555 
+              0.1806     0.2047     0.2280     0.2506     0.2727 
+              0.2944     0.3157     0.3367     0.3575     0.3780 
+              0.3983     0.4184     0.4384     0.4582     0.4780 
+              0.4976     0.5171     0.5365     0.5559     0.5752 
+              0.5944     0.6136     0.6327     0.6536     0.6710 
+              0.6879     0.7050     0.7221     0.7391     0.7561 
+              0.7730     0.7897     0.8063     0.8228     0.8391 
+              0.8553     0.8713     0.8871     0.9028     0.9184 
+              0.9338     0.9499     0.9664     0.9831     1.0000 
+  Width: 
+              0.1307     0.1459     0.1612     0.1764     0.1917 
+              0.2070     0.2222     0.2375     0.2528     0.2680 
+              0.2833     0.2986     0.3138     0.3291     0.3444 
+              0.3596     0.3749     0.3902     0.4054     0.4207 
+              0.4360     0.4512     0.4665     0.4818     0.4970 
+              0.5123     0.5276     0.5428     0.6151     0.7002 
+              0.7169     0.7337     0.7504     0.7672     0.7840 
+              0.8007     0.8175     0.8343     0.8510     0.8678 
+              0.8846     0.9013     0.9181     0.9349     0.9516 
+              0.9684     0.9783     0.9855     0.9928     1.0000 
+
+  Transect XS65
+  Area:  
+              0.0031     0.0068     0.0110     0.0157     0.0209 
+              0.0267     0.0330     0.0398     0.0472     0.0551 
+              0.0635     0.0725     0.0820     0.0920     0.1026 
+              0.1136     0.1252     0.1374     0.1501     0.1633 
+              0.1770     0.1913     0.2061     0.2214     0.2372 
+              0.2543     0.2736     0.2952     0.3192     0.3456 
+              0.3733     0.4019     0.4310     0.4607     0.4909 
+              0.5218     0.5532     0.5852     0.6178     0.6509 
+              0.6846     0.7186     0.7529     0.7874     0.8222 
+              0.8573     0.8926     0.9281     0.9639     1.0000 
+  Hrad:  
+              0.0382     0.0708     0.1000     0.1270     0.1523 
+              0.1765     0.1999     0.2225     0.2447     0.2665 
+              0.2879     0.3090     0.3299     0.3507     0.3712 
+              0.3916     0.4119     0.4321     0.4522     0.4723 
+              0.4922     0.5121     0.5319     0.5517     0.5714 
+              0.5971     0.6178     0.6331     0.6476     0.6641 
+              0.6791     0.6945     0.7105     0.7268     0.7434 
+              0.7600     0.7766     0.7932     0.8097     0.8261 
+              0.8426     0.8596     0.8769     0.8943     0.9118 
+              0.9294     0.9470     0.9647     0.9824     1.0000 
+  Width: 
+              0.0936     0.1083     0.1229     0.1376     0.1523 
+              0.1669     0.1816     0.1962     0.2109     0.2256 
+              0.2402     0.2549     0.2696     0.2842     0.2989 
+              0.3135     0.3282     0.3429     0.3575     0.3722 
+              0.3868     0.4015     0.4162     0.4308     0.4455 
+              0.5016     0.5654     0.6291     0.7051     0.7492 
+              0.7806     0.7965     0.8124     0.8283     0.8442 
+              0.8601     0.8760     0.8919     0.9077     0.9236 
+              0.9367     0.9438     0.9508     0.9578     0.9648 
+              0.9719     0.9789     0.9859     0.9930     1.0000 
+  
+  
+  ****************
+  Analysis Options
+  ****************
+  Flow Units ............... MGD
+  Process Models:
+    Rainfall/Runoff ........ YES
+    RDII ................... NO
+    Snowmelt ............... NO
+    Groundwater ............ NO
+    Flow Routing ........... YES
+    Ponding Allowed ........ NO
+    Water Quality .......... NO
+  Infiltration Method ...... GREEN_AMPT
+  Flow Routing Method ...... DYNWAVE
+  Surcharge Method ......... EXTRAN
+  Starting Date ............ 12/20/1999 00:00:00
+  Ending Date .............. 01/01/2001 00:00:00
+  Antecedent Dry Days ...... 0.0
+  Report Time Step ......... 00:15:00
+  Wet Time Step ............ 00:05:00
+  Dry Time Step ............ 01:00:00
+  Routing Time Step ........ 5.00 sec
+  Variable Time Step ....... YES
+  Maximum Trials ........... 8
+  Number of Threads ........ 1
+  Head Tolerance ........... 0.005000 ft
+  
+  
+  **************************        Volume         Depth
+  Runoff Quantity Continuity     acre-feet        inches
+  **************************     ---------       -------
+  Total Precipitation ......       503.212        44.730
+  Evaporation Loss .........         0.000         0.000
+  Infiltration Loss ........       428.806        38.116
+  Surface Runoff ...........        74.398         6.613
+  Final Storage ............         0.127         0.011
+  Continuity Error (%) .....        -0.023
+  
+  
+  **************************        Volume        Volume
+  Flow Routing Continuity        acre-feet      10^6 gal
+  **************************     ---------     ---------
+  Dry Weather Inflow .......         0.000         0.000
+  Wet Weather Inflow .......        74.398        24.244
+  Groundwater Inflow .......         0.000         0.000
+  RDII Inflow ..............         0.000         0.000
+  External Inflow ..........     17160.800      5592.103
+  External Outflow .........     17247.464      5620.344
+  Flooding Loss ............         0.000         0.000
+  Evaporation Loss .........         0.000         0.000
+  Exfiltration Loss ........         0.000         0.000
+  Initial Stored Volume ....         0.067         0.022
+  Final Stored Volume ......         3.091         1.007
+  Continuity Error (%) .....        -0.089
+  
+  
+  *************************
+  Highest Continuity Errors
+  *************************
+  Node 40MGDPRIMARYBYPASS (-5.92%)
+  Node PUMPSTAK-4 (-2.81%)
+  Node NODE243 (2.71%)
+  Node WETLAND4 (-1.64%)
+  Node 40MGDPRIMARYBYPASS_1 (-1.49%)
+  
+  
+  ***************************
+  Time-Step Critical Elements
+  ***************************
+  Link 28MGD_IN (100.00%)
+  
+  
+  ********************************
+  Highest Flow Instability Indexes
+  ********************************
+  Link CSO4ORG.1 (7)
+  Link 40MGD_IN (1)
+  Link 40MGDPRIMARYBYPASS (1)
+  Link 40MGDPRIMARYBYPASS_1 (1)
+  
+  
+  *********************************
+  Most Frequent Nonconverging Nodes
+  *********************************
+  Node CSO_#103 (0.04%)
+  Node CSO_#4 (0.04%)
+  Node PLANTEFF (0.01%)
+  Node WETLANDSPLITTER (0.01%)
+  Node 40MGDPRIMARYBYPASS_1 (0.01%)
+  
+  
+  *************************
+  Routing Time Step Summary
+  *************************
+  Minimum Time Step           :     0.50 sec
+  Average Time Step           :     0.50 sec
+  Maximum Time Step           :     5.00 sec
+  % of Time in Steady State   :     0.00
+  Average Iterations per Step :     2.11
+  % of Steps Not Converging   :     0.04
+  Time Step Frequencies       :
+      5.000 -  3.155 sec      :     0.00 %
+      3.155 -  1.991 sec      :     0.00 %
+      1.991 -  1.256 sec      :     0.00 %
+      1.256 -  0.792 sec      :     0.00 %
+      0.792 -  0.500 sec      :   100.00 %
+  
+  
+  ***************************
+  Subcatchment Runoff Summary
+  ***************************
+  
+  ------------------------------------------------------------------------------------------------------------------------------
+                            Total      Total      Total      Total     Imperv       Perv      Total       Total     Peak  Runoff
+                           Precip      Runon       Evap      Infil     Runoff     Runoff     Runoff      Runoff   Runoff   Coeff
+  Subcatchment                 in         in         in         in         in         in         in    10^6 gal      MGD
+  ------------------------------------------------------------------------------------------------------------------------------
+  BEESLOUGH#1               44.73       0.00       0.00      38.26       4.47       2.00       6.47       18.45    30.98   0.145
+  STORMNEARCSO001           44.73       0.00       0.00      37.62       4.47       2.64       7.11        5.80    13.71   0.159
+  
+  
+  ******************
+  Node Depth Summary
+  ******************
+  
+  ---------------------------------------------------------------------------------
+                                 Average  Maximum  Maximum  Time of Max    Reported
+                                   Depth    Depth      HGL   Occurrence   Max Depth
+  Node                 Type         Feet     Feet     Feet  days hr:min        Feet
+  ---------------------------------------------------------------------------------
+  413                  JUNCTION     2.72    14.06   355.48    15  17:00       13.88
+  415                  JUNCTION     1.98    18.64   360.11    14  19:46       17.92
+  BEESLOUGH            JUNCTION     2.17    12.88   354.88    15  18:54       12.84
+  BS2                  JUNCTION     0.03     3.57   354.87    15  17:16        3.52
+  BS3                  JUNCTION     0.05     4.87   354.87    15  17:36        4.81
+  BS5                  JUNCTION     0.22     7.94   354.84    15  17:45        7.93
+  BS6                  JUNCTION     0.67     9.96   354.86    15  16:54        9.93
+  CSO#5                JUNCTION     0.16     6.85   362.43    14  17:00        6.84
+  CSO002               JUNCTION     0.10     6.54   354.84    15  18:11        6.51
+  CSO4PS               JUNCTION     0.00     0.00   350.00     0  00:00        0.00
+  CSO_#1               JUNCTION     0.10     7.81   360.71   267  06:37        7.10
+  CSO_#1_1             JUNCTION     0.03     2.90   354.90    15  17:51        2.85
+  CSO_#1_2             JUNCTION     0.12     8.87   360.87   267  06:37        7.76
+  DIV_396              JUNCTION     1.80     3.36   344.91    14  00:24        3.36
+  NODE243              JUNCTION     6.94    31.82   371.22    66  01:12       31.79
+  NODE245              JUNCTION     5.27    29.95   371.41    66  01:19       29.93
+  NODE282              JUNCTION     8.05    32.90   371.20    66  00:00       32.90
+  PLANTEFF             JUNCTION     1.77    19.39   363.39    14  19:46       19.08
+  PUMPSTAK-4           JUNCTION     4.56    18.48   357.98    15  17:01       16.37
+  VTUEFFLUENT          JUNCTION     0.96     1.06   319.06    14  03:43        1.06
+  VTU_IN               JUNCTION     0.01     2.73   342.73   251  02:00        2.71
+  WETLAND1             JUNCTION     0.17     9.63   368.13    14  20:59        9.61
+  WETLAND2             JUNCTION     0.25    10.58   368.08    14  21:00       10.58
+  WETLAND3             JUNCTION     0.34    11.57   368.07    14  21:01       11.56
+  WETLAND4             JUNCTION     0.48    12.58   368.08    14  21:01       12.55
+  WETLANDEFF           JUNCTION     1.78    14.58   368.08    14  21:01       14.55
+  CSO_#103             OUTFALL      5.04    29.85   371.20    65  23:59       29.85
+  CSO_#4               OUTFALL      8.15    33.00   371.20    65  23:59       33.00
+  28MGD_IN             STORAGE      6.43     7.40   349.40   377  23:18        7.27
+  40MGDPRIMARYBYPASS   STORAGE     12.57    15.15   363.15    14  11:17       15.14
+  40MGDPRIMARYBYPASS_1 STORAGE     11.61    14.16   363.16    66  04:50       14.16
+  40MGD_IN             STORAGE      0.17     0.35   348.35   266  14:33        0.34
+  40MGD_IN_1           STORAGE      0.07     3.00   352.00    91  00:53        3.00
+  445                  STORAGE      2.69    19.57   361.22    14  19:45       19.51
+  CSO4W                STORAGE     17.10    17.83   357.29    15  17:01       17.83
+  EASTPLANT28MGD       STORAGE      1.18    18.47   363.47    14  18:00       18.13
+  EASTPLANT40MGD       STORAGE      0.77    18.91   363.91    14  18:53       18.57
+  EASTPLANTEFFPS_WW    STORAGE      0.58    18.43   359.90    14  19:46       17.70
+  EASTPLANTSPLITTER    STORAGE      1.06    12.14   363.14   267  07:01       12.14
+  EASTWWTP             STORAGE      0.36     5.14   333.31    14  20:00        5.14
+  STRUCTURE2           STORAGE      0.26    14.08   360.68    14  18:51       13.44
+  STRUCTURE3           STORAGE      0.29    14.72   360.51   251  04:09       13.66
+  VTU                  STORAGE      6.08    91.89   324.89   251  02:02       91.71
+  WETLANDEFF1          STORAGE      0.35    19.39   367.89    14  21:01       19.36
+  WETLANDEFF2          STORAGE      0.59    15.26   362.26    15  10:42       15.04
+  WETLANDPS            STORAGE      1.36    17.22   359.22   267  06:36       17.20
+  WETLANDPSDIVERT      STORAGE      0.08     2.23   345.13   322  15:17        2.18
+  WETLANDSPLITTER      STORAGE      0.11    12.40   370.90    14  20:59       12.25
+  WETLANDSPLITTER1     STORAGE      0.11     8.74   368.24    14  20:59        8.61
+  
+  
+  *******************
+  Node Inflow Summary
+  *******************
+  
+  -------------------------------------------------------------------------------------------------
+                                  Maximum  Maximum                  Lateral       Total        Flow
+                                  Lateral    Total  Time of Max      Inflow      Inflow     Balance
+                                   Inflow   Inflow   Occurrence      Volume      Volume       Error
+  Node                 Type           MGD      MGD  days hr:min    10^6 gal    10^6 gal     Percent
+  -------------------------------------------------------------------------------------------------
+  413                  JUNCTION     0.000  620.824    14  16:07           0         433       0.021
+  415                  JUNCTION     0.000  107.556    14  12:57           0    5.24e+03      -0.005
+  BEESLOUGH            JUNCTION    30.985  549.473    14  16:51        18.4         439      -0.333
+  BS2                  JUNCTION     0.000   35.055    18  09:29           0        12.5      -0.004
+  BS3                  JUNCTION     0.000   87.796    18  09:19           0        16.9      -0.002
+  BS5                  JUNCTION     0.000  257.742    14  16:15           0         356      -0.014
+  BS6                  JUNCTION     0.000  170.777    14  16:08           0         365       0.075
+  CSO#5                JUNCTION   197.123  197.123    14  17:00         683         683       0.006
+  CSO002               JUNCTION     0.000  116.258    18  09:17           0        22.2      -0.019
+  CSO4PS               JUNCTION     0.000    0.000     0  00:00           0           0       0.000 gal
+  CSO_#1               JUNCTION     0.000  203.934    14  16:19           0         683      -0.005
+  CSO_#1_1             JUNCTION    13.710   21.352    15  17:11         5.8        7.98       0.005
+  CSO_#1_2             JUNCTION     0.000  223.021    14  12:51           0         689      -0.027
+  DIV_396              JUNCTION    40.006   40.006    14  00:00    4.75e+03    4.75e+03       0.000
+  NODE243              JUNCTION     0.000  524.345    18  09:08           0         382       2.787
+  NODE245              JUNCTION     0.000   68.000    14  12:56           0    5.24e+03       0.001
+  NODE282              JUNCTION     0.000  234.863     0  00:01           0         392       0.040
+  PLANTEFF             JUNCTION     0.000   86.824   280  10:28           0    5.08e+03       0.006
+  PUMPSTAK-4           JUNCTION     0.000  344.556    14  16:07           0         369      -2.735
+  VTUEFFLUENT          JUNCTION     0.000  157.040   251  02:02           0        97.9       0.000
+  VTU_IN               JUNCTION   160.287  160.287   251  02:00         134         134       0.114
+  WETLAND1             JUNCTION     0.000  178.396   179  23:23           0         389       0.000
+  WETLAND2             JUNCTION     0.000  160.013   280  10:15           0         389       0.000
+  WETLAND3             JUNCTION     0.000  146.032   280  10:22           0         389       0.001
+  WETLAND4             JUNCTION     0.000  128.953   280  11:13           0         389      -1.613
+  WETLANDEFF           JUNCTION     0.000  105.329    14  21:05           0         395       0.597
+  CSO_#103             OUTFALL      0.000   70.853    14  12:57           0    5.24e+03       0.000
+  CSO_#4               OUTFALL      0.000  234.863     0  00:01           0         400       0.000
+  28MGD_IN             STORAGE      0.000   28.000     0  00:02           0    4.79e+03      -0.000
+  40MGDPRIMARYBYPASS   STORAGE      0.000   40.000   377  23:02           0       0.447      -5.586
+  40MGDPRIMARYBYPASS_1 STORAGE      0.000   40.000   377  23:02           0        2.23      -1.471
+  40MGD_IN             STORAGE      0.000   40.000    14  00:40           0         295      -0.002
+  40MGD_IN_1           STORAGE      0.000   40.405    14  08:13           0         295       0.018
+  445                  STORAGE      0.000  234.092    14  13:00           0    5.24e+03       0.008
+  CSO4W                STORAGE      0.000  178.791    15  16:59           0      0.0537       0.632
+  EASTPLANT28MGD       STORAGE      0.000   59.733    14  12:55           0    4.79e+03      -0.000
+  EASTPLANT40MGD       STORAGE      0.000   40.478    14  12:55           0         296       0.002
+  EASTPLANTEFFPS_WW    STORAGE      0.000  102.697    14  13:02           0    2.13e+03      -0.000
+  EASTPLANTSPLITTER    STORAGE      0.000   75.249   180  09:26           0    5.08e+03       0.000
+  EASTWWTP             STORAGE      0.000   46.233   275  20:32           0    5.02e+03       0.000
+  STRUCTURE2           STORAGE      0.000  307.768   179  23:37           0         724       0.208
+  STRUCTURE3           STORAGE      0.000  310.118   280  10:30           0         751      -0.066
+  VTU                  STORAGE      0.000  159.584   251  02:00           0         134      -0.396
+  WETLANDEFF1          STORAGE      0.000  128.841    14  12:51           0         393      -0.042
+  WETLANDEFF2          STORAGE      0.000   21.000    14  12:52           0         235       0.005
+  WETLANDPS            STORAGE      0.000  288.053   189  09:23           0         716       0.035
+  WETLANDPSDIVERT      STORAGE      0.000  229.981   251  12:12           0         229      -0.036
+  WETLANDSPLITTER      STORAGE      0.000  200.000    14  00:39           0         453      -0.006
+  WETLANDSPLITTER1     STORAGE      0.000  184.393   267  08:30           0         389       0.007
+  
+  
+  **********************
+  Node Surcharge Summary
+  **********************
+  
+  Surcharging occurs when water rises above the top of the highest conduit.
+  ---------------------------------------------------------------------
+                                               Max. Height   Min. Depth
+                                   Hours       Above Crown    Below Rim
+  Node                 Type      Surcharged           Feet         Feet
+  ---------------------------------------------------------------------
+  415                  JUNCTION       57.74         10.113        3.798
+  NODE243              JUNCTION      981.59         16.816        8.778
+  NODE245              JUNCTION     1906.47         22.947        8.592
+  NODE282              JUNCTION      598.73         12.900        8.800
+  PLANTEFF             JUNCTION       95.78         14.389        8.211
+  PUMPSTAK-4           JUNCTION       66.15          3.477       18.270
+  
+  
+  *********************
+  Node Flooding Summary
+  *********************
+  
+  No nodes were flooded.
+  
+  
+  **********************
+  Storage Volume Summary
+  **********************
+  
+  ------------------------------------------------------------------------------------------------
+                         Average    Avg   Evap  Exfil     Maximum    Max    Time of Max    Maximum
+                          Volume   Pcnt   Pcnt   Pcnt      Volume   Pcnt     Occurrence    Outflow
+  Storage Unit          1000 ft³   Full   Loss   Loss    1000 ft³   Full    days hr:min        MGD
+  ------------------------------------------------------------------------------------------------
+  28MGD_IN                 0.081    8.1    0.0    0.0       0.093    9.4     377  23:18     28.000
+  40MGDPRIMARYBYPASS       0.158   17.2    0.0    0.0       0.190   20.8      14  11:17     40.000
+  40MGDPRIMARYBYPASS_1     0.146   15.9    0.0    0.0       0.178   19.4      66  04:50     44.120
+  40MGD_IN                 0.002    0.2    0.0    0.0       0.004    0.5     266  14:33     40.000
+  40MGD_IN_1               0.001    0.1    0.0    0.0       0.038    4.1      91  00:53     40.000
+  445                      0.034    9.7    0.0    0.0       0.246   70.9      14  19:45    117.139
+  CSO4W                    6.841   42.2    0.0    0.0       7.134   44.0      15  17:01      0.000
+  EASTPLANT28MGD           0.592    2.4    0.0    0.0       9.234   36.9      14  18:00     56.682
+  EASTPLANT40MGD           0.077    1.5    0.0    0.0       1.891   37.8      14  18:53     58.748
+  EASTPLANTEFFPS_WW        0.233    1.2    0.0    0.0       7.372   36.9      14  19:46     68.000
+  EASTPLANTSPLITTER        0.053    1.5    0.0    0.0       0.607   17.3     267  07:01     75.272
+  EASTWWTP                 0.145    1.1    0.0    0.0       2.057   16.1      14  20:00     40.000
+  STRUCTURE2               0.017    0.8    0.0    0.0       0.895   45.4      14  18:51    310.118
+  STRUCTURE3               0.018    0.9    0.0    0.0       0.936   47.5     251  04:09    288.053
+  VTU                     20.795    4.4    0.0    0.0     314.206   67.1     251  02:02    157.040
+  WETLANDEFF1              0.007    0.7    0.0    0.0       0.388   38.8      14  21:01    187.151
+  WETLANDEFF2              0.007    1.2    0.0    0.0       0.192   30.5      15  10:42    167.359
+  WETLANDPS                0.543    4.3    0.0    0.0       6.888   54.1     267  06:36    425.783
+  WETLANDPSDIVERT          0.004    0.3    0.0    0.0       0.111    7.0     322  15:17     35.964
+  WETLANDSPLITTER          0.023    0.2    0.0    0.0       2.480   24.8      14  20:59    212.393
+  WETLANDSPLITTER1         0.023    0.2    0.0    0.0       1.747   17.5      14  20:59    178.396
+  
+  
+  ***********************
+  Outfall Loading Summary
+  ***********************
+  
+  -----------------------------------------------------------
+                         Flow       Avg       Max       Total
+                         Freq      Flow      Flow      Volume
+  Outfall Node           Pcnt       MGD       MGD    10^6 gal
+  -----------------------------------------------------------
+  CSO_#103             100.00    13.612    70.853    5241.580
+  CSO_#4                96.23     1.032   234.863     399.935
+  -----------------------------------------------------------
+  System                98.11    14.644   284.179    5641.515
+  
+  
+  ********************
+  Link Flow Summary
+  ********************
+  
+  -----------------------------------------------------------------------------
+                                 Maximum  Time of Max   Maximum    Max/    Max/
+                                  |Flow|   Occurrence   |Veloc|    Full    Full
+  Link                 Type          MGD  days hr:min    ft/sec    Flow   Depth
+  -----------------------------------------------------------------------------
+  28MGD_DS             CONDUIT    56.682    14  21:00      6.12    0.48    1.00
+  28MGD_IN             CONDUIT    28.000     0  00:02    >50.00    0.02    0.55
+  400.1.1              CONDUIT   203.934    14  16:19      8.40    0.94    0.74
+  40MGDPRIMARYBYPASS_1 CONDUIT    40.000   377  23:02      4.64    0.07    1.00
+  40MGD_DS             CONDUIT    58.748    14  12:57      5.94    0.49    1.00
+  40MGD_IN_1           CONDUIT    40.000    14  00:40     11.43    0.07    0.26
+  410.1                CONDUIT    40.006    14  04:39      5.89    1.11    0.63
+  437.1                CONDUIT   196.707    18  09:15      6.01    0.17    1.00
+  439.1                CONDUIT   344.556    14  16:07      6.99    0.21    0.97
+  441.1                CONDUIT    70.853    14  12:57      5.80    1.53    1.00
+  442.1                CONDUIT   107.556    14  12:57      5.91    4.87    1.00
+  445.1                CONDUIT   620.824    14  16:07     12.14    0.32    0.89
+  CSO1_OVERFLOW        CONDUIT     0.000     0  00:00      0.00    0.00    0.16
+  CSO1_WETLAND         CONDUIT   200.000    14  00:43     14.50    0.26    0.91
+  CSO1_WETLAND1        CONDUIT   307.768   179  23:37      9.89    0.58    0.99
+  CSO1_WETLAND2        CONDUIT   310.118   280  10:30      8.61    0.88    1.00
+  CSO1_WETLAND3        CONDUIT   288.053   189  09:23      9.42    0.81    1.00
+  CSO4FM               CONDUIT     0.000     0  00:00      0.00    0.00    0.50
+  LINK231              CONDUIT     0.000    14  00:43      0.03    0.00    1.00
+  LINK303              CONDUIT   234.863     0  00:01      8.02    0.13    1.00
+  PLANTEFFLUENT        CONDUIT    82.744    14  12:58      8.05    1.83    1.00
+  PSINTERCONNECTION    CONDUIT    26.477   322  15:48      6.18    0.44    0.45
+  VTUEFFLUENT          CONDUIT   157.040   251  02:02     19.09    0.26    0.57
+  VTU_IN               CONDUIT   159.584   251  02:00     23.58    0.45    0.77
+  WETLAND1             CHANNEL   178.396   179  23:23      0.24    0.04    0.23
+  WETLAND2             CHANNEL   160.013   280  10:15      0.21    0.03    0.25
+  WETLAND3             CHANNEL   146.032   280  10:22      0.21    0.03    0.28
+  WETLAND4             CHANNEL   128.953   280  11:13      0.19    0.03    0.30
+  WETLAND5             CHANNEL   105.329    14  21:05      0.16    0.02    0.33
+  WETLANDEFFLUENT      CONDUIT    21.000    14  12:52     10.30    0.39    1.00
+  XS15                 CHANNEL    33.938    18  09:19      2.00    0.00    0.17
+  XS25                 CHANNEL    87.796    18  09:19      2.28    0.00    0.24
+  XS35                 CHANNEL   116.258    18  09:17      2.46    0.01    0.30
+  XS45                 CHANNEL   132.800    18  09:15      2.42    0.01    0.34
+  XS55                 CHANNEL   170.777    14  16:08      6.96    0.01    0.37
+  XS65                 CHANNEL   202.030    14  16:09      6.25    0.00    0.33
+  28MGD_US             PUMP       28.000    12  00:38                          
+  40MGDPRIMARYBYPASS_P PUMP        0.000     0  00:00                          
+  40MGD_US             PUMP       40.000    14  00:40                          
+  90011                PUMP       40.000    13  20:15              1.00
+  EASTPLANTEFFPS_P     PUMP       68.000    14  12:56              1.00
+  K4P1                 PUMP        0.000     0  00:00              0.00
+  K4P2                 PUMP        0.000     0  00:00              0.00
+  LINK350              PUMP      157.040   251  02:02                          
+  VTUDRAIN             PUMP        1.100    87  20:33              1.00
+  WETLANDPS            PUMP      200.000    14  00:39              1.00
+  WETLANDTOPLANT       PUMP       28.000    14  00:39              1.00
+  409.1                WEIR        0.000     0  00:00                      0.00
+  40MGDPRIMARYBYPASS   WEIR       11.289   377  23:02                      0.36
+  40MGD_IN             WEIR       40.405    14  08:13                      0.36
+  637.1                WEIR      178.791    15  16:59                      1.00
+  CSO3G                WEIR       68.000   280  10:15                      0.68
+  CSO4ORG.1            WEIR      524.345    18  09:08                      1.00
+  EASTPLANTEFFPS       WEIR      102.697    14  13:02                      1.00
+  WETLANDEFF           WEIR      128.841    14  12:51                      1.00
+  WETLANDEFF1          WEIR      166.608    14  13:05                      1.00
+  WETLANDPSDIVERT      WEIR      229.981   251  12:12                      1.00
+  WETLANDSPLITTER      WEIR      184.393   267  08:30                      1.00
+  WETLANDTOPLANTEFFLUENTPS WEIR      166.151    14  13:00                      1.00
+  
+  
+  ***************************
+  Flow Classification Summary
+  ***************************
+  
+  -------------------------------------------------------------------------------------
+                      Adjusted    ---------- Fraction of Time in Flow Class ---------- 
+                       /Actual         Up    Down  Sub   Sup   Up    Down  Norm  Inlet 
+  Conduit               Length    Dry  Dry   Dry   Crit  Crit  Crit  Crit  Ltd   Ctrl  
+  -------------------------------------------------------------------------------------
+  28MGD_DS                1.00   0.00  0.00  0.00  1.00  0.00  0.00  0.00  0.94  0.00
+  28MGD_IN                1.00   0.00  0.00  0.00  0.00  0.84  0.00  0.16  0.70  0.00
+  400.1.1                 1.00   0.04  0.12  0.00  0.84  0.00  0.00  0.00  0.62  0.00
+  40MGDPRIMARYBYPASS_1    1.00   0.04  0.00  0.00  0.96  0.00  0.00  0.00  0.00  0.00
+  40MGD_DS                1.00   0.00  0.00  0.00  1.00  0.00  0.00  0.00  0.00  0.00
+  40MGD_IN_1              1.00   0.04  0.90  0.00  0.00  0.06  0.00  0.00  0.91  0.00
+  410.1                   1.00   0.00  0.00  0.00  0.00  0.00  0.00  1.00  0.00  0.00
+  437.1                   1.00   0.00  0.00  0.00  1.00  0.00  0.00  0.00  0.00  0.00
+  439.1                   1.00   0.04  0.00  0.00  0.96  0.00  0.00  0.00  0.01  0.00
+  441.1                   1.00   0.00  0.00  0.00  1.00  0.00  0.00  0.00  0.00  0.00
+  442.1                   1.00   0.00  0.00  0.00  1.00  0.00  0.00  0.00  0.00  0.00
+  445.1                   1.00   0.04  0.02  0.00  0.94  0.01  0.00  0.00  0.08  0.00
+  CSO1_OVERFLOW           1.00   0.41  0.59  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  CSO1_WETLAND            1.00   0.04  0.00  0.00  0.87  0.09  0.00  0.00  0.19  0.00
+  CSO1_WETLAND1           1.00   0.80  0.00  0.00  0.20  0.00  0.00  0.00  0.58  0.00
+  CSO1_WETLAND2           1.00   0.80  0.00  0.00  0.20  0.00  0.00  0.00  0.72  0.00
+  CSO1_WETLAND3           1.00   0.79  0.01  0.00  0.20  0.00  0.00  0.00  0.74  0.00
+  CSO4FM                  1.00   0.64  0.17  0.00  0.19  0.00  0.00  0.00  0.00  0.00
+  LINK231                 1.00   0.61  0.05  0.00  0.02  0.00  0.30  0.01  0.23  0.00
+  LINK303                 1.00   0.00  0.00  0.00  1.00  0.00  0.00  0.00  0.00  0.00
+  PLANTEFFLUENT           1.00   0.00  0.00  0.00  0.35  0.00  0.00  0.65  0.06  0.00
+  PSINTERCONNECTION       1.00   0.04  0.00  0.00  0.00  0.00  0.00  0.96  0.00  0.00
+  VTUEFFLUENT             1.00   0.04  0.75  0.00  0.02  0.01  0.19  0.00  0.52  0.00
+  VTU_IN                  1.00   0.45  0.05  0.00  0.02  0.00  0.00  0.49  0.48  0.00
+  WETLAND1                1.00   0.04  0.05  0.00  0.91  0.00  0.00  0.00  0.90  0.00
+  WETLAND2                1.00   0.04  0.00  0.00  0.96  0.00  0.00  0.00  0.88  0.00
+  WETLAND3                1.00   0.04  0.00  0.00  0.96  0.00  0.00  0.00  0.87  0.00
+  WETLAND4                1.00   0.04  0.00  0.00  0.96  0.00  0.00  0.00  0.84  0.00
+  WETLAND5                1.00   0.04  0.00  0.00  0.87  0.00  0.00  0.09  0.72  0.00
+  WETLANDEFFLUENT         1.00   0.34  0.00  0.00  0.62  0.04  0.00  0.00  0.00  0.00
+  XS15                    1.00   0.14  0.27  0.00  0.59  0.00  0.00  0.00  0.51  0.00
+  XS25                    1.00   0.11  0.07  0.00  0.83  0.00  0.00  0.00  0.59  0.00
+  XS35                    1.00   0.09  0.06  0.00  0.85  0.00  0.00  0.00  0.78  0.00
+  XS45                    1.00   0.05  0.04  0.00  0.91  0.00  0.00  0.00  0.78  0.00
+  XS55                    1.00   0.06  0.01  0.00  0.93  0.00  0.00  0.00  0.66  0.00
+  XS65                    1.00   0.14  0.00  0.00  0.44  0.00  0.00  0.43  0.11  0.00
+  
+  
+  *************************
+  Conduit Surcharge Summary
+  *************************
+  
+  ----------------------------------------------------------------------------
+                                                           Hours        Hours 
+                         --------- Hours Full --------   Above Full   Capacity
+  Conduit                Both Ends  Upstream  Dnstream   Normal Flow   Limited
+  ----------------------------------------------------------------------------
+  28MGD_DS                   64.36     64.36     95.77      0.01         0.01
+  28MGD_IN                    0.01    538.63      0.01      0.01         0.01
+  40MGDPRIMARYBYPASS_1     8739.77   8739.80   8739.92      0.01         0.13
+  40MGD_DS                   69.10     69.10     95.77      0.01         0.01
+  410.1                       0.01      0.01      0.01    173.78         0.01
+  437.1                     981.58    981.58   1134.89      0.01         0.01
+  439.1                       0.01      0.01     66.15      0.01         0.01
+  441.1                    1906.08   1906.46   1920.06    147.50        63.47
+  442.1                      63.04     69.84     63.04    790.97        63.02
+  CSO1_WETLAND1               0.01      0.01     95.83      0.01         0.01
+  CSO1_WETLAND2              95.61     95.83    115.35      0.01         7.32
+  CSO1_WETLAND3             115.30    115.35    200.72      0.01         2.14
+  CSO4FM                      0.01      0.01   8713.62      0.01         0.01
+  LINK231                    28.19     57.74    199.20      0.01        24.93
+  LINK303                   598.73    598.73    603.27      0.01         0.01
+  PLANTEFFLUENT              84.13    110.79     85.79     70.73        33.05
+  VTU_IN                      0.01      0.01   4320.91      0.01         0.01
+  WETLANDEFFLUENT            50.52    278.61     57.13      0.01        14.77
+  
+  
+  ***************
+  Pumping Summary
+  ***************
+  
+  ---------------------------------------------------------------------------------------------------------
+                                                  Min       Avg       Max     Total     Power    % Time Off
+                        Percent   Number of      Flow      Flow      Flow    Volume     Usage    Pump Curve
+  Pump                 Utilized   Start-Ups       MGD       MGD       MGD  10^6 gal     Kw-hr    Low   High
+  ---------------------------------------------------------------------------------------------------------
+  28MGD_US                99.99          97      0.00     12.53     28.00  4788.152  34688.15    0.0    0.0
+  40MGDPRIMARYBYPASS_P     0.00           0      0.00      0.00      0.00     0.000      0.00    0.0    0.0
+  40MGD_US                 5.84          48      0.00     13.35     40.00   294.973   1693.60    0.0    0.0
+  90011                   99.97          94      0.00     13.06     40.00  5018.410 388867.36    0.0    0.0
+  EASTPLANTEFFPS_P        34.74          12      0.00     15.90     68.00  2125.850  61826.02    0.0    0.0
+  K4P1                     0.00           0      0.00      0.00      0.00     0.000      0.00    0.0    0.0
+  K4P2                     0.00           0      0.00      0.00      0.00     0.000      0.00    0.0    0.0
+  LINK350                  2.05        4106      0.00     12.62    157.04    97.895   9024.36    0.0    0.0
+  VTUDRAIN                 8.79        3644      0.00      1.10      1.10    36.545   6071.37    0.0    0.0
+  WETLANDPS                0.60         153      0.00    199.98    200.00   453.215  19083.43    0.0    0.0
+  WETLANDTOPLANT           0.61         153      0.00     27.95     28.00    64.706    591.75    0.0    0.0
+  
+
+  Analysis begun on:  Fri Mar  6 15:04:24 2026
+  Analysis ended on:  Fri Mar  6 15:33:46 2026
+  Total elapsed time: 00:29:22

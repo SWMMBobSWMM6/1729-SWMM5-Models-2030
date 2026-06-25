@@ -1,0 +1,156 @@
+[TITLE]
+;;Project Title/Notes
+Demonstrates the fix for a v5.1.013 bug that ignored soil moisture deficit recovery for Green-Ampt exfiltration
+from storage units. Running this data set shows that for second storm event the storage unit using G-A exfiltration
+correctly empties at same rate as after the first event since moisture deficit has fully recovered.
+
+[OPTIONS]
+;;Option             Value
+FLOW_UNITS           CFS
+INFILTRATION         GREEN_AMPT
+FLOW_ROUTING         KINWAVE
+LINK_OFFSETS         DEPTH
+MIN_SLOPE            0
+ALLOW_PONDING        NO
+SKIP_STEADY_STATE    NO
+
+START_DATE           01/01/2010
+START_TIME           00:00:00
+REPORT_START_DATE    01/01/2010
+REPORT_START_TIME    00:00:00
+END_DATE             01/28/2010
+END_TIME             01:00:00
+SWEEP_START          01/01
+SWEEP_END            12/31
+DRY_DAYS             0
+REPORT_STEP          00:05:00
+WET_STEP             00:05:00
+DRY_STEP             00:05:00
+ROUTING_STEP         0:00:30 
+RULE_STEP            00:00:00
+
+INERTIAL_DAMPING     PARTIAL
+NORMAL_FLOW_LIMITED  BOTH
+FORCE_MAIN_EQUATION  H-W
+VARIABLE_STEP        0.75
+LENGTHENING_STEP     0
+MIN_SURFAREA         12.557
+MAX_TRIALS           8
+HEAD_TOLERANCE       0.005
+SYS_FLOW_TOL         5
+LAT_FLOW_TOL         5
+MINIMUM_STEP         0.5
+THREADS              1
+
+[EVAPORATION]
+;;Data Source    Parameters
+;;-------------- ----------------
+CONSTANT         0.0
+RECOVERY         Monthly_Soil_Recovery
+DRY_ONLY         NO
+
+[OUTFALLS]
+;;Name           Elevation  Type       Stage Data       Gated    Route To        
+;;-------------- ---------- ---------- ---------------- -------- ----------------
+O-1              0          FREE                        NO                       
+O-2              0          FREE                        NO                       
+
+[STORAGE]
+;;Name           Elev.    MaxDepth   InitDepth  Shape      Curve Name/Params            N/A      Fevap    Psi      Ksat     IMD     
+;;-------------- -------- ---------- ----------- ---------- ---------------------------- -------- --------          -------- --------
+SU-green-ampt    0        10         0          TABULAR    SU-1_storage                 0        0        2.5      0.5      0.4     
+SU-no-GA         0        10         0          TABULAR    SU-1_storage                 0        0        0        0.5      0       
+
+[OUTLETS]
+;;Name           From Node        To Node          Offset     Type            QTable/Qcoeff    Qexpon     Gated   
+;;-------------- ---------------- ---------------- ---------- --------------- ---------------- ---------- --------
+1                SU-green-ampt    O-1              15         FUNCTIONAL/DEPTH 10.0             0.5        NO      
+2                SU-no-GA         O-2              15         FUNCTIONAL/DEPTH 10               0.5        NO      
+
+[INFLOWS]
+;;Node           Constituent      Time Series      Type     Mfactor  Sfactor  Baseline Pattern
+;;-------------- ---------------- ---------------- -------- -------- -------- -------- --------
+SU-green-ampt    FLOW             Inflow_SU-1      FLOW     1.0      1.5              
+SU-no-GA         FLOW             Inflow_SU-1      FLOW     1.0      1.5              
+
+[CURVES]
+;;Name           Type       X-Value    Y-Value   
+;;-------------- ---------- ---------- ----------
+SU-1_storage     Storage    0          10        
+SU-1_storage                10         10        
+;
+SU-2_Storage     Storage    0          1         
+SU-2_Storage                1          2         
+SU-2_Storage                2          4         
+SU-2_Storage                5          50        
+SU-2_Storage                6          100       
+SU-2_Storage                10         100       
+
+[TIMESERIES]
+;;Name           Date       Time       Value     
+;;-------------- ---------- ---------- ----------
+Inflow_SU-1      1/1/2010   0:0        0         
+Inflow_SU-1      1/10/2010  0:0        0         
+Inflow_SU-1      1/10/2010  0:1        0.01      
+Inflow_SU-1      1/10/2010  1:0        0.01      
+Inflow_SU-1      1/10/2010  1:1        0         
+Inflow_SU-1      1/20/2010  0:0        0         
+Inflow_SU-1      1/20/2010  0:1        0.01      
+Inflow_SU-1      1/20/2010  1:0        0.01      
+Inflow_SU-1      1/20/2010  1:1        0         
+Inflow_SU-1      1/30/2010  0:0        0         
+Inflow_SU-1      1/30/2010  0:1        0.01      
+Inflow_SU-1      1/30/2010  1:0        0.01      
+Inflow_SU-1      1/30/2010  1:1        0         
+Inflow_SU-1      2/10/2010  0:0        0         
+Inflow_SU-1      2/10/2010  0:1        0.01      
+Inflow_SU-1      2/10/2010  1:0        0.01      
+Inflow_SU-1      2/10/2010  1:1        0         
+Inflow_SU-1      4/10/2010  0:0        0         
+Inflow_SU-1      4/10/2010  0:1        0.01      
+Inflow_SU-1      4/10/2010  1:0        0.01      
+Inflow_SU-1      4/10/2010  1:1        0         
+;
+zero-rain                   0:0        0         
+zero-rain                   0:5        0         
+;
+rain1            1/1/2010   0:0        0         
+rain1            1/10/2010  0:0        0         
+rain1            1/10/2010  0:1        1         
+rain1            1/10/2010  5:0        1         
+rain1            1/10/2010  5:1        0         
+rain1            1/13/2010  0:0        0         
+rain1            1/13/2010  0:1        1         
+rain1            1/13/2010  5:0        1         
+rain1            1/13/2010  5:1        0         
+
+[PATTERNS]
+;;Name           Type       Multipliers
+;;-------------- ---------- -----------
+Monthly_Soil_Recovery MONTHLY    10    10    1.0   1.0   1.0   1.0  
+Monthly_Soil_Recovery            1.0   1.0   1.0   1.0   1.0   1.0  
+
+[REPORT]
+;;Reporting Options
+SUBCATCHMENTS NONE
+NODES SU-green-ampt SU-no-GA
+LINKS NONE
+
+[TAGS]
+
+[MAP]
+DIMENSIONS 3.720 5161.458 1722.470 6847.470
+Units      None
+
+[COORDINATES]
+;;Node           X-Coord            Y-Coord           
+;;-------------- ------------------ ------------------
+O-1              81.845             6041.667          
+O-2              1019.345           5238.095          
+SU-green-ampt    706.845            6770.833          
+SU-no-GA         1644.345           6175.595          
+
+[VERTICES]
+;;Link           X-Coord            Y-Coord           
+;;-------------- ------------------ ------------------
+

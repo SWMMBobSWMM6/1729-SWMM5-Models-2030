@@ -1,0 +1,287 @@
+
+  EPA STORM WATER MANAGEMENT MODEL - VERSION 5.2 (Build 5.2.4)
+  ------------------------------------------------------------
+
+  {Peter Klaver - Dec 7, 2018} for experimentation purposes only 
+  
+  ****************
+  Analysis Options
+  ****************
+  Flow Units ............... CFS
+  Process Models:
+    Rainfall/Runoff ........ YES
+    RDII ................... NO
+    Snowmelt ............... NO
+    Groundwater ............ NO
+    Flow Routing ........... YES
+    Ponding Allowed ........ NO
+    Water Quality .......... YES
+  Infiltration Method ...... HORTON
+  Flow Routing Method ...... DYNWAVE
+  Surcharge Method ......... EXTRAN
+  Starting Date ............ 01/01/1970 00:00:00
+  Ending Date .............. 02/01/1970 00:00:00
+  Antecedent Dry Days ...... 0.0
+  Report Time Step ......... 00:15:00
+  Wet Time Step ............ 00:01:00
+  Dry Time Step ............ 00:05:00
+  Routing Time Step ........ 2.00 sec
+  Variable Time Step ....... YES
+  Maximum Trials ........... 8
+  Number of Threads ........ 1
+  Head Tolerance ........... 0.005000 ft
+  
+  
+  **************************        Volume         Depth
+  Runoff Quantity Continuity     acre-feet        inches
+  **************************     ---------       -------
+  Total Precipitation ......        31.040         1.270
+  Evaporation Loss .........         4.402         0.180
+  Infiltration Loss ........        21.418         0.876
+  Surface Runoff ...........         5.221         0.214
+  Final Storage ............         0.000         0.000
+  Continuity Error (%) .....        -0.000
+  
+  
+  **************************      CompundE    BaseTracer
+  Runoff Quality Continuity            lbs           lbs
+  **************************    ----------    ----------
+  Initial Buildup ..........         0.000         0.000
+  Surface Buildup ..........    288284.093     19368.439
+  Wet Deposition ...........         0.000         0.000
+  Sweeping Removal .........         0.000         0.000
+  Infiltration Loss ........         0.000         0.000
+  BMP Removal ..............         0.000         0.000
+  Surface Runoff ...........    288284.093     19368.439
+  Remaining Buildup ........         0.000         0.000
+  Continuity Error (%) .....         0.000         0.000
+  
+  
+  **************************        Volume        Volume
+  Flow Routing Continuity        acre-feet      10^6 gal
+  **************************     ---------     ---------
+  Dry Weather Inflow .......         0.000         0.000
+  Wet Weather Inflow .......         5.221         1.701
+  Groundwater Inflow .......         0.000         0.000
+  RDII Inflow ..............         0.000         0.000
+  External Inflow ..........        12.297         4.007
+  External Outflow .........        17.465         5.691
+  Flooding Loss ............         0.001         0.000
+  Evaporation Loss .........         0.025         0.008
+  Exfiltration Loss ........         0.000         0.000
+  Initial Stored Volume ....         0.000         0.000
+  Final Stored Volume ......         0.034         0.011
+  Continuity Error (%) .....        -0.041
+  
+  
+  **************************      CompundE    BaseTracer
+  Quality Routing Continuity           lbs           lbs
+  **************************    ----------    ----------
+  Dry Weather Inflow .......         0.000         0.000
+  Wet Weather Inflow .......    288284.093     19368.439
+  Groundwater Inflow .......         0.000         0.000
+  RDII Inflow ..............         0.000         0.000
+  External Inflow ..........      5012.546     33416.975
+  External Outflow .........    294336.730     52740.771
+  Flooding Loss ............        41.175         2.776
+  Exfiltration Loss ........         0.000         0.000
+  Mass Reacted .............         0.000         0.000
+  Initial Stored Mass ......         0.000         0.000
+  Final Stored Mass ........         0.001        99.683
+  Continuity Error (%) .....        -0.369        -0.110
+  
+  
+  ***************************
+  Time-Step Critical Elements
+  ***************************
+  None
+  
+  
+  ********************************
+  Highest Flow Instability Indexes
+  ********************************
+  All links are stable.
+  
+  
+  *********************************
+  Most Frequent Nonconverging Nodes
+  *********************************
+  Convergence obtained at all time steps.
+  
+  
+  *************************
+  Routing Time Step Summary
+  *************************
+  Minimum Time Step           :     1.50 sec
+  Average Time Step           :     2.00 sec
+  Maximum Time Step           :     2.00 sec
+  % of Time in Steady State   :     0.00
+  Average Iterations per Step :     2.00
+  % of Steps Not Converging   :     0.00
+  Time Step Frequencies       :
+      2.000 -  1.516 sec      :   100.00 %
+      1.516 -  1.149 sec      :     0.00 %
+      1.149 -  0.871 sec      :     0.00 %
+      0.871 -  0.660 sec      :     0.00 %
+      0.660 -  0.500 sec      :     0.00 %
+  
+  
+  ***************************
+  Subcatchment Runoff Summary
+  ***************************
+  
+  ------------------------------------------------------------------------------------------------------------------------------
+                            Total      Total      Total      Total     Imperv       Perv      Total       Total     Peak  Runoff
+                           Precip      Runon       Evap      Infil     Runoff     Runoff     Runoff      Runoff   Runoff   Coeff
+  Subcatchment                 in         in         in         in         in         in         in    10^6 gal      CFS
+  ------------------------------------------------------------------------------------------------------------------------------
+  BR-116                     1.27       0.00       0.18       0.88       0.21       0.00       0.21        0.85    12.22   0.168
+  1                          1.27       0.00       0.18       0.88       0.21       0.00       0.21        0.85    12.22   0.168
+  
+  
+  ****************************
+  Subcatchment Washoff Summary
+  ****************************
+  
+  ------------------------------------------------
+                            CompundE    BaseTracer
+  Subcatchment                   lbs           lbs
+  ------------------------------------------------
+  BR-116                  144142.046      9684.220
+  1                       144142.046      9684.220
+  ------------------------------------------------
+  System                  288284.093     19368.439
+  
+  
+  ******************
+  Node Depth Summary
+  ******************
+  
+  ---------------------------------------------------------------------------------
+                                 Average  Maximum  Maximum  Time of Max    Reported
+                                   Depth    Depth      HGL   Occurrence   Max Depth
+  Node                 Type         Feet     Feet     Feet  days hr:min        Feet
+  ---------------------------------------------------------------------------------
+  1014                 JUNCTION     0.18    10.00   594.02    28  03:06        8.83
+  2                    JUNCTION     0.18    10.00   594.02    28  03:06        8.83
+  OF1                  OUTFALL      0.00     0.00   530.00     0  00:00        0.00
+  Closed_Outfall       OUTFALL      0.02     0.67   583.69    28  04:00        0.67
+  Open_Outfall         OUTFALL      0.02     0.67   583.69    28  04:00        0.67
+  
+  
+  *******************
+  Node Inflow Summary
+  *******************
+  
+  -------------------------------------------------------------------------------------------------
+                                  Maximum  Maximum                  Lateral       Total        Flow
+                                  Lateral    Total  Time of Max      Inflow      Inflow     Balance
+                                   Inflow   Inflow   Occurrence      Volume      Volume       Error
+  Node                 Type           CFS      CFS  days hr:min    10^6 gal    10^6 gal     Percent
+  -------------------------------------------------------------------------------------------------
+  1014                 JUNCTION     12.27    12.27    28  04:00        1.85        1.85       0.235
+  2                    JUNCTION     12.27    12.27    28  04:00        1.85        1.85       0.236
+  OF1                  OUTFALL       0.00     0.00     0  00:00           0           0       0.000 gal
+  Closed_Outfall       OUTFALL       0.05    12.32    28  04:00           1        2.85       0.000
+  Open_Outfall         OUTFALL       0.05    12.32    28  04:00           1        2.84       0.000
+  
+  
+  **********************
+  Node Surcharge Summary
+  **********************
+  
+  Surcharging occurs when water rises above the top of the highest conduit.
+  ---------------------------------------------------------------------
+                                               Max. Height   Min. Depth
+                                   Hours       Above Crown    Below Rim
+  Node                 Type      Surcharged           Feet         Feet
+  ---------------------------------------------------------------------
+  1014                 JUNCTION        1.71          7.517        0.000
+  2                    JUNCTION        1.71          7.517        0.000
+  
+  
+  *********************
+  Node Flooding Summary
+  *********************
+  
+  Flooding refers to all water that overflows a node, whether it ponds or not.
+  --------------------------------------------------------------------------
+                                                             Total   Maximum
+                                 Maximum   Time of Max       Flood    Ponded
+                        Hours       Rate    Occurrence      Volume     Depth
+  Node                 Flooded       CFS   days hr:min    10^6 gal      Feet
+  --------------------------------------------------------------------------
+  1014                    0.01      3.60     28  03:06       0.000     0.000
+  2                       0.01      3.28     28  03:06       0.000     0.000
+  
+  
+  ***********************
+  Outfall Loading Summary
+  ***********************
+  
+  ---------------------------------------------------------------------------------------
+                         Flow       Avg       Max       Total         Total         Total
+                         Freq      Flow      Flow      Volume      CompundE    BaseTracer
+  Outfall Node           Pcnt       CFS       CFS    10^6 gal           lbs           lbs
+  ---------------------------------------------------------------------------------------
+  OF1                    0.00      0.00      0.00       0.000         0.000         0.000
+  Closed_Outfall       100.00      0.14     12.32       2.850    147169.001     26370.538
+  Open_Outfall         100.00      0.14     12.32       2.841    147167.729     26370.240
+  ---------------------------------------------------------------------------------------
+  System                66.67      0.28     24.63       5.691    294336.730     52740.779
+  
+  
+  ********************
+  Link Flow Summary
+  ********************
+  
+  -----------------------------------------------------------------------------
+                                 Maximum  Time of Max   Maximum    Max/    Max/
+                                  |Flow|   Occurrence   |Veloc|    Full    Full
+  Link                 Type          CFS  days hr:min    ft/sec    Flow   Depth
+  -----------------------------------------------------------------------------
+  Closed_Link          CONDUIT     12.27    28  04:00      1.96    2.10    0.63
+  Open_Link            CONDUIT     12.27    28  04:00      1.96    1.64    0.63
+  
+  
+  ***************************
+  Flow Classification Summary
+  ***************************
+  
+  -------------------------------------------------------------------------------------
+                      Adjusted    ---------- Fraction of Time in Flow Class ---------- 
+                       /Actual         Up    Down  Sub   Sup   Up    Down  Norm  Inlet 
+  Conduit               Length    Dry  Dry   Dry   Crit  Crit  Crit  Crit  Ltd   Ctrl  
+  -------------------------------------------------------------------------------------
+  Closed_Link             1.00   0.00  0.00  0.00  1.00  0.00  0.00  0.00  0.00  0.00
+  Open_Link               1.00   0.00  0.00  0.00  1.00  0.00  0.00  0.00  0.00  0.00
+  
+  
+  *************************
+  Conduit Surcharge Summary
+  *************************
+  
+  ----------------------------------------------------------------------------
+                                                           Hours        Hours 
+                         --------- Hours Full --------   Above Full   Capacity
+  Conduit                Both Ends  Upstream  Dnstream   Normal Flow   Limited
+  ----------------------------------------------------------------------------
+  Closed_Link                 0.01      1.71      0.01      1.88         0.01
+  Open_Link                   0.01      1.71      0.01      1.30         0.01
+  
+  
+  ***************************
+  Link Pollutant Load Summary
+  ***************************
+  
+  ------------------------------------------------
+                            CompundE    BaseTracer
+  Link                           lbs           lbs
+  ------------------------------------------------
+  Closed_Link              1.447e+05     1.802e+04
+  Open_Link                1.447e+05     1.802e+04
+  
+
+  Analysis begun on:  Fri Mar  6 15:35:38 2026
+  Analysis ended on:  Fri Mar  6 15:35:42 2026
+  Total elapsed time: 00:00:04

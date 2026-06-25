@@ -1,0 +1,193 @@
+
+  EPA STORM WATER MANAGEMENT MODEL - VERSION 5.2 (Build 5.2.4)
+  ------------------------------------------------------------
+
+  
+  ****************
+  Analysis Options
+  ****************
+  Flow Units ............... MGD
+  Process Models:
+    Rainfall/Runoff ........ YES
+    RDII ................... NO
+    Snowmelt ............... NO
+    Groundwater ............ NO
+    Flow Routing ........... YES
+    Ponding Allowed ........ YES
+    Water Quality .......... NO
+  Infiltration Method ...... CURVE_NUMBER
+  Flow Routing Method ...... KINWAVE
+  Starting Date ............ 01/12/2014 00:00:00
+  Ending Date .............. 01/13/2014 00:00:00
+  Antecedent Dry Days ...... 0.0
+  Report Time Step ......... 00:15:00
+  Wet Time Step ............ 00:05:00
+  Dry Time Step ............ 01:00:00
+  Routing Time Step ........ 30.00 sec
+  
+  
+  **************************        Volume         Depth
+  Runoff Quantity Continuity     acre-feet        inches
+  **************************     ---------       -------
+  Total Precipitation ......         9.133         3.000
+  Evaporation Loss .........         0.000         0.000
+  Infiltration Loss ........         0.351         0.115
+  Surface Runoff ...........         8.782         2.885
+  Final Storage ............         0.000         0.000
+  Continuity Error (%) .....         0.000
+  
+  
+  **************************        Volume        Volume
+  Flow Routing Continuity        acre-feet      10^6 gal
+  **************************     ---------     ---------
+  Dry Weather Inflow .......         0.000         0.000
+  Wet Weather Inflow .......         8.774         2.859
+  Groundwater Inflow .......         0.000         0.000
+  RDII Inflow ..............         0.000         0.000
+  External Inflow ..........         0.000         0.000
+  External Outflow .........         8.746         2.850
+  Flooding Loss ............         0.002         0.001
+  Evaporation Loss .........         0.000         0.000
+  Exfiltration Loss ........         0.000         0.000
+  Initial Stored Volume ....         0.000         0.000
+  Final Stored Volume ......         0.021         0.007
+  Continuity Error (%) .....         0.061
+  
+  
+  ********************************
+  Highest Flow Instability Indexes
+  ********************************
+  Link 6036.1 (3)
+  Link 6035.1 (2)
+  Link 6034.1 (2)
+  Link 22767.1 (2)
+  Link 25481.1 (1)
+  
+  
+  *************************
+  Routing Time Step Summary
+  *************************
+  Minimum Time Step           :    30.00 sec
+  Average Time Step           :    30.00 sec
+  Maximum Time Step           :    30.00 sec
+  % of Time in Steady State   :     0.00
+  Average Iterations per Step :     1.40
+  % of Steps Not Converging   :     0.00
+  
+  
+  ***************************
+  Subcatchment Runoff Summary
+  ***************************
+  
+  ------------------------------------------------------------------------------------------------------------------------------
+                            Total      Total      Total      Total     Imperv       Perv      Total       Total     Peak  Runoff
+                           Precip      Runon       Evap      Infil     Runoff     Runoff     Runoff      Runoff   Runoff   Coeff
+  Subcatchment                 in         in         in         in         in         in         in    10^6 gal      MGD
+  ------------------------------------------------------------------------------------------------------------------------------
+  2004                       3.00       0.00       0.00       0.12       0.00       2.88       2.88        0.12     1.66   0.962
+  2006                       3.00       0.00       0.00       0.12       0.00       2.88       2.88        0.11     1.62   0.962
+  2018                       3.00       0.00       0.00       0.12       0.00       2.88       2.88        0.05     0.73   0.962
+  2026                       3.00       0.00       0.00       0.12       0.00       2.88       2.88        0.07     0.98   0.962
+  2057                       3.00       0.00       0.00       0.12       0.00       2.88       2.88        0.08     1.08   0.962
+  IMP_2004                   3.00       0.00       0.00       0.12       0.00       2.88       2.88        0.66     9.32   0.962
+  IMP_2006                   3.00       0.00       0.00       0.12       0.00       2.88       2.88        0.65     9.16   0.962
+  IMP_2018                   3.00       0.00       0.00       0.12       0.00       2.88       2.88        0.29     4.14   0.962
+  IMP_2026                   3.00       0.00       0.00       0.12       0.00       2.88       2.88        0.39     5.54   0.962
+  IMP_2057                   3.00       0.00       0.00       0.12       0.00       2.88       2.88        0.43     6.10   0.962
+  
+  
+  ******************
+  Node Depth Summary
+  ******************
+  
+  ---------------------------------------------------------------------------------
+                                 Average  Maximum  Maximum  Time of Max    Reported
+                                   Depth    Depth      HGL   Occurrence   Max Depth
+  Node                 Type         Feet     Feet     Feet  days hr:min        Feet
+  ---------------------------------------------------------------------------------
+  25481                JUNCTION     1.10     9.70    31.01     0  06:02        9.70
+  25482                JUNCTION     1.07     9.69    30.72     0  06:06        9.69
+  22767                JUNCTION     0.45     1.67    19.56     0  06:10        1.15
+  6032                 JUNCTION     0.71    10.31    31.89     0  06:01       10.31
+  6033                 JUNCTION     0.50     1.27    22.12     0  07:43        1.23
+  6034                 JUNCTION     0.43     1.33    20.57     0  06:10        0.98
+  6035                 JUNCTION     0.72    12.30    29.80     0  06:04        3.00
+  6036                 JUNCTION     0.66     3.00    19.31     0  06:05        3.00
+  6037                 JUNCTION     0.65     2.21    17.51     0  06:20        2.20
+  
+  
+  *******************
+  Node Inflow Summary
+  *******************
+  
+  -------------------------------------------------------------------------------------------------
+                                  Maximum  Maximum                  Lateral       Total        Flow
+                                  Lateral    Total  Time of Max      Inflow      Inflow     Balance
+                                   Inflow   Inflow   Occurrence      Volume      Volume       Error
+  Node                 Type           MGD      MGD  days hr:min    10^6 gal    10^6 gal     Percent
+  -------------------------------------------------------------------------------------------------
+  25481                JUNCTION     0.000    3.110     0  07:43           0       0.764       0.000
+  25482                JUNCTION     0.000    3.122     0  07:43           0       0.763       0.000
+  22767                JUNCTION     7.177   16.649     0  06:10       0.509        1.73       0.000
+  6032                 JUNCTION    10.775   10.775     0  06:10       0.764       0.764       0.000
+  6033                 JUNCTION     0.000    3.038     0  07:43           0       0.763       0.000
+  6034                 JUNCTION     6.521    9.478     0  06:10       0.462        1.22       0.000
+  6035                 JUNCTION    15.853   32.501     0  06:10        1.12        2.85       0.000
+  6036                 JUNCTION     0.000   23.892     0  06:05           0        2.85       0.000
+  6037                 JUNCTION     0.000   24.025     0  06:20           0        2.85       0.000
+  
+  
+  *********************
+  Node Flooding Summary
+  *********************
+  
+  Flooding refers to all water that overflows a node, whether it ponds or not.
+  --------------------------------------------------------------------------
+                                                             Total   Maximum
+                                 Maximum   Time of Max       Flood    Ponded
+                        Hours       Rate    Occurrence      Volume    Volume
+  Node                 Flooded       MGD   days hr:min    10^6 gal  1000 ft³
+  --------------------------------------------------------------------------
+  25481                   1.69     0.153      0  07:43       0.000     0.000
+  25482                   1.63     0.165      0  07:43       0.000     0.000
+  6032                    1.68     7.813      0  06:10       0.059     7.890
+  6035                    0.25     8.609      0  06:10       0.039     5.263
+  
+  
+  ********************
+  Link Flow Summary
+  ********************
+  
+  -----------------------------------------------------------------------------
+                                 Maximum  Time of Max   Maximum    Max/    Max/
+                                  |Flow|   Occurrence   |Veloc|    Full    Full
+  Link                 Type          MGD  days hr:min    ft/sec    Flow   Depth
+  -----------------------------------------------------------------------------
+  22767.1              CONDUIT    16.647     0  06:10      7.37    0.79    0.67
+  25481.1              CONDUIT     3.122     0  07:43      3.53    1.06    0.92
+  25482.1              CONDUIT     3.038     0  07:43      3.30    1.03    0.92
+  6036.1               CONDUIT    24.025     0  06:20      6.51    0.72    0.63
+  6032.1               CONDUIT     3.110     0  07:43      3.92    1.05    1.00
+  6033.1               CONDUIT     3.148     0  07:44      4.91    0.71    0.61
+  6034.1               CONDUIT     9.480     0  06:11      5.61    0.56    0.53
+  6035.1               CONDUIT    23.892     0  06:05      7.16    1.00    1.00
+  
+  
+  *************************
+  Conduit Surcharge Summary
+  *************************
+  
+  ----------------------------------------------------------------------------
+                                                           Hours        Hours 
+                         --------- Hours Full --------   Above Full   Capacity
+  Conduit                Both Ends  Upstream  Dnstream   Normal Flow   Limited
+  ----------------------------------------------------------------------------
+  25481.1                     1.69      1.69      1.69      1.63         1.69
+  25482.1                     1.63      1.63      1.63      1.62         1.63
+  6032.1                      1.68      1.68      1.68      1.69         1.68
+  6035.1                      0.25      0.25      0.25      0.01         0.25
+  
+
+  Analysis begun on:  Fri Mar  6 14:54:55 2026
+  Analysis ended on:  Fri Mar  6 14:54:55 2026
+  Total elapsed time: < 1 sec
