@@ -1,9 +1,8 @@
 
-  EPA STORM WATER MANAGEMENT MODEL - VERSION 5.1 (Build 5.1.013)
-  --------------------------------------------------------------
+  EPA STORM WATER MANAGEMENT MODEL - VERSION 5.2 (Build 5.2.4)
+  ------------------------------------------------------------
 
   NCSWMM Training Example January 2019 
-  
   WARNING 04: minimum elevation drop used for Conduit L6
   
   *************
@@ -98,7 +97,7 @@
   L1               CIRCULAR             1.50     1.77     0.38     1.50        1     6.33
   L2               CIRCULAR             2.00     3.14     0.50     2.00        1    17.52
   L3               CIRCULAR             2.00     3.14     0.50     2.00        1    14.60
-  L4               CIRCULAR             2.50     4.91     0.63     2.50        1    27.65
+  L4               CIRCULAR             2.50     4.91     0.62     2.50        1    27.65
   L6               CIRCULAR             3.00     7.07     0.75     3.00        1     1.85
   L7               CIRCULAR             1.50     1.77     0.38     1.50        1     6.43
   L8               CIRCULAR             1.50     1.77     0.38     1.50        1     7.19
@@ -107,7 +106,6 @@
   culvert          CIRCULAR             2.00     3.14     0.50     2.00        1    18.47
   L5               CIRCULAR             3.00     7.07     0.75     3.00        1    38.51
   Branch1          CIRCULAR             2.00     3.14     0.50     2.00        1    22.85
-  
   
   
   ****************
@@ -149,12 +147,6 @@
               0.3636     0.4032     0.4428     0.4824     0.5880 
               0.7464     0.9048     0.9568     0.9784     1.0000 
   
-  
-  *********************************************************
-  NOTE: The summary statistics displayed in this report are
-  based on results found at every computational time step,  
-  not just on results from each reporting time step.
-  *********************************************************
   
   ****************
   Analysis Options
@@ -208,7 +200,7 @@
   Evaporation Loss .........         0.001         0.000
   Exfiltration Loss ........         0.000         0.000
   Initial Stored Volume ....        12.001         3.911
-  Final Stored Volume ......        12.789         4.168
+  Final Stored Volume ......        12.789         4.167
   Continuity Error (%) .....         0.090
   
   
@@ -221,8 +213,8 @@
   ***************************
   Time-Step Critical Elements
   ***************************
-  Link L4 (22.20%)
-  Link L6 (21.88%)
+  Link L4 (22.21%)
+  Link L6 (21.89%)
   
   
   ********************************
@@ -231,15 +223,27 @@
   All links are stable.
   
   
+  *********************************
+  Most Frequent Nonconverging Nodes
+  *********************************
+  Convergence obtained at all time steps.
+  
+  
   *************************
   Routing Time Step Summary
   *************************
   Minimum Time Step           :     4.74 sec
-  Average Time Step           :    44.14 sec
+  Average Time Step           :    44.13 sec
   Maximum Time Step           :    60.00 sec
-  Percent in Steady State     :     0.00
+  % of Time in Steady State   :     0.00
   Average Iterations per Step :     2.00
-  Percent Not Converging      :     0.00
+  % of Steps Not Converging   :     0.00
+  Time Step Frequencies       :
+     60.000 - 23.031 sec      :    73.64 %
+     23.031 -  8.841 sec      :    26.33 %
+      8.841 -  3.393 sec      :     0.03 %
+      3.393 -  1.303 sec      :     0.00 %
+      1.303 -  0.500 sec      :     0.00 %
   
   
   ***************************
@@ -304,10 +308,10 @@
   MH4                  JUNCTION      0.88     3.81     0  15:40      0.0492       0.235       0.002
   MH6                  JUNCTION      0.46     4.46     0  15:40      0.0302       0.281       0.149
   MH10                 JUNCTION      0.47     6.77     0  15:40      0.0266       0.427      -0.037
-  MH11                 JUNCTION      0.00     6.66     0  15:41           0       0.427       1.138
+  MH11                 JUNCTION      0.00     6.66     0  15:41           0       0.427       1.139
   MH3                  JUNCTION      0.66     0.66     0  15:40      0.0395      0.0395      -0.016
-  MH5                  JUNCTION      0.23     0.23     0  15:40      0.0154      0.0154      -0.015
-  MH9                  JUNCTION      0.67     0.67     0  05:40      0.0346      0.0346       0.391
+  MH5                  JUNCTION      0.23     0.23     0  15:40      0.0154      0.0154      -0.016
+  MH9                  JUNCTION      0.67     0.67     0  05:40      0.0346      0.0346       0.392
   MH7                  JUNCTION      0.25     5.79     0  15:40      0.0154       0.366      -0.134
   Riser                JUNCTION      0.00     0.27     0  20:23           0        0.37       0.083
   MH8                  JUNCTION      1.09     1.09     0  15:40      0.0695      0.0695      -0.089
@@ -333,12 +337,12 @@
   Storage Volume Summary
   **********************
   
-  --------------------------------------------------------------------------------------------------
-                         Average     Avg  Evap Exfil       Maximum     Max    Time of Max    Maximum
-                          Volume    Pcnt  Pcnt  Pcnt        Volume    Pcnt     Occurrence    Outflow
-  Storage Unit          1000 ft3    Full  Loss  Loss      1000 ft3    Full    days hr:min        CFS
-  --------------------------------------------------------------------------------------------------
-  Pond                   568.107      17     0     0       598.784      18       0  20:23       0.27
+  ------------------------------------------------------------------------------------------------
+                         Average    Avg   Evap  Exfil     Maximum    Max    Time of Max    Maximum
+                          Volume   Pcnt   Pcnt   Pcnt      Volume   Pcnt     Occurrence    Outflow
+  Storage Unit          1000 ft³   Full   Loss   Loss    1000 ft³   Full    days hr:min        CFS
+  ------------------------------------------------------------------------------------------------
+  Pond                   568.106   16.9    0.0    0.0     598.783   17.9       0  20:23       0.27
   
   
   ***********************
@@ -367,7 +371,7 @@
   L1                   CONDUIT      0.88     0  15:41      2.63    0.14    0.24
   L2                   CONDUIT      2.28     0  15:40      2.94    0.13    0.30
   L3                   CONDUIT      3.79     0  15:41      3.96    0.26    0.34
-  L4                   CONDUIT      4.46     0  15:40      3.86    0.16    0.32
+  L4                   CONDUIT      4.46     0  15:41      3.86    0.16    0.32
   L6                   CONDUIT      6.66     0  15:41      1.44    3.60    0.64
   L7                   CONDUIT      0.65     0  15:40      2.43    0.10    0.21
   L8                   CONDUIT      0.23     0  15:41      1.90    0.03    0.12
@@ -392,17 +396,17 @@
   Conduit               Length    Dry  Dry   Dry   Crit  Crit  Crit  Crit  Ltd   Ctrl  
   -------------------------------------------------------------------------------------
   L1                      1.00   0.00  0.00  0.00  0.00  0.00  0.00  1.00  0.00  0.00
-  L2                      1.00   0.00  0.53  0.00  0.47  0.00  0.00  0.00  1.00  0.00
+  L2                      1.00   0.00  0.72  0.00  0.28  0.00  0.00  0.00  1.00  0.00
   L3                      1.00   0.00  0.00  0.00  0.00  0.00  0.00  1.00  0.00  0.00
-  L4                      1.00   0.00  0.00  0.00  0.09  0.00  0.00  0.91  0.02  0.00
+  L4                      1.00   0.00  0.00  0.00  0.03  0.00  0.00  0.97  0.02  0.00
   L6                      1.00   0.00  0.00  0.00  1.00  0.00  0.00  0.00  0.00  0.00
-  L7                      1.00   0.01  0.00  0.00  0.00  0.00  0.00  0.99  0.00  0.00
+  L7                      1.00   0.00  0.00  0.00  0.00  0.00  0.00  1.00  0.00  0.00
   L8                      1.00   0.00  0.00  0.00  0.00  0.00  0.00  1.00  0.00  0.00
-  L9                      1.00   0.59  0.00  0.00  0.02  0.01  0.00  0.38  0.01  0.00
-  channel                 1.00   0.00  0.00  0.00  0.75  0.00  0.00  0.25  0.78  0.00
-  culvert                 1.00   0.08  0.00  0.00  0.92  0.00  0.00  0.00  0.00  0.93
-  L5                      1.00   0.00  0.52  0.00  0.47  0.00  0.00  0.00  0.91  0.00
-  Branch1                 1.00   0.53  0.02  0.00  0.46  0.00  0.00  0.00  1.00  0.00
+  L9                      1.00   0.78  0.00  0.00  0.01  0.00  0.00  0.21  0.01  0.00
+  channel                 1.00   0.00  0.26  0.00  0.61  0.00  0.00  0.12  0.78  0.00
+  culvert                 1.00   0.07  0.00  0.00  0.93  0.00  0.00  0.00  0.00  0.93
+  L5                      1.00   0.00  0.71  0.00  0.29  0.00  0.00  0.00  0.91  0.00
+  Branch1                 1.00   0.71  0.02  0.00  0.26  0.00  0.00  0.00  1.00  0.00
   
   
   *************************
@@ -417,6 +421,6 @@
   L6                          0.01      0.01      0.01      2.54         0.01
   
 
-  Analysis begun on:  Sun Jan 20 19:47:22 2019
-  Analysis ended on:  Sun Jan 20 19:47:22 2019
+  Analysis begun on:  Sun Jul 12 22:46:26 2026
+  Analysis ended on:  Sun Jul 12 22:46:26 2026
   Total elapsed time: < 1 sec

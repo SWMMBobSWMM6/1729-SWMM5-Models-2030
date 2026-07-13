@@ -1,13 +1,7 @@
 
-  EPA STORM WATER MANAGEMENT MODEL - VERSION 5.1 (Build 5.1.011)
-  --------------------------------------------------------------
+  EPA STORM WATER MANAGEMENT MODEL - VERSION 5.2 (Build 5.2.4)
+  ------------------------------------------------------------
 
-  
-  *********************************************************
-  NOTE: The summary statistics displayed in this report are
-  based on results found at every computational time step,  
-  not just on results from each reporting time step.
-  *********************************************************
   
   ****************
   Analysis Options
@@ -23,6 +17,7 @@
     Water Quality .......... NO
   Infiltration Method ...... GREEN_AMPT
   Flow Routing Method ...... DYNWAVE
+  Surcharge Method ......... EXTRAN
   Starting Date ............ 01/01/1990 00:00:00
   Ending Date .............. 01/01/2000 00:00:00
   Antecedent Dry Days ...... 0.0
@@ -41,22 +36,22 @@
   **************************     ---------       -------
   Total Precipitation ......         9.034       334.606
   Evaporation Loss .........         0.000         0.000
-  Infiltration Loss ........         6.707       248.409
-  Surface Runoff ...........         0.015         0.559
-  LID Drainage .............         2.311        85.580
+  Infiltration Loss ........         6.707       248.410
+  Surface Runoff ...........         0.016         0.576
+  LID Drainage .............         2.310        85.568
   Final Storage ............         0.001         0.045
-  Continuity Error (%) .....         0.004
+  Continuity Error (%) .....         0.002
   
   
   **************************        Volume         Depth
   Groundwater Continuity         acre-feet        inches
   **************************     ---------       -------
   Initial Storage ..........         4.032      1423.181
-  Infiltration .............         6.707      2367.194
+  Infiltration .............         6.707      2367.201
   Upper Zone ET ............         0.000         0.000
   Lower Zone ET ............         0.000         0.000
   Deep Percolation .........         2.458       867.612
-  Groundwater Flow .........         4.256      1502.243
+  Groundwater Flow .........         4.256      1502.250
   Final Storage ............         4.025      1420.527
   Continuity Error (%) .....         0.000
   
@@ -69,13 +64,13 @@
   Groundwater Inflow .......         4.256         1.387
   RDII Inflow ..............         0.000         0.000
   External Inflow ..........         0.000         0.000
-  External Outflow .........         6.582         2.145
+  External Outflow .........         6.583         2.145
   Flooding Loss ............         0.000         0.000
   Evaporation Loss .........         0.000         0.000
   Exfiltration Loss ........         0.000         0.000
   Initial Stored Volume ....         0.000         0.000
   Final Stored Volume ......         0.000         0.000
-  Continuity Error (%) .....        -0.007
+  Continuity Error (%) .....        -0.005
   
   
   ***************************
@@ -90,28 +85,40 @@
   All links are stable.
   
   
+  *********************************
+  Most Frequent Nonconverging Nodes
+  *********************************
+  Convergence obtained at all time steps.
+  
+  
   *************************
   Routing Time Step Summary
   *************************
-  Minimum Time Step           :     0.43 sec
+  Minimum Time Step           :     8.43 sec
   Average Time Step           :    15.00 sec
   Maximum Time Step           :    15.00 sec
-  Percent in Steady State     :     0.00
+  % of Time in Steady State   :     0.00
   Average Iterations per Step :     2.00
-  Percent Not Converging      :     0.00
+  % of Steps Not Converging   :     0.00
+  Time Step Frequencies       :
+     15.000 -  7.597 sec      :   100.00 %
+      7.597 -  3.848 sec      :     0.00 %
+      3.848 -  1.949 sec      :     0.00 %
+      1.949 -  0.987 sec      :     0.00 %
+      0.987 -  0.500 sec      :     0.00 %
   
   
   ***************************
   Subcatchment Runoff Summary
   ***************************
   
-  --------------------------------------------------------------------------------------------------------
-                            Total      Total      Total      Total      Total       Total     Peak  Runoff
-                           Precip      Runon       Evap      Infil     Runoff      Runoff   Runoff   Coeff
-  Subcatchment                 in         in         in         in         in    10^6 gal      CFS
-  --------------------------------------------------------------------------------------------------------
-  Infil                    334.61    2853.61       0.00    2367.19     820.85        0.76     0.64   0.257
-  Lot                      334.61       0.00       0.00       0.00     334.56        2.63     0.77   1.000
+  ------------------------------------------------------------------------------------------------------------------------------
+                            Total      Total      Total      Total     Imperv       Perv      Total       Total     Peak  Runoff
+                           Precip      Runon       Evap      Infil     Runoff     Runoff     Runoff      Runoff   Runoff   Coeff
+  Subcatchment                 in         in         in         in         in         in         in    10^6 gal      CFS
+  ------------------------------------------------------------------------------------------------------------------------------
+  Infil                    334.61    2853.61       0.00    2367.20       0.00       0.00     820.90        0.76     0.65   0.257
+  Lot                      334.61       0.00       0.00       0.00     334.56       0.00     334.56        2.63     0.77   1.000
   
 
   ***********************
@@ -123,7 +130,7 @@
                                         Inflow      Loss      Loss   Outflow   Outflow   Storage   Storage       Error
   Subcatchment      LID Control             in        in        in        in        in        in        in           %
   --------------------------------------------------------------------------------------------------------------------
-  Infil             LotTreatment       3188.22      0.00   2367.28      5.33    815.56      0.00      0.00        0.00
+  Infil             LotTreatment       3188.22      0.00   2367.29      5.49    815.44      0.00      0.00        0.00
   
   *******************
   Groundwater Summary
@@ -135,7 +142,7 @@
                           Infil     Evap  Seepage  Outflow  Outflow   Moist.    Table   Moist.    Table
   Subcatchment               in       in       in       in      CFS                ft                ft
   -----------------------------------------------------------------------------------------------------
-  Infil                 2367.19     0.00   867.61  1502.24     0.01     0.18   581.99     0.18   580.90
+  Infil                 2367.20     0.00   867.61  1502.25     0.01     0.18   581.99     0.18   580.90
   
   
   ******************
@@ -161,7 +168,7 @@
                                    Inflow   Inflow   Occurrence      Volume      Volume       Error
   Node                 Type           CFS      CFS  days hr:min    10^6 gal    10^6 gal     Percent
   -------------------------------------------------------------------------------------------------
-  Junction             JUNCTION      0.66     0.66   229  03:42        2.14        2.14      -0.004
+  Junction             JUNCTION      0.66     0.66   229  03:41        2.14        2.14      -0.005
   Outlet               OUTFALL       0.00     0.67   229  03:42           0        2.14       0.000
   
   
@@ -188,9 +195,9 @@
                          Freq      Flow      Flow      Volume
   Outfall Node           Pcnt       CFS       CFS    10^6 gal
   -----------------------------------------------------------
-  Outlet                 6.16      0.01      0.67       2.145
+  Outlet                 6.17      0.01      0.67       2.145
   -----------------------------------------------------------
-  System                 6.16      0.01      0.67       2.145
+  System                 6.17      0.01      0.67       2.145
   
   
   ********************
@@ -202,7 +209,7 @@
                                   |Flow|   Occurrence   |Veloc|    Full    Full
   Link                 Type          CFS  days hr:min    ft/sec    Flow   Depth
   -----------------------------------------------------------------------------
-  DrainPipe            CONDUIT      0.67   229  03:42      6.49    0.13    0.24
+  DrainPipe            CONDUIT      0.67   229  03:42      6.45    0.13    0.25
   
   
   ***************************
@@ -224,6 +231,6 @@
   No conduits were surcharged.
   
 
-  Analysis begun on:  Fri Aug 25 10:40:39 2017
-  Analysis ended on:  Fri Aug 25 10:41:35 2017
-  Total elapsed time: 00:00:56
+  Analysis begun on:  Sun Jul 12 22:46:31 2026
+  Analysis ended on:  Sun Jul 12 22:47:01 2026
+  Total elapsed time: 00:00:30

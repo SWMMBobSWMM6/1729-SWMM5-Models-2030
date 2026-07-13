@@ -1,14 +1,8 @@
 
-  EPA STORM WATER MANAGEMENT MODEL - VERSION 5.1 (Build 5.1.011)
-  --------------------------------------------------------------
+  EPA STORM WATER MANAGEMENT MODEL - VERSION 5.2 (Build 5.2.4)
+  ------------------------------------------------------------
 
   WARNING 10: crest elevation raised to downstream invert for regulator Link 2
-  
-  *********************************************************
-  NOTE: The summary statistics displayed in this report are
-  based on results found at every computational time step,  
-  not just on results from each reporting time step.
-  *********************************************************
   
   ****************
   Analysis Options
@@ -24,6 +18,7 @@
     Water Quality .......... NO
   Infiltration Method ...... GREEN_AMPT
   Flow Routing Method ...... DYNWAVE
+  Surcharge Method ......... EXTRAN
   Starting Date ............ 01/01/2015 00:00:00
   Ending Date .............. 01/02/2015 00:00:00
   Antecedent Dry Days ...... 0.0
@@ -91,28 +86,40 @@
   All links are stable.
   
   
+  *********************************
+  Most Frequent Nonconverging Nodes
+  *********************************
+  Convergence obtained at all time steps.
+  
+  
   *************************
   Routing Time Step Summary
   *************************
   Minimum Time Step           :    14.50 sec
   Average Time Step           :    15.00 sec
   Maximum Time Step           :    15.00 sec
-  Percent in Steady State     :     0.00
+  % of Time in Steady State   :     0.00
   Average Iterations per Step :     2.00
-  Percent Not Converging      :     0.00
+  % of Steps Not Converging   :     0.00
+  Time Step Frequencies       :
+     15.000 -  7.597 sec      :   100.00 %
+      7.597 -  3.848 sec      :     0.00 %
+      3.848 -  1.949 sec      :     0.00 %
+      1.949 -  0.987 sec      :     0.00 %
+      0.987 -  0.500 sec      :     0.00 %
   
   
   ***************************
   Subcatchment Runoff Summary
   ***************************
   
-  --------------------------------------------------------------------------------------------------------
-                            Total      Total      Total      Total      Total       Total     Peak  Runoff
-                           Precip      Runon       Evap      Infil     Runoff      Runoff   Runoff   Coeff
-  Subcatchment                 in         in         in         in         in    10^6 gal      CFS
-  --------------------------------------------------------------------------------------------------------
-  Infil                      4.29       0.00       0.00       0.35       2.22        0.00     0.02   0.519
-  Lot                        4.29       0.00       0.00       0.00       4.22        0.03     1.40   0.985
+  ------------------------------------------------------------------------------------------------------------------------------
+                            Total      Total      Total      Total     Imperv       Perv      Total       Total     Peak  Runoff
+                           Precip      Runon       Evap      Infil     Runoff     Runoff     Runoff      Runoff   Runoff   Coeff
+  Subcatchment                 in         in         in         in         in         in         in    10^6 gal      CFS
+  ------------------------------------------------------------------------------------------------------------------------------
+  Infil                      4.29       0.00       0.00       0.35       0.00       0.00       2.22        0.00     0.02   0.519
+  Lot                        4.29       0.00       0.00       0.00       4.22       0.00       4.22        0.03     1.40   0.985
   
 
   ***********************
@@ -186,12 +193,12 @@
   Storage Volume Summary
   **********************
   
-  --------------------------------------------------------------------------------------------------
-                         Average     Avg  Evap Exfil       Maximum     Max    Time of Max    Maximum
-                          Volume    Pcnt  Pcnt  Pcnt        Volume    Pcnt     Occurrence    Outflow
-  Storage Unit          1000 ft3    Full  Loss  Loss      1000 ft3    Full    days hr:min        CFS
-  --------------------------------------------------------------------------------------------------
-  ST1                      2.150      22     0     0         4.445      46       1  00:00       0.00
+  ------------------------------------------------------------------------------------------------
+                         Average    Avg   Evap  Exfil     Maximum    Max    Time of Max    Maximum
+                          Volume   Pcnt   Pcnt   Pcnt      Volume   Pcnt     Occurrence    Outflow
+  Storage Unit          1000 ft³   Full   Loss   Loss    1000 ft³   Full    days hr:min        CFS
+  ------------------------------------------------------------------------------------------------
+  ST1                      2.150   22.4    0.0    0.0       4.445   46.3       1  00:00       0.00
   
   
   ***********************
@@ -240,6 +247,6 @@
   No conduits were surcharged.
   
 
-  Analysis begun on:  Fri Aug 25 10:42:14 2017
-  Analysis ended on:  Fri Aug 25 10:42:14 2017
+  Analysis begun on:  Sun Jul 12 22:47:01 2026
+  Analysis ended on:  Sun Jul 12 22:47:01 2026
   Total elapsed time: < 1 sec

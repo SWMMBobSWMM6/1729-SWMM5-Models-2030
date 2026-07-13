@@ -1,0 +1,409 @@
+
+  EPA STORM WATER MANAGEMENT MODEL - VERSION 5.2 (Build 5.2.4)
+  ------------------------------------------------------------
+
+  NCSWMM Training Example January 2019 
+  WARNING 04: minimum elevation drop used for Conduit L6
+  
+  *************
+  Element Count
+  *************
+  Number of rain gages ...... 1
+  Number of subcatchments ... 10
+  Number of nodes ........... 13
+  Number of links ........... 11
+  Number of pollutants ...... 0
+  Number of land uses ....... 0
+  
+  
+  ****************
+  Raingage Summary
+  ****************
+                                                      Data       Recording
+  Name                 Data Source                    Type       Interval 
+  ------------------------------------------------------------------------
+  Rainfall             June18                         CUMULATIVE  20 min.
+  
+  
+  ********************
+  Subcatchment Summary
+  ********************
+  Name                       Area     Width   %Imperv    %Slope Rain Gage            Outlet              
+  -----------------------------------------------------------------------------------------------------------
+  MH1#1                      0.75    150.00     25.00    0.0100 Rainfall             MH1                 
+  MH2#1                      1.21    150.00     30.00    0.0100 Rainfall             MH2                 
+  MH3#1                      0.82    160.00     20.00    0.0100 Rainfall             MH3                 
+  MH4#1                      0.63    165.00     30.00    0.0100 Rainfall             MH4                 
+  MH5#1                      0.55    150.00      5.00    0.0100 Rainfall             MH5                 
+  MH6#1                      0.55    140.00     10.00    0.0100 Rainfall             MH6                 
+  MH7#1                      0.31     90.00     10.00    0.0100 Rainfall             MH7                 
+  MH9#1                      0.74    190.00     25.00    0.0100 Rainfall             MH9                 
+  MH10#1                     0.42    100.00     25.00    0.0100 Rainfall             MH10                
+  Pond#1                     1.74    100.00     75.00    0.0100 Rainfall             Pond                
+  
+  
+  ************
+  Node Summary
+  ************
+                                           Invert      Max.    Ponded    External
+  Name                 Type                 Elev.     Depth      Area    Inflow  
+  -------------------------------------------------------------------------------
+  MH1                  JUNCTION            934.00      8.00       0.0
+  MH2                  JUNCTION            931.50      9.50       0.0
+  MH4                  JUNCTION            930.00      9.00       0.0
+  MH6                  JUNCTION            928.50      9.50       0.0
+  MH10                 JUNCTION            927.00      9.00       0.0
+  MH11                 JUNCTION            927.00      9.00       0.0
+  MH3                  JUNCTION            932.00      7.00       0.0
+  MH5                  JUNCTION            931.00      8.00       0.0
+  MH9                  JUNCTION            931.00      6.00       0.0
+  MH7                  JUNCTION            927.50      7.50       0.0
+  Riser                JUNCTION            920.00     10.00       0.0
+  outfall              OUTFALL             920.00      2.00       0.0
+  Pond                 STORAGE             920.00     14.00       0.0
+  
+  
+  ************
+  Link Summary
+  ************
+  Name             From Node        To Node          Type            Length    %Slope Roughness
+  ---------------------------------------------------------------------------------------------
+  L1               MH1              MH2              CONDUIT          550.0    0.3636    0.0130
+  L2               MH2              MH4              CONDUIT          250.0    0.6000    0.0130
+  L3               MH4              MH6              CONDUIT          240.0    0.4167    0.0130
+  L4               MH6              MH7              CONDUIT          110.0    0.4546    0.0130
+  L6               MH10             MH11             CONDUIT          130.0    0.0008    0.0130
+  L7               MH3              MH4              CONDUIT          400.0    0.3750    0.0130
+  L8               MH5              MH6              CONDUIT          320.0    0.4688    0.0130
+  L9               MH9              MH10             CONDUIT          290.0    0.8621    0.0130
+  channel          MH11             Pond             CONDUIT          430.0    0.4651    0.0800
+  culvert          Riser            outfall          CONDUIT          300.0    0.6667    0.0130
+  L5               MH7              MH10             CONDUIT          150.0    0.3333    0.0130
+  
+  
+  *********************
+  Cross Section Summary
+  *********************
+                                        Full     Full     Hyd.     Max.   No. of     Full
+  Conduit          Shape               Depth     Area     Rad.    Width  Barrels     Flow
+  ---------------------------------------------------------------------------------------
+  L1               CIRCULAR             1.50     1.77     0.38     1.50        1     6.33
+  L2               CIRCULAR             2.00     3.14     0.50     2.00        1    17.52
+  L3               CIRCULAR             2.00     3.14     0.50     2.00        1    14.60
+  L4               CIRCULAR             2.50     4.91     0.62     2.50        1    27.65
+  L6               CIRCULAR             3.00     7.07     0.75     3.00        1     1.85
+  L7               CIRCULAR             1.50     1.77     0.38     1.50        1     6.43
+  L8               CIRCULAR             1.50     1.77     0.38     1.50        1     7.19
+  L9               CIRCULAR             1.50     1.77     0.38     1.50        1     9.75
+  channel          NS_channel           9.00   122.75     2.80    50.00        1   308.81
+  culvert          CIRCULAR             2.00     3.14     0.50     2.00        1    18.47
+  L5               CIRCULAR             3.00     7.07     0.75     3.00        1    38.51
+  
+  
+  ****************
+  Transect Summary
+  ****************
+
+  Transect NS_channel
+  Area:  
+              0.0008     0.0032     0.0071     0.0127     0.0198 
+              0.0284     0.0375     0.0470     0.0568     0.0670 
+              0.0776     0.0884     0.0997     0.1113     0.1232 
+              0.1355     0.1482     0.1611     0.1742     0.1875 
+              0.2011     0.2148     0.2288     0.2431     0.2576 
+              0.2724     0.2875     0.3028     0.3185     0.3346 
+              0.3511     0.3679     0.3852     0.4029     0.4211 
+              0.4398     0.4591     0.4789     0.4992     0.5215 
+              0.5468     0.5749     0.6059     0.6398     0.6780 
+              0.7269     0.7874     0.8565     0.9275     1.0000 
+  Hrad:  
+              0.0295     0.0590     0.0885     0.1180     0.1475 
+              0.1848     0.2291     0.2702     0.3087     0.3449 
+              0.3793     0.4121     0.4435     0.4736     0.5027 
+              0.5308     0.5590     0.5878     0.6155     0.6423 
+              0.6682     0.6934     0.7174     0.7407     0.7636 
+              0.7860     0.8079     0.8289     0.8476     0.8664 
+              0.8851     0.9039     0.9226     0.9397     0.9562 
+              0.9730     0.9901     1.0075     1.0278     1.0648 
+              1.0939     1.1158     1.1314     1.1416     1.1426 
+              1.1232     1.0880     1.0508     1.0222     1.0000 
+  Width: 
+              0.0216     0.0432     0.0648     0.0864     0.1080 
+              0.1221     0.1269     0.1317     0.1365     0.1413 
+              0.1461     0.1509     0.1557     0.1605     0.1653 
+              0.1701     0.1743     0.1773     0.1803     0.1833 
+              0.1863     0.1893     0.1928     0.1964     0.2000 
+              0.2036     0.2072     0.2112     0.2166     0.2220 
+              0.2274     0.2328     0.2382     0.2448     0.2520 
+              0.2592     0.2664     0.2736     0.2844     0.3240 
+              0.3636     0.4032     0.4428     0.4824     0.5880 
+              0.7464     0.9048     0.9568     0.9784     1.0000 
+  
+  
+  ****************
+  Analysis Options
+  ****************
+  Flow Units ............... CFS
+  Process Models:
+    Rainfall/Runoff ........ YES
+    RDII ................... NO
+    Snowmelt ............... NO
+    Groundwater ............ NO
+    Flow Routing ........... YES
+    Ponding Allowed ........ NO
+    Water Quality .......... NO
+  Infiltration Method ...... CURVE_NUMBER
+  Flow Routing Method ...... DYNWAVE
+  Surcharge Method ......... EXTRAN
+  Starting Date ............ 09/01/2018 00:00:00
+  Ending Date .............. 09/03/2018 00:00:00
+  Antecedent Dry Days ...... 0.0
+  Report Time Step ......... 00:05:00
+  Wet Time Step ............ 00:05:00
+  Dry Time Step ............ 00:05:00
+  Routing Time Step ........ 60.00 sec
+  Variable Time Step ....... YES
+  Maximum Trials ........... 8
+  Number of Threads ........ 1
+  Head Tolerance ........... 0.005000 ft
+  
+  
+  **************************        Volume         Depth
+  Runoff Quantity Continuity     acre-feet        inches
+  **************************     ---------       -------
+  Total Precipitation ......         3.207         4.990
+  Evaporation Loss .........         0.096         0.149
+  Infiltration Loss ........         2.068         3.218
+  Surface Runoff ...........         1.046         1.627
+  Final Storage ............         0.000         0.000
+  Continuity Error (%) .....        -0.087
+  
+  
+  **************************        Volume        Volume
+  Flow Routing Continuity        acre-feet      10^6 gal
+  **************************     ---------     ---------
+  Dry Weather Inflow .......         0.000         0.000
+  Wet Weather Inflow .......         1.046         0.341
+  Groundwater Inflow .......         0.000         0.000
+  RDII Inflow ..............         0.000         0.000
+  External Inflow ..........         0.000         0.000
+  External Outflow .........         0.000         0.000
+  Flooding Loss ............         0.000         0.000
+  Evaporation Loss .........         0.000         0.000
+  Exfiltration Loss ........         0.000         0.000
+  Initial Stored Volume ....        12.001         3.911
+  Final Stored Volume ......        13.038         4.249
+  Continuity Error (%) .....         0.059
+  
+  
+  *************************
+  Highest Continuity Errors
+  *************************
+  Node MH11 (1.75%)
+  
+  
+  ***************************
+  Time-Step Critical Elements
+  ***************************
+  Link L6 (23.77%)
+  Link L4 (23.44%)
+  
+  
+  ********************************
+  Highest Flow Instability Indexes
+  ********************************
+  Link L9 (2)
+  
+  
+  *********************************
+  Most Frequent Nonconverging Nodes
+  *********************************
+  Convergence obtained at all time steps.
+  
+  
+  *************************
+  Routing Time Step Summary
+  *************************
+  Minimum Time Step           :     3.87 sec
+  Average Time Step           :    43.84 sec
+  Maximum Time Step           :    60.00 sec
+  % of Time in Steady State   :     0.00
+  Average Iterations per Step :     2.00
+  % of Steps Not Converging   :     0.00
+  Time Step Frequencies       :
+     60.000 - 23.031 sec      :    74.45 %
+     23.031 -  8.841 sec      :    25.45 %
+      8.841 -  3.393 sec      :     0.10 %
+      3.393 -  1.303 sec      :     0.00 %
+      1.303 -  0.500 sec      :     0.00 %
+  
+  
+  ***************************
+  Subcatchment Runoff Summary
+  ***************************
+  
+  ------------------------------------------------------------------------------------------------------------------------------
+                            Total      Total      Total      Total     Imperv       Perv      Total       Total     Peak  Runoff
+                           Precip      Runon       Evap      Infil     Runoff     Runoff     Runoff      Runoff   Runoff   Coeff
+  Subcatchment                 in         in         in         in         in         in         in    10^6 gal      CFS
+  ------------------------------------------------------------------------------------------------------------------------------
+  MH1#1                      4.99       0.00       0.13       3.65       1.21       0.00       1.21        0.02     0.67   0.242
+  MH2#1                      4.99       0.00       0.14       3.41       1.45       0.00       1.45        0.05     1.26   0.290
+  MH3#1                      4.99       0.00       0.13       3.89       0.97       0.00       0.97        0.02     0.58   0.194
+  MH4#1                      4.99       0.00       0.14       3.41       1.45       0.00       1.45        0.02     0.67   0.291
+  MH5#1                      4.99       0.00       0.13       4.62       0.24       0.00       0.24        0.00     0.10   0.049
+  MH6#1                      4.99       0.00       0.13       4.38       0.49       0.00       0.49        0.01     0.19   0.097
+  MH7#1                      4.99       0.00       0.13       4.38       0.49       0.00       0.49        0.00     0.11   0.097
+  MH9#1                      4.99       0.00       0.13       3.65       1.21       0.00       1.21        0.02     0.66   0.243
+  MH10#1                     4.99       0.00       0.13       3.65       1.21       0.00       1.21        0.01     0.37   0.243
+  Pond#1                     4.99       0.00       0.20       1.22       3.58       0.00       3.58        0.17     2.93   0.717
+  
+  
+  ******************
+  Node Depth Summary
+  ******************
+  
+  ---------------------------------------------------------------------------------
+                                 Average  Maximum  Maximum  Time of Max    Reported
+                                   Depth    Depth      HGL   Occurrence   Max Depth
+  Node                 Type         Feet     Feet     Feet  days hr:min        Feet
+  ---------------------------------------------------------------------------------
+  MH1                  JUNCTION     0.05     0.33   934.33     0  05:40        0.33
+  MH2                  JUNCTION     0.07     0.45   931.95     0  05:40        0.45
+  MH4                  JUNCTION     0.10     0.63   930.63     0  05:40        0.63
+  MH6                  JUNCTION     0.10     0.59   929.09     0  05:40        0.59
+  MH10                 JUNCTION     0.38     1.61   928.61     0  05:44        1.61
+  MH11                 JUNCTION     0.37     1.61   928.61     0  05:44        1.61
+  MH3                  JUNCTION     0.05     0.31   932.31     0  05:40        0.31
+  MH5                  JUNCTION     0.02     0.12   931.12     0  05:40        0.12
+  MH9                  JUNCTION     0.04     0.26   931.26     0  05:40        0.26
+  MH7                  JUNCTION     0.17     1.11   928.61     0  05:44        1.11
+  Riser                JUNCTION     0.00     0.00   920.00     0  00:00        0.00
+  outfall              OUTFALL      0.00     0.00   920.00     0  00:00        0.00
+  Pond                 STORAGE      5.18     5.26   925.26     1  12:58        5.26
+  
+  
+  *******************
+  Node Inflow Summary
+  *******************
+  
+  -------------------------------------------------------------------------------------------------
+                                  Maximum  Maximum                  Lateral       Total        Flow
+                                  Lateral    Total  Time of Max      Inflow      Inflow     Balance
+                                   Inflow   Inflow   Occurrence      Volume      Volume       Error
+  Node                 Type           CFS      CFS  days hr:min    10^6 gal    10^6 gal     Percent
+  -------------------------------------------------------------------------------------------------
+  MH1                  JUNCTION      0.67     0.67     0  05:40      0.0246      0.0246      -0.035
+  MH2                  JUNCTION      1.26     1.92     0  05:40      0.0475      0.0722      -0.020
+  MH4                  JUNCTION      0.67     3.16     0  05:40      0.0247       0.118       0.006
+  MH6                  JUNCTION      0.19     3.43     0  05:40     0.00717       0.129       0.337
+  MH10                 JUNCTION      0.37     4.48     0  05:40      0.0138       0.172       0.011
+  MH11                 JUNCTION      0.00     4.34     0  05:40           0       0.172       1.780
+  MH3                  JUNCTION      0.58     0.58     0  05:40      0.0216      0.0216      -0.034
+  MH5                  JUNCTION      0.10     0.10     0  05:40     0.00359     0.00359      -0.099
+  MH9                  JUNCTION      0.66     0.66     0  05:40      0.0243      0.0243      -0.076
+  MH7                  JUNCTION      0.11     3.54     0  05:40     0.00407       0.133      -0.455
+  Riser                JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  outfall              OUTFALL       0.00     0.00     0  00:00           0           0       0.000 gal
+  Pond                 STORAGE       2.93     6.32     0  05:43       0.169        4.25       0.001
+  
+  
+  **********************
+  Node Surcharge Summary
+  **********************
+  
+  No nodes were surcharged.
+  
+  
+  *********************
+  Node Flooding Summary
+  *********************
+  
+  No nodes were flooded.
+  
+  
+  **********************
+  Storage Volume Summary
+  **********************
+  
+  ------------------------------------------------------------------------------------------------
+                         Average    Avg   Evap  Exfil     Maximum    Max    Time of Max    Maximum
+                          Volume   Pcnt   Pcnt   Pcnt      Volume   Pcnt     Occurrence    Outflow
+  Storage Unit          1000 ft³   Full   Loss   Loss    1000 ft³   Full    days hr:min        CFS
+  ------------------------------------------------------------------------------------------------
+  Pond                   554.087   16.5    0.0    0.0     567.914   16.9       1  12:58       0.00
+  
+  
+  ***********************
+  Outfall Loading Summary
+  ***********************
+  
+  -----------------------------------------------------------
+                         Flow       Avg       Max       Total
+                         Freq      Flow      Flow      Volume
+  Outfall Node           Pcnt       CFS       CFS    10^6 gal
+  -----------------------------------------------------------
+  outfall                0.00      0.00      0.00       0.000
+  -----------------------------------------------------------
+  System                 0.00      0.00      0.00       0.000
+  
+  
+  ********************
+  Link Flow Summary
+  ********************
+  
+  -----------------------------------------------------------------------------
+                                 Maximum  Time of Max   Maximum    Max/    Max/
+                                  |Flow|   Occurrence   |Veloc|    Full    Full
+  Link                 Type          CFS  days hr:min    ft/sec    Flow   Depth
+  -----------------------------------------------------------------------------
+  L1                   CONDUIT      0.66     0  05:40      2.42    0.10    0.21
+  L2                   CONDUIT      1.91     0  05:40      2.80    0.11    0.27
+  L3                   CONDUIT      3.15     0  05:40      3.75    0.22    0.31
+  L4                   CONDUIT      3.43     0  05:40      3.84    0.12    0.24
+  L6                   CONDUIT      4.34     0  05:40      1.35    2.34    0.54
+  L7                   CONDUIT      0.58     0  05:40      2.36    0.09    0.20
+  L8                   CONDUIT      0.10     0  05:40      1.49    0.01    0.08
+  L9                   CONDUIT      0.66     0  05:40      3.14    0.07    0.18
+  channel              CHANNEL      3.58     0  05:45      1.01    0.01    0.12
+  culvert              CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  L5                   CONDUIT      3.47     0  05:40      1.50    0.09    0.45
+  
+  
+  ***************************
+  Flow Classification Summary
+  ***************************
+  
+  -------------------------------------------------------------------------------------
+                      Adjusted    ---------- Fraction of Time in Flow Class ---------- 
+                       /Actual         Up    Down  Sub   Sup   Up    Down  Norm  Inlet 
+  Conduit               Length    Dry  Dry   Dry   Crit  Crit  Crit  Crit  Ltd   Ctrl  
+  -------------------------------------------------------------------------------------
+  L1                      1.00   0.00  0.00  0.00  0.00  0.00  0.00  1.00  0.00  0.00
+  L2                      1.00   0.00  0.64  0.00  0.36  0.00  0.00  0.00  0.99  0.00
+  L3                      1.00   0.00  0.00  0.00  0.00  0.00  0.00  1.00  0.00  0.00
+  L4                      1.00   0.00  0.00  0.00  0.02  0.00  0.00  0.98  0.02  0.00
+  L6                      1.00   0.00  0.00  0.00  1.00  0.00  0.00  0.00  0.00  0.00
+  L7                      1.00   0.00  0.00  0.00  0.00  0.00  0.00  1.00  0.00  0.00
+  L8                      1.00   0.00  0.00  0.00  0.00  0.00  0.00  1.00  0.00  0.00
+  L9                      1.00   0.01  0.00  0.00  0.00  0.00  0.00  0.99  0.00  0.00
+  channel                 1.00   0.00  0.00  0.00  0.82  0.00  0.00  0.18  0.69  0.00
+  culvert                 1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  L5                      1.00   0.00  0.62  0.00  0.38  0.00  0.00  0.00  0.91  0.00
+  
+  
+  *************************
+  Conduit Surcharge Summary
+  *************************
+  
+  ----------------------------------------------------------------------------
+                                                           Hours        Hours 
+                         --------- Hours Full --------   Above Full   Capacity
+  Conduit                Both Ends  Upstream  Dnstream   Normal Flow   Limited
+  ----------------------------------------------------------------------------
+  L6                          0.01      0.01      0.01      1.37         0.01
+  
+
+  Analysis begun on:  Sun Jul 12 22:46:28 2026
+  Analysis ended on:  Sun Jul 12 22:46:28 2026
+  Total elapsed time: < 1 sec

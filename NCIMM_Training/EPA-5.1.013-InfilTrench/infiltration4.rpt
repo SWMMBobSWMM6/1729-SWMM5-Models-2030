@@ -1,13 +1,7 @@
 
-  EPA STORM WATER MANAGEMENT MODEL - VERSION 5.1 (Build 5.1.012)
-  --------------------------------------------------------------
+  EPA STORM WATER MANAGEMENT MODEL - VERSION 5.2 (Build 5.2.4)
+  ------------------------------------------------------------
 
-  
-  *********************************************************
-  NOTE: The summary statistics displayed in this report are
-  based on results found at every computational time step,  
-  not just on results from each reporting time step.
-  *********************************************************
   
   ****************
   Analysis Options
@@ -23,6 +17,7 @@
     Water Quality .......... NO
   Infiltration Method ...... GREEN_AMPT
   Flow Routing Method ...... DYNWAVE
+  Surcharge Method ......... EXTRAN
   Starting Date ............ 01/01/2015 00:00:00
   Ending Date .............. 01/02/2015 00:00:00
   Antecedent Dry Days ...... 0.0
@@ -42,10 +37,10 @@
   Total Precipitation ......         0.116         4.288
   Evaporation Loss .........         0.000         0.000
   Infiltration Loss ........         0.001         0.036
-  Surface Runoff ...........         0.020         0.739
+  Surface Runoff ...........         0.020         0.758
   LID Drainage .............         0.059         2.195
-  Final Storage ............         0.035         1.306
-  Continuity Error (%) .....         0.281
+  Final Storage ............         0.035         1.300
+  Continuity Error (%) .....         0.000
   
   
   **************************        Volume         Depth
@@ -65,7 +60,7 @@
   Flow Routing Continuity        acre-feet      10^6 gal
   **************************     ---------     ---------
   Dry Weather Inflow .......         0.000         0.000
-  Wet Weather Inflow .......         0.079         0.026
+  Wet Weather Inflow .......         0.080         0.026
   Groundwater Inflow .......         0.000         0.000
   RDII Inflow ..............         0.000         0.000
   External Inflow ..........         0.000         0.000
@@ -75,13 +70,13 @@
   Exfiltration Loss ........         0.000         0.000
   Initial Stored Volume ....         0.000         0.000
   Final Stored Volume ......         0.000         0.000
-  Continuity Error (%) .....         0.000
+  Continuity Error (%) .....         0.325
   
   
   ***************************
   Time-Step Critical Elements
   ***************************
-  Link DrainPipe (1.90%)
+  Link DrainPipe (5.56%)
   
   
   ********************************
@@ -90,28 +85,40 @@
   All links are stable.
   
   
+  *********************************
+  Most Frequent Nonconverging Nodes
+  *********************************
+  Convergence obtained at all time steps.
+  
+  
   *************************
   Routing Time Step Summary
   *************************
-  Minimum Time Step           :     6.58 sec
-  Average Time Step           :    14.89 sec
+  Minimum Time Step           :     5.27 sec
+  Average Time Step           :    14.83 sec
   Maximum Time Step           :    15.00 sec
-  Percent in Steady State     :    -0.00
+  % of Time in Steady State   :     0.00
   Average Iterations per Step :     2.00
-  Percent Not Converging      :     0.00
+  % of Steps Not Converging   :     0.00
+  Time Step Frequencies       :
+     15.000 -  7.597 sec      :    99.52 %
+      7.597 -  3.848 sec      :     0.48 %
+      3.848 -  1.949 sec      :     0.00 %
+      1.949 -  0.987 sec      :     0.00 %
+      0.987 -  0.500 sec      :     0.00 %
   
   
   ***************************
   Subcatchment Runoff Summary
   ***************************
   
-  --------------------------------------------------------------------------------------------------------
-                            Total      Total      Total      Total      Total       Total     Peak  Runoff
-                           Precip      Runon       Evap      Infil     Runoff      Runoff   Runoff   Coeff
-  Subcatchment                 in         in         in         in         in    10^6 gal      CFS
-  --------------------------------------------------------------------------------------------------------
-  Infil                      4.29      36.01       0.00       0.35      27.96        0.03     1.54   0.694
-  Lot                        4.29       0.00       0.00       0.00       4.22        0.03     1.40   0.985
+  ------------------------------------------------------------------------------------------------------------------------------
+                            Total      Total      Total      Total     Imperv       Perv      Total       Total     Peak  Runoff
+                           Precip      Runon       Evap      Infil     Runoff     Runoff     Runoff      Runoff   Runoff   Coeff
+  Subcatchment                 in         in         in         in         in         in         in    10^6 gal      CFS
+  ------------------------------------------------------------------------------------------------------------------------------
+  Infil                      4.29      36.01       0.00       0.35       0.00       0.00      28.14        0.03     1.56   0.698
+  Lot                        4.29       0.00       0.00       0.00       4.22       0.00       4.22        0.03     1.40   0.985
   
 
   ***********************
@@ -123,7 +130,7 @@
                                         Inflow      Loss      Loss   Outflow   Outflow   Storage   Storage       Error
   Subcatchment      LID Control             in        in        in        in        in        in        in           %
   --------------------------------------------------------------------------------------------------------------------
-  Infil             LotTreatment         40.30      0.00      0.35      7.04     20.92      0.00     11.88        0.28
+  Infil             LotTreatment         40.30      0.00      0.35      7.22     20.92      0.00     11.82       -0.02
   
   *******************
   Groundwater Summary
@@ -147,7 +154,7 @@
                                    Depth    Depth      HGL   Occurrence   Max Depth
   Node                 Type         Feet     Feet     Feet  days hr:min        Feet
   ---------------------------------------------------------------------------------
-  Junction             JUNCTION     0.60     1.04   584.04     0  12:14        1.04
+  Junction             JUNCTION     0.61     1.04   584.04     0  12:14        1.04
   Outlet               OUTFALL      0.04     0.32   580.32     0  12:14        0.32
   
   
@@ -161,8 +168,8 @@
                                    Inflow   Inflow   Occurrence      Volume      Volume       Error
   Node                 Type           CFS      CFS  days hr:min    10^6 gal    10^6 gal     Percent
   -------------------------------------------------------------------------------------------------
-  Junction             JUNCTION      1.54     1.54     0  12:15      0.0258      0.0258       0.372
-  Outlet               OUTFALL       0.00     1.57     0  12:14           0      0.0257       0.000
+  Junction             JUNCTION      1.56     1.56     0  12:15       0.026       0.026       0.371
+  Outlet               OUTFALL       0.00     1.56     0  12:14           0      0.0259       0.000
   
   
   **********************
@@ -188,9 +195,9 @@
                          Freq      Flow      Flow      Volume
   Outfall Node           Pcnt       CFS       CFS    10^6 gal
   -----------------------------------------------------------
-  Outlet                77.18      0.06      1.57       0.026
+  Outlet                77.27      0.06      1.56       0.026
   -----------------------------------------------------------
-  System                77.18      0.06      1.57       0.026
+  System                77.27      0.06      1.56       0.026
   
   
   ********************
@@ -202,7 +209,7 @@
                                   |Flow|   Occurrence   |Veloc|    Full    Full
   Link                 Type          CFS  days hr:min    ft/sec    Flow   Depth
   -----------------------------------------------------------------------------
-  DrainPipe            CONDUIT      1.57     0  12:14      8.23    0.31    0.38
+  DrainPipe            CONDUIT      1.56     0  12:14      8.19    0.31    0.38
   
   
   ***************************
@@ -224,6 +231,6 @@
   No conduits were surcharged.
   
 
-  Analysis begun on:  Fri Aug 25 14:50:04 2017
-  Analysis ended on:  Fri Aug 25 14:50:04 2017
+  Analysis begun on:  Sun Jul 12 22:46:31 2026
+  Analysis ended on:  Sun Jul 12 22:46:31 2026
   Total elapsed time: < 1 sec
