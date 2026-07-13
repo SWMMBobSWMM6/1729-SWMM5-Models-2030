@@ -10,7 +10,7 @@ five larger real-network samples (user1–user5).
 The viewer (build v2026.06.28+) auto-fetches same-basename `.rpt`/`.out`
 siblings when you load a `.inp` through its GitHub browser. Point the browser at:
 
-- **Owner:** `SWMMBobSWMM6`  ·  **Repo:** `1729-SWMM5-Models-2030`  ·  **Branch:** `main`
+- **Owner:** `SWMMBobSWMM6`  ·  **Repo:** `1729-SWMM5-Models-2030`  ·  **Branch:** `master`
 - **Path:** `Viewer-Demo-Results`
 
 …click any `.inp`, and its engine results attach automatically — max-HGL
