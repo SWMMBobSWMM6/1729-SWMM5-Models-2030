@@ -1,0 +1,369 @@
+1         *************************************************
+          *    U.S. Environmental Protection Agency       *
+          *    Storm Water Management Model  (SWMM)       *
+          *                Version 4.99 CDM Inc           *
+          *                                               *
+          *  OSU/CDM Hydrology and Hydraulics Discipline  *
+          *        Release Date - April 3, 2007           *
+          *   CDM Inc. and Oregon State University        *
+          *   Chuck Moore, Wayne Huber & Robert Dickinson *
+          *   Compiled using Compaq Visual Fortran 6.6B   *
+          *************************************************
+
+                           Developed by                    
+
+          *************************************************
+          *             Metcalf & Eddy, Inc.              *
+          *            University of Florida              *
+          * Water Resources Engineers, Inc.(Now CDM Inc.) *
+          *              September 1970                   *
+          *************************************************
+
+                   Distributed and Maintained by           
+
+          *************************************************
+          *      U.S. Environmental Protection Agency     *
+          * Center for Exposure Assessment Modeling (CEAM)*
+          *    Athens Environmental Research Laboratory   *
+          *            960 College Station Road           *
+          *            Athens, GA    30605-2720           *
+          *************************************************
+
+          *************************************************
+          * This is a new release of SWMM. If any problems*
+          * occur executing this model, contact either    *
+          * Mr. Frank Stancil, U.S. Environmental         *
+          * Protection Agency. 706/355-8328 (voice)       *
+          *    e-mail: stancil@athens.ath.epa.gov         *
+          * Or contact Wayne C. Huber at Oregon St.U.     *
+          *    541/737-6150 and wayne.huber@orst.edu or   *
+          * Robert Dickinson, CDM Inc. dickinsonre@cdm.com*
+          *************************************************
+
+          ######################################################
+          # This is an implementation of EPA SWMM 4.99 CDM Inc #
+          # "Nature is full of infinite causes which           #
+          #  have never occurred in experience" da Vinci       #
+          ######################################################
+
+
+ ###########################################
+ #        File names by SWMM Block         #
+ #         JIN  -> Input to a Block        #
+ #        JOUT  -> Output from a Block     #
+ ###########################################
+
+    JIN for Block #     1 File #    8  RUNOFF3.INT                                                 
+   JOUT for Block #     1 File #    9  JOT.UF                                                      
+
+ ###########################################
+ # Scratch file names for this simulation. #
+ ###########################################
+
+ NSCRAT #     1 File #   10  SCRT1.UF                                                    
+ NSCRAT #     2 File #   11  SCRT2.UF                                                    
+ NSCRAT #     3 File #   12  SCRT3.UF                                                    
+
+ ***************************************************
+ *    Parameter Values on the Tapes Common Block   *
+ ***************************************************
+
+  Number of Subcatchments in the Runoff Block (NW)...... 5000
+  Number of Channel/Pipes in the Runoff Block (NG)...... 5000
+  Number of Connections to Runoff Channels/Inlets (NCP).  400
+  Number of Water Quality Constituents (MQUAL)..........   10
+  Number of Runoff Land Uses per Subcatchment (NLU).....   10
+  Number of Groundwater Plot/prints in Runoff (NGW)..... 1000
+  Number of Interface Locations for all Blocks (NIE).... 3000
+  Number of Elements in the Transport Block (NET)....... 2000
+  Number of Storage Junctions in Transport (NTSE)....... 1000
+  Number of Transport interface input locations (NTHI).. 1000
+  Number of Transport interface output locations (NTHO). 4000
+  Number of Transport input locations on R lines (NTHR).   80
+  Number of Transport printed output locations (NTOA)...   80
+  Number of Tabular Flow Splitters in Transport (NTSP)..   50
+  Number of Elements in the Extran Block (NEE).......... 5000
+  Number of Pumps in Extran (NEP).......................  800
+  Number of Orifices in Extran (NEO).................... 1000
+  Number of Tide Gates/Free Outfalls in Extran (NTG).... 1000
+  Number of Extran Weirs (NEW).......................... 2000
+  Number of Extran Printout Locations (NPO).............10000
+  Number of Tide Elements in Extran (NTE)............... 1000
+  Number of Natural Channels (NNC)...................... 1000
+  Number of Storage Junctions in Extran (NVSE).......... 1000
+  Number of Time History Data Points in Extran (NTVAL).. 1200
+  Number of Data Points for Variable Storage Elements
+    in the Extran Block (NVST)..........................   50
+  Number of Input Hydrographs in Extran (NEH)...........10000
+  Number of Allowable Channel Connections to
+    Junctions in the Extran Block (NCHN)................  300
+  Number Rain Gages in Rain and Runoff (MAXRG).......... 9000
+  Number PRATE/VRATE Points for Extran Pump
+    Input (MAXPRA)......................................   25
+  Number of Variable Orifices in Extran (NVORF).........  500
+  Number of Variable Orifice Data Points (NVOTIM)....... 5000
+  Number of Allowable Precip. Values/yr in Rain (LIMRN). 5000
+  Number of Storm Events for Rain Analysis (LSTORM).....20000
+  Number of Plugs for Plug-flow in S/T (NPLUG).......... 3000
+  Number Conduits for Extran Results to ASCII 
+    File (MXFLOW)....................................... 5000
+
+
+
+ *********************************************************
+ * Entry made to the EXTENDED TRANSPORT MODEL (EXTRAN)   *
+ * developed 1973 by Camp, Dresser and McKee (CDM) with  *
+ * modifications 1977-1991 by the University of Florida. *
+ *                                                       *
+ * Most recent update: July 2004 by CDM and Oregon      *
+ * State University                                      *
+ *                                                       *
+ * "Smooth runs the water where the brook is deep."      *
+ *                   Shakespeare, Henry VI, II, III, 1   *
+ *********************************************************
+
+     WARNING : JOUT WAS SET TO NONZERO BUT FILE NAME WAS NOT SPECIFIED THROUGH @ LINES
+     JOUT WAS SET TO ZERO TO AVOID WRITING DATA TO UNSAVED SCRATCH FILE
+
+
+1--------------------------------------------------------------------------------
+ ENVIRONMENTAL PROTECTION AGENCY             ****   EXTENDED TRANSPORT PROGRAM   ****        WATER RESOURCES DIVISION
+ WASHINGTON, D.C.                            ****                                ****        CAMP DRESSER & MCKEE INC.
+                                             ****         ANALYSIS MODULE        ****        ANNANDALE, VIRGINIA
+
+        STEVEN                                                                       
+        STORM OF NOVEMBER 28, 1973                                                   
+
+
+ Version compatibility options from Line AA.
+ -------------------------------------------
+ NAVER  = 2, Use SWMM4x geometric parameter weighting.
+ NFASNH = 1 on AA line re. surface area weighting. See documentation.
+
+ Control information for simulation
+ ----------------------------------
+
+ Integration cycles.................         120
+
+ Length of integration step is......       60.00 seconds
+ Simulation length..................        2.00 hours
+
+ NEQUAL value for the SWMM 42 Option          60
+
+ Use U.S. customary units for I/O...           0
+
+ Printing starts in cycle...........           1
+
+ Intermediate printout intervals of         100 cycles
+ Intermediate printout intervals of.      100.00 minutes
+
+ Summary printout intervals of......         100 cycles
+ Summary printout time interval of..      100.00 minutes
+
+ Hot start file parameter (JREDO)...           0
+
+ Initial time (TZERO)...............       15.00 hours
+ This is time displacement from JIN interface file starting date/time when
+ interface file is used.
+ This also describes starting hour in K3 line hydrograph input when K3
+ lines are used.
+ Initial date (default).............        19880101 (yr/mo/day)
+ NOTE: Initial date from JIN interface file will be used, if accessed,
+ unless IDATZ is negative.
+
+ Iteration variables: ITMAX.........      10
+                      SURTOL........  0.0025
+                      Surjun........  0.0000
+                      Node Tolerance  0.0000
+                      Link Omega....  0.0000
+                      Node Omega....  0.0000
+
+ Default surface area of junctions....   12.57 square feet.
+
+ ITERATIVE EXTRAN SOLUTION. (ISOL = 2).
+ NEWTON-RAPHSON SURCHARGE ITERATION.
+
+ Surcharge Computations Use Preissman Slot Method
+
+ NORMAL FLOW OPTION WHEN THE FROUDE 
+ # IS GREATER THAN 1.0 (KSUPER=1)...
+
+ NJSW INPUT HYDROGRAPH JUNCTIONS....     0
+
+ Printed output for the following    1 Junctions
+
+              1
+
+ Printed output for the following    2 Conduits
+
+            101        105
+
+ Water surface elevations will be plotted for the following     1 Junctions
+
+             50
+
+ Flow rate will be plotted for the following     2 Conduits
+
+            101        105
+
+     INTERMEDIATE HEADER LINES ARE PRINTED AS IN ORIGINAL PROGRAM
+     IDS ARE WRITTEN AS IN ORIGINAL PROGRAM 
+
+     CONDUIT LENGTHS ON C1 LINE MUST EQUAL IRREGULAR SECTION LENGTH ENTERED ON THE C3 OR X1 LINES (IWLEN = 0)
+     JELEV = 0 (DEFAULT). STANDARD INPUTS ARE DEPTHS NOT ELEVATIONS
+
+     JDOWN = 0 - Minimum of normal or critical depth will be used at free outfalls (I1).
+
+     Characteristic depth for M2 and S2 water surface profiles will be computed as in previous versions of EXTRAN (IM2 = 0).
+
+     SEDIMENT DEPTHS WILL NOT BE READ FROM C1 LINES
+
+     Intermediate continuity output will be created every 
+
+
+1--------------------------------------------------------------------------------
+ ENVIRONMENTAL PROTECTION AGENCY             ****   EXTENDED TRANSPORT PROGRAM   ****        WATER RESOURCES DIVISION
+ WASHINGTON, D.C.                            ****                                ****        CAMP DRESSER & MCKEE INC.
+                                             ****         ANALYSIS MODULE        ****        ANNANDALE, VIRGINIA
+
+        STEVEN                                                                       
+        STORM OF NOVEMBER 28, 1973                                                   
+
+
+
+ *****************************************************
+ *                     Conduit Data                  *
+ *****************************************************
+
+  INP  CONDUIT                 LENGTH   CONDUIT     AREA   MANNING MAX WIDTH     DEPTH    Sediment       JUNCTIONS                           INVERT HEIGHT     TRAPEZOID
+  NUM  Name/Number              (ft)      CLASS   ( ft^2)     COEF.   (ft)         (ft)   Depth(ft)    AT THE ENDS                           ABOVE JUNCTIONS   SIDE SLOPES
+ ----  ---------------         -------  --------   -------   ------- ---------     -----  --------- ---------------    ------------       ---------------  ----- -----
+   1       101      207. CIRCULAR      19.63   0.01300      5.00      5.00         0          1
+        50
+   2       102      270. CIRCULAR      19.63   0.01300      5.00      5.00         0          2
+        53
+   3       103      600. CIRCULAR      19.63   0.01300      5.00      5.00         0          3
+         2
+   4       104      257. CIRCULAR       4.91   0.01300      2.50      2.50         0          4
+         3
+   5       105      523. CIRCULAR       7.07   0.01300      3.00      3.00         0          5
+        54
+   6       112      286. CIRCULAR      19.63   0.01300      5.00      5.00         0         12
+         3
+   7       113      280. CIRCULAR      19.63   0.01300      5.00      5.00         0         13
+        12
+   8       114      255. CIRCULAR      12.57   0.01300      4.00      4.00         0         14
+        13
+   9       116      205. CIRCULAR      12.57   0.01300      4.00      4.00         0         16
+        55
+  10       118      244. CIRCULAR      12.57   0.01300      4.00      4.00         0         18
+        16
+  11       119      250. CIRCULAR      12.57   0.01300      4.00      4.00         0         19
+        18
+  12       120      230. CIRCULAR       7.07   0.01300      3.00      3.00         0         20
+        56
+  13       123      420. CIRCULAR       7.07   0.01300      3.00      3.00         0         23
+        13
+  14       124      200. CIRCULAR       7.07   0.01300      3.00      3.00         0         24
+        23
+  15       125      388. CIRCULAR       7.07   0.01300      3.00      3.00         0         25
+        24
+  16       151      162. CIRCULAR      19.63   0.01300      5.00      5.00         0         51
+         1
+  17       152      277. CIRCULAR      19.63   0.01300      5.00      5.00         0         52
+        51
+  18       153      298. CIRCULAR      19.63   0.01300      5.00      5.00         0         53
+        52
+  19       154      270. CIRCULAR       7.07   0.01300      3.00      3.00         0         54
+         3
+  20       155      271. CIRCULAR      12.57   0.01300      4.00      4.00         0         55
+        14
+  21       156      190. CIRCULAR       7.07   0.01300      3.00      3.00         0         56
+        19
+
+
+
+
+1--------------------------------------------------------------------------------
+ ENVIRONMENTAL PROTECTION AGENCY             ****   EXTENDED TRANSPORT PROGRAM   ****        WATER RESOURCES DIVISION
+ WASHINGTON, D.C.                            ****                                ****        CAMP DRESSER & MCKEE INC.
+                                             ****         ANALYSIS MODULE        ****        ANNANDALE, VIRGINIA
+
+        STEVEN                                                                       
+        STORM OF NOVEMBER 28, 1973                                                   
+
+
+
+ *****************************************************
+ *                  Junction Data                    *
+ *****************************************************
+
+ INP  JUNCTION                 GROUND    CROWN     INVERT     QINST   INITIAL    CONNECTING CONDUITS
+ NUM  Name/Number               ELEV.     ELEV.     ELEV.       cfs  DEPTH(ft)
+ ---  -----------             -------   -------    ------  -------   --------     -------------------
+   1         1    252.00    247.10    242.10      0.00      0.00       101     151
+   2         2    285.00    283.80    278.80      0.00      0.00       102     103
+   3         3    315.00    311.10    306.10      0.00      0.00       103     104     112     154
+   4         4    320.00    312.50    310.00      1.00      0.00       104
+   5         5    328.60    324.60    321.60      1.00      0.00       105
+   6        12    319.00    316.10    311.10      0.00      0.00       112     113
+   7        13    325.00    321.10    316.10      0.00      0.00       113     114     123
+   8        14    328.00    323.20    319.20      0.00      0.00       114     155
+   9        16    353.30    349.10    345.10      0.00      0.00       116     118
+  10        18    365.80    365.20    361.20      0.00      0.00       118     119
+  11        19    375.00    371.20    367.20      0.00      0.00       119     156
+  12        20    382.10    381.10    378.10      1.00      0.00       120
+  13        23    343.90    333.70    330.70      0.00      0.00       123     124
+  14        24    344.30    337.10    334.10      0.00      0.00       124     125
+  15        25    362.10    352.20    349.20      1.00      0.00       125
+  16        50    240.00    239.00    234.00      0.00      0.00       101
+  17        51    255.00    253.30    248.30      0.00      0.00       151     152
+  18        52    265.00    262.90    257.90      0.00      0.00       152     153
+  19        53    280.00    276.10    271.10      0.00      0.00       102     153
+  20        54    315.10    313.50    310.50      0.00      0.00       105     154
+  21        55    340.00    335.20    331.20      0.00      0.00       116     155
+  22        56    380.00    376.20    373.20      0.00      0.00       120     156
+
+  #####################################
+  # WMM Base flow mean =       4.0000 #
+  #####################################
+
+
+
+ **************************************************
+ *          FREE OUTFALL DATA (DATA GROUP I1)     *
+ *         BOUNDARY CONDITION ON DATA GROUP J1    *
+ **************************************************
+
+ OUTFALL AT JUNCTION....        50 HAS BOUNDARY CONDITION NUMBER...         1
+
+
+Environmental Protection Agency *** Extended Transport Program ***  Hydrology & Hydraulics Discipline
+Cincinnati, Ohio                ***                            ***  CDM Inc.
+                                *** Extran Hydraulics Module   ***  Cincinnati, Ohio
+
+        STEVEN                                                                       
+        STORM OF NOVEMBER 28, 1973                                                   
+
+
+
+ **************************************************
+ *        INTERNAL CONNECTIVITY INFORMATION       *
+ **************************************************
+
+     CONDUIT                          JUNCTION                         JUNCTION
+     -------                          --------                         --------
+          90022           50            0
+1
+ *****************************************************
+ *        BOUNDARY CONDITON INFORMATION              *
+ *                 DATA GROUPS J1-J4                 *
+ *****************************************************
+
+
+
+ BC NUMBER..         1 HAS NO CONTROL WATER SURFACE.
+
+ ERROR.  End-of-file reached unexpectedly while readingheader information on
+ interface file on unit no.  8. File name = RUNOFF3.INT         
+ Check to see that this file is the proper interface file.  Run stopped.

@@ -1,0 +1,157 @@
+1         *************************************************
+          *    U.S. Environmental Protection Agency       *
+          *    Storm Water Management Model  (SWMM)       *
+          *                Version 4.99 CDM Inc           *
+          *                                               *
+          *  OSU/CDM Hydrology and Hydraulics Discipline  *
+          *        Release Date - April 3, 2007           *
+          *   CDM Inc. and Oregon State University        *
+          *   Chuck Moore, Wayne Huber & Robert Dickinson *
+          *   Compiled using Compaq Visual Fortran 6.6B   *
+          *************************************************
+
+                           Developed by                    
+
+          *************************************************
+          *             Metcalf & Eddy, Inc.              *
+          *            University of Florida              *
+          * Water Resources Engineers, Inc.(Now CDM Inc.) *
+          *              September 1970                   *
+          *************************************************
+
+                   Distributed and Maintained by           
+
+          *************************************************
+          *      U.S. Environmental Protection Agency     *
+          * Center for Exposure Assessment Modeling (CEAM)*
+          *    Athens Environmental Research Laboratory   *
+          *            960 College Station Road           *
+          *            Athens, GA    30605-2720           *
+          *************************************************
+
+          *************************************************
+          * This is a new release of SWMM. If any problems*
+          * occur executing this model, contact either    *
+          * Mr. Frank Stancil, U.S. Environmental         *
+          * Protection Agency. 706/355-8328 (voice)       *
+          *    e-mail: stancil@athens.ath.epa.gov         *
+          * Or contact Wayne C. Huber at Oregon St.U.     *
+          *    541/737-6150 and wayne.huber@orst.edu or   *
+          * Robert Dickinson, CDM Inc. dickinsonre@cdm.com*
+          *************************************************
+
+          ######################################################
+          # This is an implementation of EPA SWMM 4.99 CDM Inc #
+          # "Nature is full of infinite causes which           #
+          #  have never occurred in experience" da Vinci       #
+          ######################################################
+
+
+ ###########################################
+ #        File names by SWMM Block         #
+ #         JIN  -> Input to a Block        #
+ #        JOUT  -> Output from a Block     #
+ ###########################################
+
+    JIN for Block #     1 File #    0  JIN.UF                                                      
+   JOUT for Block #     1 File #   20  C:\swmm_crada_files\OUTPUT.MST                              
+
+ ###########################################
+ # Scratch file names for this simulation. #
+ ###########################################
+
+ NSCRAT #     1 File #   10  SCRT1.UF                                                    
+ NSCRAT #     2 File #   11  SCRT2.UF                                                    
+ NSCRAT #     3 File #   12  SCRT3.UF                                                    
+
+ ***************************************************
+ *    Parameter Values on the Tapes Common Block   *
+ ***************************************************
+
+  Number of Subcatchments in the Runoff Block (NW)...... 5000
+  Number of Channel/Pipes in the Runoff Block (NG)...... 5000
+  Number of Connections to Runoff Channels/Inlets (NCP).  400
+  Number of Water Quality Constituents (MQUAL)..........   10
+  Number of Runoff Land Uses per Subcatchment (NLU).....   10
+  Number of Groundwater Plot/prints in Runoff (NGW)..... 1000
+  Number of Interface Locations for all Blocks (NIE).... 3000
+  Number of Elements in the Transport Block (NET)....... 2000
+  Number of Storage Junctions in Transport (NTSE)....... 1000
+  Number of Transport interface input locations (NTHI).. 1000
+  Number of Transport interface output locations (NTHO). 4000
+  Number of Transport input locations on R lines (NTHR).   80
+  Number of Transport printed output locations (NTOA)...   80
+  Number of Tabular Flow Splitters in Transport (NTSP)..   50
+  Number of Elements in the Extran Block (NEE).......... 5000
+  Number of Pumps in Extran (NEP).......................  800
+  Number of Orifices in Extran (NEO).................... 1000
+  Number of Tide Gates/Free Outfalls in Extran (NTG).... 1000
+  Number of Extran Weirs (NEW).......................... 2000
+  Number of Extran Printout Locations (NPO).............10000
+  Number of Tide Elements in Extran (NTE)............... 1000
+  Number of Natural Channels (NNC)...................... 1000
+  Number of Storage Junctions in Extran (NVSE).......... 1000
+  Number of Time History Data Points in Extran (NTVAL).. 1200
+  Number of Data Points for Variable Storage Elements
+    in the Extran Block (NVST)..........................   50
+  Number of Input Hydrographs in Extran (NEH)...........10000
+  Number of Allowable Channel Connections to
+    Junctions in the Extran Block (NCHN)................  300
+  Number Rain Gages in Rain and Runoff (MAXRG).......... 9000
+  Number PRATE/VRATE Points for Extran Pump
+    Input (MAXPRA)......................................   25
+  Number of Variable Orifices in Extran (NVORF).........  500
+  Number of Variable Orifice Data Points (NVOTIM)....... 5000
+  Number of Allowable Precip. Values/yr in Rain (LIMRN). 5000
+  Number of Storm Events for Rain Analysis (LSTORM).....20000
+  Number of Plugs for Plug-flow in S/T (NPLUG).......... 3000
+  Number Conduits for Extran Results to ASCII 
+    File (MXFLOW)....................................... 5000
+
+
+
+ *********************************************************
+ * Entry made to the EXTENDED TRANSPORT MODEL (EXTRAN)   *
+ * developed 1973 by Camp, Dresser and McKee (CDM) with  *
+ * modifications 1977-1991 by the University of Florida. *
+ *                                                       *
+ * Most recent update: July 2004 by CDM and Oregon      *
+ * State University                                      *
+ *                                                       *
+ * "Smooth runs the water where the brook is deep."      *
+ *                   Shakespeare, Henry VI, II, III, 1   *
+ *********************************************************
+
+
+
+1--------------------------------------------------------------------------------
+ ENVIRONMENTAL PROTECTION AGENCY             ****   EXTENDED TRANSPORT PROGRAM   ****        WATER RESOURCES DIVISION
+ WASHINGTON, D.C.                            ****                                ****        CAMP DRESSER & MCKEE INC.
+                                             ****         ANALYSIS MODULE        ****        ANNANDALE, VIRGINIA
+
+     EXTRAN USER'S MANUAL EXAMPLE PROBLEM 10. ISOL = 0 SOLUTION.                     
+     PUMP OVER A HILL EXAMPLE FOR TYPE 3 DYNAMIC HEAD PUMPS                          
+
+
+ Version compatibility options from Line AA.
+ -------------------------------------------
+ NAVER  = 2, Use SWMM4x geometric parameter weighting.
+ NFASNH = 1 on AA line re. surface area weighting. See documentation.
+
+ Control information for simulation
+ ----------------------------------
+
+ Integration cycles.................         600
+
+ Length of integration step is......       30.00 seconds
+ Simulation length..................        5.00 hours
+
+ Do not create equiv. pipes(NEQUAL).           0
+
+ NEQUAL value for the SWMM 42 Option          30
+
+ Use U.S. customary units for I/O...           0
+
+
+     INTER was entered as a negative number.
+  Intermediate output is written to JOUT in ASCII format
