@@ -14,11 +14,23 @@ LINK_OFFSETS         DEPTH
 MIN_SLOPE            0.0
 ALLOW_PONDING        NO
 SKIP_STEADY_STATE    NO
-ROUTING_STEP         00:00:60
+ROUTING_STEP         00:01:00
 VARIABLE_STEP        0.75
 INERTIAL_DAMPING     PARTIAL
 NORMAL_FLOW_LIMITED  BOTH
 HEAD_TOLERANCE       0.0033
+START_DATE           01/01/2001
+START_TIME           00:00:00
+REPORT_START_DATE    01/01/2001
+REPORT_START_TIME    00:00:00
+END_DATE             01/02/2001
+END_TIME             00:00:00
+SWEEP_START          01/01
+SWEEP_END            12/31
+DRY_DAYS             0
+REPORT_STEP          00:15:00
+WET_STEP             00:05:00
+DRY_STEP             01:00:00
 
 [JUNCTIONS]
 ;;Name           Elev       MaxDepth   InitDepth  SurDepth   Aponded
@@ -27,15 +39,19 @@ P36              0          0          0          0          0
 P27              0          0          0          0          0
 P23              0          0          0          0          0
 P17              0          0          0          0          0
-P9               0          0          0          0          0
+
+[OUTFALLS]
+;;Name           Elev       Type       Stage      Gated
+;;-------------- ---------- ---------- ---------- -----
+P9               0          FREE                  NO
 
 [CONDUITS]
 ;;Name           From             To               Length     Roughness  InOffset   OutOffset  InitFlow   MaxFlow
 ;;-------------- ---------------- ---------------- ---------- ---------- ---------- ---------- ---------- ----------
-EDDIE2           P27              P23              46.69      0.0130     -2.49      -2.96      0          0
-EDDIE3           P23              P17              47.10      0.0130     -2.96      -3.43      0          0
-EDDIE1           P36              P27              49.28      0.0130     -2.00      -2.49      0          0
-EDDIE4           P17              P9               48.19      0.0130     -3.43      -3.91      0          0
+EDDIE2           P27              P23              46.69      0.0130     0          0          0          0
+EDDIE3           P23              P17              47.10      0.0130     0          0          0          0
+EDDIE1           P36              P27              49.28      0.0130     0          0          0          0
+EDDIE4           P17              P9               48.19      0.0130     0          0          0          0
 
 [XSECTIONS]
 ;;Link           Shape        Geom1      Geom2      Geom3      Geom4      Barrels

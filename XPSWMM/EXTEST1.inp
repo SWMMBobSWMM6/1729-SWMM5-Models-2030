@@ -14,56 +14,71 @@ LINK_OFFSETS         DEPTH
 MIN_SLOPE            0.0
 ALLOW_PONDING        NO
 SKIP_STEADY_STATE    NO
-ROUTING_STEP         00:00:60
+ROUTING_STEP         00:01:00
 VARIABLE_STEP        0.75
 INERTIAL_DAMPING     PARTIAL
 NORMAL_FLOW_LIMITED  BOTH
 MAX_TRIALS           50
+START_DATE           01/01/2001
+START_TIME           00:00:00
+REPORT_START_DATE    01/01/2001
+REPORT_START_TIME    00:00:00
+END_DATE             01/02/2001
+END_TIME             00:00:00
+SWEEP_START          01/01
+SWEEP_END            12/31
+DRY_DAYS             0
+REPORT_STEP          00:15:00
+WET_STEP             00:05:00
+DRY_STEP             01:00:00
 
 [JUNCTIONS]
 ;;Name           Elev       MaxDepth   InitDepth  SurDepth   Aponded
 ;;-------------- ---------- ---------- ---------- ---------- ----------
 Inflow           20.00      0          0          0          0
-202              20.00      0          0          0          0
 204              10.00      0          0          0          0
 Outlet           10.00      0          0          0          0
 inflowa          20.00      0          0          0          0
 202a             20.00      0          0          0          0
 204a             10.00      0          0          0          0
 Outleta          10.00      0          0          0          0
+road             1.00       0          0          0          0
+
+[OUTFALLS]
+;;Name           Elev       Type       Stage      Gated
+;;-------------- ---------- ---------- ---------- -----
+202              20.00      FREE                  NO
 
 [CONDUITS]
 ;;Name           From             To               Length     Roughness  InOffset   OutOffset  InitFlow   MaxFlow
 ;;-------------- ---------------- ---------------- ---------- ---------- ---------- ---------- ---------- ----------
 Trapin           Inflow           202              100.00     0.0140     1.00       1.00       0          0
-slowcond         204              Outlet           100.00     0.3000     0          -1.00      0          0
+205.1            road             204              50.00      0.0110     1.00       0          0          0
+slowcond         204              Outlet           100.00     0.3000     0          0          0          0
 Trapina          inflowa          202a             100.00     0.0140     1.00       1.00       0          0
-Trapouta         204a             Outleta          100.00     0.0140     0          -1.00      0          0
-228              ?                ?                0          0          0          0          0          0
-
-[WEIRS]
-;;Name           From             To               Type       CrestHt    Qcoeff     Gated    EndCon   EndCoeff   Surcharge
-;;-------------- ---------------- ---------------- ---------- ---------- ---------- -------- -------- ---------- ----------
-205.1            road             204              TRANSVERSE 0          1.840      NO       0        0          YES
-culvert1         202a             204a             TRANSVERSE 0          1.840      NO       0        0          YES
+culvert1         202a             204a             50.00      0.0110     1.00       0          0          0
+Trapouta         204a             Outleta          100.00     0.0140     0          0          0          0
+228              inflowa          Inflow           100.00     0.0130     0          0          0          0
 
 [XSECTIONS]
 ;;Link           Shape        Geom1      Geom2      Geom3      Geom4      Barrels
 ;;-------------- ------------ ---------- ---------- ---------- ---------- ----------
-Trapin           TRAPEZOIDAL  10.00      3.00       0          0          1
-slowcond         TRAPEZOIDAL  10.00      3.00       0          0          1
-Trapina          TRAPEZOIDAL  10.00      3.00       0          0          1
-Trapouta         TRAPEZOIDAL  10.00      3.00       0          0          1
-228              CIRCULAR     0          0          0          0          1
-205.1            RECT_OPEN    0          0          0          0          
-culvert1         RECT_OPEN    0          0          0          0          
+Trapin           TRAPEZOIDAL  10.00      3.00       1          1          1
+205.1            CIRCULAR     3.00       0          0          0          1
+slowcond         TRAPEZOIDAL  10.00      3.00       1          1          1
+Trapina          TRAPEZOIDAL  10.00      3.00       1          1          1
+culvert1         CIRCULAR     3.00       0          0          0          1
+Trapouta         TRAPEZOIDAL  10.00      3.00       1          1          1
+228              CIRCULAR     1.00       0          0          0          1
 
 [LOSSES]
 ;;Link           Inlet      Outlet     Average    Flap Gate
 ;;-------------- ---------- ---------- ---------- ----------
 Trapin           0          0          0          NO
+205.1            0          0          0          NO
 slowcond         0          0          0          NO
 Trapina          0          0          0          NO
+culvert1         0          0          0          NO
 Trapouta         0          0          0          NO
 228              0          0          0          NO
 

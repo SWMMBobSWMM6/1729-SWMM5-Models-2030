@@ -20,6 +20,18 @@ INERTIAL_DAMPING     PARTIAL
 NORMAL_FLOW_LIMITED  BOTH
 MAX_TRIALS           50
 HEAD_TOLERANCE       0.0033
+START_DATE           01/01/2001
+START_TIME           00:00:00
+REPORT_START_DATE    01/01/2001
+REPORT_START_TIME    00:00:00
+END_DATE             01/02/2001
+END_TIME             00:00:00
+SWEEP_START          01/01
+SWEEP_END            12/31
+DRY_DAYS             0
+REPORT_STEP          00:15:00
+WET_STEP             00:05:00
+DRY_STEP             01:00:00
 
 [JUNCTIONS]
 ;;Name           Elev       MaxDepth   InitDepth  SurDepth   Aponded
@@ -66,7 +78,6 @@ I-4-7            25.00      0          0          0          0
 I-7-1            22.00      0          0          0          0
 I-4-8            23.00      0          0          0          0
 I-4-9            24.00      0          0          0          0
-TO               32.00      0          0          0          0
 O-2-6            24.00      0          0          0          0
 I-5-10           24.00      0          0          0          0
 1-A              25.00      0          0          0          0
@@ -88,30 +99,39 @@ Gate             46.00      0          0          0          0
 U-7-14           36.34      0          0          0          0
 U-5-16           38.82      0          0          0          0
 U-13-A           36.34      0          0          0          0
-Sta              200.00     0          0          0          0
-Sta              200.00     0          0          0          0
+Sta_2            200.00     0          0          0          0
+Sta_3            200.00     0          0          0          0
 OUTFALL          14.00      0          0          0          0
 JUNCTION         32.00      0          0          0          0
 FMJUNCTION       220.00     0          0          0          0
+PUMP_2           -5.00      0          0          0          0
+PUMP_3           21.03      0          0          0          0
+Lag_Pump         10.00      0          0          0          0
+445.2            7.16       0          0          0          0
+
+[OUTFALLS]
+;;Name           Elev       Type       Stage      Gated
+;;-------------- ---------- ---------- ---------- -----
+TO               32.00      FREE                  NO
 
 [STORAGE]
 ;;Name           Elev       MaxDepth   InitDepth  Shape      Curve/Params
 ;;-------------- ---------- ---------- ---------- ---------- ----------
-KPS              18.00      0          0          FUNCTIONAL 750.00 0          0
-Park             36.00      0          0          FUNCTIONAL 265.00 0          0
+KPS              18.00      10.00      0          FUNCTIONAL 750.00 0          0
+Park             36.00      10.00      0          FUNCTIONAL 265.00 0          0
 
 [CONDUITS]
 ;;Name           From             To               Length     Roughness  InOffset   OutOffset  InitFlow   MaxFlow
 ;;-------------- ---------------- ---------------- ---------- ---------- ---------- ---------- ---------- ----------
-EO/KPS           EO               KPS              80.00      0.0140     -3.95      -4.05      0          0
-O21/EO           O-2-1            EO               648.00     0.0140     -3.17      -3.95      0          0
-M21/O21          M-2-1            O-2-1            129.00     0.0140     -1.15      -1.80      0          0
-M22/M21          M-2-2            M-2-1            110.00     0.0140     0.66       -0.40      0          0
+EO/KPS           EO               KPS              80.00      0.0140     0          0          0          0
+O21/EO           O-2-1            EO               648.00     0.0140     0          0          0          0
+M21/O21          M-2-1            O-2-1            129.00     0.0140     0          0          0          0
+M22/M21          M-2-2            M-2-1            110.00     0.0140     0.66       0          0          0
 M23/M22          M-2-3            M-2-2            401.00     0.0140     1.86       0.66       0          0
-A33/KPS          A-3-3            KPS              355.00     0.0140     -2.24      -2.79      0          0
-A34/A33          A-3-4            A-3-3            545.00     0.0140     -1.59      -2.24      0          0
-A35/A34          A-3-5            A-3-4            580.00     0.0140     -0.85      -1.59      0          0
-A36/A35          A-3-6            A-3-5            400.00     0.0140     0.15       -0.85      0          0
+A33/KPS          A-3-3            KPS              355.00     0.0140     0          0          0          0
+A34/A33          A-3-4            A-3-3            545.00     0.0140     0          0          0          0
+A35/A34          A-3-5            A-3-4            580.00     0.0140     0          0          0          0
+A36/A35          A-3-6            A-3-5            400.00     0.0140     0.15       0          0          0
 Z/A36            Z                A-3-6            120.00     0.0140     4.30       4.00       0          0
 B82/Z            B-8-2            Z                84.00      0.0140     5.08       4.80       0          0
 SC1/B82          B-8-2            SC-1             144.00     0.0140     5.19       1.91       0          0
@@ -121,13 +141,13 @@ b83/b82          B-8-3            B-8-2            487.00     0.0140     6.48   
 B21/Z            B-2-1            Z                10.00      0.0140     4.32       4.30       0          0
 B22/B21          B-2-2            B-2-1            450.00     0.0140     5.48       4.32       0          0
 M24/M23          M-2-4            M-2-3            317.00     0.0140     3.30       1.86       0          0
-O23/M21          O-2-3            M-2-1            397.00     0.0140     1.48       -0.90      0          0
+O23/M21          O-2-3            M-2-1            397.00     0.0140     1.48       0          0          0
 024/O23          O-2-4            O-2-3            222.00     0.0140     2.82       1.48       0          0
 025/024          O-2-5            O-2-4            125.00     0.0140     3.57       2.82       0          0
 026/025          O-2-6            O-2-5            143.00     0.0140     4.43       3.57       0          0
-LCA/O21          LCA              O-2-1            80.00      0.0140     -2.56      -2.67      0          0
-D31/LCA          D-3-1            LCA              624.00     0.0140     -1.72      -2.56      0          0
-D32/D31          D-3-2            D-3-1            459.00     0.0140     0.33       -0.68      0          0
+LCA/O21          LCA              O-2-1            80.00      0.0140     0          0          0          0
+D31/LCA          D-3-1            LCA              624.00     0.0140     0          0          0          0
+D32/D31          D-3-2            D-3-1            459.00     0.0140     0.33       0          0          0
 D44/D32          D-4-4            D-3-2            441.00     0.0140     1.18       0.33       0          0
 4E/D44           4-E              D-4-4            455.00     0.0140     2.12       1.18       0          0
 2K/4E            2-K              4-E              347.00     0.0140     2.81       2.12       0          0
@@ -138,8 +158,8 @@ D44/D32          D-4-4            D-3-2            441.00     0.0140     1.18   
 1D/D32           1-D              D-3-2            122.00     0.0140     9.66       2.08       0          0
 1F/1D            1-F              1-D              56.00      0.0140     17.75      9.66       0          0
 1G1/1F           1-G-1            1-F              152.00     0.0140     21.25      17.75      0          0
-I22/D31          I-2-2            D-3-1            226.00     0.0140     -0.07      -0.43      0          0
-I23/I22          I-2-3            I-2-2            526.00     0.0140     0.84       -0.07      0          0
+I22/D31          I-2-2            D-3-1            226.00     0.0140     0          0          0          0
+I23/I22          I-2-3            I-2-2            526.00     0.0140     0.84       0          0          0
 I34/I23          I-3-4            I-2-3            519.00     0.0140     1.59       0.84       0          0
 I46/I34          I-4-6            I-3-4            552.00     0.0140     2.50       1.59       0          0
 I47/I46          I-4-7            I-4-6            385.00     0.0140     3.08       2.50       0          0
@@ -167,7 +187,7 @@ U715/U13A        U-7-15           U-13-A           255.00     0.0140     19.41  
 U516/U59         U-5-16           U-5-9            969.50     0.0140     18.74      17.40      0          0
 1929/5085        Sta              Sta              3156.00    0.0140     119.34     115.14     0          0
 5085/7932        Sta              Sta              2874.00    0.0140     115.14     13.74      0          0
-7932/LCA         Sta              LCA              1868.00    0.0140     13.74      -0.46      0          0
+7932/LCA         Sta              LCA              1868.00    0.0140     13.74      0          0          0
 EO/OUT           EO               OUTFALL          80.00      0.0140     8.00       5.75       0          0
 JUN/WWTP         JUNCTION         TO               200.00     0.0140     21.03      21.03      0          0
 445.1            445.2            1-A              167.69     0.0140     7.16       6.65       0          0
@@ -176,21 +196,22 @@ FM/1929          FMJUNCTION       Sta              1929.00    0.0140     10.00  
 [ORIFICES]
 ;;Name           From             To               Type       Offset     Qcoeff     Gated    CloseTime
 ;;-------------- ---------------- ---------------- ---------- ---------- ---------- -------- ----------
-Sluice Gt        Gate             Park             SIDE       17.34      0.650      NO       0
+Sluice_Gt        Gate             Park             SIDE       17.34      0.650      NO       0
 
 [PUMPS]
 ;;Name           From             To               PumpCurve  Status   Startup    Shutoff
 ;;-------------- ---------------- ---------------- ---------- -------- ---------- ----------
-PUMP 1           PUMP 2           PUMP 3           PC_PUMP 1  ON       0          0         
-Lead Pump        Lag Pump         FMJUNCTION       PC_Lead Pump ON       0          0         
+PUMP_1           PUMP_2           PUMP_3           PC_PUMP_1  ON       1.00       0         
+Lead_Pump        Lag_Pump         FMJUNCTION       PC_Lead_Pump ON       1.00       0         
 
 [CURVES]
 ;;Name           Type       X-Value    Y-Value
 ;;-------------- ---------- ---------- ----------
-PC_PUMP 1        Pump2      0          0
-;
-PC_Lead Pump     Pump2      0          0
-;
+;; Synthesized generic pump curves — replace with actual pump data
+PC_PUMP_1        Pump1      0          5
+PC_PUMP_1                   10         10
+PC_Lead_Pump     Pump1      0          5
+PC_Lead_Pump                10         10
 
 [XSECTIONS]
 ;;Link           Shape        Geom1      Geom2      Geom3      Geom4      Barrels
@@ -249,7 +270,7 @@ U41/K34          CIRCULAR     2.50       0          0          0          1
 K34/J49          CIRCULAR     2.50       0          0          0          1
 J49/J23          CIRCULAR     2.50       0          0          0          1
 U59/U44          CIRCULAR     3.00       0          0          0          1
-U42/U41          CUSTOM       3.00       0          0          0          1
+U42/U41          TRAPEZOIDAL  3.00       10.00      2          2          1
 U44/U42          CIRCULAR     3.00       0          0          0          1
 U717/U715        CIRCULAR     3.00       0          0          0          1
 U13A/GATE        CIRCULAR     3.00       0          0          0          1
@@ -264,7 +285,7 @@ EO/OUT           CIRCULAR     4.00       0          0          0          1
 JUN/WWTP         CIRCULAR     3.00       0          0          0          1
 445.1            CIRCULAR     2.00       0          0          0          1
 FM/1929          CIRCULAR     2.00       0          0          0          1
-Sluice Gt        RECT_CLOSED  7.00       0          0          0          
+Sluice_Gt        RECT_CLOSED  7.00       3.00       0          0
 
 [LOSSES]
 ;;Link           Inlet      Outlet     Average    Flap Gate
@@ -408,8 +429,8 @@ Gate             123.44             82.91
 U-7-14           121.66             82.59             
 U-5-16           119.08             81.25             
 U-13-A           125.05             81.65             
-Sta              96.40              143.02            
-Sta              74.12              162.43            
+Sta_2            96.40              143.02            
+Sta_3            74.12              162.43            
 OUTFALL          50.82              176.10            
 JUNCTION         48.83              179.01            
 FMJUNCTION       125.22             91.44             

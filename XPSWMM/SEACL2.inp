@@ -20,6 +20,18 @@ INERTIAL_DAMPING     NONE
 NORMAL_FLOW_LIMITED  BOTH
 MAX_TRIALS           30
 HEAD_TOLERANCE       0.0033
+START_DATE           01/01/2001
+START_TIME           00:00:00
+REPORT_START_DATE    01/01/2001
+REPORT_START_TIME    00:00:00
+END_DATE             01/02/2001
+END_TIME             00:00:00
+SWEEP_START          01/01
+SWEEP_END            12/31
+DRY_DAYS             0
+REPORT_STEP          00:15:00
+WET_STEP             00:05:00
+DRY_STEP             01:00:00
 
 [JUNCTIONS]
 ;;Name           Elev       MaxDepth   InitDepth  SurDepth   Aponded
@@ -27,7 +39,6 @@ HEAD_TOLERANCE       0.0033
 110              100.00     0          0          0          0
 1120             100.00     0          0          0          0
 1110             100.00     0          0          0          0
-111              100.00     0          0          0          0
 130              100.00     0          0          0          0
 140              100.00     0          0          0          0
 150              100.00     0          0          0          0
@@ -50,10 +61,15 @@ HEAD_TOLERANCE       0.0033
 1160             100.00     0          0          0          0
 222              100.00     0          0          0          0
 
+[OUTFALLS]
+;;Name           Elev       Type       Stage      Gated
+;;-------------- ---------- ---------- ---------- -----
+111              100.00     FREE                  NO
+
 [STORAGE]
 ;;Name           Elev       MaxDepth   InitDepth  Shape      Curve/Params
 ;;-------------- ---------- ---------- ---------- ---------- ----------
-120              100.00     -27.00     0          FUNCTIONAL 0 0          0
+120              100.00     10.00      0          FUNCTIONAL 1000.00 0          0
 
 [CONDUITS]
 ;;Name           From             To               Length     Roughness  InOffset   OutOffset  InitFlow   MaxFlow
@@ -95,7 +111,14 @@ MUL4             120              1120             TRANSVERSE 64.00      1.840  
 [PUMPS]
 ;;Name           From             To               PumpCurve  Status   Startup    Shutoff
 ;;-------------- ---------------- ---------------- ---------- -------- ---------- ----------
-MUL5             170              180              *          ON       0          0         
+MUL5             170              180              PC_MUL5    ON       1.00       0         
+
+[CURVES]
+;;Name           Type       X-Value    Y-Value
+;;-------------- ---------- ---------- ----------
+;; Synthesized generic pump curves — replace with actual pump data
+PC_MUL5          Pump1      0          5
+PC_MUL5                     10         10
 
 [XSECTIONS]
 ;;Link           Shape        Geom1      Geom2      Geom3      Geom4      Barrels
@@ -121,10 +144,10 @@ MUL5             170              180              *          ON       0        
 165              CIRCULAR     1.00       0          0          0          1
 256              CIRCULAR     0.67       0          0          0          1
 275              CIRCULAR     1.50       0          0          0          1
-MUL1             RECT_CLOSED  0          0          0          0          
-MUL2             RECT_CLOSED  0          0          0          0          
-MUL3             RECT_OPEN    0          2.00       0          0          
-MUL4             RECT_OPEN    0          10.00      0          0          
+MUL1             RECT_CLOSED  0.59       0.59       0          0
+MUL2             RECT_CLOSED  0.45       0.45       0          0
+MUL3             RECT_OPEN    1.00       2.00       0          0
+MUL4             RECT_OPEN    1.00       10.00      0          0
 
 [LOSSES]
 ;;Link           Inlet      Outlet     Average    Flap Gate

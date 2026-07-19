@@ -20,6 +20,18 @@ INERTIAL_DAMPING     PARTIAL
 NORMAL_FLOW_LIMITED  BOTH
 MAX_TRIALS           50
 HEAD_TOLERANCE       0.00033
+START_DATE           01/01/2001
+START_TIME           00:00:00
+REPORT_START_DATE    01/01/2001
+REPORT_START_TIME    00:00:00
+END_DATE             01/02/2001
+END_TIME             00:00:00
+SWEEP_START          01/01
+SWEEP_END            12/31
+DRY_DAYS             0
+REPORT_STEP          00:15:00
+WET_STEP             00:05:00
+DRY_STEP             01:00:00
 
 [JUNCTIONS]
 ;;Name           Elev       MaxDepth   InitDepth  SurDepth   Aponded
@@ -78,7 +90,6 @@ HEAD_TOLERANCE       0.00033
 23F4283C         524.00     0          0          0          0
 23F4284C         523.69     0          0          0          0
 23F4334C         533.69     0          0          0          0
-23F4345C         544.19     0          0          0          0
 23F4386C         511.25     0          0          0          0
 23F4396C         506.00     0          0          0          0
 23F4400C         506.11     0          0          0          0
@@ -376,16 +387,28 @@ US72             445.00     0          0          0          0
 DROPUS           468.00     0          0          0          0
 72@TUNL          445.00     0          0          0          0
 806              468.00     0          0          0          0
+O23F4257C        454.39     0          0          0          0
+O23F4345C        476.25     0          0          0          0
+O25G2113C        419.21     0          0          0          0
+O24G3311C        423.40     0          0          0          0
+O26G2428C        401.90     0          0          0          0
+24G2272CS        434.30     0          0          0          0
+New              434.50     0          0          0          0
+
+[OUTFALLS]
+;;Name           Elev       Type       Stage      Gated
+;;-------------- ---------- ---------- ---------- -----
+23F4345C         544.19     FREE                  NO
 
 [STORAGE]
 ;;Name           Elev       MaxDepth   InitDepth  Shape      Curve/Params
 ;;-------------- ---------- ---------- ---------- ---------- ----------
-23G2175C         509.98     0          0          FUNCTIONAL 0 0          0
-24G3364C         479.90     0          0          FUNCTIONAL 0 0          0
-DEWEYSTO         482.00     0          0          FUNCTIONAL 0 0          0
-GRANDBTS         487.00     0          0          FUNCTIONAL 0 0          0
-PARKST           470.00     0          0          FUNCTIONAL 0 0          0
-PHILIP           515.19     0          0          FUNCTIONAL 0 0          0
+23G2175C         509.98     10.00      0          FUNCTIONAL 1000.00 0          0
+24G3364C         479.90     10.00      0          FUNCTIONAL 1000.00 0          0
+DEWEYSTO         482.00     10.00      0          FUNCTIONAL 1000.00 0          0
+GRANDBTS         487.00     10.00      0          FUNCTIONAL 1000.00 0          0
+PARKST           470.00     10.00      0          FUNCTIONAL 1000.00 0          0
+PHILIP           515.19     10.00      0          FUNCTIONAL 1000.00 0          0
 
 [CONDUITS]
 ;;Name           From             To               Length     Roughness  InOffset   OutOffset  InitFlow   MaxFlow
@@ -773,9 +796,9 @@ O23F1210C        23F1210C         23F1205C         351.90     0.0150     521.69 
 O23F4334C        23F4334C         23F4257C         467.50     0.0150     493.69     485.69     0          0
 O24F1239C        24F1239C         24F1248C         520.00     0.0150     511.20     506.69     0          0
 RPARKST          PARKST           PARK1            100.00     0.0150     409.80     408.80     0          0
-O25G2108CA       25G2108CA        PARKST           668.40     0          432.00     430.00     0          0
+O25G2108CA       25G2108CA        PARKST           668.40     0.0130     432.00     430.00     0          0
 R25G2108CA       25G2108CA        25G2108C         100.00     0.0150     412.32     411.32     0          0
-O25G2121CA       25G2121CA        25G2108CA        383.60     0          437.00     432.00     0          0
+O25G2121CA       25G2121CA        25G2108CA        383.60     0.0130     437.00     432.00     0          0
 R25G2121CA       25G2121CA        25G2121C         100.00     0.0150     413.60     412.60     0          0
 O24G3301CA       24G3301CA        25G2121CA        1173.40    0.0140     442.59     437.00     0          0
 R24G3301CA       24G3301CA        24G3301C         100.00     0.0150     416.82     415.82     0          0
@@ -826,12 +849,12 @@ PC12             C12              C11              290.00     0.0130     432.36 
 PC11             C11              C1               200.00     0.0130     431.54     430.98     0          0
 PC1              C1               DS2              110.00     0.0140     430.98     424.00     0          0
 PB1              B1               US72             90.00      0.0130     434.46     434.13     0          0
-RDEWEYSTO        DEWEYSTO         24G3286C         423.40     0.0140     418.50     418.30     0          0
-CONN72           US72             72@TUNL          135.00     0.0130     434.13     434.00     0          0
-72TOTNL          72@TUNL          DS2              33.00      0.0130     434.00     424.00     0          0
+DEWEYSTO         DEWEYSTO         24G3286C         423.40     0.0140     418.50     418.30     0          0
+ONN72            US72             72@TUNL          135.00     0.0130     434.13     434.00     0          0
+2TOTNL           72@TUNL          DS2              33.00      0.0130     434.00     424.00     0          0
 807              DROPUS           806              50.00      0.0120     415.60     415.60     0          0
-TUNUS1           DS2              DS1              1150.00    0.0120     424.00     421.70     0          0
-Midtnl1          DS1              DROPUS           3030.00    0.0130     421.70     415.60     0          0
+UNUS1            DS2              DS1              1150.00    0.0120     424.00     421.70     0          0
+idtnl1           DS1              DROPUS           3030.00    0.0130     421.70     415.60     0          0
 
 [WEIRS]
 ;;Name           From             To               Type       CrestHt    Qcoeff     Gated    EndCon   EndCoeff   Surcharge
@@ -1153,105 +1176,105 @@ G24G2137C        CIRCULAR     1.50       0          0          0          1
 G24G2135C        CIRCULAR     1.75       0          0          0          1
 G24G2126C        CIRCULAR     1.50       0          0          0          1
 GJUNCT           CIRCULAR     12.50      0          0          0          1
-O23G3389C        IRREGULAR    0          0          0          0          1
-O23G3279C        IRREGULAR    0          0          0          0          1
+O23G3389C        TRAPEZOIDAL  1.00       10.00      2          2          1
+O23G3279C        TRAPEZOIDAL  1.00       10.00      2          2          1
 O24G2276C        CIRCULAR     2.80       0          0          0          1
 24G2272CAR       CIRCULAR     0.70       0          0          0          1
-O24G2272CA       IRREGULAR    0          0          0          0          1
+O24G2272CA       TRAPEZOIDAL  1.00       10.00      2          2          1
 24F1389CAO       CIRCULAR     0.50       0          0          0          1
-O24F1389CA       IRREGULAR    0          0          0          0          1
+O24F1389CA       TRAPEZOIDAL  1.00       10.00      2          2          1
 R24G2323CA       CIRCULAR     1.70       0          0          0          1
-O24G2323CA       IRREGULAR    0          0          0          0          1
+O24G2323CA       TRAPEZOIDAL  1.00       10.00      2          2          1
 R24G3200CA       CIRCULAR     1.50       0          0          0          1
-O24G3200CA       IRREGULAR    0          0          0          0          1
-O24F1225C        TRAPEZOIDAL  10.00      30.00      0          0          1
-O24F1235C        TRAPEZOIDAL  10.00      30.00      0          0          1
-O24G2126C        TRAPEZOIDAL  10.00      30.00      0          0          1
-O24G2101C        TRAPEZOIDAL  10.00      30.00      0          0          1
-O23G2189C        TRAPEZOIDAL  10.00      30.00      0          0          1
+O24G3200CA       TRAPEZOIDAL  1.00       10.00      2          2          1
+O24F1225C        TRAPEZOIDAL  10.00      30.00      1          1          1
+O24F1235C        TRAPEZOIDAL  10.00      30.00      1          1          1
+O24G2126C        TRAPEZOIDAL  10.00      30.00      1          1          1
+O24G2101C        TRAPEZOIDAL  10.00      30.00      1          1          1
+O23G2189C        TRAPEZOIDAL  10.00      30.00      1          1          1
 GKOELN           CIRCULAR     11.80      0          0          0          1
 GPARK2           CIRCULAR     11.80      0          0          0          1
 GPARK1           CIRCULAR     11.80      0          0          0          1
 R24F4397CA       CIRCULAR     5.00       0          0          0          1
-O24F4397CA       TRAPEZOIDAL  10.00      30.00      0          0          1
+O24F4397CA       TRAPEZOIDAL  10.00      30.00      1          1          1
 R24F4385CA       CIRCULAR     4.50       0          0          0          1
-O24F4385CA       TRAPEZOIDAL  10.00      30.00      0          0          1
+O24F4385CA       TRAPEZOIDAL  10.00      30.00      1          1          1
 R24F4377CA       CIRCULAR     4.60       0          0          0          1
-O24F4377CA       TRAPEZOIDAL  10.00      30.00      0          0          1
+O24F4377CA       TRAPEZOIDAL  10.00      30.00      1          1          1
 R24F4352CA       CIRCULAR     5.00       0          0          0          1
-O24F4352CA       TRAPEZOIDAL  10.00      30.00      0          0          1
+O24F4352CA       TRAPEZOIDAL  10.00      30.00      1          1          1
 R24F4453CA       CIRCULAR     0.50       0          0          0          1
-O24F4453CA       TRAPEZOIDAL  10.00      30.00      0          0          1
+O24F4453CA       TRAPEZOIDAL  10.00      30.00      1          1          1
 R24F4431CA       CIRCULAR     0.50       0          0          0          1
-O24F4431CA       TRAPEZOIDAL  10.00      30.00      0          0          1
+O24F4431CA       TRAPEZOIDAL  10.00      30.00      1          1          1
 R24F4368CA       CIRCULAR     0.50       0          0          0          1
-O24F4368CA       TRAPEZOIDAL  10.00      30.00      0          0          1
+O24F4368CA       TRAPEZOIDAL  10.00      30.00      1          1          1
 R24G3184CA       CIRCULAR     3.50       0          0          0          1
-O24G3184CA       TRAPEZOIDAL  10.00      30.00      0          0          1
+O24G3184CA       TRAPEZOIDAL  10.00      30.00      1          1          1
 R24F4038CA       CIRCULAR     5.00       0          0          0          1
-O24F4038CA       TRAPEZOIDAL  10.00      30.00      0          0          1
-OGRANDBTS        IRREGULAR    0          0          0          0          1
+O24F4038CA       TRAPEZOIDAL  10.00      30.00      1          1          1
+OGRANDBTS        TRAPEZOIDAL  1.00       10.00      2          2          1
 R24F4406CA       CIRCULAR     4.75       0          0          0          1
-O24F4406CA       TRAPEZOIDAL  10.00      30.00      0          0          1
+O24F4406CA       TRAPEZOIDAL  10.00      30.00      1          1          1
 R24F4024CA       CIRCULAR     3.50       0          0          0          1
-O24F4024CA       TRAPEZOIDAL  10.00      30.00      0          0          1
-O24G3243C        TRAPEZOIDAL  10.00      30.00      0          0          1
-O23G3046C        TRAPEZOIDAL  10.00      30.00      0          0          1
-O23G2187C        TRAPEZOIDAL  10.00      30.00      0          0          1
-O23G2207C        TRAPEZOIDAL  10.00      30.00      0          0          1
+O24F4024CA       TRAPEZOIDAL  10.00      30.00      1          1          1
+O24G3243C        TRAPEZOIDAL  10.00      30.00      1          1          1
+O23G3046C        TRAPEZOIDAL  10.00      30.00      1          1          1
+O23G2187C        TRAPEZOIDAL  10.00      30.00      1          1          1
+O23G2207C        TRAPEZOIDAL  10.00      30.00      1          1          1
 RPHILIP          CIRCULAR     4.00       0          0          0          1
-O23F1244C        TRAPEZOIDAL  10.00      30.00      0          0          1
-O23F1257C        TRAPEZOIDAL  10.00      30.00      0          0          1
-O23F1388C        TRAPEZOIDAL  10.00      30.00      0          0          1
-O23F1284C        TRAPEZOIDAL  10.00      30.00      0          0          1
-O22F4108C        TRAPEZOIDAL  10.00      30.00      0          0          1
-O22F4092C        TRAPEZOIDAL  10.00      30.00      0          0          1
-O22F4063C        TRAPEZOIDAL  10.00      30.00      0          0          1
-O23G2076C        TRAPEZOIDAL  10.00      30.00      0          0          1
-O22G3213C        TRAPEZOIDAL  10.00      30.00      0          0          1
-O23F4400C        TRAPEZOIDAL  10.00      30.00      0          0          1
-O23F4386C        TRAPEZOIDAL  10.00      30.00      0          0          1
-O23F4270C        TRAPEZOIDAL  10.00      30.00      0          0          1
-O23F4160C        TRAPEZOIDAL  10.00      30.00      0          0          1
-O23F4163C        TRAPEZOIDAL  10.00      30.00      0          0          1
-O23F4195C        TRAPEZOIDAL  10.00      30.00      0          0          1
-O23F4119C        TRAPEZOIDAL  10.00      30.00      0          0          1
-O23F1314C        TRAPEZOIDAL  10.00      30.00      0          0          1
-O23F1187C        TRAPEZOIDAL  10.00      30.00      0          0          1
-O23F1174C        TRAPEZOIDAL  10.00      30.00      0          0          1
-O23F1205C        TRAPEZOIDAL  10.00      30.00      0          0          1
-O23F1210C        TRAPEZOIDAL  10.00      30.00      0          0          1
-O23F4334C        TRAPEZOIDAL  10.00      30.00      0          0          1
-O24F1239C        TRAPEZOIDAL  10.00      30.00      0          0          1
+O23F1244C        TRAPEZOIDAL  10.00      30.00      1          1          1
+O23F1257C        TRAPEZOIDAL  10.00      30.00      1          1          1
+O23F1388C        TRAPEZOIDAL  10.00      30.00      1          1          1
+O23F1284C        TRAPEZOIDAL  10.00      30.00      1          1          1
+O22F4108C        TRAPEZOIDAL  10.00      30.00      1          1          1
+O22F4092C        TRAPEZOIDAL  10.00      30.00      1          1          1
+O22F4063C        TRAPEZOIDAL  10.00      30.00      1          1          1
+O23G2076C        TRAPEZOIDAL  10.00      30.00      1          1          1
+O22G3213C        TRAPEZOIDAL  10.00      30.00      1          1          1
+O23F4400C        TRAPEZOIDAL  10.00      30.00      1          1          1
+O23F4386C        TRAPEZOIDAL  10.00      30.00      1          1          1
+O23F4270C        TRAPEZOIDAL  10.00      30.00      1          1          1
+O23F4160C        TRAPEZOIDAL  10.00      30.00      1          1          1
+O23F4163C        TRAPEZOIDAL  10.00      30.00      1          1          1
+O23F4195C        TRAPEZOIDAL  10.00      30.00      1          1          1
+O23F4119C        TRAPEZOIDAL  10.00      30.00      1          1          1
+O23F1314C        TRAPEZOIDAL  10.00      30.00      1          1          1
+O23F1187C        TRAPEZOIDAL  10.00      30.00      1          1          1
+O23F1174C        TRAPEZOIDAL  10.00      30.00      1          1          1
+O23F1205C        TRAPEZOIDAL  10.00      30.00      1          1          1
+O23F1210C        TRAPEZOIDAL  10.00      30.00      1          1          1
+O23F4334C        TRAPEZOIDAL  10.00      30.00      1          1          1
+O24F1239C        TRAPEZOIDAL  10.00      30.00      1          1          1
 RPARKST          CIRCULAR     4.00       0          0          0          1
-O25G2108CA       IRREGULAR    0          0          0          0          1
+O25G2108CA       TRAPEZOIDAL  1.00       10.00      2          2          1
 R25G2108CA       CIRCULAR     5.80       0          0          0          1
-O25G2121CA       IRREGULAR    0          0          0          0          1
+O25G2121CA       TRAPEZOIDAL  1.00       10.00      2          2          1
 R25G2121CA       CIRCULAR     4.60       0          0          0          1
-O24G3301CA       IRREGULAR    0.16       0          0          0          1
+O24G3301CA       TRAPEZOIDAL  0.16       10.00      2          2          1
 R24G3301CA       CIRCULAR     1.00       0          0          0          1
-O24G3286CA       IRREGULAR    0          0          0          0          1
+O24G3286CA       TRAPEZOIDAL  1.00       10.00      2          2          1
 R24G3286CA       CIRCULAR     1.70       0          0          0          1
-O24G3364C        IRREGULAR    0          0          0          0          1
-O25G2111C        TRAPEZOIDAL  10.00      30.00      0          0          1
-O25G2114C        TRAPEZOIDAL  10.00      30.00      0          0          1
-O24G3319C        TRAPEZOIDAL  10.00      30.00      0          0          1
-O24G3326C        TRAPEZOIDAL  10.00      30.00      0          0          1
-O25G2135C        TRAPEZOIDAL  10.00      30.00      0          0          1
-O26G1204C        TRAPEZOIDAL  10.00      30.00      0          0          1
-O26G2606C        TRAPEZOIDAL  10.00      30.00      0          0          1
-O26G2494C        TRAPEZOIDAL  10.00      30.00      0          0          1
-O26G2346C        TRAPEZOIDAL  10.00      30.00      0          0          1
-O26G2118C        TRAPEZOIDAL  10.00      30.00      0          0          1
-O26G2107C        TRAPEZOIDAL  10.00      30.00      0          0          1
-O26G2109C        TRAPEZOIDAL  10.00      30.00      0          0          1
-O26G2094C        TRAPEZOIDAL  10.00      30.00      0          0          1
-O26G3182C        TRAPEZOIDAL  10.00      30.00      0          0          1
-O26G2514C        TRAPEZOIDAL  10.00      30.00      0          0          1
-O26G2520C        TRAPEZOIDAL  10.00      30.00      0          0          1
-O26G2526C        TRAPEZOIDAL  10.00      30.00      0          0          1
-O26G2548C        TRAPEZOIDAL  10.00      30.00      0          0          1
-O26G2561C        TRAPEZOIDAL  10.00      30.00      0          0          1
+O24G3364C        TRAPEZOIDAL  1.00       10.00      2          2          1
+O25G2111C        TRAPEZOIDAL  10.00      30.00      1          1          1
+O25G2114C        TRAPEZOIDAL  10.00      30.00      1          1          1
+O24G3319C        TRAPEZOIDAL  10.00      30.00      1          1          1
+O24G3326C        TRAPEZOIDAL  10.00      30.00      1          1          1
+O25G2135C        TRAPEZOIDAL  10.00      30.00      1          1          1
+O26G1204C        TRAPEZOIDAL  10.00      30.00      1          1          1
+O26G2606C        TRAPEZOIDAL  10.00      30.00      1          1          1
+O26G2494C        TRAPEZOIDAL  10.00      30.00      1          1          1
+O26G2346C        TRAPEZOIDAL  10.00      30.00      1          1          1
+O26G2118C        TRAPEZOIDAL  10.00      30.00      1          1          1
+O26G2107C        TRAPEZOIDAL  10.00      30.00      1          1          1
+O26G2109C        TRAPEZOIDAL  10.00      30.00      1          1          1
+O26G2094C        TRAPEZOIDAL  10.00      30.00      1          1          1
+O26G3182C        TRAPEZOIDAL  10.00      30.00      1          1          1
+O26G2514C        TRAPEZOIDAL  10.00      30.00      1          1          1
+O26G2520C        TRAPEZOIDAL  10.00      30.00      1          1          1
+O26G2526C        TRAPEZOIDAL  10.00      30.00      1          1          1
+O26G2548C        TRAPEZOIDAL  10.00      30.00      1          1          1
+O26G2561C        TRAPEZOIDAL  10.00      30.00      1          1          1
 24G3359CS        RECT_CLOSED  0.50       11.10      0          0          1
 24G3188CS        RECT_CLOSED  0.75       42.72      0          0          1
 24G2328CS        RECT_CLOSED  4.72       0.50       0          0          1
@@ -1268,7 +1291,7 @@ PG2              CIRCULAR     3.50       0          0          0          1
 PA33             CIRCULAR     2.00       0          0          0          1
 PA32             CIRCULAR     2.50       0          0          0          1
 PA31             CIRCULAR     2.50       0          0          0          1
-GBOFlow          TRAPEZOIDAL  5.00       30.00      0          0          1
+GBOFlow          TRAPEZOIDAL  5.00       30.00      1          1          1
 PB3              CIRCULAR     4.50       0          0          0          1
 PB2              CIRCULAR     4.50       0          0          0          1
 Existing         CIRCULAR     2.00       0          0          0          1
@@ -1277,13 +1300,13 @@ PC12             CIRCULAR     3.00       0          0          0          1
 PC11             CIRCULAR     3.00       0          0          0          1
 PC1              CIRCULAR     4.00       0          0          0          1
 PB1              CIRCULAR     4.50       0          0          0          1
-RDEWEYSTO        CIRCULAR     1.50       0          0          0          1
-CONN72           CIRCULAR     6.00       0          0          0          1
-72TOTNL          CIRCULAR     6.00       0          0          0          1
+DEWEYSTO         CIRCULAR     1.50       0          0          0          1
+ONN72            CIRCULAR     6.00       0          0          0          1
+2TOTNL           CIRCULAR     6.00       0          0          0          1
 807              CIRCULAR     9.00       0          0          0          1
-TUNUS1           CIRCULAR     9.00       0          0          0          1
-Midtnl1          CIRCULAR     9.00       0          0          0          1
-Weir             RECT_OPEN    0          15.00      0          0          
+UNUS1            CIRCULAR     9.00       0          0          0          1
+idtnl1           CIRCULAR     9.00       0          0          0          1
+Weir             RECT_OPEN    1.00       15.00      0          0
 
 [LOSSES]
 ;;Link           Inlet      Outlet     Average    Flap Gate
@@ -1724,12 +1747,12 @@ PC12             0          0          0          NO
 PC11             0          0          0          NO
 PC1              0          0          0          NO
 PB1              0          0          0          NO
-RDEWEYSTO        0          0          0          NO
-CONN72           0          0          0          NO
-72TOTNL          0          0          0          NO
+DEWEYSTO         0          0          0          NO
+ONN72            0          0          0          NO
+2TOTNL           0          0          0          NO
 807              0          0          0          NO
-TUNUS1           0          0          0          NO
-Midtnl1          0          0          0          NO
+UNUS1            0          0          0          NO
+idtnl1           0          0          0          NO
 
 [INFLOWS]
 ;;Node           Constituent  Time Series      Type     Mfactor  Sfactor  Baseline Pattern

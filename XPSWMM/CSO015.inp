@@ -20,6 +20,18 @@ INERTIAL_DAMPING     PARTIAL
 NORMAL_FLOW_LIMITED  BOTH
 MAX_TRIALS           50
 HEAD_TOLERANCE       0.0033
+START_DATE           01/01/2001
+START_TIME           00:00:00
+REPORT_START_DATE    01/01/2001
+REPORT_START_TIME    00:00:00
+END_DATE             01/02/2001
+END_TIME             00:00:00
+SWEEP_START          01/01
+SWEEP_END            12/31
+DRY_DAYS             0
+REPORT_STEP          00:15:00
+WET_STEP             00:05:00
+DRY_STEP             01:00:00
 
 [JUNCTIONS]
 ;;Name           Elev       MaxDepth   InitDepth  SurDepth   Aponded
@@ -62,8 +74,12 @@ HEAD_TOLERANCE       0.0033
 529              594.50     0          0          0          0
 511              593.00     0          0          0          0
 512              595.50     0          0          0          0
-285              589.00     0          0          0          0
 287              589.00     0          0          0          0
+
+[OUTFALLS]
+;;Name           Elev       Type       Stage      Gated
+;;-------------- ---------- ---------- ---------- -----
+285              589.00     FREE                  NO
 
 [CONDUITS]
 ;;Name           From             To               Length     Roughness  InOffset   OutOffset  InitFlow   MaxFlow
@@ -109,12 +125,12 @@ HEAD_TOLERANCE       0.0033
 [ORIFICES]
 ;;Name           From             To               Type       Offset     Qcoeff     Gated    CloseTime
 ;;-------------- ---------------- ---------------- ---------- ---------- ---------- -------- ----------
-288              ?                ?                SIDE       0          0.650      NO       0
+288              500              287              SIDE       0          0.650      NO       0
 
 [WEIRS]
 ;;Name           From             To               Type       CrestHt    Qcoeff     Gated    EndCon   EndCoeff   Surcharge
 ;;-------------- ---------------- ---------------- ---------- ---------- ---------- -------- -------- ---------- ----------
-wier             ?                ?                TRANSVERSE 575.63     1.840      NO       0        0          YES
+wier             500              285              TRANSVERSE 575.63     1.840      NO       0        0          YES
 
 [XSECTIONS]
 ;;Link           Shape        Geom1      Geom2      Geom3      Geom4      Barrels
@@ -156,8 +172,8 @@ wier             ?                ?                TRANSVERSE 575.63     1.840  
 1510             CIRCULAR     4.50       0          0          0          1
 1511             CIRCULAR     3.50       0          0          0          1
 1500             CIRCULAR     8.00       0          0          0          1
-288              RECT_CLOSED  0.50       0          0          0          
-wier             RECT_OPEN    0          25.00      0          0          
+288              RECT_CLOSED  0.50       0.50       0          0
+wier             RECT_OPEN    1.00       25.00      0          0
 
 [LOSSES]
 ;;Link           Inlet      Outlet     Average    Flap Gate

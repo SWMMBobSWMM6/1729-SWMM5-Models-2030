@@ -16,62 +16,79 @@ ALLOW_PONDING        NO
 SKIP_STEADY_STATE    NO
 INERTIAL_DAMPING     PARTIAL
 NORMAL_FLOW_LIMITED  BOTH
+START_DATE           01/01/2001
+START_TIME           00:00:00
+REPORT_START_DATE    01/01/2001
+REPORT_START_TIME    00:00:00
+END_DATE             01/02/2001
+END_TIME             00:00:00
+SWEEP_START          01/01
+SWEEP_END            12/31
+DRY_DAYS             0
+REPORT_STEP          00:15:00
+WET_STEP             00:05:00
+DRY_STEP             01:00:00
 
 [JUNCTIONS]
 ;;Name           Elev       MaxDepth   InitDepth  SurDepth   Aponded
 ;;-------------- ---------- ---------- ---------- ---------- ----------
-0                0          0          0          0          0
-0                0          0          0          0          0
-0                0          0          0          0          0
-0                0          0          0          0          0
-0                0          0          0          0          0
-0                100.00     0          0          0          0
-0                0          0          0          0          0
-0                114.00     0          5.00       0          0
-0                0          0          0          0          0
-0                0          0          0          0          0
-0                0          0          0          0          0
-0                101.00     0          0          0          0
-0                0          0          0          0          0
-0                0          0          0          0          0
+Node1            0          0          0          0          0
+Node2            0          0          0          0          0
+Node3            0          0          0          0          0
+Node4            0          0          0          0          0
+Node5            0          0          0          0          0
+Node6            100.00     0          0          0          0
+Node7            0          0          0          0          0
+Pond             114.00     0          0          0          0
+Node9            0          0          0          0          0
+Node10           0          0          0          0          0
+Node11           0          0          0          0          0
+Node12           101.00     0          0          0          0
+Riser            0          0          0          0          0
+Streetl11        90.00      0          0          0          0
+
+[OUTFALLS]
+;;Name           Elev       Type       Stage      Gated
+;;-------------- ---------- ---------- ---------- -----
+Outlet           0          FREE                  NO
 
 [CONDUITS]
 ;;Name           From             To               Length     Roughness  InOffset   OutOffset  InitFlow   MaxFlow
 ;;-------------- ---------------- ---------------- ---------- ---------- ---------- ---------- ---------- ----------
-201              0                0                0          0          0          0          0          0
-202              0                0                0          0          0          0          0          0
-204              0                0                0          0          0          0          0          0
-206              0                0                0          0          0          0          0          0
-208              0                0                0          0          0          0          0          0
-210              0                0                0          0          0          0          0          0
-212              0                0                0          0          0          0          0          0
-216              0                0                0          0          0          0          0          0
-218              0                0                0          0          0          0          0          0
-220              0                0                0          0          0          0          0          0
-SewerL11         Streetl11        0                350.00     0.0140     90.00      89.00      0          0
-224              0                0                0          0          0          0          0          0
+201              Node1            Node2            100.00     0.0130     0          0          0          0
+202              Node2            Node3            100.00     0.0130     0          0          0          0
+204              Node3            Node4            100.00     0.0130     0          0          0          0
+206              Node4            Node5            100.00     0.0130     0          0          0          0
+208              Node5            Node6            100.00     0.0130     0          0          0          0
+210              Node6            Node7            100.00     0.0130     0          0          0          0
+212              Node7            Pond             100.00     0.0130     0          0          0          0
+216              Node9            Node3            100.00     0.0130     0          0          0          0
+218              Node10           Node4            100.00     0.0130     0          0          0          0
+220              Node11           Node5            100.00     0.0130     0          0          0          0
+SewerL11         Streetl11        Node6            350.00     0.0140     90.00      89.00      0          0
+224              Riser            Outlet           100.00     0.0130     0          0          0          0
 
 [ORIFICES]
 ;;Name           From             To               Type       Offset     Qcoeff     Gated    CloseTime
 ;;-------------- ---------------- ---------------- ---------- ---------- ---------- -------- ----------
-214              0                0                SIDE       0          0.650      NO       0
+214              Pond             Riser            SIDE       0          0.650      NO       0
 
 [XSECTIONS]
 ;;Link           Shape        Geom1      Geom2      Geom3      Geom4      Barrels
 ;;-------------- ------------ ---------- ---------- ---------- ---------- ----------
-201              CIRCULAR     0          0          0          0          1
-202              CIRCULAR     0          0          0          0          1
-204              CIRCULAR     0          0          0          0          1
-206              CIRCULAR     0          0          0          0          1
-208              CIRCULAR     0          0          0          0          1
-210              CIRCULAR     0          0          0          0          1
-212              CIRCULAR     0          0          0          0          1
-216              CIRCULAR     0          0          0          0          1
-218              CIRCULAR     0          0          0          0          1
-220              CIRCULAR     0          0          0          0          1
+201              CIRCULAR     1.00       0          0          0          1
+202              CIRCULAR     1.00       0          0          0          1
+204              CIRCULAR     1.00       0          0          0          1
+206              CIRCULAR     1.00       0          0          0          1
+208              CIRCULAR     1.00       0          0          0          1
+210              CIRCULAR     1.00       0          0          0          1
+212              CIRCULAR     1.00       0          0          0          1
+216              CIRCULAR     1.00       0          0          0          1
+218              CIRCULAR     1.00       0          0          0          1
+220              CIRCULAR     1.00       0          0          0          1
 SewerL11         CIRCULAR     0.16       0          0          0          1
-224              CIRCULAR     0          0          0          0          1
-214              RECT_CLOSED  0          0          0          0          
+224              CIRCULAR     1.00       0          0          0          1
+214              RECT_CLOSED  0.22       0.22       0          0
 
 [LOSSES]
 ;;Link           Inlet      Outlet     Average    Flap Gate
@@ -92,20 +109,20 @@ SewerL11         0          0          0          NO
 [COORDINATES]
 ;;Node           X-Coord            Y-Coord
 ;;-------------- ------------------ ------------------
-0                -351062.14         1033225.67        
-0                -351081.27         1032677.80        
-0                -351316.07         1032653.45        
-0                -351557.83         1032622.15        
-0                -351662.18         1032596.06        
-0                -351818.72         1032592.58        
-0                -351950.90         1032575.19        
-0                -351961.34         1032956.08        
-0                -351307.37         1033039.57        
-0                -351549.13         1032936.95        
-0                -351634.36         1032357.78        
-0                -351806.54         1032874.34        
-0                -351909.16         1033037.83        
-0                -352011.78         1033317.85        
+Node1            -351062.14         1033225.67        
+Node2            -351081.27         1032677.80        
+Node3            -351316.07         1032653.45        
+Node4            -351557.83         1032622.15        
+Node5            -351662.18         1032596.06        
+Node6            -351818.72         1032592.58        
+Node7            -351950.90         1032575.19        
+Pond             -351961.34         1032956.08        
+Node9            -351307.37         1033039.57        
+Node10           -351549.13         1032936.95        
+Node11           -351634.36         1032357.78        
+Node12           -351806.54         1032874.34        
+Riser            -351909.16         1033037.83        
+Outlet           -352011.78         1033317.85        
 
 [MAP]
 DIMENSIONS -352011.78 1032357.78 -351062.14 1033317.85

@@ -20,6 +20,18 @@ INERTIAL_DAMPING     PARTIAL
 NORMAL_FLOW_LIMITED  BOTH
 MAX_TRIALS           50
 HEAD_TOLERANCE       0.0033
+START_DATE           01/01/2001
+START_TIME           00:00:00
+REPORT_START_DATE    01/01/2001
+REPORT_START_TIME    00:00:00
+END_DATE             01/02/2001
+END_TIME             00:00:00
+SWEEP_START          01/01
+SWEEP_END            12/31
+DRY_DAYS             0
+REPORT_STEP          00:15:00
+WET_STEP             00:05:00
+DRY_STEP             01:00:00
 
 [JUNCTIONS]
 ;;Name           Elev       MaxDepth   InitDepth  SurDepth   Aponded
@@ -36,14 +48,19 @@ HEAD_TOLERANCE       0.0033
 665              856.81     0          0          0          0
 9000             858.00     0          0          0          0
 666              855.46     0          0          0          0
-696              849.23     0          0          0          0
 796              859.23     0          0          0          0
 310O             884.50     0          0          0          0
+Weir             877.89     0          0          0          0
+
+[OUTFALLS]
+;;Name           Elev       Type       Stage      Gated
+;;-------------- ---------- ---------- ---------- -----
+696              849.23     FREE                  NO
 
 [STORAGE]
 ;;Name           Elev       MaxDepth   InitDepth  Shape      Curve/Params
 ;;-------------- ---------- ---------- ---------- ---------- ----------
-310              884.50     0          0          FUNCTIONAL 0 0          0
+310              884.50     10.00      0          FUNCTIONAL 1000.00 0          0
 
 [CONDUITS]
 ;;Name           From             To               Length     Roughness  InOffset   OutOffset  InitFlow   MaxFlow
@@ -85,7 +102,7 @@ Orifice          Weir             310O             SIDE       877.89     0.650  
 666_696          HORSESHOE    4.00       6.00       0          0          1
 796_9000         CIRCULAR     2.00       0          0          0          1
 97               CIRCULAR     2.50       0          0          0          1
-Orifice          RECT_CLOSED  2.50       0          0          0          
+Orifice          RECT_CLOSED  2.50       2.50       0          0
 
 [LOSSES]
 ;;Link           Inlet      Outlet     Average    Flap Gate

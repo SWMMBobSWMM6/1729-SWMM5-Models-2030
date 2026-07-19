@@ -18,13 +18,24 @@ ROUTING_STEP         00:00:15
 VARIABLE_STEP        0.75
 INERTIAL_DAMPING     PARTIAL
 NORMAL_FLOW_LIMITED  BOTH
+START_DATE           01/01/2001
+START_TIME           00:00:00
+REPORT_START_DATE    01/01/2001
+REPORT_START_TIME    00:00:00
+END_DATE             01/02/2001
+END_TIME             00:00:00
+SWEEP_START          01/01
+SWEEP_END            12/31
+DRY_DAYS             0
+REPORT_STEP          00:15:00
+WET_STEP             00:05:00
+DRY_STEP             01:00:00
 
 [JUNCTIONS]
 ;;Name           Elev       MaxDepth   InitDepth  SurDepth   Aponded
 ;;-------------- ---------- ---------- ---------- ---------- ----------
 1                0          0          0          0          0
 manhole          0          0          0          0          0
-4                0          0          0          0          0
 6                0          0          0          0          0
 1A               0          0          0          0          0
 flowsplit        0          0          0          0          0
@@ -60,6 +71,11 @@ MHh              0          0          0          0          0
 4H               0          0          0          0          0
 6H               0          0          0          0          0
 
+[OUTFALLS]
+;;Name           Elev       Type       Stage      Gated
+;;-------------- ---------- ---------- ---------- -----
+4                0          FREE                  NO
+
 [CONDUITS]
 ;;Name           From             To               Length     Roughness  InOffset   OutOffset  InitFlow   MaxFlow
 ;;-------------- ---------------- ---------------- ---------- ---------- ---------- ---------- ---------- ----------
@@ -75,28 +91,28 @@ MHh              0          0          0          0          0
 203.1C           1C               storpump         100.00     0.0140     0          0          0          0
 5C               storpump         4C               100.00     0.0140     0          0          0          0
 7C               storpump         6C               100.00     0.0140     0          0          0          0
-32               1                1A               0          0          0          0          0          0
-33               1A               1B               0          0          0          0          0          0
-34               1B               1C               0          0          0          0          0          0
+32               1                1A               100.00     0.0130     0          0          0          0
+33               1A               1B               100.00     0.0130     0          0          0          0
+34               1B               1C               100.00     0.0130     0          0          0          0
 203.1D           1D               directq          100.00     0.0140     0          0          0          0
 5D               directq          4D               100.00     0.0140     0          0          0          0
 7D               directq          6D               100.00     0.0140     0          0          0          0
-43               1C               1D               0          0          0          0          0          0
+43               1C               1D               100.00     0.0130     0          0          0          0
 203.1E           1E               storpump1        100.00     0.0140     0          0          0          0
 5E               storpump1        4E               100.00     0.0140     0          0          0          0
 7E               storpump1        6E               100.00     0.0140     0          0          0          0
-59               1D               1E               0          0          0          0          0          0
+59               1D               1E               100.00     0.0130     0          0          0          0
 203.1F           1F               flowsF           100.00     0.0140     0          0          0          0
 5F               flowsF           4F               100.00     0.0140     0          0          0          0
 7F               flowsF           6F               100.00     0.0140     0          0          0          0
-68               1E               1F               0          0          0          0          0          0
+68               1E               1F               100.00     0.0130     0          0          0          0
 8A               flowsplit        70               100.00     0.0140     0          0          0          0
 5G               MH               4G               100.00     0.0140     0          0          0          0
 7G               MH               6G               100.00     0.0140     0          0          0          0
-80               1F               1G               0          0          0          0          0          0
+80               1F               1G               100.00     0.0130     0          0          0          0
 5H               MHh              4H               100.00     0.0140     0          0          0          0
 7H               MHh              6H               100.00     0.0140     0          0          0          0
-91               1H               1G               0          0          0          0          0          0
+91               1H               1G               100.00     0.0130     0          0          0          0
 
 [WEIRS]
 ;;Name           From             To               Type       CrestHt    Qcoeff     Gated    EndCon   EndCoeff   Surcharge
@@ -106,7 +122,14 @@ MHh              0          0          0          0          0
 [PUMPS]
 ;;Name           From             To               PumpCurve  Status   Startup    Shutoff
 ;;-------------- ---------------- ---------------- ---------- -------- ---------- ----------
-3G               1G               MH               *          ON       0          0         
+3G               1G               MH               PC_3G      ON       1.00       0         
+
+[CURVES]
+;;Name           Type       X-Value    Y-Value
+;;-------------- ---------- ---------- ----------
+;; Synthesized generic pump curves — replace with actual pump data
+PC_3G            Pump1      0          5
+PC_3G                       10         10
 
 [XSECTIONS]
 ;;Link           Shape        Geom1      Geom2      Geom3      Geom4      Barrels
@@ -123,29 +146,29 @@ MHh              0          0          0          0          0
 203.1C           RECT_CLOSED  2.00       2.00       0          0          1
 5C               RECT_CLOSED  2.00       2.00       0          0          1
 7C               RECT_CLOSED  2.00       2.00       0          0          1
-32               CIRCULAR     0          0          0          0          1
-33               CIRCULAR     0          0          0          0          1
-34               CIRCULAR     0          0          0          0          1
+32               CIRCULAR     1.00       0          0          0          1
+33               CIRCULAR     1.00       0          0          0          1
+34               CIRCULAR     1.00       0          0          0          1
 203.1D           RECT_CLOSED  2.00       2.00       0          0          1
 5D               RECT_CLOSED  2.00       2.00       0          0          1
 7D               RECT_CLOSED  2.00       2.00       0          0          1
-43               CIRCULAR     0          0          0          0          1
+43               CIRCULAR     1.00       0          0          0          1
 203.1E           RECT_CLOSED  2.00       2.00       0          0          1
 5E               RECT_CLOSED  2.00       2.00       0          0          1
 7E               RECT_CLOSED  2.00       2.00       0          0          1
-59               CIRCULAR     0          0          0          0          1
+59               CIRCULAR     1.00       0          0          0          1
 203.1F           RECT_CLOSED  2.00       2.00       0          0          1
 5F               RECT_CLOSED  2.00       2.00       0          0          1
 7F               RECT_CLOSED  2.00       2.00       0          0          1
-68               CIRCULAR     0          0          0          0          1
+68               CIRCULAR     1.00       0          0          0          1
 8A               RECT_CLOSED  2.00       2.00       0          0          1
 5G               RECT_CLOSED  2.00       2.00       0          0          1
 7G               RECT_CLOSED  2.00       2.00       0          0          1
-80               CIRCULAR     0          0          0          0          1
+80               CIRCULAR     1.00       0          0          0          1
 5H               RECT_CLOSED  2.00       2.00       0          0          1
 7H               RECT_CLOSED  2.00       2.00       0          0          1
-91               CIRCULAR     0          0          0          0          1
-3H               RECT_OPEN    0          10.00      0          0          
+91               CIRCULAR     1.00       0          0          0          1
+3H               RECT_OPEN    1.00       10.00      0          0
 
 [LOSSES]
 ;;Link           Inlet      Outlet     Average    Flap Gate

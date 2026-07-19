@@ -20,6 +20,18 @@ INERTIAL_DAMPING     PARTIAL
 NORMAL_FLOW_LIMITED  BOTH
 MAX_TRIALS           50
 HEAD_TOLERANCE       .001
+START_DATE           01/01/2001
+START_TIME           00:00:00
+REPORT_START_DATE    01/01/2001
+REPORT_START_TIME    00:00:00
+END_DATE             01/02/2001
+END_TIME             00:00:00
+SWEEP_START          01/01
+SWEEP_END            12/31
+DRY_DAYS             0
+REPORT_STEP          00:15:00
+WET_STEP             00:05:00
+DRY_STEP             01:00:00
 
 [JUNCTIONS]
 ;;Name           Elev       MaxDepth   InitDepth  SurDepth   Aponded
@@ -29,7 +41,7 @@ HEAD_TOLERANCE       .001
 10NB             51.73      0          0          0          0
 20NB             48.98      0          0          0          0
 5WR              48.00      0          0          0          0
-15WR             47.50      0          0.38       0          0
+15WR             47.50      0          0          0          0
 20WRDROP         46.90      0          0          0          0
 40WR             44.84      0          0          0          0
 45WR             42.20      0          0          0          0
@@ -45,7 +57,6 @@ HEAD_TOLERANCE       .001
 140WRDROP        25.34      0          0          0          0
 145WRDROP        24.74      0          0          0          0
 155WR            23.29      0          0          0          0
-170WR            22.18      0          0          0          0
 1WROWTR1         53.00      0          0          0          0
 25WRDROP         45.80      0          0          0          0
 94WRARDR         31.40      0          0          0          0
@@ -60,21 +71,33 @@ HEAD_TOLERANCE       .001
 165WR            22.30      0          0          0          0
 102WR            29.59      0          0          0          0
 66WR             40.00      0          0          0          0
+P32WRAG          46.70      0          0          0          0
+P34WRAG          45.20      0          0          0          0
+P52WRAG          41.25      0          0          0          0
+P67WRag          36.50      0          0          0          0
+P117WRag         25.20      0          0          0          0
+O160ag           20.78      0          0          0          0
+O165ag           20.66      0          0          0          0
+
+[OUTFALLS]
+;;Name           Elev       Type       Stage      Gated
+;;-------------- ---------- ---------- ---------- -----
+170WR            22.18      FREE                  NO
 
 [STORAGE]
 ;;Name           Elev       MaxDepth   InitDepth  Shape      Curve/Params
 ;;-------------- ---------- ---------- ---------- ---------- ----------
-3WRFRIAR         49.80      0          0          FUNCTIONAL 0 0          0
-10WR             47.80      0          0          FUNCTIONAL 10.00 0          0
-35WRRUPE         45.40      0          0          FUNCTIONAL 10.00 0          0
-55WRURAN         40.94      0          0          FUNCTIONAL 10.00 0          0
-65WR             40.87      0          0          FUNCTIONAL 10.00 0          0
-70WRBRAE         37.70      0          0          FUNCTIONAL 10.00 0          0
-95WRBRO2         30.50      0          0          FUNCTIONAL 10.00 0          0
-150WRFAL         23.86      0          0          FUNCTIONAL 10.00 0          0
-34WRGLAD         47.30      0.70       0          FUNCTIONAL 0 0          0
-32WR             49.30      0.70       0          FUNCTIONAL 0 0          0
-52WRHICK         44.30      0.70       0          FUNCTIONAL 0 0          0
+3WRFRIAR         49.80      10.00      0          FUNCTIONAL 1000.00 0          0
+10WR             47.80      10.00      0          FUNCTIONAL 10.00 0          0
+35WRRUPE         45.40      10.00      0          FUNCTIONAL 10.00 0          0
+55WRURAN         40.94      10.00      0          FUNCTIONAL 10.00 0          0
+65WR             40.87      10.00      0          FUNCTIONAL 10.00 0          0
+70WRBRAE         37.70      10.00      0          FUNCTIONAL 10.00 0          0
+95WRBRO2         30.50      10.00      0          FUNCTIONAL 10.00 0          0
+150WRFAL         23.86      10.00      0          FUNCTIONAL 10.00 0          0
+34WRGLAD         47.30      0.70       0          FUNCTIONAL 1000.00 0          0
+32WR             49.30      0.70       0          FUNCTIONAL 1000.00 0          0
+52WRHICK         44.30      0.70       0          FUNCTIONAL 1000.00 0          0
 
 [CONDUITS]
 ;;Name           From             To               Length     Roughness  InOffset   OutOffset  InitFlow   MaxFlow
@@ -132,21 +155,21 @@ O52WRag          52WRHICK         70WRBRAE         900.00     0.0150     44.00  
 ;;Link           Shape        Geom1      Geom2      Geom3      Geom4      Barrels
 ;;-------------- ------------ ---------- ---------- ---------- ---------- ----------
 P3WR             CIRCULAR     1.50       0          0          0          1
-O5WR             TRAPEZOIDAL  1.10       0          0          0          1
+O5WR             TRAPEZOIDAL  1.10       1.00       1          1          1
 Kootinga         RECT_CLOSED  0.75       1.50       0          0          2
-O15WR            TRAPEZOIDAL  1.46       2.40       0          0          1
+O15WR            TRAPEZOIDAL  1.46       2.40       1          1          1
 Tait             CIRCULAR     1.50       0          0          0          2
-O40WR            TRAPEZOIDAL  1.00       2.40       0          0          1
+O40WR            TRAPEZOIDAL  1.00       2.40       1          1          1
 URANA            RECT_CLOSED  0.90       1.20       0          0          3
 BRAEMORE         RECT_CLOSED  0.90       1.20       0          0          3
-O75WR            TRAPEZOIDAL  1.50       0          0          0          1
-O80WR            TRAPEZOIDAL  1.34       0          0          0          1
-O85WR            TRAPEZOIDAL  1.50       0          0          0          1
+O75WR            TRAPEZOIDAL  1.50       1.00       1          1          1
+O80WR            TRAPEZOIDAL  1.34       1.00       1          1          1
+O85WR            TRAPEZOIDAL  1.50       1.00       1          1          1
 SEVILLE          CIRCULAR     1.50       0          0          0          3
-O105WR           TRAPEZOIDAL  1.57       0          0          0          1
-O135WR           TRAPEZOIDAL  1.70       0          0          0          1
-O140WR           TRAPEZOIDAL  1.90       0          0          0          1
-O145WR           TRAPEZOIDAL  1.86       0          0          0          1
+O105WR           TRAPEZOIDAL  1.57       1.00       1          1          1
+O135WR           TRAPEZOIDAL  1.70       1.00       1          1          1
+O140WR           TRAPEZOIDAL  1.90       1.00       1          1          1
+O145WR           TRAPEZOIDAL  1.86       1.00       1          1          1
 LAKE             CIRCULAR     1.80       0          0          0          2
 L1NB             CIRCULAR     1.35       0          0          0          1
 L5NB             CIRCULAR     1.35       0          0          0          1
@@ -155,30 +178,30 @@ P32WRBG          CIRCULAR     0.75       0          0          0          1
 P34WRBG          CIRCULAR     0.75       0          0          0          1
 P1WR             CIRCULAR     1.35       0          0          0          1
 P52WRBG          CIRCULAR     0.60       0          0          0          1
-O90WR            TRAPEZOIDAL  1.80       0          0          0          1
-O94WR            TRAPEZOIDAL  1.20       0          0          0          1
-O110WR           TRAPEZOIDAL  1.90       0          0          0          1
-O115WR           TRAPEZOIDAL  2.30       0          0          0          1
-HESKETH          TRAPEZOIDAL  2.30       4.00       0          0          1
+O90WR            TRAPEZOIDAL  1.80       1.00       1          1          1
+O94WR            TRAPEZOIDAL  1.20       1.00       1          1          1
+O110WR           TRAPEZOIDAL  1.90       1.00       1          1          1
+O115WR           TRAPEZOIDAL  2.30       1.00       1          1          1
+HESKETH          TRAPEZOIDAL  2.30       4.00       1          1          1
 P10NB            CIRCULAR     1.35       0          0          0          1
-O45WR            TRAPEZOIDAL  1.00       2.40       0          0          1
+O45WR            TRAPEZOIDAL  1.00       2.40       1          1          1
 P67WRbg          CIRCULAR     0.45       0          0          0          1
 P97WR            CIRCULAR     1.05       0          0          0          1
 P99WR            CIRCULAR     1.20       0          0          0          1
 P112WR           CIRCULAR     0.90       0          0          0          1
 P117WRbg         CIRCULAR     1.05       0          0          0          1
 P147WR           CIRCULAR     1.20       0          0          0          1
-O155WR           TRAPEZOIDAL  1.93       3.00       0          0          1
-O160bg           TRAPEZOIDAL  1.64       3.00       0          0          1
-O165bg           TRAPEZOIDAL  1.60       1.00       0          0          1
-O20WR            TRAPEZOIDAL  0.70       2.40       0          0          1
-O25WR            TRAPEZOIDAL  1.10       2.40       0          0          1
-O100WR           TRAPEZOIDAL  1.44       0          0          0          1
-O102WR           TRAPEZOIDAL  1.40       0          0          0          1
-O34WRag          TRAPEZOIDAL  0.30       0          0          0          1
-O65WR            TRAPEZOIDAL  1.29       3.00       0          0          1
-O66WR            TRAPEZOIDAL  1.00       3.00       0          0          1
-O52WRag          TRAPEZOIDAL  0.30       0          0          0          1
+O155WR           TRAPEZOIDAL  1.93       3.00       1          1          1
+O160bg           TRAPEZOIDAL  1.64       3.00       1          1          1
+O165bg           TRAPEZOIDAL  1.60       1.00       1          1          1
+O20WR            TRAPEZOIDAL  0.70       2.40       1          1          1
+O25WR            TRAPEZOIDAL  1.10       2.40       1          1          1
+O100WR           TRAPEZOIDAL  1.44       1.00       1          1          1
+O102WR           TRAPEZOIDAL  1.40       1.00       1          1          1
+O34WRag          TRAPEZOIDAL  0.30       1.00       1          1          1
+O65WR            TRAPEZOIDAL  1.29       3.00       1          1          1
+O66WR            TRAPEZOIDAL  1.00       3.00       1          1          1
+O52WRag          TRAPEZOIDAL  0.30       1.00       1          1          1
 
 [LOSSES]
 ;;Link           Inlet      Outlet     Average    Flap Gate

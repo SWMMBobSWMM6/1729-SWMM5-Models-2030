@@ -19,36 +19,53 @@ VARIABLE_STEP        0.75
 INERTIAL_DAMPING     PARTIAL
 NORMAL_FLOW_LIMITED  BOTH
 MAX_TRIALS           50
+START_DATE           01/01/2001
+START_TIME           00:00:00
+REPORT_START_DATE    01/01/2001
+REPORT_START_TIME    00:00:00
+END_DATE             01/02/2001
+END_TIME             00:00:00
+SWEEP_START          01/01
+SWEEP_END            12/31
+DRY_DAYS             0
+REPORT_STEP          00:15:00
+WET_STEP             00:05:00
+DRY_STEP             01:00:00
 
 [JUNCTIONS]
 ;;Name           Elev       MaxDepth   InitDepth  SurDepth   Aponded
 ;;-------------- ---------- ---------- ---------- ---------- ----------
-1                20.00      0          6.00       0          0
-2                20.00      0          6.00       0          0
-4                20.00      0          6.00       0          0
-6                19.00      0          6.00       0          0
+1                20.00      0          0          0          0
+4                20.00      0          0          0          0
+6                19.00      0          0          0          0
 16               0          0          0          0          0
 17               0          0          0          0          0
 19               0          0          0          0          0
 20               0          0          0          0          0
+DeckFlow         9.70       0          0          0          0
+
+[OUTFALLS]
+;;Name           Elev       Type       Stage      Gated
+;;-------------- ---------- ---------- ---------- -----
+2                20.00      FREE                  NO
 
 [CONDUITS]
 ;;Name           From             To               Length     Roughness  InOffset   OutOffset  InitFlow   MaxFlow
 ;;-------------- ---------------- ---------------- ---------- ---------- ---------- ---------- ---------- ----------
-US               1                2                100.00     0          10.00      9.70       0          0
+US               1                2                100.00     0.0130     10.00      9.70       0          0
 PierFlow         DeckFlow         4                50.00      0.0120     9.70       9.60       0          0
-DS               4                6                100.00     0          9.60       9.50       0          0
-18               16               17               0          0          0          0          0          0
-21               19               20               0          0          0          0          0          0
+DS               4                6                100.00     0.0130     9.60       9.50       0          0
+18               16               17               100.00     0.0130     0          0          0          0
+21               19               20               100.00     0.0130     0          0          0          0
 
 [XSECTIONS]
 ;;Link           Shape        Geom1      Geom2      Geom3      Geom4      Barrels
 ;;-------------- ------------ ---------- ---------- ---------- ---------- ----------
-US               IRREGULAR    10.00      0          0          0          1
+US               TRAPEZOIDAL  10.00      10.00      2          2          1
 PierFlow         RECT_CLOSED  5.00       3.00       0          0          3
-DS               IRREGULAR    9.50       0          0          0          1
-18               CIRCULAR     0          0          0          0          1
-21               CIRCULAR     0          0          0          0          1
+DS               TRAPEZOIDAL  9.50       10.00      2          2          1
+18               CIRCULAR     1.00       0          0          0          1
+21               CIRCULAR     1.00       0          0          0          1
 
 [LOSSES]
 ;;Link           Inlet      Outlet     Average    Flap Gate

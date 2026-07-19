@@ -16,13 +16,24 @@ ALLOW_PONDING        NO
 SKIP_STEADY_STATE    NO
 INERTIAL_DAMPING     PARTIAL
 NORMAL_FLOW_LIMITED  BOTH
+START_DATE           01/01/2001
+START_TIME           00:00:00
+REPORT_START_DATE    01/01/2001
+REPORT_START_TIME    00:00:00
+END_DATE             01/02/2001
+END_TIME             00:00:00
+SWEEP_START          01/01
+SWEEP_END            12/31
+DRY_DAYS             0
+REPORT_STEP          00:15:00
+WET_STEP             00:05:00
+DRY_STEP             01:00:00
 
 [JUNCTIONS]
 ;;Name           Elev       MaxDepth   InitDepth  SurDepth   Aponded
 ;;-------------- ---------- ---------- ---------- ---------- ----------
 1                0          0          0          0          0
 2                0          0          0          0          0
-4                0          0          0          0          0
 1a               0          0          0          0          0
 2a               0          0          0          0          0
 4a               0          0          0          0          0
@@ -30,21 +41,37 @@ NORMAL_FLOW_LIMITED  BOTH
 2b               0          0          0          0          0
 4b               0          0          0          0          0
 
+[OUTFALLS]
+;;Name           Elev       Type       Stage      Gated
+;;-------------- ---------- ---------- ---------- -----
+4                0          FREE                  NO
+
 [CONDUITS]
 ;;Name           From             To               Length     Roughness  InOffset   OutOffset  InitFlow   MaxFlow
 ;;-------------- ---------------- ---------------- ---------- ---------- ---------- ---------- ---------- ----------
 pipe             2                4                100.00     0.0140     0          0          0          0
 pipea            2a               4a               100.00     0.0140     0          0          0          0
 pipeb            2b               4b               100.00     0.0140     0          0          0          0
-18               1b               1a               0          0          0          0          0          0
-19               1a               1                0          0          0          0          0          0
+18               1b               1a               100.00     0.0130     0          0          0          0
+19               1a               1                100.00     0.0130     0          0          0          0
 
 [PUMPS]
 ;;Name           From             To               PumpCurve  Status   Startup    Shutoff
 ;;-------------- ---------------- ---------------- ---------- -------- ---------- ----------
-3                1                2                *          ON       0          0         
-3a               1a               2a               *          ON       0          0         
-3b               1b               2b               *          ON       0          0         
+3                1                2                PC_3       ON       1.00       0         
+3a               1a               2a               PC_3a      ON       1.00       0         
+3b               1b               2b               PC_3b      ON       1.00       0         
+
+[CURVES]
+;;Name           Type       X-Value    Y-Value
+;;-------------- ---------- ---------- ----------
+;; Synthesized generic pump curves — replace with actual pump data
+PC_3             Pump1      0          5
+PC_3                        10         10
+PC_3a            Pump1      0          5
+PC_3a                       10         10
+PC_3b            Pump1      0          5
+PC_3b                       10         10
 
 [XSECTIONS]
 ;;Link           Shape        Geom1      Geom2      Geom3      Geom4      Barrels
@@ -52,8 +79,8 @@ pipeb            2b               4b               100.00     0.0140     0      
 pipe             CIRCULAR     2.00       0          0          0          1
 pipea            CIRCULAR     2.00       0          0          0          1
 pipeb            CIRCULAR     2.00       0          0          0          1
-18               CIRCULAR     0          0          0          0          1
-19               CIRCULAR     0          0          0          0          1
+18               CIRCULAR     1.00       0          0          0          1
+19               CIRCULAR     1.00       0          0          0          1
 
 [LOSSES]
 ;;Link           Inlet      Outlet     Average    Flap Gate

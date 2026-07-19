@@ -20,6 +20,18 @@ INERTIAL_DAMPING     PARTIAL
 NORMAL_FLOW_LIMITED  BOTH
 MAX_TRIALS           50
 HEAD_TOLERANCE       .001
+START_DATE           01/01/2001
+START_TIME           00:00:00
+REPORT_START_DATE    01/01/2001
+REPORT_START_TIME    00:00:00
+END_DATE             01/02/2001
+END_TIME             00:00:00
+SWEEP_START          01/01
+SWEEP_END            12/31
+DRY_DAYS             0
+REPORT_STEP          00:15:00
+WET_STEP             00:05:00
+DRY_STEP             01:00:00
 
 [JUNCTIONS]
 ;;Name           Elev       MaxDepth   InitDepth  SurDepth   Aponded
@@ -42,13 +54,17 @@ O8               4.00       0          0          0          0
 P8               6.00       0          0          0          0
 P9               11.00      0          0          0          0
 O8A              4.00       0          0          0          0
-LOOUT            2.90       0          0          0          0
 HIOUT            6.00       0          0          0          0
+
+[OUTFALLS]
+;;Name           Elev       Type       Stage      Gated
+;;-------------- ---------- ---------- ---------- -----
+LOOUT            2.90       FREE                  NO
 
 [STORAGE]
 ;;Name           Elev       MaxDepth   InitDepth  Shape      Curve/Params
 ;;-------------- ---------- ---------- ---------- ---------- ----------
-O9               11.00      -8.10      0          FUNCTIONAL 0 0          0
+O9               11.00      10.00      0          FUNCTIONAL 1000.00 0          0
 
 [CONDUITS]
 ;;Name           From             To               Length     Roughness  InOffset   OutOffset  InitFlow   MaxFlow
@@ -90,25 +106,25 @@ WEIR             O9               HIOUT            TRANSVERSE 2.90       1.840  
 LF1              CIRCULAR     1.20       0          0          0          1
 LF2              CIRCULAR     1.20       0          0          0          1
 LF3              CIRCULAR     1.20       0          0          0          1
-OC1              TRAPEZOIDAL  1.00       39.40      0          0          1
-OC2              TRAPEZOIDAL  1.00       39.40      0          0          1
-OC3              TRAPEZOIDAL  1.00       39.40      0          0          1
-OC4              TRAPEZOIDAL  1.00       39.40      0          0          1
+OC1              TRAPEZOIDAL  1.00       39.40      1          1          1
+OC2              TRAPEZOIDAL  1.00       39.40      1          1          1
+OC3              TRAPEZOIDAL  1.00       39.40      1          1          1
+OC4              TRAPEZOIDAL  1.00       39.40      1          1          1
 LF4              CIRCULAR     1.20       0          0          0          1
-OC5              TRAPEZOIDAL  1.00       39.40      0          0          1
+OC5              TRAPEZOIDAL  1.00       39.40      1          1          1
 LF5              CIRCULAR     1.20       0          0          0          1
-OC6              TRAPEZOIDAL  1.00       39.40      0          0          1
+OC6              TRAPEZOIDAL  1.00       39.40      1          1          1
 LF6              CIRCULAR     1.20       0          0          0          1
-OC7              TRAPEZOIDAL  1.00       39.40      0          0          1
+OC7              TRAPEZOIDAL  1.00       39.40      1          1          1
 LF7              CIRCULAR     1.20       0          0          0          1
 LF8              CIRCULAR     1.20       0          0          0          1
 CULV             RECT_CLOSED  1.20       1.20       0          0          10
-OC8              TRAPEZOIDAL  1.00       39.40      0          0          1
+OC8              TRAPEZOIDAL  1.00       39.40      1          1          1
 PIPE             CIRCULAR     1.20       0          0          0          1
-MH1              RECT_CLOSED  1.64       0          0          0          
-MH8              RECT_CLOSED  1.49       0          0          0          
-MH9              RECT_CLOSED  1.37       0          0          0          
-WEIR             RECT_OPEN    0          100.00     0          0          
+MH1              RECT_CLOSED  1.64       1.64       0          0
+MH8              RECT_CLOSED  1.49       1.49       0          0
+MH9              RECT_CLOSED  1.37       1.37       0          0
+WEIR             RECT_OPEN    1.00       100.00     0          0
 
 [LOSSES]
 ;;Link           Inlet      Outlet     Average    Flap Gate

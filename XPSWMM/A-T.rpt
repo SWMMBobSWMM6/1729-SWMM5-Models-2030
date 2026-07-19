@@ -2,11 +2,1071 @@
   EPA STORM WATER MANAGEMENT MODEL - VERSION 5.2 (Build 5.2.4)
   ------------------------------------------------------------
 
+  RMOC - TRANSPORT 
   
-  ERROR 207: duplicate ID name ocr3-21 at line 431 of [ORIFICE] section:
-  ocr3-21          ?                ?                SIDE       62.71      0.650      NO       0
+  ****************
+  Analysis Options
+  ****************
+  Flow Units ............... CMS
+  Process Models:
+    Rainfall/Runoff ........ NO
+    RDII ................... NO
+    Snowmelt ............... NO
+    Groundwater ............ NO
+    Flow Routing ........... YES
+    Ponding Allowed ........ NO
+    Water Quality .......... NO
+  Flow Routing Method ...... DYNWAVE
+  Surcharge Method ......... EXTRAN
+  Starting Date ............ 01/01/2001 00:00:00
+  Ending Date .............. 01/02/2001 00:00:00
+  Antecedent Dry Days ...... 0.0
+  Report Time Step ......... 00:15:00
+  Routing Time Step ........ 10.00 sec
+  Variable Time Step ....... YES
+  Maximum Trials ........... 100
+  Number of Threads ........ 1
+  Head Tolerance ........... 0.001000 m
+  
+  
+  **************************        Volume        Volume
+  Flow Routing Continuity        hectare-m      10^6 ltr
+  **************************     ---------     ---------
+  Dry Weather Inflow .......         0.000         0.000
+  Wet Weather Inflow .......         0.000         0.000
+  Groundwater Inflow .......         0.000         0.000
+  RDII Inflow ..............         0.000         0.000
+  External Inflow ..........        34.297       342.972
+  External Outflow .........         7.047        70.468
+  Flooding Loss ............        94.869       948.699
+  Evaporation Loss .........         0.000         0.000
+  Exfiltration Loss ........         0.000         0.000
+  Initial Stored Volume ....         0.000         0.001
+  Final Stored Volume ......        10.115       101.149
+  Continuity Error (%) .....      -226.648
+  
+  
+  *************************
+  Highest Continuity Errors
+  *************************
+  Node pr1a (100.00%)
+  Node oc1-1 (96.06%)
+  Node ic1b (87.89%)
+  Node shaft (61.67%)
+  Node ar19 (31.93%)
+  
+  
+  ***************************
+  Time-Step Critical Elements
+  ***************************
+  Link RCAN-TH (80.35%)
+  Link CATH-TH (19.42%)
+  
+  
+  ********************************
+  Highest Flow Instability Indexes
+  ********************************
+  Link oc8 (4)
+  Link oc9 (3)
+  Link TUN-OUT (1)
+  
+  
+  *********************************
+  Most Frequent Nonconverging Nodes
+  *********************************
+  Node ROPEC-OUT (0.21%)
+  Node ocshft5 (0.11%)
+  Node tr45 (0.01%)
+  Node tr43 (0.01%)
+  Node wa29 (0.01%)
+  
+  
+  *************************
+  Routing Time Step Summary
+  *************************
+  Minimum Time Step           :     0.23 sec
+  Average Time Step           :     0.72 sec
+  Maximum Time Step           :    10.00 sec
+  % of Time in Steady State   :     0.00
+  Average Iterations per Step :     2.23
+  % of Steps Not Converging   :     0.21
+  Time Step Frequencies       :
+     10.000 -  5.493 sec      :     0.02 %
+      5.493 -  3.017 sec      :     0.00 %
+      3.017 -  1.657 sec      :     0.20 %
+      1.657 -  0.910 sec      :     0.00 %
+      0.910 -  0.500 sec      :    99.77 %
+  
+  
+  ******************
+  Node Depth Summary
+  ******************
+  
+  ---------------------------------------------------------------------------------
+                                 Average  Maximum  Maximum  Time of Max    Reported
+                                   Depth    Depth      HGL   Occurrence   Max Depth
+  Node                 Type       Meters   Meters   Meters  days hr:min      Meters
+  ---------------------------------------------------------------------------------
+  st16a                JUNCTION   100.67   100.71   205.36     0  05:04      100.71
+  gs20                 JUNCTION    89.40    89.48   185.19     0  02:10       89.48
+  sg14                 JUNCTION    92.24    92.29   189.06     0  07:12       92.29
+  gt2                  JUNCTION   112.86   112.86   227.93     0  00:00      112.86
+  ma44                 JUNCTION    86.32    86.90   176.72     0  03:22       86.90
+  mw13+                JUNCTION    76.13    76.31   156.98     0  06:40       76.31
+  efmar                JUNCTION     0.00     0.00    74.98     0  00:00        0.00
+  ma59a                JUNCTION    83.70    83.71   170.22     0  06:40       83.71
+  tr36                 JUNCTION    81.14    81.58   164.88     0  00:01       81.15
+  tr43                 JUNCTION    77.65    77.73   158.59     0  00:06       77.67
+  tr45                 JUNCTION    74.35    74.65   151.52     0  00:04       74.57
+  wa29                 JUNCTION    67.30    67.33   140.28     0  00:13       67.33
+  np26                 JUNCTION    72.30    72.36   147.28     0  06:49       72.36
+  wa28                 JUNCTION    66.08    66.13   140.13     0  10:54       66.13
+  waacres              JUNCTION     0.00     0.01    66.86     0  00:07        0.00
+  wx8a                 JUNCTION    56.22    56.39   121.80     0  02:38       56.39
+  gc4                  JUNCTION    60.06    60.14   127.47     0  05:33       60.14
+  wx6                  JUNCTION    54.96    55.85   117.60     0  13:15       55.85
+  pc29                 JUNCTION    60.98    61.03   128.39     0  06:59       61.03
+  pc44                 JUNCTION    58.79    59.04   123.97     0  02:36       59.04
+  wn50a                JUNCTION    53.95    54.13   110.61     0  03:52       54.13
+  wc21                 JUNCTION    72.62    72.85   159.14     0  06:40       72.85
+  wc50                 JUNCTION    69.83    70.35   144.84     0  09:35       70.35
+  wn39                 JUNCTION    51.35    51.43   116.05     0  13:56       51.43
+  wn19                 JUNCTION    49.68    49.70   111.49     0  13:57       49.70
+  bs1                  JUNCTION    80.60    80.91   166.96     0  07:11       80.91
+  mb27+                JUNCTION    66.30    66.58   138.39     0  20:07       66.58
+  mb9+                 JUNCTION    57.72    59.43   125.42     0  20:08       59.43
+  wn6a                 JUNCTION    49.96    50.90   105.82     0  07:15       50.90
+  icchbr               JUNCTION    33.52    46.18   105.92     1  00:00       46.18
+  pr12                 JUNCTION    53.17    54.95   112.44     0  17:34       54.95
+  bo7b                 JUNCTION     0.00     0.00    72.00     0  00:00        0.00
+  BOOTH-REG            JUNCTION     0.00     0.00    60.00     0  00:00        0.00
+  cc51                 JUNCTION    69.46    69.50   144.68     0  05:33       69.50
+  cc72                 JUNCTION    62.58    62.81   129.13     0  05:40       62.81
+  cc81                 JUNCTION    57.06    57.50   121.24     0  05:40       57.50
+  cc85                 JUNCTION    53.30    54.26   111.11     0  01:37       54.26
+  pr13                 JUNCTION    54.33    54.77   112.44     0  17:29       54.77
+  cc95a                JUNCTION    51.24    51.81   107.04     0  04:30       51.81
+  PREST-REG            JUNCTION     0.00     0.00    57.42     0  00:00        0.00
+  ic1b                 JUNCTION    40.53    45.52   105.92     1  00:00       45.52
+  ic3                  JUNCTION    41.10    42.93   114.86     0  03:25       42.93
+  ic4                  JUNCTION    37.90    41.91   107.96     1  00:00       41.91
+  ic5                  JUNCTION    40.68    40.95    97.95     1  00:00       40.95
+  rr43                 JUNCTION    56.46    56.49   132.42     0  00:42       56.49
+  rr40                 JUNCTION    54.36    54.53   118.48     0  12:10       54.53
+  rr10                 JUNCTION    52.94    52.97   111.18     0  22:19       52.97
+  ri0400               JUNCTION    54.34    54.38   111.80     0  17:43       54.38
+  rr02800              JUNCTION    51.86    51.89   109.02     0  22:22       51.89
+  rrr                  JUNCTION    49.21    49.23   105.70     0  22:19       49.23
+  os1                  JUNCTION    42.03    42.29    97.76     0  04:44       42.29
+  rm22                 JUNCTION    52.80    54.16   112.93     0  03:24       54.16
+  xxb                  JUNCTION    40.44    44.48    90.50     0  06:38       44.48
+  hl12                 JUNCTION    54.43    59.19   120.91     0  05:56       59.19
+  os2                  JUNCTION    33.11    38.64    97.77     0  04:57       38.64
+  bd3                  JUNCTION    58.69    59.35   121.71     0  01:35       59.35
+  ah1                  JUNCTION    56.48    59.23   120.89     0  09:10       59.23
+  aw8                  JUNCTION    60.10    61.93   126.15     0  03:09       61.93
+  ah1a                 JUNCTION    53.95    60.15   122.57     0  04:21       60.15
+  ah4                  JUNCTION    49.36    58.63   120.93     0  09:10       58.63
+  os3                  JUNCTION    31.93    37.18   105.76     0  21:14       37.18
+  os4                  JUNCTION    34.79    35.29   119.11     0  02:57       35.29
+  os5                  JUNCTION    32.47    34.93   100.57     0  03:22       34.93
+  os6                  JUNCTION    34.09    34.57    90.96     0  07:10       34.57
+  ac19                 JUNCTION    86.05    86.63   176.24     0  03:55       86.63
+  gn21++               JUNCTION    75.36    75.53   158.10     0  02:00       75.53
+  gn35a+               JUNCTION    72.80    72.97   154.05     0  23:00       72.97
+  gn17+                JUNCTION    68.53    70.13   149.17     0  23:01       70.13
+  gn13+                JUNCTION    60.84    63.95   134.85     0  23:00       63.95
+  lc1a+                JUNCTION    78.04    78.15   165.55     0  01:57       78.15
+  lc6                  JUNCTION    72.79    72.96   158.61     0  13:04       72.96
+  wrmacfar             JUNCTION    73.29    73.67   166.67     0  04:31       73.67
+  lclynw               JUNCTION    69.44    69.79   154.52     1  00:00       69.79
+  gn20                 JUNCTION    43.66    43.75   110.41     1  00:00       43.75
+  cr10                 JUNCTION    58.96    60.71   125.60     0  05:20       60.71
+  gn3                  JUNCTION    59.18    59.63   121.60     0  09:21       59.63
+  gnshft7              JUNCTION    57.33    57.84   121.60     0  09:24       57.84
+  gnshft5              JUNCTION    55.78    56.07   122.39     0  11:25       56.07
+  gnshft1              JUNCTION    52.30    52.54   111.67     0  22:22       52.54
+  cm2                  JUNCTION    44.84    44.89    93.60     0  00:04       44.84
+  cmc                  JUNCTION    41.25    41.33    88.42     0  20:24       41.33
+  or38                 JUNCTION    52.98    53.12   109.80     0  09:44       53.12
+  ocshft5              JUNCTION    40.60    40.98    88.60     0  04:46       40.94
+  gl23a                JUNCTION     0.00     0.00    52.30     0  00:00        0.00
+  oc4.5                JUNCTION    40.91    41.18    88.42     0  04:47       41.18
+  wt12a                JUNCTION    53.73    54.25   113.71     0  08:11       54.25
+  ocshft2              JUNCTION    37.64    37.73    89.73     1  00:00       37.73
+  cc82                 JUNCTION    55.99    57.08   119.17     0  05:40       57.08
+  901                  JUNCTION     0.00     0.00    62.09     0  00:00        0.00
+  SC/MERT              JUNCTION     0.00     0.00    62.09     0  00:00        0.00
+  mb9                  JUNCTION    62.69    63.09   129.08     0  02:32       63.09
+  MBAY                 JUNCTION     0.00     0.00    65.99     0  00:00        0.00
+  903                  JUNCTION     0.00     0.00    57.00     0  00:00        0.00
+  LL/BO-OUT            JUNCTION     0.00     0.00    57.00     0  00:00        0.00
+  KENT-REG             JUNCTION    60.91    61.63   127.47     0  01:30       61.63
+  RCAN-REG             JUNCTION    43.65    48.37   114.59     1  00:00       48.37
+  CATH-REG             JUNCTION    49.21    49.27   106.27     0  00:16       49.26
+  RRIVER-REG           JUNCTION    46.48    46.64   102.11     0  22:20       46.64
+  rich                 JUNCTION     0.00     0.00   115.00     0  00:00        0.00
+  hra                  JUNCTION    44.01    44.89    91.56     0  01:33       44.89
+  HEM1                 JUNCTION     0.00     0.00    46.67     0  00:00        0.00
+  HEM2                 JUNCTION    37.50    44.48    90.50     0  06:35       44.48
+  457                  JUNCTION    53.87    59.14   120.80     0  05:37       59.13
+  HEM4                 JUNCTION    51.34    59.13   120.79     0  05:35       59.13
+  HEM3                 JUNCTION     0.00     0.00    58.77     0  00:00        0.00
+  OC-OUT               JUNCTION     0.00     0.00    47.62     0  00:00        0.00
+  gn20a                JUNCTION    59.94    60.63   127.29     0  16:59       60.63
+  shaft                JUNCTION    43.84    49.59   102.13     1  00:00       49.59
+  grit                 JUNCTION    45.01    46.97    99.51     1  00:00       46.97
+  ROPEC-BY             JUNCTION     0.00     0.00    52.00     0  00:00        0.00
+  SCOTT-REG            JUNCTION    48.94    54.52   117.52     0  05:43       54.52
+  SCOTT                JUNCTION    54.52    54.79   117.79     0  05:43       54.79
+  ss15                 JUNCTION    49.32    52.21   109.24     0  17:55       52.21
+  ss14                 JUNCTION    51.02    52.27   109.51     0  10:32       52.27
+  ss10                 JUNCTION    51.60    52.88   110.86     0  10:33       52.88
+  ss5                  JUNCTION    52.46    53.79   111.20     0  10:32       53.79
+  qe7                  JUNCTION    55.14    55.71   123.85     1  00:00       55.71
+  cl3                  JUNCTION    58.76    60.51   125.61     0  17:25       60.51
+  cl11                 JUNCTION    57.38    59.02   125.21     0  17:25       59.02
+  rr1                  JUNCTION    50.98    55.97   115.97     0  17:25       55.97
+  ocr21                JUNCTION     0.00     0.00    68.54     0  00:00        0.00
+  ocr3                 JUNCTION     0.00     0.00    68.25     0  00:00        0.00
+  ocr7                 JUNCTION    60.08    61.91   130.46     0  05:06       61.91
+  ar19                 JUNCTION    60.45    62.39   129.57     1  00:00       62.39
+  ar25                 JUNCTION    42.58    60.68   129.57     1  00:00       60.68
+  ar33                 JUNCTION    49.87    59.03   128.52     1  00:00       59.03
+  ar1                  JUNCTION     0.00     0.00    69.71     0  00:00        0.00
+  ar5                  JUNCTION    62.00    63.96   132.48     0  04:21       63.96
+  ar11                 JUNCTION    61.51    63.45   130.42     0  11:15       63.45
+  ar15                 JUNCTION     0.00     0.00    68.89     0  00:00        0.00
+  ar16                 JUNCTION     0.00     0.00    68.58     0  00:00        0.00
+  lyn3                 JUNCTION    54.44    61.45   128.49     0  11:43       61.45
+  cs1                  JUNCTION    58.51    60.23   128.05     0  11:44       60.23
+  cs3                  JUNCTION    54.67    60.04   126.77     0  12:37       60.04
+  ly6                  JUNCTION    60.91    62.79   131.65     0  03:36       62.79
+  ly1                  JUNCTION     0.00     0.00    69.30     0  00:00        0.00
+  hw6                  JUNCTION    60.65    62.52   127.75     0  04:44       62.52
+  hw1                  JUNCTION     0.00     0.00    68.52     0  00:00        0.00
+  ocr1                 JUNCTION     0.00     0.00    67.67     0  00:00        0.00
+  fl1                  JUNCTION     0.00     0.00    71.06     0  00:00        0.00
+  wa1                  JUNCTION    64.03    66.14   137.53     0  08:54       66.14
+  wa6                  JUNCTION    62.14    64.11   133.06     0  08:54       64.11
+  bk1                  JUNCTION     0.00     0.00    67.13     0  00:00        0.00
+  bk4                  JUNCTION     0.00     0.00    67.74     0  00:00        0.00
+  pr5                  JUNCTION    59.02    60.78   127.78     0  09:07       60.78
+  pr17                 JUNCTION    57.12    58.75   121.17     0  09:09       58.75
+  pr22                 JUNCTION    55.45    56.97   117.57     0  09:11       56.97
+  pr1a                 JUNCTION    49.26    62.04   127.12     1  00:00       62.04
+  mid                  JUNCTION    54.58    60.19   129.08     1  00:00       60.19
+  qe-ic                JUNCTION    52.20    55.10   123.24     1  00:00       55.10
+  qe7a                 JUNCTION     0.00     0.00    68.14     0  00:00        0.00
+  645                  JUNCTION     0.00     0.00    68.25     0  00:00        0.00
+  prmid2               JUNCTION    32.30    53.33   112.40     0  21:45       53.33
+  rr1out               JUNCTION     0.00     0.00    57.16     0  00:00        0.00
+  ri0500               JUNCTION    53.56    54.73   112.12     0  17:43       54.73
+  TUN-1                JUNCTION    23.77    24.38    81.51     0  06:46       24.38
+  oc1-1                JUNCTION    50.32    61.39   126.49     0  07:38       61.39
+  oc1-2                JUNCTION     0.00     0.00    68.52     0  00:00        0.00
+  oc1-3                JUNCTION     0.00     0.00    67.18     0  00:00        0.00
+  oc1-4                JUNCTION     0.00     0.00    68.00     0  00:00        0.00
+  oc1-end              JUNCTION     0.00     0.00    68.00     0  00:00        0.00
+  ri00600              JUNCTION    55.67    55.74   115.74     0  01:20       55.74
+  ri0300               JUNCTION    53.71    54.31   111.70     0  17:51       54.31
+  ri0200               JUNCTION    50.69    52.64   110.54     0  17:54       52.64
+  cl3a                 JUNCTION    54.64    61.26   126.49     0  07:39       61.26
+  TUN-2                JUNCTION     0.00     0.00    68.50     0  00:00        0.00
+  TUN-3                JUNCTION     0.00     0.00    72.00     0  00:00        0.00
+  oc2-1                JUNCTION     0.00     0.00    65.00     0  00:00        0.00
+  oc2-2                JUNCTION     0.00     0.00    68.00     0  00:00        0.00
+  TUN-5                JUNCTION     0.00     0.00    78.50     0  00:00        0.00
+  TUN-4                JUNCTION     0.00     0.00    73.50     0  00:00        0.00
+  TUN-6                JUNCTION     0.00     0.00    72.00     0  00:00        0.00
+  KENT-OUT             JUNCTION     0.00     0.00    65.84     0  00:00        0.00
+  RCAN-OUT             JUNCTION     0.00     0.00    66.22     0  00:00        0.00
+  CATH-OUT             JUNCTION     0.00     0.00    57.00     0  00:00        0.00
+  RRIVER-OUT           JUNCTION     0.00     0.00    55.47     0  00:00        0.00
+  CC100                JUNCTION    52.74    54.25   111.10     0  05:40       54.25
+  CC110                JUNCTION    52.75    54.18   111.00     0  07:06       54.18
+  CC120                JUNCTION    47.52    49.53   105.86     0  07:24       49.51
+  WN/CC                JUNCTION    45.52    48.16   105.84     0  07:20       48.14
+  NEW-BO               JUNCTION    32.63    46.18   105.92     1  00:00       46.18
+  sc-con               JUNCTION    52.48    54.23   111.05     0  08:26       54.23
+  EXIT                 JUNCTION    23.87    24.50    81.50     0  06:41       24.50
+  CC-5                 JUNCTION     0.00     0.00    47.42     0  00:00        0.00
+  ROPEC-OUT            OUTFALL      0.00     0.00    52.42     0  00:00        0.00
+  hfhaz                STORAGE      0.00     0.00    95.20     0  00:00        0.00
+  lfhem                STORAGE      0.00     0.00    46.72     0  01:27        0.00
+  oschbr               STORAGE      0.00     0.00    52.42     0  00:00        0.00
+  cs6                  STORAGE      0.56     1.34    69.53     1  00:00        1.34
+  
+  
+  *******************
+  Node Inflow Summary
+  *******************
+  
+  -------------------------------------------------------------------------------------------------
+                                  Maximum  Maximum                  Lateral       Total        Flow
+                                  Lateral    Total  Time of Max      Inflow      Inflow     Balance
+                                   Inflow   Inflow   Occurrence      Volume      Volume       Error
+  Node                 Type           CMS      CMS  days hr:min    10^6 ltr    10^6 ltr     Percent
+  -------------------------------------------------------------------------------------------------
+  st16a                JUNCTION     0.230    0.230     0  00:00        19.9        19.9       1.037
+  gs20                 JUNCTION     0.110    0.110     0  00:00         9.5         9.5       1.500
+  sg14                 JUNCTION     0.150    0.150     0  00:00          13          13       2.107
+  gt2                  JUNCTION     0.180   10.670     0  07:14        15.6         921       0.012
+  ma44                 JUNCTION     0.040    0.040     0  00:00        3.46        3.46       3.837
+  mw13+                JUNCTION     0.060    0.060     0  00:00        5.18        5.18       3.380
+  efmar                JUNCTION     0.210    0.270     0  10:26        18.1        23.2      -0.000
+  ma59a                JUNCTION     0.090    0.400     0  10:26        7.78        34.3       0.530
+  tr36                 JUNCTION     0.000    1.785     0  09:29           0         154      -0.232
+  tr43                 JUNCTION     0.000    2.309     0  00:02           0         154       0.153
+  tr45                 JUNCTION     0.000    2.217     0  00:06           0         154      -0.102
+  wa29                 JUNCTION     0.000    2.304     0  00:04           0         154       0.192
+  np26                 JUNCTION     0.100    0.100     0  00:00        8.64        8.64       2.740
+  wa28                 JUNCTION     0.000    2.138     0  00:14           0         162       2.398
+  waacres              JUNCTION     0.000    1.885     0  12:18           0         158      -0.000
+  wx8a                 JUNCTION     0.040    0.040     0  00:00        3.46        3.46       2.810
+  gc4                  JUNCTION     0.060    0.060     0  00:00        5.18        5.18       2.672
+  wx6                  JUNCTION     0.000    0.100     0  06:29           0        8.41       4.116
+  pc29                 JUNCTION     0.090    0.090     0  00:00        7.78        7.78       2.674
+  pc44                 JUNCTION     0.030    0.120     0  10:02        2.59        10.2       0.797
+  wn50a                JUNCTION     0.070    0.386     0  13:56        6.05          32      14.297
+  wc21                 JUNCTION     0.050    0.050     0  00:00        4.32        4.32       4.696
+  wc50                 JUNCTION     0.030    0.080     0  06:40        2.59        6.72       2.748
+  wn39                 JUNCTION     0.050    0.130     0  09:48        4.32        10.9       3.560
+  wn19                 JUNCTION     0.110    0.144     0  13:59         9.5        12.2       2.576
+  bs1                  JUNCTION     0.050    0.050     0  00:00        4.32        4.32       4.803
+  mb27+                JUNCTION     0.040    0.090     0  07:11        3.46        7.58       6.026
+  mb9+                 JUNCTION     0.000    0.120     0  20:08           0        9.65       1.786
+  wn6a                 JUNCTION     0.000    0.463     0  07:26           0        29.2      29.625
+  icchbr               JUNCTION     0.000    0.007     0  08:28           0        0.15   13106.351
+  pr12                 JUNCTION     0.000    0.116     0  07:22           0        4.12      40.318
+  bo7b                 JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
+  BOOTH-REG            JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
+  cc51                 JUNCTION     0.120    0.120     0  00:00        10.4        10.4       1.676
+  cc72                 JUNCTION     0.020    0.140     0  12:18        1.73        11.9       1.497
+  cc81                 JUNCTION     0.020    0.160     0  10:43        1.73        13.5       0.588
+  cc85                 JUNCTION     0.010    0.087     0  05:40       0.864        7.29       0.951
+  pr13                 JUNCTION     0.030    0.117     0  08:58        2.59           5      21.532
+  cc95a                JUNCTION     0.020    0.146     0  21:48        1.73        10.6      13.762
+  PREST-REG            JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
+  ic1b                 JUNCTION     0.000    0.031     0  23:21           0        1.72     725.947
+  ic3                  JUNCTION     0.000    0.020     0  11:16           0        1.65       4.900
+  ic4                  JUNCTION     0.000    0.069     1  00:00           0        4.46       2.817
+  ic5                  JUNCTION     0.000    0.129     1  00:00           0        9.47       2.152
+  rr43                 JUNCTION     0.110    0.110     0  00:00         9.5         9.5       0.824
+  rr40                 JUNCTION     0.000    0.110     0  05:54           0        9.43       3.862
+  rr10                 JUNCTION     0.130    0.240     0  12:10        11.2        20.3       6.440
+  ri0400               JUNCTION     0.080    0.170     0  17:43        6.91        13.8       1.139
+  rr02800              JUNCTION     0.120    0.560     0  22:23        10.4        44.8       0.354
+  rrr                  JUNCTION     0.130    0.293     0  22:22        11.2        24.3       1.256
+  os1                  JUNCTION     0.040    0.479     0  15:19        3.46        37.5      16.011
+  rm22                 JUNCTION     0.010    0.010     0  00:00       0.864       0.864       8.993
+  xxb                  JUNCTION     0.000    0.016     0  05:42           0       0.798      13.189
+  hl12                 JUNCTION     0.000    0.010     0  05:50           0       0.811      10.108
+  os2                  JUNCTION     0.000    0.051     0  04:49           0       0.927       8.389
+  bd3                  JUNCTION     0.020    0.020     0  00:00        1.73        1.73       4.338
+  ah1                  JUNCTION     0.000    0.030     0  09:10           0        2.31       3.742
+  aw8                  JUNCTION     0.010    0.010     0  00:00       0.864       0.864       9.439
+  ah1a                 JUNCTION     0.000    0.010     0  09:47           0       0.789       9.857
+  ah4                  JUNCTION     0.000    0.011     0  05:46           0       0.736      13.325
+  os3                  JUNCTION     0.000    0.003     0  09:31           0       0.207      34.581
+  os4                  JUNCTION     0.010    0.010     0  00:00       0.864       0.864       6.116
+  os5                  JUNCTION     0.000    0.009     0  03:02           0       0.607       7.703
+  os6                  JUNCTION     0.010    0.018     0  03:22       0.864        1.43       7.027
+  ac19                 JUNCTION     0.040    0.040     0  00:00        3.46        3.46       3.930
+  gn21++               JUNCTION     0.060    0.100     0  03:55        5.18        8.51       3.705
+  gn35a+               JUNCTION     0.060    0.161     0  02:02        5.18        13.4       6.465
+  gn17+                JUNCTION     0.010    0.170     0  23:03       0.864        13.4       0.757
+  gn13+                JUNCTION     0.000    0.170     1  00:00           0        13.3       2.502
+  lc1a+                JUNCTION     0.040    1.925     0  12:18        3.46         162       2.236
+  lc6                  JUNCTION     0.060    1.999     0  02:08        5.18         163       2.148
+  wrmacfar             JUNCTION     0.040    0.040     0  00:00        3.46        3.46       7.690
+  lclynw               JUNCTION     0.040    2.067     0  05:40        3.46         167       6.973
+  gn20                 JUNCTION     0.060    2.295     1  00:00        5.18         174       2.666
+  cr10                 JUNCTION     0.010    0.010     0  00:00       0.864       0.864      10.322
+  gn3                  JUNCTION     0.040    0.167     0  09:26        3.46        8.95      46.845
+  gnshft7              JUNCTION     0.030    0.081     0  08:05        2.59         3.8      21.723
+  gnshft5              JUNCTION     0.030    0.030     0  00:00        2.59        2.59       5.525
+  gnshft1              JUNCTION     0.030    0.047     0  11:25        2.59        3.98       4.699
+  cm2                  JUNCTION     0.200    0.200     0  00:00        17.3        17.3       0.305
+  cmc                  JUNCTION     0.010    0.327     0  00:04       0.864        18.1       1.102
+  or38                 JUNCTION     0.040    0.040     0  00:00        3.46        3.46       4.264
+  ocshft5              JUNCTION     0.020    3.105     0  04:30        1.73        57.9       0.136
+  gl23a                JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
+  oc4.5                JUNCTION     0.000    3.185     0  04:29           0        60.7       6.462
+  wt12a                JUNCTION     0.020    0.020     0  00:00        1.73        1.73       5.753
+  ocshft2              JUNCTION     0.030    0.050     0  09:24        2.59        4.23       9.459
+  cc82                 JUNCTION     0.000    0.160     0  05:41           0        13.4       0.650
+  901                  JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
+  SC/MERT              JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
+  mb9                  JUNCTION     0.030    0.030     0  00:00        2.59        2.59       3.363
+  MBAY                 JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
+  903                  JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
+  LL/BO-OUT            JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
+  KENT-REG             JUNCTION     0.020    0.020     0  00:00        1.73        1.73       4.472
+  RCAN-REG             JUNCTION     0.000    0.060     1  00:00           0         3.8       1.509
+  CATH-REG             JUNCTION     0.060    0.060     0  00:00        5.18        5.18       1.123
+  RRIVER-REG           JUNCTION     0.000    0.293     1  00:00           0          24       0.258
+  rich                 JUNCTION     0.000    0.000     0  00:00           0           0    -100.000
+  hra                  JUNCTION     0.010    0.010     0  00:00       0.864       0.864       6.474
+  HEM1                 JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
+  HEM2                 JUNCTION     0.000    0.014     0  06:40           0       0.705       0.000
+  457                  JUNCTION     0.000    0.035     0  05:34           0        2.22       6.040
+  HEM4                 JUNCTION     0.000    0.039     0  06:09           0        2.09       0.000
+  HEM3                 JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
+  OC-OUT               JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
+  gn20a                JUNCTION     0.020    0.020     0  00:00        1.73        1.73       8.602
+  shaft                JUNCTION     0.000    2.295     1  00:00           0         169     160.881
+  grit                 JUNCTION     0.000    2.372     1  00:00           0          71       0.811
+  ROPEC-BY             JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
+  SCOTT-REG            JUNCTION     0.000    0.004     0  05:25           0       0.272      30.660
+  SCOTT                JUNCTION     0.030    0.030     0  00:00        2.59        2.59       2.628
+  ss15                 JUNCTION     0.000    0.200     0  17:55           0        15.5       0.590
+  ss14                 JUNCTION     0.010    0.030     0  10:33       0.864        2.44       2.931
+  ss10                 JUNCTION     0.010    0.020     0  10:33       0.864        1.65       4.513
+  ss5                  JUNCTION     0.010    0.010     0  00:00       0.864       0.864      10.022
+  qe7                  JUNCTION     0.020    0.060     1  00:00        1.73        4.05       2.984
+  cl3                  JUNCTION     0.010    0.020     0  07:39       0.864        1.49       8.007
+  cl11                 JUNCTION     0.010    0.030     0  17:27       0.864        2.25       3.615
+  rr1                  JUNCTION     0.000    0.030     0  17:26           0        2.17       3.109
+  ocr21                JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
+  ocr3                 JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
+  ocr7                 JUNCTION     0.010    0.010     0  00:00       0.864       0.864       9.959
+  ar19                 JUNCTION     0.010    0.020     0  07:00       0.864        1.65      46.911
+  ar25                 JUNCTION     0.000    0.020     1  00:00           0        1.12      10.975
+  ar33                 JUNCTION     0.000    0.040     1  00:00           0         2.4       3.297
+  ar1                  JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
+  ar5                  JUNCTION     0.010    0.010     0  00:00       0.864       0.864      10.913
+  ar11                 JUNCTION     0.010    0.010     0  00:00       0.864       0.864      24.510
+  ar15                 JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
+  ar16                 JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
+  lyn3                 JUNCTION     0.000    0.020     0  11:16           0        1.47      10.669
+  cs1                  JUNCTION     0.010    0.040     0  13:02       0.864        2.98       2.977
+  cs3                  JUNCTION     0.000    0.040     0  11:44           0         2.9       8.136
+  ly6                  JUNCTION     0.010    0.010     0  00:00       0.864       0.864       9.709
+  ly1                  JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
+  hw6                  JUNCTION     0.010    0.010     0  00:00       0.864       0.864      10.008
+  hw1                  JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
+  ocr1                 JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
+  fl1                  JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
+  wa1                  JUNCTION     0.010    0.010     0  00:00       0.864       0.864      11.789
+  wa6                  JUNCTION     0.010    0.020     0  09:29       0.864        1.64       4.896
+  bk1                  JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
+  bk4                  JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
+  pr5                  JUNCTION     0.010    0.010     0  00:00       0.864       0.864      10.750
+  pr17                 JUNCTION     0.010    0.017     0  09:07       0.864        1.37       7.001
+  pr22                 JUNCTION     0.010    0.027     0  09:09       0.864        2.15       4.268
+  pr1a                 JUNCTION     0.000    0.004     0  09:09           0        0.27  270165.334 ltr
+  mid                  JUNCTION     0.000    0.040     1  00:00           0        2.57       7.214
+  qe-ic                JUNCTION     0.000    0.060     1  00:00           0        3.93       3.523
+  qe7a                 JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
+  645                  JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
+  prmid2               JUNCTION     0.000    0.056     0  18:01           0        2.58       3.821
+  rr1out               JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
+  ri0500               JUNCTION     0.000    0.090     0  17:25           0        7.12       3.001
+  TUN-1                JUNCTION     0.000    1.323     0  06:40           0        34.9      20.957
+  oc1-1                JUNCTION     0.000    0.027     0  06:27           0      0.0867    2436.557
+  oc1-2                JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
+  oc1-3                JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
+  oc1-4                JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
+  oc1-end              JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
+  ri00600              JUNCTION     0.060    0.060     0  00:00        5.18        5.18       3.334
+  ri0300               JUNCTION     0.000    0.170     0  17:43           0        13.7       3.035
+  ri0200               JUNCTION     0.000    0.170     0  17:57           0        13.3       1.260
+  cl3a                 JUNCTION     0.000    0.028     0  06:28           0       0.789      10.173
+  TUN-2                JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
+  TUN-3                JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
+  oc2-1                JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
+  oc2-2                JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
+  TUN-5                JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
+  TUN-4                JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
+  TUN-6                JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
+  KENT-OUT             JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
+  RCAN-OUT             JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
+  CATH-OUT             JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
+  RRIVER-OUT           JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
+  CC100                JUNCTION     0.000    0.083     0  05:40           0        6.88       0.984
+  CC110                JUNCTION     0.000    0.110     0  06:13           0        9.07       0.990
+  CC120                JUNCTION     0.000    0.171     0  20:08           0        13.8       2.833
+  WN/CC                JUNCTION     0.000    0.240     0  07:29           0        13.5       6.438
+  NEW-BO               JUNCTION     0.000    0.021     0  21:51           0       0.991      14.319
+  sc-con               JUNCTION     0.000    0.090     0  05:30           0        7.43       2.049
+  EXIT                 JUNCTION     0.000    0.993     0  06:40           0        28.9       0.000
+  CC-5                 JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
+  ROPEC-OUT            OUTFALL      0.000    2.372     1  00:00           0        70.5       0.000
+  hfhaz                STORAGE      0.000    0.490     0  10:38           0        41.7      -0.000
+  lfhem                STORAGE      0.000    0.010     0  05:50           0       0.811      -0.000
+  oschbr               STORAGE      0.000    0.030     0  07:27           0        2.29      -0.000
+  cs6                  STORAGE      0.000    0.040     0  12:43           0        2.68       0.011
+  
+  
+  **********************
+  Node Surcharge Summary
+  **********************
+  
+  Surcharging occurs when water rises above the top of the highest conduit.
+  ---------------------------------------------------------------------
+                                               Max. Height   Min. Depth
+                                   Hours       Above Crown    Below Rim
+  Node                 Type      Surcharged         Meters       Meters
+  ---------------------------------------------------------------------
+  gt2                  JUNCTION       24.00          0.000        0.000
+  tr36                 JUNCTION        0.01          0.000        0.000
+  tr45                 JUNCTION        0.07          0.000        0.000
+  wn50a                JUNCTION       20.13          0.000        0.000
+  wn6a                 JUNCTION       16.75          0.000        0.000
+  cc95a                JUNCTION       19.49          0.000        0.000
+  os1                  JUNCTION       19.27          0.000        0.000
+  gn3                  JUNCTION       14.64          0.000        0.000
+  oc4.5                JUNCTION        4.99          0.000        0.000
+  rich                 JUNCTION       24.00          0.000        0.000
+  HEM2                 JUNCTION       17.41          0.000        0.000
+  HEM4                 JUNCTION       18.41          0.000        0.000
+  EXIT                 JUNCTION       17.26          0.000        0.000
+  
+  
+  *********************
+  Node Flooding Summary
+  *********************
+  
+  Flooding refers to all water that overflows a node, whether it ponds or not.
+  --------------------------------------------------------------------------
+                                                             Total   Maximum
+                                 Maximum   Time of Max       Flood    Ponded
+                        Hours       Rate    Occurrence      Volume     Depth
+  Node                 Flooded       CMS   days hr:min    10^6 ltr    Meters
+  --------------------------------------------------------------------------
+  gt2                    24.00     9.831      0  00:00     801.422     0.000
+  tr36                    0.01     1.318      0  00:01       0.015     0.000
+  tr45                    0.06     1.741      0  00:04       0.034     0.000
+  wn50a                  20.13     0.386      0  14:05      27.985     0.000
+  wn6a                   16.75     0.463      0  07:26      22.495     0.000
+  cc95a                  19.49     0.146      0  21:45       9.285     0.000
+  os1                    19.27     0.479      0  15:19      32.264     0.000
+  gn3                    14.64     0.167      0  09:26       5.954     0.000
+  oc4.5                   4.72     2.410      0  04:49      22.074     0.000
+  HEM2                   17.41     0.014      0  06:40       0.627     0.000
+  HEM4                   18.41     0.039      0  06:09       1.972     0.000
+  EXIT                   17.26     0.768      0  06:47      24.586     0.000
+  
+  
+  **********************
+  Storage Volume Summary
+  **********************
+  
+  ------------------------------------------------------------------------------------------------
+                         Average    Avg   Evap  Exfil     Maximum    Max    Time of Max    Maximum
+                          Volume   Pcnt   Pcnt   Pcnt      Volume   Pcnt     Occurrence    Outflow
+  Storage Unit           1000 m³   Full   Loss   Loss     1000 m³   Full    days hr:min        CMS
+  ------------------------------------------------------------------------------------------------
+  hfhaz                    0.000    0.0    0.0    0.0       0.000    0.0       0  00:00      0.490
+  lfhem                    0.000    0.0    0.0    0.0       0.000    0.0       0  01:27      0.010
+  oschbr                   0.000    0.0    0.0    0.0       0.000    0.0       0  00:00      0.030
+  cs6                      1.120    5.6    0.0    0.0       2.678   13.4       1  00:00      0.000
+  
+  
+  ***********************
+  Outfall Loading Summary
+  ***********************
+  
+  -----------------------------------------------------------
+                         Flow       Avg       Max       Total
+                         Freq      Flow      Flow      Volume
+  Outfall Node           Pcnt       CMS       CMS    10^6 ltr
+  -----------------------------------------------------------
+  ROPEC-OUT             95.17     0.930     2.372      70.467
+  -----------------------------------------------------------
+  System                95.17     0.930     2.372      70.467
+  
+  
+  ********************
+  Link Flow Summary
+  ********************
+  
+  -----------------------------------------------------------------------------
+                                 Maximum  Time of Max   Maximum    Max/    Max/
+                                  |Flow|   Occurrence   |Veloc|    Full    Full
+  Link                 Type          CMS  days hr:min     m/sec    Flow   Depth
+  -----------------------------------------------------------------------------
+  wa109                CONDUIT     0.230     0  10:33      1.81    0.23    0.32
+  gs6                  CONDUIT     0.110     0  11:20      1.04    0.19    0.28
+  sg16                 CONDUIT     0.150     0  09:58      1.08    0.17    0.27
+  wa83                 CONDUIT     1.399     0  00:05      3.11    1.03    1.00
+  ma23                 CONDUIT     0.040     0  03:22      0.43    0.09    0.36
+  mw29                 CONDUIT     0.060     0  10:26      1.06    0.04    0.14
+  ma7                  CONDUIT     0.400     0  06:40      1.48    0.25    0.50
+  wa49                 CONDUIT     2.309     0  00:02      2.75    1.09    1.00
+  wa42                 CONDUIT     2.217     0  00:06      4.72    0.50    0.75
+  wa40                 CONDUIT     2.304     0  00:04      2.79    1.13    0.90
+  wa29+                CONDUIT     2.136     0  00:14      1.18    0.19    0.61
+  np19                 CONDUIT     0.100     0  06:49      0.34    0.11    0.48
+  wa28+                CONDUIT     1.885     0  12:18      2.13    0.25    0.34
+  wn83                 CONDUIT     0.040     0  02:38      0.89    0.03    0.17
+  wn80                 CONDUIT     0.100     0  13:15      0.26    0.08    0.60
+  pc17                 CONDUIT     0.090     0  10:52      0.96    0.10    0.20
+  pc2                  CONDUIT     0.120     0  02:37      2.64    0.03    0.56
+  wn52                 CONDUIT     0.096     0  13:56      0.25    0.03    0.56
+  wc55                 CONDUIT     0.050     0  06:40      0.93    0.04    0.14
+  wc26                 CONDUIT     0.080     0  09:48      1.42    0.04    0.14
+  wn41                 CONDUIT     0.034     0  13:59      0.49    0.01    0.08
+  wn21                 CONDUIT     0.144     0  13:57      0.87    0.03    0.56
+  mb81                 CONDUIT     0.050     0  07:11      1.01    0.03    0.16
+  mb42                 CONDUIT     0.090     0  20:08      1.00    0.06    0.16
+  mb11                 CONDUIT     0.059     0  20:08      1.38    0.02    0.55
+  wn6                  CONDUIT     0.000     0  00:00      0.00    0.00    0.50
+  os16                 CONDUIT     0.007     0  08:28      0.08    0.00    0.81
+  bo5                  CONDUIT     0.000     0  00:00      0.00    0.00    0.00
+  cc51+                CONDUIT     0.120     0  12:18      1.45    0.12    0.24
+  ca8                  CONDUIT     0.140     0  12:31      1.31    0.02    0.11
+  pr3                  CONDUIT     0.116     0  07:22      0.61    0.01    0.61
+  cc4                  CONDUIT     0.000     0  00:00      0.00    0.00    0.50
+  os15                 CONDUIT     0.013     0  03:29      0.76    0.00    0.45
+  os11                 CONDUIT     0.010     0  03:40      0.69    0.00    0.04
+  os10                 CONDUIT     0.069     1  00:00      0.66    0.00    0.07
+  os9                  CONDUIT     0.129     1  00:00      0.19    0.01    0.54
+  rr70                 CONDUIT     0.110     0  05:54      2.34    0.01    0.07
+  rr67                 CONDUIT     0.110     0  12:10      0.50    0.05    0.24
+  rr36                 CONDUIT     0.240     0  22:23      0.78    0.12    0.23
+  os7                  CONDUIT     0.041     0  04:49      0.02    0.00    0.52
+  hl38                 CONDUIT     0.010     0  03:24      1.10    0.08    0.59
+  hl26                 CONDUIT     0.000     0  00:00      0.00    0.00    0.50
+  hl12+                CONDUIT     0.010     0  09:29      0.83    0.06    0.16
+  os6+                 CONDUIT     0.003     0  21:14      0.11    0.00    0.02
+  bd2                  CONDUIT     0.020     0  02:01      0.86    0.06    0.31
+  ah11                 CONDUIT     0.010     0  09:10      0.20    0.21    0.65
+  aw2                  CONDUIT     0.010     0  09:47      0.81    0.00    0.05
+  aw1                  CONDUIT     0.010     0  11:38      0.76    0.27    0.35
+  ah8                  CONDUIT     0.000     0  00:00      0.00    0.00    0.34
+  os5+                 CONDUIT     0.003     0  09:31      0.51    0.00    0.01
+  os4+                 CONDUIT     0.009     0  03:02      1.15    0.00    0.01
+  os3+                 CONDUIT     0.008     0  03:22      0.41    0.00    0.02
+  os2+                 CONDUIT     0.018     0  07:11      0.69    0.00    0.02
+  ac18                 CONDUIT     0.040     0  03:55      0.69    0.04    0.22
+  gn89                 CONDUIT     0.101     0  02:02      0.77    0.14    0.30
+  gn66                 CONDUIT     0.160     0  23:03      0.88    0.11    0.21
+  gn48                 CONDUIT     0.170     1  00:00      2.73    0.05    0.15
+  gn43                 CONDUIT     0.170     0  23:02      1.16    0.05    0.16
+  so16                 CONDUIT     1.939     0  02:08      1.67    0.23    0.34
+  so10                 CONDUIT     1.985     0  13:36      1.77    0.24    0.32
+  wr4                  CONDUIT     0.042     0  05:40      0.77    0.00    0.04
+  so8                  CONDUIT     2.065     1  00:00      1.94    0.13    0.24
+  cr9                  CONDUIT     0.010     0  05:20      0.64    0.02    0.54
+  gn12                 CONDUIT     0.097     0  09:26      0.49    0.02    0.78
+  gn10                 CONDUIT     0.013     0  11:25      0.30    0.00    0.31
+  gn8                  CONDUIT     0.017     0  11:25      0.44    0.00    0.05
+  oc10                 CONDUIT     0.317     0  00:04      4.49    0.06    0.18
+  oc9                  CONDUIT     0.325     0  04:23      0.58    0.24    0.79
+  or38+                CONDUIT     0.040     0  10:38      1.00    0.03    0.11
+  oc8                  CONDUIT     3.151     0  04:29      2.51    0.21    0.90
+  gl22                 CONDUIT     0.000     0  00:00      0.00    0.00    0.50
+  oc7                  CONDUIT     0.037     1  00:00      0.04    0.01    0.54
+  wt13                 CONDUIT     0.020     0  09:24      0.91    0.01    0.08
+  oc4                  CONDUIT     0.013     1  00:00      0.29    0.01    0.05
+  gc8                  CONDUIT     0.060     0  06:29      1.01    0.02    0.10
+  cc81+                CONDUIT     0.160     0  05:41      1.68    0.01    0.08
+  cc82+                CONDUIT     0.077     0  05:40      1.65    0.00    0.06
+  9001                 CONDUIT     0.000     0  00:00      0.00    0.00    0.00
+  902                  CONDUIT     0.000     0  00:00      0.00    0.00    0.00
+  MOONEY               CONDUIT     0.030     0  11:31      0.67    0.00    0.05
+  PRESTN               CONDUIT     0.000     0  00:00      0.00    0.00    0.00
+  LL/BO-OV             CONDUIT     0.000     0  00:00      0.00    0.00    0.00
+  BOOTH-TH             CONDUIT     0.000     0  00:00      0.00    0.00    0.50
+  PREST-TH             CONDUIT     0.000     0  00:00      0.00    0.00    0.50
+  KENT-TH              CONDUIT     0.020     0  11:16      1.80    0.22    0.28
+  RCAN-TH              CONDUIT     0.060     1  00:00      3.86    0.10    0.16
+  CATH-TH              CONDUIT     0.065     0  00:16      3.80    0.10    0.16
+  rr7                  CONDUIT     0.293     1  00:00      1.29    0.03    0.11
+  RRIVER-TH            CONDUIT     0.293     0  22:20      3.10    0.29    0.67
+  hra-ovf              CONDUIT     0.000     0  00:00      0.00    0.00    0.00
+  hraa                 CONDUIT     0.010     0  05:50      0.44    0.31    0.47
+  xxb-ovf              CONDUIT     0.014     0  06:40      0.58    0.02    0.67
+  458                  CONDUIT     0.030     0  09:10      0.78    0.04    0.56
+  459                  CONDUIT     0.000     0  00:00      0.00    0.00    0.34
+  ah-ovf               CONDUIT     0.039     0  06:09      0.67    0.03    0.75
+  rm-ovf               CONDUIT     0.000     0  00:00      0.00    0.00    0.00
+  oc-ovf               CONDUIT     0.000     0  00:00      0.00    0.00    0.00
+  gn29                 CONDUIT     0.020     0  16:59      0.08    0.01    0.53
+  south                CONDUIT     2.295     1  00:00      1.35    0.11    0.61
+  sh-gr                CONDUIT     2.295     1  00:00      1.77    1.03    0.51
+  gn3+                 CONDUIT     0.047     0  22:22      1.03    0.01    0.15
+  outfall              CONDUIT     2.372     1  00:00      3.83    0.04    0.14
+  BY-ROPEC             CONDUIT     0.000     0  00:00      0.00    0.00    0.00
+  SC-OVR               CONDUIT     0.000     0  00:00      0.00    0.00    0.00
+  SC-IN                CONDUIT     0.004     0  05:25      0.46    0.00    0.02
+  493                  CONDUIT     0.200     0  17:55      0.72    0.04    0.13
+  496                  CONDUIT     0.010     0  10:33      0.27    0.00    0.04
+  497                  CONDUIT     0.020     0  10:33      0.52    0.00    0.04
+  498                  CONDUIT     0.030     0  10:32      0.65    0.00    0.08
+  502                  CONDUIT     0.020     0  17:27      0.34    0.03    0.12
+  504                  CONDUIT     0.030     0  17:26      1.39    0.01    0.06
+  507                  CONDUIT     0.000     0  00:00      0.00    0.00    0.07
+  513                  CONDUIT     0.010     0  05:06      0.42    0.00    0.41
+  515                  CONDUIT     0.020     1  00:00      0.04    0.01    0.31
+  518                  CONDUIT     0.040     1  00:00      0.92    0.00    0.05
+  521                  CONDUIT     0.000     0  00:00      0.00    0.00    0.00
+  528                  CONDUIT     0.000     0  00:00      0.00    0.00    0.27
+  530                  CONDUIT     0.000     0  00:00      0.00    0.00    0.03
+  538                  CONDUIT     0.020     0  13:02      0.17    0.01    0.13
+  540                  CONDUIT     0.040     0  11:44      0.69    0.00    0.15
+  541                  CONDUIT     0.040     0  12:43      0.17    0.01    0.15
+  544                  CONDUIT     0.010     0  03:36      0.58    0.00    0.05
+  546                  CONDUIT     0.000     0  00:00      0.00    0.00    0.02
+  551                  CONDUIT     0.000     0  00:00      0.00    0.00    0.04
+  555                  CONDUIT     0.000     0  00:00      0.00    0.00    0.00
+  558                  CONDUIT     0.000     0  00:00      0.00    0.00    0.03
+  560                  CONDUIT     0.010     0  09:51      0.60    0.00    0.05
+  561                  CONDUIT     0.000     0  00:00      0.00    0.00    0.00
+  564                  CONDUIT     0.000     0  00:00      0.00    0.00    0.00
+  565                  CONDUIT     0.000     0  00:00      0.00    0.00    0.00
+  568                  CONDUIT     0.007     0  09:07      0.28    0.00    0.03
+  570                  CONDUIT     0.017     0  09:09      0.49    0.00    0.03
+  577                  CONDUIT     0.004     0  09:09      0.35    0.00    0.29
+  589                  CONDUIT     0.040     1  00:00      0.47    0.02    0.09
+  599                  CONDUIT     0.020     0  09:57      0.85    0.01    0.05
+  600                  CONDUIT     0.027     0  09:11      0.41    0.00    0.27
+  602                  CONDUIT     0.060     1  00:00      0.76    0.01    0.05
+  607                  CONDUIT     0.000     0  00:00      0.00    0.00    0.02
+  ar25cs6              CONDUIT     0.000     0  00:00      0.00    0.00    0.00
+  ar11lyn3             CONDUIT     0.010     0  11:16      0.65    0.01    0.05
+  647                  CONDUIT     0.000     0  00:00      0.00    0.00    0.02
+  657                  CONDUIT     0.035     0  21:48      0.04    0.00    0.52
+  CL-TH                CONDUIT     0.000     0  00:00      0.00    0.00    0.00
+  664                  CONDUIT     0.090     0  17:43      0.44    0.08    0.20
+  665                  CONDUIT     0.030     0  17:25      0.45    0.00    0.16
+  672                  CONDUIT     0.000     0  00:00      0.00    0.00    0.08
+  674                  CONDUIT     0.000     0  00:00      0.00    0.00    0.00
+  684                  CONDUIT     0.000     0  00:00      0.00    0.00    0.00
+  686                  CONDUIT     0.000     0  00:00      0.00    0.00    0.00
+  OC-2                 CONDUIT     0.000     0  00:00      0.00    0.00    0.00
+  689                  CONDUIT     0.061     0  01:21      0.76    0.03    0.17
+  691                  CONDUIT     0.170     0  17:43      0.71    0.09    0.24
+  693                  CONDUIT     0.170     0  17:57      0.68    0.12    0.23
+  696                  CONDUIT     0.170     0  17:55      1.09    0.06    0.16
+  698                  CONDUIT     0.010     0  10:39      0.64    0.02    0.09
+  699                  CONDUIT     0.010     0  07:39      0.70    0.01    0.08
+  CL-DIV               CONDUIT     0.027     0  06:27      0.93    0.01    0.23
+  701                  CONDUIT     0.000     0  00:00      0.00    0.00    0.02
+  OC-1_v               CONDUIT     0.000     0  00:00      0.00    0.00    0.00
+  730                  CONDUIT     0.000     0  00:00      0.00    0.00    0.00
+  736.1                CONDUIT     0.000     0  00:00      0.00    0.00    0.00
+  738                  CONDUIT     0.000     0  00:00      0.00    0.00    0.00
+  740                  CONDUIT     0.000     0  00:00      0.00    0.00    0.00
+  ar-div               CONDUIT     0.000     0  00:00      0.00    0.00    0.00
+  744                  CONDUIT     0.000     0  00:00      0.00    0.00    0.00
+  757                  CONDUIT     0.000     0  00:00      0.00    0.00    0.00
+  758                  CONDUIT     0.000     0  00:00      0.00    0.00    0.00
+  765                  CONDUIT     0.000     0  00:00      0.00    0.00    0.44
+  wa-div               CONDUIT     0.000     0  00:00      0.00    0.00    0.00
+  777                  CONDUIT     0.000     0  00:00      0.00    0.00    0.00
+  781                  CONDUIT     0.000     0  00:00      0.00    0.00    0.00
+  CC-1                 CONDUIT     0.083     0  05:40      1.80    0.00    0.06
+  CC-2                 CONDUIT     0.083     0  06:13      0.97    0.01    0.06
+  CC-3                 CONDUIT     0.110     0  07:06      1.50    0.01    0.11
+  CC-4                 CONDUIT     0.240     0  07:29      0.55    0.09    0.36
+  WN-2                 CONDUIT     0.000     0  00:00      0.00    0.00    0.00
+  THRU                 CONDUIT     0.020     0  23:21      0.09    0.01    1.00
+  SC-1                 CONDUIT     0.027     0  09:57      1.69    0.00    0.02
+  MB-1                 CONDUIT     0.061     0  20:08      1.43    0.02    0.09
+  WN-1                 CONDUIT     0.260     0  07:26      0.41    0.04    0.72
+  PR-1                 CONDUIT     0.021     0  21:51      0.67    0.00    0.05
+  843                  CONDUIT     0.000     0  00:00      0.00    0.00    0.10
+  844                  CONDUIT     0.000     0  00:00      0.00    0.00    0.00
+  cs-div               CONDUIT     0.000     0  00:00      0.00    0.00    0.00
+  847                  CONDUIT     0.087     0  05:27      0.97    0.01    0.08
+  848                  CONDUIT     0.090     0  08:26      0.88    0.06    0.58
+  sc-thru              CONDUIT     0.003     0  05:43      0.23    0.01    0.25
+  KENT-OV              CONDUIT     0.000     0  00:00      0.00    0.00    0.00
+  RCAN-OV              CONDUIT     0.000     0  00:00      0.00    0.00    0.00
+  CATH-OV              CONDUIT     0.000     0  00:00      0.00    0.00    0.00
+  RRIVER-OV            CONDUIT     0.000     0  00:00      0.00    0.00    0.00
+  866                  CONDUIT     0.000     0  00:00      0.00    0.00    0.00
+  867                  CONDUIT     0.020     1  00:00      0.21    0.01    0.10
+  868                  CONDUIT     0.000     0  00:00      0.00    0.00    0.13
+  869                  CONDUIT     0.010     0  04:21      0.61    0.00    0.16
+  870                  CONDUIT     0.000     0  00:00      0.00    0.00    0.13
+  734.1                CONDUIT     0.060     1  00:00      0.95    0.00    0.04
+  726.1                CONDUIT     0.163     0  22:22      0.78    0.03    0.12
+  873.1                CONDUIT     0.397     1  00:00      1.97    0.03    0.11
+  874                  CONDUIT     0.056     0  18:01      0.08    0.02    0.41
+  875                  CONDUIT     0.000     0  00:00      0.00    0.00    0.37
+  TUN-OUT              CONDUIT     0.993     0  06:40      1.24    0.01    0.94
+  ocr3-21_2            ORIFICE     0.000     0  00:00                      0.00
+  MERT-OVR             WEIR        0.000     0  00:00                      0.00
+  ocr3-21              WEIR        0.000     0  00:00                      0.00
+  ar15cs3              WEIR        0.000     0  00:00                      0.00
+  SS-div               WEIR        0.000     0  00:00                      0.00
+  841                  WEIR        0.000     0  00:00                      0.00
+  wa92                 PUMP        0.490     0  10:38              0.05
+  mw4                  PUMP        0.270     0  10:26              0.03
+  hl25                 PUMP        0.010     0  05:50              0.00
+  acres                PUMP        1.885     0  12:18              0.19
+  r-pump               PUMP       10.000     0  00:00              1.00
+  pump                 PUMP        0.030     0  07:27              0.00
+  
+  
+  ***************************
+  Flow Classification Summary
+  ***************************
+  
+  -------------------------------------------------------------------------------------
+                      Adjusted    ---------- Fraction of Time in Flow Class ---------- 
+                       /Actual         Up    Down  Sub   Sup   Up    Down  Norm  Inlet 
+  Conduit               Length    Dry  Dry   Dry   Crit  Crit  Crit  Crit  Ltd   Ctrl  
+  -------------------------------------------------------------------------------------
+  wa109                   1.00   0.01  0.00  0.00  0.00  0.00  0.00  0.99  0.00  0.00
+  gs6                     1.00   0.01  0.00  0.00  0.00  0.00  0.00  0.99  0.00  0.00
+  sg16                    1.00   0.01  0.00  0.00  0.00  0.00  0.00  0.99  0.00  0.00
+  wa83                    1.00   0.00  0.00  0.00  0.00  0.00  0.00  1.00  0.00  0.00
+  ma23                    1.00   0.00  0.03  0.00  0.97  0.00  0.00  0.00  0.97  0.00
+  mw29                    1.00   0.02  0.00  0.00  0.00  0.00  0.00  0.98  0.00  0.00
+  ma7                     1.00   0.00  0.00  0.00  1.00  0.00  0.00  0.00  1.00  0.00
+  wa49                    1.00   0.00  0.00  0.00  0.00  0.00  0.00  1.00  0.00  0.00
+  wa42                    1.00   0.00  0.00  0.00  0.00  1.00  0.00  0.00  1.00  0.00
+  wa40                    1.00   0.00  0.00  0.00  0.00  0.00  0.00  1.00  0.00  0.00
+  wa29+                   1.00   0.00  0.00  0.00  0.97  0.00  0.02  0.00  0.00  0.00
+  np19                    1.00   0.01  0.00  0.00  0.99  0.00  0.00  0.00  0.99  0.00
+  wa28+                   1.00   0.01  0.00  0.00  0.00  0.00  0.00  0.99  0.00  0.00
+  wn83                    1.00   0.02  0.00  0.00  0.95  0.00  0.00  0.03  0.95  0.00
+  wn80                    1.00   0.01  0.02  0.00  0.97  0.00  0.00  0.00  0.97  0.00
+  pc17                    1.00   0.01  0.00  0.00  0.00  0.00  0.00  0.99  0.00  0.00
+  pc2                     1.00   0.02  0.00  0.00  0.88  0.01  0.00  0.09  0.89  0.00
+  wn52                    1.00   0.01  0.00  0.00  0.99  0.00  0.00  0.00  0.99  0.00
+  wc55                    1.00   0.02  0.00  0.00  0.89  0.05  0.00  0.04  0.92  0.00
+  wc26                    1.00   0.03  0.00  0.00  0.00  0.00  0.00  0.97  0.00  0.00
+  wn41                    1.00   0.01  0.00  0.00  0.02  0.00  0.00  0.96  0.00  0.00
+  wn21                    1.00   0.01  0.00  0.00  0.97  0.00  0.00  0.03  0.96  0.00
+  mb81                    1.00   0.02  0.00  0.00  0.92  0.04  0.00  0.02  0.94  0.00
+  mb42                    1.00   0.02  0.00  0.00  0.00  0.00  0.00  0.98  0.00  0.00
+  mb11                    1.00   0.05  0.00  0.00  0.79  0.00  0.00  0.15  0.80  0.00
+  wn6                     1.00   0.03  0.97  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  os16                    1.00   0.14  0.10  0.00  0.65  0.00  0.11  0.00  0.00  0.00
+  bo5                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  cc51+                   1.00   0.01  0.00  0.00  0.00  0.00  0.00  0.99  0.00  0.00
+  ca8                     1.00   0.02  0.00  0.00  0.00  0.00  0.00  0.98  0.00  0.00
+  pr3                     1.00   0.02  0.00  0.00  0.93  0.00  0.00  0.04  0.07  0.00
+  cc4                     1.00   0.03  0.97  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  os15                    1.00   0.07  0.00  0.00  0.85  0.01  0.00  0.07  0.85  0.00
+  os11                    1.00   0.07  0.00  0.00  0.85  0.01  0.00  0.08  0.85  0.00
+  os10                    1.00   0.02  0.12  0.00  0.86  0.00  0.00  0.00  0.86  0.00
+  os9                     1.00   0.01  0.01  0.00  0.98  0.00  0.00  0.00  0.98  0.00
+  rr70                    1.00   0.01  0.00  0.00  0.00  0.00  0.00  0.99  0.00  0.00
+  rr67                    1.00   0.01  0.01  0.00  0.99  0.00  0.00  0.00  0.99  0.00
+  rr36                    1.00   0.01  0.00  0.00  0.00  0.00  0.00  0.99  0.00  0.00
+  os7                     1.00   0.01  0.18  0.00  0.80  0.00  0.01  0.00  0.02  0.00
+  hl38                    1.00   0.07  0.00  0.00  0.85  0.00  0.00  0.07  0.86  0.00
+  hl26                    1.00   0.14  0.86  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  hl12+                   1.00   0.14  0.00  0.00  0.00  0.00  0.00  0.86  0.00  0.00
+  os6+                    1.00   0.19  0.09  0.00  0.71  0.00  0.00  0.00  0.71  0.00
+  bd2                     1.00   0.04  0.00  0.00  0.92  0.00  0.00  0.04  0.92  0.00
+  ah11                    1.00   0.08  0.01  0.00  0.76  0.00  0.15  0.00  0.76  0.00
+  aw2                     1.00   0.08  0.00  0.00  0.00  0.00  0.00  0.92  0.00  0.00
+  aw1                     1.00   0.17  0.00  0.00  0.00  0.00  0.00  0.83  0.00  0.00
+  ah8                     1.00   0.23  0.77  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  os5+                    1.00   0.05  0.00  0.00  0.69  0.02  0.00  0.25  0.60  0.00
+  os4+                    1.00   0.05  0.00  0.00  0.00  0.88  0.00  0.08  0.87  0.00
+  os3+                    1.00   0.05  0.07  0.00  0.88  0.00  0.00  0.00  0.88  0.00
+  os2+                    1.00   0.05  0.00  0.00  0.00  0.00  0.00  0.95  0.00  0.00
+  ac18                    1.00   0.02  0.01  0.00  0.97  0.00  0.00  0.00  0.97  0.00
+  gn89                    1.00   0.02  0.00  0.00  0.98  0.00  0.00  0.00  0.91  0.00
+  gn66                    1.00   0.02  0.00  0.00  0.00  0.00  0.00  0.98  0.00  0.00
+  gn48                    1.00   0.05  0.00  0.00  0.00  0.00  0.00  0.95  0.00  0.00
+  gn43                    1.00   0.07  0.00  0.00  0.00  0.00  0.00  0.93  0.00  0.00
+  so16                    1.00   0.01  0.00  0.00  0.95  0.00  0.00  0.04  0.91  0.00
+  so10                    1.00   0.02  0.00  0.00  0.00  0.00  0.00  0.98  0.00  0.00
+  wr4                     1.00   0.02  0.00  0.00  0.81  0.01  0.00  0.16  0.76  0.00
+  so8                     1.00   0.02  0.00  0.00  0.00  0.00  0.00  0.98  0.00  0.00
+  cr9                     1.00   0.08  0.00  0.00  0.86  0.00  0.00  0.05  0.86  0.00
+  gn12                    1.00   0.02  0.01  0.00  0.97  0.00  0.00  0.00  0.14  0.00
+  gn10                    1.00   0.03  0.00  0.00  0.97  0.00  0.00  0.00  0.97  0.00
+  gn8                     1.00   0.02  0.00  0.00  0.97  0.00  0.00  0.00  0.97  0.00
+  oc10                    1.00   0.00  0.00  0.00  0.00  0.00  0.00  1.00  0.00  0.00
+  oc9                     1.00   0.01  0.00  0.00  0.86  0.00  0.13  0.00  0.00  0.00
+  or38+                   1.00   0.02  0.00  0.00  0.00  0.00  0.00  0.98  0.00  0.00
+  oc8                     1.00   0.01  0.00  0.00  0.96  0.02  0.00  0.01  0.07  0.00
+  gl22                    1.00   0.01  0.99  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  oc7                     1.00   0.01  0.00  0.00  0.98  0.00  0.00  0.00  0.98  0.00
+  wt13                    1.00   0.04  0.00  0.00  0.00  0.00  0.00  0.96  0.00  0.00
+  oc4                     1.00   0.02  0.00  0.00  0.00  0.00  0.00  0.98  0.00  0.00
+  gc8                     1.00   0.01  0.00  0.00  0.00  0.00  0.00  0.99  0.00  0.00
+  cc81+                   1.00   0.03  0.00  0.00  0.00  0.00  0.00  0.97  0.00  0.00
+  cc82+                   1.00   0.03  0.00  0.00  0.00  0.96  0.00  0.01  0.96  0.00
+  9001                    1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  902                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  MOONEY                  1.00   0.03  0.00  0.00  0.00  0.00  0.00  0.97  0.00  0.00
+  PRESTN                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  LL/BO-OV                1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  BOOTH-TH                1.00   0.48  0.52  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  PREST-TH                1.00   0.48  0.52  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  KENT-TH                 1.00   0.04  0.00  0.00  0.00  0.00  0.00  0.96  0.00  0.00
+  RCAN-TH                 1.00   0.14  0.00  0.00  0.00  0.00  0.00  0.86  0.00  0.00
+  CATH-TH                 1.00   0.01  0.00  0.00  0.00  0.00  0.00  0.99  0.00  0.00
+  rr7                     1.00   0.01  0.00  0.00  0.00  0.00  0.00  0.99  0.00  0.00
+  RRIVER-TH               1.00   0.02  0.00  0.00  0.90  0.03  0.00  0.06  0.92  0.00
+  hra-ovf                 1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  hraa                    1.00   0.06  0.00  0.00  0.00  0.00  0.94  0.00  0.00  0.00
+  xxb-ovf                 1.00   0.15  0.00  0.00  0.78  0.00  0.00  0.07  0.02  0.00
+  458                     1.00   0.09  0.00  0.00  0.87  0.00  0.00  0.05  0.87  0.00
+  459                     1.00   0.13  0.87  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  ah-ovf                  1.00   0.13  0.00  0.00  0.82  0.00  0.00  0.05  0.01  0.00
+  rm-ovf                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  oc-ovf                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  gn29                    1.00   0.02  0.02  0.00  0.96  0.00  0.00  0.00  0.96  0.00
+  south                   1.00   0.01  0.00  0.00  0.94  0.01  0.00  0.04  0.90  0.00
+  sh-gr                   1.00   0.63  0.00  0.00  0.00  0.00  0.00  0.37  0.00  0.00
+  gn3+                    1.00   0.02  0.00  0.00  0.36  0.01  0.00  0.61  0.36  0.00
+  outfall                 1.00   0.06  0.00  0.00  0.00  0.00  0.00  0.94  0.00  0.00
+  BY-ROPEC                1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  SC-OVR                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  SC-IN                   1.00   0.02  0.00  0.00  0.77  0.00  0.00  0.20  0.00  0.00
+  493                     1.00   0.01  0.07  0.00  0.92  0.00  0.00  0.00  0.92  0.00
+  496                     1.00   0.07  0.00  0.00  0.93  0.00  0.00  0.00  0.01  0.00
+  497                     1.00   0.07  0.00  0.00  0.93  0.00  0.00  0.00  0.93  0.00
+  498                     1.00   0.07  0.00  0.00  0.92  0.00  0.00  0.01  0.92  0.00
+  502                     1.00   0.08  0.00  0.00  0.19  0.00  0.00  0.73  0.00  0.00
+  504                     1.00   0.08  0.00  0.00  0.00  0.00  0.00  0.92  0.00  0.00
+  507                     1.00   0.09  0.91  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  513                     1.00   0.08  0.00  0.00  0.92  0.00  0.00  0.00  0.92  0.00
+  515                     1.00   0.08  0.21  0.00  0.62  0.00  0.09  0.00  0.00  0.00
+  518                     1.00   0.21  0.00  0.00  0.00  0.00  0.00  0.79  0.00  0.00
+  521                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  528                     1.00   0.08  0.92  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  530                     1.00   0.04  0.96  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  538                     1.00   0.18  0.03  0.00  0.00  0.00  0.79  0.00  0.00  0.00
+  540                     1.00   0.08  0.00  0.00  0.87  0.00  0.00  0.05  0.87  0.00
+  541                     1.00   0.13  0.05  0.00  0.00  0.00  0.82  0.00  0.00  0.00
+  544                     1.00   0.08  0.00  0.00  0.91  0.01  0.00  0.00  0.92  0.00
+  546                     1.00   0.08  0.92  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  551                     1.00   0.08  0.92  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  555                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  558                     1.00   0.09  0.91  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  560                     1.00   0.09  0.00  0.00  0.00  0.00  0.00  0.91  0.00  0.00
+  561                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  564                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  565                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  568                     1.00   0.08  0.00  0.00  0.92  0.00  0.00  0.00  0.92  0.00
+  570                     1.00   0.08  0.00  0.00  0.92  0.00  0.00  0.00  0.92  0.00
+  577                     1.00   0.08  0.00  0.00  0.62  0.00  0.00  0.30  0.62  0.00
+  589                     1.00   0.14  0.00  0.00  0.00  0.00  0.00  0.86  0.00  0.00
+  599                     1.00   0.09  0.00  0.00  0.00  0.00  0.00  0.91  0.00  0.00
+  600                     1.00   0.02  0.05  0.00  0.92  0.00  0.00  0.00  0.92  0.00
+  602                     1.00   0.04  0.00  0.00  0.12  0.00  0.00  0.84  0.00  0.00
+  607                     1.00   0.07  0.93  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  ar25cs6                 1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  ar11lyn3                1.00   0.17  0.00  0.00  0.00  0.00  0.00  0.83  0.00  0.00
+  647                     1.00   0.08  0.92  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  657                     1.00   0.03  0.43  0.00  0.54  0.00  0.00  0.00  0.54  0.00
+  CL-TH                   1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  664                     1.00   0.01  0.03  0.00  0.96  0.00  0.00  0.00  0.96  0.00
+  665                     1.00   0.04  0.09  0.00  0.87  0.00  0.00  0.00  0.87  0.00
+  672                     1.00   0.26  0.74  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  674                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  684                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  686                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  OC-2                    1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  689                     1.00   0.01  0.00  0.00  0.95  0.00  0.00  0.04  0.94  0.00
+  691                     1.00   0.01  0.00  0.00  0.96  0.00  0.00  0.03  0.94  0.00
+  693                     1.00   0.03  0.00  0.00  0.93  0.00  0.00  0.04  0.00  0.00
+  696                     1.00   0.06  0.00  0.00  0.92  0.00  0.00  0.02  0.00  0.00
+  698                     1.00   0.08  0.00  0.00  0.00  0.00  0.00  0.92  0.00  0.00
+  699                     1.00   0.26  0.00  0.00  0.00  0.00  0.00  0.74  0.00  0.00
+  CL-DIV                  1.00   0.17  0.00  0.00  0.74  0.00  0.00  0.08  0.01  0.00
+  701                     1.00   0.08  0.92  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  OC-1_v                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  730                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  736.1                   1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  738                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  740                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  ar-div                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  744                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  757                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  758                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  765                     1.00   0.01  0.99  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  wa-div                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  777                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  781                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  CC-1                    1.00   0.03  0.00  0.00  0.00  0.95  0.00  0.01  0.95  0.00
+  CC-2                    1.00   0.05  0.00  0.00  0.00  0.00  0.00  0.95  0.00  0.00
+  CC-3                    1.00   0.05  0.00  0.00  0.71  0.01  0.00  0.23  0.72  0.00
+  CC-4                    1.00   0.06  0.00  0.00  0.92  0.00  0.00  0.02  0.01  0.00
+  WN-2                    1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  THRU                    1.00   0.14  0.10  0.00  0.62  0.00  0.14  0.00  0.00  0.00
+  SC-1                    1.00   0.02  0.00  0.00  0.00  0.00  0.00  0.98  0.00  0.00
+  MB-1                    1.00   0.05  0.00  0.00  0.00  0.00  0.00  0.95  0.00  0.00
+  WN-1                    1.00   0.03  0.05  0.00  0.93  0.00  0.00  0.00  0.16  0.00
+  PR-1                    1.00   0.46  0.00  0.00  0.00  0.00  0.00  0.54  0.00  0.00
+  843                     1.00   0.07  0.93  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  844                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  cs-div                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  847                     1.00   0.04  0.00  0.00  0.94  0.00  0.00  0.02  0.77  0.00
+  848                     1.00   0.05  0.00  0.00  0.94  0.00  0.00  0.01  0.93  0.00
+  sc-thru                 1.00   0.05  0.17  0.00  0.77  0.00  0.00  0.00  0.77  0.00
+  KENT-OV                 1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  RCAN-OV                 1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  CATH-OV                 1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  RRIVER-OV               1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  866                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  867                     1.00   0.14  0.23  0.00  0.63  0.00  0.00  0.00  0.63  0.00
+  868                     1.00   0.09  0.91  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  869                     1.00   0.09  0.00  0.00  0.82  0.00  0.00  0.10  0.82  0.00
+  870                     1.00   0.09  0.91  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  734.1                   1.00   0.09  0.00  0.00  0.00  0.00  0.00  0.91  0.00  0.00
+  726.1                   1.00   0.01  0.00  0.00  0.99  0.00  0.00  0.00  0.99  0.00
+  873.1                   1.00   0.01  0.00  0.00  0.00  0.00  0.00  0.99  0.00  0.00
+  874                     1.00   0.05  0.35  0.00  0.00  0.00  0.60  0.00  0.00  0.00
+  875                     1.00   0.05  0.95  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  TUN-OUT                 1.00   0.01  0.00  0.00  0.99  0.00  0.00  0.00  0.01  0.00
+  
+  
+  *************************
+  Conduit Surcharge Summary
+  *************************
+  
+  ----------------------------------------------------------------------------
+                                                           Hours        Hours 
+                         --------- Hours Full --------   Above Full   Capacity
+  Conduit                Both Ends  Upstream  Dnstream   Normal Flow   Limited
+  ----------------------------------------------------------------------------
+  wa83                        0.06     24.00      0.06     23.92         0.01
+  wa49                        0.01      0.05      0.01      0.12         0.01
+  wa40                        0.01      0.01      0.01      0.25         0.01
+  wn80                        0.01      0.01     21.21      0.01         0.01
+  pc2                         0.01      0.01     20.13      0.01         0.01
+  wn52                        0.01      0.01     20.73      0.01         0.01
+  wn21                        0.01      0.01     19.60      0.01         0.01
+  os9                         0.01      0.01     19.75      0.01         0.01
+  os7                         0.01      0.01     19.27      0.01         0.01
+  hl38                        0.01      0.01     17.62      0.01         0.01
+  ah11                        0.01      0.01     21.90      0.01         0.01
+  cr9                         0.01      0.01     16.87      0.01         0.01
+  RRIVER-TH                   0.01      0.01     21.37      0.01         0.01
+  xxb-ovf                     0.01      0.01     17.41      0.01         0.01
+  458                         0.01      0.01     16.86      0.01         0.01
+  gn29                        0.01      0.01     15.54      0.01         0.01
+  south                       0.01      0.01     17.19      0.01         0.01
+  sh-gr                       0.01      0.01      0.01      6.41         0.01
+  657                         0.01      0.01     12.96      0.01         0.01
+  THRU                        0.15      0.15      2.27      0.01         0.01
+  WN-1                        0.01      0.01     19.60      0.01         0.01
+  848                         0.01      0.01     20.06      0.01         0.01
+  TUN-OUT                     0.01      0.01     17.26      0.01         0.01
+  
+  
+  ***************
+  Pumping Summary
+  ***************
+  
+  ---------------------------------------------------------------------------------------------------------
+                                                  Min       Avg       Max     Total     Power    % Time Off
+                        Percent   Number of      Flow      Flow      Flow    Volume     Usage    Pump Curve
+  Pump                 Utilized   Start-Ups       CMS       CMS       CMS  10^6 ltr     Kw-hr    Low   High
+  ---------------------------------------------------------------------------------------------------------
+  wa92                    99.41           1      0.00      0.49      0.49    41.720  15077.90    0.0    0.0
+  mw4                    100.00           1      0.00      0.27      0.27    23.156   5997.38    0.0    0.0
+  hl25                    93.95           1      0.00      0.01      0.01     0.811    158.34    0.0    0.0
+  acres                   99.49           1      0.00      1.85      1.89   158.285  42528.11    0.0    0.0
+  r-pump                 100.00           1      0.00     10.00     10.00   863.908 265632.75    0.0    0.0
+  pump                    98.30           1      0.00      0.03      0.03     2.290    291.96    0.0    0.0
+  
 
-
-  Analysis begun on:  Mon Jul 13 08:03:45 2026
-  Analysis ended on:  Mon Jul 13 08:03:45 2026
-  Total elapsed time: < 1 sec
+  Analysis begun on:  Sun Jul 19 15:11:08 2026
+  Analysis ended on:  Sun Jul 19 15:11:23 2026
+  Total elapsed time: 00:00:15

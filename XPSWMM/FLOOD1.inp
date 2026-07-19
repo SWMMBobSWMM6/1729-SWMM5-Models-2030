@@ -20,16 +20,33 @@ INERTIAL_DAMPING     PARTIAL
 NORMAL_FLOW_LIMITED  BOTH
 MAX_TRIALS           50
 HEAD_TOLERANCE       .001
+START_DATE           01/01/2001
+START_TIME           00:00:00
+REPORT_START_DATE    01/01/2001
+REPORT_START_TIME    00:00:00
+END_DATE             01/02/2001
+END_TIME             00:00:00
+SWEEP_START          01/01
+SWEEP_END            12/31
+DRY_DAYS             0
+REPORT_STEP          00:15:00
+WET_STEP             00:05:00
+DRY_STEP             01:00:00
 
 [JUNCTIONS]
 ;;Name           Elev       MaxDepth   InitDepth  SurDepth   Aponded
 ;;-------------- ---------- ---------- ---------- ---------- ----------
 1                110.00     0          0          0          0
 2                110.00     0          0          0          0
-4                110.00     0          0          0          0
 1a               110.00     0          0          0          0
 2a               110.00     0          0          0          0
 4a               110.00     0          0          0          0
+trap             100.00     0          0          0          0
+
+[OUTFALLS]
+;;Name           Elev       Type       Stage      Gated
+;;-------------- ---------- ---------- ---------- -----
+4                110.00     FREE                  NO
 
 [CONDUITS]
 ;;Name           From             To               Length     Roughness  InOffset   OutOffset  InitFlow   MaxFlow
@@ -38,7 +55,7 @@ HEAD_TOLERANCE       .001
 5                2                4                100.00     0.0140     99.00      98.00      0          0
 209.1            trap             2a               100.00     0.0140     100.00     99.00      0          0
 5a               2a               4a               100.00     0.0140     99.00      98.00      0          0
-12               1                1a               0          0          0          0          0          0
+12               1                1a               100.00     0.0130     0          0          0          0
 
 [XSECTIONS]
 ;;Link           Shape        Geom1      Geom2      Geom3      Geom4      Barrels
@@ -47,7 +64,7 @@ HEAD_TOLERANCE       .001
 5                CIRCULAR     2.00       0          0          0          1
 209.1            CIRCULAR     2.00       0          0          0          1
 5a               CIRCULAR     2.00       0          0          0          1
-12               CIRCULAR     0          0          0          0          1
+12               CIRCULAR     1.00       0          0          0          1
 
 [LOSSES]
 ;;Link           Inlet      Outlet     Average    Flap Gate

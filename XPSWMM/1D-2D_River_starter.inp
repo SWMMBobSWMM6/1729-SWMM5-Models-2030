@@ -16,28 +16,44 @@ ALLOW_PONDING        NO
 SKIP_STEADY_STATE    NO
 INERTIAL_DAMPING     PARTIAL
 NORMAL_FLOW_LIMITED  BOTH
+START_DATE           01/01/2001
+START_TIME           00:00:00
+REPORT_START_DATE    01/01/2001
+REPORT_START_TIME    00:00:00
+END_DATE             01/02/2001
+END_TIME             00:00:00
+SWEEP_START          01/01
+SWEEP_END            12/31
+DRY_DAYS             0
+REPORT_STEP          00:15:00
+WET_STEP             00:05:00
+DRY_STEP             01:00:00
 
 [JUNCTIONS]
 ;;Name           Elev       MaxDepth   InitDepth  SurDepth   Aponded
 ;;-------------- ---------- ---------- ---------- ---------- ----------
-0                0          0          0          0          0
-0                0          0          0          0          0
-0                0          0          0          0          0
-0                0          0          0          0          0
+100              0          0          0          0          0
+90               0          0          0          0          0
+C1_us            0          0          0          0          0
+
+[OUTFALLS]
+;;Name           Elev       Type       Stage      Gated
+;;-------------- ---------- ---------- ---------- -----
+C1_ds            0          FREE                  NO
 
 [CONDUITS]
 ;;Name           From             To               Length     Roughness  InOffset   OutOffset  InitFlow   MaxFlow
 ;;-------------- ---------------- ---------------- ---------- ---------- ---------- ---------- ---------- ----------
-202              0                0                0          0          0          0          0          0
-203              0                0                0          0          0          0          0          0
-201              0                0                0          0          0          0          0          0
+202              90               C1_us            100.00     0.0130     0          0          0          0
+203              C1_us            C1_ds            100.00     0.0130     0          0          0          0
+201              100              90               100.00     0.0130     0          0          0          0
 
 [XSECTIONS]
 ;;Link           Shape        Geom1      Geom2      Geom3      Geom4      Barrels
 ;;-------------- ------------ ---------- ---------- ---------- ---------- ----------
-202              CIRCULAR     0          0          0          0          1
-203              CIRCULAR     0          0          0          0          1
-201              CIRCULAR     0          0          0          0          1
+202              CIRCULAR     1.00       0          0          0          1
+203              CIRCULAR     1.00       0          0          0          1
+201              CIRCULAR     1.00       0          0          0          1
 
 [LOSSES]
 ;;Link           Inlet      Outlet     Average    Flap Gate
@@ -49,10 +65,10 @@ NORMAL_FLOW_LIMITED  BOTH
 [COORDINATES]
 ;;Node           X-Coord            Y-Coord
 ;;-------------- ------------------ ------------------
-0                -6177216.78        292876.26         
-0                -6177249.48        292993.88         
-0                -6177204.77        293097.99         
-0                -6177226.96        293143.53         
+100              -6177216.78        292876.26         
+90               -6177249.48        292993.88         
+C1_us            -6177204.77        293097.99         
+C1_ds            -6177226.96        293143.53         
 
 [MAP]
 DIMENSIONS -6177249.48 292876.26 -6177204.77 293143.53

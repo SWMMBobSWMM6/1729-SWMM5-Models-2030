@@ -18,12 +18,23 @@ ROUTING_STEP         00:00:15
 VARIABLE_STEP        0.75
 INERTIAL_DAMPING     PARTIAL
 NORMAL_FLOW_LIMITED  BOTH
+START_DATE           01/01/2001
+START_TIME           00:00:00
+REPORT_START_DATE    01/01/2001
+REPORT_START_TIME    00:00:00
+END_DATE             01/02/2001
+END_TIME             00:00:00
+SWEEP_START          01/01
+SWEEP_END            12/31
+DRY_DAYS             0
+REPORT_STEP          00:15:00
+WET_STEP             00:05:00
+DRY_STEP             01:00:00
 
 [JUNCTIONS]
 ;;Name           Elev       MaxDepth   InitDepth  SurDepth   Aponded
 ;;-------------- ---------- ---------- ---------- ---------- ----------
 1                23.00      0          0          0          0
-2                26.20      0          0          0          0
 4                26.20      0          0          0          0
 6                23.00      0          0          0          0
 8                23.00      0          0          0          0
@@ -48,14 +59,24 @@ NORMAL_FLOW_LIMITED  BOTH
 69               8.00       0          0          0          0
 71               8.50       0          0          0          0
 73               14.00      0          0          0          0
+48"RCP           18.76      0          0          0          0
+2nd_Weir         0          0          0          0          0
+Road             0          0          0          0          0
+Roadway          0          0          0          0          0
+Weir_M-2         0          0          0          0          0
+
+[OUTFALLS]
+;;Name           Elev       Type       Stage      Gated
+;;-------------- ---------- ---------- ---------- -----
+2                26.20      FREE                  NO
 
 [STORAGE]
 ;;Name           Elev       MaxDepth   InitDepth  Shape      Curve/Params
 ;;-------------- ---------- ---------- ---------- ---------- ----------
-Lk-Elzbth        14.00      -1.16      3.07       FUNCTIONAL 0 0          0
-Dgwood           10.00      -0.28      2.80       FUNCTIONAL 0 0          0
-Myrtle           8.50       0          0          FUNCTIONAL 0 0          0
-Holly            8.00       0          0          FUNCTIONAL 0 0          0
+Lk-Elzbth        14.00      10.00      3.07       FUNCTIONAL 1000.00 0          0
+Dgwood           10.00      10.00      2.80       FUNCTIONAL 1000.00 0          0
+Myrtle           8.50       10.00      0          FUNCTIONAL 1000.00 0          0
+Holly            8.00       10.00      0          FUNCTIONAL 1000.00 0          0
 
 [CONDUITS]
 ;;Name           From             To               Length     Roughness  InOffset   OutOffset  InitFlow   MaxFlow
@@ -70,18 +91,18 @@ Ex48"RCPb        14               Lk-Elzbth        200.00     0.0240     10.94  
 DrFld            28               29               100.00     0.0350     15.50      15.40      0          0
 Ex               29               31               40.00      0.0130     15.35      15.20      0          0
 Ex-Chnl-2        31               6                400.00     0.0350     15.20      14.80      0          0
-Ex               34               Dgwood           50.00      0.0240     5.43       5.22       0          0
+Ex_2             34               Dgwood           50.00      0.0240     5.43       5.22       0          0
 Clvt             Dgwood           44               42.00      0.0150     5.42       6.23       0          0
-Palmto           44               46               700.00     0          6.23       5.46       0          0
-Clvt             46               48               41.00      0.0130     5.46       5.17       0          0
-Chan             48               50               270.00     0          5.51       5.17       0          0
-Clvt             50               52               41.00      0.0130     5.51       5.35       0          0
-Chan             52               54               210.00     0          5.35       4.52       0          0
-Clvt             54               56               42.00      0.0130     4.52       4.38       0          0
-Chan             56               Myrtle           400.00     0          4.38       4.50       0          0
-Chan             Holly            63               150.00     0.0200     4.75       4.33       0          0
+Palmto           44               46               700.00     0.0130     6.23       5.46       0          0
+Clvt_2           46               48               41.00      0.0130     5.46       5.17       0          0
+Chan             48               50               270.00     0.0130     5.51       5.17       0          0
+Clvt_3           50               52               41.00      0.0130     5.51       5.35       0          0
+Chan_2           52               54               210.00     0.0130     5.35       4.52       0          0
+Clvt_4           54               56               42.00      0.0130     4.52       4.38       0          0
+Chan_3           56               Myrtle           400.00     0.0130     4.38       4.50       0          0
+Chan_4           Holly            63               150.00     0.0200     4.75       4.33       0          0
 Oak              63               65               35.00      0.0130     4.33       4.24       0          0
-Chan             65               Myrtle           150.00     0.0300     4.24       4.20       0          0
+Chan_5           65               Myrtle           150.00     0.0300     4.24       4.20       0          0
 Clvt2            60               69               40.00      0.0130     2.57       2.51       0          0
 Clvt1            38               71               50.00      0.0130     4.20       3.10       0          0
 
@@ -94,42 +115,42 @@ Clvt1            38               71               50.00      0.0130     4.20   
 ;;Name           From             To               Type       CrestHt    Qcoeff     Gated    EndCon   EndCoeff   Surcharge
 ;;-------------- ---------------- ---------------- ---------- ---------- ---------- -------- -------- ---------- ----------
 24"RCP           48"RCP           4                TRANSVERSE 26.20      1.840      NO       0        0          YES
-1st Weir         2nd Weir         Road             TRANSVERSE 8.50       1.840      NO       0        0          YES
-50Ft Weir        Roadway          38               TRANSVERSE 7.00       1.840      NO       0        0          YES
-Weir M-1         Weir M-2         60               TRANSVERSE 4.75       1.840      NO       0        0          YES
+1st_Weir         2nd_Weir         Road             TRANSVERSE 8.50       1.840      NO       0        0          YES
+50Ft_Weir        Roadway          38               TRANSVERSE 7.00       1.840      NO       0        0          YES
+Weir_M-1         Weir_M-2         60               TRANSVERSE 4.75       1.840      NO       0        0          YES
 
 [XSECTIONS]
 ;;Link           Shape        Geom1      Geom2      Geom3      Geom4      Barrels
 ;;-------------- ------------ ---------- ---------- ---------- ---------- ----------
-Cpine-Chnl       TRAPEZOIDAL  4.00       15.00      0          0          1
-Ex-Chnl-1        TRAPEZOIDAL  3.00       20.00      0          0          1
-Ex-Chnl-3        TRAPEZOIDAL  7.00       20.00      0          0          1
+Cpine-Chnl       TRAPEZOIDAL  4.00       15.00      1          1          1
+Ex-Chnl-1        TRAPEZOIDAL  3.00       20.00      1          1          1
+Ex-Chnl-3        TRAPEZOIDAL  7.00       20.00      1          1          1
 Ex48"RCP         CIRCULAR     4.00       0          0          0          1
-Ex-Chnl-4        TRAPEZOIDAL  6.00       20.00      0          0          1
+Ex-Chnl-4        TRAPEZOIDAL  6.00       20.00      1          1          1
 Ex48"RCPa        CIRCULAR     4.00       0          0          0          1
 Ex48"RCPb        CIRCULAR     4.00       0          0          0          1
-DrFld            TRAPEZOIDAL  4.50       15.00      0          0          1
+DrFld            TRAPEZOIDAL  4.50       15.00      1          1          1
 Ex               CIRCULAR     3.00       0          0          0          1
-Ex-Chnl-2        TRAPEZOIDAL  7.00       20.00      0          0          1
-Ex               CIRCULAR     4.50       0          0          0          1
+Ex-Chnl-2        TRAPEZOIDAL  7.00       20.00      1          1          1
+Ex_2             CIRCULAR     4.50       0          0          0          1
 Clvt             RECT_CLOSED  3.00       13.50      0          0          1
-Palmto           IRREGULAR    4.50       0          0          0          1
-Clvt             CIRCULAR     4.00       0          0          0          1
-Chan             IRREGULAR    4.90       0          0          0          1
-Clvt             CIRCULAR     4.00       0          0          0          1
-Chan             IRREGULAR    5.30       0          0          0          1
-Clvt             CIRCULAR     4.00       0          0          0          1
-Chan             IRREGULAR    4.00       0          0          0          1
-Chan             TRAPEZOIDAL  3.25       25.00      0          0          1
+Palmto           TRAPEZOIDAL  4.50       10.00      2          2          1
+Clvt_2           CIRCULAR     4.00       0          0          0          1
+Chan             TRAPEZOIDAL  4.90       10.00      2          2          1
+Clvt_3           CIRCULAR     4.00       0          0          0          1
+Chan_2           TRAPEZOIDAL  5.30       10.00      2          2          1
+Clvt_4           CIRCULAR     4.00       0          0          0          1
+Chan_3           TRAPEZOIDAL  4.00       10.00      2          2          1
+Chan_4           TRAPEZOIDAL  3.25       25.00      1          1          1
 Oak              RECT_CLOSED  3.00       8.00       0          0          2
-Chan             TRAPEZOIDAL  3.70       25.00      0          0          1
+Chan_5           TRAPEZOIDAL  3.70       25.00      1          1          1
 Clvt2            RECT_CLOSED  4.00       8.00       0          0          2
 Clvt1            RECT_CLOSED  4.00       7.00       0          0          1
-48"Orif          RECT_CLOSED  4.00       0          0          0          
-24"RCP           RECT_OPEN    0          100.00     0          0          
-1st Weir         RECT_OPEN    0          5.00       0          0          
-50Ft Weir        RECT_OPEN    0          50.00      0          0          
-Weir M-1         RECT_OPEN    0          50.00      0          0          
+48"Orif          RECT_CLOSED  4.00       4.00       0          0
+24"RCP           RECT_OPEN    1.00       100.00     0          0
+1st_Weir         RECT_OPEN    1.00       5.00       0          0
+50Ft_Weir        RECT_OPEN    1.00       50.00      0          0
+Weir_M-1         RECT_OPEN    1.00       50.00      0          0
 
 [LOSSES]
 ;;Link           Inlet      Outlet     Average    Flap Gate
@@ -144,18 +165,18 @@ Ex48"RCPb        0          0          0          NO
 DrFld            0          0          0          NO
 Ex               0          0          0          NO
 Ex-Chnl-2        0          0          0          NO
-Ex               0          0          0          NO
+Ex_2             0          0          0          NO
 Clvt             0          0          0          NO
 Palmto           0          0          0          NO
-Clvt             0          0          0          NO
+Clvt_2           0          0          0          NO
 Chan             0          0          0          NO
-Clvt             0          0          0          NO
-Chan             0          0          0          NO
-Clvt             0          0          0          NO
-Chan             0          0          0          NO
-Chan             0          0          0          NO
+Clvt_3           0          0          0          NO
+Chan_2           0          0          0          NO
+Clvt_4           0          0          0          NO
+Chan_3           0          0          0          NO
+Chan_4           0          0          0          NO
 Oak              0          0          0          NO
-Chan             0          0          0          NO
+Chan_5           0          0          0          NO
 Clvt2            0          0          0          NO
 Clvt1            0          0          0          NO
 

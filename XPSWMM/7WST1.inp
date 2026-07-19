@@ -14,11 +14,23 @@ LINK_OFFSETS         DEPTH
 MIN_SLOPE            0.0
 ALLOW_PONDING        NO
 SKIP_STEADY_STATE    NO
-ROUTING_STEP         00:00:60
+ROUTING_STEP         00:01:00
 VARIABLE_STEP        0.75
 INERTIAL_DAMPING     PARTIAL
 NORMAL_FLOW_LIMITED  BOTH
 MAX_TRIALS           50
+START_DATE           01/01/2001
+START_TIME           00:00:00
+REPORT_START_DATE    01/01/2001
+REPORT_START_TIME    00:00:00
+END_DATE             01/02/2001
+END_TIME             00:00:00
+SWEEP_START          01/01
+SWEEP_END            12/31
+DRY_DAYS             0
+REPORT_STEP          00:15:00
+WET_STEP             00:05:00
+DRY_STEP             01:00:00
 
 [JUNCTIONS]
 ;;Name           Elev       MaxDepth   InitDepth  SurDepth   Aponded
@@ -36,7 +48,6 @@ MAX_TRIALS           50
 1012             30.50      0          0          0          0
 1014             35.00      0          0          0          0
 1013             58.00      0          0          0          0
-NPDES037         10.00      0          0          0          0
 1032             45.50      0          0          0          0
 1033             37.00      0          0          0          0
 1035             50.00      0          0          0          0
@@ -87,6 +98,14 @@ NPDES035         35.00      0          0          0          0
 336              58.00      0          0          0          0
 NPDES002         23.18      0          0          0          0
 340              22.00      0          0          0          0
+260.2            0.14       0          0          0          0
+139              1.18       0          0          0          0
+138              1.31       0          0          0          0
+
+[OUTFALLS]
+;;Name           Elev       Type       Stage      Gated
+;;-------------- ---------- ---------- ---------- -----
+NPDES037         10.00      FREE                  NO
 
 [CONDUITS]
 ;;Name           From             To               Length     Roughness  InOffset   OutOffset  InitFlow   MaxFlow
@@ -142,28 +161,28 @@ NPDES002         23.18      0          0          0          0
 235              1136             1134             654.00     0.0130     0.72       0          0          0
 237              1138             1136             899.00     0.0130     0.99       0          0          0
 239              1139             1138             86.00      0.0130     0.39       0          0          0
-145              139              ?                60.00      0.0130     1.18       0          0          0
-146              138              ?                102.00     0.0130     1.31       0          0          0
-327              ?                ?                60.00      0.0140     15.03      14.93      0          0
-331              ?                ?                40.00      0.0140     14.69      13.86      0          0
-335              ?                ?                100.00     0.0140     31.40      29.40      0          0
-341              ?                ?                40.00      0.0140     13.63      13.43      0          0
+145              139              316              60.00      0.0130     1.18       0          0          0
+146              138              1038             102.00     0.0130     1.31       0          0          0
+327              MCI              1000             60.00      0.0140     15.03      14.93      0          0
+331              1001             1003             40.00      0.0140     14.69      13.86      0          0
+335              332              NPDES035         100.00     0.0140     31.40      29.40      0          0
+341              1005             340              40.00      0.0140     13.63      13.43      0          0
 
 [ORIFICES]
 ;;Name           From             To               Type       Offset     Qcoeff     Gated    CloseTime
 ;;-------------- ---------------- ---------------- ---------- ---------- ---------- -------- ----------
-325              ?                ?                SIDE       0          0.650      NO       0
+325              1040             324              SIDE       0          0.650      NO       0
 
 [WEIRS]
 ;;Name           From             To               Type       CrestHt    Qcoeff     Gated    EndCon   EndCoeff   Surcharge
 ;;-------------- ---------------- ---------------- ---------- ---------- ---------- -------- -------- ---------- ----------
 283.1            319              NPDES            TRANSVERSE 0          1.840      NO       0        0          YES
 303.1            322              NPDES034         TRANSVERSE 0          1.840      NO       0        0          YES
-320              ?                ?                TRANSVERSE 38.35      1.840      NO       0        0          YES
-323              ?                ?                TRANSVERSE 32.57      1.840      NO       0        0          YES
-333              ?                ?                TRANSVERSE 32.23      1.840      NO       0        0          YES
-337              ?                ?                TRANSVERSE 25.91      1.840      NO       0        0          YES
-339              ?                ?                TRANSVERSE 21.60      1.840      NO       0        0          YES
+320              1058             319              TRANSVERSE 38.35      1.840      NO       0        0          YES
+323              1042             322              TRANSVERSE 32.57      1.840      NO       0        0          YES
+333              1033             332              TRANSVERSE 32.23      1.840      NO       0        0          YES
+337              1013             336              TRANSVERSE 25.91      1.840      NO       0        0          YES
+339              1000             NPDES002         TRANSVERSE 21.60      1.840      NO       0        0          YES
 
 [XSECTIONS]
 ;;Link           Shape        Geom1      Geom2      Geom3      Geom4      Barrels
@@ -225,14 +244,14 @@ NPDES002         23.18      0          0          0          0
 331              CIRCULAR     5.00       0          0          0          1
 335              CIRCULAR     1.50       0          0          0          1
 341              CIRCULAR     5.00       0          0          0          1
-325              RECT_CLOSED  0          0          0          0          
-283.1            RECT_OPEN    0          16.50      0          0          
-303.1            RECT_OPEN    0          14.20      0          0          
-320              RECT_OPEN    0          5.00       0          0          
-323              RECT_OPEN    0          4.00       0          0          
-333              RECT_OPEN    0          4.00       0          0          
-337              RECT_OPEN    0          4.00       0          0          
-339              RECT_OPEN    0          4.00       0          0          
+325              RECT_CLOSED  0.59       0.59       0          0
+283.1            RECT_OPEN    1.00       16.50      0          0
+303.1            RECT_OPEN    1.00       14.20      0          0
+320              RECT_OPEN    1.00       5.00       0          0
+323              RECT_OPEN    1.00       4.00       0          0
+333              RECT_OPEN    1.00       4.00       0          0
+337              RECT_OPEN    1.00       4.00       0          0
+339              RECT_OPEN    1.00       4.00       0          0
 
 [LOSSES]
 ;;Link           Inlet      Outlet     Average    Flap Gate

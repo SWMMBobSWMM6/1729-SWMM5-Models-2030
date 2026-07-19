@@ -14,28 +14,44 @@ LINK_OFFSETS         DEPTH
 MIN_SLOPE            0.0
 ALLOW_PONDING        NO
 SKIP_STEADY_STATE    NO
-ROUTING_STEP         00:00:60
+ROUTING_STEP         00:01:00
 VARIABLE_STEP        0.75
 INERTIAL_DAMPING     PARTIAL
 NORMAL_FLOW_LIMITED  BOTH
+START_DATE           01/01/2001
+START_TIME           00:00:00
+REPORT_START_DATE    01/01/2001
+REPORT_START_TIME    00:00:00
+END_DATE             01/02/2001
+END_TIME             00:00:00
+SWEEP_START          01/01
+SWEEP_END            12/31
+DRY_DAYS             0
+REPORT_STEP          00:15:00
+WET_STEP             00:05:00
+DRY_STEP             01:00:00
 
 [JUNCTIONS]
 ;;Name           Elev       MaxDepth   InitDepth  SurDepth   Aponded
 ;;-------------- ---------- ---------- ---------- ---------- ----------
 mh               138.00     0          0          0          0
-mh               135.00     0          0          0          0
-mh               155.00     0          0          0          0
-mh               125.00     0          0          0          0
-mh               120.00     0          0          0          0
-mh               111.00     0          0          0          0
+mh_2             135.00     0          0          0          0
+mh_3             155.00     0          0          0          0
+mh_4             125.00     0          0          0          0
+mh_5             120.00     0          0          0          0
+mh_6             111.00     0          0          0          0
 outlet           100.00     0          0          0          0
-mh               137.00     0          0          0          0
-mh               130.00     0          0          0          0
-mh               125.00     0          0          0          0
+mh_7             137.00     0          0          0          0
+mh_8             130.00     0          0          0          0
+mh_9             125.00     0          0          0          0
 CA-1             0          0          0          0          0
 CA-7             0          0          0          0          0
 CA-8             0          0          0          0          0
-CA-11            0          0          0          0          0
+
+[OUTFALLS]
+;;Name           Elev       Type       Stage      Gated
+;;-------------- ---------- ---------- ---------- -----
+CA-11            0          FREE                  NO
 
 [CONDUITS]
 ;;Name           From             To               Length     Roughness  InOffset   OutOffset  InitFlow   MaxFlow
@@ -61,8 +77,8 @@ LA1              CIRCULAR     4.00       0          0          0          1
 LA2              CIRCULAR     4.50       0          0          0          1
 LA3              CIRCULAR     5.00       0          0          0          1
 LA4              CIRCULAR     6.00       0          0          0          1
-LA5              TRAPEZOIDAL  9.00       0          0          0          1
-LA6              TRAPEZOIDAL  9.00       0          0          0          1
+LA5              TRAPEZOIDAL  9.00       1.00       1          1          1
+LA6              TRAPEZOIDAL  9.00       1.00       1          1          1
 LB1              CIRCULAR     4.50       0          0          0          1
 LB2              CIRCULAR     4.50       0          0          0          1
 LB3              CIRCULAR     5.50       0          0          0          1
@@ -92,15 +108,15 @@ P011             0          0          0          NO
 ;;Node           X-Coord            Y-Coord
 ;;-------------- ------------------ ------------------
 mh               297.64             -2.36             
-mh               317.64             -2.36             
-mh               337.64             -2.36             
-mh               357.64             -2.36             
-mh               377.64             -2.36             
-mh               397.64             -2.36             
+mh_2             317.64             -2.36             
+mh_3             337.64             -2.36             
+mh_4             357.64             -2.36             
+mh_5             377.64             -2.36             
+mh_6             397.64             -2.36             
 outlet           417.64             -2.36             
-mh               377.64             57.64             
-mh               377.64             37.64             
-mh               377.64             17.64             
+mh_7             377.64             57.64             
+mh_8             377.64             37.64             
+mh_9             377.64             17.64             
 CA-1             417.64             -22.36            
 CA-7             417.64             -42.36            
 CA-8             424.48             -61.15            

@@ -20,6 +20,18 @@ INERTIAL_DAMPING     PARTIAL
 NORMAL_FLOW_LIMITED  BOTH
 MAX_TRIALS           50
 HEAD_TOLERANCE       0.0001
+START_DATE           01/01/2001
+START_TIME           00:00:00
+REPORT_START_DATE    01/01/2001
+REPORT_START_TIME    00:00:00
+END_DATE             01/02/2001
+END_TIME             00:00:00
+SWEEP_START          01/01
+SWEEP_END            12/31
+DRY_DAYS             0
+REPORT_STEP          00:15:00
+WET_STEP             00:05:00
+DRY_STEP             01:00:00
 
 [JUNCTIONS]
 ;;Name           Elev       MaxDepth   InitDepth  SurDepth   Aponded
@@ -27,28 +39,39 @@ HEAD_TOLERANCE       0.0001
 J049             150.00     0          0          0          0
 E09245           10.00      0          0          0          0
 E09163           10.00      0          0          0          0
+Node_8049        -6.74      0          0          0          0
+Node_2138        -6.74      0          0          0          0
+Node_19572337    -6.74      0          0          0          0
+Node_9163        -6.74      0          0          0          0
+Node_23372334    -9.64      0          0          0          0
+
+[OUTFALLS]
+;;Name           Elev       Type       Stage      Gated
+;;-------------- ---------- ---------- ---------- -----
+Node_19591957    -6.74      FREE                  NO
 
 [STORAGE]
 ;;Name           Elev       MaxDepth   InitDepth  Shape      Curve/Params
 ;;-------------- ---------- ---------- ---------- ---------- ----------
-S49              10.00      0          0          FUNCTIONAL 0 0          0
+S49              10.00      10.00      0          FUNCTIONAL 1000.00 0          0
 
 [CONDUITS]
 ;;Name           From             To               Length     Roughness  InOffset   OutOffset  InitFlow   MaxFlow
 ;;-------------- ---------------- ---------------- ---------- ---------- ---------- ---------- ---------- ----------
-049              Node_2138        Node_19572337    4200.00    0.0130     -6.74      -6.74      0          0
-PE09163          Node_9163        Node_23372334    1450.00    0.0130     -6.74      -9.64      0          0
+049              Node_2138        Node_19572337    4200.00    0.0130     0          0          0          0
+PE09163          Node_9163        Node_23372334    1450.00    0.0130     0          0          0          0
 
 [PUMPS]
 ;;Name           From             To               PumpCurve  Status   Startup    Shutoff
 ;;-------------- ---------------- ---------------- ---------- -------- ---------- ----------
-8049             Node_8049        Node_19591957    PC_8049    ON       -16.25     -17.50    
+8049             Node_8049        Node_19591957    PC_8049    ON       1.00       0         
 
 [CURVES]
 ;;Name           Type       X-Value    Y-Value
 ;;-------------- ---------- ---------- ----------
-PC_8049          Pump3      0          0
-;
+;; Synthesized generic pump curves — replace with actual pump data
+PC_8049          Pump1      0          5
+PC_8049                     10         10
 
 [XSECTIONS]
 ;;Link           Shape        Geom1      Geom2      Geom3      Geom4      Barrels

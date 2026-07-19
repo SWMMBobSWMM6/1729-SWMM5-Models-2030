@@ -14,11 +14,23 @@ LINK_OFFSETS         DEPTH
 MIN_SLOPE            0.0
 ALLOW_PONDING        NO
 SKIP_STEADY_STATE    NO
-ROUTING_STEP         00:00:60
+ROUTING_STEP         00:01:00
 VARIABLE_STEP        0.75
 INERTIAL_DAMPING     PARTIAL
 NORMAL_FLOW_LIMITED  BOTH
-MAX_TRIALS           1
+MAX_TRIALS           2
+START_DATE           01/01/2001
+START_TIME           00:00:00
+REPORT_START_DATE    01/01/2001
+REPORT_START_TIME    00:00:00
+END_DATE             01/02/2001
+END_TIME             00:00:00
+SWEEP_START          01/01
+SWEEP_END            12/31
+DRY_DAYS             0
+REPORT_STEP          00:15:00
+WET_STEP             00:05:00
+DRY_STEP             01:00:00
 
 [JUNCTIONS]
 ;;Name           Elev       MaxDepth   InitDepth  SurDepth   Aponded
@@ -29,7 +41,6 @@ MAX_TRIALS           1
 2025             214.50     0          0          0          0
 1030             213.72     0          0          0          0
 1020             211.91     0          0          0          0
-1010             225.00     0          0          0          0
 3050             213.28     0          0          0          0
 3040             213.35     0          0          0          0
 3030             212.23     0          0          0          0
@@ -52,12 +63,20 @@ MAX_TRIALS           1
 6010             226.11     0          0          0          0
 1063             217.00     0          0          0          0
 1067             217.00     0          0          0          0
+1069c            213.39     0          0          0          0
+1063c            195.34     0          0          0          0
+1066c            195.34     0          0          0          0
+
+[OUTFALLS]
+;;Name           Elev       Type       Stage      Gated
+;;-------------- ---------- ---------- ---------- -----
+1010             225.00     FREE                  NO
 
 [STORAGE]
 ;;Name           Elev       MaxDepth   InitDepth  Shape      Curve/Params
 ;;-------------- ---------- ---------- ---------- ---------- ----------
-2010             214.08     0          0          FUNCTIONAL 144.00 0          0
-Pumpout          214.08     0          0          FUNCTIONAL 144.00 0          0
+2010             214.08     10.00      0          FUNCTIONAL 144.00 0          0
+Pumpout          214.08     10.00      0          FUNCTIONAL 144.00 0          0
 
 [CONDUITS]
 ;;Name           From             To               Length     Roughness  InOffset   OutOffset  InitFlow   MaxFlow
@@ -100,8 +119,9 @@ PUMP             2010             Pumpout          PC_PUMP    ON       205.55   
 [CURVES]
 ;;Name           Type       X-Value    Y-Value
 ;;-------------- ---------- ---------- ----------
-PC_PUMP          Pump3      0          0
-;
+;; Synthesized generic pump curves — replace with actual pump data
+PC_PUMP          Pump1      0          5
+PC_PUMP                     10         10
 
 [XSECTIONS]
 ;;Link           Shape        Geom1      Geom2      Geom3      Geom4      Barrels

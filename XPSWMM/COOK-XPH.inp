@@ -18,32 +18,48 @@ ROUTING_STEP         00:00:15
 VARIABLE_STEP        0.75
 INERTIAL_DAMPING     PARTIAL
 NORMAL_FLOW_LIMITED  BOTH
+START_DATE           01/01/2001
+START_TIME           00:00:00
+REPORT_START_DATE    01/01/2001
+REPORT_START_TIME    00:00:00
+END_DATE             01/02/2001
+END_TIME             00:00:00
+SWEEP_START          01/01
+SWEEP_END            12/31
+DRY_DAYS             0
+REPORT_STEP          00:15:00
+WET_STEP             00:05:00
+DRY_STEP             01:00:00
 
 [JUNCTIONS]
 ;;Name           Elev       MaxDepth   InitDepth  SurDepth   Aponded
 ;;-------------- ---------- ---------- ---------- ---------- ----------
 I-14             90.00      0          0          0          0
 I-13             90.00      0          0          0          0
-I-5              90.00      0          1.33       0          0
+I-5              90.00      0          0          0          0
 I-6              90.00      0          0          0          0
 I-7              90.00      0          0          0          0
-I-4              90.00      0          2.59       0          0
-I-3              90.00      0          3.66       0          0
+I-4              90.00      0          0          0          0
+I-3              90.00      0          0          0          0
 I-11             90.00      0          0          0          0
 I-12             90.00      0          0          0          0
 I-18             90.00      0          0          0          0
 I-17             90.00      0          0          0          0
-I-16             90.00      0          0.45       0          0
-I-15             90.00      0          1.53       0          0
-LAKE             90.00      0          5.10       0          0
+I-16             90.00      0          0          0          0
+I-15             90.00      0          0          0          0
+LAKE             90.00      0          0          0          0
 I-10             90.00      0          0          0          0
 I-9              90.00      0          0          0          0
-I-8              90.00      0          2.33       0          0
+I-8              90.00      0          0          0          0
 MH-1             90.00      0          0          0          0
 I-19             90.00      0          0          0          0
 I-20             90.00      0          0          0          0
-STREET           85.00      0          0          0          0
 STM              85.00      0          0          0          0
+
+[OUTFALLS]
+;;Name           Elev       Type       Stage      Gated
+;;-------------- ---------- ---------- ---------- -----
+STREET           85.00      FREE                  NO
 
 [CONDUITS]
 ;;Name           From             To               Length     Roughness  InOffset   OutOffset  InitFlow   MaxFlow
@@ -81,29 +97,29 @@ OF-3             I-11             I-10             TRANSVERSE 86.90      1.840  
 ;;Link           Shape        Geom1      Geom2      Geom3      Geom4      Barrels
 ;;-------------- ------------ ---------- ---------- ---------- ---------- ----------
 P-2              CIRCULAR     1.50       0          0          0          1
-STREET           TRAPEZOIDAL  1.00       30.00      0          0          1
+STREET           TRAPEZOIDAL  1.00       30.00      1          1          1
 STM              CIRCULAR     2.00       0          0          0          1
-P-13             RECT_OPEN    0          20.00      0          0          
-P-12             RECT_OPEN    0          20.00      0          0          
-P-4              RECT_OPEN    0          20.00      0          0          
-P-3              RECT_OPEN    0          20.00      0          0          
-P-6              RECT_OPEN    0          20.00      0          0          
-P-5              RECT_OPEN    0          20.00      0          0          
-P=17             RECT_OPEN    0          20.00      0          0          
-P-16             RECT_OPEN    0          20.00      0          0          
-P-15             RECT_OPEN    0          20.00      0          0          
-P-14             RECT_OPEN    0          20.00      0          0          
-P-11             RECT_OPEN    0          20.00      0          0          
-P-10             RECT_OPEN    0          20.00      0          0          
-P-9              RECT_OPEN    0          20.00      0          0          
-P-8              RECT_OPEN    0          20.00      0          0          
-P-7              RECT_OPEN    0          50.00      0          0          
-P1               RECT_OPEN    0          100.00     0          0          
-P-20             RECT_OPEN    0          20.00      0          0          
-P-19             RECT_OPEN    0          20.00      0          0          
-OF-1             RECT_OPEN    0          20.00      0          0          
-OF-2             RECT_OPEN    0          20.00      0          0          
-OF-3             RECT_OPEN    0          20.00      0          0          
+P-13             RECT_OPEN    1.00       20.00      0          0
+P-12             RECT_OPEN    1.00       20.00      0          0
+P-4              RECT_OPEN    1.00       20.00      0          0
+P-3              RECT_OPEN    1.00       20.00      0          0
+P-6              RECT_OPEN    1.00       20.00      0          0
+P-5              RECT_OPEN    1.00       20.00      0          0
+P=17             RECT_OPEN    1.00       20.00      0          0
+P-16             RECT_OPEN    1.00       20.00      0          0
+P-15             RECT_OPEN    1.00       20.00      0          0
+P-14             RECT_OPEN    1.00       20.00      0          0
+P-11             RECT_OPEN    1.00       20.00      0          0
+P-10             RECT_OPEN    1.00       20.00      0          0
+P-9              RECT_OPEN    1.00       20.00      0          0
+P-8              RECT_OPEN    1.00       20.00      0          0
+P-7              RECT_OPEN    1.00       50.00      0          0
+P1               RECT_OPEN    1.00       100.00     0          0
+P-20             RECT_OPEN    1.00       20.00      0          0
+P-19             RECT_OPEN    1.00       20.00      0          0
+OF-1             RECT_OPEN    1.00       20.00      0          0
+OF-2             RECT_OPEN    1.00       20.00      0          0
+OF-3             RECT_OPEN    1.00       20.00      0          0
 
 [LOSSES]
 ;;Link           Inlet      Outlet     Average    Flap Gate

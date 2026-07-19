@@ -20,6 +20,18 @@ INERTIAL_DAMPING     PARTIAL
 NORMAL_FLOW_LIMITED  BOTH
 MAX_TRIALS           50
 HEAD_TOLERANCE       0.0033
+START_DATE           01/01/2001
+START_TIME           00:00:00
+REPORT_START_DATE    01/01/2001
+REPORT_START_TIME    00:00:00
+END_DATE             01/02/2001
+END_TIME             00:00:00
+SWEEP_START          01/01
+SWEEP_END            12/31
+DRY_DAYS             0
+REPORT_STEP          00:15:00
+WET_STEP             00:05:00
+DRY_STEP             01:00:00
 
 [JUNCTIONS]
 ;;Name           Elev       MaxDepth   InitDepth  SurDepth   Aponded
@@ -29,8 +41,8 @@ I2               14.00      0          0          0          0
 M1               13.70      0          0          0          0
 M2               14.00      0          0          0          0
 I3               13.80      0          0          0          0
-POND1            13.75      0          1.25       0          0
-POND2            13.75      0          1.25       0          0
+POND1            13.75      0          0          0          0
+POND2            13.75      0          0          0          0
 M4               13.75      0          0          0          0
 I7               13.75      0          0          0          0
 I8               14.00      0          0          0          0
@@ -43,17 +55,16 @@ M5               13.75      0          0          0          0
 M8               13.75      0          0          0          0
 M7               13.80      0          0          0          0
 I9               13.80      0          0          0          0
-POND4            14.00      0          3.09       0          0
+POND4            14.00      0          0          0          0
 M9               14.00      0          0          0          0
-OUTFALL          12.40      0          0          0          0
 I10              14.00      0          0          0          0
 M10              12.20      0          0          0          0
 80               14.00      0          0          0          0
-POND             14.00      0          5.50       0          0
+POND             14.00      0          0          0          0
 I24              17.20      0          0          0          0
 I25              16.80      0          0          0          0
 I29              17.00      0          0          0          0
-POND             18.20      0          5.25       0          0
+POND_2           18.20      0          0          0          0
 I26              15.00      0          0          0          0
 I28              15.00      0          0          0          0
 I27              18.00      0          0          0          0
@@ -64,6 +75,11 @@ I30              20.40      0          0          0          0
 105              14.00      0          0          0          0
 storage2         1.00       0          0          0          0
 newsub1          1.00       0          0          0          0
+
+[OUTFALLS]
+;;Name           Elev       Type       Stage      Gated
+;;-------------- ---------- ---------- ---------- -----
+OUTFALL          12.40      FREE                  NO
 
 [CONDUITS]
 ;;Name           From             To               Length     Roughness  InOffset   OutOffset  InitFlow   MaxFlow
@@ -108,7 +124,7 @@ P21              M10              OUTFALL          60.00      0.0350     7.60   
 ;;Name           From             To               Type       CrestHt    Qcoeff     Gated    EndCon   EndCoeff   Surcharge
 ;;-------------- ---------------- ---------------- ---------- ---------- ---------- -------- -------- ---------- ----------
 WEIR             POND2            80               TRANSVERSE 10.50      1.840      NO       0        0          YES
-106              POND4            105              TRANSVERSE 10.50      1.840      NO       0        0          YES
+106_2            POND4            105              TRANSVERSE 10.50      1.840      NO       0        0          YES
 
 [XSECTIONS]
 ;;Link           Shape        Geom1      Geom2      Geom3      Geom4      Barrels
@@ -134,9 +150,9 @@ P11b             CIRCULAR     1.50       0          0          0          1
 P16              CIRCULAR     3.50       0          0          0          1
 P17              CIRCULAR     3.50       0          0          0          1
 P18              CIRCULAR     3.50       0          0          0          1
-P19              TRAPEZOIDAL  4.00       7.80       0          0          1
+P19              TRAPEZOIDAL  4.00       7.80       1          1          1
 P20              CIRCULAR     3.00       0          0          0          1
-P21              TRAPEZOIDAL  4.00       5.27       0          0          1
+P21              TRAPEZOIDAL  4.00       5.27       1          1          1
 90               CIRCULAR     3.00       0          0          0          1
 92               CIRCULAR     3.00       0          0          0          1
 94               CIRCULAR     4.00       0          0          0          1
@@ -144,12 +160,12 @@ P21              TRAPEZOIDAL  4.00       5.27       0          0          1
 98               CIRCULAR     2.00       0          0          0          1
 99               CIRCULAR     3.00       0          0          0          1
 101              CIRCULAR     3.00       0          0          0          1
-104              TRAPEZOIDAL  2.00       2.00       0          0          1
-106              TRAPEZOIDAL  2.00       2.00       0          0          1
+104              TRAPEZOIDAL  2.00       2.00       1          1          1
+106              TRAPEZOIDAL  2.00       2.00       1          1          1
 107              CIRCULAR     3.00       0          0          0          1
-109              TRAPEZOIDAL  2.00       2.00       0          0          1
-WEIR             RECT_OPEN    0          2.00       0          0          
-106              RECT_OPEN    0          2.00       0          0          
+109              TRAPEZOIDAL  2.00       2.00       1          1          1
+WEIR             RECT_OPEN    1.00       2.00       0          0
+106_2            RECT_OPEN    1.00       2.00       0          0
 
 [LOSSES]
 ;;Link           Inlet      Outlet     Average    Flap Gate
@@ -222,7 +238,7 @@ POND             201.37             100.21
 I24              272.20             179.34            
 I25              272.20             133.28            
 I29              253.01             110.91            
-POND             225.87             92.47             
+POND_2           225.87             92.47             
 I26              251.81             169.15            
 I28              225.40             150.03            
 I27              225.49             209.56            

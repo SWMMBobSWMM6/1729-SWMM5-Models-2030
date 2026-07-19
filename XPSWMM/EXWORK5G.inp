@@ -19,6 +19,18 @@ VARIABLE_STEP        0.75
 INERTIAL_DAMPING     PARTIAL
 NORMAL_FLOW_LIMITED  BOTH
 MAX_TRIALS           100
+START_DATE           01/01/2001
+START_TIME           00:00:00
+REPORT_START_DATE    01/01/2001
+REPORT_START_TIME    00:00:00
+END_DATE             01/02/2001
+END_TIME             00:00:00
+SWEEP_START          01/01
+SWEEP_END            12/31
+DRY_DAYS             0
+REPORT_STEP          00:15:00
+WET_STEP             00:05:00
+DRY_STEP             01:00:00
 
 [JUNCTIONS]
 ;;Name           Elev       MaxDepth   InitDepth  SurDepth   Aponded
@@ -27,24 +39,24 @@ Inflow           25.00      0          0          0          0
 202              25.00      0          0          0          0
 204              25.00      0          0          0          0
 
-[STORAGE]
-;;Name           Elev       MaxDepth   InitDepth  Shape      Curve/Params
-;;-------------- ---------- ---------- ---------- ---------- ----------
-Outlet           25.00      -5.00      0          FUNCTIONAL 0 0          0
+[OUTFALLS]
+;;Name           Elev       Type       Stage      Gated
+;;-------------- ---------- ---------- ---------- -----
+Outlet           25.00      FREE                  NO
 
 [CONDUITS]
 ;;Name           From             To               Length     Roughness  InOffset   OutOffset  InitFlow   MaxFlow
 ;;-------------- ---------------- ---------------- ---------- ---------- ---------- ---------- ---------- ----------
 Trapin           Inflow           202              100.00     0.0140     1.00       1.00       0          0
 Culvert          202              204              50.00      0.0110     1.00       0          0          0
-Trapout          204              Outlet           100.00     0.0140     0          -1.00      0          0
+Trapout          204              Outlet           100.00     0.0140     0          0          0          0
 
 [XSECTIONS]
 ;;Link           Shape        Geom1      Geom2      Geom3      Geom4      Barrels
 ;;-------------- ------------ ---------- ---------- ---------- ---------- ----------
-Trapin           TRAPEZOIDAL  20.00      200.00     0          0          1
+Trapin           TRAPEZOIDAL  20.00      200.00     1          1          1
 Culvert          CIRCULAR     3.50       0          0          0          1
-Trapout          TRAPEZOIDAL  20.00      200.00     0          0          1
+Trapout          TRAPEZOIDAL  20.00      200.00     1          1          1
 
 [LOSSES]
 ;;Link           Inlet      Outlet     Average    Flap Gate

@@ -14,12 +14,24 @@ LINK_OFFSETS         DEPTH
 MIN_SLOPE            0.0
 ALLOW_PONDING        NO
 SKIP_STEADY_STATE    NO
-ROUTING_STEP         00:00:60
+ROUTING_STEP         00:01:00
 VARIABLE_STEP        0.75
 INERTIAL_DAMPING     PARTIAL
 NORMAL_FLOW_LIMITED  BOTH
 MAX_TRIALS           30
 HEAD_TOLERANCE       0.0033
+START_DATE           01/01/2001
+START_TIME           00:00:00
+REPORT_START_DATE    01/01/2001
+REPORT_START_TIME    00:00:00
+END_DATE             01/02/2001
+END_TIME             00:00:00
+SWEEP_START          01/01
+SWEEP_END            12/31
+DRY_DAYS             0
+REPORT_STEP          00:15:00
+WET_STEP             00:05:00
+DRY_STEP             01:00:00
 
 [JUNCTIONS]
 ;;Name           Elev       MaxDepth   InitDepth  SurDepth   Aponded
@@ -48,7 +60,6 @@ HEAD_TOLERANCE       0.0033
 115              931.00     0          0          0          0
 111              931.00     0          0          0          0
 105              930.00     0          0          0          0
-100              930.00     0          0          0          0
 336              960.00     0          0          0          0
 335              960.00     0          0          0          0
 315              933.00     0          0          0          0
@@ -61,10 +72,15 @@ HEAD_TOLERANCE       0.0033
 620              970.00     0          0          0          0
 130              931.80     0          0          0          0
 
+[OUTFALLS]
+;;Name           Elev       Type       Stage      Gated
+;;-------------- ---------- ---------- ---------- -----
+100              930.00     FREE                  NO
+
 [STORAGE]
 ;;Name           Elev       MaxDepth   InitDepth  Shape      Curve/Params
 ;;-------------- ---------- ---------- ---------- ---------- ----------
-188              960.00     -6.50      0          FUNCTIONAL 0 0          0
+188              960.00     10.00      0          FUNCTIONAL 1000.00 0          0
 
 [CONDUITS]
 ;;Name           From             To               Length     Roughness  InOffset   OutOffset  InitFlow   MaxFlow
@@ -85,13 +101,13 @@ HEAD_TOLERANCE       0.0033
 14745            147              146              140.00     0.0200     918.10     916.80     0          0
 14605            146              141              461.00     0.0150     916.80     914.00     0          0
 14144            141              137              402.00     0.0150     914.00     911.50     0          0
-12500            125              120              500.00     0          905.00     903.80     0          0
-12000            120              118              530.00     0          905.00     903.00     0          0
+12500            125              120              500.00     0.0130     905.00     903.80     0          0
+12000            120              118              530.00     0.0130     905.00     903.00     0          0
 11740            118              117              40.00      0.0300     903.00     901.50     0          0
-11700            117              115              200.00     0          901.50     901.50     0          0
-11500            115              111              400.00     0          901.50     900.70     0          0
-11100            111              105              600.00     0          900.70     900.50     0          0
-10500            105              100              500.00     0          900.50     900.00     0          0
+11700            117              115              200.00     0.0130     901.50     901.50     0          0
+11500            115              111              400.00     0.0130     901.50     900.70     0          0
+11100            111              105              600.00     0.0130     900.70     900.50     0          0
+10500            105              100              500.00     0.0130     900.50     900.00     0          0
 33590            336              335              50.00      0.0150     951.30     950.30     0          0
 33540            335              315              1950.00    0.0350     950.30     923.00     0          0
 31590            315              312              300.00     0.0150     923.00     918.00     0          0
@@ -103,7 +119,7 @@ HEAD_TOLERANCE       0.0033
 50113            501              155              113.00     0.0150     926.50     921.20     0          0
 62000            620              166              2400.00    0.0130     964.20     926.20     0          0
 13742            137              130              742.00     0.0140     911.50     907.90     0          0
-13000            130              125              500.00     0          907.90     905.00     0          0
+13000            130              125              500.00     0.0130     907.90     905.00     0          0
 16127            161              155              600.00     0.0350     924.40     921.20     0          0
 
 [XSECTIONS]
@@ -115,36 +131,36 @@ HEAD_TOLERANCE       0.0033
 18725            RECT_CLOSED  6.00       6.00       0          0          1
 18634            CIRCULAR     7.00       0          0          0          1
 18192            RECT_CLOSED  6.00       12.00      0          0          1
-17672            TRAPEZOIDAL  12.00      20.00      0          0          1
+17672            TRAPEZOIDAL  12.00      20.00      1          1          1
 17172            RECT_CLOSED  7.00       11.00      0          0          1
-17401            TRAPEZOIDAL  12.00      20.00      0          0          1
+17401            TRAPEZOIDAL  12.00      20.00      1          1          1
 16641            RECT_CLOSED  8.50       15.00      0          0          1
 16521            RECT_CLOSED  8.00       10.00      0          0          1
 15527            RECT_CLOSED  7.00       14.00      0          0          1
-15405            TRAPEZOIDAL  12.00      15.00      0          0          1
-14745            TRAPEZOIDAL  8.00       15.00      0          0          1
+15405            TRAPEZOIDAL  12.00      15.00      1          1          1
+14745            TRAPEZOIDAL  8.00       15.00      1          1          1
 14605            RECT_CLOSED  5.00       24.00      0          0          1
 14144            RECT_CLOSED  6.00       36.00      0          0          1
-12500            IRREGULAR    0          0          0          0          1
-12000            IRREGULAR    0          0          0          0          1
+12500            TRAPEZOIDAL  1.00       10.00      2          2          1
+12000            TRAPEZOIDAL  1.00       10.00      2          2          1
 11740            RECT_CLOSED  12.00      30.00      0          0          1
-11700            IRREGULAR    0          0          0          0          1
-11500            IRREGULAR    0          0          0          0          1
-11100            IRREGULAR    0          0          0          0          1
-10500            IRREGULAR    0          0          0          0          1
+11700            TRAPEZOIDAL  1.00       10.00      2          2          1
+11500            TRAPEZOIDAL  1.00       10.00      2          2          1
+11100            TRAPEZOIDAL  1.00       10.00      2          2          1
+10500            TRAPEZOIDAL  1.00       10.00      2          2          1
 33590            CIRCULAR     5.50       5.00       0          0          1
-33540            TRAPEZOIDAL  7.00       8.00       0          0          1
+33540            TRAPEZOIDAL  7.00       8.00       1          1          1
 31590            RECT_CLOSED  7.00       7.00       0          0          1
-31290            TRAPEZOIDAL  8.00       9.00       0          0          1
+31290            TRAPEZOIDAL  8.00       9.00       1          1          1
 30590            RECT_CLOSED  8.00       8.00       0          0          1
-30540            TRAPEZOIDAL  8.00       9.00       0          0          1
-42800            TRAPEZOIDAL  8.00       10.00      0          0          1
-50350            TRAPEZOIDAL  8.00       10.00      0          0          1
+30540            TRAPEZOIDAL  8.00       9.00       1          1          1
+42800            TRAPEZOIDAL  8.00       10.00      1          1          1
+50350            TRAPEZOIDAL  8.00       10.00      1          1          1
 50113            RECT_CLOSED  3.00       7.00       0          0          1
 62000            CIRCULAR     5.00       0          0          0          1
-13742            IRREGULAR    0          0          0          0          1
-13000            IRREGULAR    0          0          0          0          1
-16127            TRAPEZOIDAL  15.00      15.00      0          0          1
+13742            TRAPEZOIDAL  1.00       10.00      2          2          1
+13000            TRAPEZOIDAL  1.00       10.00      2          2          1
+16127            TRAPEZOIDAL  15.00      15.00      1          1          1
 
 [LOSSES]
 ;;Link           Inlet      Outlet     Average    Flap Gate

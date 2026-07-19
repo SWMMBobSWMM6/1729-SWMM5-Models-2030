@@ -2,47 +2,743 @@
   EPA STORM WATER MANAGEMENT MODEL - VERSION 5.2 (Build 5.2.4)
   ------------------------------------------------------------
 
+  OXYCHEM TAFT FACILITY, HANVILLE LOUISIANA, STORMWATER ANALYSIS 
+  WARNING 04: minimum elevation drop used for Conduit 72
+  WARNING 08: elevation drop exceeds length for Conduit F
+  WARNING 08: elevation drop exceeds length for Conduit F_5
+  WARNING 08: elevation drop exceeds length for Conduit 552
+  WARNING 04: minimum elevation drop used for Conduit 313#1
+  WARNING 08: elevation drop exceeds length for Conduit 561#1
   
-  ERROR 207: duplicate ID name CL at line 150 of [STORAGE] section:
-  CL               9.50       0          0          FUNCTIONAL 160.00 0          0
-
+  ****************
+  Analysis Options
+  ****************
+  Flow Units ............... CFS
+  Process Models:
+    Rainfall/Runoff ........ NO
+    RDII ................... NO
+    Snowmelt ............... NO
+    Groundwater ............ NO
+    Flow Routing ........... YES
+    Ponding Allowed ........ NO
+    Water Quality .......... NO
+  Flow Routing Method ...... DYNWAVE
+  Surcharge Method ......... EXTRAN
+  Starting Date ............ 01/01/2001 00:00:00
+  Ending Date .............. 01/02/2001 00:00:00
+  Antecedent Dry Days ...... 0.0
+  Report Time Step ......... 00:15:00
+  Routing Time Step ........ 10.00 sec
+  Variable Time Step ....... YES
+  Maximum Trials ........... 50
+  Number of Threads ........ 1
+  Head Tolerance ........... 0.003300 ft
   
-  ERROR 207: duplicate ID name CL at line 153 of [STORAGE] section:
-  CL               9.00       0          0          FUNCTIONAL 630.00 0          0
-
   
-  ERROR 207: duplicate ID name F at line 254 of [CONDUIT] section:
-  F                435              446              800.00     0.0160     8.01       8.00       0          0
-
+  **************************        Volume        Volume
+  Flow Routing Continuity        acre-feet      10^6 gal
+  **************************     ---------     ---------
+  Dry Weather Inflow .......         0.000         0.000
+  Wet Weather Inflow .......         0.000         0.000
+  Groundwater Inflow .......         0.000         0.000
+  RDII Inflow ..............         0.000         0.000
+  External Inflow ..........         0.000         0.000
+  External Outflow .........         0.000         0.000
+  Flooding Loss ............         0.000         0.000
+  Evaporation Loss .........         0.000         0.000
+  Exfiltration Loss ........         0.000         0.000
+  Initial Stored Volume ....         0.000         0.000
+  Final Stored Volume ......         0.000         0.000
+  Continuity Error (%) .....         0.000
   
-  ERROR 207: duplicate ID name F at line 255 of [CONDUIT] section:
-  F                446              443              170.00     0.0160     8.00       7.90       0          0
-
   
-  ERROR 207: duplicate ID name F at line 256 of [CONDUIT] section:
-  F                443              EQ               1685.00    0.0160     7.90       3.50       0          0
-
+  ***************************
+  Time-Step Critical Elements
+  ***************************
+  None
   
-  ERROR 207: duplicate ID name F at line 257 of [CONDUIT] section:
-  F                462              YES              334.00     0.0130     8.00       7.90       0          0
-
   
-  ERROR 207: duplicate ID name F at line 285 of [PUMP] section:
-  F 2#1            SS               497              PC_F 2#1   ON       0          0         
-
+  ********************************
+  Highest Flow Instability Indexes
+  ********************************
+  All links are stable.
   
-  ERROR 207: duplicate ID name F at line 286 of [PUMP] section:
-  F 3#1            YES              435              PC_F 3#1   ON       0          0         
-
   
-  ERROR 207: duplicate ID name F at line 287 of [PUMP] section:
-  F 5#1            CAUST            462              PC_F 5#1   ON       0          0         
-
+  *********************************
+  Most Frequent Nonconverging Nodes
+  *********************************
+  Convergence obtained at all time steps.
   
-  ERROR 207: duplicate ID name F at line 288 of [PUMP] section:
-  F 8#1            CL               YES              PC_F 8#1   ON       1.00       0         
+  
+  *************************
+  Routing Time Step Summary
+  *************************
+  Minimum Time Step           :     9.50 sec
+  Average Time Step           :    10.00 sec
+  Maximum Time Step           :    10.00 sec
+  % of Time in Steady State   :     0.00
+  Average Iterations per Step :     2.00
+  % of Steps Not Converging   :     0.00
+  Time Step Frequencies       :
+     10.000 -  5.493 sec      :   100.00 %
+      5.493 -  3.017 sec      :     0.00 %
+      3.017 -  1.657 sec      :     0.00 %
+      1.657 -  0.910 sec      :     0.00 %
+      0.910 -  0.500 sec      :     0.00 %
+  
+  
+  ******************
+  Node Depth Summary
+  ******************
+  
+  ---------------------------------------------------------------------------------
+                                 Average  Maximum  Maximum  Time of Max    Reported
+                                   Depth    Depth      HGL   Occurrence   Max Depth
+  Node                 Type         Feet     Feet     Feet  days hr:min        Feet
+  ---------------------------------------------------------------------------------
+  15                   JUNCTION     0.00     0.00    11.32     0  00:00        0.00
+  17                   JUNCTION     0.00     0.00    11.71     0  00:00        0.00
+  20                   JUNCTION     0.00     0.00    10.79     0  00:00        0.00
+  22                   JUNCTION     0.00     0.00    10.79     0  00:00        0.00
+  24                   JUNCTION     0.00     0.00    10.84     0  00:00        0.00
+  28                   JUNCTION     0.00     0.00    10.69     0  00:00        0.00
+  30                   JUNCTION     0.00     0.00    10.57     0  00:00        0.00
+  32                   JUNCTION     0.00     0.00    10.07     0  00:00        0.00
+  34                   JUNCTION     0.00     0.00     9.11     0  00:00        0.00
+  36                   JUNCTION     0.00     0.00     9.11     0  00:00        0.00
+  39                   JUNCTION     0.00     0.00     9.47     0  00:00        0.00
+  51                   JUNCTION     0.00     0.00     9.16     0  00:00        0.00
+  55                   JUNCTION     0.00     0.00     8.96     0  00:00        0.00
+  57                   JUNCTION     0.00     0.00     8.76     0  00:00        0.00
+  67                   JUNCTION     0.00     0.00     7.70     0  00:00        0.00
+  69                   JUNCTION     0.00     0.00     8.51     0  00:00        0.00
+  71                   JUNCTION     0.00     0.00     8.51     0  00:00        0.00
+  73                   JUNCTION     0.00     0.00     6.52     0  00:00        0.00
+  75                   JUNCTION     0.00     0.00     6.52     0  00:00        0.00
+  79                   JUNCTION     0.00     0.00     7.00     0  00:00        0.00
+  81                   JUNCTION     0.00     0.00     7.01     0  00:00        0.00
+  86                   JUNCTION     0.00     0.00     6.20     0  00:00        0.00
+  96                   JUNCTION     0.00     0.00     8.00     0  00:00        0.00
+  98                   JUNCTION     0.00     0.00     8.29     0  00:00        0.00
+  100                  JUNCTION     0.00     0.00     8.29     0  00:00        0.00
+  115                  JUNCTION     0.00     0.00     9.90     0  00:00        0.00
+  117                  JUNCTION     0.00     0.00     9.70     0  00:00        0.00
+  119                  JUNCTION     0.00     0.00     9.60     0  00:00        0.00
+  134                  JUNCTION     0.00     0.00     9.49     0  00:00        0.00
+  136                  JUNCTION     0.00     0.00     9.70     0  00:00        0.00
+  138                  JUNCTION     0.00     0.00     9.48     0  00:00        0.00
+  142                  JUNCTION     0.00     0.00     9.27     0  00:00        0.00
+  144                  JUNCTION     0.00     0.00     9.24     0  00:00        0.00
+  146                  JUNCTION     0.00     0.00     9.16     0  00:00        0.00
+  148                  JUNCTION     0.00     0.00     9.17     0  00:00        0.00
+  152                  JUNCTION     0.00     0.00     9.17     0  00:00        0.00
+  154                  JUNCTION     0.00     0.00     9.00     0  00:00        0.00
+  156                  JUNCTION     0.00     0.00    10.06     0  00:00        0.00
+  158                  JUNCTION     0.00     0.00    10.05     0  00:00        0.00
+  160                  JUNCTION     0.00     0.00     8.71     0  00:00        0.00
+  162                  JUNCTION     0.00     0.00     8.71     0  00:00        0.00
+  190                  JUNCTION     0.00     0.00     9.22     0  00:00        0.00
+  192                  JUNCTION     0.00     0.00     9.27     0  00:00        0.00
+  194                  JUNCTION     0.00     0.00     9.11     0  00:00        0.00
+  197                  JUNCTION     0.00     0.00     9.03     0  00:00        0.00
+  200                  JUNCTION     0.00     0.00     8.64     0  00:00        0.00
+  202                  JUNCTION     0.00     0.00     8.50     0  00:00        0.00
+  206                  JUNCTION     0.00     0.00     8.16     0  00:00        0.00
+  214                  JUNCTION     0.00     0.00     8.16     0  00:00        0.00
+  216                  JUNCTION     0.00     0.00     9.07     0  00:00        0.00
+  247                  JUNCTION     0.00     0.00     7.97     0  00:00        0.00
+  239                  JUNCTION     0.00     0.00     8.42     0  00:00        0.00
+  241                  JUNCTION     0.00     0.00     8.42     0  00:00        0.00
+  243                  JUNCTION     0.00     0.00     8.29     0  00:00        0.00
+  280                  JUNCTION     0.00     0.00     7.54     0  00:00        0.00
+  282                  JUNCTION     0.00     0.00     7.45     0  00:00        0.00
+  284                  JUNCTION     0.00     0.00     6.57     0  00:00        0.00
+  288                  JUNCTION     0.00     0.00     6.44     0  00:00        0.00
+  290                  JUNCTION     0.00     0.00     6.44     0  00:00        0.00
+  292                  JUNCTION     0.00     0.00     6.56     0  00:00        0.00
+  294                  JUNCTION     0.00     0.00     6.56     0  00:00        0.00
+  296                  JUNCTION     0.00     0.00     6.57     0  00:00        0.00
+  301                  JUNCTION     0.00     0.00     8.00     0  00:00        0.00
+  305                  JUNCTION     0.00     0.00     8.29     0  00:00        0.00
+  307                  JUNCTION     0.00     0.00     8.06     0  00:00        0.00
+  309                  JUNCTION     0.00     0.00     7.91     0  00:00        0.00
+  317                  JUNCTION     0.00     0.00     8.78     0  00:00        0.00
+  319                  JUNCTION     0.00     0.00     8.55     0  00:00        0.00
+  329                  JUNCTION     0.00     0.00    11.46     0  00:00        0.00
+  330                  JUNCTION     0.00     0.00    11.49     0  00:00        0.00
+  335                  JUNCTION     0.00     0.00    11.61     0  00:00        0.00
+  337                  JUNCTION     0.00     0.00    11.61     0  00:00        0.00
+  339                  JUNCTION     0.00     0.00    11.32     0  00:00        0.00
+  341                  JUNCTION     0.00     0.00    11.32     0  00:00        0.00
+  343                  JUNCTION     0.00     0.00    11.56     0  00:00        0.00
+  345                  JUNCTION     0.00     0.00    12.49     0  00:00        0.00
+  353                  JUNCTION     0.00     0.00    11.31     0  00:00        0.00
+  355                  JUNCTION     0.00     0.00    11.60     0  00:00        0.00
+  357                  JUNCTION     0.00     0.00    11.26     0  00:00        0.00
+  359                  JUNCTION     0.00     0.00    11.27     0  00:00        0.00
+  361                  JUNCTION     0.00     0.00    11.07     0  00:00        0.00
+  364                  JUNCTION     0.00     0.00    11.19     0  00:00        0.00
+  366                  JUNCTION     0.00     0.00    11.16     0  00:00        0.00
+  368                  JUNCTION     0.00     0.00    11.16     0  00:00        0.00
+  370                  JUNCTION     0.00     0.00    11.16     0  00:00        0.00
+  372                  JUNCTION     0.00     0.00    10.35     0  00:00        0.00
+  374                  JUNCTION     0.00     0.00    10.65     0  00:00        0.00
+  384                  JUNCTION     0.00     0.00    10.10     0  00:00        0.00
+  418                  JUNCTION     0.00     0.00     8.75     0  00:00        0.00
+  422                  JUNCTION     0.00     0.00     8.11     0  00:00        0.00
+  423                  JUNCTION     0.00     0.00     7.09     0  00:00        0.00
+  425                  JUNCTION     0.00     0.00     7.09     0  00:00        0.00
+  427                  JUNCTION     0.00     0.00     7.57     0  00:00        0.00
+  435                  JUNCTION     0.00     0.00  1000.00     0  00:00        0.00
+  443                  JUNCTION     0.00     0.00  1000.00     0  00:00        0.00
+  446                  JUNCTION     0.00     0.00  1000.00     0  00:00        0.00
+  Outfall              JUNCTION     0.00     0.00    11.46     0  00:00        0.00
+  462                  JUNCTION     0.00     0.00  1000.00     0  00:00        0.00
+  497                  JUNCTION     0.00     0.00  1000.00     0  00:00        0.00
+  BORDER               JUNCTION     0.00     0.00     0.00     0  00:00        0.00
+  SITE                 JUNCTION     0.00     0.00     0.00     0  00:00        0.00
+  DRAIN                JUNCTION     0.00     0.00     0.00     0  00:00        0.00
+  INV                  JUNCTION     0.00     0.00     0.00     0  00:00        0.00
+  GRID                 JUNCTION     0.00     0.00     0.00     0  00:00        0.00
+  509                  JUNCTION     0.00     0.00     8.58     0  00:00        0.00
+  511                  JUNCTION     0.00     0.00     8.16     0  00:00        0.00
+  513                  JUNCTION     0.00     0.00     8.16     0  00:00        0.00
+  515                  JUNCTION     0.00     0.00     8.16     0  00:00        0.00
+  DUMMY                JUNCTION     0.00     0.00  1000.00     0  00:00        0.00
+  171                  JUNCTION     0.00     0.00     9.14     0  00:00        0.00
+  DIESEL               JUNCTION     0.00     0.00  1000.00     0  00:00        0.00
+  RAIL                 JUNCTION     0.00     0.00  1000.00     0  00:00        0.00
+  #2                   JUNCTION     0.00     0.00     5.71     0  00:00        0.00
+  199#2                JUNCTION     0.00     0.00     6.53     0  00:00        0.00
+  468#2                JUNCTION     0.00     0.00     8.92     0  00:00        0.00
+  468#3                JUNCTION     0.00     0.00     8.55     0  00:00        0.00
+  489#2                JUNCTION     0.00     0.00     8.92     0  00:00        0.00
+  188                  OUTFALL      0.00     0.00     9.04     0  00:00        0.00
+  77                   STORAGE      0.00     0.00    10.00     0  00:00        0.00
+  SS                   STORAGE      0.00     0.00     9.00     0  00:00        0.00
+  POND                 STORAGE      0.00     0.00     8.00     0  00:00        0.00
+  YES                  STORAGE      0.00     0.00     9.00     0  00:00        0.00
+  EQ                   STORAGE      0.00     0.00    13.00     0  00:00        0.00
+  CL                   STORAGE      0.00     0.00     9.00     0  00:00        0.00
+  CL_2                 STORAGE      0.00     0.00     9.50     0  00:00        0.00
+  NEUT                 STORAGE      0.00     0.00    12.50     0  00:00        0.00
+  CELL                 STORAGE      0.00     0.00     9.00     0  00:00        0.00
+  CL_3                 STORAGE      0.00     0.00     9.00     0  00:00        0.00
+  CAUST                STORAGE      0.00     0.00     8.50     0  00:00        0.00
+  SUMP                 STORAGE      0.00     0.00    12.50     0  00:00        0.00
+  KOCH                 STORAGE      0.00     0.00     6.00     0  00:00        0.00
+  DD                   STORAGE      0.00     0.00    10.00     0  00:00        0.00
+  576                  STORAGE      0.00     0.00     6.31     0  00:00        0.00
+  
+  
+  *******************
+  Node Inflow Summary
+  *******************
+  
+  -------------------------------------------------------------------------------------------------
+                                  Maximum  Maximum                  Lateral       Total        Flow
+                                  Lateral    Total  Time of Max      Inflow      Inflow     Balance
+                                   Inflow   Inflow   Occurrence      Volume      Volume       Error
+  Node                 Type           CFS      CFS  days hr:min    10^6 gal    10^6 gal     Percent
+  -------------------------------------------------------------------------------------------------
+  15                   JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  17                   JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  20                   JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  22                   JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  24                   JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  28                   JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  30                   JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  32                   JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  34                   JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  36                   JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  39                   JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  51                   JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  55                   JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  57                   JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  67                   JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  69                   JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  71                   JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  73                   JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  75                   JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  79                   JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  81                   JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  86                   JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  96                   JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  98                   JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  100                  JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  115                  JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  117                  JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  119                  JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  134                  JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  136                  JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  138                  JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  142                  JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  144                  JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  146                  JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  148                  JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  152                  JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  154                  JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  156                  JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  158                  JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  160                  JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  162                  JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  190                  JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  192                  JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  194                  JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  197                  JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  200                  JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  202                  JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  206                  JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  214                  JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  216                  JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  247                  JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  239                  JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  241                  JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  243                  JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  280                  JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  282                  JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  284                  JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  288                  JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  290                  JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  292                  JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  294                  JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  296                  JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  301                  JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  305                  JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  307                  JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  309                  JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  317                  JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  319                  JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  329                  JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  330                  JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  335                  JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  337                  JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  339                  JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  341                  JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  343                  JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  345                  JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  353                  JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  355                  JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  357                  JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  359                  JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  361                  JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  364                  JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  366                  JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  368                  JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  370                  JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  372                  JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  374                  JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  384                  JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  418                  JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  422                  JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  423                  JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  425                  JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  427                  JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  435                  JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  443                  JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  446                  JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  Outfall              JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  462                  JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  497                  JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  BORDER               JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  SITE                 JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  DRAIN                JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  INV                  JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  GRID                 JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  509                  JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  511                  JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  513                  JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  515                  JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  DUMMY                JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  171                  JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  DIESEL               JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  RAIL                 JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  #2                   JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  199#2                JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  468#2                JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  468#3                JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  489#2                JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  188                  OUTFALL       0.00     0.00     0  00:00           0           0       0.000 gal
+  77                   STORAGE       0.00     0.00     0  00:00           0           0       0.000 gal
+  SS                   STORAGE       0.00     0.00     0  00:00           0           0       0.000 gal
+  POND                 STORAGE       0.00     0.00     0  00:00           0           0       0.000 gal
+  YES                  STORAGE       0.00     0.00     0  00:00           0           0       0.000 gal
+  EQ                   STORAGE       0.00     0.00     0  00:00           0           0       0.000 gal
+  CL                   STORAGE       0.00     0.00     0  00:00           0           0       0.000 gal
+  CL_2                 STORAGE       0.00     0.00     0  00:00           0           0       0.000 gal
+  NEUT                 STORAGE       0.00     0.00     0  00:00           0           0       0.000 gal
+  CELL                 STORAGE       0.00     0.00     0  00:00           0           0       0.000 gal
+  CL_3                 STORAGE       0.00     0.00     0  00:00           0           0       0.000 gal
+  CAUST                STORAGE       0.00     0.00     0  00:00           0           0       0.000 gal
+  SUMP                 STORAGE       0.00     0.00     0  00:00           0           0       0.000 gal
+  KOCH                 STORAGE       0.00     0.00     0  00:00           0           0       0.000 gal
+  DD                   STORAGE       0.00     0.00     0  00:00           0           0       0.000 gal
+  576                  STORAGE       0.00     0.00     0  00:00           0           0       0.000 gal
+  
+  
+  **********************
+  Node Surcharge Summary
+  **********************
+  
+  Surcharging occurs when water rises above the top of the highest conduit.
+  ---------------------------------------------------------------------
+                                               Max. Height   Min. Depth
+                                   Hours       Above Crown    Below Rim
+  Node                 Type      Surcharged           Feet         Feet
+  ---------------------------------------------------------------------
+  BORDER               JUNCTION       24.00          0.000        0.000
+  SITE                 JUNCTION       24.00          0.000        0.000
+  DRAIN                JUNCTION       24.00          0.000        0.000
+  INV                  JUNCTION       24.00          0.000        0.000
+  GRID                 JUNCTION       24.00          0.000        0.000
+  RAIL                 JUNCTION       24.00          0.000        0.000
+  
+  
+  *********************
+  Node Flooding Summary
+  *********************
+  
+  No nodes were flooded.
+  
+  
+  **********************
+  Storage Volume Summary
+  **********************
+  
+  ------------------------------------------------------------------------------------------------
+                         Average    Avg   Evap  Exfil     Maximum    Max    Time of Max    Maximum
+                          Volume   Pcnt   Pcnt   Pcnt      Volume   Pcnt     Occurrence    Outflow
+  Storage Unit          1000 ft³   Full   Loss   Loss    1000 ft³   Full    days hr:min        CFS
+  ------------------------------------------------------------------------------------------------
+  77                       0.000    0.0    0.0    0.0       0.000    0.0       0  00:00       0.00
+  SS                       0.000    0.0    0.0    0.0       0.000    0.0       0  00:00       0.00
+  POND                     0.000    0.0    0.0    0.0       0.000    0.0       0  00:00       0.00
+  YES                      0.000    0.0    0.0    0.0       0.000    0.0       0  00:00       0.00
+  EQ                       0.000    0.0    0.0    0.0       0.000    0.0       0  00:00       0.00
+  CL                       0.000    0.0    0.0    0.0       0.000    0.0       0  00:00       0.00
+  CL_2                     0.000    0.0    0.0    0.0       0.000    0.0       0  00:00       0.00
+  NEUT                     0.000    0.0    0.0    0.0       0.000    0.0       0  00:00       0.00
+  CELL                     0.000    0.0    0.0    0.0       0.000    0.0       0  00:00       0.00
+  CL_3                     0.000    0.0    0.0    0.0       0.000    0.0       0  00:00       0.00
+  CAUST                    0.000    0.0    0.0    0.0       0.000    0.0       0  00:00       0.00
+  SUMP                     0.000    0.0    0.0    0.0       0.000    0.0       0  00:00       0.00
+  KOCH                     0.000    0.0    0.0    0.0       0.000    0.0       0  00:00       0.00
+  DD                       0.000    0.0    0.0    0.0       0.000    0.0       0  00:00       0.00
+  576                      0.000    0.0    0.0    0.0       0.000    0.0       0  00:00       0.00
+  
+  
+  ***********************
+  Outfall Loading Summary
+  ***********************
+  
+  -----------------------------------------------------------
+                         Flow       Avg       Max       Total
+                         Freq      Flow      Flow      Volume
+  Outfall Node           Pcnt       CFS       CFS    10^6 gal
+  -----------------------------------------------------------
+  188                    0.00      0.00      0.00       0.000
+  -----------------------------------------------------------
+  System                 0.00      0.00      0.00       0.000
+  
+  
+  ********************
+  Link Flow Summary
+  ********************
+  
+  -----------------------------------------------------------------------------
+                                 Maximum  Time of Max   Maximum    Max/    Max/
+                                  |Flow|   Occurrence   |Veloc|    Full    Full
+  Link                 Type          CFS  days hr:min    ft/sec    Flow   Depth
+  -----------------------------------------------------------------------------
+  18                   CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  21                   CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  23                   CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  25                   CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  29                   CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  31                   CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  33                   CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  35                   CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  237.1                CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  40                   CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  52                   CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  54                   CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  58                   CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  60                   CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  70                   CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  72                   CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  74                   CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  76                   CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  80                   CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  87                   CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  95                   CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  99                   CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  101                  CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  118                  CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  120                  CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  135                  CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  137                  CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  139                  CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  143                  CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  145                  CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  147                  CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  149                  CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  155                  CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  157                  CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  159                  CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  161                  CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  163                  CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  189                  CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  191                  CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  193                  CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  195                  CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  198                  CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  201                  CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  203                  CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  207                  CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  217                  CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  240                  CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  242                  CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  244                  CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  245                  CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  283                  CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  285                  CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  287                  CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  289                  CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  291                  CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  293                  CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  295                  CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  297                  CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  298                  CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  302                  CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  308                  CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  310                  CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  311                  CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  320                  CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  331                  CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  338                  CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  340                  CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  342                  CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  344                  CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  346                  CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  354                  CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  356                  CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  358                  CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  360                  CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  362                  CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  365                  CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  367                  CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  369                  CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  371                  CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  373                  CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  375                  CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  386                  CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  417                  CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  419                  CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  421                  CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  424                  CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  426                  CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  428                  CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  429                  CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  430                  CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  F                    CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  F_2                  CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  F_3                  CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  F_4                  CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  F_5                  CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  471                  CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  490                  CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  491                  CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  493                  CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  494                  CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  499                  CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  502                  CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  510                  CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  512                  CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  514                  CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  516                  CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  517                  CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  #1                   CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  199#1                CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  552                  CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  182                  CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  468                  CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  489#1                CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  313#1                CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  561#1                CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  78#1                 CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  577#1                CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  521#1                PUMP         0.00     0  00:00              0.00
+  F_2#1                PUMP         0.00     0  00:00              0.00
+  F_3#1                PUMP         0.00     0  00:00              0.00
+  F_5#1                PUMP         0.00     0  00:00              0.00
+  F_8#1                PUMP         0.00     0  00:00              0.00
+  F6#1                 PUMP         0.00     0  00:00              0.00
+  F11#1                PUMP         0.00     0  00:00              0.00
+  F13#1                PUMP         0.00     0  00:00              0.00
+  F14#1                PUMP         0.00     0  00:00              0.00
+  F1#1                 PUMP         0.00     0  00:00              0.00
+  566#1                PUMP         0.00     0  00:00              0.00
+  600#1                PUMP         0.00     0  00:00              0.00
+  
+  
+  ***************************
+  Flow Classification Summary
+  ***************************
+  
+  -------------------------------------------------------------------------------------
+                      Adjusted    ---------- Fraction of Time in Flow Class ---------- 
+                       /Actual         Up    Down  Sub   Sup   Up    Down  Norm  Inlet 
+  Conduit               Length    Dry  Dry   Dry   Crit  Crit  Crit  Crit  Ltd   Ctrl  
+  -------------------------------------------------------------------------------------
+  18                      1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  21                      1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  23                      1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  25                      1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  29                      1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  31                      1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  33                      1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  35                      1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  237.1                   1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  40                      1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  52                      1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  54                      1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  58                      1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  60                      1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  70                      1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  72                      1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  74                      1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  76                      1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  80                      1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  87                      1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  95                      1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  99                      1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  101                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  118                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  120                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  135                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  137                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  139                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  143                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  145                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  147                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  149                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  155                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  157                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  159                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  161                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  163                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  189                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  191                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  193                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  195                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  198                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  201                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  203                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  207                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  217                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  240                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  242                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  244                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  245                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  283                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  285                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  287                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  289                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  291                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  293                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  295                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  297                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  298                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  302                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  308                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  310                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  311                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  320                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  331                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  338                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  340                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  342                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  344                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  346                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  354                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  356                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  358                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  360                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  362                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  365                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  367                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  369                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  371                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  373                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  375                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  386                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  417                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  419                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  421                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  424                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  426                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  428                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  429                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  430                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  F                       1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  F_2                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  F_3                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  F_4                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  F_5                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  471                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  490                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  491                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  493                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  494                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  499                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  502                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  510                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  512                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  514                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  516                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  517                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  #1                      1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  199#1                   1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  552                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  182                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  468                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  489#1                   1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  313#1                   1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  561#1                   1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  78#1                    1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  577#1                   1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  
+  
+  *************************
+  Conduit Surcharge Summary
+  *************************
+  
+  No conduits were surcharged.
+  
+  
+  ***************
+  Pumping Summary
+  ***************
+  
+  ---------------------------------------------------------------------------------------------------------
+                                                  Min       Avg       Max     Total     Power    % Time Off
+                        Percent   Number of      Flow      Flow      Flow    Volume     Usage    Pump Curve
+  Pump                 Utilized   Start-Ups       CFS       CFS       CFS  10^6 gal     Kw-hr    Low   High
+  ---------------------------------------------------------------------------------------------------------
+  521#1                    0.00           0      0.00      0.00      0.00     0.000      0.00    0.0    0.0
+  F_2#1                    0.00           0      0.00      0.00      0.00     0.000      0.00    0.0    0.0
+  F_3#1                    0.00           0      0.00      0.00      0.00     0.000      0.00    0.0    0.0
+  F_5#1                    0.00           0      0.00      0.00      0.00     0.000      0.00    0.0    0.0
+  F_8#1                    0.00           0      0.00      0.00      0.00     0.000      0.00    0.0    0.0
+  F6#1                     0.00           0      0.00      0.00      0.00     0.000      0.00    0.0    0.0
+  F11#1                    0.00           0      0.00      0.00      0.00     0.000      0.00    0.0    0.0
+  F13#1                    0.00           0      0.00      0.00      0.00     0.000      0.00    0.0    0.0
+  F14#1                    0.00           0      0.00      0.00      0.00     0.000      0.00    0.0    0.0
+  F1#1                     0.00           0      0.00      0.00      0.00     0.000      0.00    0.0    0.0
+  566#1                    0.00           0      0.00      0.00      0.00     0.000      0.00    0.0    0.0
+  600#1                    0.00           0      0.00      0.00      0.00     0.000      0.00    0.0    0.0
+  
 
-
-  Analysis begun on:  Mon Jul 13 08:04:05 2026
-  Analysis ended on:  Mon Jul 13 08:04:05 2026
+  Analysis begun on:  Sun Jul 19 15:20:32 2026
+  Analysis ended on:  Sun Jul 19 15:20:32 2026
   Total elapsed time: < 1 sec

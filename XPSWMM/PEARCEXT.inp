@@ -14,10 +14,22 @@ LINK_OFFSETS         DEPTH
 MIN_SLOPE            0.0
 ALLOW_PONDING        NO
 SKIP_STEADY_STATE    NO
-ROUTING_STEP         00:00:300
+ROUTING_STEP         00:05:00
 VARIABLE_STEP        0.75
 INERTIAL_DAMPING     PARTIAL
 NORMAL_FLOW_LIMITED  BOTH
+START_DATE           01/01/2001
+START_TIME           00:00:00
+REPORT_START_DATE    01/01/2001
+REPORT_START_TIME    00:00:00
+END_DATE             01/02/2001
+END_TIME             00:00:00
+SWEEP_START          01/01
+SWEEP_END            12/31
+DRY_DAYS             0
+REPORT_STEP          00:15:00
+WET_STEP             00:05:00
+DRY_STEP             01:00:00
 
 [JUNCTIONS]
 ;;Name           Elev       MaxDepth   InitDepth  SurDepth   Aponded
@@ -30,7 +42,11 @@ NORMAL_FLOW_LIMITED  BOTH
 6                19.70      0          0          0          0
 7                17.50      0          0          0          0
 8                17.00      0          0          0          0
-9                15.70      0          0          0          0
+
+[OUTFALLS]
+;;Name           Elev       Type       Stage      Gated
+;;-------------- ---------- ---------- ---------- -----
+9                15.70      FREE                  NO
 
 [CONDUITS]
 ;;Name           From             To               Length     Roughness  InOffset   OutOffset  InitFlow   MaxFlow
@@ -47,14 +63,14 @@ L8-9             8                9                2000.00    0.0200     5.00   
 [XSECTIONS]
 ;;Link           Shape        Geom1      Geom2      Geom3      Geom4      Barrels
 ;;-------------- ------------ ---------- ---------- ---------- ---------- ----------
-L1-2             TRAPEZOIDAL  7.00       16.00      0          0          1
-L2-3             TRAPEZOIDAL  7.00       20.00      0          0          1
-L3-4             TRAPEZOIDAL  8.00       30.00      0          0          1
-L4-5             TRAPEZOIDAL  9.00       40.00      0          0          1
-L5-6             TRAPEZOIDAL  8.00       50.00      0          0          1
-L6-7             TRAPEZOIDAL  12.00      50.00      0          0          1
-L7-8             TRAPEZOIDAL  12.00      60.00      0          0          1
-L8-9             TRAPEZOIDAL  12.00      60.00      0          0          1
+L1-2             TRAPEZOIDAL  7.00       16.00      1          1          1
+L2-3             TRAPEZOIDAL  7.00       20.00      1          1          1
+L3-4             TRAPEZOIDAL  8.00       30.00      1          1          1
+L4-5             TRAPEZOIDAL  9.00       40.00      1          1          1
+L5-6             TRAPEZOIDAL  8.00       50.00      1          1          1
+L6-7             TRAPEZOIDAL  12.00      50.00      1          1          1
+L7-8             TRAPEZOIDAL  12.00      60.00      1          1          1
+L8-9             TRAPEZOIDAL  12.00      60.00      1          1          1
 
 [LOSSES]
 ;;Link           Inlet      Outlet     Average    Flap Gate

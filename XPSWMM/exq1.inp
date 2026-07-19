@@ -20,12 +20,28 @@ INERTIAL_DAMPING     PARTIAL
 NORMAL_FLOW_LIMITED  BOTH
 MAX_TRIALS           50
 HEAD_TOLERANCE       0.0033
+START_DATE           01/01/2001
+START_TIME           00:00:00
+REPORT_START_DATE    01/01/2001
+REPORT_START_TIME    00:00:00
+END_DATE             01/02/2001
+END_TIME             00:00:00
+SWEEP_START          01/01
+SWEEP_END            12/31
+DRY_DAYS             0
+REPORT_STEP          00:15:00
+WET_STEP             00:05:00
+DRY_STEP             01:00:00
 
 [JUNCTIONS]
 ;;Name           Elev       MaxDepth   InitDepth  SurDepth   Aponded
 ;;-------------- ---------- ---------- ---------- ---------- ----------
 1                4.00       0          0          0          0
-2                3.00       0          0          0          0
+
+[OUTFALLS]
+;;Name           Elev       Type       Stage      Gated
+;;-------------- ---------- ---------- ---------- -----
+2                3.00       FREE                  NO
 
 [ORIFICES]
 ;;Name           From             To               Type       Offset     Qcoeff     Gated    CloseTime
@@ -35,7 +51,7 @@ HEAD_TOLERANCE       0.0033
 [XSECTIONS]
 ;;Link           Shape        Geom1      Geom2      Geom3      Geom4      Barrels
 ;;-------------- ------------ ---------- ---------- ---------- ---------- ----------
-3                RECT_CLOSED  2.00       0          0          0          
+3                RECT_CLOSED  2.00       2.00       0          0
 
 [COORDINATES]
 ;;Node           X-Coord            Y-Coord

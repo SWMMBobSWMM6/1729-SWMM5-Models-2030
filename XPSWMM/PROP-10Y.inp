@@ -20,6 +20,18 @@ INERTIAL_DAMPING     PARTIAL
 NORMAL_FLOW_LIMITED  BOTH
 MAX_TRIALS           50
 HEAD_TOLERANCE       0.0033
+START_DATE           01/01/2001
+START_TIME           00:00:00
+REPORT_START_DATE    01/01/2001
+REPORT_START_TIME    00:00:00
+END_DATE             01/02/2001
+END_TIME             00:00:00
+SWEEP_START          01/01
+SWEEP_END            12/31
+DRY_DAYS             0
+REPORT_STEP          00:15:00
+WET_STEP             00:05:00
+DRY_STEP             01:00:00
 
 [JUNCTIONS]
 ;;Name           Elev       MaxDepth   InitDepth  SurDepth   Aponded
@@ -46,9 +58,8 @@ X-31             21.30      0          0          0          0
 EW-1             21.50      0          0          0          0
 EW-2             21.50      0          0          0          0
 X-30             21.50      0          0          0          0
-X-44             19.80      0          1.20       0          0
-EX               19.80      0          1.20       0          0
-Ex               20.00      0          0          0          0
+X-44             19.80      0          0          0          0
+EX               19.80      0          0          0          0
 EW-7             20.00      0          0          0          0
 X-46             19.40      0          0          0          0
 X-47             19.30      0          0          0          0
@@ -82,25 +93,32 @@ X-51             17.56      0          0          0          0
 X-52             17.24      0          0          0          0
 I-55             17.00      0          0          0          0
 X-50             18.37      0          0          0          0
-X-50             17.98      0          0          0          0
+X-50_2           17.98      0          0          0          0
 36"CMP           17.94      0          0          0          0
 Rum              12.00      0          0          0          0
 BkHead           12.00      0          0          0          0
+30"RCP           12.00      0          0          0          0
+36"RCP(2)        12.80      0          0          0          0
+
+[OUTFALLS]
+;;Name           Elev       Type       Stage      Gated
+;;-------------- ---------- ---------- ---------- -----
+Ex_2             20.00      FREE                  NO
 
 [STORAGE]
 ;;Name           Elev       MaxDepth   InitDepth  Shape      Curve/Params
 ;;-------------- ---------- ---------- ---------- ---------- ----------
-GrnLks           19.50      -0.09      0          FUNCTIONAL 0 0          0
-Mallard          18.00      -2.80      3.58       FUNCTIONAL 0 0          0
+GrnLks           19.50      10.00      0          FUNCTIONAL 1000.00 0          0
+Mallard          18.00      10.00      3.58       FUNCTIONAL 1000.00 0          0
 
 [CONDUITS]
 ;;Name           From             To               Length     Roughness  InOffset   OutOffset  InitFlow   MaxFlow
 ;;-------------- ---------------- ---------------- ---------- ---------- ---------- ---------- ---------- ----------
-Chn              X-28             X-27             450.00     0          18.86      18.94      0          0
-Chn              X-27             X-26             475.00     0          18.94      17.22      0          0
-Chn              X-26             X-25             325.00     0          17.22      17.17      0          0
-Chn              X-25             X-24             425.00     0          17.17      15.77      0          0
-Chn              X-24             EW-3             120.00     0.0350     14.33      14.27      0          0
+Chn              X-28             X-27             450.00     0.0130     18.86      18.94      0          0
+Chn_2            X-27             X-26             475.00     0.0130     18.94      17.22      0          0
+Chn_3            X-26             X-25             325.00     0.0130     17.22      17.17      0          0
+Chn_4            X-25             X-24             425.00     0.0130     17.17      15.77      0          0
+Chn_5            X-24             EW-3             120.00     0.0350     14.33      14.27      0          0
 231.1            EW-3             DI-1             260.00     0.0100     14.27      14.14      0          0
 2-60"PE-b        DI-1             DI-2             80.00      0.0100     14.14      14.10      0          0
 2-60"PE-c        DI-2             DI-3             285.00     0.0100     14.10      13.96      0          0
@@ -108,66 +126,66 @@ Chn              X-24             EW-3             120.00     0.0350     14.33  
 2-60"PE-e        DI-4             DI-5             55.00      0.0100     13.85      13.82      0          0
 2-60"PE-f        DI-5             DI-6             150.00     0.0100     13.82      13.75      0          0
 2-60"PE-g        DI-6             X-15             175.00     0.0100     13.75      13.66      0          0
-Chn              X-36             X-35             700.00     0.0350     16.98      16.31      0          0
-Chn              X-35             X-34             750.00     0.0350     16.31      15.60      0          0
-Chn              X-34             X-33             500.00     0.0350     15.60      15.13      0          0
-Chn              X-33             X-32             175.00     0.0350     15.13      14.96      0          0
-Chn              X-32             X-31             375.00     0.0350     14.96      14.77      0          0
-Chn              X-31             X-30             500.00     0.0350     14.77      14.52      0          0
+Chn_6            X-36             X-35             700.00     0.0350     16.98      16.31      0          0
+Chn_7            X-35             X-34             750.00     0.0350     16.31      15.60      0          0
+Chn_8            X-34             X-33             500.00     0.0350     15.60      15.13      0          0
+Chn_9            X-33             X-32             175.00     0.0350     15.13      14.96      0          0
+Chn_10           X-32             X-31             375.00     0.0350     14.96      14.77      0          0
+Chn_11           X-31             X-30             500.00     0.0350     14.77      14.52      0          0
 48"              EW-1             EW-2             81.00      0.0130     14.50      14.46      0          0
-Chn              EW-2             X-24             225.00     0.0350     14.45      14.33      0          0
-Chn              X-30             EW-1             44.00      0.0350     14.52      14.50      0          0
+Chn_12           EW-2             X-24             225.00     0.0350     14.45      14.33      0          0
+Chn_13           X-30             EW-1             44.00      0.0350     14.52      14.50      0          0
 8x5BC(1)         X-15             X-44             600.00     0.0130     13.66      13.36      0          0
 8x5BC(2)         X-44             EX               30.00      0.0130     13.36      13.34      0          0
-8x5BC(3)         EX               Ex               135.00     0.0130     13.34      13.28      0          0
+8x5BC(3)         EX               Ex_2             135.00     0.0130     13.34      13.28      0          0
 42"RCP           30"RCP           EW-7             105.00     0.0130     12.00      11.90      0          0
 8x5BC(5)         EW-7             X-46             250.00     0.0130     11.90      11.68      0          0
 8x5BC(6)         X-46             X-47             300.00     0.0130     11.68      11.41      0          0
 8x5BC(7)         X-47             X-48             300.00     0.0130     11.41      11.14      0          0
-Chn              X-10             X-11             400.00     0          18.78      18.10      0          0
-Chn              X-11             X-12             520.00     0          18.10      18.00      0          0
-Chn              X-12             X-13             600.00     0          18.00      18.38      0          0
-Chn              X-13             X-14             360.00     0          18.38      17.49      0          0
-Chn              X-14             X-15             150.00     0          17.49      16.87      0          0
+Chn_14           X-10             X-11             400.00     0.0130     18.78      18.10      0          0
+Chn_15           X-11             X-12             520.00     0.0130     18.10      18.00      0          0
+Chn_16           X-12             X-13             600.00     0.0130     18.00      18.38      0          0
+Chn_17           X-13             X-14             360.00     0.0130     18.38      17.49      0          0
+Chn_18           X-14             X-15             150.00     0.0130     17.49      16.87      0          0
 8x5BC(8)         X-48             GrnLks           110.00     0.0130     11.14      11.04      0          0
 36"RCP-1         EW-5             EW-6             62.00      0.0130     17.70      17.70      0          0
-Chn              EW-6             X-5              645.00     0          17.88      17.87      0          0
+Chn_19           EW-6             X-5              645.00     0.0130     17.88      17.87      0          0
 6x3BC(1)         EW-X40           EW-X41           97.00      0.0130     16.25      16.20      0          0
-Chn              EW-X41           X-42             180.00     0.0300     16.20      16.11      0          0
-Chn              X-39             X-40             400.00     0.0300     16.50      16.30      0          0
-Chn              X-8              X-9              225.00     0.0300     16.76      16.65      0          0
-Chn              X-9              X-39             300.00     0.0300     16.65      16.50      0          0
-Chn              EW-10            X-7              325.00     0.0300     18.00      17.33      0          0
-Chn              X-7              X-8              125.00     0.0300     16.83      16.76      0          0
+Chn_20           EW-X41           X-42             180.00     0.0300     16.20      16.11      0          0
+Chn_21           X-39             X-40             400.00     0.0300     16.50      16.30      0          0
+Chn_22           X-8              X-9              225.00     0.0300     16.76      16.65      0          0
+Chn_23           X-9              X-39             300.00     0.0300     16.65      16.50      0          0
+Chn_24           EW-10            X-7              325.00     0.0300     18.00      17.33      0          0
+Chn_25           X-7              X-8              125.00     0.0300     16.83      16.76      0          0
 36"RCP-37        EW-9             EW-10            42.00      0.0130     20.80      20.80      0          0
-Chn              X-1              EW-5             40.00      0          18.94      17.70      0          0
-Chn              X-37             EW-9             25.00      0          21.01      21.01      0          0
-Chn              X-40             EW-X40           95.00      0.0300     16.30      16.25      0          0
+Chn_26           X-1              EW-5             40.00      0.0130     18.94      17.70      0          0
+Chn_27           X-37             EW-9             25.00      0.0130     21.01      21.01      0          0
+Chn_28           X-40             EW-X40           95.00      0.0300     16.30      16.25      0          0
 Pr               X-6              X-7              800.00     0.0300     17.23      16.83      0          0
-Chn              X-3              X-4              300.00     0.0300     17.74      17.59      0          0
-Chn              X-4              X-5              580.00     0.0300     17.59      17.30      0          0
-Chn              X-5              X-6              150.00     0.0300     17.30      17.23      0          0
-Chn              X-42             EW               75.00      0.0300     16.11      16.08      0          0
+Chn_29           X-3              X-4              300.00     0.0300     17.74      17.59      0          0
+Chn_30           X-4              X-5              580.00     0.0300     17.59      17.30      0          0
+Chn_31           X-5              X-6              150.00     0.0300     17.30      17.23      0          0
+Chn_32           X-42             EW               75.00      0.0300     16.11      16.08      0          0
 6x3BC(2)         EW               GrnLks           15.00      0.0130     16.08      16.07      0          0
-Chn              X-54             X-50             70.00      0          12.20      14.81      0          0
-Chn              X-51             X-52             130.00     0          14.27      14.08      0          0
-Chn              X-52             36"CMP           115.00     0.0140     14.08      14.30      0          0
-Chn              Mallard          I-55             148.00     0.0150     12.70      13.00      0          0
-Chn              X-50             X-50             50.00      0          14.81      15.23      0          0
-Chn              X-50             X-51             10.00      0          15.23      14.27      0          0
+Chn_33           X-54             X-50             70.00      0.0130     12.20      14.81      0          0
+Chn_34           X-51             X-52             130.00     0.0130     14.27      14.08      0          0
+Chn_35           X-52             36"CMP           115.00     0.0140     14.08      14.30      0          0
+Chn_36           Mallard          I-55             148.00     0.0150     12.70      13.00      0          0
+Chn_37           X-50             X-50             50.00      0.0130     14.81      15.23      0          0
+Chn_38           X-50             X-51             10.00      0.0130     15.23      14.27      0          0
 36"CMP-X52       36"CMP           Mallard          150.00     0.0240     14.30      9.12       0          0
 36"RCP(1)        36"RCP(2)        BkHead           220.00     0.0130     12.80      3.99       0          0
-Canal            BkHead           Rum              100.00     0          2.00       1.80       0          0
-GrnLk            GrnLks           X-54             90.00      0          15.66      12.95      0          0
+Canal            BkHead           Rum              100.00     0.0130     2.00       1.80       0          0
+GrnLk            GrnLks           X-54             90.00      0.0130     15.66      12.95      0          0
 
 [XSECTIONS]
 ;;Link           Shape        Geom1      Geom2      Geom3      Geom4      Barrels
 ;;-------------- ------------ ---------- ---------- ---------- ---------- ----------
-Chn              IRREGULAR    3.44       0          0          0          1
-Chn              IRREGULAR    3.36       0          0          0          1
-Chn              IRREGULAR    4.18       0          0          0          1
-Chn              IRREGULAR    2.63       0          0          0          1
-Chn              TRAPEZOIDAL  5.30       5.00       0          0          1
+Chn              TRAPEZOIDAL  3.44       10.00      2          2          1
+Chn_2            TRAPEZOIDAL  3.36       10.00      2          2          1
+Chn_3            TRAPEZOIDAL  4.18       10.00      2          2          1
+Chn_4            TRAPEZOIDAL  2.63       10.00      2          2          1
+Chn_5            TRAPEZOIDAL  5.30       5.00       1          1          1
 231.1            CIRCULAR     5.00       0          0          0          2
 2-60"PE-b        CIRCULAR     5.00       0          0          0          2
 2-60"PE-c        CIRCULAR     5.00       0          0          0          2
@@ -175,15 +193,15 @@ Chn              TRAPEZOIDAL  5.30       5.00       0          0          1
 2-60"PE-e        CIRCULAR     5.00       0          0          0          2
 2-60"PE-f        CIRCULAR     5.00       0          0          0          2
 2-60"PE-g        CIRCULAR     5.00       0          0          0          2
-Chn              TRAPEZOIDAL  3.92       5.00       0          0          1
-Chn              TRAPEZOIDAL  4.69       5.00       0          0          1
-Chn              TRAPEZOIDAL  5.10       5.00       0          0          1
-Chn              TRAPEZOIDAL  6.27       5.00       0          0          1
-Chn              TRAPEZOIDAL  6.53       5.00       0          0          1
-Chn              TRAPEZOIDAL  6.53       5.00       0          0          1
+Chn_6            TRAPEZOIDAL  3.92       5.00       1          1          1
+Chn_7            TRAPEZOIDAL  4.69       5.00       1          1          1
+Chn_8            TRAPEZOIDAL  5.10       5.00       1          1          1
+Chn_9            TRAPEZOIDAL  6.27       5.00       1          1          1
+Chn_10           TRAPEZOIDAL  6.53       5.00       1          1          1
+Chn_11           TRAPEZOIDAL  6.53       5.00       1          1          1
 48"              CIRCULAR     4.00       0          0          0          1
-Chn              TRAPEZOIDAL  6.77       5.00       0          0          1
-Chn              TRAPEZOIDAL  6.98       5.00       0          0          1
+Chn_12           TRAPEZOIDAL  6.77       5.00       1          1          1
+Chn_13           TRAPEZOIDAL  6.98       5.00       1          1          1
 8x5BC(1)         RECT_CLOSED  5.00       8.00       0          0          1
 8x5BC(2)         RECT_CLOSED  5.00       8.00       0          0          1
 8x5BC(3)         RECT_CLOSED  5.00       8.00       0          0          1
@@ -191,50 +209,50 @@ Chn              TRAPEZOIDAL  6.98       5.00       0          0          1
 8x5BC(5)         RECT_CLOSED  5.00       8.00       0          0          1
 8x5BC(6)         RECT_CLOSED  5.00       8.00       0          0          1
 8x5BC(7)         RECT_CLOSED  5.00       8.00       0          0          1
-Chn              IRREGULAR    2.82       0          0          0          1
-Chn              IRREGULAR    3.70       0          0          0          1
-Chn              IRREGULAR    3.60       0          0          0          1
-Chn              IRREGULAR    3.42       0          0          0          1
-Chn              IRREGULAR    4.21       0          0          0          1
+Chn_14           TRAPEZOIDAL  2.82       10.00      2          2          1
+Chn_15           TRAPEZOIDAL  3.70       10.00      2          2          1
+Chn_16           TRAPEZOIDAL  3.60       10.00      2          2          1
+Chn_17           TRAPEZOIDAL  3.42       10.00      2          2          1
+Chn_18           TRAPEZOIDAL  4.21       10.00      2          2          1
 8x5BC(8)         RECT_CLOSED  5.00       8.00       0          0          1
 36"RCP-1         CIRCULAR     3.00       0          0          0          1
-Chn              IRREGULAR    3.82       0          0          0          1
+Chn_19           TRAPEZOIDAL  3.82       10.00      2          2          1
 6x3BC(1)         RECT_CLOSED  3.00       6.00       0          0          1
-Chn              TRAPEZOIDAL  2.80       10.00      0          0          1
-Chn              TRAPEZOIDAL  2.75       10.00      0          0          1
-Chn              TRAPEZOIDAL  3.00       10.00      0          0          1
-Chn              TRAPEZOIDAL  2.75       10.00      0          0          1
-Chn              TRAPEZOIDAL  3.27       10.00      0          0          1
-Chn              TRAPEZOIDAL  3.04       10.00      0          0          1
+Chn_20           TRAPEZOIDAL  2.80       10.00      1          1          1
+Chn_21           TRAPEZOIDAL  2.75       10.00      1          1          1
+Chn_22           TRAPEZOIDAL  3.00       10.00      1          1          1
+Chn_23           TRAPEZOIDAL  2.75       10.00      1          1          1
+Chn_24           TRAPEZOIDAL  3.27       10.00      1          1          1
+Chn_25           TRAPEZOIDAL  3.04       10.00      1          1          1
 36"RCP-37        CIRCULAR     3.00       0          0          0          1
-Chn              IRREGULAR    2.56       0          0          0          1
-Chn              IRREGULAR    1.99       0          0          0          1
-Chn              TRAPEZOIDAL  3.15       10.00      0          0          1
-Pr               TRAPEZOIDAL  2.67       10.00      0          0          1
-Chn              TRAPEZOIDAL  3.56       8.00       0          0          1
-Chn              TRAPEZOIDAL  3.90       8.00       0          0          1
-Chn              TRAPEZOIDAL  3.77       8.00       0          0          1
-Chn              TRAPEZOIDAL  2.80       10.00      0          0          1
+Chn_26           TRAPEZOIDAL  2.56       10.00      2          2          1
+Chn_27           TRAPEZOIDAL  1.99       10.00      2          2          1
+Chn_28           TRAPEZOIDAL  3.15       10.00      1          1          1
+Pr               TRAPEZOIDAL  2.67       10.00      1          1          1
+Chn_29           TRAPEZOIDAL  3.56       8.00       1          1          1
+Chn_30           TRAPEZOIDAL  3.90       8.00       1          1          1
+Chn_31           TRAPEZOIDAL  3.77       8.00       1          1          1
+Chn_32           TRAPEZOIDAL  2.80       10.00      1          1          1
 6x3BC(2)         RECT_CLOSED  3.00       6.00       0          0          1
-Chn              IRREGULAR    3.56       0          0          0          1
-Chn              IRREGULAR    3.16       0          0          0          1
-Chn              IRREGULAR    3.20       0          0          0          1
-Chn              TRAPEZOIDAL  2.50       2.35       0          0          1
-Chn              IRREGULAR    2.75       0          0          0          1
-Chn              IRREGULAR    2.75       0          0          0          1
+Chn_33           TRAPEZOIDAL  3.56       10.00      2          2          1
+Chn_34           TRAPEZOIDAL  3.16       10.00      2          2          1
+Chn_35           TRAPEZOIDAL  3.20       10.00      2          2          1
+Chn_36           TRAPEZOIDAL  2.50       2.35       1          1          1
+Chn_37           TRAPEZOIDAL  2.75       10.00      2          2          1
+Chn_38           TRAPEZOIDAL  2.75       10.00      2          2          1
 36"CMP-X52       CIRCULAR     3.00       0          0          0          1
 36"RCP(1)        CIRCULAR     3.00       0          0          0          1
-Canal            IRREGULAR    10.00      0          0          0          1
-GrnLk            IRREGULAR    2.98       0          0          0          1
+Canal            TRAPEZOIDAL  10.00      10.00      2          2          1
+GrnLk            TRAPEZOIDAL  2.98       10.00      2          2          1
 
 [LOSSES]
 ;;Link           Inlet      Outlet     Average    Flap Gate
 ;;-------------- ---------- ---------- ---------- ----------
 Chn              0          0          0          NO
-Chn              0          0          0          NO
-Chn              0          0          0          NO
-Chn              0          0          0          NO
-Chn              0          0          0          NO
+Chn_2            0          0          0          NO
+Chn_3            0          0          0          NO
+Chn_4            0          0          0          NO
+Chn_5            0          0          0          NO
 231.1            0          0          0          NO
 2-60"PE-b        0          0          0          NO
 2-60"PE-c        0          0          0          NO
@@ -242,15 +260,15 @@ Chn              0          0          0          NO
 2-60"PE-e        0          0          0          NO
 2-60"PE-f        0          0          0          NO
 2-60"PE-g        0          0          0          NO
-Chn              0          0          0          NO
-Chn              0          0          0          NO
-Chn              0          0          0          NO
-Chn              0          0          0          NO
-Chn              0          0          0          NO
-Chn              0          0          0          NO
+Chn_6            0          0          0          NO
+Chn_7            0          0          0          NO
+Chn_8            0          0          0          NO
+Chn_9            0          0          0          NO
+Chn_10           0          0          0          NO
+Chn_11           0          0          0          NO
 48"              0          0          0          NO
-Chn              0          0          0          NO
-Chn              0          0          0          NO
+Chn_12           0          0          0          NO
+Chn_13           0          0          0          NO
 8x5BC(1)         0          0          0          NO
 8x5BC(2)         0          0          0          NO
 8x5BC(3)         0          0          0          NO
@@ -258,37 +276,37 @@ Chn              0          0          0          NO
 8x5BC(5)         0          0          0          NO
 8x5BC(6)         0          0          0          NO
 8x5BC(7)         0          0          0          NO
-Chn              0          0          0          NO
-Chn              0          0          0          NO
-Chn              0          0          0          NO
-Chn              0          0          0          NO
-Chn              0          0          0          NO
+Chn_14           0          0          0          NO
+Chn_15           0          0          0          NO
+Chn_16           0          0          0          NO
+Chn_17           0          0          0          NO
+Chn_18           0          0          0          NO
 8x5BC(8)         0          0          0          NO
 36"RCP-1         0          0          0          NO
-Chn              0          0          0          NO
+Chn_19           0          0          0          NO
 6x3BC(1)         0          0          0          NO
-Chn              0          0          0          NO
-Chn              0          0          0          NO
-Chn              0          0          0          NO
-Chn              0          0          0          NO
-Chn              0          0          0          NO
-Chn              0          0          0          NO
+Chn_20           0          0          0          NO
+Chn_21           0          0          0          NO
+Chn_22           0          0          0          NO
+Chn_23           0          0          0          NO
+Chn_24           0          0          0          NO
+Chn_25           0          0          0          NO
 36"RCP-37        0          0          0          NO
-Chn              0          0          0          NO
-Chn              0          0          0          NO
-Chn              0          0          0          NO
+Chn_26           0          0          0          NO
+Chn_27           0          0          0          NO
+Chn_28           0          0          0          NO
 Pr               0          0          0          NO
-Chn              0          0          0          NO
-Chn              0          0          0          NO
-Chn              0          0          0          NO
-Chn              0          0          0          NO
+Chn_29           0          0          0          NO
+Chn_30           0          0          0          NO
+Chn_31           0          0          0          NO
+Chn_32           0          0          0          NO
 6x3BC(2)         0          0          0          NO
-Chn              0          0          0          NO
-Chn              0          0          0          NO
-Chn              0          0          0          NO
-Chn              0          0          0          NO
-Chn              0          0          0          NO
-Chn              0          0          0          NO
+Chn_33           0          0          0          NO
+Chn_34           0          0          0          NO
+Chn_35           0          0          0          NO
+Chn_36           0          0          0          NO
+Chn_37           0          0          0          NO
+Chn_38           0          0          0          NO
 36"CMP-X52       0          0          0          NO
 36"RCP(1)        0          0          0          NO
 Canal            0          0          0          NO
@@ -321,7 +339,7 @@ EW-2             77.85              135.26
 X-30             58.02              135.00            
 X-44             204.96             195.91            
 EX               204.93             214.10            
-Ex               223.17             214.10            
+Ex_2             223.17             214.10            
 EW-7             223.20             252.86            
 X-46             221.00             276.15            
 X-47             238.68             282.76            
@@ -357,7 +375,7 @@ X-52             364.98             287.48
 Mallard          399.47             286.37            
 I-55             418.00             286.37            
 X-50             317.69             287.77            
-X-50             333.34             287.22            
+X-50_2           333.34             287.22            
 36"CMP           381.97             286.37            
 Rum              449.99             286.11            
 BkHead           433.60             286.37            

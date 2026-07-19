@@ -20,6 +20,18 @@ INERTIAL_DAMPING     PARTIAL
 NORMAL_FLOW_LIMITED  BOTH
 MAX_TRIALS           50
 HEAD_TOLERANCE       0.0033
+START_DATE           01/01/2001
+START_TIME           00:00:00
+REPORT_START_DATE    01/01/2001
+REPORT_START_TIME    00:00:00
+END_DATE             01/02/2001
+END_TIME             00:00:00
+SWEEP_START          01/01
+SWEEP_END            12/31
+DRY_DAYS             0
+REPORT_STEP          00:15:00
+WET_STEP             00:05:00
+DRY_STEP             01:00:00
 
 [JUNCTIONS]
 ;;Name           Elev       MaxDepth   InitDepth  SurDepth   Aponded
@@ -28,7 +40,6 @@ BOT33            18.06      0          0          0          0
 BOT34            18.04      0          0          0          0
 BOT32            17.90      0          0          0          0
 MH32A            17.85      0          0          0          0
-CANAL80          15.70      0          0          0          0
 MH27             17.30      0          0          0          0
 BOT29            17.39      0          0          0          0
 BOT30            17.37      0          0          0          0
@@ -73,17 +84,22 @@ SURF14           16.53      0          0          0          0
 SURF12           16.16      0          0          0          0
 SURF14A          16.53      0          0          0          0
 
+[OUTFALLS]
+;;Name           Elev       Type       Stage      Gated
+;;-------------- ---------- ---------- ---------- -----
+CANAL80          15.70      FREE                  NO
+
 [STORAGE]
 ;;Name           Elev       MaxDepth   InitDepth  Shape      Curve/Params
 ;;-------------- ---------- ---------- ---------- ---------- ----------
-SURF34           18.42      -0.32      0          FUNCTIONAL 0 0          0
-SURF30           18.10      0          0          FUNCTIONAL 0 0          0
-SURF25           18.00      0          0          FUNCTIONAL 0 0          0
-SURF20           17.00      -1.19      0          FUNCTIONAL 0 0          0
-SURF22           16.50      0          0          FUNCTIONAL 0 0          0
-SURF23           16.51      0          0          FUNCTIONAL 0 0          0
-SURF21           17.00      -1.56      0          FUNCTIONAL 0 0          0
-SURF19           17.00      0          0          FUNCTIONAL 0 0          0
+SURF34           18.42      10.00      0          FUNCTIONAL 1000.00 0          0
+SURF30           18.10      10.00      0          FUNCTIONAL 1000.00 0          0
+SURF25           18.00      10.00      0          FUNCTIONAL 1000.00 0          0
+SURF20           17.00      10.00      0          FUNCTIONAL 1000.00 0          0
+SURF22           16.50      10.00      0          FUNCTIONAL 1000.00 0          0
+SURF23           16.51      10.00      0          FUNCTIONAL 1000.00 0          0
+SURF21           17.00      10.00      0          FUNCTIONAL 1000.00 0          0
+SURF19           17.00      10.00      0          FUNCTIONAL 1000.00 0          0
 
 [CONDUITS]
 ;;Name           From             To               Length     Roughness  InOffset   OutOffset  InitFlow   MaxFlow
@@ -119,21 +135,20 @@ R20              BOT20            CANAL60          142.00     0.0240     12.83  
 R19              BOT19            CANAL50          134.00     0.0240     12.50      12.00      0          0
 R14A             BOT14A           CANAL10          126.00     0.0130     13.03      13.02      0          0
 R18A             BOT18A           CANAL30          139.00     0.0130     13.06      12.77      0          0
+S33-30           SURF33           SURF30           200.00     0.0140     18.06      17.37      0          0
 S-3228           SURF32           SURF28           224.00     0.0140     17.90      17.30      0          0
+S-2925           SURF29           SURF25           200.00     0.0140     17.39      16.70      0          0
+S-28C70          SURF28           CANAL70          350.00     0.0140     17.03      15.50      0          0
 S-2622           SURF26           SURF22           220.00     0.0140     16.64      15.71      0          0
 S-1723           SURF17           SURF23           260.00     0.0140     16.58      16.01      0          0
 S-1519           SURF15           SURF19           240.00     0.0140     16.79      16.49      0          0
 S-1813           SURF18           SURF13           250.00     0.0140     16.74      15.99      0          0
 S-18A12          SURF18A          SURF12           250.00     0.0140     16.86      15.66      0          0
 
-[ORIFICES]
-;;Name           From             To               Type       Offset     Qcoeff     Gated    CloseTime
-;;-------------- ---------------- ---------------- ---------- ---------- ---------- -------- ----------
-WEIR34           SURF34           BOT34            SIDE       0          0.650      NO       0
-
 [WEIRS]
 ;;Name           From             To               Type       CrestHt    Qcoeff     Gated    EndCon   EndCoeff   Surcharge
 ;;-------------- ---------------- ---------------- ---------- ---------- ---------- -------- -------- ---------- ----------
+WEIR34           SURF34           BOT34            V-NOTCH    18.04      1.840      NO       0        0          YES
 WEIR33           BOT33            SURF33           V-NOTCH    18.06      1.840      NO       0        0          YES
 WEIR32           BOT32            SURF32           V-NOTCH    17.90      1.840      NO       0        0          YES
 WEIR30           BOT30            SURF30           V-NOTCH    17.37      1.840      NO       0        0          YES
@@ -156,10 +171,7 @@ WEIR14           SURF14           BOT14            TRANSVERSE 16.07      1.840  
 WEIR12           SURF12           BOT12            TRANSVERSE 15.66      1.840      NO       0        0          YES
 WEIR14A          SURF14A          BOT14A           V-NOTCH    16.03      1.840      NO       0        0          YES
 WEIR3433         SURF34           SURF33           TRANSVERSE 18.42      1.840      NO       0        0          YES
-S33-30           SURF33           SURF30           TRANSVERSE 0          1.840      NO       0        0          YES
 WEIR3029         SURF30           SURF29           TRANSVERSE 17.93      1.840      NO       0        0          YES
-S-2925           SURF29           SURF25           TRANSVERSE 0          1.840      NO       0        0          YES
-S-28C70          SURF28           CANAL70          TRANSVERSE 0          1.840      NO       0        0          YES
 WEIR2526         SURF25           SURF26           TRANSVERSE 16.89      1.840      NO       0        0          YES
 WEIR22C60        SURF22           CANAL60          TRANSVERSE 17.00      1.840      NO       0        0          YES
 WEIR23C50        SURF23           CANAL50          TRANSVERSE 17.00      1.840      NO       0        0          YES
@@ -202,46 +214,46 @@ R20              CIRCULAR     2.50       0          0          0          1
 R19              CIRCULAR     2.00       0          0          0          1
 R14A             CIRCULAR     2.00       0          0          0          1
 R18A             CIRCULAR     2.00       0          0          0          1
-S-3228           TRAPEZOIDAL  0.50       0          0          0          1
-S-2622           TRAPEZOIDAL  0.50       0          0          0          1
-S-1723           TRAPEZOIDAL  0.50       0          0          0          1
-S-1519           TRAPEZOIDAL  0.50       0          0          0          1
-S-1813           TRAPEZOIDAL  0.50       0          0          0          1
-S-18A12          TRAPEZOIDAL  0.50       0          0          0          1
-WEIR34           RECT_CLOSED  0.01       0          0          0          
-WEIR33           RECT_OPEN    0          4.00       0          0          
-WEIR32           RECT_OPEN    0          4.00       0          0          
-WEIR30           RECT_OPEN    0          4.00       0          0          
-WEIR29           RECT_OPEN    0          4.00       0          0          
-WEIR28           RECT_OPEN    0          4.00       0          0          
-WEIR25           RECT_OPEN    0          4.00       0          0          
-WEIR26           RECT_OPEN    0          4.00       0          0          
-WEIR20           RECT_OPEN    0          4.00       0          0          
-WEIR22           RECT_OPEN    0          4.00       0          0          
-WEIR23           RECT_OPEN    0          4.00       0          0          
-WEIR21           RECT_OPEN    0          4.00       0          0          
-WEIR19           RECT_OPEN    0          4.00       0          0          
-WEIR15           RECT_OPEN    0          4.00       0          0          
-WEIR16           RECT_OPEN    0          4.00       0          0          
-WEIR17           RECT_OPEN    0          4.00       0          0          
-WEIR18           RECT_OPEN    0          4.00       0          0          
-WEIR18A          RECT_OPEN    0          4.00       0          0          
-WEIR13           RECT_OPEN    0          4.00       0          0          
-WEIR14           RECT_OPEN    0          4.00       0          0          
-WEIR12           RECT_OPEN    0          4.00       0          0          
-WEIR14A          RECT_OPEN    0          4.00       0          0          
-WEIR3433         RECT_OPEN    0          20.00      0          0          
-S33-30           RECT_OPEN    0          0          0          0          
-WEIR3029         RECT_OPEN    0          20.00      0          0          
-S-2925           RECT_OPEN    0          0          0          0          
-S-28C70          RECT_OPEN    0          0          0          0          
-WEIR2526         RECT_OPEN    0          20.00      0          0          
-WEIR22C60        RECT_OPEN    0          20.00      0          0          
-WEIR23C50        RECT_OPEN    0          20.00      0          0          
-WEIR19C50        RECT_OPEN    0          20.00      0          0          
-WEIR21C60        RECT_OPEN    0          20.00      0          0          
-WEIR20C60        RECT_OPEN    0          20.00      0          0          
-weir26C70        RECT_OPEN    0          20.00      0          0          
+S33-30           TRAPEZOIDAL  0.50       1.00       1          1          1
+S-3228           TRAPEZOIDAL  0.50       1.00       1          1          1
+S-2925           TRAPEZOIDAL  0.50       1.00       1          1          1
+S-28C70          TRAPEZOIDAL  0.50       1.00       1          1          1
+S-2622           TRAPEZOIDAL  0.50       1.00       1          1          1
+S-1723           TRAPEZOIDAL  0.50       1.00       1          1          1
+S-1519           TRAPEZOIDAL  0.50       1.00       1          1          1
+S-1813           TRAPEZOIDAL  0.50       1.00       1          1          1
+S-18A12          TRAPEZOIDAL  0.50       1.00       1          1          1
+WEIR34           TRIANGULAR   1.00       4.00       0          0
+WEIR33           TRIANGULAR   1.00       4.00       0          0
+WEIR32           TRIANGULAR   1.00       4.00       0          0
+WEIR30           TRIANGULAR   1.00       4.00       0          0
+WEIR29           TRIANGULAR   1.00       4.00       0          0
+WEIR28           TRIANGULAR   1.00       4.00       0          0
+WEIR25           TRIANGULAR   1.00       4.00       0          0
+WEIR26           TRIANGULAR   1.00       4.00       0          0
+WEIR20           TRIANGULAR   1.00       4.00       0          0
+WEIR22           TRIANGULAR   1.00       4.00       0          0
+WEIR23           TRIANGULAR   1.00       4.00       0          0
+WEIR21           TRIANGULAR   1.00       4.00       0          0
+WEIR19           TRIANGULAR   1.00       4.00       0          0
+WEIR15           TRIANGULAR   1.00       4.00       0          0
+WEIR16           TRIANGULAR   1.00       4.00       0          0
+WEIR17           RECT_OPEN    1.00       4.00       0          0
+WEIR18           TRIANGULAR   1.00       4.00       0          0
+WEIR18A          TRIANGULAR   1.00       4.00       0          0
+WEIR13           TRIANGULAR   1.00       4.00       0          0
+WEIR14           RECT_OPEN    1.00       4.00       0          0
+WEIR12           RECT_OPEN    1.00       4.00       0          0
+WEIR14A          TRIANGULAR   1.00       4.00       0          0
+WEIR3433         RECT_OPEN    1.00       20.00      0          0
+WEIR3029         RECT_OPEN    1.00       20.00      0          0
+WEIR2526         RECT_OPEN    1.00       20.00      0          0
+WEIR22C60        RECT_OPEN    1.00       20.00      0          0
+WEIR23C50        RECT_OPEN    1.00       20.00      0          0
+WEIR19C50        RECT_OPEN    1.00       20.00      0          0
+WEIR21C60        RECT_OPEN    1.00       20.00      0          0
+WEIR20C60        RECT_OPEN    1.00       20.00      0          0
+weir26C70        RECT_OPEN    1.00       20.00      0          0
 
 [LOSSES]
 ;;Link           Inlet      Outlet     Average    Flap Gate
@@ -277,7 +289,10 @@ R20              0          0          0          NO
 R19              0          0          0          NO
 R14A             0          0          0          NO
 R18A             0          0          0          NO
+S33-30           0          0          0          NO
 S-3228           0          0          0          NO
+S-2925           0          0          0          NO
+S-28C70          0          0          0          NO
 S-2622           0          0          0          NO
 S-1723           0          0          0          NO
 S-1519           0          0          0          NO

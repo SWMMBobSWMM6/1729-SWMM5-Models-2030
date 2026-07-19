@@ -18,6 +18,18 @@ ROUTING_STEP         00:00:03
 VARIABLE_STEP        0.75
 INERTIAL_DAMPING     PARTIAL
 NORMAL_FLOW_LIMITED  BOTH
+START_DATE           01/01/2001
+START_TIME           00:00:00
+REPORT_START_DATE    01/01/2001
+REPORT_START_TIME    00:00:00
+END_DATE             01/02/2001
+END_TIME             00:00:00
+SWEEP_START          01/01
+SWEEP_END            12/31
+DRY_DAYS             0
+REPORT_STEP          00:15:00
+WET_STEP             00:05:00
+DRY_STEP             01:00:00
 
 [JUNCTIONS]
 ;;Name           Elev       MaxDepth   InitDepth  SurDepth   Aponded
@@ -89,7 +101,6 @@ NORMAL_FLOW_LIMITED  BOTH
 28-3-65          710.80     0          0          0          0
 28-3-66          711.46     0          0          0          0
 28-3-1A          700.00     0          0          0          0
-146              702.00     0          0          0          0
 147              702.00     0          0          0          0
 150              700.00     0          0          0          0
 C1-2             700.00     0          0          0          0
@@ -106,6 +117,13 @@ C1-4             696.00     0          0          0          0
 181              694.00     0          0          0          0
 183              694.00     0          0          0          0
 185              694.00     0          0          0          0
+Shepard_Rd       683.91     0          0          0          0
+2ND_48"          683.54     0          0          0          0
+
+[OUTFALLS]
+;;Name           Elev       Type       Stage      Gated
+;;-------------- ---------- ---------- ---------- -----
+146              702.00     FREE                  NO
 
 [CONDUITS]
 ;;Name           From             To               Length     Roughness  InOffset   OutOffset  InitFlow   MaxFlow
@@ -176,23 +194,23 @@ L60-61           28-3-61          28-3-60          108.00     0.0130     703.31 
 L59-60           28-3-60          28-3-59          291.00     0.0130     702.86     701.86     0          0
 L58-59           28-3-59          28-3-58          212.00     0.0130     701.86     700.06     0          0
 L1A-L1           28-3-1           28-3-1A          50.00      0.0130     680.56     684.51     0          0
-5x6 box          Shepard Rd       2ND 48"          71.00      0.0130     683.91     683.54     0          0
-x-sec            28-3-1A          150              121.00     0          684.51     684.41     0          0
-x-sec            150              C1-2             137.00     0          684.41     684.31     0          0
-x-sec            C1-2             155              199.00     0          684.31     684.21     0          0
-x-sec            155              157              195.00     0          684.21     684.11     0          0
-x-sec            157              163              155.00     0          684.11     684.01     0          0
-x-sec            163              146              135.00     0          684.01     683.91     0          0
-x-sec            147              167              50.00      0          683.54     683.60     0          0
-x-sec            167              169              144.00     0          683.60     683.60     0          0
-x-sec            169              171              191.00     0          683.60     683.10     0          0
-x-sec            171              173              188.00     0          683.10     682.70     0          0
-x-sec            173              C1-4             223.00     0          682.70     682.30     0          0
-x-sec            C1-4             177              288.00     0          682.30     681.20     0          0
-x-sec            177              179              207.00     0          681.20     680.50     0          0
-x-sec            179              181              90.00      0          680.50     680.20     0          0
-x-sec            181              183              207.00     0          680.20     679.30     0          0
-x-sec            183              185              212.00     0          679.30     678.30     0          0
+5x6_box          Shepard_Rd       2ND_48"          71.00      0.0130     683.91     683.54     0          0
+x-sec            28-3-1A          150              121.00     0.0130     684.51     684.41     0          0
+x-sec_2          150              C1-2             137.00     0.0130     684.41     684.31     0          0
+x-sec_3          C1-2             155              199.00     0.0130     684.31     684.21     0          0
+x-sec_4          155              157              195.00     0.0130     684.21     684.11     0          0
+x-sec_5          157              163              155.00     0.0130     684.11     684.01     0          0
+x-sec_6          163              146              135.00     0.0130     684.01     683.91     0          0
+x-sec_7          147              167              50.00      0.0130     683.54     683.60     0          0
+x-sec_8          167              169              144.00     0.0130     683.60     683.60     0          0
+x-sec_9          169              171              191.00     0.0130     683.60     683.10     0          0
+x-sec_10         171              173              188.00     0.0130     683.10     682.70     0          0
+x-sec_11         173              C1-4             223.00     0.0130     682.70     682.30     0          0
+x-sec_12         C1-4             177              288.00     0.0130     682.30     681.20     0          0
+x-sec_13         177              179              207.00     0.0130     681.20     680.50     0          0
+x-sec_14         179              181              90.00      0.0130     680.50     680.20     0          0
+x-sec_15         181              183              207.00     0.0130     680.20     679.30     0          0
+x-sec_16         183              185              212.00     0.0130     679.30     678.30     0          0
 
 [XSECTIONS]
 ;;Link           Shape        Geom1      Geom2      Geom3      Geom4      Barrels
@@ -263,23 +281,23 @@ L60-61           CIRCULAR     2.00       0          0          0          1
 L59-60           CIRCULAR     2.00       0          0          0          1
 L58-59           CIRCULAR     1.75       0          0          0          1
 L1A-L1           CIRCULAR     5.50       0          0          0          1
-5x6 box          RECT_CLOSED  5.00       6.00       0          0          1
-x-sec            IRREGULAR    0          0          0          0          1
-x-sec            IRREGULAR    0          0          0          0          1
-x-sec            IRREGULAR    0          0          0          0          1
-x-sec            IRREGULAR    0          0          0          0          1
-x-sec            IRREGULAR    0          0          0          0          1
-x-sec            IRREGULAR    0          0          0          0          1
-x-sec            IRREGULAR    0          0          0          0          1
-x-sec            IRREGULAR    0          0          0          0          1
-x-sec            IRREGULAR    0          0          0          0          1
-x-sec            IRREGULAR    0          0          0          0          1
-x-sec            IRREGULAR    0          0          0          0          1
-x-sec            IRREGULAR    0          0          0          0          1
-x-sec            IRREGULAR    0          0          0          0          1
-x-sec            IRREGULAR    0          0          0          0          1
-x-sec            IRREGULAR    0          0          0          0          1
-x-sec            IRREGULAR    0          0          0          0          1
+5x6_box          RECT_CLOSED  5.00       6.00       0          0          1
+x-sec            TRAPEZOIDAL  1.00       10.00      2          2          1
+x-sec_2          TRAPEZOIDAL  1.00       10.00      2          2          1
+x-sec_3          TRAPEZOIDAL  1.00       10.00      2          2          1
+x-sec_4          TRAPEZOIDAL  1.00       10.00      2          2          1
+x-sec_5          TRAPEZOIDAL  1.00       10.00      2          2          1
+x-sec_6          TRAPEZOIDAL  1.00       10.00      2          2          1
+x-sec_7          TRAPEZOIDAL  1.00       10.00      2          2          1
+x-sec_8          TRAPEZOIDAL  1.00       10.00      2          2          1
+x-sec_9          TRAPEZOIDAL  1.00       10.00      2          2          1
+x-sec_10         TRAPEZOIDAL  1.00       10.00      2          2          1
+x-sec_11         TRAPEZOIDAL  1.00       10.00      2          2          1
+x-sec_12         TRAPEZOIDAL  1.00       10.00      2          2          1
+x-sec_13         TRAPEZOIDAL  1.00       10.00      2          2          1
+x-sec_14         TRAPEZOIDAL  1.00       10.00      2          2          1
+x-sec_15         TRAPEZOIDAL  1.00       10.00      2          2          1
+x-sec_16         TRAPEZOIDAL  1.00       10.00      2          2          1
 
 [LOSSES]
 ;;Link           Inlet      Outlet     Average    Flap Gate
@@ -350,23 +368,23 @@ L60-61           0          0          0          NO
 L59-60           0          0          0          NO
 L58-59           0          0          0          NO
 L1A-L1           0          0          0          NO
-5x6 box          0          0          0          NO
+5x6_box          0          0          0          NO
 x-sec            0          0          0          NO
-x-sec            0          0          0          NO
-x-sec            0          0          0          NO
-x-sec            0          0          0          NO
-x-sec            0          0          0          NO
-x-sec            0          0          0          NO
-x-sec            0          0          0          NO
-x-sec            0          0          0          NO
-x-sec            0          0          0          NO
-x-sec            0          0          0          NO
-x-sec            0          0          0          NO
-x-sec            0          0          0          NO
-x-sec            0          0          0          NO
-x-sec            0          0          0          NO
-x-sec            0          0          0          NO
-x-sec            0          0          0          NO
+x-sec_2          0          0          0          NO
+x-sec_3          0          0          0          NO
+x-sec_4          0          0          0          NO
+x-sec_5          0          0          0          NO
+x-sec_6          0          0          0          NO
+x-sec_7          0          0          0          NO
+x-sec_8          0          0          0          NO
+x-sec_9          0          0          0          NO
+x-sec_10         0          0          0          NO
+x-sec_11         0          0          0          NO
+x-sec_12         0          0          0          NO
+x-sec_13         0          0          0          NO
+x-sec_14         0          0          0          NO
+x-sec_15         0          0          0          NO
+x-sec_16         0          0          0          NO
 
 [COORDINATES]
 ;;Node           X-Coord            Y-Coord

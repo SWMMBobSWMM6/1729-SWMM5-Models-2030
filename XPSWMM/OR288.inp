@@ -19,28 +19,44 @@ VARIABLE_STEP        0.75
 INERTIAL_DAMPING     PARTIAL
 NORMAL_FLOW_LIMITED  BOTH
 MAX_TRIALS           50
+START_DATE           01/01/2001
+START_TIME           00:00:00
+REPORT_START_DATE    01/01/2001
+REPORT_START_TIME    00:00:00
+END_DATE             01/02/2001
+END_TIME             00:00:00
+SWEEP_START          01/01
+SWEEP_END            12/31
+DRY_DAYS             0
+REPORT_STEP          00:15:00
+WET_STEP             00:05:00
+DRY_STEP             01:00:00
+
+[OUTFALLS]
+;;Name           Elev       Type       Stage      Gated
+;;-------------- ---------- ---------- ---------- -----
+3                25.00      FREE                  NO
 
 [STORAGE]
 ;;Name           Elev       MaxDepth   InitDepth  Shape      Curve/Params
 ;;-------------- ---------- ---------- ---------- ---------- ----------
-2                25.00      0          0          FUNCTIONAL 0 0          0
-3                25.00      0          0          FUNCTIONAL 0 0          0
-5                25.00      0          0          FUNCTIONAL 0 0          0
-7                25.00      0          0          FUNCTIONAL 0 0          0
-9                25.00      0          0          FUNCTIONAL 0 0          0
-11               25.00      0          0          FUNCTIONAL 0 0          0
-13               25.00      0          0          FUNCTIONAL 0 0          0
-15               25.00      0          0          FUNCTIONAL 0 0          0
-17               25.00      0          0          FUNCTIONAL 0 0          0
-19               25.00      0          0          FUNCTIONAL 0 0          0
-21               25.00      0          0          FUNCTIONAL 0 0          0
-23               25.00      0          0          FUNCTIONAL 0 0          0
-25               25.00      0          0          FUNCTIONAL 0 0          0
-27               25.00      0          0          FUNCTIONAL 0 0          0
-29               25.00      0          0          FUNCTIONAL 0 0          0
-31               25.00      0          0          FUNCTIONAL 0 0          0
-33               25.00      0          0          FUNCTIONAL 0 0          0
-35               25.00      0          0          FUNCTIONAL 0 0          0
+2                25.00      10.00      0          FUNCTIONAL 1000.00 0          0
+5                25.00      10.00      0          FUNCTIONAL 1000.00 0          0
+7                25.00      10.00      0          FUNCTIONAL 1000.00 0          0
+9                25.00      10.00      0          FUNCTIONAL 1000.00 0          0
+11               25.00      10.00      0          FUNCTIONAL 1000.00 0          0
+13               25.00      10.00      0          FUNCTIONAL 1000.00 0          0
+15               25.00      10.00      0          FUNCTIONAL 1000.00 0          0
+17               25.00      10.00      0          FUNCTIONAL 1000.00 0          0
+19               25.00      10.00      0          FUNCTIONAL 1000.00 0          0
+21               25.00      10.00      0          FUNCTIONAL 1000.00 0          0
+23               25.00      10.00      0          FUNCTIONAL 1000.00 0          0
+25               25.00      10.00      0          FUNCTIONAL 1000.00 0          0
+27               25.00      10.00      0          FUNCTIONAL 1000.00 0          0
+29               25.00      10.00      0          FUNCTIONAL 1000.00 0          0
+31               25.00      10.00      0          FUNCTIONAL 1000.00 0          0
+33               25.00      10.00      0          FUNCTIONAL 1000.00 0          0
+35               25.00      10.00      0          FUNCTIONAL 1000.00 0          0
 
 [CONDUITS]
 ;;Name           From             To               Length     Roughness  InOffset   OutOffset  InitFlow   MaxFlow
@@ -66,23 +82,23 @@ MAX_TRIALS           50
 [XSECTIONS]
 ;;Link           Shape        Geom1      Geom2      Geom3      Geom4      Barrels
 ;;-------------- ------------ ---------- ---------- ---------- ---------- ----------
-4                TRAPEZOIDAL  4.55       1.00       0          0          1
-6                TRAPEZOIDAL  4.55       1.00       0          0          1
-8                TRAPEZOIDAL  4.55       1.00       0          0          1
-10               TRAPEZOIDAL  4.55       1.00       0          0          1
-12               TRAPEZOIDAL  4.55       1.00       0          0          1
-14               TRAPEZOIDAL  4.55       1.00       0          0          1
-16               TRAPEZOIDAL  4.55       1.00       0          0          1
-18               TRAPEZOIDAL  4.55       1.00       0          0          1
-20               TRAPEZOIDAL  4.55       1.00       0          0          1
-22               TRAPEZOIDAL  4.55       1.00       0          0          1
-24               TRAPEZOIDAL  4.55       1.00       0          0          1
-26               TRAPEZOIDAL  4.55       1.00       0          0          1
-28               TRAPEZOIDAL  4.55       1.00       0          0          1
-30               TRAPEZOIDAL  4.55       1.00       0          0          1
-32               TRAPEZOIDAL  4.55       1.00       0          0          1
-34               TRAPEZOIDAL  4.55       1.00       0          0          1
-36               TRAPEZOIDAL  4.55       1.00       0          0          1
+4                TRAPEZOIDAL  4.55       1.00       1          1          1
+6                TRAPEZOIDAL  4.55       1.00       1          1          1
+8                TRAPEZOIDAL  4.55       1.00       1          1          1
+10               TRAPEZOIDAL  4.55       1.00       1          1          1
+12               TRAPEZOIDAL  4.55       1.00       1          1          1
+14               TRAPEZOIDAL  4.55       1.00       1          1          1
+16               TRAPEZOIDAL  4.55       1.00       1          1          1
+18               TRAPEZOIDAL  4.55       1.00       1          1          1
+20               TRAPEZOIDAL  4.55       1.00       1          1          1
+22               TRAPEZOIDAL  4.55       1.00       1          1          1
+24               TRAPEZOIDAL  4.55       1.00       1          1          1
+26               TRAPEZOIDAL  4.55       1.00       1          1          1
+28               TRAPEZOIDAL  4.55       1.00       1          1          1
+30               TRAPEZOIDAL  4.55       1.00       1          1          1
+32               TRAPEZOIDAL  4.55       1.00       1          1          1
+34               TRAPEZOIDAL  4.55       1.00       1          1          1
+36               TRAPEZOIDAL  4.55       1.00       1          1          1
 
 [LOSSES]
 ;;Link           Inlet      Outlet     Average    Flap Gate

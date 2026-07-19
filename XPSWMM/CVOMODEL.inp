@@ -14,12 +14,24 @@ LINK_OFFSETS         DEPTH
 MIN_SLOPE            0.0
 ALLOW_PONDING        NO
 SKIP_STEADY_STATE    NO
-ROUTING_STEP         00:00:60
+ROUTING_STEP         00:01:00
 VARIABLE_STEP        0.75
 INERTIAL_DAMPING     PARTIAL
 NORMAL_FLOW_LIMITED  BOTH
 MAX_TRIALS           50
 HEAD_TOLERANCE       0.0033
+START_DATE           01/01/2001
+START_TIME           00:00:00
+REPORT_START_DATE    01/01/2001
+REPORT_START_TIME    00:00:00
+END_DATE             01/02/2001
+END_TIME             00:00:00
+SWEEP_START          01/01
+SWEEP_END            12/31
+DRY_DAYS             0
+REPORT_STEP          00:15:00
+WET_STEP             00:05:00
+DRY_STEP             01:00:00
 
 [JUNCTIONS]
 ;;Name           Elev       MaxDepth   InitDepth  SurDepth   Aponded
@@ -110,22 +122,26 @@ V09              220.00     0          0          0          0
 A09              248.00     0          0          0          0
 W09              238.00     0          0          0          0
 
+[OUTFALLS]
+;;Name           Elev       Type       Stage      Gated
+;;-------------- ---------- ---------- ---------- -----
+I01              219.00     FREE                  NO
+
 [STORAGE]
 ;;Name           Elev       MaxDepth   InitDepth  Shape      Curve/Params
 ;;-------------- ---------- ---------- ---------- ---------- ----------
-J17              236.70     0          0          FUNCTIONAL 200.00 0          0
-I22              249.00     0          0          FUNCTIONAL 300.00 0          0
-VOS              243.40     0          0          FUNCTIONAL 300.00 0          0
-I43              222.00     0          0          FUNCTIONAL 300.00 0          0
-I30              221.00     0          0          FUNCTIONAL 300.00 0          0
-I28              238.50     -0.50      0          FUNCTIONAL 300.00 0          0
-I19              248.00     0          0          FUNCTIONAL 300.00 0          0
-I15              228.20     0          0          FUNCTIONAL 200.00 0          0
-FOS              239.60     0          0          FUNCTIONAL 300.00 0          0
-I02              221.00     0          0          FUNCTIONAL 300.00 0          0
-I01              219.00     0          0          FUNCTIONAL 300.00 0          0
-JOS              248.00     0          0          FUNCTIONAL 200.00 0          0
-WOS              222.00     0          0          FUNCTIONAL 200.00 0          0
+J17              236.70     10.00      0          FUNCTIONAL 200.00 0          0
+I22              249.00     10.00      0          FUNCTIONAL 300.00 0          0
+VOS              243.40     10.00      0          FUNCTIONAL 300.00 0          0
+I43              222.00     10.00      0          FUNCTIONAL 300.00 0          0
+I30              221.00     10.00      0          FUNCTIONAL 300.00 0          0
+I28              238.50     10.00      0          FUNCTIONAL 300.00 0          0
+I19              248.00     10.00      0          FUNCTIONAL 300.00 0          0
+I15              228.20     10.00      0          FUNCTIONAL 200.00 0          0
+FOS              239.60     10.00      0          FUNCTIONAL 300.00 0          0
+I02              221.00     10.00      0          FUNCTIONAL 300.00 0          0
+JOS              248.00     10.00      0          FUNCTIONAL 200.00 0          0
+WOS              222.00     10.00      0          FUNCTIONAL 200.00 0          0
 
 [CONDUITS]
 ;;Name           From             To               Length     Roughness  InOffset   OutOffset  InitFlow   MaxFlow
@@ -224,7 +240,7 @@ West_OF          W09              Western          150.00     0.0140     203.40 
 ;;Name           From             To               Type       Offset     Qcoeff     Gated    CloseTime
 ;;-------------- ---------------- ---------------- ---------- ---------- ---------- -------- ----------
 FOrf             FOS              I13              SIDE       0          0.650      NO       0
-394              ?                ?                SIDE       0          0.650      NO       0
+394              VOS              I18              SIDE       0          0.650      NO       0
 JOrf             JOS              I19              SIDE       0          0.650      NO       0
 WOrf             WOS              I28              SIDE       0          0.650      NO       0
 
@@ -234,7 +250,7 @@ WOrf             WOS              I28              SIDE       0          0.650  
 A010             JOS              A09              TRANSVERSE 204.98     1.840      NO       0        0          YES
 W010             WOS              W09              TRANSVERSE 208.81     1.840      NO       0        0          YES
 FillDam          FOS              F09              TRANSVERSE 198.60     1.840      NO       0        0          YES
-393              ?                ?                TRANSVERSE 207.14     1.840      NO       0        0          YES
+393              VOS              V09              TRANSVERSE 207.14     1.840      NO       0        0          YES
 
 [XSECTIONS]
 ;;Link           Shape        Geom1      Geom2      Geom3      Geom4      Barrels
@@ -328,14 +344,14 @@ Fill_of          CIRCULAR     5.00       6.00       0          0          1
 Van_OF           CIRCULAR     5.00       5.00       0          0          1
 Jack_of          CIRCULAR     3.00       3.00       0          0          1
 West_OF          CIRCULAR     3.00       0          0          0          1
-FOrf             RECT_CLOSED  2.50       0          0          0          
-394              RECT_CLOSED  0          0          0          0          
-JOrf             RECT_CLOSED  3.00       0          0          0          
-WOrf             RECT_CLOSED  2.50       0          0          0          
-A010             RECT_OPEN    0          4.00       0          0          
-W010             RECT_OPEN    0          6.00       0          0          
-FillDam          RECT_OPEN    0          6.00       0          0          
-393              RECT_OPEN    0          4.00       0          0          
+FOrf             RECT_CLOSED  2.50       2.50       0          0
+394              RECT_CLOSED  2.21       2.21       0          0
+JOrf             RECT_CLOSED  3.00       3.00       0          0
+WOrf             RECT_CLOSED  2.50       2.50       0          0
+A010             RECT_OPEN    1.00       4.00       0          0
+W010             RECT_OPEN    1.00       6.00       0          0
+FillDam          RECT_OPEN    1.00       6.00       0          0
+393              RECT_OPEN    1.00       4.00       0          0
 
 [LOSSES]
 ;;Link           Inlet      Outlet     Average    Flap Gate

@@ -19,6 +19,18 @@ VARIABLE_STEP        0.75
 INERTIAL_DAMPING     PARTIAL
 NORMAL_FLOW_LIMITED  BOTH
 MAX_TRIALS           50
+START_DATE           01/01/2001
+START_TIME           00:00:00
+REPORT_START_DATE    01/01/2001
+REPORT_START_TIME    00:00:00
+END_DATE             01/02/2001
+END_TIME             00:00:00
+SWEEP_START          01/01
+SWEEP_END            12/31
+DRY_DAYS             0
+REPORT_STEP          00:15:00
+WET_STEP             00:05:00
+DRY_STEP             01:00:00
 
 [JUNCTIONS]
 ;;Name           Elev       MaxDepth   InitDepth  SurDepth   Aponded
@@ -26,12 +38,18 @@ MAX_TRIALS           50
 123C             44.00      0          0          0          0
 123E             44.00      0          0          0          0
 123F             44.00      0          0          0          0
-124A             44.00      0          0          0          0
+OLND1            39.40      0          0          0          0
+OLND2            37.40      0          0          0          0
+
+[OUTFALLS]
+;;Name           Elev       Type       Stage      Gated
+;;-------------- ---------- ---------- ---------- -----
+124A             44.00      FREE                  NO
 
 [STORAGE]
 ;;Name           Elev       MaxDepth   InitDepth  Shape      Curve/Params
 ;;-------------- ---------- ---------- ---------- ---------- ----------
-BASIN            44.00      0          0          FUNCTIONAL 300.00 0          0
+BASIN            44.00      10.00      0          FUNCTIONAL 300.00 0          0
 
 [CONDUITS]
 ;;Name           From             To               Length     Roughness  InOffset   OutOffset  InitFlow   MaxFlow
@@ -39,12 +57,8 @@ BASIN            44.00      0          0          FUNCTIONAL 300.00 0          0
 3                123F             124A             30.50      0.0120     36.70      36.38      0          0
 PIPE1            OLND1            123E             13.00      0.0120     39.40      37.40      0          0
 PIPE2            OLND2            123F             56.00      0.0120     37.40      36.70      0          0
-
-[WEIRS]
-;;Name           From             To               Type       CrestHt    Qcoeff     Gated    EndCon   EndCoeff   Surcharge
-;;-------------- ---------------- ---------------- ---------- ---------- ---------- -------- -------- ---------- ----------
-ETOB             123E             BASIN            TRANSVERSE 38.15      1.840      NO       0        0          YES
-FTOB             123F             BASIN            TRANSVERSE 37.55      1.840      NO       0        0          YES
+ETOB             123E             BASIN            1.00       0.0350     38.60      38.60      0          0
+FTOB             123F             BASIN            1.00       0.0350     38.00      38.00      0          0
 
 [XSECTIONS]
 ;;Link           Shape        Geom1      Geom2      Geom3      Geom4      Barrels
@@ -52,8 +66,8 @@ FTOB             123F             BASIN            TRANSVERSE 37.55      1.840  
 3                CIRCULAR     0.38       0          0          0          1
 PIPE1            CIRCULAR     0.60       0          0          0          1
 PIPE2            CIRCULAR     0.38       0          0          0          1
-ETOB             RECT_OPEN    0          25.00      0          0          
-FTOB             RECT_OPEN    0          45.00      0          0          
+ETOB             TRAPEZOIDAL  2.00       1.00       1          1          1
+FTOB             TRAPEZOIDAL  1.50       1.00       1          1          1
 
 [LOSSES]
 ;;Link           Inlet      Outlet     Average    Flap Gate
@@ -61,6 +75,8 @@ FTOB             RECT_OPEN    0          45.00      0          0
 3                0          0          0          NO
 PIPE1            0          0          0          NO
 PIPE2            0          0          0          NO
+ETOB             0          0          0          NO
+FTOB             0          0          0          NO
 
 [COORDINATES]
 ;;Node           X-Coord            Y-Coord

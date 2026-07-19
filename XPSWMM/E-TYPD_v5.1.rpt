@@ -2,127 +2,1129 @@
   EPA STORM WATER MANAGEMENT MODEL - VERSION 5.2 (Build 5.2.4)
   ------------------------------------------------------------
 
+  Interceptor Model - CSO002 AND 003 SEPARATED, JUDAY CREEK LS 
   
-  ERROR 209: undefined object MH008#2 at line 274 of [CONDUIT] section:
-  MH008#1          MH008#2          I009006N         771.00     0.0140     682.29     681.86     0          0
-
+  ****************
+  Analysis Options
+  ****************
+  Flow Units ............... CFS
+  Process Models:
+    Rainfall/Runoff ........ NO
+    RDII ................... NO
+    Snowmelt ............... NO
+    Groundwater ............ NO
+    Flow Routing ........... YES
+    Ponding Allowed ........ NO
+    Water Quality .......... NO
+  Flow Routing Method ...... DYNWAVE
+  Surcharge Method ......... EXTRAN
+  Starting Date ............ 01/01/2001 00:00:00
+  Ending Date .............. 01/02/2001 00:00:00
+  Antecedent Dry Days ...... 0.0
+  Report Time Step ......... 00:15:00
+  Routing Time Step ........ 10.00 sec
+  Variable Time Step ....... YES
+  Maximum Trials ........... 50
+  Number of Threads ........ 1
+  Head Tolerance ........... 0.003300 ft
   
-  ERROR 211: invalid number  at line 683 of [XSECT] section:
-  ORIFICE3         RECT_CLOSED  1.50       0          0          0          
-
   
-  ERROR 211: invalid number  at line 684 of [XSECT] section:
-  CSO015ORF        RECT_CLOSED  1.00       0          0          0          
-
+  **************************        Volume        Volume
+  Flow Routing Continuity        acre-feet      10^6 gal
+  **************************     ---------     ---------
+  Dry Weather Inflow .......         0.000         0.000
+  Wet Weather Inflow .......         0.000         0.000
+  Groundwater Inflow .......         0.000         0.000
+  RDII Inflow ..............         0.000         0.000
+  External Inflow ..........        29.910         9.746
+  External Outflow .........         0.000         0.000
+  Flooding Loss ............        18.937         6.171
+  Evaporation Loss .........         0.000         0.000
+  Exfiltration Loss ........         0.000         0.000
+  Initial Stored Volume ....         0.000         0.000
+  Final Stored Volume ......         0.629         0.205
+  Continuity Error (%) .....        34.584
   
-  ERROR 211: invalid number  at line 685 of [XSECT] section:
-  CSO019O          RECT_CLOSED  0.83       0          0          0          
-
   
-  ERROR 211: invalid number  at line 686 of [XSECT] section:
-  CSO004ORF        RECT_CLOSED  1.00       0          0          0          
-
+  *************************
+  Highest Continuity Errors
+  *************************
+  Node CSO18B (100.00%)
+  Node I18E064N (100.00%)
+  Node I18E067N (100.00%)
+  Node I004111N (100.00%)
+  Node I18E054N (98.18%)
   
-  ERROR 211: invalid number  at line 687 of [XSECT] section:
-  CSO009ORF        RECT_CLOSED  2.00       0          0          0          
-
   
-  ERROR 211: invalid number  at line 688 of [XSECT] section:
-  CSO011ORF        RECT_CLOSED  0.83       0          0          0          
-
+  ***************************
+  Time-Step Critical Elements
+  ***************************
+  None
   
-  ERROR 211: invalid number  at line 689 of [XSECT] section:
-  CSO014ORF        RECT_CLOSED  2.50       0          0          0          
-
   
-  ERROR 211: invalid number  at line 690 of [XSECT] section:
-  CSO016ORF        RECT_CLOSED  1.25       0          0          0          
-
+  ********************************
+  Highest Flow Instability Indexes
+  ********************************
+  Link CSO020ORF (126)
+  Link CSO011ORF (126)
+  Link CSO009ORF (125)
+  Link CSO019O (116)
+  Link ORIFICE3 (112)
   
-  ERROR 211: invalid number  at line 691 of [XSECT] section:
-  meter            RECT_CLOSED  1.50       0          0          0          
-
   
-  ERROR 211: invalid number  at line 692 of [XSECT] section:
-  CSO020ORF        RECT_CLOSED  0.72       0          0          0          
-
+  *********************************
+  Most Frequent Nonconverging Nodes
+  *********************************
+  Node I009008N (84.52%)
+  Node CSO020N (84.01%)
+  Node CSO011N (83.87%)
+  Node CSO009 (82.80%)
+  Node CSO009N (82.65%)
   
-  ERROR 211: invalid number  at line 693 of [XSECT] section:
-  CSO004W          RECT_OPEN    0          7.50       0          0          
-
   
-  ERROR 211: invalid number  at line 694 of [XSECT] section:
-  CSO009OFW        RECT_OPEN    0          10.00      0          0          
-
+  *************************
+  Routing Time Step Summary
+  *************************
+  Minimum Time Step           :     9.50 sec
+  Average Time Step           :    10.00 sec
+  Maximum Time Step           :    10.00 sec
+  % of Time in Steady State   :     0.00
+  Average Iterations per Step :    42.72
+  % of Steps Not Converging   :    84.52
+  Time Step Frequencies       :
+     10.000 -  5.493 sec      :   100.00 %
+      5.493 -  3.017 sec      :     0.00 %
+      3.017 -  1.657 sec      :     0.00 %
+      1.657 -  0.910 sec      :     0.00 %
+      0.910 -  0.500 sec      :     0.00 %
   
-  ERROR 211: invalid number  at line 695 of [XSECT] section:
-  CSO011OFW        RECT_OPEN    0          4.00       0          0          
-
   
-  ERROR 211: invalid number  at line 696 of [XSECT] section:
-  CSO012OFW        RECT_OPEN    0          4.00       0          0          
-
+  ******************
+  Node Depth Summary
+  ******************
   
-  ERROR 211: invalid number  at line 697 of [XSECT] section:
-  CSO012AOFW       RECT_OPEN    0          4.00       0          0          
-
+  ---------------------------------------------------------------------------------
+                                 Average  Maximum  Maximum  Time of Max    Reported
+                                   Depth    Depth      HGL   Occurrence   Max Depth
+  Node                 Type         Feet     Feet     Feet  days hr:min        Feet
+  ---------------------------------------------------------------------------------
+  I021186N             JUNCTION     0.00     0.00   715.00     0  00:00        0.00
+  I021185N             JUNCTION     0.00     0.00   715.00     0  00:00        0.00
+  I021177N             JUNCTION     0.00     0.00   716.00     0  00:00        0.00
+  I021175N             JUNCTION     0.00     0.00   716.00     0  00:00        0.00
+  I021174N             JUNCTION     0.00     0.00   715.00     0  00:00        0.00
+  I021172N             JUNCTION     0.00     0.00   715.00     0  00:00        0.00
+  I021170N             JUNCTION     0.00     0.00   716.00     0  00:00        0.00
+  I003166N             JUNCTION     0.00     0.00   705.19     0  00:00        0.00
+  IWTP161N             JUNCTION     0.00     0.00   715.00     0  00:00        0.00
+  IWTP161AN            JUNCTION     0.00     0.00   695.00     0  00:00        0.00
+  WWTP                 JUNCTION     0.00     0.00   695.00     0  00:00        0.00
+  IWTP000N             JUNCTION     0.00     0.00   696.00     0  00:00        0.00
+  IWTP001N             JUNCTION     0.00     0.00   698.00     0  00:00        0.00
+  IWTPOO3N             JUNCTION     0.00     0.00   697.00     0  00:00        0.00
+  IWTP004N             JUNCTION     0.00     0.00   702.00     0  00:00        0.00
+  I009006N             JUNCTION   627.43   682.02  1376.02     0  10:45      682.02
+  I009009N             JUNCTION     0.00     0.00   697.00     0  00:00        0.00
+  I010011N             JUNCTION     0.00     0.00   701.00     0  00:00        0.00
+  T010005N             JUNCTION   275.03   550.05  1250.05     1  00:00      550.05
+  I010014N             JUNCTION     0.00     0.00   710.00     0  00:00        0.00
+  I010015N             JUNCTION     0.00     0.00   706.00     0  00:00        0.00
+  I010017N             JUNCTION     0.00     0.00   709.00     0  00:00        0.00
+  I010018N             JUNCTION     0.00     0.00   710.00     0  00:00        0.00
+  I014021N             JUNCTION   300.89   691.70  1398.70     0  14:47      691.70
+  I014023N             JUNCTION   358.15   692.75  1405.75     0  12:36      692.63
+  I014025N             JUNCTION   419.14   693.56  1408.56     0  12:07      693.56
+  I014027N             JUNCTION   478.25   694.28  1414.28     0  10:54      694.28
+  I014028N             JUNCTION   538.61   694.67  1416.67     0  06:44      694.67
+  I014029N             JUNCTION     0.00     0.00   723.00     0  00:00        0.00
+  I014031N             JUNCTION     0.00     0.00   722.00     0  00:00        0.00
+  I014033N             JUNCTION     0.00     0.00   705.00     0  00:00        0.00
+  I014034N             JUNCTION     0.00     0.00   705.00     0  00:00        0.00
+  I014035N             JUNCTION     0.00     0.00   712.00     0  00:00        0.00
+  I014036N             JUNCTION     0.00     0.00   712.00     0  00:00        0.00
+  I014037N             JUNCTION     0.00     0.00   712.00     0  00:00        0.00
+  CSO018OF             JUNCTION     0.00     0.00   713.12     0  00:00        0.00
+  CSO014OF1            JUNCTION     0.00     0.00   699.54     0  00:00        0.00
+  CSO002OF             JUNCTION     0.00     0.00   699.17     0  00:00        0.00
+  CSO18A               JUNCTION   666.82   704.45  1431.45     0  03:03      704.45
+  CSO18B               JUNCTION   129.72   290.74  1016.74     1  00:00      290.74
+  CSO18C               JUNCTION     0.00     0.00   726.00     0  00:00        0.00
+  CSO18D               JUNCTION     0.00     0.00   723.00     0  00:00        0.00
+  CSO18E               JUNCTION     0.00     0.00   723.00     0  00:00        0.00
+  I18E045N             JUNCTION     0.00     0.00   724.00     0  00:00        0.00
+  I18E046N             JUNCTION     0.00     0.00   726.00     0  00:00        0.00
+  I18E047N             JUNCTION   399.08   709.93  1432.93     0  22:34      709.92
+  I18E049N             JUNCTION   643.71   709.92  1432.92     0  22:34      709.91
+  I18E052N             JUNCTION   471.72   711.91  1432.91     0  22:31      711.91
+  I18E054N             JUNCTION   193.71   710.92  1432.92     0  22:32      710.91
+  I18E062N             JUNCTION     0.00     0.00   726.00     0  00:00        0.00
+  I18E064N             JUNCTION    11.19   113.34   840.34     1  00:00      113.34
+  I18E066N             JUNCTION   428.52   712.52  1440.52     0  21:30      712.52
+  I18E067N             JUNCTION     6.19    62.81   789.81     1  00:00       62.81
+  I18E068N             JUNCTION     0.00     0.00   730.00     0  00:00        0.00
+  I18E071N             JUNCTION     0.00     0.00   729.00     0  00:00        0.00
+  I18E072N             JUNCTION     0.00     0.00   729.00     0  00:00        0.00
+  I18E074N             JUNCTION     0.00     0.00   731.00     0  00:00        0.00
+  I18E075N             JUNCTION     0.00     0.00   730.00     0  00:00        0.00
+  I18E078              JUNCTION     0.00     0.00   730.00     0  00:00        0.00
+  I009217N             JUNCTION     0.00     0.00   705.00     0  00:00        0.00
+  I009218N             JUNCTION   537.93   687.30  1385.30     0  11:30      687.30
+  I009216N             JUNCTION     0.00     0.00   704.00     0  00:00        0.00
+  I009212N             JUNCTION     0.00     0.00   716.00     0  00:00        0.00
+  I009208N             JUNCTION     0.00     0.00   719.00     0  00:00        0.00
+  I009206N             JUNCTION     0.00     0.00   721.00     0  00:00        0.00
+  I009202N             JUNCTION     0.00     0.00   722.00     0  00:00        0.00
+  CSO0120F             JUNCTION     0.00     0.00   715.09     0  00:00        0.00
+  I012088N             JUNCTION     0.00     0.00   717.00     0  00:00        0.00
+  I12BO91N             JUNCTION     0.00     0.00   722.00     0  00:00        0.00
+  CSO012AOF            JUNCTION     0.00     0.00   714.65     0  00:00        0.00
+  I12B098N             JUNCTION     0.00     0.00   723.00     0  00:00        0.00
+  I12B099N             JUNCTION     0.00     0.00   724.00     0  00:00        0.00
+  I12B100N             JUNCTION     0.00     0.00   722.00     0  00:00        0.00
+  I12B101N             JUNCTION     0.00     0.00   723.00     0  00:00        0.00
+  I12B102N             JUNCTION     0.00     0.00   724.00     0  00:00        0.00
+  I12B104N             JUNCTION     0.00     0.00   725.00     0  00:00        0.00
+  I010187N             JUNCTION     0.00     0.00   698.00     0  00:00        0.00
+  I010010N             JUNCTION     0.00     0.00   696.00     0  00:00        0.00
+  CSO011OF             JUNCTION     0.00     0.00   697.48     0  00:00        0.00
+  I010190N             JUNCTION     0.00     0.00   707.00     0  00:00        0.00
+  CSO019OF             JUNCTION     0.00     0.00   710.69     0  00:00        0.00
+  I010132N             JUNCTION     0.00     0.00   712.00     0  00:00        0.00
+  I010133N             JUNCTION     0.00     0.00   714.00     0  00:00        0.00
+  I010134N             JUNCTION     0.00     0.00   720.00     0  00:00        0.00
+  I010135N             JUNCTION     0.00     0.00   721.00     0  00:00        0.00
+  CSO016OF             JUNCTION     0.00     0.00   722.82     0  00:00        0.00
+  I014020N             JUNCTION     0.00     0.00   700.00     0  00:00        0.00
+  I015150N             JUNCTION    66.89   383.53  1086.53     1  00:00      383.53
+  CSO017               JUNCTION   474.98   693.73  1395.73     0  18:09      693.73
+  CSO015OFN            JUNCTION     0.00     0.00   699.31     0  00:00        0.00
+  IWTP220N             JUNCTION     0.00     0.00   692.00     0  00:00        0.00
+  IWTP221N             JUNCTION     0.00     0.00   685.00     0  00:00        0.00
+  I004111N             JUNCTION   309.41   618.81  1334.81     1  00:00      618.81
+  I004112N             JUNCTION     0.00     0.00   717.00     0  00:00        0.00
+  CSO004OF             JUNCTION     0.00     0.00   711.33     0  00:00        0.00
+  I004110AN            JUNCTION     0.00     0.00   716.00     0  00:00        0.00
+  I004110BN            JUNCTION     0.00     0.00   716.00     0  00:00        0.00
+  CSO006OF             JUNCTION     0.00     0.00   716.00     0  00:00        0.00
+  I004113N             JUNCTION     0.00     0.00   716.00     0  00:00        0.00
+  I004114N             JUNCTION     0.00     0.00   715.00     0  00:00        0.00
+  I004115N             JUNCTION     0.00     0.00   717.00     0  00:00        0.00
+  I004116N             JUNCTION     0.00     0.00   716.00     0  00:00        0.00
+  I004117N             JUNCTION     0.00     0.00   718.00     0  00:00        0.00
+  CSO008OF             JUNCTION     0.00     0.00   719.00     0  00:00        0.00
+  CSO007OF             JUNCTION     0.00     0.00   714.04     0  00:00        0.00
+  CSO005OF             JUNCTION     0.00     0.00   714.00     0  00:00        0.00
+  T003005N             JUNCTION   641.73   700.27  1410.58     0  21:02      700.26
+  T003010N             JUNCTION   604.60   701.34  1411.65     0  11:02      701.34
+  CSO003OFN            JUNCTION     0.00     0.00   710.31     0  00:00        0.00
+  CSO004OFN            JUNCTION     0.00     0.00   711.33     0  00:00        0.00
+  CSO009OFN            JUNCTION     0.00     0.00   692.79     0  00:00        0.00
+  CSO009OF             JUNCTION     0.00     0.00   692.79     0  00:00        0.00
+  CSO011OFN            JUNCTION     0.00     0.00   697.48     0  00:00        0.00
+  T011020N             JUNCTION   705.93   720.17  1460.17     0  00:55      719.72
+  T011015N             JUNCTION   675.48   714.90  1449.90     0  02:42      714.90
+  T011198N             JUNCTION   644.69   699.50  1419.50     0  09:28      699.50
+  CSO0120FN            JUNCTION     0.00     0.00   715.09     0  00:00        0.00
+  CSO012AOFN           JUNCTION     0.00     0.00   714.65     0  00:00        0.00
+  T012A005N            JUNCTION   137.51   275.03   989.68     1  00:00      275.03
+  T012010N             JUNCTION   275.03   550.05  1267.05     1  00:00      550.05
+  T012015N             JUNCTION   644.93   710.52  1431.53     0  05:03      710.52
+  CSO012BOFN           JUNCTION     0.00     0.00   721.01     0  00:00        0.00
+  CSO012BOF            JUNCTION     0.00     0.00   721.01     0  00:00        0.00
+  T013104N             JUNCTION   657.71   715.99  1440.99     0  04:49      715.99
+  CSO016OFN            JUNCTION     0.00     0.00   722.82     0  00:00        0.00
+  T016137N             JUNCTION   671.22   704.79  1427.61     0  02:19      704.70
+  CSO018OFN            JUNCTION     0.00     0.00   713.12     0  00:00        0.00
+  CSO020OFN            JUNCTION     0.00     0.00   730.24     0  00:00        0.00
+  CSO020OF             JUNCTION     0.00     0.00   730.24     0  00:00        0.00
+  CSO019OFN            JUNCTION     0.00     0.00   710.69     0  00:00        0.00
+  CSO019N              JUNCTION     7.75    10.02   720.71     0  05:28        9.99
+  CSO002OFN            JUNCTION     0.00     0.00   699.17     0  00:00        0.00
+  409                  JUNCTION   420.67   688.07  1409.89     0  12:29      688.07
+  T002005N             JUNCTION   604.01   693.79  1392.79     0  06:51      693.79
+  T002010N             JUNCTION    34.38    68.76   767.76     1  00:00       68.76
+  I18E056N             JUNCTION     0.00     0.00   727.00     0  00:00        0.00
+  CSO003OF             JUNCTION     0.00     0.00   710.30     0  00:00        0.00
+  CSO009N              JUNCTION     6.41     8.69   701.48     0  10:52        8.60
+  CSO011N              JUNCTION     8.39    10.04   707.04     0  03:55        9.99
+  CSO020N              JUNCTION     8.41    10.02   740.02     0  03:53       10.01
+  CSO006OFN            JUNCTION     0.00     0.00   716.00     0  00:00        0.00
+  CSO014OF2            JUNCTION     0.00     0.00   700.00     0  00:00        0.00
+  T021005N             JUNCTION   508.71   692.01  1407.01     0  13:00      692.01
+  T005005N             JUNCTION    34.38    68.76   784.76     1  00:00       68.76
+  T007126N             JUNCTION     0.00     0.00   715.00     0  00:00        0.00
+  T008005N             JUNCTION   541.63   706.76  1436.76     0  11:27      706.76
+  T006005N             JUNCTION   585.56   700.80  1415.80     0  09:23      700.80
+  T009005N             JUNCTION   630.53   686.79  1401.79     0  04:07      686.79
+  T019195N             JUNCTION   620.73   697.74  1413.74     0  05:18      697.72
+  T015005N             JUNCTION   573.85   695.00  1405.00     0  08:40      695.00
+  T014015N             JUNCTION   604.52   695.93  1417.93     0  06:29      695.93
+  T014020N             JUNCTION   668.78   698.37  1423.37     0  03:59      698.37
+  T020005N             JUNCTION   661.93   716.94  1446.94     0  04:42      716.94
+  I021169N             JUNCTION     0.00     0.00   711.00     0  00:00        0.00
+  I003164N             JUNCTION     0.00     0.00   710.00     0  00:00        0.00
+  CSO013OFN            JUNCTION     0.00     0.00   725.00     0  00:00        0.00
+  CSO013OF             JUNCTION     0.00     0.00   725.00     0  00:00        0.00
+  CSO015OF             JUNCTION     0.00     0.00   699.31     0  00:00        0.00
+  POUT                 JUNCTION   546.50   685.00  1380.00     0  07:07      685.00
+  WWTPN                JUNCTION   638.34   685.01  1380.01     0  07:07      685.00
+  03-GWTRN             JUNCTION     0.00     0.00   740.00     0  00:00        0.00
+  11-1GWTRN            JUNCTION     0.00     0.00   730.00     0  00:00        0.00
+  11-2GWTRN            JUNCTION     0.00     0.00   750.00     0  00:00        0.00
+  I021165N             JUNCTION     0.00     0.00   707.00     0  00:00        0.00
+  I010012N             JUNCTION     0.00     0.00   698.10     0  00:00        0.00
+  19-GWTR              JUNCTION     0.00     0.00   730.00     0  00:00        0.00
+  T003009N             JUNCTION   403.34   701.01  1411.32     0  20:00      701.01
+  T003008N             JUNCTION   200.52   700.64  1410.95     0  20:52      700.64
+  T011014N             JUNCTION   646.17   713.47  1448.47     0  02:42      713.30
+  T011013N             JUNCTION   619.24   711.41  1446.41     0  03:35      711.40
+  T011012N             JUNCTION   590.99   709.65  1444.65     0  04:43      709.65
+  T011011N             JUNCTION   561.48   708.32  1443.32     0  05:25      707.97
+  T011010N             JUNCTION   535.74   706.15  1441.15     0  06:27      706.15
+  T011009N             JUNCTION   507.75   704.67  1439.67     0  07:09      704.43
+  T011008N             JUNCTION   481.60   702.82  1437.82     0  07:59      702.82
+  T011007N             JUNCTION   455.05   700.63  1435.63     0  09:27      700.63
+  T002010AN            JUNCTION     0.00     0.00   699.00     0  00:00        0.00
+  T002010BN            JUNCTION     0.00     0.00   699.00     0  00:00        0.00
+  T002010CN            JUNCTION     0.00     0.00   699.00     0  00:00        0.00
+  T002010DN            JUNCTION     0.00     0.00   699.00     0  00:00        0.00
+  T002010EN            JUNCTION     0.00     0.00   699.00     0  00:00        0.00
+  T002010FN            JUNCTION     0.00     0.00   699.00     0  00:00        0.00
+  MH008#2              JUNCTION   494.59   685.29  1367.58     0  11:07      685.29
+  I009008N             OUTFALL      0.00     0.00   696.00     0  00:00        0.00
+  CSO002               STORAGE      0.00     0.00   699.00     0  00:00        0.00
+  CSO021               STORAGE      4.66    10.00   715.19     0  12:54       10.00
+  CSO003N              STORAGE      8.23    10.00   720.00     0  04:26       10.00
+  CSO009               STORAGE      6.43     8.63   701.42     0  10:54        7.24
+  CSO010               STORAGE      0.00     0.00   696.00     0  00:00        0.00
+  CSO014               STORAGE      0.00     0.00   701.00     0  00:00        0.00
+  I014019N             STORAGE      9.98    10.00   708.00     0  00:06       10.00
+  CSO018               STORAGE      8.92    10.00   723.12     0  02:37       10.00
+  CSO020               STORAGE      8.41    10.00   740.00     0  03:52       10.00
+  I009220N             STORAGE      8.35    10.00   705.00     0  04:00       10.00
+  I009210N             STORAGE      0.00     0.00   717.00     0  00:00        0.00
+  CSO012               STORAGE      0.00     0.00   715.09     0  00:00        0.00
+  CSO012A              STORAGE      0.00     0.00   714.65     0  00:00        0.00
+  CSO12B               STORAGE      8.08    10.00   731.00     0  04:46       10.00
+  I12B093N             STORAGE      0.00     0.00   722.00     0  00:00        0.00
+  I12B097N             STORAGE      0.00     0.00   721.00     0  00:00        0.00
+  CSO013               STORAGE      8.33    10.00   735.00     0  04:03       10.00
+  CSO011               STORAGE      8.39    10.00   707.00     0  03:55       10.00
+  CSO019               STORAGE      7.75    10.00   720.69     0  05:28       10.00
+  CSO015N              STORAGE      6.46    10.00   709.00     0  08:38       10.00
+  CSO006               STORAGE      6.59    10.00   726.00     0  08:15       10.00
+  CSO008               STORAGE      5.29    10.00   729.00     0  11:23       10.00
+  CSO007               STORAGE      0.00     0.00   714.04     0  00:00        0.00
+  CSO005               STORAGE      0.00     0.00   714.06     0  00:00        0.00
+  CSO003               STORAGE      7.97     9.73   720.04     0  04:26        9.72
+  CSO004               STORAGE      0.00     0.00   711.33     0  00:00        0.00
+  CSO015               STORAGE      6.28     9.80   709.11     0  08:40        9.75
+  CSO016               STORAGE      8.30     9.25   732.07     0  02:23        9.20
+  CSO004N              STORAGE      0.00     0.00   711.00     0  00:00        0.00
+  CSO014N              STORAGE      0.00     0.00   700.00     0  00:00        0.00
+  CSO016N              STORAGE      9.02    10.00   732.00     0  02:23       10.00
+  CSO018N              STORAGE      0.00     0.00   713.00     0  00:00        0.00
+  03-GWTR              STORAGE      0.00     0.00   724.00     0  00:00        0.00
+  11-1GWTR             STORAGE      0.00     0.00   730.00     0  00:00        0.00
+  11-2GWTR             STORAGE      0.00     0.00   750.00     0  00:00        0.00
+  19-GWTRN             STORAGE      0.00     0.00   720.00     0  00:00        0.00
   
-  ERROR 211: invalid number  at line 698 of [XSECT] section:
-  CSO012BOFW       RECT_OPEN    0          4.00       0          0          
-
   
-  ERROR 211: invalid number  at line 699 of [XSECT] section:
-  CSO016OFW        RECT_OPEN    0          4.00       0          0          
-
+  *******************
+  Node Inflow Summary
+  *******************
   
-  ERROR 211: invalid number  at line 700 of [XSECT] section:
-  CSO018OFW        RECT_OPEN    0          10.00      0          0          
-
+  -------------------------------------------------------------------------------------------------
+                                  Maximum  Maximum                  Lateral       Total        Flow
+                                  Lateral    Total  Time of Max      Inflow      Inflow     Balance
+                                   Inflow   Inflow   Occurrence      Volume      Volume       Error
+  Node                 Type           CFS      CFS  days hr:min    10^6 gal    10^6 gal     Percent
+  -------------------------------------------------------------------------------------------------
+  I021186N             JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  I021185N             JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  I021177N             JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  I021175N             JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  I021174N             JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  I021172N             JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  I021170N             JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  I003166N             JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  IWTP161N             JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  IWTP161AN            JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  WWTP                 JUNCTION      0.74     0.74     0  00:00       0.478       0.478       0.000
+  IWTP000N             JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  IWTP001N             JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  IWTPOO3N             JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  IWTP004N             JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  I009006N             JUNCTION      0.62     0.62     0  00:00       0.401       0.401      19.716
+  I009009N             JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  I010011N             JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  T010005N             JUNCTION      0.08     0.08     0  00:00      0.0517      0.0517   51701.610 gal
+  I010014N             JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  I010015N             JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  I010017N             JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  I010018N             JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  I014021N             JUNCTION      0.00     2.36     0  12:36           0        0.37      21.544
+  I014023N             JUNCTION      0.00     1.26     0  12:36           0       0.434      17.195
+  I014025N             JUNCTION      0.00     1.20     0  10:31           0       0.501      15.631
+  I014027N             JUNCTION      0.00     1.23     0  06:44           0       0.567      13.094
+  I014028N             JUNCTION      0.00     1.26     0  06:25           0       0.634      11.796
+  I014029N             JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  I014031N             JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  I014033N             JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  I014034N             JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  I014035N             JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  I014036N             JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  I014037N             JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  CSO018OF             JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  CSO014OF1            JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  CSO002OF             JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  CSO18A               JUNCTION      0.96     0.96     0  00:00        0.62        0.62      12.068
+  CSO18B               JUNCTION      0.00     0.05     0  03:03           0      0.0273   27327.545 gal
+  CSO18C               JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  CSO18D               JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  CSO18E               JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  I18E045N             JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  I18E046N             JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  I18E047N             JUNCTION      0.00     0.56     0  15:36           0      0.0851    4178.750
+  I18E049N             JUNCTION      0.56     0.76     0  22:37       0.362       0.364      30.388
+  I18E052N             JUNCTION      0.00     0.94     0  22:38           0       0.195      99.518
+  I18E054N             JUNCTION      0.00     0.56     0  19:55           0      0.0755    5405.617
+  I18E062N             JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  I18E064N             JUNCTION      0.00     0.08     1  00:00           0      0.0107   10652.891 gal
+  I18E066N             JUNCTION      0.13     0.13     0  00:00       0.084       0.084     407.427
+  I18E067N             JUNCTION      0.00     0.05     1  00:00           0      0.0059    5904.183 gal
+  I18E068N             JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  I18E071N             JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  I18E072N             JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  I18E074N             JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  I18E075N             JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  I18E078              JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  I009217N             JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  I009218N             JUNCTION      0.23     0.23     0  00:00       0.149       0.149      77.800
+  I009216N             JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  I009212N             JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  I009208N             JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  I009206N             JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  I009202N             JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  CSO0120F             JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  I012088N             JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  I12BO91N             JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  CSO012AOF            JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  I12B098N             JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  I12B099N             JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  I12B100N             JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  I12B101N             JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  I12B102N             JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  I12B104N             JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  I010187N             JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  I010010N             JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  CSO011OF             JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  I010190N             JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  CSO019OF             JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  I010132N             JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  I010133N             JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  I010134N             JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  I010135N             JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  CSO016OF             JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  I014020N             JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  I015150N             JUNCTION      0.00     0.16     0  18:14           0       0.036   36049.653 gal
+  CSO017               JUNCTION      0.16     0.16     0  00:00       0.103       0.103     186.836
+  CSO015OFN            JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  IWTP220N             JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  IWTP221N             JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  I004111N             JUNCTION      0.09     0.09     0  00:00      0.0582      0.0582   58164.312 gal
+  I004112N             JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  CSO004OF             JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  I004110AN            JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  I004110BN            JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  CSO006OF             JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  I004113N             JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  I004114N             JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  I004115N             JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  I004116N             JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  I004117N             JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  CSO008OF             JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  CSO007OF             JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  CSO005OF             JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  T003005N             JUNCTION      0.61     1.03     0  20:54       0.394       0.429      19.004
+  T003010N             JUNCTION      0.37     0.37     0  00:00       0.239       0.239      39.879
+  CSO003OFN            JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  CSO004OFN            JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  CSO009OFN            JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  CSO009OF             JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  CSO011OFN            JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  T011020N             JUNCTION      2.74     2.74     0  00:00        1.77        1.77       3.734
+  T011015N             JUNCTION      0.00     9.71     0  00:55           0        1.71       4.208
+  T011198N             JUNCTION      0.65     3.39     0  09:29        0.42        1.54       4.537
+  CSO0120FN            JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  CSO012AOFN           JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  T012A005N            JUNCTION      0.04     0.04     0  00:00      0.0259      0.0259   25850.805 gal
+  T012010N             JUNCTION      0.08     0.08     0  00:00      0.0517      0.0517   51701.610 gal
+  T012015N             JUNCTION      0.56     0.56     0  00:00       0.362       0.362      22.883
+  CSO012BOFN           JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  CSO012BOF            JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  T013104N             JUNCTION      0.64     0.64     0  00:00       0.414       0.414      19.717
+  CSO016OFN            JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  T016137N             JUNCTION      1.08     1.08     0  00:00       0.698       0.698      10.554
+  CSO018OFN            JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  CSO020OFN            JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  CSO020OF             JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  CSO019OFN            JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  CSO019N              JUNCTION      0.00     0.91     0  05:20           0     0.00169     284.396
+  CSO002OFN            JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  409                  JUNCTION      0.00     0.39     0  06:51           0       0.186      54.128
+  T002005N             JUNCTION      0.39     0.39     0  00:00       0.252       0.252      35.194
+  T002010N             JUNCTION      0.01     0.01     0  00:00     0.00646     0.00646    6462.701 gal
+  I18E056N             JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  CSO003OF             JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  CSO009N              JUNCTION      0.00     4.50     0  04:16           0     0.00402      50.398
+  CSO011N              JUNCTION      0.00     0.68     0  03:55           0     0.00163     445.714
+  CSO020N              JUNCTION      0.00     0.65     0  03:51           0     0.00155     393.082
+  CSO006OFN            JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  CSO014OF2            JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  T021005N             JUNCTION      0.19     0.19     0  00:00       0.123       0.123     112.774
+  T005005N             JUNCTION      0.01     0.01     0  00:00     0.00646     0.00646    6462.701 gal
+  T007126N             JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  T008005N             JUNCTION      0.22     0.22     0  00:00       0.142       0.142      87.831
+  T006005N             JUNCTION      0.31     0.31     0  00:00         0.2         0.2      51.313
+  T009005N             JUNCTION      0.61     0.61     0  00:00       0.394       0.394      19.641
+  T019195N             JUNCTION      0.46     0.46     0  00:00       0.297       0.297      28.299
+  T015005N             JUNCTION      0.29     0.29     0  00:00       0.187       0.187      53.682
+  T014015N             JUNCTION      0.00     1.24     0  04:10           0       0.706      11.459
+  T014020N             JUNCTION      1.20     1.20     0  00:00       0.776       0.776       9.784
+  T020005N             JUNCTION      0.68     0.68     0  00:00       0.439       0.439      18.518
+  I021169N             JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  I003164N             JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  CSO013OFN            JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  CSO013OF             JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  CSO015OF             JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  POUT                 JUNCTION      0.00     0.90     0  06:27           0       0.407       0.000
+  WWTPN                JUNCTION      0.00     0.79     0  06:37           0       0.478      17.446
+  03-GWTRN             JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  11-1GWTRN            JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  11-2GWTRN            JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  I021165N             JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  I010012N             JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  19-GWTR              JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  T003009N             JUNCTION      0.00     0.43     0  13:44           0       0.171      67.256
+  T003008N             JUNCTION      0.00     0.46     0  20:42           0       0.102     195.207
+  T011014N             JUNCTION      0.00     2.82     0  02:42           0        1.64       3.985
+  T011013N             JUNCTION      0.00     5.89     0  02:43           0        1.58       4.452
+  T011012N             JUNCTION      0.00     2.79     0  03:35           0        1.51       4.891
+  T011011N             JUNCTION      0.00     2.82     0  05:25           0        1.44       4.393
+  T011010N             JUNCTION      0.00     7.19     0  05:25           0        1.38       5.172
+  T011009N             JUNCTION      0.00     2.82     0  07:09           0        1.31       5.012
+  T011008N             JUNCTION      0.00     5.37     0  07:09           0        1.25       5.401
+  T011007N             JUNCTION      0.00     4.28     0  08:00           0        1.18       5.975
+  T002010AN            JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  T002010BN            JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  T002010CN            JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  T002010DN            JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  T002010EN            JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  T002010FN            JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  MH008#2              JUNCTION      0.00     0.44     0  05:58           0       0.236      55.862
+  I009008N             OUTFALL       0.00     0.00     0  00:00           0           0       0.000 gal
+  CSO002               STORAGE       0.00     0.39     0  06:51           0       0.186      -0.001
+  CSO021               STORAGE       0.00     0.19     0  13:01           0      0.0577      -0.006
+  CSO003N              STORAGE       0.00     3.75     0  04:07           0       0.382       0.402
+  CSO009               STORAGE       0.00     4.09     0  04:17           0       0.101    2046.265
+  CSO010               STORAGE       0.00     0.00     0  00:00           0           0       0.000 gal
+  CSO014               STORAGE       0.00     0.00     0  00:00           0           0       0.000 gal
+  I014019N             STORAGE       0.37     1.57     0  14:47       0.239       0.543       0.010
+  CSO018               STORAGE       0.00     0.91     0  03:03           0       0.526       0.004
+  CSO020               STORAGE       0.00     0.94     0  03:52           0       0.371       0.009
+  I009220N             STORAGE       0.00     0.84     0  11:30           0       0.413       0.000
+  I009210N             STORAGE       0.00     0.00     0  00:00           0           0       0.000 gal
+  CSO012               STORAGE       0.00     0.00     0  00:00           0           0       0.000 gal
+  CSO012A              STORAGE       0.00     0.00     0  00:00           0           0       0.000 gal
+  CSO12B               STORAGE       0.00     0.56     1  00:00           0       0.295       0.006
+  I12B093N             STORAGE       0.00     0.00     0  00:00           0           0       0.000 gal
+  I12B097N             STORAGE       0.00     0.00     0  00:00           0           0       0.000 gal
+  CSO013               STORAGE       0.00     0.64     1  00:00           0       0.345      -0.002
+  CSO011               STORAGE       0.00     3.39     0  09:28           0        1.47       0.007
+  CSO019               STORAGE       0.00     0.97     0  05:28           0       0.232       0.032
+  CSO015N              STORAGE       0.00     1.92     0  08:24           0       0.248       0.249
+  CSO006               STORAGE       0.00     0.31     0  09:25           0       0.132      -0.005
+  CSO008               STORAGE       0.00     0.22     0  11:27           0      0.0757       0.007
+  CSO007               STORAGE       0.00     0.00     0  00:00           0           0       0.000 gal
+  CSO005               STORAGE       0.00     0.00     0  00:00           0           0       0.000 gal
+  CSO003               STORAGE       0.00     3.60     0  04:07           0       0.367      -4.737
+  CSO004               STORAGE       0.00     0.00     0  00:00           0           0       0.000 gal
+  CSO015               STORAGE       0.00     1.90     0  08:24           0       0.271       8.754
+  CSO016               STORAGE       0.00     4.18     0  02:22           0       0.632      -0.035
+  CSO004N              STORAGE       0.00     0.00     0  00:00           0           0       0.000 gal
+  CSO014N              STORAGE       0.00     0.00     0  00:00           0           0       0.000 gal
+  CSO016N              STORAGE       0.00     3.47     0  02:22           0       0.631       0.033
+  CSO018N              STORAGE       0.00     0.00     0  00:00           0           0       0.000 gal
+  03-GWTR              STORAGE       0.00     0.00     0  00:00           0           0       0.000 gal
+  11-1GWTR             STORAGE       0.00     0.00     0  00:00           0           0       0.000 gal
+  11-2GWTR             STORAGE       0.00     0.00     0  00:00           0           0       0.000 gal
+  19-GWTRN             STORAGE       0.00     0.00     0  00:00           0           0       0.000 gal
   
-  ERROR 211: invalid number  at line 701 of [XSECT] section:
-  CSO020OFW        RECT_OPEN    0          2.50       0          0          
-
   
-  ERROR 211: invalid number  at line 702 of [XSECT] section:
-  CSO019OFW        RECT_OPEN    0          7.00       0          0          
-
+  **********************
+  Node Surcharge Summary
+  **********************
   
-  ERROR 211: invalid number  at line 703 of [XSECT] section:
-  CSO002OFW        RECT_OPEN    0          2.00       0          0          
-
+  Surcharging occurs when water rises above the top of the highest conduit.
+  ---------------------------------------------------------------------
+                                               Max. Height   Min. Depth
+                                   Hours       Above Crown    Below Rim
+  Node                 Type      Surcharged           Feet         Feet
+  ---------------------------------------------------------------------
+  I18E052N             JUNCTION        1.49          0.000        0.000
+  409                  JUNCTION       11.52          0.000        0.000
+  POUT                 JUNCTION       16.87          0.000        0.000
+  MH008#2              JUNCTION       12.87          0.000        0.000
   
-  ERROR 211: invalid number  at line 704 of [XSECT] section:
-  h                RECT_OPEN    0          3.50       0          0          
-
   
-  ERROR 211: invalid number  at line 705 of [XSECT] section:
-  CSO015OFW        RECT_OPEN    0          3.00       0          0          
-
+  *********************
+  Node Flooding Summary
+  *********************
   
-  ERROR 211: invalid number  at line 706 of [XSECT] section:
-  CSO006OFW        RECT_OPEN    0          4.00       0          0          
-
+  Flooding refers to all water that overflows a node, whether it ponds or not.
+  --------------------------------------------------------------------------
+                                                             Total   Maximum
+                                 Maximum   Time of Max       Flood    Ponded
+                        Hours       Rate    Occurrence      Volume     Depth
+  Node                 Flooded       CFS   days hr:min    10^6 gal      Feet
+  --------------------------------------------------------------------------
+  I18E052N                1.49      0.93      0  22:52       0.022     0.000
+  409                    11.52      0.39      0  12:29       0.121     0.000
+  POUT                   16.87      0.80      0  07:07       0.336     0.000
+  MH008#2                12.87      0.44      0  11:07       0.151     0.000
+  CSO021                 11.09      0.19      0  13:01       0.057     0.000
+  CSO003N                19.56      1.49      0  21:02       0.372     0.000
+  I014019N               23.90      1.57      0  14:47       0.542     0.000
+  CSO018                 21.38      0.91      0  03:03       0.525     0.000
+  CSO020                 20.13      0.70      0  03:53       0.369     0.000
+  I009220N               20.00      0.84      0  11:30       0.412     0.000
+  CSO12B                 19.23      0.56      0  05:08       0.290     0.000
+  CSO013                 19.94      0.64      1  00:00       0.344     0.000
+  CSO011                 20.08      3.39      0  09:28       1.467     0.000
+  CSO019                 18.52      0.57      0  05:30       0.229     0.000
+  CSO015N                15.31      0.56      0  09:05       0.098     0.000
+  CSO006                 15.75      0.31      0  09:25       0.131     0.000
+  CSO008                 12.61      0.22      0  11:27       0.075     0.000
+  CSO016N                21.62      1.56      0  02:23       0.629     0.000
   
-  ERROR 211: invalid number  at line 707 of [XSECT] section:
-  T003015C         RECT_OPEN    0          1.00       0          0          
-
   
-  ERROR 211: invalid number  at line 708 of [XSECT] section:
-  T011030C         RECT_OPEN    0          5.00       0          0          
-
+  **********************
+  Storage Volume Summary
+  **********************
   
-  ERROR 211: invalid number  at line 709 of [XSECT] section:
-  T011006C         RECT_OPEN    0          5.00       0          0          
-
+  ------------------------------------------------------------------------------------------------
+                         Average    Avg   Evap  Exfil     Maximum    Max    Time of Max    Maximum
+                          Volume   Pcnt   Pcnt   Pcnt      Volume   Pcnt     Occurrence    Outflow
+  Storage Unit          1000 ft³   Full   Loss   Loss    1000 ft³   Full    days hr:min        CFS
+  ------------------------------------------------------------------------------------------------
+  CSO002                   0.000    0.0    0.0    0.0       0.000    0.0       0  00:00       0.39
+  CSO021                   0.061   46.6    0.0    0.0       0.130  100.0       0  12:54       0.00
+  CSO003N                  0.263   82.3    0.0    0.0       0.320  100.0       0  04:26       3.21
+  CSO009                   0.084   64.3    0.0    0.0       0.112   86.3       0  10:54       4.50
+  CSO010                   0.000    0.0    0.0    0.0       0.000    0.0       0  00:00       0.00
+  CSO014                   0.000    0.0    0.0    0.0       0.000    0.0       0  00:00       0.00
+  I014019N                 0.130   99.8    0.0    0.0       0.130  100.0       0  00:06       0.00
+  CSO018                   0.116   89.2    0.0    0.0       0.130  100.0       0  02:37       0.00
+  CSO020                   0.109   84.1    0.0    0.0       0.130  100.0       0  03:52       0.65
+  I009220N                 0.108   83.5    0.0    0.0       0.130  100.0       0  04:00       0.00
+  I009210N                 0.000    0.0    0.0    0.0       0.000    0.0       0  00:00       0.00
+  CSO012                   0.000    0.0    0.0    0.0       0.000    0.0       0  00:00       0.00
+  CSO012A                  0.000    0.0    0.0    0.0       0.000    0.0       0  00:00       0.00
+  CSO12B                   0.485   80.8    0.0    0.0       0.600  100.0       0  04:46       0.00
+  I12B093N                 0.000    0.0    0.0    0.0       0.000    0.0       0  00:00       0.00
+  I12B097N                 0.000    0.0    0.0    0.0       0.000    0.0       0  00:00       0.00
+  CSO013                   0.208   83.3    0.0    0.0       0.250  100.0       0  04:03       0.00
+  CSO011                   0.134   83.9    0.0    0.0       0.160  100.0       0  03:55       0.68
+  CSO019                   0.101   77.5    0.0    0.0       0.130  100.0       0  05:28       0.91
+  CSO015N                  0.084   64.6    0.0    0.0       0.130  100.0       0  08:38       1.62
+  CSO006                   0.086   65.9    0.0    0.0       0.130  100.0       0  08:15       0.00
+  CSO008                   0.069   52.9    0.0    0.0       0.130  100.0       0  11:23       0.00
+  CSO007                   0.000    0.0    0.0    0.0       0.000    0.0       0  00:00       0.00
+  CSO005                   0.000    0.0    0.0    0.0       0.000    0.0       0  00:00       0.00
+  CSO003                   0.335   79.7    0.0    0.0       0.409   97.3       0  04:26       3.75
+  CSO004                   0.000    0.0    0.0    0.0       0.000    0.0       0  00:00       0.00
+  CSO015                   0.082   62.8    0.0    0.0       0.127   98.0       0  08:40       1.92
+  CSO016                   0.216   83.0    0.0    0.0       0.241   92.5       0  02:23       3.47
+  CSO004N                  0.000    0.0    0.0    0.0       0.000    0.0       0  00:00       0.00
+  CSO014N                  0.000    0.0    0.0    0.0       0.000    0.0       0  00:00       0.00
+  CSO016N                  0.117   90.2    0.0    0.0       0.130  100.0       0  02:23       2.93
+  CSO018N                  0.000    0.0    0.0    0.0       0.000    0.0       0  00:00       0.00
+  03-GWTR                  0.000    0.0    0.0    0.0       0.000    0.0       0  00:00       0.00
+  11-1GWTR                 0.000    0.0    0.0    0.0       0.000    0.0       0  00:00       0.00
+  11-2GWTR                 0.000    0.0    0.0    0.0       0.000    0.0       0  00:00       0.00
+  19-GWTRN                 0.000    0.0    0.0    0.0       0.000    0.0       0  00:00       0.00
   
-  ERROR 211: invalid number  at line 710 of [XSECT] section:
-  CSO0130FW        RECT_OPEN    0          5.50       0          0          
-
   
-  ERROR 211: invalid number  at line 711 of [XSECT] section:
-  19-GWTRW         RECT_OPEN    0          1.00       0          0          
+  ***********************
+  Outfall Loading Summary
+  ***********************
+  
+  -----------------------------------------------------------
+                         Flow       Avg       Max       Total
+                         Freq      Flow      Flow      Volume
+  Outfall Node           Pcnt       CFS       CFS    10^6 gal
+  -----------------------------------------------------------
+  I009008N               0.00      0.00      0.00       0.000
+  -----------------------------------------------------------
+  System                 0.00      0.00      0.00       0.000
+  
+  
+  ********************
+  Link Flow Summary
+  ********************
+  
+  -----------------------------------------------------------------------------
+                                 Maximum  Time of Max   Maximum    Max/    Max/
+                                  |Flow|   Occurrence   |Veloc|    Full    Full
+  Link                 Type          CFS  days hr:min    ft/sec    Flow   Depth
+  -----------------------------------------------------------------------------
+  I021CO2C             CONDUIT      0.00     0  00:00      0.00    0.00    0.50
+  I021186C             CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  I021185C             CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  I021177C             CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  I021175C             CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  I021174C             CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  I021172C             CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  I021169C             CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  I02102AC             CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  I003166C             CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  IWTPC03C             CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  IWTP161C             CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  WWTPC                CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  IWTPC09C             CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  IWTP004C             CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  IWTP003C             CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  IWTP001C             CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  IWTP000C             CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  I009006C             CONDUIT      0.18     0  10:46      1.57    0.00    0.01
+  I009009C             CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  MH008#1              CONDUIT      0.44     0  05:58      2.88    0.01    0.53
+  I010014C             CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  I010012C             CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  I010018C             CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  I010017C             CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  I010015C             CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  I014019C             CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  I014028C             CONDUIT      1.23     0  06:44      2.85    0.01    0.08
+  I014027C             CONDUIT      1.20     0  10:31      3.02    0.01    0.08
+  I014025C             CONDUIT      1.26     0  12:36      2.42    0.02    0.09
+  I014023C             CONDUIT      2.36     0  12:36      3.84    0.02    0.10
+  I014021C             CONDUIT      1.20     0  14:47      4.71    0.01    0.05
+  I014034C             CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  I014033C             CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  I014031C             CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  I014029C             CONDUIT      0.00     0  00:00      0.00    0.00    0.06
+  I014C18C             CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  I014037C             CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  I014036C             CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  I014035C             CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  CSO018OFC            CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  CSO002OFC            CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  IC18CC18DC           CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  IC18BC18C            CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  IC18AC18BC           CONDUIT      0.05     0  03:03      0.66    0.00    0.02
+  IC18C18AC            CONDUIT      0.91     0  03:03      5.30    0.00    0.03
+  IC18DC18EC           CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  IC18E045C            CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  I18E049C             CONDUIT      0.56     0  15:36      1.25    0.03    0.56
+  I18E047C             CONDUIT      0.00     0  00:00      0.00    0.00    0.33
+  I18E046C             CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  I18E054C             CONDUIT      0.56     0  19:55      0.31    0.04    0.79
+  I18E066C             CONDUIT      0.08     1  00:00      1.19    0.01    0.06
+  I18E064C             CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  I18E071C             CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  I18E068C             CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  I18E067C             CONDUIT      0.05     1  00:00      0.88    0.01    0.07
+  I18E075C             CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  I18E074C             CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  I18E072C             CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  I18EC20C             CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  I18E078C             CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  I009220C             CONDUIT      0.00     0  00:00      0.00    0.00    0.01
+  I009216C             CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  I009217C             CONDUIT      0.00     0  00:00      0.00    0.00    0.02
+  I009218C             CONDUIT      0.23     0  11:30      1.99    0.00    0.03
+  I009212C             CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  I009205C             CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  I009206C             CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  I009208C             CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  I009210C             CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  I009C12C             CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  CSO012OFC            CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  I012C12AC            CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  I12B091C             CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  I012C12BC            CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  I012088C             CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  I12B093C             CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  CSO012AOFC           CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  I012B013C            CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  I12B104C             CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  I12B102C             CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  I12B101C             CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  I12B100C             CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  I12B099C             CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  I12B098C             CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  I12B097C             CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  I010187C             CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  I010C11AC            CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  I010011C             CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  I010010C             CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  CSO011OFC            CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  I010C19C             CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  I010190C             CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  CSO0190FC            CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  I010C16C             CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  I010135C             CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  I010134C             CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  I010133C             CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  I010132C             CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  CSO016OFC            CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  I015C17C             CONDUIT      0.16     0  18:14      0.28    0.04    0.36
+  I015150C             CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  I014C15C             CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  I014020C             CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  IWTP221C             CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  IWTP220C             CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  CSO004OFC            CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  I004112C             CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  I004111C             CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  I004C06C             CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  I004110BC            CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  I004110AC            CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  CSO006OFC            CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  I004116C             CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  I004115C             CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  I004114C             CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  I004113C             CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  I004C08C             CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  I004117C             CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  CSO008OFC            CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  I004C07C             CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  CSO007OFC            CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  I004005C             CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  CSO005OFC            CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  T003010C             CONDUIT      0.43     0  13:44      0.99    0.03    0.13
+  T003005C             CONDUIT      1.02     0  21:02      2.41    0.02    0.09
+  CSO009OFC            CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  T011020C             CONDUIT      9.71     0  00:55      7.98    0.19    0.31
+  T011015C             CONDUIT      2.82     0  02:42      3.19    0.08    0.24
+  T011198C             CONDUIT      3.39     0  09:28     10.49    0.02    0.09
+  T012A005C            CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  T012010C             CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  T012015C             CONDUIT      0.56     1  00:00      1.53    0.03    0.10
+  CSO012BOFC           CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  T013104C             CONDUIT      0.64     1  00:00      1.64    0.05    0.13
+  T016005C             CONDUIT      1.35     0  02:20      4.32    0.21    0.32
+  CSO020OFC            CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  T002010C             CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  T002005C             CONDUIT      0.39     0  06:51      4.60    0.01    0.06
+  I18E062C             CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  I18E056C             CONDUIT      0.00     0  00:00      0.00    0.00    0.29
+  I18E052C             CONDUIT      0.94     0  22:38      1.47    0.03    0.73
+  CSO003OFC            CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  CSO014OF1C           CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  CSO014OF2C           CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  T021005C             CONDUIT      0.19     0  13:01      4.30    0.00    0.02
+  T005005C             CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  T007126C             CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  T008005C             CONDUIT      0.22     0  11:27      5.04    0.00    0.04
+  T006005C             CONDUIT      0.31     0  09:25      0.37    0.02    0.31
+  T009005C             CONDUIT      0.74     0  03:56     12.64    0.00    0.02
+  T019195C             CONDUIT      0.59     0  05:18      4.69    0.00    0.03
+  T015005C             CONDUIT      0.29     0  08:42      4.54    0.00    0.02
+  T014015C             CONDUIT      1.26     0  06:25      1.57    0.01    0.08
+  T014020C             CONDUIT      1.24     0  04:10      2.53    0.01    0.09
+  T020005C             CONDUIT      0.68     1  00:00      1.62    0.10    0.19
+  RC1                  CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  RC2                  CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  RC3                  CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  I021170C             CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  I003164C             CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  CSO013OFC            CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  CSO015OFC            CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  WWTP1                CONDUIT      0.90     0  06:27      1.74    0.02    0.98
+  03-GWTRC             CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  11-1GWTRC            CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  11-2GWTRC            CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  I021165C             CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  T010005C             CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  19-GWTRC             CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  T003009C             CONDUIT      0.46     0  20:42      1.00    0.04    0.13
+  T003008C             CONDUIT      0.42     0  20:54      0.90    0.03    0.12
+  T011014C             CONDUIT      5.89     0  02:43      3.97    0.16    0.27
+  T011013C             CONDUIT      2.79     0  03:35      3.20    0.08    0.19
+  T011012C             CONDUIT      2.82     0  05:25      3.19    0.08    0.26
+  T011011C             CONDUIT      7.19     0  05:25      4.20    0.20    0.30
+  T011010C             CONDUIT      2.82     0  07:09      3.19    0.08    0.23
+  T011009C             CONDUIT      5.37     0  07:09      3.86    0.15    0.26
+  T011008C             CONDUIT      4.28     0  08:00      3.62    0.12    0.23
+  T011007C             CONDUIT      2.74     0  09:29      7.79    0.02    0.10
+  T002010AC            CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  T002010BC            CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  T002010CC            CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  T002010DC            CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  T002010EC            CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  T002010FC            CONDUIT      0.00     0  00:00      0.00    0.00    0.02
+  ORIFICE3             ORIFICE      3.75     0  04:07                      1.00
+  CSO015ORF            ORIFICE      1.92     0  08:24                      1.00
+  CSO019O              ORIFICE      0.91     0  05:20                      1.00
+  CSO004ORF            ORIFICE      0.00     0  00:00                      0.00
+  CSO009ORF            ORIFICE      4.50     0  04:16                      1.00
+  CSO011ORF            ORIFICE      0.68     0  03:55                      1.00
+  CSO014ORF            ORIFICE      0.00     0  00:00                      0.00
+  CSO016ORF            ORIFICE      3.47     0  02:22                      1.00
+  meter                ORIFICE      0.00     0  00:00                      0.00
+  CSO020ORF            ORIFICE      0.65     0  03:51                      1.00
+  CSO004W              WEIR         0.00     0  00:00                      0.00
+  CSO009OFW            WEIR         0.00     0  00:00                      0.00
+  CSO011OFW            WEIR         0.00     0  00:00                      0.00
+  CSO012OFW            WEIR         0.00     0  00:00                      0.00
+  CSO012AOFW           WEIR         0.00     0  00:00                      0.00
+  CSO012BOFW           WEIR         0.00     0  00:00                      0.00
+  CSO016OFW            WEIR         0.00     0  00:00                      0.00
+  CSO018OFW            WEIR         0.00     0  00:00                      0.00
+  CSO020OFW            WEIR         0.00     0  00:00                      0.00
+  CSO019OFW            WEIR         0.00     0  00:00                      0.00
+  CSO002OFW            WEIR         0.00     0  00:00                      0.00
+  h                    WEIR         0.00     0  00:00                      0.00
+  CSO015OFW            WEIR         0.00     0  00:00                      0.00
+  CSO006OFW            WEIR         0.00     0  00:00                      0.00
+  T003015C             WEIR         0.00     0  00:00                      0.00
+  T011030C             WEIR         0.00     0  00:00                      0.00
+  T011006C             WEIR         0.00     0  00:00                      0.00
+  CSO0130FW            WEIR         0.00     0  00:00                      0.00
+  19-GWTRW             WEIR         0.00     0  00:00                      0.00
+  CSO002P              PUMP         0.39     0  06:51              0.04
+  PUMP                 PUMP         0.74     0  00:00              0.07
+  
+  
+  ***************************
+  Flow Classification Summary
+  ***************************
+  
+  -------------------------------------------------------------------------------------
+                      Adjusted    ---------- Fraction of Time in Flow Class ---------- 
+                       /Actual         Up    Down  Sub   Sup   Up    Down  Norm  Inlet 
+  Conduit               Length    Dry  Dry   Dry   Crit  Crit  Crit  Crit  Ltd   Ctrl  
+  -------------------------------------------------------------------------------------
+  I021CO2C                1.00   0.52  0.48  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  I021186C                1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  I021185C                1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  I021177C                1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  I021175C                1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  I021174C                1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  I021172C                1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  I021169C                1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  I02102AC                1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  I003166C                1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  IWTPC03C                1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  IWTP161C                1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  WWTPC                   1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  IWTPC09C                1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  IWTP004C                1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  IWTP003C                1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  IWTP001C                1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  IWTP000C                1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  I009006C                1.00   0.16  0.00  0.00  0.00  0.00  0.00  0.84  0.00  0.00
+  I009009C                1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  MH008#1                 1.00   0.16  0.00  0.00  0.61  0.00  0.00  0.23  0.61  0.00
+  I010014C                1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  I010012C                1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  I010018C                1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  I010017C                1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  I010015C                1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  I014019C                1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  I014028C                1.00   0.27  0.00  0.00  0.00  0.00  0.00  0.73  0.00  0.00
+  I014027C                1.00   0.35  0.00  0.00  0.55  0.01  0.00  0.09  0.56  0.00
+  I014025C                1.00   0.44  0.00  0.00  0.00  0.00  0.00  0.56  0.00  0.00
+  I014023C                1.00   0.53  0.00  0.00  0.00  0.00  0.00  0.47  0.00  0.00
+  I014021C                1.00   0.61  0.00  0.00  0.00  0.00  0.00  0.39  0.00  0.00
+  I014034C                1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  I014033C                1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  I014031C                1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  I014029C                1.00   0.27  0.73  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  I014C18C                1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  I014037C                1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  I014036C                1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  I014035C                1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  CSO018OFC               1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  CSO002OFC               1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  IC18CC18DC              1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  IC18BC18C               1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  IC18AC18BC              1.00   0.11  0.00  0.00  0.00  0.00  0.00  0.89  0.00  0.00
+  IC18C18AC               1.00   0.11  0.00  0.00  0.00  0.00  0.00  0.89  0.00  0.00
+  IC18DC18EC              1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  IC18E045C               1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  I18E049C                1.00   0.18  0.00  0.00  0.35  0.00  0.00  0.46  0.01  0.00
+  I18E047C                1.00   0.65  0.35  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  I18E046C                1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  I18E054C                1.00   0.48  0.07  0.00  0.17  0.00  0.28  0.00  0.00  0.00
+  I18E066C                1.00   0.80  0.00  0.00  0.00  0.00  0.00  0.20  0.00  0.00
+  I18E064C                1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  I18E071C                1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  I18E068C                1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  I18E067C                1.00   0.80  0.00  0.00  0.00  0.00  0.00  0.20  0.00  0.00
+  I18E075C                1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  I18E074C                1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  I18E072C                1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  I18EC20C                1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  I18E078C                1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  I009220C                1.00   0.16  0.84  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  I009216C                1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  I009217C                1.00   0.43  0.57  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  I009218C                1.00   0.43  0.00  0.00  0.00  0.00  0.00  0.57  0.00  0.00
+  I009212C                1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  I009205C                1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  I009206C                1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  I009208C                1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  I009210C                1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  I009C12C                1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  CSO012OFC               1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  I012C12AC               1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  I12B091C                1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  I012C12BC               1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  I012088C                1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  I12B093C                1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  CSO012AOFC              1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  I012B013C               1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  I12B104C                1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  I12B102C                1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  I12B101C                1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  I12B100C                1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  I12B099C                1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  I12B098C                1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  I12B097C                1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  I010187C                1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  I010C11AC               1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  I010011C                1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  I010010C                1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  CSO011OFC               1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  I010C19C                1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  I010190C                1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  CSO0190FC               1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  I010C16C                1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  I010135C                1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  I010134C                1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  I010133C                1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  I010132C                1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  CSO016OFC               1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  I015C17C                1.00   0.63  0.01  0.00  0.00  0.00  0.36  0.00  0.00  0.00
+  I015150C                1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  I014C15C                1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  I014020C                1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  IWTP221C                1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  IWTP220C                1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  CSO004OFC               1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  I004112C                1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  I004111C                1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  I004C06C                1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  I004110BC               1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  I004110AC               1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  CSO006OFC               1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  I004116C                1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  I004115C                1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  I004114C                1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  I004113C                1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  I004C08C                1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  I004117C                1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  CSO008OFC               1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  I004C07C                1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  CSO007OFC               1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  I004005C                1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  CSO005OFC               1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  T003010C                1.00   0.28  0.00  0.00  0.43  0.00  0.00  0.29  0.42  0.00
+  T003005C                1.00   0.17  0.00  0.00  0.00  0.00  0.00  0.83  0.00  0.00
+  CSO009OFC               1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  T011020C                1.00   0.04  0.00  0.00  0.00  0.93  0.00  0.04  0.93  0.00
+  T011015C                1.00   0.07  0.00  0.00  0.89  0.00  0.00  0.04  0.05  0.00
+  T011198C                1.00   0.16  0.00  0.00  0.00  0.00  0.00  0.84  0.00  0.00
+  T012A005C               1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  T012010C                1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  T012015C                1.00   0.18  0.00  0.00  0.00  0.00  0.00  0.82  0.00  0.00
+  CSO012BOFC              1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  T013104C                1.00   0.16  0.00  0.00  0.00  0.00  0.00  0.84  0.00  0.00
+  T016005C                1.00   0.09  0.00  0.00  0.00  0.00  0.00  0.91  0.00  0.00
+  CSO020OFC               1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  T002010C                1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  T002005C                1.00   0.26  0.00  0.00  0.00  0.00  0.00  0.74  0.00  0.00
+  I18E062C                1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  I18E056C                1.00   0.83  0.17  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  I18E052C                1.00   0.18  0.00  0.00  0.52  0.00  0.00  0.30  0.07  0.00
+  CSO003OFC               1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  CSO014OF1C              1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  CSO014OF2C              1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  T021005C                1.00   0.53  0.00  0.00  0.00  0.00  0.00  0.47  0.00  0.00
+  T005005C                1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  T007126C                1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  T008005C                1.00   0.47  0.00  0.00  0.00  0.00  0.00  0.53  0.00  0.00
+  T006005C                1.00   0.33  0.01  0.00  0.00  0.00  0.67  0.00  0.00  0.00
+  T009005C                1.00   0.16  0.00  0.00  0.00  0.00  0.00  0.84  0.00  0.00
+  T019195C                1.00   0.22  0.00  0.00  0.00  0.00  0.00  0.78  0.00  0.00
+  T015005C                1.00   0.35  0.00  0.00  0.00  0.00  0.00  0.65  0.00  0.00
+  T014015C                1.00   0.17  0.00  0.00  0.73  0.00  0.00  0.10  0.00  0.00
+  T014020C                1.00   0.08  0.00  0.00  0.83  0.00  0.00  0.09  0.83  0.00
+  T020005C                1.00   0.15  0.00  0.00  0.00  0.00  0.00  0.85  0.00  0.00
+  RC1                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  RC2                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  RC3                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  I021170C                1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  I003164C                1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  CSO013OFC               1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  CSO015OFC               1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  WWTP1                   1.00   0.13  0.00  0.00  0.73  0.00  0.00  0.13  0.00  0.00
+  03-GWTRC                1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  11-1GWTRC               1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  11-2GWTRC               1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  I021165C                1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  T010005C                1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  19-GWTRC                1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  T003009C                1.00   0.56  0.00  0.00  0.15  0.00  0.00  0.29  0.13  0.00
+  T003008C                1.00   0.17  0.68  0.00  0.15  0.00  0.00  0.00  0.01  0.00
+  T011014C                1.00   0.11  0.00  0.00  0.85  0.00  0.00  0.04  0.05  0.00
+  T011013C                1.00   0.15  0.00  0.00  0.81  0.00  0.00  0.04  0.05  0.00
+  T011012C                1.00   0.19  0.00  0.00  0.77  0.00  0.00  0.04  0.05  0.00
+  T011011C                1.00   0.23  0.00  0.00  0.74  0.00  0.00  0.04  0.05  0.00
+  T011010C                1.00   0.26  0.00  0.00  0.70  0.00  0.00  0.04  0.05  0.00
+  T011009C                1.00   0.30  0.00  0.00  0.67  0.00  0.00  0.04  0.67  0.00
+  T011008C                1.00   0.33  0.00  0.00  0.00  0.00  0.00  0.67  0.00  0.00
+  T011007C                1.00   0.16  0.21  0.00  0.00  0.00  0.00  0.63  0.00  0.00
+  T002010AC               1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  T002010BC               1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  T002010CC               1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  T002010DC               1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  T002010EC               1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  T002010FC               1.00   0.26  0.74  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  
+  
+  *************************
+  Conduit Surcharge Summary
+  *************************
+  
+  ----------------------------------------------------------------------------
+                                                           Hours        Hours 
+                         --------- Hours Full --------   Above Full   Capacity
+  Conduit                Both Ends  Upstream  Dnstream   Normal Flow   Limited
+  ----------------------------------------------------------------------------
+  MH008#1                     0.01      0.01     12.87      0.01         0.01
+  I18E054C                    0.01      0.01      7.91      0.01         0.01
+  I18E052C                    0.01      0.01      1.49      0.01         0.01
+  WWTP1                       0.01      0.01     16.87      0.01         0.01
+  
+  
+  ***************
+  Pumping Summary
+  ***************
+  
+  ---------------------------------------------------------------------------------------------------------
+                                                  Min       Avg       Max     Total     Power    % Time Off
+                        Percent   Number of      Flow      Flow      Flow    Volume     Usage    Pump Curve
+  Pump                 Utilized   Start-Ups       CFS       CFS       CFS  10^6 gal     Kw-hr    Low   High
+  ---------------------------------------------------------------------------------------------------------
+  CSO002P                 74.14           1      0.00      0.39      0.39     0.186    346.53    0.0    0.0
+  PUMP                   100.00           1      0.00      0.74      0.74     0.478    959.25    0.0    0.0
+  
 
-
-  Analysis begun on:  Mon Jul 13 08:03:54 2026
-  Analysis ended on:  Mon Jul 13 08:03:54 2026
-  Total elapsed time: < 1 sec
+  Analysis begun on:  Sun Jul 19 15:17:55 2026
+  Analysis ended on:  Sun Jul 19 15:17:57 2026
+  Total elapsed time: 00:00:02

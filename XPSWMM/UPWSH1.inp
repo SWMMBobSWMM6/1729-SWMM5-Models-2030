@@ -16,6 +16,18 @@ ALLOW_PONDING        NO
 SKIP_STEADY_STATE    NO
 INERTIAL_DAMPING     PARTIAL
 NORMAL_FLOW_LIMITED  BOTH
+START_DATE           01/01/2001
+START_TIME           00:00:00
+REPORT_START_DATE    01/01/2001
+REPORT_START_TIME    00:00:00
+END_DATE             01/02/2001
+END_TIME             00:00:00
+SWEEP_START          01/01
+SWEEP_END            12/31
+DRY_DAYS             0
+REPORT_STEP          00:15:00
+WET_STEP             00:05:00
+DRY_STEP             01:00:00
 
 [JUNCTIONS]
 ;;Name           Elev       MaxDepth   InitDepth  SurDepth   Aponded
@@ -38,7 +50,11 @@ FF               0          0          0          0          0
 XGL              0          0          0          0          0
 XGU              0          0          0          0          0
 GU               0          0          0          0          0
-GL               0          0          0          0          0
+
+[OUTFALLS]
+;;Name           Elev       Type       Stage      Gated
+;;-------------- ---------- ---------- ---------- -----
+GL               0          FREE                  NO
 
 [CONDUITS]
 ;;Name           From             To               Length     Roughness  InOffset   OutOffset  InitFlow   MaxFlow
@@ -65,24 +81,24 @@ DMY_F            XFF              104              100.00     0.0140     0      
 [XSECTIONS]
 ;;Link           Shape        Geom1      Geom2      Geom3      Geom4      Barrels
 ;;-------------- ------------ ---------- ---------- ---------- ---------- ----------
-S                TRAPEZOIDAL  4.50       8.00       0          0          1
-DCH_HU           TRAPEZOIDAL  5.00       10.00      0          0          1
-DCH_II           TRAPEZOIDAL  5.00       10.00      0          0          1
-I                TRAPEZOIDAL  4.50       8.00       0          0          1
-DCH_HL           TRAPEZOIDAL  5.00       10.00      0          0          1
-H                TRAPEZOIDAL  6.00       8.00       0          0          1
-J                TRAPEZOIDAL  8.00       12.00      0          0          1
-DCH_JJ           TRAPEZOIDAL  5.00       10.00      0          0          1
-DMY_J            TRAPEZOIDAL  10.00      20.00      0          0          1
-DMY_H            TRAPEZOIDAL  10.00      20.00      0          0          1
-DCH_GU           TRAPEZOIDAL  5.00       10.00      0          0          1
-T                TRAPEZOIDAL  4.50       8.00       0          0          1
-G                TRAPEZOIDAL  6.00       8.00       0          0          1
-F                TRAPEZOIDAL  8.00       12.00      0          0          1
-DCH_GL           TRAPEZOIDAL  5.00       10.00      0          0          1
-DMY_G            TRAPEZOIDAL  10.00      20.00      0          0          1
-DCH_FF           TRAPEZOIDAL  5.00       10.00      0          0          1
-DMY_F            TRAPEZOIDAL  10.00      20.00      0          0          1
+S                TRAPEZOIDAL  4.50       8.00       1          1          1
+DCH_HU           TRAPEZOIDAL  5.00       10.00      1          1          1
+DCH_II           TRAPEZOIDAL  5.00       10.00      1          1          1
+I                TRAPEZOIDAL  4.50       8.00       1          1          1
+DCH_HL           TRAPEZOIDAL  5.00       10.00      1          1          1
+H                TRAPEZOIDAL  6.00       8.00       1          1          1
+J                TRAPEZOIDAL  8.00       12.00      1          1          1
+DCH_JJ           TRAPEZOIDAL  5.00       10.00      1          1          1
+DMY_J            TRAPEZOIDAL  10.00      20.00      1          1          1
+DMY_H            TRAPEZOIDAL  10.00      20.00      1          1          1
+DCH_GU           TRAPEZOIDAL  5.00       10.00      1          1          1
+T                TRAPEZOIDAL  4.50       8.00       1          1          1
+G                TRAPEZOIDAL  6.00       8.00       1          1          1
+F                TRAPEZOIDAL  8.00       12.00      1          1          1
+DCH_GL           TRAPEZOIDAL  5.00       10.00      1          1          1
+DMY_G            TRAPEZOIDAL  10.00      20.00      1          1          1
+DCH_FF           TRAPEZOIDAL  5.00       10.00      1          1          1
+DMY_F            TRAPEZOIDAL  10.00      20.00      1          1          1
 
 [LOSSES]
 ;;Link           Inlet      Outlet     Average    Flap Gate

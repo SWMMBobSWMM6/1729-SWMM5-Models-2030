@@ -16,19 +16,35 @@ ALLOW_PONDING        NO
 SKIP_STEADY_STATE    NO
 INERTIAL_DAMPING     PARTIAL
 NORMAL_FLOW_LIMITED  BOTH
+START_DATE           01/01/2001
+START_TIME           00:00:00
+REPORT_START_DATE    01/01/2001
+REPORT_START_TIME    00:00:00
+END_DATE             01/02/2001
+END_TIME             00:00:00
+SWEEP_START          01/01
+SWEEP_END            12/31
+DRY_DAYS             0
+REPORT_STEP          00:15:00
+WET_STEP             00:05:00
+DRY_STEP             01:00:00
 
 [JUNCTIONS]
 ;;Name           Elev       MaxDepth   InitDepth  SurDepth   Aponded
 ;;-------------- ---------- ---------- ---------- ---------- ----------
-0                0          0          0          0          0
-0                0          0          0          0          0
-0                0          0          0          0          0
+100              0          0          0          0          0
+102              0          0          0          0          0
+
+[OUTFALLS]
+;;Name           Elev       Type       Stage      Gated
+;;-------------- ---------- ---------- ---------- -----
+103              0          FREE                  NO
 
 [CONDUITS]
 ;;Name           From             To               Length     Roughness  InOffset   OutOffset  InitFlow   MaxFlow
 ;;-------------- ---------------- ---------------- ---------- ---------- ---------- ---------- ---------- ----------
-232              0                0                700.00     0.0350     10.00      8.60       0          0
-233              0                0                1100.00    0.0350     10.00      7.80       0          0
+232              100              102              700.00     0.0350     10.00      8.60       0          0
+233              102              103              1100.00    0.0350     10.00      7.80       0          0
 
 [XSECTIONS]
 ;;Link           Shape        Geom1      Geom2      Geom3      Geom4      Barrels
@@ -45,9 +61,9 @@ NORMAL_FLOW_LIMITED  BOTH
 [COORDINATES]
 ;;Node           X-Coord            Y-Coord
 ;;-------------- ------------------ ------------------
-0                52.56              6.36              
-0                72.96              7.03              
-0                92.56              7.03              
+100              52.56              6.36              
+102              72.96              7.03              
+103              92.56              7.03              
 
 [MAP]
 DIMENSIONS 52.56 6.36 92.56 7.03

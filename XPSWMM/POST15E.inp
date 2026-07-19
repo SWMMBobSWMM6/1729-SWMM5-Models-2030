@@ -20,39 +20,55 @@ INERTIAL_DAMPING     NONE
 NORMAL_FLOW_LIMITED  BOTH
 MAX_TRIALS           500
 HEAD_TOLERANCE       .001
+START_DATE           01/01/2001
+START_TIME           00:00:00
+REPORT_START_DATE    01/01/2001
+REPORT_START_TIME    00:00:00
+END_DATE             01/02/2001
+END_TIME             00:00:00
+SWEEP_START          01/01
+SWEEP_END            12/31
+DRY_DAYS             0
+REPORT_STEP          00:15:00
+WET_STEP             00:05:00
+DRY_STEP             01:00:00
 
 [JUNCTIONS]
 ;;Name           Elev       MaxDepth   InitDepth  SurDepth   Aponded
 ;;-------------- ---------- ---------- ---------- ---------- ----------
-MH21             178.00     0          0.50       0          0
-MH3              177.60     0          1.20       0          0
-MH1              177.60     0          1.60       0          0
-MH4              177.80     0          1.40       0          0
-MH5              177.60     0          1.20       0          0
-MH6              177.80     0          1.00       0          0
-MH7              177.90     0          0.45       0          0
-MH8              178.20     0          0.10       0          0
+MH21             178.00     0          0          0          0
+MH3              177.60     0          0          0          0
+MH1              177.60     0          0          0          0
+MH4              177.80     0          0          0          0
+MH5              177.60     0          0          0          0
+MH6              177.80     0          0          0          0
+MH7              177.90     0          0          0          0
+MH8              178.20     0          0          0          0
 MH9              178.40     0          0          0          0
-MH10             177.80     0          0.30       0          0
+MH10             177.80     0          0          0          0
 MH11             177.90     0          0          0          0
-MH12             177.90     0          0.40       0          0
+MH12             177.90     0          0          0          0
 MH13             178.00     0          0          0          0
-MH14             177.90     0          0.25       0          0
-MH16             177.90     0          0.25       0          0
-MH17             177.90     0          0.35       0          0
-MH2              177.80     0          1.55       0          0
-MH18             177.80     0          0.30       0          0
-MH19             177.80     0          0.60       0          0
-MH15             177.60     0          0.60       0          0
+MH14             177.90     0          0          0          0
+MH16             177.90     0          0          0          0
+MH17             177.90     0          0          0          0
+MH2              177.80     0          0          0          0
+MH18             177.80     0          0          0          0
+MH19             177.80     0          0          0          0
+MH15             177.60     0          0          0          0
 MH20             178.60     0          0          0          0
-OUTLET           178.00     0          0          0          0
+
+[OUTFALLS]
+;;Name           Elev       Type       Stage      Gated
+;;-------------- ---------- ---------- ---------- -----
+OUTLET           178.00     FREE                  NO
 
 [STORAGE]
 ;;Name           Elev       MaxDepth   InitDepth  Shape      Curve/Params
 ;;-------------- ---------- ---------- ---------- ---------- ----------
-POND             178.00     0          0          FUNCTIONAL 0 0          0
-POND             178.30     0          0          FUNCTIONAL 0 0          0
-POND             178.30     0          0          FUNCTIONAL 0 0          0
+POND             178.00     10.00      0          FUNCTIONAL 1000.00 0          0
+POND_2           178.30     10.00      0          FUNCTIONAL 1000.00 0          0
+POND_3           178.30     10.00      0          FUNCTIONAL 1000.00 0          0
 
 [CONDUITS]
 ;;Name           From             To               Length     Roughness  InOffset   OutOffset  InitFlow   MaxFlow
@@ -155,14 +171,14 @@ MH11             -40.60             719.59
 MH12             -171.82            779.15            
 MH13             -110.98            907.28            
 POND             -171.66            524.00            
-POND             37.69              1151.37           
+POND_2           37.69              1151.37           
 MH14             -302.69            234.87            
 MH16             -258.38            192.11            
 MH17             -341.19            291.51            
 MH2              -187.19            408.43            
 MH18             -428.37            561.49            
 MH19             -441.44            692.86            
-POND             -125.64            1143.93           
+POND_3           -125.64            1143.93           
 MH15             -147.99            239.11            
 MH20             -47.36             1243.98           
 OUTLET           57.13              235.70            

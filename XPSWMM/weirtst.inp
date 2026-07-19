@@ -19,6 +19,18 @@ VARIABLE_STEP        0.75
 INERTIAL_DAMPING     PARTIAL
 NORMAL_FLOW_LIMITED  BOTH
 MAX_TRIALS           50
+START_DATE           01/01/2001
+START_TIME           00:00:00
+REPORT_START_DATE    01/01/2001
+REPORT_START_TIME    00:00:00
+END_DATE             01/02/2001
+END_TIME             00:00:00
+SWEEP_START          01/01
+SWEEP_END            12/31
+DRY_DAYS             0
+REPORT_STEP          00:15:00
+WET_STEP             00:05:00
+DRY_STEP             01:00:00
 
 [JUNCTIONS]
 ;;Name           Elev       MaxDepth   InitDepth  SurDepth   Aponded
@@ -28,18 +40,22 @@ MAX_TRIALS           50
 41               600.00     0          0          0          0
 43               600.00     0          0          0          0
 G                600.00     0          0          0          0
-OF#2             468.00     0          0          0          0
 300              600.00     0          0          0          0
 152              595.00     0          0          0          0
+
+[OUTFALLS]
+;;Name           Elev       Type       Stage      Gated
+;;-------------- ---------- ---------- ---------- -----
+OF#2             468.00     FREE                  NO
 
 [STORAGE]
 ;;Name           Elev       MaxDepth   InitDepth  Shape      Curve/Params
 ;;-------------- ---------- ---------- ---------- ---------- ----------
-IC9              592.00     -63.31     0          FUNCTIONAL 26.60 0          0
-IC8              590.00     -62.71     0          FUNCTIONAL 57.00 0          0
-IC6              590.00     -64.42     0          FUNCTIONAL 62.70 0          0
-SHAFT2           595.00     -8.78      0          FUNCTIONAL 144.00 0          0
-SHAFT1           600.00     -111.92    0          FUNCTIONAL 144.00 0          0
+IC9              592.00     10.00      0          FUNCTIONAL 26.60 0          0
+IC8              590.00     10.00      0          FUNCTIONAL 57.00 0          0
+IC6              590.00     10.00      0          FUNCTIONAL 62.70 0          0
+SHAFT2           595.00     10.00      0          FUNCTIONAL 144.00 0          0
+SHAFT1           600.00     10.00      0          FUNCTIONAL 144.00 0          0
 
 [CONDUITS]
 ;;Name           From             To               Length     Roughness  InOffset   OutOffset  InitFlow   MaxFlow
@@ -75,7 +91,7 @@ SHAFT1           600.00     -111.92    0          FUNCTIONAL 144.00 0          0
 46               CIRCULAR     4.00       0          0          0          1
 48               CIRCULAR     4.00       0          0          0          1
 98               HORSESHOE    5.00       4.00       0          0          1
-153              RECT_CLOSED  0          0          0          0          
+153              RECT_CLOSED  1.11       1.11       0          0
 
 [LOSSES]
 ;;Link           Inlet      Outlet     Average    Flap Gate

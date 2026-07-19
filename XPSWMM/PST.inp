@@ -20,6 +20,18 @@ INERTIAL_DAMPING     PARTIAL
 NORMAL_FLOW_LIMITED  BOTH
 MAX_TRIALS           100
 HEAD_TOLERANCE       1e-5
+START_DATE           01/01/2001
+START_TIME           00:00:00
+REPORT_START_DATE    01/01/2001
+REPORT_START_TIME    00:00:00
+END_DATE             01/02/2001
+END_TIME             00:00:00
+SWEEP_START          01/01
+SWEEP_END            12/31
+DRY_DAYS             0
+REPORT_STEP          00:15:00
+WET_STEP             00:05:00
+DRY_STEP             01:00:00
 
 [JUNCTIONS]
 ;;Name           Elev       MaxDepth   InitDepth  SurDepth   Aponded
@@ -28,25 +40,29 @@ ST1              5.00       0          0          0          0
 ST2              5.00       0          0          0          0
 ST3              4.50       0          0          0          0
 206              3.00       0          0          0          0
-211              2.00       0          0          0          0
+
+[OUTFALLS]
+;;Name           Elev       Type       Stage      Gated
+;;-------------- ---------- ---------- ---------- -----
+211              2.00       FREE                  NO
 
 [STORAGE]
 ;;Name           Elev       MaxDepth   InitDepth  Shape      Curve/Params
 ;;-------------- ---------- ---------- ---------- ---------- ----------
-ST4              3.00       0          0          FUNCTIONAL 600.00 0          0
+ST4              3.00       10.00      0          FUNCTIONAL 600.00 0          0
 
 [CONDUITS]
 ;;Name           From             To               Length     Roughness  InOffset   OutOffset  InitFlow   MaxFlow
 ;;-------------- ---------------- ---------------- ---------- ---------- ---------- ---------- ---------- ----------
-207              ?                ?                10.00      0.0140     2.00       1.00       0          0
-208              ?                ?                10.00      0.0140     2.00       1.00       0          0
-209              ?                ?                250.00     0.0140     1.00       0.50       0          0
-210              ?                ?                10.00      0.0140     1.50       0.50       0          0
+207              ST1              206              10.00      0.0140     2.00       1.00       0          0
+208              ST2              206              10.00      0.0140     2.00       1.00       0          0
+209              206              ST4              250.00     0.0140     1.00       0.50       0          0
+210              ST3              ST4              10.00      0.0140     1.50       0.50       0          0
 
 [ORIFICES]
 ;;Name           From             To               Type       Offset     Qcoeff     Gated    CloseTime
 ;;-------------- ---------------- ---------------- ---------- ---------- ---------- -------- ----------
-out              ?                ?                SIDE       0.50       0.650      NO       0
+out              ST4              211              SIDE       0.50       0.650      NO       0
 
 [XSECTIONS]
 ;;Link           Shape        Geom1      Geom2      Geom3      Geom4      Barrels
@@ -55,7 +71,7 @@ out              ?                ?                SIDE       0.50       0.650  
 208              CIRCULAR     1.00       0          0          0          1
 209              CIRCULAR     0.50       0          0          0          1
 210              CIRCULAR     1.00       0          0          0          1
-out              RECT_CLOSED  1.00       0          0          0          
+out              RECT_CLOSED  1.00       1.00       0          0
 
 [LOSSES]
 ;;Link           Inlet      Outlet     Average    Flap Gate

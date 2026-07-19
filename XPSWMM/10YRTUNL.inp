@@ -19,6 +19,18 @@ VARIABLE_STEP        0.75
 INERTIAL_DAMPING     PARTIAL
 NORMAL_FLOW_LIMITED  BOTH
 MAX_TRIALS           100
+START_DATE           01/01/2001
+START_TIME           00:00:00
+REPORT_START_DATE    01/01/2001
+REPORT_START_TIME    00:00:00
+END_DATE             01/02/2001
+END_TIME             00:00:00
+SWEEP_START          01/01
+SWEEP_END            12/31
+DRY_DAYS             0
+REPORT_STEP          00:15:00
+WET_STEP             00:05:00
+DRY_STEP             01:00:00
 
 [JUNCTIONS]
 ;;Name           Elev       MaxDepth   InitDepth  SurDepth   Aponded
@@ -26,20 +38,24 @@ MAX_TRIALS           100
 544              605.00     0          0          0          0
 506              600.00     0          0          0          0
 285              595.00     0          0          0          0
-208              591.00     0          0          0          0
+
+[OUTFALLS]
+;;Name           Elev       Type       Stage      Gated
+;;-------------- ---------- ---------- ---------- -----
+208              591.00     FREE                  NO
 
 [STORAGE]
 ;;Name           Elev       MaxDepth   InitDepth  Shape      Curve/Params
 ;;-------------- ---------- ---------- ---------- ---------- ----------
-206              591.00     0          0          FUNCTIONAL 0 0          0
+206              591.00     10.00      0          FUNCTIONAL 1000.00 0          0
 
 [CONDUITS]
 ;;Name           From             To               Length     Roughness  InOffset   OutOffset  InitFlow   MaxFlow
 ;;-------------- ---------------- ---------------- ---------- ---------- ---------- ---------- ---------- ----------
-203              ?                ?                4650.00    0.0140     448.50     443.85     0          0
-205              ?                ?                1900.00    0.0140     443.85     441.95     0          0
-207              ?                ?                4950.00    0.0140     441.95     437.00     0          0
-209              ?                ?                200.00     0.0140     573.00     572.00     0          0
+203              544              506              4650.00    0.0140     448.50     443.85     0          0
+205              506              285              1900.00    0.0140     443.85     441.95     0          0
+207              285              206              4950.00    0.0140     441.95     437.00     0          0
+209              206              208              200.00     0.0140     573.00     572.00     0          0
 
 [XSECTIONS]
 ;;Link           Shape        Geom1      Geom2      Geom3      Geom4      Barrels

@@ -19,6 +19,18 @@ VARIABLE_STEP        0.75
 INERTIAL_DAMPING     NONE
 NORMAL_FLOW_LIMITED  BOTH
 MAX_TRIALS           50
+START_DATE           01/01/2001
+START_TIME           00:00:00
+REPORT_START_DATE    01/01/2001
+REPORT_START_TIME    00:00:00
+END_DATE             01/02/2001
+END_TIME             00:00:00
+SWEEP_START          01/01
+SWEEP_END            12/31
+DRY_DAYS             0
+REPORT_STEP          00:15:00
+WET_STEP             00:05:00
+DRY_STEP             01:00:00
 
 [JUNCTIONS]
 ;;Name           Elev       MaxDepth   InitDepth  SurDepth   Aponded
@@ -31,7 +43,6 @@ MAX_TRIALS           50
 098NW021         114.25     0          0          0          0
 098NW022         122.16     0          0          0          0
 098NW023         126.80     0          0          0          0
-OVERFLOW         126.00     0          0          0          0
 098NW026         122.62     0          0          0          0
 098NW027         123.00     0          0          0          0
 098NW028         125.50     0          0          0          0
@@ -288,15 +299,20 @@ OVERFLOW         126.00     0          0          0          0
 PS-GM            246.20     0          0          0          0
 GM-SH            246.20     0          0          0          0
 
+[OUTFALLS]
+;;Name           Elev       Type       Stage      Gated
+;;-------------- ---------- ---------- ---------- -----
+OVERFLOW         126.00     FREE                  NO
+
 [STORAGE]
 ;;Name           Elev       MaxDepth   InitDepth  Shape      Curve/Params
 ;;-------------- ---------- ---------- ---------- ---------- ----------
-098NW029         126.00     0          0          FUNCTIONAL 1000.00 0          0
-098SW003         114.27     -5.95      0          FUNCTIONAL 600.00 0          0
-141SW033         120.10     0          0          FUNCTIONAL 300.00 0          0
-142NE065         163.21     0          0          FUNCTIONAL 600.00 0          0
-193SW053         157.70     -6.20      0          FUNCTIONAL 600.00 0          0
-098NW024         126.00     0          0          FUNCTIONAL 600.00 0          0
+098NW029         126.00     10.00      0          FUNCTIONAL 1000.00 0          0
+098SW003         114.27     10.00      0          FUNCTIONAL 600.00 0          0
+141SW033         120.10     10.00      0          FUNCTIONAL 300.00 0          0
+142NE065         163.21     10.00      0          FUNCTIONAL 600.00 0          0
+193SW053         157.70     10.00      0          FUNCTIONAL 600.00 0          0
+098NW024         126.00     10.00      0          FUNCTIONAL 600.00 0          0
 
 [CONDUITS]
 ;;Name           From             To               Length     Roughness  InOffset   OutOffset  InitFlow   MaxFlow
@@ -579,8 +595,9 @@ CUL1             098NW029         PS-GM            PC_CUL1    ON       110.00   
 [CURVES]
 ;;Name           Type       X-Value    Y-Value
 ;;-------------- ---------- ---------- ----------
-PC_CUL1          Pump3      0          0
-;
+;; Synthesized generic pump curves — replace with actual pump data
+PC_CUL1          Pump1      0          5
+PC_CUL1                     10         10
 
 [XSECTIONS]
 ;;Link           Shape        Geom1      Geom2      Geom3      Geom4      Barrels

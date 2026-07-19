@@ -20,6 +20,18 @@ INERTIAL_DAMPING     PARTIAL
 NORMAL_FLOW_LIMITED  BOTH
 MAX_TRIALS           50
 HEAD_TOLERANCE       0.0033
+START_DATE           01/01/2001
+START_TIME           00:00:00
+REPORT_START_DATE    01/01/2001
+REPORT_START_TIME    00:00:00
+END_DATE             01/02/2001
+END_TIME             00:00:00
+SWEEP_START          01/01
+SWEEP_END            12/31
+DRY_DAYS             0
+REPORT_STEP          00:15:00
+WET_STEP             00:05:00
+DRY_STEP             01:00:00
 
 [JUNCTIONS]
 ;;Name           Elev       MaxDepth   InitDepth  SurDepth   Aponded
@@ -27,15 +39,15 @@ HEAD_TOLERANCE       0.0033
 VIGUS            600.00     0          0          0          0
 JNC-A            600.00     0          0          0          0
 FEESP            600.00     0          0          0          0
-JOIN             600.00     0          1.50       0          0
+JOIN             600.00     0          0          0          0
 JNC-C            600.00     0          0          0          0
 CCMBR            600.00     0          0          0          0
 MEET             600.00     0          0          0          0
 JNC-B            600.00     0          0          0          0
 MSDBR            600.00     0          0          0          0
-CASINO           600.00     0          1.50       0          0
-MORV1            500.00     0          2.40       0          0
-MORV2            500.00     0          2.40       0          0
+CASINO           600.00     0          0          0          0
+MORV1            500.00     0          0          0          0
+MORV2            500.00     0          0          0          0
 HAFWAY           600.00     0          0          0          0
 CCMRBR           600.00     0          0          0          0
 137              500.00     0          0          0          0
@@ -48,29 +60,34 @@ CCMRBR           600.00     0          0          0          0
 193              600.00     0          0          0          0
 197              600.00     0          0          0          0
 200              500.00     0          0          0          0
-203              500.00     0          2.40       0          0
-205              500.00     0          2.40       0          0
+203              500.00     0          0          0          0
+205              500.00     0          0          0          0
 advnl            1.00       0          0          0          0
 qcompare         1.00       0          0          0          0
+ROADWEIR         460.00     0          0          0          0
+
+[OUTFALLS]
+;;Name           Elev       Type       Stage      Gated
+;;-------------- ---------- ---------- ---------- -----
+SUB-B6           500.00     FREE                  NO
 
 [STORAGE]
 ;;Name           Elev       MaxDepth   InitDepth  Shape      Curve/Params
 ;;-------------- ---------- ---------- ---------- ---------- ----------
-SUB-A            500.00     0          0          FUNCTIONAL 0 0          0
-LAKE             600.00     0          0          FUNCTIONAL 0 0          0
-SUB-B            500.00     0          0          FUNCTIONAL 0 0          0
-SUB-B6           500.00     0          0          FUNCTIONAL 0 0          0
-CSOUTH           500.00     0          0          FUNCTIONAL 0 0          0
-CNORTH           500.00     0          0          FUNCTIONAL 0 0          0
-LTLLAK           500.00     0          0          FUNCTIONAL 0 0          0
-UP2BOX           600.00     0          1.40       FUNCTIONAL 0 0          0
-PFREST           500.00     0          0          FUNCTIONAL 0 0          0
-PFRWST           500.00     0          0          FUNCTIONAL 0 0          0
-GLFEST           500.00     0          0          FUNCTIONAL 0 0          0
-GLFWST           500.00     0          0          FUNCTIONAL 0 0          0
-RPCSNO           500.00     0          0          FUNCTIONAL 0 0          0
-CSNO-A           500.00     0          0          FUNCTIONAL 0 0          0
-153              600.00     -100.00    0          FUNCTIONAL 0 0          0
+SUB-A            500.00     10.00      0          FUNCTIONAL 1000.00 0          0
+LAKE             600.00     10.00      0          FUNCTIONAL 1000.00 0          0
+SUB-B            500.00     10.00      0          FUNCTIONAL 1000.00 0          0
+CSOUTH           500.00     10.00      0          FUNCTIONAL 1000.00 0          0
+CNORTH           500.00     10.00      0          FUNCTIONAL 1000.00 0          0
+LTLLAK           500.00     10.00      0          FUNCTIONAL 1000.00 0          0
+UP2BOX           600.00     10.00      1.40       FUNCTIONAL 1000.00 0          0
+PFREST           500.00     10.00      0          FUNCTIONAL 1000.00 0          0
+PFRWST           500.00     10.00      0          FUNCTIONAL 1000.00 0          0
+GLFEST           500.00     10.00      0          FUNCTIONAL 1000.00 0          0
+GLFWST           500.00     10.00      0          FUNCTIONAL 1000.00 0          0
+RPCSNO           500.00     10.00      0          FUNCTIONAL 1000.00 0          0
+CSNO-A           500.00     10.00      0          FUNCTIONAL 1000.00 0          0
+153              600.00     10.00      0          FUNCTIONAL 1000.00 0          0
 
 [CONDUITS]
 ;;Name           From             To               Length     Roughness  InOffset   OutOffset  InitFlow   MaxFlow
@@ -97,6 +114,7 @@ PFW-SA           PFRWST           SUB-A            300.00     0.0450     447.50 
 PFE-VG           PFREST           VIGUS            300.00     0.0450     448.00     437.00     0          0
 HAF-VG           HAFWAY           VIGUS            1120.00    0.0550     439.00     437.00     0          0
 BR-HAF           CCMRBR           HAFWAY           1120.00    0.0550     439.00     439.00     0          0
+CHANNEL          ROADWEIR         PFRWST           200.00     0.0450     460.00     445.80     0          0
 SA-GW            SUB-A            GLFWST           200.00     0.0450     446.10     442.00     0          0
 GW-GE            GLFWST           GLFEST           200.00     0.0450     446.40     445.00     0          0
 LK-GW            LAKE             GLFWST           200.00     0.0450     447.30     442.00     0          0
@@ -130,69 +148,64 @@ LK-CS            LAKE             CSOUTH           500.00     0.0450     450.10 
 204              UP2BOX           203              48.00      0.0130     428.60     427.60     0          0
 206              UP2BOX           205              48.00      0.0130     428.60     427.60     0          0
 
-[WEIRS]
-;;Name           From             To               Type       CrestHt    Qcoeff     Gated    EndCon   EndCoeff   Surcharge
-;;-------------- ---------------- ---------------- ---------- ---------- ---------- -------- -------- ---------- ----------
-CHANNEL          ROADWEIR         PFRWST           TRANSVERSE 449.60     1.840      NO       0        0          YES
-
 [XSECTIONS]
 ;;Link           Shape        Geom1      Geom2      Geom3      Geom4      Barrels
 ;;-------------- ------------ ---------- ---------- ---------- ---------- ----------
-203.1            TRAPEZOIDAL  100.00     40.00      0          0          1
-FF12FS           TRAPEZOIDAL  100.00     40.00      0          0          1
-FEEF2            TRAPEZOIDAL  100.00     40.00      0          0          1
-JA-SA            TRAPEZOIDAL  25.00      200.00     0          0          1
-CC2JNC           TRAPEZOIDAL  100.00     30.00      0          0          1
-JNC2CM           TRAPEZOIDAL  100.00     30.00      0          0          1
-CCC2CH           TRAPEZOIDAL  100.00     25.00      0          0          1
-MSD-A            TRAPEZOIDAL  100.00     25.00      0          0          1
-MSD-B            TRAPEZOIDAL  100.00     25.00      0          0          1
-CC2FF            TRAPEZOIDAL  100.00     25.00      0          0          1
-SB-B6            IRREGULAR    30.00      200.00     0          0          1
-JC-CS            IRREGULAR    30.00      300.00     0          0          1
-SC-LAK           TRAPEZOIDAL  30.00      100.00     0          0          1
-MAIN             TRAPEZOIDAL  100.00     45.00      0          0          1
-MAIN-B           TRAPEZOIDAL  100.00     200.00     0          0          1
-SA-SB            TRAPEZOIDAL  25.00      200.00     0          0          1
-SB-JA            TRAPEZOIDAL  25.00      200.00     0          0          1
-FF-PR            TRAPEZOIDAL  15.00      100.00     0          0          1
-PFW-SA           TRAPEZOIDAL  15.00      200.00     0          0          1
-PFE-VG           TRAPEZOIDAL  15.00      100.00     0          0          1
-HAF-VG           TRAPEZOIDAL  100.00     27.00      0          0          1
-BR-HAF           TRAPEZOIDAL  100.00     25.00      0          0          1
-SA-GW            TRAPEZOIDAL  20.00      100.00     0          0          1
-GW-GE            TRAPEZOIDAL  20.00      100.00     0          0          1
-LK-GW            IRREGULAR    30.00      300.00     0          0          1
-SB-JN            TRAPEZOIDAL  25.00      100.00     0          0          1
+203.1            TRAPEZOIDAL  100.00     40.00      1          1          1
+FF12FS           TRAPEZOIDAL  100.00     40.00      1          1          1
+FEEF2            TRAPEZOIDAL  100.00     40.00      1          1          1
+JA-SA            TRAPEZOIDAL  25.00      200.00     1          1          1
+CC2JNC           TRAPEZOIDAL  100.00     30.00      1          1          1
+JNC2CM           TRAPEZOIDAL  100.00     30.00      1          1          1
+CCC2CH           TRAPEZOIDAL  100.00     25.00      1          1          1
+MSD-A            TRAPEZOIDAL  100.00     25.00      1          1          1
+MSD-B            TRAPEZOIDAL  100.00     25.00      1          1          1
+CC2FF            TRAPEZOIDAL  100.00     25.00      1          1          1
+SB-B6            TRAPEZOIDAL  30.00      200.00     2          2          1
+JC-CS            TRAPEZOIDAL  30.00      300.00     2          2          1
+SC-LAK           TRAPEZOIDAL  30.00      100.00     1          1          1
+MAIN             TRAPEZOIDAL  100.00     45.00      1          1          1
+MAIN-B           TRAPEZOIDAL  100.00     200.00     1          1          1
+SA-SB            TRAPEZOIDAL  25.00      200.00     1          1          1
+SB-JA            TRAPEZOIDAL  25.00      200.00     1          1          1
+FF-PR            TRAPEZOIDAL  15.00      100.00     1          1          1
+PFW-SA           TRAPEZOIDAL  15.00      200.00     1          1          1
+PFE-VG           TRAPEZOIDAL  15.00      100.00     1          1          1
+HAF-VG           TRAPEZOIDAL  100.00     27.00      1          1          1
+BR-HAF           TRAPEZOIDAL  100.00     25.00      1          1          1
+CHANNEL          TRAPEZOIDAL  15.00      50.00      1          1          1
+SA-GW            TRAPEZOIDAL  20.00      100.00     1          1          1
+GW-GE            TRAPEZOIDAL  20.00      100.00     1          1          1
+LK-GW            TRAPEZOIDAL  30.00      300.00     2          2          1
+SB-JN            TRAPEZOIDAL  25.00      100.00     1          1          1
 BOX2/2           RECT_CLOSED  10.00      12.00      0          0          1
 BOX1/2           RECT_CLOSED  10.00      12.00      0          0          1
-FEE-CA           TRAPEZOIDAL  15.00      200.00     0          0          1
-CSNCSN           TRAPEZOIDAL  15.00      200.00     0          0          1
-CSNO-X           TRAPEZOIDAL  15.00      200.00     0          0          1
-MSD-CN           TRAPEZOIDAL  15.00      200.00     0          0          1
-JB-CN            TRAPEZOIDAL  15.00      200.00     0          0          1
-MT-CN            TRAPEZOIDAL  15.00      200.00     0          0          1
-CC-CS            TRAPEZOIDAL  15.00      200.00     0          0          1
-JB-B             TRAPEZOIDAL  15.00      200.00     0          0          1
-LK-CS            TRAPEZOIDAL  15.00      200.00     0          0          1
-138              TRAPEZOIDAL  21.00      45.00      0          0          1
-140              TRAPEZOIDAL  21.00      45.00      0          0          1
-142              TRAPEZOIDAL  21.00      45.00      0          0          1
-144              TRAPEZOIDAL  21.00      45.00      0          0          1
-146              TRAPEZOIDAL  21.00      45.00      0          0          1
-148              TRAPEZOIDAL  21.00      45.00      0          0          1
-149              TRAPEZOIDAL  21.00      45.00      0          0          1
+FEE-CA           TRAPEZOIDAL  15.00      200.00     1          1          1
+CSNCSN           TRAPEZOIDAL  15.00      200.00     1          1          1
+CSNO-X           TRAPEZOIDAL  15.00      200.00     1          1          1
+MSD-CN           TRAPEZOIDAL  15.00      200.00     1          1          1
+JB-CN            TRAPEZOIDAL  15.00      200.00     1          1          1
+MT-CN            TRAPEZOIDAL  15.00      200.00     1          1          1
+CC-CS            TRAPEZOIDAL  15.00      200.00     1          1          1
+JB-B             TRAPEZOIDAL  15.00      200.00     1          1          1
+LK-CS            TRAPEZOIDAL  15.00      200.00     1          1          1
+138              TRAPEZOIDAL  21.00      45.00      1          1          1
+140              TRAPEZOIDAL  21.00      45.00      1          1          1
+142              TRAPEZOIDAL  21.00      45.00      1          1          1
+144              TRAPEZOIDAL  21.00      45.00      1          1          1
+146              TRAPEZOIDAL  21.00      45.00      1          1          1
+148              TRAPEZOIDAL  21.00      45.00      1          1          1
+149              TRAPEZOIDAL  21.00      45.00      1          1          1
 150              CIRCULAR     3.00       0          0          0          1
 151              CIRCULAR     3.00       0          0          0          1
-194              TRAPEZOIDAL  100.00     25.00      0          0          1
-195              TRAPEZOIDAL  100.00     25.00      0          0          1
-198              TRAPEZOIDAL  100.00     25.00      0          0          1
-199              TRAPEZOIDAL  100.00     25.00      0          0          1
-201              TRAPEZOIDAL  20.00      20.00      0          0          1
-202              TRAPEZOIDAL  20.00      20.00      0          0          1
+194              TRAPEZOIDAL  100.00     25.00      1          1          1
+195              TRAPEZOIDAL  100.00     25.00      1          1          1
+198              TRAPEZOIDAL  100.00     25.00      1          1          1
+199              TRAPEZOIDAL  100.00     25.00      1          1          1
+201              TRAPEZOIDAL  20.00      20.00      1          1          1
+202              TRAPEZOIDAL  20.00      20.00      1          1          1
 204              RECT_CLOSED  10.00      12.00      0          0          1
 206              RECT_CLOSED  10.00      12.00      0          0          1
-CHANNEL          RECT_OPEN    0          500.00     0          0          
 
 [LOSSES]
 ;;Link           Inlet      Outlet     Average    Flap Gate
@@ -219,6 +232,7 @@ PFW-SA           0          0          0          NO
 PFE-VG           0          0          0          NO
 HAF-VG           0          0          0          NO
 BR-HAF           0          0          0          NO
+CHANNEL          0          0          0          NO
 SA-GW            0          0          0          NO
 GW-GE            0          0          0          NO
 LK-GW            0          0          0          NO

@@ -20,37 +20,57 @@ INERTIAL_DAMPING     PARTIAL
 NORMAL_FLOW_LIMITED  BOTH
 MAX_TRIALS           50
 HEAD_TOLERANCE       .001
+START_DATE           01/01/2001
+START_TIME           00:00:00
+REPORT_START_DATE    01/01/2001
+REPORT_START_TIME    00:00:00
+END_DATE             01/02/2001
+END_TIME             00:00:00
+SWEEP_START          01/01
+SWEEP_END            12/31
+DRY_DAYS             0
+REPORT_STEP          00:15:00
+WET_STEP             00:05:00
+DRY_STEP             01:00:00
 
 [JUNCTIONS]
 ;;Name           Elev       MaxDepth   InitDepth  SurDepth   Aponded
 ;;-------------- ---------- ---------- ---------- ---------- ----------
-0                10.00      0          0          0          0
-0                10.00      0          0          0          0
-0                10.00      0          0          0          0
-0                10.00      0          0          0          0
-0                10.00      0          0          0          0
-0                10.00      0          0          0          0
-0                10.00      0          0          0          0
+Inlet            10.00      0          0          0          0
+Inlet_2          10.00      0          0          0          0
+Inlet_3          10.00      0          0          0          0
+24               10.00      0          0          0          0
+27               10.00      0          0          0          0
+30               10.00      0          0          0          0
+pump.2           0          0          0          0          0
+PIMP.3           0          0          0          0          0
+DAMY2            6.02       0          0          0          0
+
+[OUTFALLS]
+;;Name           Elev       Type       Stage      Gated
+;;-------------- ---------- ---------- ---------- -----
+inlet4           10.00      FREE                  NO
 
 [CONDUITS]
 ;;Name           From             To               Length     Roughness  InOffset   OutOffset  InitFlow   MaxFlow
 ;;-------------- ---------------- ---------------- ---------- ---------- ---------- ---------- ---------- ----------
-213              0                0                100.00     0.0130     8.00       7.76       0          0
-214              0                0                100.00     0.0130     7.46       7.28       0          0
-216              0                0                100.00     0.0130     6.93       6.77       0          0
-damy             DAMY2            0                40.00      0.0130     6.02       6.02       0          0
-224              0                0                100.00     0.0130     7.00       6.80       0          0
+213              Inlet            Inlet            100.00     0.0130     8.00       7.76       0          0
+214              Inlet            Inlet            100.00     0.0130     7.46       7.28       0          0
+216              Inlet            inlet4           100.00     0.0130     6.93       6.77       0          0
+damy             DAMY2            27               40.00      0.0130     6.02       6.02       0          0
+224              24               30               100.00     0.0130     7.00       6.80       0          0
 
 [PUMPS]
 ;;Name           From             To               PumpCurve  Status   Startup    Shutoff
 ;;-------------- ---------------- ---------------- ---------- -------- ---------- ----------
-pump.1           pump.2           PIMP.3           PC_pump.1  ON       0          0         
+pump.1           pump.2           PIMP.3           PC_pump_1  ON       1.00       0         
 
 [CURVES]
 ;;Name           Type       X-Value    Y-Value
 ;;-------------- ---------- ---------- ----------
-PC_pump.1        Pump2      0          0
-;
+;; Synthesized generic pump curves — replace with actual pump data
+PC_pump_1        Pump1      0          5
+PC_pump_1                   10         10
 
 [XSECTIONS]
 ;;Link           Shape        Geom1      Geom2      Geom3      Geom4      Barrels
@@ -73,13 +93,13 @@ damy             0          0          0          NO
 [COORDINATES]
 ;;Node           X-Coord            Y-Coord
 ;;-------------- ------------------ ------------------
-0                58.84              32.25             
-0                58.36              81.02             
-0                58.84              131.37            
-0                58.84              171.88            
-0                109.60             169.91            
-0                83.03              171.09            
-0                124.30             168.73            
+Inlet            58.84              32.25             
+Inlet_2          58.36              81.02             
+Inlet_3          58.84              131.37            
+inlet4           58.84              171.88            
+24               109.60             169.91            
+27               83.03              171.09            
+30               124.30             168.73            
 
 [MAP]
 DIMENSIONS 58.36 32.25 124.30 171.88

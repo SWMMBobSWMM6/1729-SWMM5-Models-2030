@@ -20,6 +20,18 @@ INERTIAL_DAMPING     PARTIAL
 NORMAL_FLOW_LIMITED  BOTH
 MAX_TRIALS           50
 HEAD_TOLERANCE       0.0033
+START_DATE           01/01/2001
+START_TIME           00:00:00
+REPORT_START_DATE    01/01/2001
+REPORT_START_TIME    00:00:00
+END_DATE             01/02/2001
+END_TIME             00:00:00
+SWEEP_START          01/01
+SWEEP_END            12/31
+DRY_DAYS             0
+REPORT_STEP          00:15:00
+WET_STEP             00:05:00
+DRY_STEP             01:00:00
 
 [JUNCTIONS]
 ;;Name           Elev       MaxDepth   InitDepth  SurDepth   Aponded
@@ -65,7 +77,6 @@ HEAD_TOLERANCE       0.0033
 158              10.05      0          0          0          0
 160              8.71       0          0          0          0
 162              8.71       0          0          0          0
-188              9.04       0          0          0          0
 190              9.22       0          0          0          0
 192              9.27       0          0          0          0
 194              9.11       0          0          0          0
@@ -137,25 +148,35 @@ DUMMY            1000.00    0          0          0          0
 171              9.14       0          0          0          0
 DIESEL           1000.00    0          0          0          0
 RAIL             1000.00    0          0          0          0
+#2               5.71       0          0          0          0
+199#2            6.53       0          0          0          0
+468#2            8.92       0          0          0          0
+468#3            8.55       0          0          0          0
+489#2            8.92       0          0          0          0
+
+[OUTFALLS]
+;;Name           Elev       Type       Stage      Gated
+;;-------------- ---------- ---------- ---------- -----
+188              9.04       FREE                  NO
 
 [STORAGE]
 ;;Name           Elev       MaxDepth   InitDepth  Shape      Curve/Params
 ;;-------------- ---------- ---------- ---------- ---------- ----------
-77               10.00      0          0          FUNCTIONAL 0 0          0
-SS               9.00       -0.33      0          FUNCTIONAL 20700.00 0          0
-POND             8.00       0          0          FUNCTIONAL 0 0          0
-YES              9.00       0          0          FUNCTIONAL 1435.00 0          0
-EQ               13.00      0          0          FUNCTIONAL 360.00 0          0
-CL               9.00       0          0          FUNCTIONAL 200.00 0          0
-CL               9.50       0          0          FUNCTIONAL 160.00 0          0
-NEUT             12.50      0          0          FUNCTIONAL 1435.00 0          0
-CELL             9.00       0          0          FUNCTIONAL 916.00 0          0
-CL               9.00       0          0          FUNCTIONAL 630.00 0          0
-CAUST            8.50       0          0          FUNCTIONAL 700.00 0          0
-SUMP             12.50      -0.58      0          FUNCTIONAL 0 0          0
+77               10.00      10.00      0          FUNCTIONAL 1000.00 0          0
+SS               9.00       10.00      0          FUNCTIONAL 20700.00 0          0
+POND             8.00       10.00      0          FUNCTIONAL 1000.00 0          0
+YES              9.00       10.00      0          FUNCTIONAL 1435.00 0          0
+EQ               13.00      10.00      0          FUNCTIONAL 360.00 0          0
+CL               9.00       10.00      0          FUNCTIONAL 200.00 0          0
+CL_2             9.50       10.00      0          FUNCTIONAL 160.00 0          0
+NEUT             12.50      10.00      0          FUNCTIONAL 1435.00 0          0
+CELL             9.00       10.00      0          FUNCTIONAL 916.00 0          0
+CL_3             9.00       10.00      0          FUNCTIONAL 630.00 0          0
+CAUST            8.50       10.00      0          FUNCTIONAL 700.00 0          0
+SUMP             12.50      10.00      0          FUNCTIONAL 1000.00 0          0
 KOCH             6.00       2.00       0          FUNCTIONAL 700.00 0          0
-DD               10.00      0          0          FUNCTIONAL 0 0          0
-576              6.31       0          0          FUNCTIONAL 110000.00 0          0
+DD               10.00      10.00      0          FUNCTIONAL 1000.00 0          0
+576              6.31       10.00      0          FUNCTIONAL 110000.00 0          0
 
 [CONDUITS]
 ;;Name           From             To               Length     Roughness  InOffset   OutOffset  InitFlow   MaxFlow
@@ -251,10 +272,10 @@ DD               10.00      0          0          FUNCTIONAL 0 0          0
 429              427              280              150.00     0.0150     3.50       3.27       0          0
 430              319              422              540.00     0.0150     7.55       6.11       0          0
 F                CL               446              220.00     0.0160     8.01       8.00       0          0
-F                435              446              800.00     0.0160     8.01       8.00       0          0
-F                446              443              170.00     0.0160     8.00       7.90       0          0
-F                443              EQ               1685.00    0.0160     7.90       3.50       0          0
-F                462              YES              334.00     0.0130     8.00       7.90       0          0
+F_2              435              446              800.00     0.0160     8.01       8.00       0          0
+F_3              446              443              170.00     0.0160     8.00       7.90       0          0
+F_4              443              EQ               1685.00    0.0160     7.90       3.50       0          0
+F_5              462              YES              334.00     0.0130     8.00       7.90       0          0
 471              71               81               75.00      0.0130     3.60       1.88       0          0
 490              361              357              40.00      0.0150     8.14       8.92       0          0
 491              148              152              140.00     0.0150     6.65       6.67       0          0
@@ -281,161 +302,162 @@ F                462              YES              334.00     0.0130     8.00   
 [PUMPS]
 ;;Name           From             To               PumpCurve  Status   Startup    Shutoff
 ;;-------------- ---------------- ---------------- ---------- -------- ---------- ----------
-521#1            DD               77               PC_521#1   ON       3.00       2.00      
-F 2#1            SS               497              PC_F 2#1   ON       0          0         
-F 3#1            YES              435              PC_F 3#1   ON       0          0         
-F 5#1            CAUST            462              PC_F 5#1   ON       0          0         
-F 8#1            CL               YES              PC_F 8#1   ON       1.00       0         
-F6#1             CELL             462              PC_F6#1    ON       0          0         
-F11#1            CL               443              PC_F11#1   ON       2.00       1.50      
-F13#1            EQ               NEUT             PC_F13#1   ON       6.00       5.00      
-F14#1            NEUT             DUMMY            PC_F14#1   ON       7.75       0.50      
-F1#1             DIESEL           POND             PC_F1#1    ON       4.00       3.00      
-566#1            RAIL             77               PC_566#1   ON       4.00       3.00      
-600#1            KOCH             67               PC_600#1   ON       1.00       0         
+521#1            DD               77               PC_521_1   ON       3.00       2.00      
+F_2#1            SS               497              PC_F_2_1   ON       1.00       0         
+F_3#1            YES              435              PC_F_3_1   ON       1.00       0         
+F_5#1            CAUST            462              PC_F_5_1   ON       1.00       0         
+F_8#1            CL               YES              PC_F_8_1   ON       1.00       0         
+F6#1             CELL             462              PC_F6_1    ON       1.00       0         
+F11#1            CL               443              PC_F11_1   ON       2.00       1.50      
+F13#1            EQ               NEUT             PC_F13_1   ON       6.00       5.00      
+F14#1            NEUT             DUMMY            PC_F14_1   ON       7.75       0.50      
+F1#1             DIESEL           POND             PC_F1_1    ON       4.00       3.00      
+566#1            RAIL             77               PC_566_1   ON       4.00       3.00      
+600#1            KOCH             67               PC_600_1   ON       1.00       0         
 
 [CURVES]
 ;;Name           Type       X-Value    Y-Value
 ;;-------------- ---------- ---------- ----------
-PC_521#1         Pump2      0          0
-;
-PC_F 2#1         Pump2      0          0
-;
-PC_F 3#1         Pump2      0          0
-;
-PC_F 5#1         Pump2      0          0
-;
-PC_F 8#1         Pump3      0          0
-;
-PC_F6#1          Pump2      0          0
-;
-PC_F11#1         Pump3      0          0
-;
-PC_F13#1         Pump3      0          0
-;
-PC_F14#1         Pump3      0          0
-;
-PC_F1#1          Pump3      0          0
-;
-PC_566#1         Pump3      0          0
-;
-PC_600#1         Pump3      0          0
-;
+;; Synthesized generic pump curves — replace with actual pump data
+PC_521_1         Pump1      0          5
+PC_521_1                    10         10
+PC_F_2_1         Pump1      0          5
+PC_F_2_1                    10         10
+PC_F_3_1         Pump1      0          5
+PC_F_3_1                    10         10
+PC_F_5_1         Pump1      0          5
+PC_F_5_1                    10         10
+PC_F_8_1         Pump1      0          5
+PC_F_8_1                    10         10
+PC_F6_1          Pump1      0          5
+PC_F6_1                     10         10
+PC_F11_1         Pump1      0          5
+PC_F11_1                    10         10
+PC_F13_1         Pump1      0          5
+PC_F13_1                    10         10
+PC_F14_1         Pump1      0          5
+PC_F14_1                    10         10
+PC_F1_1          Pump1      0          5
+PC_F1_1                     10         10
+PC_566_1         Pump1      0          5
+PC_566_1                    10         10
+PC_600_1         Pump1      0          5
+PC_600_1                    10         10
 
 [XSECTIONS]
 ;;Link           Shape        Geom1      Geom2      Geom3      Geom4      Barrels
 ;;-------------- ------------ ---------- ---------- ---------- ---------- ----------
-18               TRAPEZOIDAL  2.91       6.18       0          0          1
-21               TRAPEZOIDAL  2.68       8.64       0          0          1
-23               TRAPEZOIDAL  2.68       8.64       0          0          1
+18               TRAPEZOIDAL  2.91       6.18       1          1          1
+21               TRAPEZOIDAL  2.68       8.64       1          1          1
+23               TRAPEZOIDAL  2.68       8.64       1          1          1
 25               CIRCULAR     3.00       0          0          0          1
-29               TRAPEZOIDAL  3.13       7.74       0          0          1
+29               TRAPEZOIDAL  3.13       7.74       1          1          1
 31               CIRCULAR     3.00       0          0          0          1
-33               TRAPEZOIDAL  2.69       8.62       0          0          1
+33               TRAPEZOIDAL  2.69       8.62       1          1          1
 35               CIRCULAR     3.00       0          0          0          1
-237.1            TRAPEZOIDAL  3.00       8.00       0          0          1
-40               TRAPEZOIDAL  2.97       8.06       0          0          1
+237.1            TRAPEZOIDAL  3.00       8.00       1          1          1
+40               TRAPEZOIDAL  2.97       8.06       1          1          1
 52               CIRCULAR     3.33       0          0          0          1
-54               TRAPEZOIDAL  3.00       9.00       0          0          1
+54               TRAPEZOIDAL  3.00       9.00       1          1          1
 58               CIRCULAR     3.33       0          0          0          1
-60               TRAPEZOIDAL  3.33       8.34       0          0          1
-70               TRAPEZOIDAL  2.92       9.16       0          0          1
-72               TRAPEZOIDAL  4.91       5.80       0          0          1
-74               TRAPEZOIDAL  3.08       8.84       0          0          1
+60               TRAPEZOIDAL  3.33       8.34       1          1          1
+70               TRAPEZOIDAL  2.92       9.16       1          1          1
+72               TRAPEZOIDAL  4.91       5.80       1          1          1
+74               TRAPEZOIDAL  3.08       8.84       1          1          1
 76               CIRCULAR     3.00       0          0          0          1
 80               CIRCULAR     1.67       0          0          0          1
 87               CIRCULAR     3.00       0          0          0          1
 95               CIRCULAR     3.00       0          0          0          1
 99               CIRCULAR     3.00       1.66       0          0          1
-101              TRAPEZOIDAL  6.76       0.48       0          0          1
-118              TRAPEZOIDAL  0.95       7.10       0          0          1
-120              TRAPEZOIDAL  0.95       7.10       0          0          1
-135              TRAPEZOIDAL  1.40       6.20       0          0          1
-137              TRAPEZOIDAL  1.61       5.78       0          0          1
+101              TRAPEZOIDAL  6.76       0.48       1          1          1
+118              TRAPEZOIDAL  0.95       7.10       1          1          1
+120              TRAPEZOIDAL  0.95       7.10       1          1          1
+135              TRAPEZOIDAL  1.40       6.20       1          1          1
+137              TRAPEZOIDAL  1.61       5.78       1          1          1
 139              HORSESHOE    2.33       0          0          0          1
-143              TRAPEZOIDAL  2.33       6.34       0          0          1
+143              TRAPEZOIDAL  2.33       6.34       1          1          1
 145              HORSESHOE    2.33       0          0          0          1
-147              TRAPEZOIDAL  2.33       6.34       0          0          1
+147              TRAPEZOIDAL  2.33       6.34       1          1          1
 149              HORSESHOE    2.33       0          0          0          1
 155              HORSESHOE    2.33       0          0          0          1
-157              TRAPEZOIDAL  2.38       7.24       0          0          1
+157              TRAPEZOIDAL  2.38       7.24       1          1          1
 159              CIRCULAR     3.50       0          0          0          1
-161              TRAPEZOIDAL  2.20       7.60       0          0          1
-163              TRAPEZOIDAL  2.20       7.60       0          0          1
-189              TRAPEZOIDAL  2.65       6.70       0          0          1
+161              TRAPEZOIDAL  2.20       7.60       1          1          1
+163              TRAPEZOIDAL  2.20       7.60       1          1          1
+189              TRAPEZOIDAL  2.65       6.70       1          1          1
 191              CIRCULAR     2.50       0          0          0          1
-193              TRAPEZOIDAL  2.50       7.00       0          0          1
+193              TRAPEZOIDAL  2.50       7.00       1          1          1
 195              CIRCULAR     2.50       0          0          0          1
-198              TRAPEZOIDAL  2.50       7.00       0          0          1
-201              TRAPEZOIDAL  1.77       8.46       0          0          1
+198              TRAPEZOIDAL  2.50       7.00       1          1          1
+201              TRAPEZOIDAL  1.77       8.46       1          1          1
 203              CIRCULAR     2.50       0          0          0          1
-207              TRAPEZOIDAL  2.00       8.00       0          0          1
+207              TRAPEZOIDAL  2.00       8.00       1          1          1
 217              CIRCULAR     3.00       0          0          0          1
 240              CIRCULAR     3.00       0          0          0          1
-242              TRAPEZOIDAL  4.17       3.66       0          0          1
+242              TRAPEZOIDAL  4.17       3.66       1          1          1
 244              CIRCULAR     3.00       0          0          0          1
-245              TRAPEZOIDAL  5.52       0.96       0          0          1
-283              TRAPEZOIDAL  3.89       3.32       0          0          1
+245              TRAPEZOIDAL  5.52       0.96       1          1          1
+283              TRAPEZOIDAL  3.89       3.32       1          1          1
 285              CIRCULAR     3.00       0          0          0          1
 287              CIRCULAR     3.00       0          0          0          1
 289              CIRCULAR     3.00       0          0          0          1
-291              TRAPEZOIDAL  4.52       5.96       0          0          1
+291              TRAPEZOIDAL  4.52       5.96       1          1          1
 293              CIRCULAR     3.00       0          0          0          1
-295              TRAPEZOIDAL  5.07       4.86       0          0          1
+295              TRAPEZOIDAL  5.07       4.86       1          1          1
 297              CIRCULAR     3.00       0          0          0          1
-298              TRAPEZOIDAL  4.63       5.74       0          0          1
+298              TRAPEZOIDAL  4.63       5.74       1          1          1
 302              CIRCULAR     3.00       0          0          0          1
 308              CIRCULAR     3.00       0          0          0          1
-310              TRAPEZOIDAL  5.79       3.42       0          0          1
+310              TRAPEZOIDAL  5.79       3.42       1          1          1
 311              CIRCULAR     3.00       0          0          0          1
 320              CIRCULAR     1.00       0          0          0          1
-331              TRAPEZOIDAL  1.14       4.72       0          0          1
-338              TRAPEZOIDAL  2.63       3.74       0          0          1
+331              TRAPEZOIDAL  1.14       4.72       1          1          1
+338              TRAPEZOIDAL  2.63       3.74       1          1          1
 340              CIRCULAR     2.50       0          0          0          1
-342              TRAPEZOIDAL  2.84       3.32       0          0          1
+342              TRAPEZOIDAL  2.84       3.32       1          1          1
 344              CIRCULAR     2.50       0          0          0          1
 346              CIRCULAR     2.00       0          0          0          1
 354              CIRCULAR     0.83       0          0          0          1
-356              TRAPEZOIDAL  0.89       5.22       0          0          1
+356              TRAPEZOIDAL  0.89       5.22       1          1          1
 358              CIRCULAR     2.00       0          0          0          1
-360              TRAPEZOIDAL  2.42       4.16       0          0          1
+360              TRAPEZOIDAL  2.42       4.16       1          1          1
 362              CIRCULAR     1.50       0          0          0          1
 365              CIRCULAR     3.00       0          0          0          1
-367              TRAPEZOIDAL  2.85       1.30       0          0          1
+367              TRAPEZOIDAL  2.85       1.30       1          1          1
 369              CIRCULAR     2.00       0          0          0          1
-371              TRAPEZOIDAL  2.55       1.90       0          0          1
+371              TRAPEZOIDAL  2.55       1.90       1          1          1
 373              CIRCULAR     2.00       0          0          0          1
-375              TRAPEZOIDAL  2.18       6.14       0          0          1
+375              TRAPEZOIDAL  2.18       6.14       1          1          1
 386              CIRCULAR     1.67       0          0          0          1
 417              CIRCULAR     2.50       0          0          0          1
 419              CIRCULAR     3.33       0          0          0          1
 421              CIRCULAR     3.00       0          0          0          1
 424              CIRCULAR     2.00       0          0          0          1
-426              TRAPEZOIDAL  2.18       6.64       0          0          1
+426              TRAPEZOIDAL  2.18       6.64       1          1          1
 428              CIRCULAR     2.50       0          0          0          1
-429              TRAPEZOIDAL  4.07       2.86       0          0          1
-430              TRAPEZOIDAL  1.00       9.00       0          0          1
+429              TRAPEZOIDAL  4.07       2.86       1          1          1
+430              TRAPEZOIDAL  1.00       9.00       1          1          1
 F                CIRCULAR     0.13       0          0          0          1
-F                CIRCULAR     1.00       0          0          0          1
-F                CIRCULAR     1.00       0          0          0          1
-F                CIRCULAR     1.00       0          0          0          1
-F                CIRCULAR     0.13       0          0          0          1
+F_2              CIRCULAR     1.00       0          0          0          1
+F_3              CIRCULAR     1.00       0          0          0          1
+F_4              CIRCULAR     1.00       0          0          0          1
+F_5              CIRCULAR     0.13       0          0          0          1
 471              CIRCULAR     3.00       0          0          0          1
-490              TRAPEZOIDAL  2.15       4.70       0          0          1
-491              TRAPEZOIDAL  2.50       7.00       0          0          1
-493              TRAPEZOIDAL  4.24       6.52       0          0          1
+490              TRAPEZOIDAL  2.15       4.70       1          1          1
+491              TRAPEZOIDAL  2.50       7.00       1          1          1
+493              TRAPEZOIDAL  4.24       6.52       1          1          1
 494              CIRCULAR     3.00       0          0          0          1
 499              CIRCULAR     1.30       0          0          0          1
 502              RECT_CLOSED  2.00       3.00       0          0          1
 510              CIRCULAR     1.50       0          0          0          1
 512              CIRCULAR     2.50       0          0          0          1
-514              TRAPEZOIDAL  3.28       2.42       0          0          1
+514              TRAPEZOIDAL  3.28       2.42       1          1          1
 516              CIRCULAR     1.67       0          0          0          1
-517              TRAPEZOIDAL  3.37       8.26       0          0          1
+517              TRAPEZOIDAL  3.37       8.26       1          1          1
 #1               CIRCULAR     2.50       0          0          0          1
 199#1            CIRCULAR     2.50       0          0          0          1
 552              CIRCULAR     0.83       0          0          0          1
-182              TRAPEZOIDAL  2.54       1.92       0          0          1
+182              TRAPEZOIDAL  2.54       1.92       1          1          1
 468              CIRCULAR     1.50       0          0          0          1
 489#1            CIRCULAR     1.50       0          0          0          1
 313#1            RECT_CLOSED  4.80       2.00       0          0          1
@@ -537,10 +559,10 @@ F                CIRCULAR     0.13       0          0          0          1
 429              0          0          0          NO
 430              0          0          0          NO
 F                0          0          0          NO
-F                0          0          0          NO
-F                0          0          0          NO
-F                0          0          0          NO
-F                0          0          0          NO
+F_2              0          0          0          NO
+F_3              0          0          0          NO
+F_4              0          0          0          NO
+F_5              0          0          0          NO
 471              0          0          0          NO
 490              0          0          0          NO
 491              0          0          0          NO
@@ -669,12 +691,12 @@ YES              351.39             1441.65
 EQ               236.88             -826.16           
 CL               177.38             610.11            
 443              380.28             595.68            
-CL               78.78              771.57            
+CL_2             78.78              771.57            
 446              378.08             775.84            
 NEUT             402.95             -1127.56          
 Outfall          385.80             -1644.49          
 CELL             -62.39             1055.71           
-CL               336.62             1119.20           
+CL_3             336.62             1119.20           
 CAUST            124.30             1384.51           
 462              320.76             1367.98           
 SUMP             475.51             -1154.50          

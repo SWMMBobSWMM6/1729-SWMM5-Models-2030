@@ -20,6 +20,18 @@ INERTIAL_DAMPING     PARTIAL
 NORMAL_FLOW_LIMITED  BOTH
 MAX_TRIALS           50
 HEAD_TOLERANCE       0.0033
+START_DATE           01/01/2001
+START_TIME           00:00:00
+REPORT_START_DATE    01/01/2001
+REPORT_START_TIME    00:00:00
+END_DATE             01/02/2001
+END_TIME             00:00:00
+SWEEP_START          01/01
+SWEEP_END            12/31
+DRY_DAYS             0
+REPORT_STEP          00:15:00
+WET_STEP             00:05:00
+DRY_STEP             01:00:00
 
 [JUNCTIONS]
 ;;Name           Elev       MaxDepth   InitDepth  SurDepth   Aponded
@@ -37,7 +49,6 @@ P6-Out           21.00      0          0          0          0
 RG1              21.00      0          0          0          0
 N-14             22.10      0          0          0          0
 N-15             21.00      0          0          0          0
-P7-In            21.00      0          0          0          0
 P7-Out           21.00      0          0          0          0
 N-16             21.10      0          0          0          0
 N-17             20.90      0          0          0          0
@@ -103,6 +114,14 @@ CB-D3            22.10      0          0          0          0
 CB-D2            22.50      0          0          0          0
 CB-D1            23.00      0          0          0          0
 MH#A9            27.30      0          0          0          0
+2-24RC           12.82      0          0          0          0
+36"RCP           12.72      0          0          0          0
+2-36"RCP         13.81      0          0          0          0
+
+[OUTFALLS]
+;;Name           Elev       Type       Stage      Gated
+;;-------------- ---------- ---------- ---------- -----
+P7-In            21.00      FREE                  NO
 
 [CONDUITS]
 ;;Name           From             To               Length     Roughness  InOffset   OutOffset  InitFlow   MaxFlow
@@ -117,31 +136,31 @@ Ex-24            Ex-SS            P6-In            200.00     0.0130     16.94  
 1-36RC           2-24RC           P6-Out           201.00     0.0130     12.82      13.04      0          0
 Ex-36            RG1              P5-In            130.00     0.0130     14.50      13.25      0          0
 Chn-14           P6-Out           N-14             10.00      0.0300     13.74      14.30      0          0
-Chn-15           N-14             N-15             270.00     0          14.30      13.20      0          0
-Chn-15A          N-15             P7-In            10.00      0          13.20      12.66      0          0
+Chn-15           N-14             N-15             270.00     0.0130     14.30      13.20      0          0
+Chn-15A          N-15             P7-In            10.00      0.0130     13.20      12.66      0          0
 60"RCP           36"RCP           P7-Out           40.00      0.0130     12.72      12.80      0          0
-Chn-16           P7-Out           N-16             10.00      0          12.70      13.40      0          0
-Chn-17           N-16             N-17             325.00     0          13.40      13.00      0          0
-Chn-18           N-17             N-18             560.00     0          13.00      12.90      0          0
+Chn-16           P7-Out           N-16             10.00      0.0130     12.70      13.40      0          0
+Chn-17           N-16             N-17             325.00     0.0130     13.40      13.00      0          0
+Chn-18           N-17             N-18             560.00     0.0130     13.00      12.90      0          0
 P5-60"P          P5-In            P5-Out           156.00     0.0130     12.74      13.23      0          0
-Chn-11           N-10             N-11             285.00     0          14.30      14.80      0          0
-Chn-10           N-9              N-10             315.00     0          14.90      14.30      0          0
-Chn-9            P4-Out           N-9              10.00      0          13.43      14.90      0          0
+Chn-11           N-10             N-11             285.00     0.0130     14.30      14.80      0          0
+Chn-10           N-9              N-10             315.00     0.0130     14.90      14.30      0          0
+Chn-9            P4-Out           N-9              10.00      0.0130     13.43      14.90      0          0
 P4b-60"P         CB#1             P4-Out           100.00     0.0130     12.54      13.43      0          0
 P4a-60"P         P4-In            CB#1             59.00      0.0130     13.92      12.54      0          0
-Chn-8            P3-Out           P4-In            87.00      0          14.30      13.92      0          0
-Chn-7            P2-Out           P3-In            80.00      0          13.40      14.30      0          0
+Chn-8            P3-Out           P4-In            87.00      0.0130     14.30      13.92      0          0
+Chn-7            P2-Out           P3-In            80.00      0.0130     13.40      14.30      0          0
 P3-60"P          P3-In            P3-Out           41.00      0.0130     14.30      14.30      0          0
-Chn-5            N-6              N-5              210.00     0          14.10      15.20      0          0
-Chn-5A           N-5              P2-Out           10.00      0          15.20      13.40      0          0
-Chn-6            N-6A             N-6              10.00      0          14.31      14.10      0          0
-Chn-3            N-2              N-3              300.00     0          14.60      14.50      0          0
-Chn-4            N-3              N-4              250.00     0          14.50      14.90      0          0
-Chn-4A           N-4              P2-In            10.00      0          14.90      13.81      0          0
+Chn-5            N-6              N-5              210.00     0.0130     14.10      15.20      0          0
+Chn-5A           N-5              P2-Out           10.00      0.0130     15.20      13.40      0          0
+Chn-6            N-6A             N-6              10.00      0.0130     14.31      14.10      0          0
+Chn-3            N-2              N-3              300.00     0.0130     14.60      14.50      0          0
+Chn-4            N-3              N-4              250.00     0.0130     14.50      14.90      0          0
+Chn-4A           N-4              P2-In            10.00      0.0130     14.90      13.81      0          0
 1-36"RCP         2-36"RCP         P2-Out           76.00      0.0130     13.81      13.40      0          0
 P1-54"P          P1-In            P1-Out           202.00     0.0130     14.46      14.36      0          0
-Chn-2            P1-Out           N-2              10.00      0          14.36      14.60      0          0
-Chn-1            N-1A             P1-In            20.00      0          14.00      14.46      0          0
+Chn-2            P1-Out           N-2              10.00      0.0130     14.36      14.60      0          0
+Chn-1            N-1A             P1-In            20.00      0.0130     14.00      14.46      0          0
 NEW60"RCP        P5-Out           P6-In            350.00     0.0130     13.23      12.79      0          0
 Ex-54"C          Ex-MH#3          Ex-MH#2          175.00     0.0130     15.08      14.58      0          0
 Ex-54"B          Ex-MH#2          Ex-MH#1          205.00     0.0130     14.58      13.98      0          0
@@ -189,7 +208,7 @@ E-36"a           MH#A9            Ex-MH#9          72.00      0.0130     21.40  
 [XSECTIONS]
 ;;Link           Shape        Geom1      Geom2      Geom3      Geom4      Barrels
 ;;-------------- ------------ ---------- ---------- ---------- ---------- ----------
-Chn-11A          IRREGULAR    0          7.00       0          0          1
+Chn-11A          TRAPEZOIDAL  1.00       7.00       2          2          1
 18RC-1           CIRCULAR     1.50       0          0          0          1
 18RC-2           CIRCULAR     1.50       0          0          0          1
 18RC-3           CIRCULAR     1.50       0          0          0          1
@@ -198,32 +217,32 @@ Chn-11A          IRREGULAR    0          7.00       0          0          1
 Ex-24            CIRCULAR     2.00       0          0          0          1
 1-36RC           CIRCULAR     3.00       0          0          0          1
 Ex-36            CIRCULAR     3.00       0          0          0          1
-Chn-14           IRREGULAR    0          10.00      0          0          1
-Chn-15           IRREGULAR    0          0          0          0          1
-Chn-15A          IRREGULAR    0          0          0          0          1
+Chn-14           TRAPEZOIDAL  1.00       10.00      2          2          1
+Chn-15           TRAPEZOIDAL  1.00       10.00      2          2          1
+Chn-15A          TRAPEZOIDAL  1.00       10.00      2          2          1
 60"RCP           CIRCULAR     5.00       0          0          0          1
-Chn-16           IRREGULAR    0          0          0          0          1
-Chn-17           IRREGULAR    0          0          0          0          1
-Chn-18           IRREGULAR    0          0          0          0          1
+Chn-16           TRAPEZOIDAL  1.00       10.00      2          2          1
+Chn-17           TRAPEZOIDAL  1.00       10.00      2          2          1
+Chn-18           TRAPEZOIDAL  1.00       10.00      2          2          1
 P5-60"P          CIRCULAR     5.00       0          0          0          1
-Chn-11           IRREGULAR    0          0          0          0          1
-Chn-10           IRREGULAR    0          0          0          0          1
-Chn-9            IRREGULAR    0          0          0          0          1
+Chn-11           TRAPEZOIDAL  1.00       10.00      2          2          1
+Chn-10           TRAPEZOIDAL  1.00       10.00      2          2          1
+Chn-9            TRAPEZOIDAL  1.00       10.00      2          2          1
 P4b-60"P         CIRCULAR     5.00       0          0          0          1
 P4a-60"P         CIRCULAR     5.00       0          0          0          1
-Chn-8            IRREGULAR    0          0          0          0          1
-Chn-7            IRREGULAR    0          0          0          0          1
+Chn-8            TRAPEZOIDAL  1.00       10.00      2          2          1
+Chn-7            TRAPEZOIDAL  1.00       10.00      2          2          1
 P3-60"P          CIRCULAR     5.00       0          0          0          1
-Chn-5            IRREGULAR    0          0          0          0          1
-Chn-5A           IRREGULAR    0          0          0          0          1
-Chn-6            IRREGULAR    0          0          0          0          1
-Chn-3            IRREGULAR    0          0          0          0          1
-Chn-4            IRREGULAR    0          0          0          0          1
-Chn-4A           IRREGULAR    0          0          0          0          1
+Chn-5            TRAPEZOIDAL  1.00       10.00      2          2          1
+Chn-5A           TRAPEZOIDAL  1.00       10.00      2          2          1
+Chn-6            TRAPEZOIDAL  1.00       10.00      2          2          1
+Chn-3            TRAPEZOIDAL  1.00       10.00      2          2          1
+Chn-4            TRAPEZOIDAL  1.00       10.00      2          2          1
+Chn-4A           TRAPEZOIDAL  1.00       10.00      2          2          1
 1-36"RCP         CIRCULAR     3.00       0          0          0          1
 P1-54"P          CIRCULAR     4.50       0          0          0          1
-Chn-2            IRREGULAR    0          0          0          0          1
-Chn-1            IRREGULAR    0          0          0          0          1
+Chn-2            TRAPEZOIDAL  1.00       10.00      2          2          1
+Chn-1            TRAPEZOIDAL  1.00       10.00      2          2          1
 NEW60"RCP        CIRCULAR     5.00       0          0          0          1
 Ex-54"C          CIRCULAR     4.50       0          0          0          1
 Ex-54"B          CIRCULAR     4.50       0          0          0          1

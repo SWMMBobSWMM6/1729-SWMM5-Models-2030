@@ -19,6 +19,18 @@ VARIABLE_STEP        0.75
 INERTIAL_DAMPING     NONE
 NORMAL_FLOW_LIMITED  BOTH
 MAX_TRIALS           30
+START_DATE           01/01/2001
+START_TIME           00:00:00
+REPORT_START_DATE    01/01/2001
+REPORT_START_TIME    00:00:00
+END_DATE             01/02/2001
+END_TIME             00:00:00
+SWEEP_START          01/01
+SWEEP_END            12/31
+DRY_DAYS             0
+REPORT_STEP          00:15:00
+WET_STEP             00:05:00
+DRY_STEP             01:00:00
 
 [JUNCTIONS]
 ;;Name           Elev       MaxDepth   InitDepth  SurDepth   Aponded
@@ -108,19 +120,23 @@ F09              239.60     0          0          0          0
 I18              0          0          0          0          0
 V09              0          0          0          0          0
 
+[OUTFALLS]
+;;Name           Elev       Type       Stage      Gated
+;;-------------- ---------- ---------- ---------- -----
+I01              221.00     FREE                  NO
+
 [STORAGE]
 ;;Name           Elev       MaxDepth   InitDepth  Shape      Curve/Params
 ;;-------------- ---------- ---------- ---------- ---------- ----------
-I22              249.00     0          0          FUNCTIONAL 300.00 0          0
-VOS              243.40     0          0          FUNCTIONAL 300.00 0          0
-I43              222.00     0          0          FUNCTIONAL 300.00 0          0
-I30              221.00     0          0          FUNCTIONAL 300.00 0          0
-I28              238.50     -0.50      0          FUNCTIONAL 300.00 0          0
-I19              248.00     0          0          FUNCTIONAL 300.00 0          0
-I15              228.20     0          0          FUNCTIONAL 200.00 0          0
-FOS              239.60     0          0          FUNCTIONAL 300.00 0          0
+I22              249.00     10.00      0          FUNCTIONAL 300.00 0          0
+VOS              243.40     10.00      0          FUNCTIONAL 300.00 0          0
+I43              222.00     10.00      0          FUNCTIONAL 300.00 0          0
+I30              221.00     10.00      0          FUNCTIONAL 300.00 0          0
+I28              238.50     10.00      0          FUNCTIONAL 300.00 0          0
+I19              248.00     10.00      0          FUNCTIONAL 300.00 0          0
+I15              228.20     10.00      0          FUNCTIONAL 200.00 0          0
+FOS              239.60     10.00      0          FUNCTIONAL 300.00 0          0
 I02              221.00     8.00       0          FUNCTIONAL 300.00 0          0
-I01              221.00     8.00       0          FUNCTIONAL 300.00 0          0
 
 [CONDUITS]
 ;;Name           From             To               Length     Roughness  InOffset   OutOffset  InitFlow   MaxFlow
@@ -215,7 +231,7 @@ Mich_OF          I15              Michaels         400.00     0.0043     200.60 
 ;;Name           From             To               Type       Offset     Qcoeff     Gated    CloseTime
 ;;-------------- ---------------- ---------------- ---------- ---------- ---------- -------- ----------
 FOrf             FOS              I13              SIDE       0          0.650      NO       0
-394              ?                ?                SIDE       0          0.650      NO       0
+394              VOS              I18              SIDE       0          0.650      NO       0
 
 [WEIRS]
 ;;Name           From             To               Type       CrestHt    Qcoeff     Gated    EndCon   EndCoeff   Surcharge
@@ -225,7 +241,7 @@ VanB_OF          V09              VanBuren         TRANSVERSE 207.14     1.840  
 Jack_OF          I19              Jackson          TRANSVERSE 204.98     1.840      NO       0        0          YES
 West_OF          I28              Western          TRANSVERSE 208.81     1.840      NO       0        0          YES
 FillDam          FOS              F09              TRANSVERSE 200.40     1.840      NO       0        0          YES
-393              ?                ?                TRANSVERSE 0          1.840      NO       0        0          YES
+393              VOS              V09              TRANSVERSE 0          1.840      NO       0        0          YES
 
 [XSECTIONS]
 ;;Link           Shape        Geom1      Geom2      Geom3      Geom4      Barrels
@@ -315,14 +331,14 @@ F012             HORSESHOE    6.30       0          0          0          1
 F011             HORSESHOE    6.30       0          0          0          1
 F010             HORSESHOE    6.30       0          0          0          1
 Mich_OF          CIRCULAR     2.00       0          0          0          1
-FOrf             RECT_CLOSED  2.50       0          0          0          
-394              RECT_CLOSED  0          0          0          0          
-Fill_OF          RECT_OPEN    0          15.00      0          0          
-VanB_OF          RECT_OPEN    0          15.00      0          0          
-Jack_OF          RECT_OPEN    0          15.00      0          0          
-West_OF          RECT_OPEN    0          15.00      0          0          
-FillDam          RECT_OPEN    0          0          0          0          
-393              RECT_OPEN    0          0          0          0          
+FOrf             RECT_CLOSED  2.50       2.50       0          0
+394              RECT_CLOSED  1.00       1.00       0          0
+Fill_OF          RECT_OPEN    1.00       15.00      0          0
+VanB_OF          RECT_OPEN    1.00       15.00      0          0
+Jack_OF          RECT_OPEN    1.00       15.00      0          0
+West_OF          RECT_OPEN    1.00       15.00      0          0
+FillDam          RECT_OPEN    1.00       1.00       0          0
+393              RECT_OPEN    1.00       1.00       0          0
 
 [LOSSES]
 ;;Link           Inlet      Outlet     Average    Flap Gate

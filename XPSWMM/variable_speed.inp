@@ -14,76 +14,93 @@ LINK_OFFSETS         DEPTH
 MIN_SLOPE            0.0
 ALLOW_PONDING        NO
 SKIP_STEADY_STATE    NO
-ROUTING_STEP         00:00:60
+ROUTING_STEP         00:01:00
 VARIABLE_STEP        0.75
 INERTIAL_DAMPING     PARTIAL
 NORMAL_FLOW_LIMITED  BOTH
 MAX_TRIALS           50
+START_DATE           01/01/2001
+START_TIME           00:00:00
+REPORT_START_DATE    01/01/2001
+REPORT_START_TIME    00:00:00
+END_DATE             01/02/2001
+END_TIME             00:00:00
+SWEEP_START          01/01
+SWEEP_END            12/31
+DRY_DAYS             0
+REPORT_STEP          00:15:00
+WET_STEP             00:05:00
+DRY_STEP             01:00:00
 
 [JUNCTIONS]
 ;;Name           Elev       MaxDepth   InitDepth  SurDepth   Aponded
 ;;-------------- ---------- ---------- ---------- ---------- ----------
-0                130.00     0          0          0          0
-0                130.00     0          0          0          0
-0                100.00     0          0          0          0
+o/flow           130.00     0          0          0          0
+ds               100.00     0          0          0          0
 Node_162         0          0          0          0          0
+
+[OUTFALLS]
+;;Name           Elev       Type       Stage      Gated
+;;-------------- ---------- ---------- ---------- -----
+irrig            130.00     FREE                  NO
 
 [STORAGE]
 ;;Name           Elev       MaxDepth   InitDepth  Shape      Curve/Params
 ;;-------------- ---------- ---------- ---------- ---------- ----------
-0                150.00     0          0          FUNCTIONAL 10.00 0          0
-0                100.00     0          0          FUNCTIONAL 12.50 0          0
-0                103.00     -3.00      0.50       FUNCTIONAL 0 0          0
+reserv           150.00     10.00      0          FUNCTIONAL 10.00 0          0
+lake             100.00     10.00      0          FUNCTIONAL 12.50 0          0
+lake_2           103.00     10.00      0.50       FUNCTIONAL 1000.00 0          0
 
 [CONDUITS]
 ;;Name           From             To               Length     Roughness  InOffset   OutOffset  InitFlow   MaxFlow
 ;;-------------- ---------------- ---------------- ---------- ---------- ---------- ---------- ---------- ----------
-152              0                0                500.00     0.0200     100.00     99.00      0          0
-152              0                0                100.00     0.0050     103.00     103.00     0          0
-157              0                0                500.00     0.0050     71.00      70.00      0          0
-158              0                0                500.00     0          68.00      60.00      0          0
+152              reserv           irrig            500.00     0.0200     100.00     99.00      0          0
+152_2            reserv           o/flow           100.00     0.0050     103.00     103.00     0          0
+157              lake             lake             500.00     0.0050     71.00      70.00      0          0
+158              lake             ds               500.00     0.0130     68.00      60.00      0          0
 
 [PUMPS]
 ;;Name           From             To               PumpCurve  Status   Startup    Shutoff
 ;;-------------- ---------------- ---------------- ---------- -------- ---------- ----------
-157              0                0                PC_157     ON       56.00      51.00     
+157_2            lake             reserv           PC_157_2   ON       56.00      51.00     
 
 [CURVES]
 ;;Name           Type       X-Value    Y-Value
 ;;-------------- ---------- ---------- ----------
-PC_157           Pump3      0          0
-;
+;; Synthesized generic pump curves — replace with actual pump data
+PC_157_2         Pump1      0          5
+PC_157_2                    10         10
 
 [XSECTIONS]
 ;;Link           Shape        Geom1      Geom2      Geom3      Geom4      Barrels
 ;;-------------- ------------ ---------- ---------- ---------- ---------- ----------
 152              POWER        10.00      16.00      0          0          1
-152              TRAPEZOIDAL  20.00      20.00      0          0          1
+152_2            TRAPEZOIDAL  20.00      20.00      1          1          1
 157              HORSESHOE    10.00      10.00      0          0          1
-158              IRREGULAR    15.00      0          0          0          1
+158              TRAPEZOIDAL  15.00      10.00      2          2          1
 
 [LOSSES]
 ;;Link           Inlet      Outlet     Average    Flap Gate
 ;;-------------- ---------- ---------- ---------- ----------
 152              0          0          0          NO
-152              0          0          0          NO
+152_2            0          0          0          NO
 157              0          0          0          NO
 158              0          0          0          NO
 
 [INFLOWS]
 ;;Node           Constituent  Time Series      Type     Mfactor  Sfactor  Baseline Pattern
 ;;-------------- ------------ ---------------- -------- -------- -------- -------- --------
-0                FLOW         ""               FLOW     1.0      1.0      10.00
+lake_2           FLOW         ""               FLOW     1.0      1.0      10.00
 
 [COORDINATES]
 ;;Node           X-Coord            Y-Coord
 ;;-------------- ------------------ ------------------
-0                59.01              96.81             
-0                17.64              96.86             
-0                58.62              154.91            
-0                78.19              36.80             
-0                96.82              137.64            
-0                117.64             137.64            
+reserv           59.01              96.81             
+irrig            17.64              96.86             
+o/flow           58.62              154.91            
+lake             78.19              36.80             
+lake_2           96.82              137.64            
+ds               117.64             137.64            
 
 [MAP]
 DIMENSIONS 17.64 36.80 117.64 154.91

@@ -19,6 +19,18 @@ VARIABLE_STEP        0.75
 INERTIAL_DAMPING     PARTIAL
 NORMAL_FLOW_LIMITED  BOTH
 MAX_TRIALS           50
+START_DATE           01/01/2001
+START_TIME           00:00:00
+REPORT_START_DATE    01/01/2001
+REPORT_START_TIME    00:00:00
+END_DATE             01/02/2001
+END_TIME             00:00:00
+SWEEP_START          01/01
+SWEEP_END            12/31
+DRY_DAYS             0
+REPORT_STEP          00:15:00
+WET_STEP             00:05:00
+DRY_STEP             01:00:00
 
 [JUNCTIONS]
 ;;Name           Elev       MaxDepth   InitDepth  SurDepth   Aponded
@@ -64,7 +76,6 @@ OF               514.00     0          0          0          0
 87               540.00     0          0          0          0
 88               540.00     0          0          0          0
 89               550.00     0          0          0          0
-SANINTER         525.00     0          0          0          0
 CH3              514.00     0          0          0          0
 103              530.00     0          0          0          0
 104              530.00     0          0          0          0
@@ -83,6 +94,11 @@ OF2              514.00     0          0          0          0
 164              515.00     0          0          0          0
 168              515.00     0          0          0          0
 SANFLOW          514.00     0          0          0          0
+
+[OUTFALLS]
+;;Name           Elev       Type       Stage      Gated
+;;-------------- ---------- ---------- ---------- -----
+SANINTER         525.00     FREE                  NO
 
 [CONDUITS]
 ;;Name           From             To               Length     Roughness  InOffset   OutOffset  InitFlow   MaxFlow
@@ -128,8 +144,8 @@ SANFLOW          514.00     0          0          0          0
 TO               78               SANINTER         200.00     0.0130     488.00     484.00     0          0
 60inchUC         OF               128              453.00     0.0130     490.21     487.21     0          0
 114              106              107              200.00     0.0140     494.30     492.90     0          0
-115              107              108              200.00     0          492.90     491.50     0          0
-116              108              109              200.00     0          491.50     490.10     0          0
+115              107              108              200.00     0.0130     492.90     491.50     0          0
+116              108              109              200.00     0.0130     491.50     490.10     0          0
 117              109              110              200.00     0.0140     490.10     488.70     0          0
 118              110              128              200.00     0.0140     488.70     488.00     0          0
 119              111              112              200.00     0.0140     488.93     487.53     0          0
@@ -137,7 +153,7 @@ TO               78               SANINTER         200.00     0.0130     488.00 
 127              113              CH3              200.00     0.0140     486.14     484.74     0          0
 131              128              CH3              412.00     0.0130     487.21     484.74     0          0
 136              103              104              200.00     0.0140     499.40     498.00     0          0
-137              104              105              200.00     0          498.00     496.00     0          0
+137              104              105              200.00     0.0130     498.00     496.00     0          0
 138              105              STB              200.00     0.0140     496.00     495.00     0          0
 166              CH3              163              289.66     0.0140     484.74     483.00     0          0
 171              164              SANFLOW          500.00     0.0130     483.00     470.90     0          0
@@ -213,10 +229,10 @@ TO               CIRCULAR     2.00       0          0          0          1
 166              CIRCULAR     5.00       0          0          0          1
 171              CIRCULAR     2.00       0          0          0          1
 172              CIRCULAR     5.50       0          0          0          1
-ORIFICE          RECT_CLOSED  1.00       0          0          0          
-VVALVE           RECT_CLOSED  0          0          0          0          
-WEIR             RECT_OPEN    0          120.00     0          0          
-WEIR2            RECT_OPEN    0          6.00       0          0          
+ORIFICE          RECT_CLOSED  1.00       1.00       0          0
+VVALVE           RECT_CLOSED  0.94       0.94       0          0
+WEIR             RECT_OPEN    1.00       120.00     0          0
+WEIR2            RECT_OPEN    1.00       6.00       0          0
 
 [LOSSES]
 ;;Link           Inlet      Outlet     Average    Flap Gate

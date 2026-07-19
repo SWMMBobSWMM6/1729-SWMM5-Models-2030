@@ -20,38 +20,54 @@ INERTIAL_DAMPING     PARTIAL
 NORMAL_FLOW_LIMITED  BOTH
 MAX_TRIALS           100
 HEAD_TOLERANCE       0.01
+START_DATE           01/01/2001
+START_TIME           00:00:00
+REPORT_START_DATE    01/01/2001
+REPORT_START_TIME    00:00:00
+END_DATE             01/02/2001
+END_TIME             00:00:00
+SWEEP_START          01/01
+SWEEP_END            12/31
+DRY_DAYS             0
+REPORT_STEP          00:15:00
+WET_STEP             00:05:00
+DRY_STEP             01:00:00
 
 [JUNCTIONS]
 ;;Name           Elev       MaxDepth   InitDepth  SurDepth   Aponded
 ;;-------------- ---------- ---------- ---------- ---------- ----------
 JUNCT            573.50     0          0          0          0
 BRIDGE           556.00     0          0          0          0
-JUNCT            565.00     0          0          0          0
-JUNCT            579.30     0          0          0          0
+JUNCT_2          565.00     0          0          0          0
+JUNCT_3          579.30     0          0          0          0
 WWTP             579.00     0          0          0          0
-JUNCT            573.00     0          0          0          0
+JUNCT_4          573.00     0          0          0          0
 ARV              618.00     0          0          0          0
 Vault            575.00     0          0          0          0
-Vault            566.00     0          0          0          0
-JUNCT            587.00     0          0          0          0
-Vault            591.00     0          0          0          0
-vault            565.00     0          0          0          0
+Vault_2          566.00     0          0          0          0
+JUNCT_5          587.00     0          0          0          0
+Vault_3          591.00     0          0          0          0
+vault_4          565.00     0          0          0          0
 76               574.00     0          0          0          0
 effluent         569.50     0          0          0          0
 EXP16            582.00     0          0          0          0
 EXP20            560.00     0          0          0          0
-outfall          587.00     0          0          0          0
-ARV              599.50     0          0          0          0
+ARV_2            599.50     0          0          0          0
+
+[OUTFALLS]
+;;Name           Elev       Type       Stage      Gated
+;;-------------- ---------- ---------- ---------- -----
+outfall          587.00     FREE                  NO
 
 [STORAGE]
 ;;Name           Elev       MaxDepth   InitDepth  Shape      Curve/Params
 ;;-------------- ---------- ---------- ---------- ---------- ----------
-HANSEN           566.00     0          2.00       FUNCTIONAL 100.00 0          0
-NASA             561.00     0          1.00       FUNCTIONAL 100.00 0          0
-MILLS            576.00     0          4.00       FUNCTIONAL 50.00 0          0
-IMHOFF           572.00     0          0          FUNCTIONAL 12.50 0          0
-THIOKOL          559.00     0          2.00       FUNCTIONAL 100.00 0          0
-SPARKMAN         593.00     0          4.40       FUNCTIONAL 64.00 0          0
+HANSEN           566.00     10.00      2.00       FUNCTIONAL 100.00 0          0
+NASA             561.00     10.00      1.00       FUNCTIONAL 100.00 0          0
+MILLS            576.00     10.00      4.00       FUNCTIONAL 50.00 0          0
+IMHOFF           572.00     10.00      0          FUNCTIONAL 12.50 0          0
+THIOKOL          559.00     10.00      2.00       FUNCTIONAL 100.00 0          0
+SPARKMAN         593.00     10.00      4.40       FUNCTIONAL 64.00 0          0
 
 [CONDUITS]
 ;;Name           From             To               Length     Roughness  InOffset   OutOffset  InitFlow   MaxFlow
@@ -64,7 +80,7 @@ SPARKMAN         593.00     0          4.40       FUNCTIONAL 64.00 0          0
 32               JUNCT            WWTP             300.00     0.0120     577.30     577.00     0          0
 33               effluent         JUNCT            3700.00    0.0120     568.50     577.30     0          0
 41               76               JUNCT            3500.00    0.0110     573.00     571.00     0          0
-43               vault            JUNCT            11700.00   0.0110     563.50     563.00     0          0
+43               vault_4          JUNCT            11700.00   0.0110     563.50     563.00     0          0
 45               JUNCT            ARV              6000.00    0.0120     563.00     616.00     0          0
 69               Vault            JUNCT            400.00     0.0120     589.00     585.00     0          0
 70               JUNCT            JUNCT            4000.00    0.0120     585.00     571.50     0          0
@@ -79,7 +95,7 @@ SPARKMAN         593.00     0          4.40       FUNCTIONAL 64.00 0          0
 ;;-------------- ---------------- ---------------- ---------- -------- ---------- ----------
 59               HANSEN           Vault            PC_59      ON       557.00     554.00    
 64               NASA             Vault            PC_64      ON       555.00     552.00    
-75               THIOKOL          vault            PC_75      ON       553.00     552.00    
+75               THIOKOL          vault_4          PC_75      ON       553.00     552.00    
 77               MILLS            76               PC_77      ON       561.00     554.00    
 pump             IMHOFF           effluent         PC_pump    ON       565.00     559.00    
 97               SPARKMAN         Vault            PC_97      ON       573.00     572.00    
@@ -87,18 +103,19 @@ pump             IMHOFF           effluent         PC_pump    ON       565.00   
 [CURVES]
 ;;Name           Type       X-Value    Y-Value
 ;;-------------- ---------- ---------- ----------
-PC_59            Pump3      0          0
-;
-PC_64            Pump3      0          0
-;
-PC_75            Pump3      0          0
-;
-PC_77            Pump3      0          0
-;
-PC_pump          Pump3      0          0
-;
-PC_97            Pump3      0          0
-;
+;; Synthesized generic pump curves — replace with actual pump data
+PC_59            Pump1      0          5
+PC_59                       10         10
+PC_64            Pump1      0          5
+PC_64                       10         10
+PC_75            Pump1      0          5
+PC_75                       10         10
+PC_77            Pump1      0          5
+PC_77                       10         10
+PC_pump          Pump1      0          5
+PC_pump                     10         10
+PC_97            Pump1      0          5
+PC_97                       10         10
 
 [XSECTIONS]
 ;;Link           Shape        Geom1      Geom2      Geom3      Geom4      Barrels
@@ -149,26 +166,26 @@ HANSEN           631111.57          -1885137.16
 JUNCT            640633.00          -1887398.18       
 NASA             639496.37          -1901713.01       
 BRIDGE           646140.53          -1887686.98       
-JUNCT            650791.70          -1887847.40       
-JUNCT            659581.12          -1896623.33       
+JUNCT_2          650791.70          -1887847.40       
+JUNCT_3          659581.12          -1896623.33       
 WWTP             659396.24          -1896798.56       
 MILLS            643167.01          -1889468.21       
-JUNCT            641264.31          -1887481.32       
+JUNCT_4          641264.31          -1887481.32       
 IMHOFF           656675.62          -1896859.53       
 THIOKOL          645584.77          -1881649.70       
 ARV              653497.77          -1887774.16       
 Vault            631282.42          -1885111.48       
-Vault            639585.80          -1901409.21       
-JUNCT            637242.19          -1887359.90       
+Vault_2          639585.80          -1901409.21       
+JUNCT_5          637242.19          -1887359.90       
 SPARKMAN         637269.36          -1887743.36       
-Vault            637250.75          -1887703.24       
-vault            645575.17          -1881716.12       
+Vault_3          637250.75          -1887703.24       
+vault_4          645575.17          -1881716.12       
 76               643103.35          -1889556.97       
 effluent         656736.69          -1896907.19       
 EXP16            633651.24          -1885765.03       
 EXP20            645655.96          -1887634.65       
 outfall          659344.84          -1896783.82       
-ARV              635278.59          -1887246.20       
+ARV_2            635278.59          -1887246.20       
 
 [MAP]
 DIMENSIONS 631111.57 -1901713.01 659581.12 -1881649.70

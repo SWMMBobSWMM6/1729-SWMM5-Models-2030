@@ -19,21 +19,37 @@ VARIABLE_STEP        0.75
 INERTIAL_DAMPING     PARTIAL
 NORMAL_FLOW_LIMITED  BOTH
 MAX_TRIALS           50
+START_DATE           01/01/2001
+START_TIME           00:00:00
+REPORT_START_DATE    01/01/2001
+REPORT_START_TIME    00:00:00
+END_DATE             01/02/2001
+END_TIME             00:00:00
+SWEEP_START          01/01
+SWEEP_END            12/31
+DRY_DAYS             0
+REPORT_STEP          00:15:00
+WET_STEP             00:05:00
+DRY_STEP             01:00:00
 
 [JUNCTIONS]
 ;;Name           Elev       MaxDepth   InitDepth  SurDepth   Aponded
 ;;-------------- ---------- ---------- ---------- ---------- ----------
 mh1              100.40     0          0          0          0
 mh2              99.90      0          0          0          0
-mh3              99.80      0          0          0          0
 s                100.40     0          0          0          0
-s                100.20     0          0          0          0
+s_3              100.20     0          0          0          0
 overflow         100.30     0          0          0          0
+
+[OUTFALLS]
+;;Name           Elev       Type       Stage      Gated
+;;-------------- ---------- ---------- ---------- -----
+mh3              99.80      FREE                  NO
 
 [STORAGE]
 ;;Name           Elev       MaxDepth   InitDepth  Shape      Curve/Params
 ;;-------------- ---------- ---------- ---------- ---------- ----------
-s                100.31     0          0          FUNCTIONAL 267.00 0          0
+s_2              100.31     10.00      0          FUNCTIONAL 267.00 0          0
 
 [CONDUITS]
 ;;Name           From             To               Length     Roughness  InOffset   OutOffset  InitFlow   MaxFlow
@@ -42,7 +58,6 @@ p-1              mh1              mh2              100.00     0.0140     97.00  
 p-2              mh2              mh3              100.00     0.0140     96.80      96.60      0          0
 s-1              s                s                100.00     0.0150     100.00     99.90      0          0
 s-2              overflow         s                100.00     0.0150     99.90      99.80      0          0
-capture          s                mh1              0          0          0          0          0          0
 
 [ORIFICES]
 ;;Name           From             To               Type       Offset     Qcoeff     Gated    CloseTime
@@ -59,11 +74,10 @@ weir             s                overflow         TRANSVERSE 100.00     1.840  
 ;;-------------- ------------ ---------- ---------- ---------- ---------- ----------
 p-1              CIRCULAR     0.50       0          0          0          1
 p-2              CIRCULAR     0.50       0          0          0          1
-s-1              TRAPEZOIDAL  0.40       9.00       0          0          1
-s-2              TRAPEZOIDAL  0.40       9.00       0          0          1
-capture          CIRCULAR     0          0          0          0          1
-connection       RECT_CLOSED  0          0          0          0          
-weir             RECT_OPEN    0          9.00       0          0          
+s-1              TRAPEZOIDAL  0.40       9.00       1          1          1
+s-2              TRAPEZOIDAL  0.40       9.00       1          1          1
+connection       RECT_CLOSED  0.63       0.63       0          0
+weir             RECT_OPEN    1.00       9.00       0          0
 
 [LOSSES]
 ;;Link           Inlet      Outlet     Average    Flap Gate
@@ -72,7 +86,6 @@ p-1              0          0          0          NO
 p-2              0          0          0          NO
 s-1              0          0          0          NO
 s-2              0          0          0          NO
-capture          0          0          0          NO
 
 [COORDINATES]
 ;;Node           X-Coord            Y-Coord
@@ -81,8 +94,8 @@ mh1              -2.36              57.64
 mh2              57.64              57.64             
 mh3              117.64             57.64             
 s                -2.36              137.64            
-s                57.64              137.64            
-s                117.64             137.64            
+s_2              57.64              137.64            
+s_3              117.64             137.64            
 overflow         77.64              137.64            
 
 [MAP]

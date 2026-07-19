@@ -19,6 +19,18 @@ VARIABLE_STEP        0.75
 INERTIAL_DAMPING     PARTIAL
 NORMAL_FLOW_LIMITED  BOTH
 MAX_TRIALS           50
+START_DATE           01/01/2001
+START_TIME           00:00:00
+REPORT_START_DATE    01/01/2001
+REPORT_START_TIME    00:00:00
+END_DATE             01/02/2001
+END_TIME             00:00:00
+SWEEP_START          01/01
+SWEEP_END            12/31
+DRY_DAYS             0
+REPORT_STEP          00:15:00
+WET_STEP             00:05:00
+DRY_STEP             01:00:00
 
 [JUNCTIONS]
 ;;Name           Elev       MaxDepth   InitDepth  SurDepth   Aponded
@@ -35,7 +47,6 @@ MAX_TRIALS           50
 10               11.00      0          0          0          0
 11               11.00      0          0          0          0
 12               11.00      0          0          0          0
-13               11.00      0          0          0          0
 100              11.00      0          0          0          0
 101              11.00      0          0          0          0
 102              11.00      0          0          0          0
@@ -45,51 +56,56 @@ MAX_TRIALS           50
 202              11.00      0          0          0          0
 203              11.00      0          0          0          0
 
+[OUTFALLS]
+;;Name           Elev       Type       Stage      Gated
+;;-------------- ---------- ---------- ---------- -----
+13               11.00      FREE                  NO
+
 [CONDUITS]
 ;;Name           From             To               Length     Roughness  InOffset   OutOffset  InitFlow   MaxFlow
 ;;-------------- ---------------- ---------------- ---------- ---------- ---------- ---------- ---------- ----------
-Shape1           1                2                100.00     0          0.12       0.11       0          0
-Shape2           2                3                100.00     0          0.11       0.10       0          0
-Shape3           3                4                100.00     0          0.10       0.09       0          0
-Shape4           4                5                100.00     0          0.09       0.08       0          0
-Shape5           5                6                100.00     0          0.08       0.07       0          0
-Shape6           6                7                100.00     0          0.07       0.06       0          0
-Shape7           7                8                100.00     0          0.06       0.05       0          0
-Shape8           8                9                100.00     0          0.05       0.04       0          0
-Shape9           9                10               100.00     0          0.04       0.03       0          0
-Shape10          10               11               100.00     0          0.03       0.02       0          0
-Shape11          11               12               100.00     0          0.02       0.01       0          0
-Shape12          12               13               100.00     0          0.01       0          0          0
-shape1a          100              101              100.00     0          0.03       0.02       0          0
-shape1b          101              102              100.00     0          0.02       0.01       0          0
-shape1c          102              103              100.00     0          0.01       0          0          0
-shape2a          200              201              100.00     0          0.03       0.02       0          0
-shape2b          201              202              100.00     0          0.02       0.01       0          0
-shape2c          202              203              100.00     0          0.01       0          0          0
-240              ?                ?                0          0          0          0          0          0
+Shape1           1                2                100.00     0.0130     0.12       0.11       0          0
+Shape2           2                3                100.00     0.0130     0.11       0.10       0          0
+Shape3           3                4                100.00     0.0130     0.10       0.09       0          0
+Shape4           4                5                100.00     0.0130     0.09       0.08       0          0
+Shape5           5                6                100.00     0.0130     0.08       0.07       0          0
+Shape6           6                7                100.00     0.0130     0.07       0.06       0          0
+Shape7           7                8                100.00     0.0130     0.06       0.05       0          0
+Shape8           8                9                100.00     0.0130     0.05       0.04       0          0
+Shape9           9                10               100.00     0.0130     0.04       0.03       0          0
+Shape10          10               11               100.00     0.0130     0.03       0.02       0          0
+Shape11          11               12               100.00     0.0130     0.02       0.01       0          0
+Shape12          12               13               100.00     0.0130     0.01       0          0          0
+shape1a          100              101              100.00     0.0130     0.03       0.02       0          0
+shape1b          101              102              100.00     0.0130     0.02       0.01       0          0
+shape1c          102              103              100.00     0.0130     0.01       0          0          0
+shape2a          200              201              100.00     0.0130     0.03       0.02       0          0
+shape2b          201              202              100.00     0.0130     0.02       0.01       0          0
+shape2c          202              203              100.00     0.0130     0.01       0          0          0
+240              200              100              100.00     0.0130     0          0          0          0
 
 [XSECTIONS]
 ;;Link           Shape        Geom1      Geom2      Geom3      Geom4      Barrels
 ;;-------------- ------------ ---------- ---------- ---------- ---------- ----------
-Shape1           IRREGULAR    10.00      0          0          0          1
-Shape2           IRREGULAR    10.00      0          0          0          1
-Shape3           IRREGULAR    10.00      0          0          0          1
-Shape4           IRREGULAR    10.00      0          0          0          1
-Shape5           IRREGULAR    10.00      0          0          0          1
-Shape6           IRREGULAR    10.00      0          0          0          1
-Shape7           IRREGULAR    10.00      0          0          0          1
-Shape8           IRREGULAR    10.00      0          0          0          1
-Shape9           IRREGULAR    10.00      0          0          0          1
-Shape10          IRREGULAR    10.00      0          0          0          1
-Shape11          IRREGULAR    10.00      0          0          0          1
-Shape12          IRREGULAR    10.00      0          0          0          1
-shape1a          IRREGULAR    10.00      0          0          0          1
-shape1b          IRREGULAR    10.00      0          0          0          1
-shape1c          IRREGULAR    10.00      0          0          0          1
-shape2a          IRREGULAR    10.00      0          0          0          1
-shape2b          IRREGULAR    10.00      0          0          0          1
-shape2c          IRREGULAR    10.00      0          0          0          1
-240              CIRCULAR     0          0          0          0          1
+Shape1           TRAPEZOIDAL  10.00      10.00      2          2          1
+Shape2           TRAPEZOIDAL  10.00      10.00      2          2          1
+Shape3           TRAPEZOIDAL  10.00      10.00      2          2          1
+Shape4           TRAPEZOIDAL  10.00      10.00      2          2          1
+Shape5           TRAPEZOIDAL  10.00      10.00      2          2          1
+Shape6           TRAPEZOIDAL  10.00      10.00      2          2          1
+Shape7           TRAPEZOIDAL  10.00      10.00      2          2          1
+Shape8           TRAPEZOIDAL  10.00      10.00      2          2          1
+Shape9           TRAPEZOIDAL  10.00      10.00      2          2          1
+Shape10          TRAPEZOIDAL  10.00      10.00      2          2          1
+Shape11          TRAPEZOIDAL  10.00      10.00      2          2          1
+Shape12          TRAPEZOIDAL  10.00      10.00      2          2          1
+shape1a          TRAPEZOIDAL  10.00      10.00      2          2          1
+shape1b          TRAPEZOIDAL  10.00      10.00      2          2          1
+shape1c          TRAPEZOIDAL  10.00      10.00      2          2          1
+shape2a          TRAPEZOIDAL  10.00      10.00      2          2          1
+shape2b          TRAPEZOIDAL  10.00      10.00      2          2          1
+shape2c          TRAPEZOIDAL  10.00      10.00      2          2          1
+240              CIRCULAR     1.00       0          0          0          1
 
 [LOSSES]
 ;;Link           Inlet      Outlet     Average    Flap Gate

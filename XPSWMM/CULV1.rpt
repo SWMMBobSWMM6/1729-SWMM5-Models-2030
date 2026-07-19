@@ -2,99 +2,398 @@
   EPA STORM WATER MANAGEMENT MODEL - VERSION 5.2 (Build 5.2.4)
   ------------------------------------------------------------
 
+  ult system - WITH MULTI-LINKS; overflows; 6 hr, SthnR WL=1yr ARI 
   
-  ERROR 209: undefined object P32WRAG at line 102 of [CONDUIT] section:
-  P32WRBG          P32WRAG          34WRGLAD         460.00     0.0120     46.70      45.20      0          0
-
+  ****************
+  Analysis Options
+  ****************
+  Flow Units ............... CMS
+  Process Models:
+    Rainfall/Runoff ........ NO
+    RDII ................... NO
+    Snowmelt ............... NO
+    Groundwater ............ NO
+    Flow Routing ........... YES
+    Ponding Allowed ........ NO
+    Water Quality .......... NO
+  Flow Routing Method ...... DYNWAVE
+  Surcharge Method ......... EXTRAN
+  Starting Date ............ 01/01/2001 00:00:00
+  Ending Date .............. 01/02/2001 00:00:00
+  Antecedent Dry Days ...... 0.0
+  Report Time Step ......... 00:15:00
+  Routing Time Step ........ 15.00 sec
+  Variable Time Step ....... YES
+  Maximum Trials ........... 50
+  Number of Threads ........ 1
+  Head Tolerance ........... 0.001000 m
   
-  ERROR 209: undefined object P34WRAG at line 103 of [CONDUIT] section:
-  P34WRBG          P34WRAG          35WRRUPE         250.00     0.0120     45.20      43.80      0          0
-
   
-  ERROR 209: undefined object P52WRAG at line 105 of [CONDUIT] section:
-  P52WRBG          P52WRAG          65WR             520.00     0.0120     41.25      39.38      0          0
-
+  **************************        Volume        Volume
+  Flow Routing Continuity        hectare-m      10^6 ltr
+  **************************     ---------     ---------
+  Dry Weather Inflow .......         0.000         0.000
+  Wet Weather Inflow .......         0.000         0.000
+  Groundwater Inflow .......         0.000         0.000
+  RDII Inflow ..............         0.000         0.000
+  External Inflow ..........         0.000         0.000
+  External Outflow .........         0.000         0.000
+  Flooding Loss ............         0.000         0.000
+  Evaporation Loss .........         0.000         0.000
+  Exfiltration Loss ........         0.000         0.000
+  Initial Stored Volume ....         0.000         0.000
+  Final Stored Volume ......         0.000         0.000
+  Continuity Error (%) .....         0.000
   
-  ERROR 209: undefined object P67WRag at line 113 of [CONDUIT] section:
-  P67WRbg          P67WRag          70WRBRAE         150.00     0.0110     36.50      36.05      0          0
-
   
-  ERROR 209: undefined object P117WRag at line 117 of [CONDUIT] section:
-  P117WRbg         P117WRag         120WRHES         300.00     0.0110     25.20      24.50      0          0
-
+  ***************************
+  Time-Step Critical Elements
+  ***************************
+  None
   
-  ERROR 209: undefined object O160ag at line 120 of [CONDUIT] section:
-  O160bg           O160ag           165WR            80.00      0.0300     20.78      20.66      0          0
-
   
-  ERROR 209: undefined object O165ag at line 121 of [CONDUIT] section:
-  O165bg           O165ag           170WR            56.00      0.0300     20.66      20.58      0          0
-
+  ********************************
+  Highest Flow Instability Indexes
+  ********************************
+  All links are stable.
   
-  ERROR 211: invalid number  at line 135 of [XSECT] section:
-  O5WR             TRAPEZOIDAL  1.10       0          0          0          1
-
   
-  ERROR 211: invalid number  at line 142 of [XSECT] section:
-  O75WR            TRAPEZOIDAL  1.50       0          0          0          1
-
+  *********************************
+  Most Frequent Nonconverging Nodes
+  *********************************
+  Convergence obtained at all time steps.
   
-  ERROR 211: invalid number  at line 143 of [XSECT] section:
-  O80WR            TRAPEZOIDAL  1.34       0          0          0          1
-
   
-  ERROR 211: invalid number  at line 144 of [XSECT] section:
-  O85WR            TRAPEZOIDAL  1.50       0          0          0          1
-
+  *************************
+  Routing Time Step Summary
+  *************************
+  Minimum Time Step           :    14.50 sec
+  Average Time Step           :    15.00 sec
+  Maximum Time Step           :    15.00 sec
+  % of Time in Steady State   :     0.00
+  Average Iterations per Step :     2.00
+  % of Steps Not Converging   :     0.00
+  Time Step Frequencies       :
+     15.000 -  7.597 sec      :   100.00 %
+      7.597 -  3.848 sec      :     0.00 %
+      3.848 -  1.949 sec      :     0.00 %
+      1.949 -  0.987 sec      :     0.00 %
+      0.987 -  0.500 sec      :     0.00 %
   
-  ERROR 211: invalid number  at line 146 of [XSECT] section:
-  O105WR           TRAPEZOIDAL  1.57       0          0          0          1
-
   
-  ERROR 211: invalid number  at line 147 of [XSECT] section:
-  O135WR           TRAPEZOIDAL  1.70       0          0          0          1
-
+  ******************
+  Node Depth Summary
+  ******************
   
-  ERROR 211: invalid number  at line 148 of [XSECT] section:
-  O140WR           TRAPEZOIDAL  1.90       0          0          0          1
-
+  ---------------------------------------------------------------------------------
+                                 Average  Maximum  Maximum  Time of Max    Reported
+                                   Depth    Depth      HGL   Occurrence   Max Depth
+  Node                 Type       Meters   Meters   Meters  days hr:min      Meters
+  ---------------------------------------------------------------------------------
+  1NB                  JUNCTION     0.00     0.00    54.93     0  00:00        0.00
+  5NB                  JUNCTION     0.00     0.00    56.42     0  00:00        0.00
+  10NB                 JUNCTION     0.00     0.00    51.73     0  00:00        0.00
+  20NB                 JUNCTION     0.00     0.00    48.98     0  00:00        0.00
+  5WR                  JUNCTION     0.00     0.00    48.00     0  00:00        0.00
+  15WR                 JUNCTION     0.00     0.00    47.50     0  00:00        0.00
+  20WRDROP             JUNCTION     0.00     0.00    46.90     0  00:00        0.00
+  40WR                 JUNCTION     0.00     0.00    44.84     0  00:00        0.00
+  45WR                 JUNCTION     0.00     0.00    42.20     0  00:00        0.00
+  75WRDROP             JUNCTION     0.00     0.00    37.12     0  00:00        0.00
+  80WRDROP             JUNCTION     0.00     0.00    35.70     0  00:00        0.00
+  85WRDROP             JUNCTION     0.00     0.00    34.20     0  00:00        0.00
+  90WRCEC1             JUNCTION     0.00     0.00    33.07     0  00:00        0.00
+  100WR                JUNCTION     0.00     0.00    30.00     0  00:00        0.00
+  105WRDROP            JUNCTION     0.00     0.00    29.47     0  00:00        0.00
+  110WRDROP            JUNCTION     0.00     0.00    28.40     0  00:00        0.00
+  120WRHES             JUNCTION     0.00     0.00    26.50     0  00:00        0.00
+  135WR                JUNCTION     0.00     0.00    26.20     0  00:00        0.00
+  140WRDROP            JUNCTION     0.00     0.00    25.34     0  00:00        0.00
+  145WRDROP            JUNCTION     0.00     0.00    24.74     0  00:00        0.00
+  155WR                JUNCTION     0.00     0.00    23.29     0  00:00        0.00
+  1WROWTR1             JUNCTION     0.00     0.00    53.00     0  00:00        0.00
+  25WRDROP             JUNCTION     0.00     0.00    45.80     0  00:00        0.00
+  94WRARDR             JUNCTION     0.00     0.00    31.40     0  00:00        0.00
+  115WRPAR             JUNCTION     0.00     0.00    27.22     0  00:00        0.00
+  67WRCHAL             JUNCTION     0.00     0.00    38.30     0  00:00        0.00
+  97WRBRO1             JUNCTION     0.00     0.00    31.00     0  00:00        0.00
+  99WR                 JUNCTION     0.00     0.00    31.00     0  00:00        0.00
+  112WRCHI             JUNCTION     0.00     0.00    30.00     0  00:00        0.00
+  117WRSC1             JUNCTION     0.00     0.00    27.30     0  00:00        0.00
+  147WRSC2             JUNCTION     0.00     0.00    24.00     0  00:00        0.00
+  160WR                JUNCTION     0.00     0.00    22.71     0  00:00        0.00
+  165WR                JUNCTION     0.00     0.00    22.30     0  00:00        0.00
+  102WR                JUNCTION     0.00     0.00    29.59     0  00:00        0.00
+  66WR                 JUNCTION     0.00     0.00    40.00     0  00:00        0.00
+  P32WRAG              JUNCTION     0.00     0.00    46.70     0  00:00        0.00
+  P34WRAG              JUNCTION     0.00     0.00    45.20     0  00:00        0.00
+  P52WRAG              JUNCTION     0.00     0.00    41.25     0  00:00        0.00
+  P67WRag              JUNCTION     0.00     0.00    36.50     0  00:00        0.00
+  P117WRag             JUNCTION     0.00     0.00    25.20     0  00:00        0.00
+  O160ag               JUNCTION     0.00     0.00    20.78     0  00:00        0.00
+  O165ag               JUNCTION     0.00     0.00    20.66     0  00:00        0.00
+  170WR                OUTFALL      0.00     0.00    22.18     0  00:00        0.00
+  3WRFRIAR             STORAGE      0.00     0.00    49.80     0  00:00        0.00
+  10WR                 STORAGE      0.00     0.00    47.80     0  00:00        0.00
+  35WRRUPE             STORAGE      0.00     0.00    45.40     0  00:00        0.00
+  55WRURAN             STORAGE      0.00     0.00    40.94     0  00:00        0.00
+  65WR                 STORAGE      0.00     0.00    40.87     0  00:00        0.00
+  70WRBRAE             STORAGE      0.00     0.00    37.70     0  00:00        0.00
+  95WRBRO2             STORAGE      0.00     0.00    30.50     0  00:00        0.00
+  150WRFAL             STORAGE      0.00     0.00    23.86     0  00:00        0.00
+  34WRGLAD             STORAGE      0.00     0.00    47.30     0  00:00        0.00
+  32WR                 STORAGE      0.00     0.00    49.30     0  00:00        0.00
+  52WRHICK             STORAGE      0.00     0.00    44.30     0  00:00        0.00
   
-  ERROR 211: invalid number  at line 149 of [XSECT] section:
-  O145WR           TRAPEZOIDAL  1.86       0          0          0          1
-
   
-  ERROR 211: invalid number  at line 158 of [XSECT] section:
-  O90WR            TRAPEZOIDAL  1.80       0          0          0          1
-
+  *******************
+  Node Inflow Summary
+  *******************
   
-  ERROR 211: invalid number  at line 159 of [XSECT] section:
-  O94WR            TRAPEZOIDAL  1.20       0          0          0          1
-
+  -------------------------------------------------------------------------------------------------
+                                  Maximum  Maximum                  Lateral       Total        Flow
+                                  Lateral    Total  Time of Max      Inflow      Inflow     Balance
+                                   Inflow   Inflow   Occurrence      Volume      Volume       Error
+  Node                 Type           CMS      CMS  days hr:min    10^6 ltr    10^6 ltr     Percent
+  -------------------------------------------------------------------------------------------------
+  1NB                  JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
+  5NB                  JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
+  10NB                 JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
+  20NB                 JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
+  5WR                  JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
+  15WR                 JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
+  20WRDROP             JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
+  40WR                 JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
+  45WR                 JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
+  75WRDROP             JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
+  80WRDROP             JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
+  85WRDROP             JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
+  90WRCEC1             JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
+  100WR                JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
+  105WRDROP            JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
+  110WRDROP            JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
+  120WRHES             JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
+  135WR                JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
+  140WRDROP            JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
+  145WRDROP            JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
+  155WR                JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
+  1WROWTR1             JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
+  25WRDROP             JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
+  94WRARDR             JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
+  115WRPAR             JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
+  67WRCHAL             JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
+  97WRBRO1             JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
+  99WR                 JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
+  112WRCHI             JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
+  117WRSC1             JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
+  147WRSC2             JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
+  160WR                JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
+  165WR                JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
+  102WR                JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
+  66WR                 JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
+  P32WRAG              JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
+  P34WRAG              JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
+  P52WRAG              JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
+  P67WRag              JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
+  P117WRag             JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
+  O160ag               JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
+  O165ag               JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
+  170WR                OUTFALL      0.000    0.000     0  00:00           0           0       0.000 ltr
+  3WRFRIAR             STORAGE      0.000    0.000     0  00:00           0           0       0.000 ltr
+  10WR                 STORAGE      0.000    0.000     0  00:00           0           0       0.000 ltr
+  35WRRUPE             STORAGE      0.000    0.000     0  00:00           0           0       0.000 ltr
+  55WRURAN             STORAGE      0.000    0.000     0  00:00           0           0       0.000 ltr
+  65WR                 STORAGE      0.000    0.000     0  00:00           0           0       0.000 ltr
+  70WRBRAE             STORAGE      0.000    0.000     0  00:00           0           0       0.000 ltr
+  95WRBRO2             STORAGE      0.000    0.000     0  00:00           0           0       0.000 ltr
+  150WRFAL             STORAGE      0.000    0.000     0  00:00           0           0       0.000 ltr
+  34WRGLAD             STORAGE      0.000    0.000     0  00:00           0           0       0.000 ltr
+  32WR                 STORAGE      0.000    0.000     0  00:00           0           0       0.000 ltr
+  52WRHICK             STORAGE      0.000    0.000     0  00:00           0           0       0.000 ltr
   
-  ERROR 211: invalid number  at line 160 of [XSECT] section:
-  O110WR           TRAPEZOIDAL  1.90       0          0          0          1
-
   
-  ERROR 211: invalid number  at line 161 of [XSECT] section:
-  O115WR           TRAPEZOIDAL  2.30       0          0          0          1
-
+  **********************
+  Node Surcharge Summary
+  **********************
   
-  ERROR 211: invalid number  at line 176 of [XSECT] section:
-  O100WR           TRAPEZOIDAL  1.44       0          0          0          1
-
+  Surcharging occurs when water rises above the top of the highest conduit.
+  ---------------------------------------------------------------------
+                                               Max. Height   Min. Depth
+                                   Hours       Above Crown    Below Rim
+  Node                 Type      Surcharged         Meters       Meters
+  ---------------------------------------------------------------------
+  67WRCHAL             JUNCTION       24.00          0.000        0.000
+  117WRSC1             JUNCTION       24.00          0.000        0.000
   
-  ERROR 211: invalid number  at line 177 of [XSECT] section:
-  O102WR           TRAPEZOIDAL  1.40       0          0          0          1
-
   
-  ERROR 211: invalid number  at line 178 of [XSECT] section:
-  O34WRag          TRAPEZOIDAL  0.30       0          0          0          1
-
+  *********************
+  Node Flooding Summary
+  *********************
   
-  ERROR 211: invalid number  at line 181 of [XSECT] section:
-  O52WRag          TRAPEZOIDAL  0.30       0          0          0          1
+  No nodes were flooded.
+  
+  
+  **********************
+  Storage Volume Summary
+  **********************
+  
+  ------------------------------------------------------------------------------------------------
+                         Average    Avg   Evap  Exfil     Maximum    Max    Time of Max    Maximum
+                          Volume   Pcnt   Pcnt   Pcnt      Volume   Pcnt     Occurrence    Outflow
+  Storage Unit           1000 m³   Full   Loss   Loss     1000 m³   Full    days hr:min        CMS
+  ------------------------------------------------------------------------------------------------
+  3WRFRIAR                 0.000    0.0    0.0    0.0       0.000    0.0       0  00:00      0.000
+  10WR                     0.000    0.0    0.0    0.0       0.000    0.0       0  00:00      0.000
+  35WRRUPE                 0.000    0.0    0.0    0.0       0.000    0.0       0  00:00      0.000
+  55WRURAN                 0.000    0.0    0.0    0.0       0.000    0.0       0  00:00      0.000
+  65WR                     0.000    0.0    0.0    0.0       0.000    0.0       0  00:00      0.000
+  70WRBRAE                 0.000    0.0    0.0    0.0       0.000    0.0       0  00:00      0.000
+  95WRBRO2                 0.000    0.0    0.0    0.0       0.000    0.0       0  00:00      0.000
+  150WRFAL                 0.000    0.0    0.0    0.0       0.000    0.0       0  00:00      0.000
+  34WRGLAD                 0.000    0.0    0.0    0.0       0.000    0.0       0  00:00      0.000
+  32WR                     0.000    0.0    0.0    0.0       0.000    0.0       0  00:00      0.000
+  52WRHICK                 0.000    0.0    0.0    0.0       0.000    0.0       0  00:00      0.000
+  
+  
+  ***********************
+  Outfall Loading Summary
+  ***********************
+  
+  -----------------------------------------------------------
+                         Flow       Avg       Max       Total
+                         Freq      Flow      Flow      Volume
+  Outfall Node           Pcnt       CMS       CMS    10^6 ltr
+  -----------------------------------------------------------
+  170WR                  0.00     0.000     0.000       0.000
+  -----------------------------------------------------------
+  System                 0.00     0.000     0.000       0.000
+  
+  
+  ********************
+  Link Flow Summary
+  ********************
+  
+  -----------------------------------------------------------------------------
+                                 Maximum  Time of Max   Maximum    Max/    Max/
+                                  |Flow|   Occurrence   |Veloc|    Full    Full
+  Link                 Type          CMS  days hr:min     m/sec    Flow   Depth
+  -----------------------------------------------------------------------------
+  P3WR                 CONDUIT     0.000     0  00:00      0.00    0.00    0.00
+  O5WR                 CONDUIT     0.000     0  00:00      0.00    0.00    0.00
+  Kootinga             CONDUIT     0.000     0  00:00      0.00    0.00    0.00
+  O15WR                CONDUIT     0.000     0  00:00      0.00    0.00    0.00
+  Tait                 CONDUIT     0.000     0  00:00      0.00    0.00    0.00
+  O40WR                CONDUIT     0.000     0  00:00      0.00    0.00    0.00
+  URANA                CONDUIT     0.000     0  00:00      0.00    0.00    0.00
+  BRAEMORE             CONDUIT     0.000     0  00:00      0.00    0.00    0.00
+  O75WR                CONDUIT     0.000     0  00:00      0.00    0.00    0.00
+  O80WR                CONDUIT     0.000     0  00:00      0.00    0.00    0.00
+  O85WR                CONDUIT     0.000     0  00:00      0.00    0.00    0.00
+  SEVILLE              CONDUIT     0.000     0  00:00      0.00    0.00    0.00
+  O105WR               CONDUIT     0.000     0  00:00      0.00    0.00    0.00
+  O135WR               CONDUIT     0.000     0  00:00      0.00    0.00    0.00
+  O140WR               CONDUIT     0.000     0  00:00      0.00    0.00    0.00
+  O145WR               CONDUIT     0.000     0  00:00      0.00    0.00    0.00
+  LAKE                 CONDUIT     0.000     0  00:00      0.00    0.00    0.00
+  L1NB                 CONDUIT     0.000     0  00:00      0.00    0.00    0.00
+  L5NB                 CONDUIT     0.000     0  00:00      0.00    0.00    0.00
+  P20NB                CONDUIT     0.000     0  00:00      0.00    0.00    0.00
+  P32WRBG              CONDUIT     0.000     0  00:00      0.00    0.00    0.00
+  P34WRBG              CONDUIT     0.000     0  00:00      0.00    0.00    0.00
+  P1WR                 CONDUIT     0.000     0  00:00      0.00    0.00    0.00
+  P52WRBG              CONDUIT     0.000     0  00:00      0.00    0.00    0.00
+  O90WR                CONDUIT     0.000     0  00:00      0.00    0.00    0.00
+  O94WR                CONDUIT     0.000     0  00:00      0.00    0.00    0.00
+  O110WR               CONDUIT     0.000     0  00:00      0.00    0.00    0.00
+  O115WR               CONDUIT     0.000     0  00:00      0.00    0.00    0.00
+  HESKETH              CONDUIT     0.000     0  00:00      0.00    0.00    0.00
+  P10NB                CONDUIT     0.000     0  00:00      0.00    0.00    0.00
+  O45WR                CONDUIT     0.000     0  00:00      0.00    0.00    0.00
+  P67WRbg              CONDUIT     0.000     0  00:00      0.00    0.00    0.00
+  P97WR                CONDUIT     0.000     0  00:00      0.00    0.00    0.00
+  P99WR                CONDUIT     0.000     0  00:00      0.00    0.00    0.00
+  P112WR               CONDUIT     0.000     0  00:00      0.00    0.00    0.00
+  P117WRbg             CONDUIT     0.000     0  00:00      0.00    0.00    0.00
+  P147WR               CONDUIT     0.000     0  00:00      0.00    0.00    0.00
+  O155WR               CONDUIT     0.000     0  00:00      0.00    0.00    0.00
+  O160bg               CONDUIT     0.000     0  00:00      0.00    0.00    0.00
+  O165bg               CONDUIT     0.000     0  00:00      0.00    0.00    0.00
+  O20WR                CONDUIT     0.000     0  00:00      0.00    0.00    0.00
+  O25WR                CONDUIT     0.000     0  00:00      0.00    0.00    0.00
+  O100WR               CONDUIT     0.000     0  00:00      0.00    0.00    0.00
+  O102WR               CONDUIT     0.000     0  00:00      0.00    0.00    0.00
+  O34WRag              CONDUIT     0.000     0  00:00      0.00    0.00    0.00
+  O65WR                CONDUIT     0.000     0  00:00      0.00    0.00    0.00
+  O66WR                CONDUIT     0.000     0  00:00      0.00    0.00    0.00
+  O52WRag              CONDUIT     0.000     0  00:00      0.00    0.00    0.00
+  
+  
+  ***************************
+  Flow Classification Summary
+  ***************************
+  
+  -------------------------------------------------------------------------------------
+                      Adjusted    ---------- Fraction of Time in Flow Class ---------- 
+                       /Actual         Up    Down  Sub   Sup   Up    Down  Norm  Inlet 
+  Conduit               Length    Dry  Dry   Dry   Crit  Crit  Crit  Crit  Ltd   Ctrl  
+  -------------------------------------------------------------------------------------
+  P3WR                    1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  O5WR                    1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  Kootinga                1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  O15WR                   1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  Tait                    1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  O40WR                   1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  URANA                   1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  BRAEMORE                1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  O75WR                   1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  O80WR                   1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  O85WR                   1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  SEVILLE                 1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  O105WR                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  O135WR                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  O140WR                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  O145WR                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  LAKE                    1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  L1NB                    1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  L5NB                    1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  P20NB                   1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  P32WRBG                 1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  P34WRBG                 1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  P1WR                    1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  P52WRBG                 1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  O90WR                   1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  O94WR                   1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  O110WR                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  O115WR                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  HESKETH                 1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  P10NB                   1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  O45WR                   1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  P67WRbg                 1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  P97WR                   1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  P99WR                   1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  P112WR                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  P117WRbg                1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  P147WR                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  O155WR                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  O160bg                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  O165bg                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  O20WR                   1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  O25WR                   1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  O100WR                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  O102WR                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  O34WRag                 1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  O65WR                   1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  O66WR                   1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  O52WRag                 1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  
+  
+  *************************
+  Conduit Surcharge Summary
+  *************************
+  
+  No conduits were surcharged.
+  
 
-
-  Analysis begun on:  Mon Jul 13 08:03:52 2026
-  Analysis ended on:  Mon Jul 13 08:03:52 2026
+  Analysis begun on:  Sun Jul 19 15:17:13 2026
+  Analysis ended on:  Sun Jul 19 15:17:13 2026
   Total elapsed time: < 1 sec

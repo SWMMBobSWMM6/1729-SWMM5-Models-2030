@@ -20,36 +20,49 @@ INERTIAL_DAMPING     PARTIAL
 NORMAL_FLOW_LIMITED  BOTH
 MAX_TRIALS           50
 HEAD_TOLERANCE       .001
+START_DATE           01/01/2001
+START_TIME           00:00:00
+REPORT_START_DATE    01/01/2001
+REPORT_START_TIME    00:00:00
+END_DATE             01/02/2001
+END_TIME             00:00:00
+SWEEP_START          01/01
+SWEEP_END            12/31
+DRY_DAYS             0
+REPORT_STEP          00:15:00
+WET_STEP             00:05:00
+DRY_STEP             01:00:00
 
 [JUNCTIONS]
 ;;Name           Elev       MaxDepth   InitDepth  SurDepth   Aponded
 ;;-------------- ---------- ---------- ---------- ---------- ----------
 1                104.00     0          0          0          0
 INLET            104.00     0          0          0          0
-INLETBOT         0          0          0          0          0
+
+[OUTFALLS]
+;;Name           Elev       Type       Stage      Gated
+;;-------------- ---------- ---------- ---------- -----
+INLETBOT         0          FREE                  NO
 
 [CONDUITS]
 ;;Name           From             To               Length     Roughness  InOffset   OutOffset  InitFlow   MaxFlow
 ;;-------------- ---------------- ---------------- ---------- ---------- ---------- ---------- ---------- ----------
 Pipe3            INLETBOT         1                25.00      0.0110     99.50      98.00      0          0
+REACT            INLET            INLETBOT         10.00      0.0110     99.75      99.50      0          0
 ROAD             INLET            1                100.00     0.0140     102.00     102.00     0          0
-
-[ORIFICES]
-;;Name           From             To               Type       Offset     Qcoeff     Gated    CloseTime
-;;-------------- ---------------- ---------------- ---------- ---------- ---------- -------- ----------
-REACT            INLET            INLETBOT         SIDE       99.75      0.650      NO       0
 
 [XSECTIONS]
 ;;Link           Shape        Geom1      Geom2      Geom3      Geom4      Barrels
 ;;-------------- ------------ ---------- ---------- ---------- ---------- ----------
 Pipe3            CIRCULAR     2.00       0          0          0          1
-ROAD             TRAPEZOIDAL  2.00       1.00       0          0          1
-REACT            RECT_CLOSED  0          0          0          0          
+REACT            TRAPEZOIDAL  1.00       10.00      2          2          1
+ROAD             TRAPEZOIDAL  2.00       1.00       1          1          1
 
 [LOSSES]
 ;;Link           Inlet      Outlet     Average    Flap Gate
 ;;-------------- ---------- ---------- ---------- ----------
 Pipe3            0          0          0          NO
+REACT            0          0          0          NO
 ROAD             0          0          0          NO
 
 [COORDINATES]

@@ -20,6 +20,18 @@ INERTIAL_DAMPING     PARTIAL
 NORMAL_FLOW_LIMITED  BOTH
 MAX_TRIALS           30
 HEAD_TOLERANCE       0.0033
+START_DATE           01/01/2001
+START_TIME           00:00:00
+REPORT_START_DATE    01/01/2001
+REPORT_START_TIME    00:00:00
+END_DATE             01/02/2001
+END_TIME             00:00:00
+SWEEP_START          01/01
+SWEEP_END            12/31
+DRY_DAYS             0
+REPORT_STEP          00:15:00
+WET_STEP             00:05:00
+DRY_STEP             01:00:00
 
 [JUNCTIONS]
 ;;Name           Elev       MaxDepth   InitDepth  SurDepth   Aponded
@@ -118,10 +130,10 @@ Railroad         108.00     0          0          0          0
 North            108.00     0          0          0          0
 South            105.00     0          0          0          0
 
-[STORAGE]
-;;Name           Elev       MaxDepth   InitDepth  Shape      Curve/Params
-;;-------------- ---------- ---------- ---------- ---------- ----------
-POND             108.00     0          0          FUNCTIONAL 0 0          0
+[OUTFALLS]
+;;Name           Elev       Type       Stage      Gated
+;;-------------- ---------- ---------- ---------- -----
+POND             108.00     FREE                  NO
 
 [CONDUITS]
 ;;Name           From             To               Length     Roughness  InOffset   OutOffset  InitFlow   MaxFlow
@@ -139,13 +151,13 @@ POND             108.00     0          0          FUNCTIONAL 0 0          0
 43-68C           S-12             S-13             120.00     0.0140     91.15      90.73      0          0
 43-68D           S-16             S-12             238.00     0.0140     94.50      91.15      0          0
 18               S-15             S-16             45.00      0.0140     95.13      92.46      0          0
-18               S-17             S-18             50.00      0.0140     97.50      97.00      0          0
+18_2             S-17             S-18             50.00      0.0140     97.50      97.00      0          0
 38-60            S-18             S-16             285.00     0.0140     97.00      92.00      0          0
 30               S-19             S-20             52.00      0.0140     99.58      98.00      0          0
 34-53            S-20             S-18             237.00     0.0140     98.00      95.00      0          0
-18               S-22             S-21             50.00      0.0140     107.09     106.47     0          0
+18_3             S-22             S-21             50.00      0.0140     107.09     106.47     0          0
 255-18RCP        S-21             S-19             255.00     0.0140     106.47     99.58      0          0
-18               S-24             S-23             50.00      0.0140     111.25     110.75     0          0
+18_4             S-24             S-23             50.00      0.0140     111.25     110.75     0          0
 225-18RCP        S-23             S-21             225.00     0.0140     110.75     106.47     0          0
 258-18RCP        S-26             S-24             256.00     0.0140     113.72     111.25     0          0
 18-RCP           S-27             S-28             50.00      0.0140     113.35     113.00     0          0
@@ -158,9 +170,9 @@ POND             108.00     0          0          FUNCTIONAL 0 0          0
 18-A             S-34             S-36             205.00     0.0140     106.35     105.60     0          0
 18-RCP-8         S-35             S-36             50.00      0.0140     106.56     105.60     0          0
 24               S-34B            S-36A            57.00      0.0140     106.46     105.14     0          0
-24               S-36A            S-36B            87.00      0.0140     105.14     104.13     0          0
+24_2             S-36A            S-36B            87.00      0.0140     105.14     104.13     0          0
 18-B             S-36             S-38             216.00     0.0140     105.60     104.53     0          0
-24               S-36B            S-38A            97.00      0.0140     104.13     103.25     0          0
+24_3             S-36B            S-38A            97.00      0.0140     104.13     103.25     0          0
 24-38-B          S-38             S-37             46.00      0.0140     104.53     104.35     0          0
 24X38-A          S-37             S--39            195.00     0.0140     104.35     103.60     0          0
 18-C             S-40             S--39            47.00      0.0140     105.50     103.60     0          0
@@ -218,7 +230,7 @@ s41/ditch        S-41             DITCH            100.00     0.0140     102.00 
 205              DITCH            Railroad         200.00     0.0200     100.00     98.00      0          0
 207              Railroad         North            133.00     0.0140     98.00      98.00      0          0
 209              PondA            South            133.00     0.0250     88.50      88.00      0          0
-210              S-28             S-26             0          0          0          0          0          0
+210              S-28             S-26             100.00     0.0130     0          0          0          0
 
 [XSECTIONS]
 ;;Link           Shape        Geom1      Geom2      Geom3      Geom4      Barrels
@@ -236,13 +248,13 @@ s41/ditch        S-41             DITCH            100.00     0.0140     102.00 
 43-68C           CIRCULAR     4.50       5.60       0          0          1
 43-68D           CIRCULAR     4.50       5.60       0          0          1
 18               CIRCULAR     1.50       0          0          0          1
-18               CIRCULAR     1.50       0          0          0          1
+18_2             CIRCULAR     1.50       0          0          0          1
 38-60            CIRCULAR     4.00       5.00       0          0          1
 30               CIRCULAR     2.50       0          0          0          1
 34-53            CIRCULAR     3.50       4.40       0          0          1
-18               CIRCULAR     1.50       0          0          0          1
+18_3             CIRCULAR     1.50       0          0          0          1
 255-18RCP        CIRCULAR     1.50       0          0          0          1
-18               CIRCULAR     1.50       0          0          0          1
+18_4             CIRCULAR     1.50       0          0          0          1
 225-18RCP        CIRCULAR     1.50       0          0          0          1
 258-18RCP        CIRCULAR     1.50       0          0          0          1
 18-RCP           CIRCULAR     1.50       0          0          0          1
@@ -255,9 +267,9 @@ s41/ditch        S-41             DITCH            100.00     0.0140     102.00 
 18-A             CIRCULAR     2.00       0          0          0          1
 18-RCP-8         CIRCULAR     1.50       0          0          0          1
 24               CIRCULAR     2.00       0          0          0          1
-24               CIRCULAR     2.00       0          0          0          1
+24_2             CIRCULAR     2.00       0          0          0          1
 18-B             CIRCULAR     2.00       0          0          0          1
-24               CIRCULAR     2.00       0          0          0          1
+24_3             CIRCULAR     2.00       0          0          0          1
 24-38-B          CIRCULAR     2.50       3.16       0          0          1
 24X38-A          CIRCULAR     2.50       3.16       0          0          1
 18-C             CIRCULAR     1.50       0          0          0          1
@@ -311,11 +323,11 @@ s41/ditch        CIRCULAR     3.00       0          0          0          1
 199              CIRCULAR     2.00       0          0          0          1
 200              CIRCULAR     1.50       0          0          0          1
 202              CIRCULAR     3.00       0          0          0          1
-203              TRAPEZOIDAL  3.00       20.00      0          0          1
-205              TRAPEZOIDAL  5.00       10.00      0          0          1
-207              TRAPEZOIDAL  0.16       20.00      0          0          1
-209              TRAPEZOIDAL  4.00       25.00      0          0          1
-210              CIRCULAR     0          0          0          0          1
+203              TRAPEZOIDAL  3.00       20.00      1          1          1
+205              TRAPEZOIDAL  5.00       10.00      1          1          1
+207              TRAPEZOIDAL  0.16       20.00      1          1          1
+209              TRAPEZOIDAL  4.00       25.00      1          1          1
+210              CIRCULAR     1.00       0          0          0          1
 
 [LOSSES]
 ;;Link           Inlet      Outlet     Average    Flap Gate
@@ -333,13 +345,13 @@ s41/ditch        CIRCULAR     3.00       0          0          0          1
 43-68C           0          0          0          NO
 43-68D           0          0          0          NO
 18               0          0          0          NO
-18               0          0          0          NO
+18_2             0          0          0          NO
 38-60            0          0          0          NO
 30               0          0          0          NO
 34-53            0          0          0          NO
-18               0          0          0          NO
+18_3             0          0          0          NO
 255-18RCP        0          0          0          NO
-18               0          0          0          NO
+18_4             0          0          0          NO
 225-18RCP        0          0          0          NO
 258-18RCP        0          0          0          NO
 18-RCP           0          0          0          NO
@@ -352,9 +364,9 @@ s41/ditch        CIRCULAR     3.00       0          0          0          1
 18-A             0          0          0          NO
 18-RCP-8         0          0          0          NO
 24               0          0          0          NO
-24               0          0          0          NO
+24_2             0          0          0          NO
 18-B             0          0          0          NO
-24               0          0          0          NO
+24_3             0          0          0          NO
 24-38-B          0          0          0          NO
 24X38-A          0          0          0          NO
 18-C             0          0          0          NO

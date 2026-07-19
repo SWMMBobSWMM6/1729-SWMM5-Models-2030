@@ -20,6 +20,18 @@ INERTIAL_DAMPING     PARTIAL
 NORMAL_FLOW_LIMITED  BOTH
 MAX_TRIALS           100
 HEAD_TOLERANCE       0.0033
+START_DATE           01/01/2001
+START_TIME           00:00:00
+REPORT_START_DATE    01/01/2001
+REPORT_START_TIME    00:00:00
+END_DATE             01/02/2001
+END_TIME             00:00:00
+SWEEP_START          01/01
+SWEEP_END            12/31
+DRY_DAYS             0
+REPORT_STEP          00:15:00
+WET_STEP             00:05:00
+DRY_STEP             01:00:00
 
 [JUNCTIONS]
 ;;Name           Elev       MaxDepth   InitDepth  SurDepth   Aponded
@@ -74,9 +86,8 @@ HEAD_TOLERANCE       0.0033
 0168             96.80      0          0          0          0
 0144             96.40      0          0          0          0
 0141             96.20      0          0          0          0
-0239             77.70      0          0          0          0
 0253             92.00      0          0          0          0
-0251             90.20      0          0          0          0
+0251_2           90.20      0          0          0          0
 0067             88.20      0          0          0          0
 0077             91.60      0          0          0          0
 0315             92.50      0          0          0          0
@@ -102,6 +113,11 @@ HEAD_TOLERANCE       0.0033
 0214             79.80      0          0          0          0
 0240             77.70      0          0          0          0
 0248             78.60      0          0          0          0
+
+[OUTFALLS]
+;;Name           Elev       Type       Stage      Gated
+;;-------------- ---------- ---------- ---------- -----
+0239             77.70      FREE                  NO
 
 [CONDUITS]
 ;;Name           From             To               Length     Roughness  InOffset   OutOffset  InitFlow   MaxFlow
@@ -389,7 +405,7 @@ HEAD_TOLERANCE       0.0033
 0144             FLOW         ""               FLOW     1.0      1.0      0.07
 0141             FLOW         ""               FLOW     1.0      1.0      0.08
 0253             FLOW         ""               FLOW     1.0      1.0      0.02
-0251             FLOW         ""               FLOW     1.0      1.0      0.06
+0251_2           FLOW         ""               FLOW     1.0      1.0      0.06
 0067             FLOW         ""               FLOW     1.0      1.0      0.11
 0077             FLOW         ""               FLOW     1.0      1.0      0.05
 0315             FLOW         ""               FLOW     1.0      1.0      0.06
@@ -462,7 +478,7 @@ HEAD_TOLERANCE       0.0033
 0141             17.38              56.24             
 0239             -3.93              146.32            
 0253             111.74             145.05            
-0251             92.02              144.85            
+0251_2           92.02              144.85            
 0067             78.05              94.90             
 0077             66.66              94.89             
 0315             137.53             251.69            

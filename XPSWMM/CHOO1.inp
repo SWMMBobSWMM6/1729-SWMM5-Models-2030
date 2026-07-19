@@ -14,10 +14,22 @@ LINK_OFFSETS         DEPTH
 MIN_SLOPE            0.0
 ALLOW_PONDING        NO
 SKIP_STEADY_STATE    NO
-ROUTING_STEP         00:00:60
+ROUTING_STEP         00:01:00
 VARIABLE_STEP        0.75
 INERTIAL_DAMPING     PARTIAL
 NORMAL_FLOW_LIMITED  BOTH
+START_DATE           01/01/2001
+START_TIME           00:00:00
+REPORT_START_DATE    01/01/2001
+REPORT_START_TIME    00:00:00
+END_DATE             01/02/2001
+END_TIME             00:00:00
+SWEEP_START          01/01
+SWEEP_END            12/31
+DRY_DAYS             0
+REPORT_STEP          00:15:00
+WET_STEP             00:05:00
+DRY_STEP             01:00:00
 
 [JUNCTIONS]
 ;;Name           Elev       MaxDepth   InitDepth  SurDepth   Aponded
@@ -34,39 +46,43 @@ NORMAL_FLOW_LIMITED  BOTH
 510              50.00      0          0          0          0
 511              50.00      0          0          0          0
 512              50.00      0          0          0          0
-OUT              50.00      0          0          0          0
+
+[OUTFALLS]
+;;Name           Elev       Type       Stage      Gated
+;;-------------- ---------- ---------- ---------- -----
+OUT              50.00      FREE                  NO
 
 [CONDUITS]
 ;;Name           From             To               Length     Roughness  InOffset   OutOffset  InitFlow   MaxFlow
 ;;-------------- ---------------- ---------------- ---------- ---------- ---------- ---------- ---------- ----------
-203              ?                ?                300.00     0.0140     0          0          0          0
-205              ?                ?                300.00     0.0140     0          0          0          0
-207              ?                ?                300.00     0.0140     0          0          0          0
-209              ?                ?                300.00     0.0140     0          0          0          0
-211              ?                ?                300.00     0.0140     0          0          0          0
-213              ?                ?                300.00     0.0140     0          0          0          0
-215              ?                ?                300.00     0.0140     0          0          0          0
-224              ?                ?                300.00     0.0140     0          0          0          0
-226              ?                ?                300.00     0.0140     0          0          0          0
-227              ?                ?                300.00     0.0140     0          0          0          0
-229              ?                ?                300.00     0.0140     0          0          0          0
-231              ?                ?                300.00     0.0140     0          0          0          0
+203              501              502              300.00     0.0140     0          0          0          0
+205              502              503              300.00     0.0140     0          0          0          0
+207              503              504              300.00     0.0140     0          0          0          0
+209              504              505              300.00     0.0140     0          0          0          0
+211              505              506              300.00     0.0140     0          0          0          0
+213              506              507              300.00     0.0140     0          0          0          0
+215              507              508              300.00     0.0140     0          0          0          0
+224              509              510              300.00     0.0140     0          0          0          0
+226              510              511              300.00     0.0140     0          0          0          0
+227              511              506              300.00     0.0140     0          0          0          0
+229              512              507              300.00     0.0140     0          0          0          0
+231              508              OUT              300.00     0.0140     0          0          0          0
 
 [XSECTIONS]
 ;;Link           Shape        Geom1      Geom2      Geom3      Geom4      Barrels
 ;;-------------- ------------ ---------- ---------- ---------- ---------- ----------
-203              TRAPEZOIDAL  30.00      10.00      0          0          1
-205              TRAPEZOIDAL  30.00      10.00      0          0          1
-207              TRAPEZOIDAL  30.00      10.00      0          0          1
-209              TRAPEZOIDAL  30.00      10.00      0          0          1
-211              TRAPEZOIDAL  30.00      10.00      0          0          1
-213              TRAPEZOIDAL  30.00      10.00      0          0          1
-215              TRAPEZOIDAL  30.00      10.00      0          0          1
-224              TRAPEZOIDAL  30.00      10.00      0          0          1
-226              TRAPEZOIDAL  30.00      10.00      0          0          1
-227              TRAPEZOIDAL  30.00      10.00      0          0          1
-229              TRAPEZOIDAL  30.00      10.00      0          0          1
-231              TRAPEZOIDAL  30.00      10.00      0          0          1
+203              TRAPEZOIDAL  30.00      10.00      1          1          1
+205              TRAPEZOIDAL  30.00      10.00      1          1          1
+207              TRAPEZOIDAL  30.00      10.00      1          1          1
+209              TRAPEZOIDAL  30.00      10.00      1          1          1
+211              TRAPEZOIDAL  30.00      10.00      1          1          1
+213              TRAPEZOIDAL  30.00      10.00      1          1          1
+215              TRAPEZOIDAL  30.00      10.00      1          1          1
+224              TRAPEZOIDAL  30.00      10.00      1          1          1
+226              TRAPEZOIDAL  30.00      10.00      1          1          1
+227              TRAPEZOIDAL  30.00      10.00      1          1          1
+229              TRAPEZOIDAL  30.00      10.00      1          1          1
+231              TRAPEZOIDAL  30.00      10.00      1          1          1
 
 [LOSSES]
 ;;Link           Inlet      Outlet     Average    Flap Gate

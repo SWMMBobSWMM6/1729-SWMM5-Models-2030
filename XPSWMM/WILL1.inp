@@ -18,6 +18,18 @@ ROUTING_STEP         00:00:15
 VARIABLE_STEP        0.75
 INERTIAL_DAMPING     PARTIAL
 NORMAL_FLOW_LIMITED  BOTH
+START_DATE           01/01/2001
+START_TIME           00:00:00
+REPORT_START_DATE    01/01/2001
+REPORT_START_TIME    00:00:00
+END_DATE             01/02/2001
+END_TIME             00:00:00
+SWEEP_START          01/01
+SWEEP_END            12/31
+DRY_DAYS             0
+REPORT_STEP          00:15:00
+WET_STEP             00:05:00
+DRY_STEP             01:00:00
 
 [JUNCTIONS]
 ;;Name           Elev       MaxDepth   InitDepth  SurDepth   Aponded
@@ -27,16 +39,20 @@ NORMAL_FLOW_LIMITED  BOTH
 205              29.54      0          0          0          0
 207              22.35      0          0          0          0
 209              20.88      0          0          0          0
-211              18.20      0          0          0          0
+
+[OUTFALLS]
+;;Name           Elev       Type       Stage      Gated
+;;-------------- ---------- ---------- ---------- -----
+211              18.20      FREE                  NO
 
 [CONDUITS]
 ;;Name           From             To               Length     Roughness  InOffset   OutOffset  InitFlow   MaxFlow
 ;;-------------- ---------------- ---------------- ---------- ---------- ---------- ---------- ---------- ----------
-204              ?                ?                135.00     0.0130     21.03      20.41      0          0
-206              ?                ?                295.00     0.0130     20.41      19.23      0          0
-208              ?                ?                350.00     0.0130     19.23      17.79      0          0
-210              ?                ?                180.00     0.0130     15.98      15.22      0          0
-212              ?                ?                220.00     0.0130     14.79      14.25      0          0
+204              202              203              135.00     0.0130     21.03      20.41      0          0
+206              203              205              295.00     0.0130     20.41      19.23      0          0
+208              205              207              350.00     0.0130     19.23      17.79      0          0
+210              207              209              180.00     0.0130     15.98      15.22      0          0
+212              209              211              220.00     0.0130     14.79      14.25      0          0
 
 [XSECTIONS]
 ;;Link           Shape        Geom1      Geom2      Geom3      Geom4      Barrels

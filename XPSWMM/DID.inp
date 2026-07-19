@@ -18,47 +18,59 @@ ROUTING_STEP         00:00:10
 VARIABLE_STEP        0.75
 INERTIAL_DAMPING     PARTIAL
 NORMAL_FLOW_LIMITED  BOTH
+START_DATE           01/01/2001
+START_TIME           00:00:00
+REPORT_START_DATE    01/01/2001
+REPORT_START_TIME    00:00:00
+END_DATE             01/02/2001
+END_TIME             00:00:00
+SWEEP_START          01/01
+SWEEP_END            12/31
+DRY_DAYS             0
+REPORT_STEP          00:15:00
+WET_STEP             00:05:00
+DRY_STEP             01:00:00
+
+[JUNCTIONS]
+;;Name           Elev       MaxDepth   InitDepth  SurDepth   Aponded
+;;-------------- ---------- ---------- ---------- ---------- ----------
+Inlet1           25.00      0          0          0          0
+Confl            25.00      0          0          0          0
+Orif-i           25.00      0          0          0          0
+Mid              25.00      0          0          0          0
+Inlet3           25.00      0          0          0          0
+Inlet2           25.00      0          0          0          0
+Inlet4           25.00      0          0          0          0
+Orif-o           25.00      0          0          0          0
 
 [OUTFALLS]
 ;;Name           Elev       Type       Stage      Gated
 ;;-------------- ---------- ---------- ---------- -----
-Inlet1           25.00      FREE                  NO
-Confl            25.00      FREE                  NO
-Orif-i           25.00      FREE                  NO
-Mid              25.00      FREE                  NO
 Outlet           25.00      FREE                  NO
-Inlet3           25.00      FREE                  NO
-Inlet2           25.00      FREE                  NO
-Inlet4           25.00      FREE                  NO
-Orif-o           25.00      FREE                  NO
 
 [CONDUITS]
 ;;Name           From             To               Length     Roughness  InOffset   OutOffset  InitFlow   MaxFlow
 ;;-------------- ---------------- ---------------- ---------- ---------- ---------- ---------- ---------- ----------
-Creek1           Inlet1           Confl            100.00     0          4.00       3.00       0          0
-Upper            Confl            Orif-i           1000.00    0          3.00       2.00       0          0
-Tidal2           Orif-o           Mid              1000.00    0          2.00       1.00       0          0
-Tidal1           Mid              Outlet           1000.00    0          1.00       -1.00      0          0
-Creek3           Inlet3           Orif-i           100.00     0          3.00       2.00       0          0
-Creek2           Inlet2           Confl            100.00     0          4.00       3.00       0          0
-Creek4           Inlet4           Orif-i           100.00     0          3.00       2.00       0          0
-
-[ORIFICES]
-;;Name           From             To               Type       Offset     Qcoeff     Gated    CloseTime
-;;-------------- ---------------- ---------------- ---------- ---------- ---------- -------- ----------
-154.1            Orif-i           Orif-o           SIDE       3.00       0.650      NO       0
+Creek1           Inlet1           Confl            100.00     0.0130     4.00       3.00       0          0
+Upper            Confl            Orif-i           1000.00    0.0130     3.00       2.00       0          0
+Tidal2           Orif-o           Mid              1000.00    0.0130     2.00       1.00       0          0
+Tidal1           Mid              Outlet           1000.00    0.0130     1.00       0          0          0
+Creek3           Inlet3           Orif-i           100.00     0.0130     3.00       2.00       0          0
+Creek2           Inlet2           Confl            100.00     0.0130     4.00       3.00       0          0
+Creek4           Inlet4           Orif-i           100.00     0.0130     3.00       2.00       0          0
+154.1            Orif-i           Orif-o           100.00     0.0130     3.00       2.00       0          0
 
 [XSECTIONS]
 ;;Link           Shape        Geom1      Geom2      Geom3      Geom4      Barrels
 ;;-------------- ------------ ---------- ---------- ---------- ---------- ----------
-Creek1           IRREGULAR    20.00      0          0          0          1
-Upper            IRREGULAR    20.00      0          0          0          1
-Tidal2           IRREGULAR    20.00      0          0          0          1
-Tidal1           IRREGULAR    20.00      0          0          0          1
-Creek3           IRREGULAR    20.00      0          0          0          1
-Creek2           IRREGULAR    20.00      0          0          0          1
-Creek4           IRREGULAR    20.00      0          0          0          1
-154.1            RECT_CLOSED  20.00      0          0          0          
+Creek1           TRAPEZOIDAL  20.00      10.00      2          2          1
+Upper            TRAPEZOIDAL  20.00      10.00      2          2          1
+Tidal2           TRAPEZOIDAL  20.00      10.00      2          2          1
+Tidal1           TRAPEZOIDAL  20.00      10.00      2          2          1
+Creek3           TRAPEZOIDAL  20.00      10.00      2          2          1
+Creek2           TRAPEZOIDAL  20.00      10.00      2          2          1
+Creek4           TRAPEZOIDAL  20.00      10.00      2          2          1
+154.1            TRAPEZOIDAL  20.00      10.00      2          2          1
 
 [LOSSES]
 ;;Link           Inlet      Outlet     Average    Flap Gate
@@ -70,6 +82,7 @@ Tidal1           0          0          0          NO
 Creek3           0          0          0          NO
 Creek2           0          0          0          NO
 Creek4           0          0          0          NO
+154.1            0          0          0          NO
 
 [COORDINATES]
 ;;Node           X-Coord            Y-Coord

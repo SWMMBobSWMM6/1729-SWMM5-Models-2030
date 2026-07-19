@@ -16,6 +16,18 @@ ALLOW_PONDING        NO
 SKIP_STEADY_STATE    NO
 INERTIAL_DAMPING     PARTIAL
 NORMAL_FLOW_LIMITED  BOTH
+START_DATE           01/01/2001
+START_TIME           00:00:00
+REPORT_START_DATE    01/01/2001
+REPORT_START_TIME    00:00:00
+END_DATE             01/02/2001
+END_TIME             00:00:00
+SWEEP_START          01/01
+SWEEP_END            12/31
+DRY_DAYS             0
+REPORT_STEP          00:15:00
+WET_STEP             00:05:00
+DRY_STEP             01:00:00
 
 [JUNCTIONS]
 ;;Name           Elev       MaxDepth   InitDepth  SurDepth   Aponded
@@ -45,7 +57,6 @@ F06W0178         717.88     0          0          0          0
 F06W0180         718.21     0          0          0          0
 F06W0188         726.16     0          0          0          0
 F06W0190         727.29     0          0          0          0
-G03W0090         710.40     0          0          0          0
 G03W0095         710.17     0          0          0          0
 G03W0100         709.58     0          0          0          0
 G03W0105         709.74     0          0          0          0
@@ -57,6 +68,11 @@ G04W0150         710.04     0          0          0          0
 G05W0155         709.96     0          0          0          0
 G05W0160         709.91     0          0          0          0
 G05W0165         713.02     0          0          0          0
+
+[OUTFALLS]
+;;Name           Elev       Type       Stage      Gated
+;;-------------- ---------- ---------- ---------- -----
+G03W0090         710.40     FREE                  NO
 
 [CONDUITS]
 ;;Name           From             To               Length     Roughness  InOffset   OutOffset  InitFlow   MaxFlow

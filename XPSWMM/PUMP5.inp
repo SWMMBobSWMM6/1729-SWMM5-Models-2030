@@ -20,22 +20,45 @@ INERTIAL_DAMPING     PARTIAL
 NORMAL_FLOW_LIMITED  BOTH
 MAX_TRIALS           50
 HEAD_TOLERANCE       .001
+START_DATE           01/01/2001
+START_TIME           00:00:00
+REPORT_START_DATE    01/01/2001
+REPORT_START_TIME    00:00:00
+END_DATE             01/02/2001
+END_TIME             00:00:00
+SWEEP_START          01/01
+SWEEP_END            12/31
+DRY_DAYS             0
+REPORT_STEP          00:15:00
+WET_STEP             00:05:00
+DRY_STEP             01:00:00
+
+[JUNCTIONS]
+;;Name           Elev       MaxDepth   InitDepth  SurDepth   Aponded
+;;-------------- ---------- ---------- ---------- ---------- ----------
+dypump           99.75      0          0          0          0
+
+[OUTFALLS]
+;;Name           Elev       Type       Stage      Gated
+;;-------------- ---------- ---------- ---------- -----
+100              104.00     FREE                  NO
 
 [STORAGE]
 ;;Name           Elev       MaxDepth   InitDepth  Shape      Curve/Params
 ;;-------------- ---------- ---------- ---------- ---------- ----------
-INLET            104.00     0          0          FUNCTIONAL 100.00 0          0
-100              104.00     0          0          FUNCTIONAL 10000.00 0          0
+INLET            104.00     10.00      0          FUNCTIONAL 100.00 0          0
 
-[WEIRS]
-;;Name           From             To               Type       CrestHt    Qcoeff     Gated    EndCon   EndCoeff   Surcharge
-;;-------------- ---------------- ---------------- ---------- ---------- ---------- -------- -------- ---------- ----------
-dypump5          dypump           100              TRANSVERSE 100.00     1.840      NO       0        0          YES
+[PUMPS]
+;;Name           From             To               PumpCurve  Status   Startup    Shutoff
+;;-------------- ---------------- ---------------- ---------- -------- ---------- ----------
+dypump5          dypump           100              PC_dypump5 ON       1.00       0         
 
-[XSECTIONS]
-;;Link           Shape        Geom1      Geom2      Geom3      Geom4      Barrels
-;;-------------- ------------ ---------- ---------- ---------- ---------- ----------
-dypump5          RECT_OPEN    0          50.00      0          0          
+[CURVES]
+;;Name           Type       X-Value    Y-Value
+;;-------------- ---------- ---------- ----------
+;; Synthesized generic pump curves — replace with actual pump data
+PC_dypump5       Pump1      0          5
+PC_dypump5                  10         10
 
 [COORDINATES]
 ;;Node           X-Coord            Y-Coord

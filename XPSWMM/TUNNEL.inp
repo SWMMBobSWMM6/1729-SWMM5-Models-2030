@@ -19,22 +19,38 @@ VARIABLE_STEP        0.75
 INERTIAL_DAMPING     PARTIAL
 NORMAL_FLOW_LIMITED  BOTH
 MAX_TRIALS           50
+START_DATE           01/01/2001
+START_TIME           00:00:00
+REPORT_START_DATE    01/01/2001
+REPORT_START_TIME    00:00:00
+END_DATE             01/02/2001
+END_TIME             00:00:00
+SWEEP_START          01/01
+SWEEP_END            12/31
+DRY_DAYS             0
+REPORT_STEP          00:15:00
+WET_STEP             00:05:00
+DRY_STEP             01:00:00
 
 [JUNCTIONS]
 ;;Name           Elev       MaxDepth   InitDepth  SurDepth   Aponded
 ;;-------------- ---------- ---------- ---------- ---------- ----------
-OUTFALL          580.00     0          0          0          0
 TAPIN            590.00     0          0          0          0
 INFLOW           582.00     0          0          0          0
+
+[OUTFALLS]
+;;Name           Elev       Type       Stage      Gated
+;;-------------- ---------- ---------- ---------- -----
+OUTFALL          580.00     FREE                  NO
 
 [STORAGE]
 ;;Name           Elev       MaxDepth   InitDepth  Shape      Curve/Params
 ;;-------------- ---------- ---------- ---------- ---------- ----------
-003              581.00     0          0          FUNCTIONAL 5.00 0          0
-002              580.00     0          0          FUNCTIONAL 5.00 0          0
-OUTLET           592.00     -1.00      0          FUNCTIONAL 1963.00 0          0
-DROP             581.50     0          0          FUNCTIONAL 63.60 0          0
-DROP             581.00     0          0          FUNCTIONAL 19.60 0          0
+003              581.00     10.00      0          FUNCTIONAL 5.00 0          0
+002              580.00     10.00      0          FUNCTIONAL 5.00 0          0
+OUTLET           592.00     10.00      0          FUNCTIONAL 1963.00 0          0
+DROP             581.50     10.00      0          FUNCTIONAL 63.60 0          0
+DROP_2           581.00     10.00      0          FUNCTIONAL 19.60 0          0
 
 [CONDUITS]
 ;;Name           From             To               Length     Roughness  InOffset   OutOffset  InitFlow   MaxFlow
@@ -43,9 +59,9 @@ DROP             581.00     0          0          FUNCTIONAL 19.60 0          0
 0002             002              OUTLET           4622.00    0.2500     432.69     432.00     0          0
 0001             OUTLET           OUTFALL          350.00     0.0130     575.00     568.00     0          0
 DEAIR            DROP             002              70.00      0.0130     432.70     432.69     0          0
-DEAIR            DROP             003              118.00     0.0130     433.01     432.99     0          0
+DEAIR_2          DROP             003              118.00     0.0130     433.01     432.99     0          0
 INLET            TAPIN            DROP             100.00     0.0130     567.40     567.22     0          0
-681              ?                ?                100.00     0.0140     571.00     570.00     0          0
+681              INFLOW           DROP             100.00     0.0140     571.00     570.00     0          0
 
 [XSECTIONS]
 ;;Link           Shape        Geom1      Geom2      Geom3      Geom4      Barrels
@@ -54,7 +70,7 @@ INLET            TAPIN            DROP             100.00     0.0130     567.40 
 0002             CIRCULAR     18.00      0          0          0          1
 0001             RECT_CLOSED  10.00      20.00      0          0          1
 DEAIR            CIRCULAR     8.00       0          0          0          1
-DEAIR            CIRCULAR     18.00      0          0          0          1
+DEAIR_2          CIRCULAR     18.00      0          0          0          1
 INLET            RECT_CLOSED  4.00       11.00      0          0          1
 681              CIRCULAR     5.00       0          0          0          1
 
@@ -65,7 +81,7 @@ INLET            RECT_CLOSED  4.00       11.00      0          0          1
 0002             0          0          0          NO
 0001             0          0          0          NO
 DEAIR            0          0          0          NO
-DEAIR            0          0          0          NO
+DEAIR_2          0          0          0          NO
 INLET            0          0          0          NO
 681              0          0          0          NO
 
@@ -78,7 +94,7 @@ OUTLET           1550.50            5264.50
 DROP             -1360.50           486.50            
 OUTFALL          3086.50            3874.50           
 TAPIN            -391.50            3755.50           
-DROP             152.50             3662.50           
+DROP_2           152.50             3662.50           
 INFLOW           -1378.36           -403.36           
 
 [MAP]

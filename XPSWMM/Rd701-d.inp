@@ -19,6 +19,18 @@ VARIABLE_STEP        0.75
 INERTIAL_DAMPING     PARTIAL
 NORMAL_FLOW_LIMITED  BOTH
 MAX_TRIALS           50
+START_DATE           01/01/2001
+START_TIME           00:00:00
+REPORT_START_DATE    01/01/2001
+REPORT_START_TIME    00:00:00
+END_DATE             01/02/2001
+END_TIME             00:00:00
+SWEEP_START          01/01
+SWEEP_END            12/31
+DRY_DAYS             0
+REPORT_STEP          00:15:00
+WET_STEP             00:05:00
+DRY_STEP             01:00:00
 
 [JUNCTIONS]
 ;;Name           Elev       MaxDepth   InitDepth  SurDepth   Aponded
@@ -29,7 +41,6 @@ MAX_TRIALS           50
 29               190.32     0          0          0          0
 31               190.30     0          0          0          0
 33               189.64     0          0          0          0
-35               187.41     0          0          0          0
 17               192.16     0          0          0          0
 3                195.10     0          0          0          0
 5                194.80     0          0          0          0
@@ -42,6 +53,11 @@ MAX_TRIALS           50
 25               190.60     0          0          0          0
 27               190.22     0          0          0          0
 37               192.55     0          0          0          0
+
+[OUTFALLS]
+;;Name           Elev       Type       Stage      Gated
+;;-------------- ---------- ---------- ---------- -----
+35               187.41     FREE                  NO
 
 [CONDUITS]
 ;;Name           From             To               Length     Roughness  InOffset   OutOffset  InitFlow   MaxFlow
@@ -69,23 +85,23 @@ MAX_TRIALS           50
 ;;Link           Shape        Geom1      Geom2      Geom3      Geom4      Barrels
 ;;-------------- ------------ ---------- ---------- ---------- ---------- ----------
 14               CIRCULAR     2.50       4.80       0          0          1
-30               IRREGULAR    2.35       3.80       0          0          1
+30               TRAPEZOIDAL  2.35       3.80       2          2          1
 32               RECT_CLOSED  2.30       4.30       0          0          1
-34               TRAPEZOIDAL  2.50       4.30       0          0          1
-16               IRREGULAR    2.50       6.30       0          0          1
-2                IRREGULAR    2.00       9.20       0          0          1
-4                IRREGULAR    2.00       6138.90    0          0          1
-6                IRREGULAR    2.85       5.60       0          0          1
-8                IRREGULAR    3.50       5899.80    0          0          1
-10               IRREGULAR    4.10       2.60       0          0          1
-12               TRAPEZOIDAL  4.50       3.00       0          0          1
-18               IRREGULAR    2.50       2.00       0          0          1
-20               IRREGULAR    2.49       1.50       0          0          1
-22               IRREGULAR    2.40       4.60       0          0          1
-24               IRREGULAR    2.50       2.80       0          0          1
-26               IRREGULAR    2.40       2.20       0          0          1
-28               IRREGULAR    1.70       5.80       0          0          1
-36               TRAPEZOIDAL  2.50       2.50       0          0          1
+34               TRAPEZOIDAL  2.50       4.30       1          1          1
+16               TRAPEZOIDAL  2.50       6.30       2          2          1
+2                TRAPEZOIDAL  2.00       9.20       2          2          1
+4                TRAPEZOIDAL  2.00       6138.90    2          2          1
+6                TRAPEZOIDAL  2.85       5.60       2          2          1
+8                TRAPEZOIDAL  3.50       5899.80    2          2          1
+10               TRAPEZOIDAL  4.10       2.60       2          2          1
+12               TRAPEZOIDAL  4.50       3.00       1          1          1
+18               TRAPEZOIDAL  2.50       2.00       2          2          1
+20               TRAPEZOIDAL  2.49       1.50       2          2          1
+22               TRAPEZOIDAL  2.40       4.60       2          2          1
+24               TRAPEZOIDAL  2.50       2.80       2          2          1
+26               TRAPEZOIDAL  2.40       2.20       2          2          1
+28               TRAPEZOIDAL  1.70       5.80       2          2          1
+36               TRAPEZOIDAL  2.50       2.50       1          1          1
 
 [LOSSES]
 ;;Link           Inlet      Outlet     Average    Flap Gate

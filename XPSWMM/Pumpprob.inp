@@ -20,20 +20,36 @@ INERTIAL_DAMPING     PARTIAL
 NORMAL_FLOW_LIMITED  BOTH
 MAX_TRIALS           50
 HEAD_TOLERANCE       0.0033
+START_DATE           01/01/2001
+START_TIME           00:00:00
+REPORT_START_DATE    01/01/2001
+REPORT_START_TIME    00:00:00
+END_DATE             01/02/2001
+END_TIME             00:00:00
+SWEEP_START          01/01
+SWEEP_END            12/31
+DRY_DAYS             0
+REPORT_STEP          00:15:00
+WET_STEP             00:05:00
+DRY_STEP             01:00:00
 
 [JUNCTIONS]
 ;;Name           Elev       MaxDepth   InitDepth  SurDepth   Aponded
 ;;-------------- ---------- ---------- ---------- ---------- ----------
-FM_FMRPS1        75.00      0          0          0          0
 BYPASS_UP        12.56      0          0          0          0
 BYPASS_DN        12.56      0          0          0          0
 FMR_OUTFAL       5.00       0          0          0          0
 
+[OUTFALLS]
+;;Name           Elev       Type       Stage      Gated
+;;-------------- ---------- ---------- ---------- -----
+FM_FMRPS1        75.00      FREE                  NO
+
 [STORAGE]
 ;;Name           Elev       MaxDepth   InitDepth  Shape      Curve/Params
 ;;-------------- ---------- ---------- ---------- ---------- ----------
-FMRPSWW          8.43       -3.17      7.08       FUNCTIONAL 150.00 0          0
-FMR_JUNC         13.35      -8.09      0          FUNCTIONAL 150.00 0          0
+FMRPSWW          8.43       10.00      7.08       FUNCTIONAL 150.00 0          0
+FMR_JUNC         13.35      10.00      0          FUNCTIONAL 150.00 0          0
 
 [CONDUITS]
 ;;Name           From             To               Length     Roughness  InOffset   OutOffset  InitFlow   MaxFlow
@@ -50,13 +66,14 @@ OVFL_WEIR        BYPASS_UP        BYPASS_DN        TRANSVERSE 4.96       1.840  
 [PUMPS]
 ;;Name           From             To               PumpCurve  Status   Startup    Shutoff
 ;;-------------- ---------------- ---------------- ---------- -------- ---------- ----------
-FMRPS            FMRPSWW          FM_FMRPS1        PC_FMRPS   ON       0          0         
+FMRPS            FMRPSWW          FM_FMRPS1        PC_FMRPS   ON       1.00       0         
 
 [CURVES]
 ;;Name           Type       X-Value    Y-Value
 ;;-------------- ---------- ---------- ----------
-PC_FMRPS         Pump1      0          0
-;
+;; Synthesized generic pump curves — replace with actual pump data
+PC_FMRPS         Pump1      0          5
+PC_FMRPS                    10         10
 
 [XSECTIONS]
 ;;Link           Shape        Geom1      Geom2      Geom3      Geom4      Barrels
@@ -64,7 +81,7 @@ PC_FMRPS         Pump1      0          0
 CndToFMRPS       CIRCULAR     2.25       0          0          0          1
 BypassLink       CIRCULAR     2.00       0          0          0          1
 OvrflOutfl       CIRCULAR     2.25       0          0          0          1
-OVFL_WEIR        RECT_OPEN    0          4.00       0          0          
+OVFL_WEIR        RECT_OPEN    1.00       4.00       0          0
 
 [LOSSES]
 ;;Link           Inlet      Outlet     Average    Flap Gate

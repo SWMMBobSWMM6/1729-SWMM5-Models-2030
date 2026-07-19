@@ -16,6 +16,18 @@ ALLOW_PONDING        NO
 SKIP_STEADY_STATE    NO
 INERTIAL_DAMPING     PARTIAL
 NORMAL_FLOW_LIMITED  BOTH
+START_DATE           01/01/2001
+START_TIME           00:00:00
+REPORT_START_DATE    01/01/2001
+REPORT_START_TIME    00:00:00
+END_DATE             01/02/2001
+END_TIME             00:00:00
+SWEEP_START          01/01
+SWEEP_END            12/31
+DRY_DAYS             0
+REPORT_STEP          00:15:00
+WET_STEP             00:05:00
+DRY_STEP             01:00:00
 
 [JUNCTIONS]
 ;;Name           Elev       MaxDepth   InitDepth  SurDepth   Aponded
@@ -183,6 +195,7 @@ MH               0          0          0          0          0
 3571             0          0          0          0          0
 3570             0          0          0          0          0
 3572             0          0          0          0          0
+N364             0          0          0          0          0
 3573             0          0          0          0          0
 3574             0          0          0          0          0
 4478             0          0          0          0          0
@@ -1651,7 +1664,11 @@ BOX              0          0          0          0          0
 7602             0          0          0          0          0
 7605             0          0          0          0          0
 7610             0          0          0          0          0
-7615             0          0          0          0          0
+
+[OUTFALLS]
+;;Name           Elev       Type       Stage      Gated
+;;-------------- ---------- ---------- ---------- -----
+7615             0          FREE                  NO
 
 [COORDINATES]
 ;;Node           X-Coord            Y-Coord
@@ -1819,6 +1836,7 @@ MH               -3043458.67        737138.01
 3571             -3046355.59        730567.83         
 3570             -3042522.11        739250.57         
 3572             -3042404.49        738669.44         
+N364             -3049990.18        734476.64         
 3573             -3042310.42        738116.14         
 3574             -3042253.41        737784.26         
 4478             -3042240.15        737691.04         

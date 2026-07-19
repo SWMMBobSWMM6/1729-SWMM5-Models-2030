@@ -2,51 +2,993 @@
   EPA STORM WATER MANAGEMENT MODEL - VERSION 5.2 (Build 5.2.4)
   ------------------------------------------------------------
 
+  Montague System Ultimate Build-out 
+  WARNING 04: minimum elevation drop used for Conduit L14128
   
-  ERROR 209: undefined object ? at line 257 of [CONDUIT] section:
-  L12401A          ?                ?                259.06     0.0150     15.33      14.57      0          0
-
+  ****************
+  Analysis Options
+  ****************
+  Flow Units ............... CFS
+  Process Models:
+    Rainfall/Runoff ........ NO
+    RDII ................... NO
+    Snowmelt ............... NO
+    Groundwater ............ NO
+    Flow Routing ........... YES
+    Ponding Allowed ........ NO
+    Water Quality .......... NO
+  Flow Routing Method ...... DYNWAVE
+  Surcharge Method ......... EXTRAN
+  Starting Date ............ 01/01/2001 00:00:00
+  Ending Date .............. 01/02/2001 00:00:00
+  Antecedent Dry Days ...... 0.0
+  Report Time Step ......... 00:15:00
+  Routing Time Step ........ 10.00 sec
+  Variable Time Step ....... YES
+  Maximum Trials ........... 50
+  Number of Threads ........ 1
+  Head Tolerance ........... 0.003300 ft
   
-  ERROR 209: undefined object 5.00 at line 608 of [XSECT] section:
-  LR1              IRREGULAR    5.00       0          0          0          1
-
   
-  ERROR 209: undefined object 5.00 at line 609 of [XSECT] section:
-  LR2              IRREGULAR    5.00       0          0          0          1
-
+  **************************        Volume        Volume
+  Flow Routing Continuity        acre-feet      10^6 gal
+  **************************     ---------     ---------
+  Dry Weather Inflow .......         0.000         0.000
+  Wet Weather Inflow .......         0.000         0.000
+  Groundwater Inflow .......         0.000         0.000
+  RDII Inflow ..............         0.000         0.000
+  External Inflow ..........         0.000         0.000
+  External Outflow .........         0.000         0.000
+  Flooding Loss ............         0.466         0.152
+  Evaporation Loss .........         0.000         0.000
+  Exfiltration Loss ........         0.000         0.000
+  Initial Stored Volume ....         0.818         0.267
+  Final Stored Volume ......         0.320         0.104
+  Continuity Error (%) .....         3.960
   
-  ERROR 209: undefined object 4.50 at line 610 of [XSECT] section:
-  LR3              IRREGULAR    4.50       0          0          0          1
-
   
-  ERROR 209: undefined object 5.00 at line 611 of [XSECT] section:
-  LR4              IRREGULAR    5.00       0          0          0          1
-
+  *************************
+  Highest Continuity Errors
+  *************************
+  Node wetwell (-18.42%)
+  Node midpoint (1.09%)
   
-  ERROR 211: invalid number  at line 619 of [XSECT] section:
-  O1               RECT_CLOSED  0.15       0          0          0          
-
   
-  ERROR 211: invalid number  at line 620 of [XSECT] section:
-  O2               RECT_CLOSED  0.15       0          0          0          
-
+  ***************************
+  Time-Step Critical Elements
+  ***************************
+  Link dnpipe (2.36%)
   
-  ERROR 211: invalid number  at line 621 of [XSECT] section:
-  O3               RECT_CLOSED  0.15       0          0          0          
-
   
-  ERROR 211: invalid number  at line 622 of [XSECT] section:
-  04               RECT_CLOSED  0.15       0          0          0          
-
+  ********************************
+  Highest Flow Instability Indexes
+  ********************************
+  Link L10000.4 (1)
   
-  ERROR 211: invalid number  at line 623 of [XSECT] section:
-  O5               RECT_CLOSED  0.15       0          0          0          
-
   
-  ERROR 211: invalid number  at line 624 of [XSECT] section:
-  Montague         RECT_OPEN    0          300.00     0          0          
+  *********************************
+  Most Frequent Nonconverging Nodes
+  *********************************
+  Node 10000 (0.06%)
+  Node Pumpout (0.05%)
+  Node midpoint (0.03%)
+  Node 1000.4 (0.01%)
+  
+  
+  *************************
+  Routing Time Step Summary
+  *************************
+  Minimum Time Step           :     0.45 sec
+  Average Time Step           :     9.98 sec
+  Maximum Time Step           :    10.00 sec
+  % of Time in Steady State   :     0.00
+  Average Iterations per Step :     2.05
+  % of Steps Not Converging   :     0.06
+  Time Step Frequencies       :
+     10.000 -  5.493 sec      :    99.76 %
+      5.493 -  3.017 sec      :     0.23 %
+      3.017 -  1.657 sec      :     0.01 %
+      1.657 -  0.910 sec      :     0.00 %
+      0.910 -  0.500 sec      :     0.00 %
+  
+  
+  ******************
+  Node Depth Summary
+  ******************
+  
+  ---------------------------------------------------------------------------------
+                                 Average  Maximum  Maximum  Time of Max    Reported
+                                   Depth    Depth      HGL   Occurrence   Max Depth
+  Node                 Type         Feet     Feet     Feet  days hr:min        Feet
+  ---------------------------------------------------------------------------------
+  10114                JUNCTION     0.00     0.00    23.78     0  00:00        0.00
+  10309                JUNCTION     0.00     0.00    17.65     0  00:00        0.00
+  10311                JUNCTION     0.00     0.00    18.30     0  00:00        0.00
+  10313                JUNCTION     0.00     0.00    21.14     0  00:00        0.00
+  10324                JUNCTION     0.00     0.00    29.20     0  00:00        0.00
+  10329                JUNCTION     0.00     0.00    29.69     0  00:00        0.00
+  10333                JUNCTION     0.00     0.00    31.28     0  00:00        0.00
+  11403                JUNCTION     0.00     0.00    30.17     0  00:00        0.00
+  11901                JUNCTION     0.00     0.00    27.16     0  00:00        0.00
+  11903                JUNCTION     0.00     0.00    25.11     0  00:00        0.00
+  11905                JUNCTION     0.00     0.00    25.50     0  00:00        0.00
+  11906                JUNCTION     0.00     0.00    24.70     0  00:00        0.00
+  12001                JUNCTION     0.00     0.00    27.27     0  00:00        0.00
+  12003                JUNCTION     0.00     0.00    25.23     0  00:00        0.00
+  12206                JUNCTION     0.00     0.00    25.02     0  00:00        0.00
+  12301                JUNCTION     0.00     0.00    23.81     0  00:00        0.00
+  12401                JUNCTION     0.00     0.00    25.71     0  00:00        0.00
+  12802                JUNCTION     0.00     0.00    17.04     0  00:00        0.00
+  12803                JUNCTION     0.00     0.00    18.42     0  00:00        0.00
+  12804                JUNCTION     0.00     0.00    17.43     0  00:00        0.00
+  12805                JUNCTION     0.00     0.00    17.85     0  00:00        0.00
+  12902                JUNCTION     0.00     0.00    17.96     0  00:00        0.00
+  12903                JUNCTION     0.00     0.00    18.69     0  00:00        0.00
+  13506                JUNCTION     0.00     0.00    17.62     0  00:00        0.00
+  13509                JUNCTION     0.00     0.00    20.70     0  00:00        0.00
+  13516                JUNCTION     0.00     0.00    25.23     0  00:00        0.00
+  13518                JUNCTION     0.00     0.00    23.69     0  00:00        0.00
+  13519                JUNCTION     0.00     0.00    24.33     0  00:00        0.00
+  13522                JUNCTION     0.00     0.00    28.22     0  00:00        0.00
+  13523                JUNCTION     0.00     0.00    29.37     0  00:00        0.00
+  13903                JUNCTION     0.00     0.00    23.38     0  00:00        0.00
+  14002                JUNCTION     0.00     0.00    18.88     0  00:00        0.00
+  14003                JUNCTION     0.00     0.00    19.72     0  00:00        0.00
+  14102                JUNCTION     0.00     0.00    17.54     0  00:00        0.00
+  14112                JUNCTION     0.00     0.00    20.55     0  00:00        0.00
+  14113                JUNCTION     0.00     0.00    20.94     0  00:00        0.00
+  14114                JUNCTION     0.00     0.00    22.39     0  00:00        0.00
+  14115                JUNCTION     0.00     0.00    21.62     0  00:00        0.00
+  14116                JUNCTION     0.00     0.00    25.30     0  00:00        0.00
+  14119                JUNCTION     0.00     0.00    27.97     0  00:00        0.00
+  14121                JUNCTION     0.00     0.00    25.52     0  00:00        0.00
+  14122                JUNCTION     0.00     0.00    25.46     0  00:00        0.00
+  14123                JUNCTION     0.00     0.00    26.42     0  00:00        0.00
+  14124                JUNCTION     0.00     0.00    27.90     0  00:00        0.00
+  14125                JUNCTION     0.00     0.00    29.12     0  00:00        0.00
+  14127                JUNCTION     0.00     0.00    31.36     0  00:00        0.00
+  14129                JUNCTION     0.00     0.00    32.82     0  00:00        0.00
+  10308                JUNCTION     0.00     0.00    17.52     0  00:00        0.00
+  10310                JUNCTION     0.00     0.00    17.55     0  00:00        0.00
+  10107                JUNCTION     0.00     0.00    19.20     0  00:00        0.00
+  10106                JUNCTION     0.00     0.00    18.00     0  00:00        0.00
+  10109                JUNCTION     0.00     0.00    18.26     0  00:00        0.00
+  10110                JUNCTION     0.00     0.00    19.41     0  00:00        0.00
+  10111                JUNCTION     0.00     0.00    20.53     0  00:00        0.00
+  10112                JUNCTION     0.00     0.00    23.10     0  00:00        0.00
+  10112A               JUNCTION     0.00     0.00    23.50     0  00:00        0.00
+  10113                JUNCTION     0.00     0.00    24.51     0  00:00        0.00
+  10115                JUNCTION     0.00     0.00    24.90     0  00:00        0.00
+  10116                JUNCTION     0.00     0.00    25.07     0  00:00        0.00
+  13507                JUNCTION     0.00     0.00    17.98     0  00:00        0.00
+  13508                JUNCTION     0.00     0.00    19.43     0  00:00        0.00
+  13510                JUNCTION     0.00     0.00    21.00     0  00:00        0.00
+  13511                JUNCTION     0.00     0.00    21.80     0  00:00        0.00
+  13513                JUNCTION     0.00     0.00    23.30     0  00:00        0.00
+  13514                JUNCTION     0.00     0.00    23.07     0  00:00        0.00
+  13515                JUNCTION     0.00     0.00    23.95     0  00:00        0.00
+  14101                JUNCTION     0.00     0.00    17.57     0  00:00        0.00
+  14110                JUNCTION     0.00     0.00    21.00     0  00:00        0.00
+  14117                JUNCTION     0.00     0.00    25.93     0  00:00        0.00
+  14118                JUNCTION     0.00     0.00    27.05     0  00:00        0.00
+  10338                JUNCTION     0.00     0.00    35.27     0  00:00        0.00
+  10337                JUNCTION     0.00     0.00    35.33     0  00:00        0.00
+  10330                JUNCTION     0.00     0.00    30.75     0  00:00        0.00
+  11401                JUNCTION     0.00     0.00    30.24     0  00:00        0.00
+  11402                JUNCTION     0.00     0.00    29.94     0  00:00        0.00
+  11404                JUNCTION     0.00     0.00    31.79     0  00:00        0.00
+  11405                JUNCTION     0.00     0.00    31.80     0  00:00        0.00
+  11501                JUNCTION     0.00     0.00    30.55     0  00:00        0.00
+  11502                JUNCTION     0.00     0.00    30.51     0  00:00        0.00
+  11201                JUNCTION     0.00     0.00    34.30     0  00:00        0.00
+  11202                JUNCTION     0.00     0.00    35.30     0  00:00        0.00
+  11203                JUNCTION     0.00     0.00    35.94     0  00:00        0.00
+  11204                JUNCTION     0.00     0.00    34.86     0  00:00        0.00
+  11908                JUNCTION     0.00     0.00    26.48     0  00:00        0.00
+  11907                JUNCTION     0.00     0.00    25.05     0  00:00        0.00
+  11902                JUNCTION     0.00     0.00    25.60     0  00:00        0.00
+  10325                JUNCTION     0.00     0.00    29.55     0  00:00        0.00
+  14125A               JUNCTION     0.00     0.00    29.61     0  00:00        0.00
+  12901                JUNCTION     0.00     0.00    17.86     0  00:00        0.00
+  12303                JUNCTION     0.00     0.00    23.91     0  00:00        0.00
+  12302                JUNCTION     0.00     0.00    23.07     0  00:00        0.00
+  12205                JUNCTION     0.00     0.00    25.98     0  00:00        0.00
+  12204                JUNCTION     0.00     0.00    24.14     0  00:00        0.00
+  12203                JUNCTION     0.00     0.00    24.61     0  00:00        0.00
+  12202                JUNCTION     0.00     0.00    24.08     0  00:00        0.00
+  10317                JUNCTION     0.00     0.00    24.40     0  00:00        0.00
+  10319                JUNCTION     0.00     0.00    23.79     0  00:00        0.00
+  10318                JUNCTION     0.00     0.00    25.16     0  00:00        0.00
+  10316                JUNCTION     0.00     0.00    23.36     0  00:00        0.00
+  12401A               JUNCTION     0.00     0.00    26.00     0  00:00        0.00
+  10321                JUNCTION     0.00     0.00    25.79     0  00:00        0.00
+  10314                JUNCTION     0.00     0.00    22.86     0  00:00        0.00
+  12201A               JUNCTION     0.00     0.00    20.92     0  00:00        0.00
+  10312                JUNCTION     0.00     0.00    21.00     0  00:00        0.00
+  12201                JUNCTION     0.00     0.00    22.00     0  00:00        0.00
+  13902                JUNCTION     0.00     0.00    22.84     0  00:00        0.00
+  13901                JUNCTION     0.00     0.00    23.96     0  00:00        0.00
+  13905                JUNCTION     0.00     0.00    23.64     0  00:00        0.00
+  13904                JUNCTION     0.00     0.00    23.24     0  00:00        0.00
+  13517                JUNCTION     0.00     0.00    23.11     0  00:00        0.00
+  13520                JUNCTION     0.00     0.00    25.36     0  00:00        0.00
+  14120                JUNCTION     0.00     0.00    25.90     0  00:00        0.00
+  14126                JUNCTION     0.00     0.00    29.24     0  00:00        0.00
+  14128                JUNCTION     0.00     0.00    31.15     0  00:00        0.00
+  14401                JUNCTION     0.00     0.00    30.84     0  00:00        0.00
+  14402                JUNCTION     0.00     0.00    32.52     0  00:00        0.00
+  10323                JUNCTION     0.00     0.00    27.97     0  00:00        0.00
+  10327                JUNCTION     0.00     0.00    28.50     0  00:00        0.00
+  10331                JUNCTION     0.00     0.00    29.61     0  00:00        0.00
+  10335                JUNCTION     0.00     0.00    30.73     0  00:00        0.00
+  10336                JUNCTION     0.00     0.00    30.33     0  00:00        0.00
+  10336A               JUNCTION     0.00     0.00    35.00     0  00:00        0.00
+  10332                JUNCTION     0.00     0.00    31.11     0  00:00        0.00
+  11701B               JUNCTION     0.00     0.00    30.80     0  00:00        0.00
+  11701A               JUNCTION     0.00     0.00    30.14     0  00:00        0.00
+  11702                JUNCTION     0.00     0.00    28.28     0  00:00        0.00
+  11801                JUNCTION     0.00     0.00    28.52     0  00:00        0.00
+  11802                JUNCTION     0.00     0.00    29.62     0  00:00        0.00
+  11803                JUNCTION     0.00     0.00    29.60     0  00:00        0.00
+  12005                JUNCTION     0.00     0.00    25.53     0  00:00        0.00
+  10117                JUNCTION     0.00     0.00    29.47     0  00:00        0.00
+  14603                JUNCTION     0.00     0.00    32.91     0  00:00        0.00
+  14602                JUNCTION     0.00     0.00    28.28     0  00:00        0.00
+  14601                JUNCTION     0.00     0.00    25.80     0  00:00        0.00
+  12503                JUNCTION     0.00     0.00    17.63     0  00:00        0.00
+  12101                JUNCTION     0.00     0.00    19.59     0  00:00        0.00
+  12102                JUNCTION     0.00     0.00    19.83     0  00:00        0.00
+  10339                JUNCTION     0.00     0.00    35.00     0  00:00        0.00
+  R1                   JUNCTION     0.00     0.00    30.00     0  00:00        0.00
+  R2                   JUNCTION     0.00     0.00    31.00     0  00:00        0.00
+  R3                   JUNCTION     0.00     0.00    31.00     0  00:00        0.00
+  R4                   JUNCTION     0.00     0.00    30.00     0  00:00        0.00
+  R5                   JUNCTION     0.00     0.00    30.00     0  00:00        0.00
+  U12305               JUNCTION     0.00     0.00    25.00     0  00:00        0.00
+  U12304               JUNCTION     0.00     0.00    25.00     0  00:00        0.00
+  U12306               JUNCTION     0.00     0.00    25.00     0  00:00        0.00
+  U12307               JUNCTION     0.00     0.00    25.00     0  00:00        0.00
+  1000.4               JUNCTION     0.41     3.24    27.24     0  00:00        0.40
+  midpoint             JUNCTION    20.00    20.33    50.33     0  00:00       20.32
+  Pumpout              JUNCTION     9.77     9.80    34.80     0  00:05        9.80
+  10000                OUTFALL      0.00     0.00    25.00     0  00:00        0.00
+  10101                STORAGE      2.89     2.89    17.95     0  00:01        2.89
+  10103                STORAGE      0.08     0.08    16.49     0  00:00        0.08
+  10105                STORAGE      0.25     0.25    16.49     0  00:00        0.25
+  10301                STORAGE      1.16     1.16    16.37     0  00:00        1.16
+  10302                STORAGE      0.48     0.48    16.18     0  00:00        0.48
+  10303                STORAGE      0.11     0.11    15.84     0  00:00        0.11
+  10304                STORAGE      0.00     0.00    17.06     0  00:00        0.00
+  10305                STORAGE      0.00     0.00    17.29     0  00:00        0.00
+  11701                STORAGE      0.00     0.00    27.20     0  00:00        0.00
+  12801                STORAGE      0.00     0.00    16.39     0  00:00        0.00
+  12904                STORAGE      0.00     0.00    17.76     0  00:00        0.00
+  13202                STORAGE      0.00     0.00    15.87     0  00:00        0.00
+  13204                STORAGE      0.00     0.00    15.38     0  00:00        0.00
+  13205                STORAGE      0.00     0.00    16.52     0  00:00        0.00
+  13501                STORAGE      0.00     0.00    15.11     0  00:00        0.00
+  13504                STORAGE      0.00     0.00    15.79     0  00:00        0.00
+  13505                STORAGE      0.00     0.00    15.71     0  00:00        0.00
+  10102                STORAGE      2.45     2.45    17.06     0  00:00        2.45
+  10104                STORAGE      1.02     1.02    15.90     0  00:00        1.02
+  13203                STORAGE      0.00     0.00    16.27     0  00:00        0.00
+  13502                STORAGE      0.00     0.00    15.31     0  00:00        0.00
+  13503                STORAGE      0.00     0.00    16.47     0  00:00        0.00
+  10207                STORAGE      0.00     0.00    15.29     0  00:00        0.00
+  10206                STORAGE      0.00     0.00    16.01     0  00:00        0.00
+  10205                STORAGE      0.02     0.02    15.17     0  00:00        0.02
+  10204                STORAGE      0.55     0.55    16.06     0  00:00        0.55
+  10203                STORAGE      0.20     0.20    15.34     0  00:00        0.20
+  10202                STORAGE      1.15     1.15    17.08     0  00:00        1.15
+  10201                STORAGE      0.90     0.90    16.25     0  00:00        0.90
+  13101                STORAGE      0.00     0.00    15.73     0  00:00        0.00
+  13102                STORAGE      0.00     0.00    17.09     0  00:00        0.00
+  12501                STORAGE      0.00     0.00    15.73     0  00:00        0.00
+  12502                STORAGE      0.00     0.00    15.80     0  00:00        0.00
+  wetwell              STORAGE      0.14     9.99    27.66     0  00:00        5.76
+  
+  
+  *******************
+  Node Inflow Summary
+  *******************
+  
+  -------------------------------------------------------------------------------------------------
+                                  Maximum  Maximum                  Lateral       Total        Flow
+                                  Lateral    Total  Time of Max      Inflow      Inflow     Balance
+                                   Inflow   Inflow   Occurrence      Volume      Volume       Error
+  Node                 Type           CFS      CFS  days hr:min    10^6 gal    10^6 gal     Percent
+  -------------------------------------------------------------------------------------------------
+  10114                JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  10309                JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  10311                JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  10313                JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  10324                JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  10329                JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  10333                JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  11403                JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  11901                JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  11903                JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  11905                JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  11906                JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  12001                JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  12003                JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  12206                JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  12301                JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  12401                JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  12802                JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  12803                JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  12804                JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  12805                JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  12902                JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  12903                JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  13506                JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  13509                JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  13516                JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  13518                JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  13519                JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  13522                JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  13523                JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  13903                JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  14002                JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  14003                JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  14102                JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  14112                JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  14113                JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  14114                JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  14115                JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  14116                JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  14119                JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  14121                JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  14122                JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  14123                JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  14124                JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  14125                JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  14127                JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  14129                JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  10308                JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  10310                JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  10107                JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  10106                JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  10109                JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  10110                JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  10111                JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  10112                JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  10112A               JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  10113                JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  10115                JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  10116                JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  13507                JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  13508                JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  13510                JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  13511                JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  13513                JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  13514                JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  13515                JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  14101                JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  14110                JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  14117                JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  14118                JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  10338                JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  10337                JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  10330                JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  11401                JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  11402                JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  11404                JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  11405                JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  11501                JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  11502                JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  11201                JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  11202                JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  11203                JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  11204                JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  11908                JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  11907                JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  11902                JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  10325                JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  14125A               JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  12901                JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  12303                JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  12302                JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  12205                JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  12204                JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  12203                JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  12202                JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  10317                JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  10319                JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  10318                JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  10316                JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  12401A               JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  10321                JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  10314                JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  12201A               JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  10312                JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  12201                JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  13902                JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  13901                JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  13905                JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  13904                JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  13517                JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  13520                JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  14120                JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  14126                JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  14128                JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  14401                JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  14402                JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  10323                JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  10327                JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  10331                JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  10335                JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  10336                JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  10336A               JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  10332                JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  11701B               JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  11701A               JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  11702                JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  11801                JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  11802                JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  11803                JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  12005                JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  10117                JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  14603                JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  14602                JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  14601                JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  12503                JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  12101                JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  12102                JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  10339                JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  R1                   JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  R2                   JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  R3                   JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  R4                   JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  R5                   JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  U12305               JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  U12304               JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  U12306               JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  U12307               JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  1000.4               JUNCTION      0.00   252.96     0  00:00           0      0.0308      41.037
+  midpoint             JUNCTION      0.00    10.00     0  00:00           0       0.174       1.103
+  Pumpout              JUNCTION      0.00    10.56     0  00:00           0       0.172       0.000
+  10000                OUTFALL       0.00     0.00     0  00:00           0           0       0.000 gal
+  10101                STORAGE       0.00    16.28     0  00:00           0      0.0216      -0.046
+  10103                STORAGE       0.00     0.00     0  00:00           0    0.000598       0.000
+  10105                STORAGE       0.00     0.00     0  00:00           0     0.00187       0.000
+  10301                STORAGE       0.00     0.00     0  00:00           0     0.00868       0.000
+  10302                STORAGE       0.00     0.00     0  00:00           0     0.00359       0.000
+  10303                STORAGE       0.00     0.00     0  00:00           0    0.000823       0.000
+  10304                STORAGE       0.00     0.00     0  00:00           0           0       0.000 gal
+  10305                STORAGE       0.00     0.00     0  00:00           0           0       0.000 gal
+  11701                STORAGE       0.00     0.00     0  00:00           0           0       0.000 gal
+  12801                STORAGE       0.00     0.00     0  00:00           0           0       0.000 gal
+  12904                STORAGE       0.00     0.00     0  00:00           0           0       0.000 gal
+  13202                STORAGE       0.00     0.00     0  00:00           0           0       0.000 gal
+  13204                STORAGE       0.00     0.00     0  00:00           0           0       0.000 gal
+  13205                STORAGE       0.00     0.00     0  00:00           0           0       0.000 gal
+  13501                STORAGE       0.00     0.00     0  00:00           0           0       0.000 gal
+  13504                STORAGE       0.00     0.00     0  00:00           0           0       0.000 gal
+  13505                STORAGE       0.00     0.00     0  00:00           0           0       0.000 gal
+  10102                STORAGE       0.00     0.00     0  00:00           0      0.0183       0.000
+  10104                STORAGE       0.00     0.00     0  00:00           0     0.00763       0.000
+  13203                STORAGE       0.00     0.00     0  00:00           0           0       0.000 gal
+  13502                STORAGE       0.00     0.00     0  00:00           0           0       0.000 gal
+  13503                STORAGE       0.00     0.00     0  00:00           0           0       0.000 gal
+  10207                STORAGE       0.00     0.00     0  00:00           0           0       0.000 gal
+  10206                STORAGE       0.00     0.00     0  00:00           0           0       0.000 gal
+  10205                STORAGE       0.00     0.00     0  00:00           0     0.00015       0.000
+  10204                STORAGE       0.00     0.00     0  00:00           0     0.00411       0.000
+  10203                STORAGE       0.00     0.00     0  00:00           0      0.0015       0.000
+  10202                STORAGE       0.00     0.00     0  00:00           0      0.0086       0.000
+  10201                STORAGE       0.00     0.00     0  00:00           0     0.00673       0.000
+  13101                STORAGE       0.00     0.00     0  00:00           0           0       0.000 gal
+  13102                STORAGE       0.00     0.00     0  00:00           0           0       0.000 gal
+  12501                STORAGE       0.00     0.00     0  00:00           0           0       0.000 gal
+  12502                STORAGE       0.00     0.00     0  00:00           0           0       0.000 gal
+  wetwell              STORAGE       0.00   152.06     0  00:00           0       0.173     -15.552
+  
+  
+  **********************
+  Node Surcharge Summary
+  **********************
+  
+  Surcharging occurs when water rises above the top of the highest conduit.
+  ---------------------------------------------------------------------
+                                               Max. Height   Min. Depth
+                                   Hours       Above Crown    Below Rim
+  Node                 Type      Surcharged           Feet         Feet
+  ---------------------------------------------------------------------
+  Pumpout              JUNCTION       23.91          0.000        0.000
+  
+  
+  *********************
+  Node Flooding Summary
+  *********************
+  
+  Flooding refers to all water that overflows a node, whether it ponds or not.
+  --------------------------------------------------------------------------
+                                                             Total   Maximum
+                                 Maximum   Time of Max       Flood    Ponded
+                        Hours       Rate    Occurrence      Volume     Depth
+  Node                 Flooded       CFS   days hr:min    10^6 gal      Feet
+  --------------------------------------------------------------------------
+  Pumpout                 0.72     10.00      0  00:05       0.152     0.000
+  
+  
+  **********************
+  Storage Volume Summary
+  **********************
+  
+  ------------------------------------------------------------------------------------------------
+                         Average    Avg   Evap  Exfil     Maximum    Max    Time of Max    Maximum
+                          Volume   Pcnt   Pcnt   Pcnt      Volume   Pcnt     Occurrence    Outflow
+  Storage Unit          1000 ft³   Full   Loss   Loss    1000 ft³   Full    days hr:min        CFS
+  ------------------------------------------------------------------------------------------------
+  10101                    2.888   28.9    0.0    0.0       2.888   28.9       0  00:01       0.00
+  10103                    0.080  100.0    0.0    0.0       0.080  100.0       0  00:00       0.00
+  10105                    0.250    2.5    0.0    0.0       0.250    2.5       0  00:00       0.00
+  10301                    1.160   11.6    0.0    0.0       1.160   11.6       0  00:00       0.00
+  10302                    0.480    4.8    0.0    0.0       0.480    4.8       0  00:00       0.00
+  10303                    0.110    1.1    0.0    0.0       0.110    1.1       0  00:00       0.00
+  10304                    0.000    0.0    0.0    0.0       0.000    0.0       0  00:00       0.00
+  10305                    0.000    0.0    0.0    0.0       0.000    0.0       0  00:00       0.00
+  11701                    0.000    0.0    0.0    0.0       0.000    0.0       0  00:00       0.00
+  12801                    0.000    0.0    0.0    0.0       0.000    0.0       0  00:00       0.00
+  12904                    0.000    0.0    0.0    0.0       0.000    0.0       0  00:00       0.00
+  13202                    0.000    0.0    0.0    0.0       0.000    0.0       0  00:00       0.00
+  13204                    0.000    0.0    0.0    0.0       0.000    0.0       0  00:00       0.00
+  13205                    0.000    0.0    0.0    0.0       0.000    0.0       0  00:00       0.00
+  13501                    0.000    0.0    0.0    0.0       0.000    0.0       0  00:00       0.00
+  13504                    0.000    0.0    0.0    0.0       0.000    0.0       0  00:00       0.00
+  13505                    0.000    0.0    0.0    0.0       0.000    0.0       0  00:00       0.00
+  10102                    2.450   24.5    0.0    0.0       2.450   24.5       0  00:00       0.00
+  10104                    1.020   10.2    0.0    0.0       1.020   10.2       0  00:00       0.00
+  13203                    0.000    0.0    0.0    0.0       0.000    0.0       0  00:00       0.00
+  13502                    0.000    0.0    0.0    0.0       0.000    0.0       0  00:00       0.00
+  13503                    0.000    0.0    0.0    0.0       0.000    0.0       0  00:00       0.00
+  10207                    0.000    0.0    0.0    0.0       0.000    0.0       0  00:00       0.00
+  10206                    0.000    0.0    0.0    0.0       0.000    0.0       0  00:00       0.00
+  10205                    0.020    3.7    0.0    0.0       0.020    3.7       0  00:00       0.00
+  10204                    0.550    5.5    0.0    0.0       0.550    5.5       0  00:00       0.00
+  10203                    0.200  100.0    0.0    0.0       0.200  100.0       0  00:00       0.00
+  10202                    1.150   11.5    0.0    0.0       1.150   11.5       0  00:00       0.00
+  10201                    0.900  100.0    0.0    0.0       0.900  100.0       0  00:00       0.00
+  13101                    0.000    0.0    0.0    0.0       0.000    0.0       0  00:00       0.00
+  13102                    0.000    0.0    0.0    0.0       0.000    0.0       0  00:00       0.00
+  12501                    0.000    0.0    0.0    0.0       0.000    0.0       0  00:00       0.00
+  12502                    0.000    0.0    0.0    0.0       0.000    0.0       0  00:00       0.00
+  wetwell                  0.286    1.4    0.0    0.0      20.439   99.9       0  00:00     262.96
+  
+  
+  ***********************
+  Outfall Loading Summary
+  ***********************
+  
+  -----------------------------------------------------------
+                         Flow       Avg       Max       Total
+                         Freq      Flow      Flow      Volume
+  Outfall Node           Pcnt       CFS       CFS    10^6 gal
+  -----------------------------------------------------------
+  10000                  0.00      0.00      0.00       0.000
+  -----------------------------------------------------------
+  System                 0.00      0.00      0.00       0.000
+  
+  
+  ********************
+  Link Flow Summary
+  ********************
+  
+  -----------------------------------------------------------------------------
+                                 Maximum  Time of Max   Maximum    Max/    Max/
+                                  |Flow|   Occurrence   |Veloc|    Full    Full
+  Link                 Type          CFS  days hr:min    ft/sec    Flow   Depth
+  -----------------------------------------------------------------------------
+  L13203               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  L13204               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  L13205               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  L13501               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  L10101               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  L10103               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  L10102               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  L10302               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  L10303               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  L10304               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  L10305               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  L10308               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  L10309               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  L10310               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  L10311               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  CHME10313            CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  L10104               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  L10107               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  L10105               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  L10106               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  L14118               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  L13514               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  L13515               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  L14101               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  L14102               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  L14112               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  L12303               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  L12302               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  L12301               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  L12206               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  L12205               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  L12204               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  L12203               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  CHME10319            CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  CHME10318            CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  L10317               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  L12401               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  L12401A              CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  L10110               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  L10111               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  L10112               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  L10112A              CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  L10113               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  L10114               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  L10115               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  L10116               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  L13502               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  L13503               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  L13504               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  L13505               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  L13506               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  L13507               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  L13508               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  L13509               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  L13510               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  L13511               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  L12802               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  L12803               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  L12804               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  L12805               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  L12901               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  L12902               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  L12903               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  L12904               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  L14113               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  L14114               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  L14115               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  L14116               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  L14117               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  L14119               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  L14002               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  L14003               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  L14110               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  L12801               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  L12001               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  L12003               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  L10323               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  CHME10321            CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  L10316               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  L10314               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  CHME12201A           CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  L10312               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  LL14119              CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  L13905               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  L13904               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  L13903               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  L13902               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  L13901               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  L13516               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  L13517               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  L13518               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  L13519               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  L13520               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  L13523               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  L14121               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  L14122               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  L14123               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  L14124               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  L14125               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  L14126               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  L14127               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  L14401               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  L14402               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  L14128               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  L14129               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  L10324               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  L10336               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  L10336A              CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  L10338               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  L10337               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  L10331               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  L11401               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  L11402               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  L11403               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  L11404               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  L11405               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  L11501               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  L11502               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  L11201               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  L11202               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  L11203               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  L11204               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  L10327               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  L10329               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  L10330               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  L10333               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  L12201               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  LL12202              CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  L10335               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  LL13520              CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  L11908               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  L11907               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  L11905               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  L11902               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  L11901               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  L10325               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  L14125A              CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  L11906               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  L11903               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  L10332               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  L11701B              CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  L11701A              CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  L11701               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  L11702               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  L11801               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  L11802               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  L11803               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  514.1                CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  L13202               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  L10109               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  L13513               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  L10202               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  L10203               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  L10204               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  L10205               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  L10206               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  L10207               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  L10117               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  L14603               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  LL14603              CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  L14602               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  L14601               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  L13102               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  L13101               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  L12503               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  L12502               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  L12501               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  L12101               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  L12102               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  LL13516              CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  L12005               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  L13522               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  L10339               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  L10201               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  LR1                  CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  LR2                  CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  LR3                  CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  LR4                  CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  LU12306              CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  LU12305              CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  LU12304              CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  LU12307              CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  dnpipe               CONDUIT     10.56     0  00:00     14.12    0.00    0.52
+  L10000.4             CONDUIT    252.96     0  00:00      3.66    0.03    0.48
+  Rincon               CONDUIT     16.28     0  00:00      8.87    0.01    0.09
+  O1                   ORIFICE      0.00     0  00:00                      0.00
+  O2                   ORIFICE      0.00     0  00:00                      0.00
+  O3                   ORIFICE      0.00     0  00:00                      0.00
+  04                   ORIFICE      0.00     0  00:00                      0.00
+  O5                   ORIFICE      0.00     0  00:00                      0.00
+  Montague             WEIR         0.00     0  00:00                      0.00
+  PUMP1                PUMP        10.00     0  00:00              1.00
+  
+  
+  ***************************
+  Flow Classification Summary
+  ***************************
+  
+  -------------------------------------------------------------------------------------
+                      Adjusted    ---------- Fraction of Time in Flow Class ---------- 
+                       /Actual         Up    Down  Sub   Sup   Up    Down  Norm  Inlet 
+  Conduit               Length    Dry  Dry   Dry   Crit  Crit  Crit  Crit  Ltd   Ctrl  
+  -------------------------------------------------------------------------------------
+  L13203                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  L13204                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  L13205                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  L13501                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  L10101                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  L10103                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  L10102                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  L10302                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  L10303                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  L10304                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  L10305                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  L10308                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  L10309                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  L10310                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  L10311                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  CHME10313               1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  L10104                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  L10107                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  L10105                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  L10106                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  L14118                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  L13514                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  L13515                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  L14101                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  L14102                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  L14112                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  L12303                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  L12302                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  L12301                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  L12206                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  L12205                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  L12204                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  L12203                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  CHME10319               1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  CHME10318               1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  L10317                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  L12401                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  L12401A                 1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  L10110                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  L10111                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  L10112                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  L10112A                 1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  L10113                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  L10114                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  L10115                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  L10116                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  L13502                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  L13503                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  L13504                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  L13505                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  L13506                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  L13507                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  L13508                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  L13509                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  L13510                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  L13511                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  L12802                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  L12803                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  L12804                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  L12805                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  L12901                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  L12902                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  L12903                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  L12904                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  L14113                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  L14114                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  L14115                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  L14116                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  L14117                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  L14119                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  L14002                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  L14003                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  L14110                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  L12801                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  L12001                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  L12003                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  L10323                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  CHME10321               1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  L10316                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  L10314                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  CHME12201A              1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  L10312                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  LL14119                 1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  L13905                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  L13904                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  L13903                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  L13902                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  L13901                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  L13516                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  L13517                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  L13518                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  L13519                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  L13520                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  L13523                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  L14121                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  L14122                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  L14123                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  L14124                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  L14125                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  L14126                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  L14127                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  L14401                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  L14402                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  L14128                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  L14129                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  L10324                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  L10336                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  L10336A                 1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  L10338                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  L10337                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  L10331                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  L11401                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  L11402                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  L11403                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  L11404                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  L11405                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  L11501                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  L11502                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  L11201                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  L11202                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  L11203                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  L11204                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  L10327                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  L10329                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  L10330                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  L10333                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  L12201                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  LL12202                 1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  L10335                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  LL13520                 1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  L11908                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  L11907                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  L11905                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  L11902                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  L11901                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  L10325                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  L14125A                 1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  L11906                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  L11903                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  L10332                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  L11701B                 1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  L11701A                 1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  L11701                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  L11702                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  L11801                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  L11802                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  L11803                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  514.1                   1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  L13202                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  L10109                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  L13513                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  L10202                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  L10203                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  L10204                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  L10205                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  L10206                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  L10207                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  L10117                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  L14603                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  LL14603                 1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  L14602                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  L14601                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  L13102                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  L13101                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  L12503                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  L12502                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  L12501                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  L12101                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  L12102                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  LL13516                 1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  L12005                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  L13522                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  L10339                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  L10201                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  LR1                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  LR2                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  LR3                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  LR4                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  LU12306                 1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  LU12305                 1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  LU12304                 1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  LU12307                 1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  dnpipe                  1.00   0.00  0.97  0.00  0.03  0.00  0.00  0.00  1.00  0.00
+  L10000.4                1.00   0.97  0.01  0.00  0.02  0.00  0.00  0.00  0.99  0.00
+  Rincon                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  
+  
+  *************************
+  Conduit Surcharge Summary
+  *************************
+  
+  No conduits were surcharged.
+  
+  
+  ***************
+  Pumping Summary
+  ***************
+  
+  ---------------------------------------------------------------------------------------------------------
+                                                  Min       Avg       Max     Total     Power    % Time Off
+                        Percent   Number of      Flow      Flow      Flow    Volume     Usage    Pump Curve
+  Pump                 Utilized   Start-Ups       CFS       CFS       CFS  10^6 gal     Kw-hr    Low   High
+  ---------------------------------------------------------------------------------------------------------
+  PUMP1                    2.70           1      0.00      9.96     10.00     0.174     15.22    0.0   99.6
+  
 
-
-  Analysis begun on:  Mon Jul 13 08:03:53 2026
-  Analysis ended on:  Mon Jul 13 08:03:53 2026
+  Analysis begun on:  Sun Jul 19 15:17:50 2026
+  Analysis ended on:  Sun Jul 19 15:17:50 2026
   Total elapsed time: < 1 sec

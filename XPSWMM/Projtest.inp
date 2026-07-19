@@ -20,11 +20,22 @@ INERTIAL_DAMPING     PARTIAL
 NORMAL_FLOW_LIMITED  BOTH
 MAX_TRIALS           50
 HEAD_TOLERANCE       0.0033
+START_DATE           01/01/2001
+START_TIME           00:00:00
+REPORT_START_DATE    01/01/2001
+REPORT_START_TIME    00:00:00
+END_DATE             01/02/2001
+END_TIME             00:00:00
+SWEEP_START          01/01
+SWEEP_END            12/31
+DRY_DAYS             0
+REPORT_STEP          00:15:00
+WET_STEP             00:05:00
+DRY_STEP             01:00:00
 
 [JUNCTIONS]
 ;;Name           Elev       MaxDepth   InitDepth  SurDepth   Aponded
 ;;-------------- ---------- ---------- ---------- ---------- ----------
-C85              30.00      0          0          0          0
 C87              50.00      0          0          0          0
 CSO27A1          50.00      0          0          0          0
 C102             40.00      0          0          0          0
@@ -42,24 +53,31 @@ SC1              20.00      0          0          0          0
 SC2              20.00      0          0          0          0
 SC-OF            10.00      0          0          0          0
 pumpback         20.00      0          0          0          0
+BarrelB          -12.02     0          0          0          0
+BarrelC          -12.03     0          0          0          0
+
+[OUTFALLS]
+;;Name           Elev       Type       Stage      Gated
+;;-------------- ---------- ---------- ---------- -----
+C85              30.00      FREE                  NO
 
 [CONDUITS]
 ;;Name           From             To               Length     Roughness  InOffset   OutOffset  InitFlow   MaxFlow
 ;;-------------- ---------------- ---------------- ---------- ---------- ---------- ---------- ---------- ----------
-110              C87              C85              1010.00    0          2.65       1.75       0          0
-122              CSO27W           ILS3             450.00     0.0140     3.38       -0.70      0          0
-HP23OF           ILS3             DivCham          160.00     0.0140     -0.70      -1.16      0          0
-123              C100             ILS3             1220.00    0.0140     4.30       -0.70      0          0
+110              C87              C85              1010.00    0.0130     2.65       1.75       0          0
+122              CSO27W           ILS3             450.00     0.0140     3.38       0          0          0
+HP23OF           ILS3             DivCham          160.00     0.0140     0          0          0          0
+123              C100             ILS3             1220.00    0.0140     4.30       0          0          0
 121              C101             CSO27            1370.00    0.0140     7.22       3.50       0          0
 120              pumpback         C87              500.00     0.0190     3.27       2.65       0          0
-127              C102             CSO27A2          520.00     0          10.42      9.00       0          0
+127              C102             CSO27A2          520.00     0.0130     10.42      9.00       0          0
 125              CSO27AW          C100             970.00     0.0140     8.50       4.30       0          0
 126              C103             CSO27A1          460.00     0.0140     10.68      10.00      0          0
 124              CSO27A2          C101             610.00     0.0140     9.00       7.22       0          0
 27A1DWF          CSO27A1O         CSO27A2          100.00     0.0120     10.00      9.00       0          0
-DivCon           DivCham          SC1              100.00     0.0140     -1.16      -1.74      0          0
-BarrelA          BarrelB          BarrelC          750.00     0.0140     -12.02     -12.03     0          0
-outfall          SC2              SC-OF            200.00     0.0140     -0.53      -1.50      0          0
+DivCon           DivCham          SC1              100.00     0.0140     0          0          0          0
+BarrelA          BarrelB          BarrelC          750.00     0.0140     0          0          0          0
+outfall          SC2              SC-OF            200.00     0.0140     0          0          0          0
 487              CSO27            pumpback         170.00     0.0140     3.50       3.27       0          0
 
 [ORIFICES]
@@ -77,13 +95,14 @@ CSO27WEIR        CSO27            CSO27W           V-NOTCH    9.50       1.840  
 [PUMPS]
 ;;Name           From             To               PumpCurve  Status   Startup    Shutoff
 ;;-------------- ---------------- ---------------- ---------- -------- ---------- ----------
-pump             SC2              pumpback         PC_pump    ON       -12.00     -12.03    
+pump             SC2              pumpback         PC_pump    ON       1.00       0         
 
 [CURVES]
 ;;Name           Type       X-Value    Y-Value
 ;;-------------- ---------- ---------- ----------
-PC_pump          Pump3      0          0
-;
+;; Synthesized generic pump curves — replace with actual pump data
+PC_pump          Pump1      0          5
+PC_pump                     10         10
 
 [XSECTIONS]
 ;;Link           Shape        Geom1      Geom2      Geom3      Geom4      Barrels
@@ -103,10 +122,10 @@ DivCon           RECT_CLOSED  10.00      16.00      0          0          1
 BarrelA          RECT_CLOSED  18.00      20.00      0          0          1
 outfall          RECT_CLOSED  8.00       10.00      0          0          2
 487              RECT_CLOSED  8.00       7.00       0          0          1
-27ORIF           RECT_CLOSED  2.50       0          0          0          
-CSO27WEIR        RECT_OPEN    0          50.67      0          0          
-27A1WEIR         RECT_OPEN    0          20.67      0          0          
-27A2WEIR         RECT_OPEN    0          11.50      0          0          
+27ORIF           RECT_CLOSED  2.50       2.50       0          0
+CSO27WEIR        TRIANGULAR   1.00       50.67      0          0
+27A1WEIR         TRIANGULAR   1.00       20.67      0          0
+27A2WEIR         TRIANGULAR   1.00       11.50      0          0
 
 [LOSSES]
 ;;Link           Inlet      Outlet     Average    Flap Gate

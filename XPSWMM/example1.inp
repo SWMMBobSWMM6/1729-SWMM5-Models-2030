@@ -14,31 +14,47 @@ LINK_OFFSETS         DEPTH
 MIN_SLOPE            0.0
 ALLOW_PONDING        NO
 SKIP_STEADY_STATE    NO
-ROUTING_STEP         00:00:60
+ROUTING_STEP         00:01:00
 VARIABLE_STEP        0.75
 INERTIAL_DAMPING     PARTIAL
 NORMAL_FLOW_LIMITED  BOTH
+START_DATE           01/01/2001
+START_TIME           00:00:00
+REPORT_START_DATE    01/01/2001
+REPORT_START_TIME    00:00:00
+END_DATE             01/02/2001
+END_TIME             00:00:00
+SWEEP_START          01/01
+SWEEP_END            12/31
+DRY_DAYS             0
+REPORT_STEP          00:15:00
+WET_STEP             00:05:00
+DRY_STEP             01:00:00
 
 [JUNCTIONS]
 ;;Name           Elev       MaxDepth   InitDepth  SurDepth   Aponded
 ;;-------------- ---------- ---------- ---------- ---------- ----------
 MH               410.50     0          0          0          0
-MH               409.00     0          0          0          0
-MH               409.00     0          0          0          0
-MH               413.00     0          0          0          0
-MH               411.00     0          0          0          0
-MH               406.00     0          0          0          0
+MH_2             409.00     0          0          0          0
+MH_3             409.00     0          0          0          0
+MH_4             413.00     0          0          0          0
+MH_5             411.00     0          0          0          0
+MH_6             406.00     0          0          0          0
 detention        400.00     0          0          0          0
-outfall          400.00     0          0          0          0
+
+[OUTFALLS]
+;;Name           Elev       Type       Stage      Gated
+;;-------------- ---------- ---------- ---------- -----
+outfall          400.00     FREE                  NO
 
 [CONDUITS]
 ;;Name           From             To               Length     Roughness  InOffset   OutOffset  InitFlow   MaxFlow
 ;;-------------- ---------------- ---------------- ---------- ---------- ---------- ---------- ---------- ----------
 Pipe             MH               MH               112.00     0.0140     407.00     406.20     0          0
-Pipe             MH               MH               70.00      0.0140     406.20     406.00     0          0
-Pipe             MH               MH               112.00     0.0140     410.00     408.00     0          0
-Pipe             MH               MH               76.00      0.0140     408.00     406.00     0          0
-Pipe             MH               MH               134.00     0.0140     406.00     403.50     0          0
+Pipe_2           MH               MH               70.00      0.0140     406.20     406.00     0          0
+Pipe_3           MH               MH               112.00     0.0140     410.00     408.00     0          0
+Pipe_4           MH               MH               76.00      0.0140     408.00     406.00     0          0
+Pipe_5           MH               MH               134.00     0.0140     406.00     403.50     0          0
 214.1            MH               detention        57.00      0.0140     403.50     399.00     0          0
 
 [ORIFICES]
@@ -50,32 +66,32 @@ control          detention        outfall          SIDE       0          0.650  
 ;;Link           Shape        Geom1      Geom2      Geom3      Geom4      Barrels
 ;;-------------- ------------ ---------- ---------- ---------- ---------- ----------
 Pipe             CIRCULAR     0.30       0          0          0          1
-Pipe             CIRCULAR     0.30       0          0          0          1
-Pipe             CIRCULAR     0.30       0          0          0          1
-Pipe             CIRCULAR     0.30       0          0          0          1
-Pipe             CIRCULAR     0.40       0          0          0          1
+Pipe_2           CIRCULAR     0.30       0          0          0          1
+Pipe_3           CIRCULAR     0.30       0          0          0          1
+Pipe_4           CIRCULAR     0.30       0          0          0          1
+Pipe_5           CIRCULAR     0.40       0          0          0          1
 214.1            CIRCULAR     0.40       0          0          0          1
-control          RECT_CLOSED  0          0          0          0          
+control          RECT_CLOSED  0.71       0.71       0          0
 
 [LOSSES]
 ;;Link           Inlet      Outlet     Average    Flap Gate
 ;;-------------- ---------- ---------- ---------- ----------
 Pipe             0          0          0          NO
-Pipe             0          0          0          NO
-Pipe             0          0          0          NO
-Pipe             0          0          0          NO
-Pipe             0          0          0          NO
+Pipe_2           0          0          0          NO
+Pipe_3           0          0          0          NO
+Pipe_4           0          0          0          NO
+Pipe_5           0          0          0          NO
 214.1            0          0          0          NO
 
 [COORDINATES]
 ;;Node           X-Coord            Y-Coord
 ;;-------------- ------------------ ------------------
 MH               -611260.70         208861.15         
-MH               -611362.97         208880.44         
-MH               -611384.65         208821.86         
-MH               -611350.01         208695.36         
-MH               -611439.23         208757.51         
-MH               -611274.15         208750.58         
+MH_2             -611362.97         208880.44         
+MH_3             -611384.65         208821.86         
+MH_4             -611350.01         208695.36         
+MH_5             -611439.23         208757.51         
+MH_6             -611274.15         208750.58         
 detention        -611244.14         208744.32         
 outfall          -611227.41         208793.14         
 

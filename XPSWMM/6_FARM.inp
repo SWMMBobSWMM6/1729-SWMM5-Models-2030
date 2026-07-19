@@ -16,6 +16,18 @@ ALLOW_PONDING        NO
 SKIP_STEADY_STATE    NO
 INERTIAL_DAMPING     PARTIAL
 NORMAL_FLOW_LIMITED  BOTH
+START_DATE           01/01/2001
+START_TIME           00:00:00
+REPORT_START_DATE    01/01/2001
+REPORT_START_TIME    00:00:00
+END_DATE             01/02/2001
+END_TIME             00:00:00
+SWEEP_START          01/01
+SWEEP_END            12/31
+DRY_DAYS             0
+REPORT_STEP          00:15:00
+WET_STEP             00:05:00
+DRY_STEP             01:00:00
 
 [JUNCTIONS]
 ;;Name           Elev       MaxDepth   InitDepth  SurDepth   Aponded
@@ -28,31 +40,35 @@ NS2              0          0          0          0          0
 NS3              0          0          0          0          0
 FL1              0          0          0          0          0
 FL2              0          0          0          0          0
-FL3              0          0          0          0          0
+
+[OUTFALLS]
+;;Name           Elev       Type       Stage      Gated
+;;-------------- ---------- ---------- ---------- -----
+FL3              0          FREE                  NO
 
 [CONDUITS]
 ;;Name           From             To               Length     Roughness  InOffset   OutOffset  InitFlow   MaxFlow
 ;;-------------- ---------------- ---------------- ---------- ---------- ---------- ---------- ---------- ----------
-MD1              J1               J2               2000.00    0.0250     0          -30.00     0          0
-MD2              J2               OUT              2000.00    0.0250     0          -30.00     0          0
-D2               NS2              J2               1500.00    0.0250     0          -45.00     0          0
-D3               NS3              OUT              1500.00    0.0250     0          -45.00     0          0
-S1               FL1              NS1              1.00       0.0250     0          -0.03      0          0
-S2               FL2              NS2              1.00       0.0250     0          -0.03      0          0
-S3               FL3              NS3              1.00       0.0250     0          -0.03      0          0
-D1               NS1              J1               1500.00    0.0250     0          -45.00     0          0
+MD1              J1               J2               2000.00    0.0250     0          0          0          0
+MD2              J2               OUT              2000.00    0.0250     0          0          0          0
+D2               NS2              J2               1500.00    0.0250     0          0          0          0
+D3               NS3              OUT              1500.00    0.0250     0          0          0          0
+S1               FL1              NS1              1.00       0.0250     0          0          0          0
+S2               FL2              NS2              1.00       0.0250     0          0          0          0
+S3               FL3              NS3              1.00       0.0250     0          0          0          0
+D1               NS1              J1               1500.00    0.0250     0          0          0          0
 
 [XSECTIONS]
 ;;Link           Shape        Geom1      Geom2      Geom3      Geom4      Barrels
 ;;-------------- ------------ ---------- ---------- ---------- ---------- ----------
-MD1              TRAPEZOIDAL  1.50       2.50       0          0          1
-MD2              TRAPEZOIDAL  1.50       2.50       0          0          1
-D2               TRAPEZOIDAL  1.00       1.50       0          0          1
-D3               TRAPEZOIDAL  1.00       1.50       0          0          1
-S1               TRAPEZOIDAL  1.00       1.50       0          0          1
-S2               TRAPEZOIDAL  1.00       1.50       0          0          1
-S3               TRAPEZOIDAL  1.00       1.50       0          0          1
-D1               TRAPEZOIDAL  1.00       1.50       0          0          1
+MD1              TRAPEZOIDAL  1.50       2.50       1          1          1
+MD2              TRAPEZOIDAL  1.50       2.50       1          1          1
+D2               TRAPEZOIDAL  1.00       1.50       1          1          1
+D3               TRAPEZOIDAL  1.00       1.50       1          1          1
+S1               TRAPEZOIDAL  1.00       1.50       1          1          1
+S2               TRAPEZOIDAL  1.00       1.50       1          1          1
+S3               TRAPEZOIDAL  1.00       1.50       1          1          1
+D1               TRAPEZOIDAL  1.00       1.50       1          1          1
 
 [LOSSES]
 ;;Link           Inlet      Outlet     Average    Flap Gate

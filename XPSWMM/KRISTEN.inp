@@ -16,6 +16,18 @@ ALLOW_PONDING        NO
 SKIP_STEADY_STATE    NO
 INERTIAL_DAMPING     PARTIAL
 NORMAL_FLOW_LIMITED  BOTH
+START_DATE           01/01/2001
+START_TIME           00:00:00
+REPORT_START_DATE    01/01/2001
+REPORT_START_TIME    00:00:00
+END_DATE             01/02/2001
+END_TIME             00:00:00
+SWEEP_START          01/01
+SWEEP_END            12/31
+DRY_DAYS             0
+REPORT_STEP          00:15:00
+WET_STEP             00:05:00
+DRY_STEP             01:00:00
 
 [JUNCTIONS]
 ;;Name           Elev       MaxDepth   InitDepth  SurDepth   Aponded
@@ -24,7 +36,6 @@ DUMMY1           0          0          0          0          0
 DUMMY2           0          0          0          0          0
 2300             0          0          0          0          0
 DUMMY3           0          0          0          0          0
-2210             0          0          0          0          0
 2200             0          0          0          0          0
 2100             0          0          0          0          0
 200              0          0          0          0          0
@@ -76,79 +87,84 @@ DUMMY31          0          0          0          0          0
 DUMMY32          0          0          0          0          0
 DUMMY33          0          0          0          0          0
 
+[OUTFALLS]
+;;Name           Elev       Type       Stage      Gated
+;;-------------- ---------- ---------- ---------- -----
+2210             0          FREE                  NO
+
 [CONDUITS]
 ;;Name           From             To               Length     Roughness  InOffset   OutOffset  InitFlow   MaxFlow
 ;;-------------- ---------------- ---------------- ---------- ---------- ---------- ---------- ---------- ----------
-9400             DUMMY14          DUMMY1           0          0          0          0          0          0
-9300             DUMMY1           DUMMY2           0          0          0          0          0          0
-2320             DUMMY2           2300             0          0          0          0          0          0
-9200             DUMMY15          DUMMY3           0          0          0          0          0          0
-2310             DUMMY3           2300             0          0          0          0          0          0
-2220             DUMMY16          2210             0          0          0          0          0          0
-9100             DUMMY17          2200             0          0          0          0          0          0
-2110             DUMMY18          2100             0          0          0          0          0          0
-1910             DUMMY19          1900             0          0          0          0          0          0
-1810             DUMMY20          1800             0          0          0          0          0          0
-9072             DUMMY21          DUMMY4           0          0          0          0          0          0
-9070             DUMMY4           DUMMY5           0          0          0          0          0          0
-9060             DUMMY5           DUMMY6           0          0          0          0          0          0
-9000             DUMMY6           1700             0          0          0          0          0          0
-9062             DUMMY22          DUMMY5           0          0          0          0          0          0
-9054             DUMMY23          DUMMY7           0          0          0          0          0          0
-9050             DUMMY7           DUMMY8           0          0          0          0          0          0
-9040             DUMMY8           DUMMY9           0          0          0          0          0          0
-9030             DUMMY9           DUMMY6           0          0          0          0          0          0
-9052             DUMMY24          DUMMY7           0          0          0          0          0          0
-9042             DUMMY25          DUMMY8           0          0          0          0          0          0
-9032             DUMMY26          DUMMY9           0          0          0          0          0          0
-9024             DUMMY27          DUMMY10          0          0          0          0          0          0
-9020             DUMMY10          DUMMY6           0          0          0          0          0          0
-9022             DUMMY28          DUMMY10          0          0          0          0          0          0
-9014             DUMMY29          DUMMY11          0          0          0          0          0          0
-9012             DUMMY11          DUMMY12          0          0          0          0          0          0
-9010             DUMMY12          DUMMY6           0          0          0          0          0          0
-1510             DUMMY30          1500             0          0          0          0          0          0
-920              DUMMY31          910              0          0          0          0          0          0
-820              DUMMY32          800              0          0          0          0          0          0
-620              DUMMY33          DUMMY13          0          0          0          0          0          0
-610              DUMMY13          600              0          0          0          0          0          0
+9400             DUMMY14          DUMMY1           100.00     0.0130     0          0          0          0
+9300             DUMMY1           DUMMY2           100.00     0.0130     0          0          0          0
+2320             DUMMY2           2300             100.00     0.0130     0          0          0          0
+9200             DUMMY15          DUMMY3           100.00     0.0130     0          0          0          0
+2310             DUMMY3           2300             100.00     0.0130     0          0          0          0
+2220             DUMMY16          2210             100.00     0.0130     0          0          0          0
+9100             DUMMY17          2200             100.00     0.0130     0          0          0          0
+2110             DUMMY18          2100             100.00     0.0130     0          0          0          0
+1910             DUMMY19          1900             100.00     0.0130     0          0          0          0
+1810             DUMMY20          1800             100.00     0.0130     0          0          0          0
+9072             DUMMY21          DUMMY4           100.00     0.0130     0          0          0          0
+9070             DUMMY4           DUMMY5           100.00     0.0130     0          0          0          0
+9060             DUMMY5           DUMMY6           100.00     0.0130     0          0          0          0
+9000             DUMMY6           1700             100.00     0.0130     0          0          0          0
+9062             DUMMY22          DUMMY5           100.00     0.0130     0          0          0          0
+9054             DUMMY23          DUMMY7           100.00     0.0130     0          0          0          0
+9050             DUMMY7           DUMMY8           100.00     0.0130     0          0          0          0
+9040             DUMMY8           DUMMY9           100.00     0.0130     0          0          0          0
+9030             DUMMY9           DUMMY6           100.00     0.0130     0          0          0          0
+9052             DUMMY24          DUMMY7           100.00     0.0130     0          0          0          0
+9042             DUMMY25          DUMMY8           100.00     0.0130     0          0          0          0
+9032             DUMMY26          DUMMY9           100.00     0.0130     0          0          0          0
+9024             DUMMY27          DUMMY10          100.00     0.0130     0          0          0          0
+9020             DUMMY10          DUMMY6           100.00     0.0130     0          0          0          0
+9022             DUMMY28          DUMMY10          100.00     0.0130     0          0          0          0
+9014             DUMMY29          DUMMY11          100.00     0.0130     0          0          0          0
+9012             DUMMY11          DUMMY12          100.00     0.0130     0          0          0          0
+9010             DUMMY12          DUMMY6           100.00     0.0130     0          0          0          0
+1510             DUMMY30          1500             100.00     0.0130     0          0          0          0
+920              DUMMY31          910              100.00     0.0130     0          0          0          0
+820              DUMMY32          800              100.00     0.0130     0          0          0          0
+620              DUMMY33          DUMMY13          100.00     0.0130     0          0          0          0
+610              DUMMY13          600              100.00     0.0130     0          0          0          0
 
 [XSECTIONS]
 ;;Link           Shape        Geom1      Geom2      Geom3      Geom4      Barrels
 ;;-------------- ------------ ---------- ---------- ---------- ---------- ----------
-9400             CIRCULAR     0          0          0          0          1
-9300             CIRCULAR     0          0          0          0          1
-2320             CIRCULAR     0          0          0          0          1
-9200             CIRCULAR     0          0          0          0          1
-2310             CIRCULAR     0          0          0          0          1
-2220             CIRCULAR     0          0          0          0          1
-9100             CIRCULAR     0          0          0          0          1
-2110             CIRCULAR     0          0          0          0          1
-1910             CIRCULAR     0          0          0          0          1
-1810             CIRCULAR     0          0          0          0          1
-9072             CIRCULAR     0          0          0          0          1
-9070             CIRCULAR     0          0          0          0          1
-9060             CIRCULAR     0          0          0          0          1
-9000             CIRCULAR     0          0          0          0          1
-9062             CIRCULAR     0          0          0          0          1
-9054             CIRCULAR     0          0          0          0          1
-9050             CIRCULAR     0          0          0          0          1
-9040             CIRCULAR     0          0          0          0          1
-9030             CIRCULAR     0          0          0          0          1
-9052             CIRCULAR     0          0          0          0          1
-9042             CIRCULAR     0          0          0          0          1
-9032             CIRCULAR     0          0          0          0          1
-9024             CIRCULAR     0          0          0          0          1
-9020             CIRCULAR     0          0          0          0          1
-9022             CIRCULAR     0          0          0          0          1
-9014             CIRCULAR     0          0          0          0          1
-9012             CIRCULAR     0          0          0          0          1
-9010             CIRCULAR     0          0          0          0          1
-1510             CIRCULAR     0          0          0          0          1
-920              CIRCULAR     0          0          0          0          1
-820              CIRCULAR     0          0          0          0          1
-620              CIRCULAR     0          0          0          0          1
-610              CIRCULAR     0          0          0          0          1
+9400             CIRCULAR     1.00       0          0          0          1
+9300             CIRCULAR     1.00       0          0          0          1
+2320             CIRCULAR     1.00       0          0          0          1
+9200             CIRCULAR     1.00       0          0          0          1
+2310             CIRCULAR     1.00       0          0          0          1
+2220             CIRCULAR     1.00       0          0          0          1
+9100             CIRCULAR     1.00       0          0          0          1
+2110             CIRCULAR     1.00       0          0          0          1
+1910             CIRCULAR     1.00       0          0          0          1
+1810             CIRCULAR     1.00       0          0          0          1
+9072             CIRCULAR     1.00       0          0          0          1
+9070             CIRCULAR     1.00       0          0          0          1
+9060             CIRCULAR     1.00       0          0          0          1
+9000             CIRCULAR     1.00       0          0          0          1
+9062             CIRCULAR     1.00       0          0          0          1
+9054             CIRCULAR     1.00       0          0          0          1
+9050             CIRCULAR     1.00       0          0          0          1
+9040             CIRCULAR     1.00       0          0          0          1
+9030             CIRCULAR     1.00       0          0          0          1
+9052             CIRCULAR     1.00       0          0          0          1
+9042             CIRCULAR     1.00       0          0          0          1
+9032             CIRCULAR     1.00       0          0          0          1
+9024             CIRCULAR     1.00       0          0          0          1
+9020             CIRCULAR     1.00       0          0          0          1
+9022             CIRCULAR     1.00       0          0          0          1
+9014             CIRCULAR     1.00       0          0          0          1
+9012             CIRCULAR     1.00       0          0          0          1
+9010             CIRCULAR     1.00       0          0          0          1
+1510             CIRCULAR     1.00       0          0          0          1
+920              CIRCULAR     1.00       0          0          0          1
+820              CIRCULAR     1.00       0          0          0          1
+620              CIRCULAR     1.00       0          0          0          1
+610              CIRCULAR     1.00       0          0          0          1
 
 [LOSSES]
 ;;Link           Inlet      Outlet     Average    Flap Gate

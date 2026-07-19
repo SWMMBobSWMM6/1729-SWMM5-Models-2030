@@ -14,32 +14,48 @@ LINK_OFFSETS         DEPTH
 MIN_SLOPE            0.0
 ALLOW_PONDING        NO
 SKIP_STEADY_STATE    NO
-ROUTING_STEP         00:00:60
+ROUTING_STEP         00:01:00
 VARIABLE_STEP        0.75
 INERTIAL_DAMPING     PARTIAL
 NORMAL_FLOW_LIMITED  BOTH
 MAX_TRIALS           50
 HEAD_TOLERANCE       1e-5
+START_DATE           01/01/2001
+START_TIME           00:00:00
+REPORT_START_DATE    01/01/2001
+REPORT_START_TIME    00:00:00
+END_DATE             01/02/2001
+END_TIME             00:00:00
+SWEEP_START          01/01
+SWEEP_END            12/31
+DRY_DAYS             0
+REPORT_STEP          00:15:00
+WET_STEP             00:05:00
+DRY_STEP             01:00:00
 
 [JUNCTIONS]
 ;;Name           Elev       MaxDepth   InitDepth  SurDepth   Aponded
 ;;-------------- ---------- ---------- ---------- ---------- ----------
-inflow1          120.00     0          1.00       0          0
-mid1             115.00     0          2.00       0          0
-inflow2          120.00     0          1.00       0          0
-mid2             115.00     0          2.00       0          0
-inflow3          120.00     0          1.00       0          0
-mid3             115.00     0          2.00       0          0
-inflow4          120.00     0          1.00       0          0
-mid4             115.00     0          2.00       0          0
+inflow1          120.00     0          0          0          0
+mid1             115.00     0          0          0          0
+inflow2          120.00     0          0          0          0
+mid2             115.00     0          0          0          0
+inflow3          120.00     0          0          0          0
+mid3             115.00     0          0          0          0
+inflow4          120.00     0          0          0          0
+mid4             115.00     0          0          0          0
+
+[OUTFALLS]
+;;Name           Elev       Type       Stage      Gated
+;;-------------- ---------- ---------- ---------- -----
+outlet1          100.00     FREE                  NO
 
 [STORAGE]
 ;;Name           Elev       MaxDepth   InitDepth  Shape      Curve/Params
 ;;-------------- ---------- ---------- ---------- ---------- ----------
-outlet1          100.00     0          3.00       FUNCTIONAL 100000.00 0          0
-outlet2          100.00     0          3.00       FUNCTIONAL 100000.00 0          0
-outlet3          100.00     0          3.00       FUNCTIONAL 100000.00 0          0
-outlet4          100.00     0          3.00       FUNCTIONAL 100000.00 0          0
+outlet2          100.00     10.00      3.00       FUNCTIONAL 100000.00 0          0
+outlet3          100.00     10.00      3.00       FUNCTIONAL 100000.00 0          0
+outlet4          100.00     10.00      3.00       FUNCTIONAL 100000.00 0          0
 
 [CONDUITS]
 ;;Name           From             To               Length     Roughness  InOffset   OutOffset  InitFlow   MaxFlow
@@ -50,11 +66,11 @@ p2=0.65          inflow2          mid2             100.00     0.0130     51.00  
 theta=0.65       mid2             outlet2          100.00     0.0130     50.00      49.00      0          0
 p3=0.80          inflow3          mid3             100.00     0.0130     51.00      50.00      0          0
 theta=0.80       mid3             outlet3          100.00     0.0130     50.00      49.00      0          0
-19               inflow1          inflow2          0          0          0          0          0          0
-20               inflow2          inflow3          0          0          0          0          0          0
+19               inflow1          inflow2          100.00     0.0130     0          0          0          0
+20               inflow2          inflow3          100.00     0.0130     0          0          0          0
 p4=0.95          inflow4          mid4             100.00     0.0130     51.00      50.00      0          0
 theta=0.95       mid4             outlet4          100.00     0.0130     50.00      49.00      0          0
-29               inflow3          inflow4          0          0          0          0          0          0
+29               inflow3          inflow4          100.00     0.0130     0          0          0          0
 
 [XSECTIONS]
 ;;Link           Shape        Geom1      Geom2      Geom3      Geom4      Barrels
@@ -65,11 +81,11 @@ p2=0.65          CIRCULAR     4.00       0          0          0          1
 theta=0.65       CIRCULAR     4.00       0          0          0          1
 p3=0.80          CIRCULAR     4.00       0          0          0          1
 theta=0.80       CIRCULAR     4.00       0          0          0          1
-19               CIRCULAR     0          0          0          0          1
-20               CIRCULAR     0          0          0          0          1
+19               CIRCULAR     1.00       0          0          0          1
+20               CIRCULAR     1.00       0          0          0          1
 p4=0.95          CIRCULAR     4.00       0          0          0          1
 theta=0.95       CIRCULAR     4.00       0          0          0          1
-29               CIRCULAR     0          0          0          0          1
+29               CIRCULAR     1.00       0          0          0          1
 
 [LOSSES]
 ;;Link           Inlet      Outlet     Average    Flap Gate

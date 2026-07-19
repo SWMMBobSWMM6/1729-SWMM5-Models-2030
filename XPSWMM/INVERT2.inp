@@ -20,19 +20,36 @@ INERTIAL_DAMPING     PARTIAL
 NORMAL_FLOW_LIMITED  BOTH
 MAX_TRIALS           500
 HEAD_TOLERANCE       .00001
+START_DATE           01/01/2001
+START_TIME           00:00:00
+REPORT_START_DATE    01/01/2001
+REPORT_START_TIME    00:00:00
+END_DATE             01/02/2001
+END_TIME             00:00:00
+SWEEP_START          01/01
+SWEEP_END            12/31
+DRY_DAYS             0
+REPORT_STEP          00:15:00
+WET_STEP             00:05:00
+DRY_STEP             01:00:00
 
 [JUNCTIONS]
 ;;Name           Elev       MaxDepth   InitDepth  SurDepth   Aponded
 ;;-------------- ---------- ---------- ---------- ---------- ----------
 F6               9.72       0          0          0          0
+F7L1_2           0          0          0          0          0
+
+[OUTFALLS]
+;;Name           Elev       Type       Stage      Gated
+;;-------------- ---------- ---------- ---------- -----
+F4               8.72       FREE                  NO
 
 [STORAGE]
 ;;Name           Elev       MaxDepth   InitDepth  Shape      Curve/Params
 ;;-------------- ---------- ---------- ---------- ---------- ----------
-F4               8.72       0          0          FUNCTIONAL 10.00 0          0
-F5               8.79       0          0          FUNCTIONAL 10.00 0          0
-F7               9.73       0          0          FUNCTIONAL 0 0          0
-F7LA1            10.21      0          0          FUNCTIONAL 10.00 0          0
+F5               8.79       10.00      0          FUNCTIONAL 10.00 0          0
+F7               9.73       10.00      0          FUNCTIONAL 1000.00 0          0
+F7LA1            10.21      10.00      0          FUNCTIONAL 10.00 0          0
 
 [CONDUITS]
 ;;Name           From             To               Length     Roughness  InOffset   OutOffset  InitFlow   MaxFlow
@@ -47,7 +64,7 @@ F7L1_1           F7L1_2           F7               55.10      0.1000     0      
 ;;-------------- ------------ ---------- ---------- ---------- ---------- ----------
 HP9_1            CIRCULAR     0.68       0          0          0          1
 HP8_1            CIRCULAR     0.68       0          0          0          1
-HP7_1            TRAPEZOIDAL  1.00       2.00       0          0          1
+HP7_1            TRAPEZOIDAL  1.00       2.00       1          1          1
 F7L1_1           CIRCULAR     0.09       0          0          0          1
 
 [LOSSES]

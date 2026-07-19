@@ -20,6 +20,18 @@ INERTIAL_DAMPING     PARTIAL
 NORMAL_FLOW_LIMITED  BOTH
 MAX_TRIALS           50
 HEAD_TOLERANCE       .001
+START_DATE           01/01/2001
+START_TIME           00:00:00
+REPORT_START_DATE    01/01/2001
+REPORT_START_TIME    00:00:00
+END_DATE             01/02/2001
+END_TIME             00:00:00
+SWEEP_START          01/01
+SWEEP_END            12/31
+DRY_DAYS             0
+REPORT_STEP          00:15:00
+WET_STEP             00:05:00
+DRY_STEP             01:00:00
 
 [JUNCTIONS]
 ;;Name           Elev       MaxDepth   InitDepth  SurDepth   Aponded
@@ -66,7 +78,6 @@ B                3.05       0          0          0          0
 C                2.74       0          0          0          0
 D                3.66       0          0          0          0
 T/P              3.50       0          0          0          0
-T/P1             3.50       0          0          0          0
 A6               3.03       0          0          0          0
 F5               5.49       0          0          0          0
 E                4.63       0          0          0          0
@@ -80,12 +91,17 @@ K8               4.77       0          0          0          0
 315              5.49       0          0          0          0
 317              12.53      0          0          0          0
 
+[OUTFALLS]
+;;Name           Elev       Type       Stage      Gated
+;;-------------- ---------- ---------- ---------- -----
+T/P1             3.50       FREE                  NO
+
 [STORAGE]
 ;;Name           Elev       MaxDepth   InitDepth  Shape      Curve/Params
 ;;-------------- ---------- ---------- ---------- ---------- ----------
-PS1W/W           12.53      -0.53      0          FUNCTIONAL 7.24 0          0
-PS2W/W           5.49       -0.49      0          FUNCTIONAL 7.24 0          0
-PSFW/W           8.48       -0.48      0          FUNCTIONAL 5.00 0          0
+PS1W/W           12.53      10.00      0          FUNCTIONAL 7.24 0          0
+PS2W/W           5.49       10.00      0          FUNCTIONAL 7.24 0          0
+PSFW/W           8.48       10.00      0          FUNCTIONAL 5.00 0          0
 
 [CONDUITS]
 ;;Name           From             To               Length     Roughness  InOffset   OutOffset  InitFlow   MaxFlow
@@ -155,19 +171,20 @@ SCREEN           T/P              T/P1             TRANSVERSE 0.58       1.840  
 [PUMPS]
 ;;Name           From             To               PumpCurve  Status   Startup    Shutoff
 ;;-------------- ---------------- ---------------- ---------- -------- ---------- ----------
-PS1              PS1W/W           B1               PC_PS1     ON       0          0         
-PS2              PS2W/W           F5               PC_PS2     ON       0          0         
-PSF              PSFW/W           1                PC_PSF     ON       0          0         
+PS1              PS1W/W           B1               PC_PS1     ON       1.00       0         
+PS2              PS2W/W           F5               PC_PS2     ON       1.00       0         
+PSF              PSFW/W           1                PC_PSF     ON       1.00       0         
 
 [CURVES]
 ;;Name           Type       X-Value    Y-Value
 ;;-------------- ---------- ---------- ----------
-PC_PS1           Pump2      0          0
-;
-PC_PS2           Pump2      0          0
-;
-PC_PSF           Pump2      0          0
-;
+;; Synthesized generic pump curves — replace with actual pump data
+PC_PS1           Pump1      0          5
+PC_PS1                      10         10
+PC_PS2           Pump1      0          5
+PC_PS2                      10         10
+PC_PSF           Pump1      0          5
+PC_PSF                      10         10
 
 [XSECTIONS]
 ;;Link           Shape        Geom1      Geom2      Geom3      Geom4      Barrels
@@ -216,7 +233,7 @@ TP1              CIRCULAR     0.76       0          0          0          1
 TP2              CIRCULAR     0.76       0          0          0          1
 TP3              CIRCULAR     0.76       0          0          0          1
 TP4              CIRCULAR     0.76       0          0          0          1
-exc34            TRAPEZOIDAL  0.67       1.00       0          0          1
+exc34            TRAPEZOIDAL  0.67       1.00       1          1          1
 P55              CIRCULAR     0.30       0          0          0          1
 P56              CIRCULAR     0.30       0          0          0          1
 Q66              CIRCULAR     0.20       0          0          0          1
@@ -226,9 +243,9 @@ Q63              CIRCULAR     0.20       0          0          0          1
 Q62              CIRCULAR     0.20       0          0          0          1
 Q61              CIRCULAR     0.20       0          0          0          1
 P57              CIRCULAR     0.30       0          0          0          1
-dummy1           TRAPEZOIDAL  2.00       2.00       0          0          1
-dummy2           TRAPEZOIDAL  2.00       2.00       0          0          1
-SCREEN           RECT_OPEN    0          10.00      0          0          
+dummy1           TRAPEZOIDAL  2.00       2.00       1          1          1
+dummy2           TRAPEZOIDAL  2.00       2.00       1          1          1
+SCREEN           RECT_OPEN    1.00       10.00      0          0
 
 [LOSSES]
 ;;Link           Inlet      Outlet     Average    Flap Gate

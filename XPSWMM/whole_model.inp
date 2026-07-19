@@ -19,11 +19,22 @@ VARIABLE_STEP        0.75
 INERTIAL_DAMPING     NONE
 NORMAL_FLOW_LIMITED  BOTH
 MAX_TRIALS           100
+START_DATE           01/01/2001
+START_TIME           00:00:00
+REPORT_START_DATE    01/01/2001
+REPORT_START_TIME    00:00:00
+END_DATE             01/02/2001
+END_TIME             00:00:00
+SWEEP_START          01/01
+SWEEP_END            12/31
+DRY_DAYS             0
+REPORT_STEP          00:15:00
+WET_STEP             00:05:00
+DRY_STEP             01:00:00
 
 [JUNCTIONS]
 ;;Name           Elev       MaxDepth   InitDepth  SurDepth   Aponded
 ;;-------------- ---------- ---------- ---------- ---------- ----------
-O26-FO           712.00     0          0          0          0
 M01-00           713.00     0          0          0          0
 O43-04           734.30     0          0          0          0
 M02-00           713.00     0          0          0          0
@@ -213,143 +224,148 @@ A42-56           749.26     0          0          0          0
 A42-58           749.42     0          0          0          0
 A42-60           747.08     0          0          0          0
 
+[OUTFALLS]
+;;Name           Elev       Type       Stage      Gated
+;;-------------- ---------- ---------- ---------- -----
+O26-FO           712.00     FREE                  NO
+
 [STORAGE]
 ;;Name           Elev       MaxDepth   InitDepth  Shape      Curve/Params
 ;;-------------- ---------- ---------- ---------- ---------- ----------
-O26A00           712.00     -4.00      0          FUNCTIONAL 1257.00 0          0
-M59-00           737.00     -25.00     0          FUNCTIONAL 85.00 0          0
-M33-02           718.00     0          0          FUNCTIONAL 50.00 0          0
-T01-00           752.00     0          0          FUNCTIONAL 50.00 0          0
-A62-00           714.90     -3.90      0          FUNCTIONAL 100.00 0          0
-A42-00           738.40     -18.40     0          FUNCTIONAL 50.00 0          0
-A42L-00          721.00     0          0          FUNCTIONAL 100.00 0          0
-A42U-00          723.20     0          0          FUNCTIONAL 100.00 0          0
-A35-VOR          723.50     0          0          FUNCTIONAL 100.00 0          0
-A39-VOR          736.00     0          0          FUNCTIONAL 100.00 0          0
-A43-00           733.00     -12.00     0          FUNCTIONAL 350.00 0          0
-O26-CP2          726.50     0          0          FUNCTIONAL 100.00 0          0
+O26A00           712.00     10.00      0          FUNCTIONAL 1257.00 0          0
+M59-00           737.00     10.00      0          FUNCTIONAL 85.00 0          0
+M33-02           718.00     10.00      0          FUNCTIONAL 50.00 0          0
+T01-00           752.00     10.00      0          FUNCTIONAL 50.00 0          0
+A62-00           714.90     10.00      0          FUNCTIONAL 100.00 0          0
+A42-00           738.40     10.00      0          FUNCTIONAL 50.00 0          0
+A42L-00          721.00     10.00      0          FUNCTIONAL 100.00 0          0
+A42U-00          723.20     10.00      0          FUNCTIONAL 100.00 0          0
+A35-VOR          723.50     10.00      0          FUNCTIONAL 100.00 0          0
+A39-VOR          736.00     10.00      0          FUNCTIONAL 100.00 0          0
+A43-00           733.00     10.00      0          FUNCTIONAL 350.00 0          0
+O26-CP2          726.50     10.00      0          FUNCTIONAL 100.00 0          0
 O26-VOR          720.50     5.80       0          FUNCTIONAL 100.00 0          0
-O25-VOR          720.00     0          0          FUNCTIONAL 100.00 0          0
-O25-CP2          724.80     0          0          FUNCTIONAL 100.00 0          0
-O04-04           713.00     0          0          FUNCTIONAL 100.00 0          0
-M09-VOR          710.00     -5.50      0          FUNCTIONAL 100.00 0          0
-M16-VOR          712.80     -2.30      0          FUNCTIONAL 100.00 0          0
-M17-VOR          715.20     -5.20      0          FUNCTIONAL 100.00 0          0
-M23-VOR          713.50     -4.50      0          FUNCTIONAL 100.00 0          0
-M33-VOR          715.00     -2.50      0          FUNCTIONAL 100.00 0          0
-A62-01           714.90     0          0          FUNCTIONAL 100.00 0          0
-M01-VOR          710.00     -4.30      0          FUNCTIONAL 100.00 0          0
-M02-VOR          710.00     -2.80      0          FUNCTIONAL 100.00 0          0
-M03-VOR          710.00     -9.50      0          FUNCTIONAL 100.00 0          0
-M04-VOR          710.40     -2.10      0          FUNCTIONAL 100.00 0          0
-M05-VOR          710.00     -4.30      0          FUNCTIONAL 100.00 0          0
-M11-VOR          710.00     -4.00      0          FUNCTIONAL 100.00 0          0
-M12-VOR          710.00     -6.10      0          FUNCTIONAL 100.00 0          0
-M13-VOR          710.00     -3.80      0          FUNCTIONAL 100.00 0          0
-M14-VOR          710.00     -5.80      0          FUNCTIONAL 100.00 0          0
-M15-VOR          710.00     -2.30      0          FUNCTIONAL 100.00 0          0
-M18-VOR          717.00     -2.30      0          FUNCTIONAL 100.00 0          0
-M19-VOR          713.40     -2.10      0          FUNCTIONAL 100.00 0          0
-M20-VOR          710.00     -1.60      0          FUNCTIONAL 100.00 0          0
-M21-VOR          715.20     -2.60      0          FUNCTIONAL 100.00 0          0
-M22-VOR          714.30     -2.30      0          FUNCTIONAL 100.00 0          0
-M26-VOR          710.00     -2.50      0          FUNCTIONAL 100.00 0          0
-M27-VOR          711.80     -2.10      0          FUNCTIONAL 100.00 0          0
-M29-VOR          715.00     -4.40      0          FUNCTIONAL 100.00 0          0
-M31-VOR          744.50     -2.10      0          FUNCTIONAL 100.00 0          0
-M47-VOR          713.00     -2.00      0          FUNCTIONAL 100.00 0          0
-M48-VOR          741.40     -1.60      0          FUNCTIONAL 100.00 0          0
-M50-VOR          725.60     -2.90      0          FUNCTIONAL 100.00 0          0
-M51-VOR          721.00     -1.40      0          FUNCTIONAL 100.00 0          0
-M52-VOR          723.70     -1.80      0          FUNCTIONAL 100.00 0          0
-M53-VOR          714.90     -1.40      0          FUNCTIONAL 100.00 0          0
-M54-VOR          719.30     -2.10      0          FUNCTIONAL 100.00 0          0
-M55-VOR          725.60     -1.90      0          FUNCTIONAL 100.00 0          0
-M56-VOR          723.50     -1.80      0          FUNCTIONAL 100.00 0          0
-M57-VOR          724.90     -1.80      0          FUNCTIONAL 100.00 0          0
-M58-VOR          721.50     -1.90      0          FUNCTIONAL 100.00 0          0
-M61-VOR          725.70     -1.70      0          FUNCTIONAL 100.00 0          0
-T01-VOR          737.40     -2.00      0          FUNCTIONAL 100.00 0          0
-T02-VOR          770.70     -4.30      0          FUNCTIONAL 100.00 0          0
-A01-VOR          710.50     -0.80      0          FUNCTIONAL 100.00 0          0
-A02-VOR          710.00     -6.80      0          FUNCTIONAL 100.00 0          0
-A03-VOR          710.00     -7.30      0          FUNCTIONAL 100.00 0          0
-A04-VOR          710.00     -1.00      0          FUNCTIONAL 100.00 0          0
-A06-VOR          710.00     -7.00      0          FUNCTIONAL 100.00 0          0
-A07-VOR          710.00     -8.00      0          FUNCTIONAL 100.00 0          0
-A08-VOR          710.00     -8.20      0          FUNCTIONAL 100.00 0          0
-A09-VOR          710.00     -9.80      0          FUNCTIONAL 100.00 0          0
-A10-VOR          710.00     -6.90      0          FUNCTIONAL 100.00 0          0
-A11-VOR          710.00     -6.60      0          FUNCTIONAL 100.00 0          0
-A12-VOR          710.00     -6.20      0          FUNCTIONAL 100.00 0          0
-A13-VOR          710.00     -5.80      0          FUNCTIONAL 100.00 0          0
-A14-VOR          710.00     -5.40      0          FUNCTIONAL 100.00 0          0
-A15-VOR          710.00     0          0          FUNCTIONAL 100.00 0          0
-A16-VOR          714.40     -2.30      0          FUNCTIONAL 100.00 0          0
-A17-VOR          710.00     -3.20      0          FUNCTIONAL 100.00 0          0
-A18-VOR          710.00     -1.00      0          FUNCTIONAL 100.00 0          0
-A19-VOR          715.80     -6.40      0          FUNCTIONAL 100.00 0          0
-A20-VOR          710.00     -9.60      0          FUNCTIONAL 100.00 0          0
-A21-VOR          710.00     -1.20      0          FUNCTIONAL 100.00 0          0
-A22-VOR          716.20     -8.30      0          FUNCTIONAL 100.00 0          0
-A23-VOR          715.50     -5.90      0          FUNCTIONAL 100.00 0          0
-A25-VOR          716.50     -1.40      0          FUNCTIONAL 100.00 0          0
-A26-VOR          718.20     -0.60      0          FUNCTIONAL 100.00 0          0
-A27-VOR          715.30     -0.80      0          FUNCTIONAL 100.00 0          0
-A28-VOR          716.70     -0.80      0          FUNCTIONAL 100.00 0          0
-A29-VOR          710.40     -0.90      0          FUNCTIONAL 100.00 0          0
-A30-VOR          717.50     -1.00      0          FUNCTIONAL 100.00 0          0
-A31-VOR          717.10     -0.90      0          FUNCTIONAL 100.00 0          0
-A32-VOR          715.50     -1.60      0          FUNCTIONAL 100.00 0          0
-A33-VOR          710.00     -0.10      0          FUNCTIONAL 100.00 0          0
-A34-VOR          711.40     -1.10      0          FUNCTIONAL 100.00 0          0
-A35-01           718.00     -1.10      0          FUNCTIONAL 100.00 0          0
-A36-VOR          715.40     -0.80      0          FUNCTIONAL 100.00 0          0
-A37-VOR          710.00     -1.50      0          FUNCTIONAL 100.00 0          0
-A38-VOR          722.50     -0.80      0          FUNCTIONAL 100.00 0          0
-A40-VOR          718.00     -0.80      0          FUNCTIONAL 100.00 0          0
-A41-VOR          716.90     -1.30      0          FUNCTIONAL 100.00 0          0
-A46-VOR          722.00     -18.60     0          FUNCTIONAL 100.00 0          0
-A47-VOR          710.00     -9.00      0          FUNCTIONAL 100.00 0          0
-A48-VOR          710.00     -6.50      0          FUNCTIONAL 100.00 0          0
-A49-VOR          710.00     -1.70      0          FUNCTIONAL 100.00 0          0
-A50-VOR          710.00     -2.90      0          FUNCTIONAL 100.00 0          0
-A51-VOR          710.00     -4.90      0          FUNCTIONAL 100.00 0          0
-A56-VOR          710.00     -3.80      0          FUNCTIONAL 100.00 0          0
-A58-VOR          710.00     -7.70      0          FUNCTIONAL 100.00 0          0
-A59-VOR          710.00     -1.80      0          FUNCTIONAL 100.00 0          0
-A60-VOR          710.00     -5.40      0          FUNCTIONAL 100.00 0          0
+O25-VOR          720.00     10.00      0          FUNCTIONAL 100.00 0          0
+O25-CP2          724.80     10.00      0          FUNCTIONAL 100.00 0          0
+O04-04           713.00     10.00      0          FUNCTIONAL 100.00 0          0
+M09-VOR          710.00     10.00      0          FUNCTIONAL 100.00 0          0
+M16-VOR          712.80     10.00      0          FUNCTIONAL 100.00 0          0
+M17-VOR          715.20     10.00      0          FUNCTIONAL 100.00 0          0
+M23-VOR          713.50     10.00      0          FUNCTIONAL 100.00 0          0
+M33-VOR          715.00     10.00      0          FUNCTIONAL 100.00 0          0
+A62-01           714.90     10.00      0          FUNCTIONAL 100.00 0          0
+M01-VOR          710.00     10.00      0          FUNCTIONAL 100.00 0          0
+M02-VOR          710.00     10.00      0          FUNCTIONAL 100.00 0          0
+M03-VOR          710.00     10.00      0          FUNCTIONAL 100.00 0          0
+M04-VOR          710.40     10.00      0          FUNCTIONAL 100.00 0          0
+M05-VOR          710.00     10.00      0          FUNCTIONAL 100.00 0          0
+M11-VOR          710.00     10.00      0          FUNCTIONAL 100.00 0          0
+M12-VOR          710.00     10.00      0          FUNCTIONAL 100.00 0          0
+M13-VOR          710.00     10.00      0          FUNCTIONAL 100.00 0          0
+M14-VOR          710.00     10.00      0          FUNCTIONAL 100.00 0          0
+M15-VOR          710.00     10.00      0          FUNCTIONAL 100.00 0          0
+M18-VOR          717.00     10.00      0          FUNCTIONAL 100.00 0          0
+M19-VOR          713.40     10.00      0          FUNCTIONAL 100.00 0          0
+M20-VOR          710.00     10.00      0          FUNCTIONAL 100.00 0          0
+M21-VOR          715.20     10.00      0          FUNCTIONAL 100.00 0          0
+M22-VOR          714.30     10.00      0          FUNCTIONAL 100.00 0          0
+M26-VOR          710.00     10.00      0          FUNCTIONAL 100.00 0          0
+M27-VOR          711.80     10.00      0          FUNCTIONAL 100.00 0          0
+M29-VOR          715.00     10.00      0          FUNCTIONAL 100.00 0          0
+M31-VOR          744.50     10.00      0          FUNCTIONAL 100.00 0          0
+M47-VOR          713.00     10.00      0          FUNCTIONAL 100.00 0          0
+M48-VOR          741.40     10.00      0          FUNCTIONAL 100.00 0          0
+M50-VOR          725.60     10.00      0          FUNCTIONAL 100.00 0          0
+M51-VOR          721.00     10.00      0          FUNCTIONAL 100.00 0          0
+M52-VOR          723.70     10.00      0          FUNCTIONAL 100.00 0          0
+M53-VOR          714.90     10.00      0          FUNCTIONAL 100.00 0          0
+M54-VOR          719.30     10.00      0          FUNCTIONAL 100.00 0          0
+M55-VOR          725.60     10.00      0          FUNCTIONAL 100.00 0          0
+M56-VOR          723.50     10.00      0          FUNCTIONAL 100.00 0          0
+M57-VOR          724.90     10.00      0          FUNCTIONAL 100.00 0          0
+M58-VOR          721.50     10.00      0          FUNCTIONAL 100.00 0          0
+M61-VOR          725.70     10.00      0          FUNCTIONAL 100.00 0          0
+T01-VOR          737.40     10.00      0          FUNCTIONAL 100.00 0          0
+T02-VOR          770.70     10.00      0          FUNCTIONAL 100.00 0          0
+A01-VOR          710.50     10.00      0          FUNCTIONAL 100.00 0          0
+A02-VOR          710.00     10.00      0          FUNCTIONAL 100.00 0          0
+A03-VOR          710.00     10.00      0          FUNCTIONAL 100.00 0          0
+A04-VOR          710.00     10.00      0          FUNCTIONAL 100.00 0          0
+A06-VOR          710.00     10.00      0          FUNCTIONAL 100.00 0          0
+A07-VOR          710.00     10.00      0          FUNCTIONAL 100.00 0          0
+A08-VOR          710.00     10.00      0          FUNCTIONAL 100.00 0          0
+A09-VOR          710.00     10.00      0          FUNCTIONAL 100.00 0          0
+A10-VOR          710.00     10.00      0          FUNCTIONAL 100.00 0          0
+A11-VOR          710.00     10.00      0          FUNCTIONAL 100.00 0          0
+A12-VOR          710.00     10.00      0          FUNCTIONAL 100.00 0          0
+A13-VOR          710.00     10.00      0          FUNCTIONAL 100.00 0          0
+A14-VOR          710.00     10.00      0          FUNCTIONAL 100.00 0          0
+A15-VOR          710.00     10.00      0          FUNCTIONAL 100.00 0          0
+A16-VOR          714.40     10.00      0          FUNCTIONAL 100.00 0          0
+A17-VOR          710.00     10.00      0          FUNCTIONAL 100.00 0          0
+A18-VOR          710.00     10.00      0          FUNCTIONAL 100.00 0          0
+A19-VOR          715.80     10.00      0          FUNCTIONAL 100.00 0          0
+A20-VOR          710.00     10.00      0          FUNCTIONAL 100.00 0          0
+A21-VOR          710.00     10.00      0          FUNCTIONAL 100.00 0          0
+A22-VOR          716.20     10.00      0          FUNCTIONAL 100.00 0          0
+A23-VOR          715.50     10.00      0          FUNCTIONAL 100.00 0          0
+A25-VOR          716.50     10.00      0          FUNCTIONAL 100.00 0          0
+A26-VOR          718.20     10.00      0          FUNCTIONAL 100.00 0          0
+A27-VOR          715.30     10.00      0          FUNCTIONAL 100.00 0          0
+A28-VOR          716.70     10.00      0          FUNCTIONAL 100.00 0          0
+A29-VOR          710.40     10.00      0          FUNCTIONAL 100.00 0          0
+A30-VOR          717.50     10.00      0          FUNCTIONAL 100.00 0          0
+A31-VOR          717.10     10.00      0          FUNCTIONAL 100.00 0          0
+A32-VOR          715.50     10.00      0          FUNCTIONAL 100.00 0          0
+A33-VOR          710.00     10.00      0          FUNCTIONAL 100.00 0          0
+A34-VOR          711.40     10.00      0          FUNCTIONAL 100.00 0          0
+A35-01           718.00     10.00      0          FUNCTIONAL 100.00 0          0
+A36-VOR          715.40     10.00      0          FUNCTIONAL 100.00 0          0
+A37-VOR          710.00     10.00      0          FUNCTIONAL 100.00 0          0
+A38-VOR          722.50     10.00      0          FUNCTIONAL 100.00 0          0
+A40-VOR          718.00     10.00      0          FUNCTIONAL 100.00 0          0
+A41-VOR          716.90     10.00      0          FUNCTIONAL 100.00 0          0
+A46-VOR          722.00     10.00      0          FUNCTIONAL 100.00 0          0
+A47-VOR          710.00     10.00      0          FUNCTIONAL 100.00 0          0
+A48-VOR          710.00     10.00      0          FUNCTIONAL 100.00 0          0
+A49-VOR          710.00     10.00      0          FUNCTIONAL 100.00 0          0
+A50-VOR          710.00     10.00      0          FUNCTIONAL 100.00 0          0
+A51-VOR          710.00     10.00      0          FUNCTIONAL 100.00 0          0
+A56-VOR          710.00     10.00      0          FUNCTIONAL 100.00 0          0
+A58-VOR          710.00     10.00      0          FUNCTIONAL 100.00 0          0
+A59-VOR          710.00     10.00      0          FUNCTIONAL 100.00 0          0
+A60-VOR          710.00     10.00      0          FUNCTIONAL 100.00 0          0
 A61-VOR          710.00     1.10       0          FUNCTIONAL 100.00 0          0
-A62-VOR          711.60     -4.90      0          FUNCTIONAL 100.00 0          0
-O27-VOR          710.00     -9.80      0          FUNCTIONAL 100.00 0          0
-O28-VOR          710.00     -5.90      0          FUNCTIONAL 100.00 0          0
-O29-VOR          710.00     -4.80      0          FUNCTIONAL 100.00 0          0
-O30-VOR          710.00     -1.50      0          FUNCTIONAL 100.00 0          0
-O31-VOR          716.30     -1.60      0          FUNCTIONAL 100.00 0          0
-O32-VOR          710.00     -7.30      0          FUNCTIONAL 100.00 0          0
-O33-VOR          710.00     -2.40      0          FUNCTIONAL 100.00 0          0
-O34-VOR          710.00     -3.30      0          FUNCTIONAL 100.00 0          0
-O35-VOR          714.50     -1.10      0          FUNCTIONAL 100.00 0          0
-O36-VOR          710.00     -0.30      0          FUNCTIONAL 100.00 0          0
-O37-VOR          710.00     -0.90      0          FUNCTIONAL 100.00 0          0
-O38-VOR          710.00     -7.30      0          FUNCTIONAL 100.00 0          0
-O39-VOR          710.00     -6.70      0          FUNCTIONAL 100.00 0          0
-O40-VOR          710.00     -1.40      0          FUNCTIONAL 100.00 0          0
-O41-VOR          710.00     -5.30      0          FUNCTIONAL 100.00 0          0
-O17-VOR          782.90     -0.70      0          FUNCTIONAL 100.00 0          0
-O18-VOR          717.60     -4.70      0          FUNCTIONAL 100.00 0          0
-O19-VOR          724.50     -0.80      0          FUNCTIONAL 100.00 0          0
-O20-VOR          800.50     -0.90      0          FUNCTIONAL 100.00 0          0
-O21-VOR          729.40     -2.50      0          FUNCTIONAL 100.00 0          0
-O22-VOR          726.40     -0.90      0          FUNCTIONAL 100.00 0          0
-O23-VOR          731.20     -0.40      0          FUNCTIONAL 100.00 0          0
-O24-VOR          832.70     -1.40      0          FUNCTIONAL 100.00 0          0
-O-14-02          718.40     -6.40      0          FUNCTIONAL 100.00 0          0
-O07-02           727.00     -28.00     0          FUNCTIONAL 100.00 0          0
-O06-OR           710.00     0          0          FUNCTIONAL 100.00 0          0
-A42A-00          747.97     0          0          FUNCTIONAL 350.00 0          0
-A42A-28          748.34     -6.34      0          FUNCTIONAL 50.00 0          0
-A42-02           739.70     -11.70     0          FUNCTIONAL 100.00 0          0
+A62-VOR          711.60     10.00      0          FUNCTIONAL 100.00 0          0
+O27-VOR          710.00     10.00      0          FUNCTIONAL 100.00 0          0
+O28-VOR          710.00     10.00      0          FUNCTIONAL 100.00 0          0
+O29-VOR          710.00     10.00      0          FUNCTIONAL 100.00 0          0
+O30-VOR          710.00     10.00      0          FUNCTIONAL 100.00 0          0
+O31-VOR          716.30     10.00      0          FUNCTIONAL 100.00 0          0
+O32-VOR          710.00     10.00      0          FUNCTIONAL 100.00 0          0
+O33-VOR          710.00     10.00      0          FUNCTIONAL 100.00 0          0
+O34-VOR          710.00     10.00      0          FUNCTIONAL 100.00 0          0
+O35-VOR          714.50     10.00      0          FUNCTIONAL 100.00 0          0
+O36-VOR          710.00     10.00      0          FUNCTIONAL 100.00 0          0
+O37-VOR          710.00     10.00      0          FUNCTIONAL 100.00 0          0
+O38-VOR          710.00     10.00      0          FUNCTIONAL 100.00 0          0
+O39-VOR          710.00     10.00      0          FUNCTIONAL 100.00 0          0
+O40-VOR          710.00     10.00      0          FUNCTIONAL 100.00 0          0
+O41-VOR          710.00     10.00      0          FUNCTIONAL 100.00 0          0
+O17-VOR          782.90     10.00      0          FUNCTIONAL 100.00 0          0
+O18-VOR          717.60     10.00      0          FUNCTIONAL 100.00 0          0
+O19-VOR          724.50     10.00      0          FUNCTIONAL 100.00 0          0
+O20-VOR          800.50     10.00      0          FUNCTIONAL 100.00 0          0
+O21-VOR          729.40     10.00      0          FUNCTIONAL 100.00 0          0
+O22-VOR          726.40     10.00      0          FUNCTIONAL 100.00 0          0
+O23-VOR          731.20     10.00      0          FUNCTIONAL 100.00 0          0
+O24-VOR          832.70     10.00      0          FUNCTIONAL 100.00 0          0
+O-14-02          718.40     10.00      0          FUNCTIONAL 100.00 0          0
+O07-02           727.00     10.00      0          FUNCTIONAL 100.00 0          0
+O06-OR           710.00     10.00      0          FUNCTIONAL 100.00 0          0
+A42A-00          747.97     10.00      0          FUNCTIONAL 350.00 0          0
+A42A-28          748.34     10.00      0          FUNCTIONAL 50.00 0          0
+A42-02           739.70     10.00      0          FUNCTIONAL 100.00 0          0
 
 [CONDUITS]
 ;;Name           From             To               Length     Roughness  InOffset   OutOffset  InitFlow   MaxFlow
@@ -649,10 +665,11 @@ CUL5             A42A-00          A42-60           PC_CUL5    ON       728.00   
 [CURVES]
 ;;Name           Type       X-Value    Y-Value
 ;;-------------- ---------- ---------- ----------
-PC_CUL4          Pump3      0          0
-;
-PC_CUL5          Pump3      0          0
-;
+;; Synthesized generic pump curves — replace with actual pump data
+PC_CUL4          Pump1      0          5
+PC_CUL4                     10         10
+PC_CUL5          Pump1      0          5
+PC_CUL5                     10         10
 
 [XSECTIONS]
 ;;Link           Shape        Geom1      Geom2      Geom3      Geom4      Barrels
@@ -935,9 +952,9 @@ O22-VOR          CIRCULAR     0.67       0          0          0          1
 O23-VOR          CIRCULAR     0.67       0          0          0          1
 O24-VOR          CIRCULAR     0.67       0          0          0          1
 O-14-02          CIRCULAR     3.00       0          0          0          1
-CUL1             RECT_CLOSED  0          0          0          0          
-CUL2             RECT_CLOSED  0          0          0          0          
-CUL3             RECT_CLOSED  0          0          0          0          
+CUL1             RECT_CLOSED  1.33       1.33       0          0
+CUL2             RECT_CLOSED  2.66       2.66       0          0
+CUL3             RECT_CLOSED  1.33       1.33       0          0
 
 [LOSSES]
 ;;Link           Inlet      Outlet     Average    Flap Gate

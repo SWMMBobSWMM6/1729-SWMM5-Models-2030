@@ -20,18 +20,34 @@ INERTIAL_DAMPING     PARTIAL
 NORMAL_FLOW_LIMITED  BOTH
 MAX_TRIALS           50
 HEAD_TOLERANCE       0.0033
+START_DATE           01/01/2001
+START_TIME           00:00:00
+REPORT_START_DATE    01/01/2001
+REPORT_START_TIME    00:00:00
+END_DATE             01/02/2001
+END_TIME             00:00:00
+SWEEP_START          01/01
+SWEEP_END            12/31
+DRY_DAYS             0
+REPORT_STEP          00:15:00
+WET_STEP             00:05:00
+DRY_STEP             01:00:00
 
 [JUNCTIONS]
 ;;Name           Elev       MaxDepth   InitDepth  SurDepth   Aponded
 ;;-------------- ---------- ---------- ---------- ---------- ----------
 MH               120.00     0          0          0          0
-MH               120.00     0          0          0          0
-MH               120.00     0          0          0          0
+MH_2             120.00     0          0          0          0
+MH_3             120.00     0          0          0          0
 OUTFALL          120.00     0          0          0          0
-MH               120.00     0          0          0          0
-MH               120.00     0          0          0          0
-MH               120.00     0          0          0          0
-OUTFALL          120.00     0          0          0          0
+MH_4             120.00     0          0          0          0
+MH_5             120.00     0          0          0          0
+MH_6             120.00     0          0          0          0
+
+[OUTFALLS]
+;;Name           Elev       Type       Stage      Gated
+;;-------------- ---------- ---------- ---------- -----
+OUTFALL_2        120.00     FREE                  NO
 
 [CONDUITS]
 ;;Name           From             To               Length     Roughness  InOffset   OutOffset  InitFlow   MaxFlow
@@ -42,7 +58,7 @@ C                MH               OUTFALL          1000.00    0.0140     96.00  
 D                MH               MH               1000.00    0.0140     100.00     98.00      0          0
 E                MH               MH               1000.00    0.0140     98.00      96.00      0          0
 F                MH               OUTFALL          1000.00    0.0140     96.00      94.00      0          0
-15               MH               MH               0          0          0          0          0          0
+15               MH               MH               100.00     0.0130     0          0          0          0
 
 [XSECTIONS]
 ;;Link           Shape        Geom1      Geom2      Geom3      Geom4      Barrels
@@ -53,7 +69,7 @@ C                CIRCULAR     2.00       0          0          0          1
 D                CIRCULAR     2.00       0          0          0          1
 E                CIRCULAR     2.00       0          0          0          1
 F                CIRCULAR     2.00       0          0          0          1
-15               CIRCULAR     0          0          0          0          1
+15               CIRCULAR     1.00       0          0          0          1
 
 [LOSSES]
 ;;Link           Inlet      Outlet     Average    Flap Gate
@@ -69,19 +85,19 @@ F                0          0          0          NO
 [INFLOWS]
 ;;Node           Constituent  Time Series      Type     Mfactor  Sfactor  Baseline Pattern
 ;;-------------- ------------ ---------------- -------- -------- -------- -------- --------
-MH               FLOW         ""               FLOW     1.0      1.0      5.00
+MH_4             FLOW         ""               FLOW     1.0      1.0      5.00
 
 [COORDINATES]
 ;;Node           X-Coord            Y-Coord
 ;;-------------- ------------------ ------------------
 MH               37.64              37.64             
-MH               37.64              77.64             
-MH               37.64              117.64            
+MH_2             37.64              77.64             
+MH_3             37.64              117.64            
 OUTFALL          37.64              157.64            
-MH               77.64              37.64             
-MH               77.64              77.64             
-MH               77.64              117.64            
-OUTFALL          77.64              157.64            
+MH_4             77.64              37.64             
+MH_5             77.64              77.64             
+MH_6             77.64              117.64            
+OUTFALL_2        77.64              157.64            
 
 [MAP]
 DIMENSIONS 37.64 37.64 77.64 157.64

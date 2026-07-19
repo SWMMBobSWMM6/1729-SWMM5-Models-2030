@@ -20,11 +20,22 @@ INERTIAL_DAMPING     PARTIAL
 NORMAL_FLOW_LIMITED  BOTH
 MAX_TRIALS           50
 HEAD_TOLERANCE       0.0033
+START_DATE           01/01/2001
+START_TIME           00:00:00
+REPORT_START_DATE    01/01/2001
+REPORT_START_TIME    00:00:00
+END_DATE             01/02/2001
+END_TIME             00:00:00
+SWEEP_START          01/01
+SWEEP_END            12/31
+DRY_DAYS             0
+REPORT_STEP          00:15:00
+WET_STEP             00:05:00
+DRY_STEP             01:00:00
 
 [JUNCTIONS]
 ;;Name           Elev       MaxDepth   InitDepth  SurDepth   Aponded
 ;;-------------- ---------- ---------- ---------- ---------- ----------
-63060            129.50     0          0          0          0
 63070            138.90     0          0          0          0
 63055            120.10     0          0          0          0
 63065            135.10     0          0          0          0
@@ -82,15 +93,31 @@ HEAD_TOLERANCE       0.0033
 100Y8H           80.00      0          0          0          0
 5Y8H             80.00      0          0          0          0
 2Y8H             80.00      0          0          0          0
-March94          80.00      0          62.58      0          0
+March94          80.00      0          0          0          0
 60602            87.00      0          0          0          0
 60601            87.00      0          0          0          0
 Calibrate        0          0          0          0          0
+24inch           122.40     0          0          0          0
+36-RCP           100.05     0          0          0          0
+30"RCP           81.90      0          0          0          0
+O-LAND1          74.17      0          0          0          0
+94-CHAN          73.51      0          0          0          0
+O-LAND2          73.50      0          0          0          0
+94CHAN           73.44      0          0          0          0
+1*30RCP          81.44      0          0          0          0
+1-2.5RCP         79.76      0          0          0          0
+ORIFICE          75.24      0          0          0          0
+WEIR2            75.24      0          0          0          0
+
+[OUTFALLS]
+;;Name           Elev       Type       Stage      Gated
+;;-------------- ---------- ---------- ---------- -----
+63060            129.50     FREE                  NO
 
 [STORAGE]
 ;;Name           Elev       MaxDepth   InitDepth  Shape      Curve/Params
 ;;-------------- ---------- ---------- ---------- ---------- ----------
-64010            87.00      0          7.52       FUNCTIONAL 0 0          0
+64010            87.00      10.00      7.52       FUNCTIONAL 1000.00 0          0
 
 [CONDUITS]
 ;;Name           From             To               Length     Roughness  InOffset   OutOffset  InitFlow   MaxFlow
@@ -157,16 +184,12 @@ CD-215P          60000            100Y8H           1058.00    0.0120     73.44  
 DEWEY-ROT        64010            60600            33.00      0.0420     82.92      82.89      0          0
 D1-PIPES         60601            60600            404.00     0.0120     75.24      74.25      0          0
 D2-PIPES         60602            60600            340.00     0.0120     78.38      75.82      0          0
-Ghost            Calibrate        63065            0          0          0          0          0          0
-
-[ORIFICES]
-;;Name           From             To               Type       Offset     Qcoeff     Gated    CloseTime
-;;-------------- ---------------- ---------------- ---------- ---------- ---------- -------- ----------
-WEIR1            ORIFICE          60601            SIDE       75.24      0.650      NO       0
+Ghost            Calibrate        63065            100.00     0.0130     0          0          0          0
 
 [WEIRS]
 ;;Name           From             To               Type       CrestHt    Qcoeff     Gated    EndCon   EndCoeff   Surcharge
 ;;-------------- ---------------- ---------------- ---------- ---------- ---------- -------- -------- ---------- ----------
+WEIR1            ORIFICE          60601            TRANSVERSE 77.21      1.840      NO       0        0          YES
 D2WEIR           WEIR2            60602            TRANSVERSE 77.37      1.840      NO       0        0          YES
 
 [XSECTIONS]
@@ -178,9 +201,9 @@ D2WEIR           WEIR2            60602            TRANSVERSE 77.37      1.840  
 24077            CIRCULAR     3.00       0          0          0          1
 24076            CIRCULAR     2.50       0          0          0          2
 24074            CIRCULAR     2.50       0          0          0          2
-24067            TRAPEZOIDAL  6.00       4.00       0          0          1
+24067            TRAPEZOIDAL  6.00       4.00       1          1          1
 24065            CIRCULAR     2.50       0          0          0          2
-24061            TRAPEZOIDAL  6.00       4.00       0          0          1
+24061            TRAPEZOIDAL  6.00       4.00       1          1          1
 24050            CIRCULAR     3.00       0          0          0          1
 24055            CIRCULAR     2.50       0          0          0          1
 24056            CIRCULAR     2.50       0          0          0          1
@@ -231,12 +254,12 @@ CD-215P          RECT_CLOSED  10.00      10.00      0          0          1
 2-3RCP           CIRCULAR     3.00       0          0          0          2
 24011            CIRCULAR     3.50       0          0          0          1
 22025            CIRCULAR     2.50       0          0          0          1
-DEWEY-ROT        IRREGULAR    3.58       0          0          0          1
+DEWEY-ROT        TRAPEZOIDAL  3.58       10.00      2          2          1
 D1-PIPES         CIRCULAR     3.00       0          0          0          3
 D2-PIPES         CIRCULAR     3.00       0          0          0          3
-Ghost            CIRCULAR     0          0          0          0          1
-WEIR1            RECT_CLOSED  3.00       0          0          0          
-D2WEIR           RECT_OPEN    0          21.00      0          0          
+Ghost            CIRCULAR     1.00       0          0          0          1
+WEIR1            RECT_OPEN    1.00       18.00      0          0
+D2WEIR           RECT_OPEN    1.00       21.00      0          0
 
 [LOSSES]
 ;;Link           Inlet      Outlet     Average    Flap Gate

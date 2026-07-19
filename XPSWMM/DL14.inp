@@ -14,17 +14,28 @@ LINK_OFFSETS         DEPTH
 MIN_SLOPE            0.0
 ALLOW_PONDING        NO
 SKIP_STEADY_STATE    NO
-ROUTING_STEP         00:00:60
+ROUTING_STEP         00:01:00
 VARIABLE_STEP        0.75
 INERTIAL_DAMPING     PARTIAL
 NORMAL_FLOW_LIMITED  BOTH
 MAX_TRIALS           50
 HEAD_TOLERANCE       0.0033
+START_DATE           01/01/2001
+START_TIME           00:00:00
+REPORT_START_DATE    01/01/2001
+REPORT_START_TIME    00:00:00
+END_DATE             01/02/2001
+END_TIME             00:00:00
+SWEEP_START          01/01
+SWEEP_END            12/31
+DRY_DAYS             0
+REPORT_STEP          00:15:00
+WET_STEP             00:05:00
+DRY_STEP             01:00:00
 
 [JUNCTIONS]
 ;;Name           Elev       MaxDepth   InitDepth  SurDepth   Aponded
 ;;-------------- ---------- ---------- ---------- ---------- ----------
-5M-12            766.00     0          0          0          0
 5M-14            770.00     0          0          0          0
 5M-333           780.00     0          0          0          0
 5M-95A           970.10     0          0          0          0
@@ -52,10 +63,15 @@ OF-2             769.00     0          0          0          0
 5M27+48          768.00     0          0          0          0
 5M33+84          771.00     0          0          0          0
 
+[OUTFALLS]
+;;Name           Elev       Type       Stage      Gated
+;;-------------- ---------- ---------- ---------- -----
+5M-12            766.00     FREE                  NO
+
 [STORAGE]
 ;;Name           Elev       MaxDepth   InitDepth  Shape      Curve/Params
 ;;-------------- ---------- ---------- ---------- ---------- ----------
-5M-95B           772.58     0          0          FUNCTIONAL 15.00 0          0
+5M-95B           772.58     10.00      0          FUNCTIONAL 15.00 0          0
 
 [CONDUITS]
 ;;Name           From             To               Length     Roughness  InOffset   OutOffset  InitFlow   MaxFlow
@@ -91,13 +107,14 @@ DogLeg           5M-95A           5M-14            3970.00    0.0140     751.77 
 [PUMPS]
 ;;Name           From             To               PumpCurve  Status   Startup    Shutoff
 ;;-------------- ---------------- ---------------- ---------- -------- ---------- ----------
-DogLeg           5M-95B           5M-95A           PC_DogLeg  ON       751.58     750.58    
+DogLeg_2         5M-95B           5M-95A           PC_DogLeg_2 ON       751.58     750.58    
 
 [CURVES]
 ;;Name           Type       X-Value    Y-Value
 ;;-------------- ---------- ---------- ----------
-PC_DogLeg        Pump3      0          0
-;
+;; Synthesized generic pump curves — replace with actual pump data
+PC_DogLeg_2      Pump1      0          5
+PC_DogLeg_2                 10         10
 
 [XSECTIONS]
 ;;Link           Shape        Geom1      Geom2      Geom3      Geom4      Barrels

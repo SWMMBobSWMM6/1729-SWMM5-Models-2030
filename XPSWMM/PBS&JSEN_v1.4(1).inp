@@ -14,11 +14,23 @@ LINK_OFFSETS         DEPTH
 MIN_SLOPE            0.0
 ALLOW_PONDING        NO
 SKIP_STEADY_STATE    NO
-ROUTING_STEP         00:00:60
+ROUTING_STEP         00:01:00
 VARIABLE_STEP        0.75
 INERTIAL_DAMPING     PARTIAL
 NORMAL_FLOW_LIMITED  BOTH
 MAX_TRIALS           50
+START_DATE           01/01/2001
+START_TIME           00:00:00
+REPORT_START_DATE    01/01/2001
+REPORT_START_TIME    00:00:00
+END_DATE             01/02/2001
+END_TIME             00:00:00
+SWEEP_START          01/01
+SWEEP_END            12/31
+DRY_DAYS             0
+REPORT_STEP          00:15:00
+WET_STEP             00:05:00
+DRY_STEP             01:00:00
 
 [JUNCTIONS]
 ;;Name           Elev       MaxDepth   InitDepth  SurDepth   Aponded
@@ -28,19 +40,23 @@ TJunc1           0          0          0          0          0
 Tjunc2           0          0          0          0          0
 Catch2           0          0          0          0          0
 Tjunc3           0          0          0          0          0
-Catch3           0          0          0          0          0
+
+[OUTFALLS]
+;;Name           Elev       Type       Stage      Gated
+;;-------------- ---------- ---------- ---------- -----
+Catch3           0          FREE                  NO
 
 [STORAGE]
 ;;Name           Elev       MaxDepth   InitDepth  Shape      Curve/Params
 ;;-------------- ---------- ---------- ---------- ---------- ----------
-JuncT/E          23.00      0          0          FUNCTIONAL 18.00 0          0
-LFJUNC1          22.00      0          0          FUNCTIONAL 18.00 0          0
-LFJUNC2          22.00      0          0          FUNCTIONAL 18.00 0          0
-PumpUS           21.00      0          0          FUNCTIONAL 100.00 0          0
-Outfall          18.00      0          0          FUNCTIONAL 18.00 0          0
-PumpDS           30.00      0          0          FUNCTIONAL 18.00 0          0
-23               20.00      0          0          FUNCTIONAL 18.00 0          0
-Outfall          19.00      0          0          FUNCTIONAL 18.00 0          0
+JuncT/E          23.00      10.00      0          FUNCTIONAL 18.00 0          0
+LFJUNC1          22.00      10.00      0          FUNCTIONAL 18.00 0          0
+LFJUNC2          22.00      10.00      0          FUNCTIONAL 18.00 0          0
+PumpUS           21.00      10.00      0          FUNCTIONAL 100.00 0          0
+Outfall          18.00      10.00      0          FUNCTIONAL 18.00 0          0
+PumpDS           30.00      10.00      0          FUNCTIONAL 18.00 0          0
+23               20.00      10.00      0          FUNCTIONAL 18.00 0          0
+Outfall_2        19.00      10.00      0          FUNCTIONAL 18.00 0          0
 
 [CONDUITS]
 ;;Name           From             To               Length     Roughness  InOffset   OutOffset  InitFlow   MaxFlow
@@ -51,18 +67,25 @@ Tchannel1        Tjunc2           JuncT/E          375.00     0.0140     0      
 Tpipe5           Catch2           Tjunc3           250.00     0.0140     0          0          0          0
 Tpipe4           Tjunc3           Tjunc2           350.00     0.0140     0          0          0          0
 LowFlow          JuncT/E          LFJUNC1          150.00     0.0140     18.00      17.00      0          0
-215.1            LFJUNC1          LFJUNC2          500.00     0          18.00      16.00      0          0
-LFC              LFJUNC2          PumpUS           300.00     0          16.00      15.00      0          0
+215.1            LFJUNC1          LFJUNC2          500.00     0.0130     18.00      16.00      0          0
+LFC              LFJUNC2          PumpUS           300.00     0.0130     16.00      15.00      0          0
 Pipe             PumpUS           Outfall          100.00     0.0140     14.00      13.00      0          0
 UpperPipe        JuncT/E          PumpUS           800.00     0.0140     20.00      17.00      0          0
-PumpOut          PumpDS           23               200.00     0          24.00      14.50      0          0
-Pipe             23               Outfall          200.00     0          14.00      13.00      0          0
+PumpOut          PumpDS           23               200.00     0.0130     24.00      14.50      0          0
+Pipe_2           23               Outfall          200.00     0.0130     14.00      13.00      0          0
 Tpipe2           Catch3           TJunc1           300.00     0.0140     0          0          0          0
 
-[ORIFICES]
-;;Name           From             To               Type       Offset     Qcoeff     Gated    CloseTime
-;;-------------- ---------------- ---------------- ---------- ---------- ---------- -------- ----------
-222.1            PumpUS           PumpDS           SIDE       0          0.650      NO       0
+[PUMPS]
+;;Name           From             To               PumpCurve  Status   Startup    Shutoff
+;;-------------- ---------------- ---------------- ---------- -------- ---------- ----------
+222.1            PumpUS           PumpDS           PC_222_1   ON       1.00       0         
+
+[CURVES]
+;;Name           Type       X-Value    Y-Value
+;;-------------- ---------- ---------- ----------
+;; Synthesized generic pump curves — replace with actual pump data
+PC_222_1         Pump1      0          5
+PC_222_1                    10         10
 
 [XSECTIONS]
 ;;Link           Shape        Geom1      Geom2      Geom3      Geom4      Barrels
@@ -78,9 +101,8 @@ LFC              CIRCULAR     3.00       0          0          0          1
 Pipe             CIRCULAR     1.00       0          0          0          1
 UpperPipe        CIRCULAR     2.00       0          0          0          1
 PumpOut          CIRCULAR     3.00       0          0          0          1
-Pipe             CIRCULAR     3.00       0          0          0          1
+Pipe_2           CIRCULAR     3.00       0          0          0          1
 Tpipe2           CIRCULAR     1.50       0          0          0          1
-222.1            RECT_CLOSED  14.00      0          0          0          
 
 [LOSSES]
 ;;Link           Inlet      Outlet     Average    Flap Gate
@@ -96,7 +118,7 @@ LFC              0          0          0          NO
 Pipe             0          0          0          NO
 UpperPipe        0          0          0          NO
 PumpOut          0          0          0          NO
-Pipe             0          0          0          NO
+Pipe_2           0          0          0          NO
 Tpipe2           0          0          0          NO
 
 [COORDINATES]
@@ -114,7 +136,7 @@ PumpUS           96.11              120.20
 Outfall          119.31             120.20            
 PumpDS           96.11              142.59            
 23               96.11              164.58            
-Outfall          117.41             164.58            
+Outfall_2        117.41             164.58            
 Catch3           16.11              80.90             
 
 [MAP]

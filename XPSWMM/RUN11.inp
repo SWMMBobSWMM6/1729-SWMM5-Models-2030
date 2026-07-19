@@ -14,59 +14,77 @@ LINK_OFFSETS         DEPTH
 MIN_SLOPE            0.0
 ALLOW_PONDING        NO
 SKIP_STEADY_STATE    NO
-ROUTING_STEP         00:00:60
+ROUTING_STEP         00:01:00
 VARIABLE_STEP        0.75
 INERTIAL_DAMPING     PARTIAL
 NORMAL_FLOW_LIMITED  BOTH
 MAX_TRIALS           50
 HEAD_TOLERANCE       0.0033
+START_DATE           01/01/2001
+START_TIME           00:00:00
+REPORT_START_DATE    01/01/2001
+REPORT_START_TIME    00:00:00
+END_DATE             01/02/2001
+END_TIME             00:00:00
+SWEEP_START          01/01
+SWEEP_END            12/31
+DRY_DAYS             0
+REPORT_STEP          00:15:00
+WET_STEP             00:05:00
+DRY_STEP             01:00:00
 
 [JUNCTIONS]
 ;;Name           Elev       MaxDepth   InitDepth  SurDepth   Aponded
 ;;-------------- ---------- ---------- ---------- ---------- ----------
-17               7.50       0          20.40      0          0
-21               7.50       0          22.40      0          0
-29               7.50       0          13.20      0          0
-31               7.50       0          4.70       0          0
-43               7.50       0          10.60      0          0
-44               7.00       0          10.60      0          0
-45               7.00       0          5.82       0          0
-46               7.00       0          9.10       0          0
-47               7.50       0          4.94       0          0
-59               7.00       0          4.94       0          0
-62               7.00       0          9.10       0          0
-64               7.50       0          10.60      0          0
+17               7.50       0          0          0          0
+21               7.50       0          0          0          0
+29               7.50       0          0          0          0
+43               7.50       0          0          0          0
+44               7.00       0          0          0          0
+45               7.00       0          0          0          0
+46               7.00       0          0          0          0
+47               7.50       0          0          0          0
+59               7.00       0          0          0          0
+62               7.00       0          0          0          0
+64               7.50       0          0          0          0
+
+[OUTFALLS]
+;;Name           Elev       Type       Stage      Gated
+;;-------------- ---------- ---------- ---------- -----
+31               7.50       FREE                  NO
 
 [STORAGE]
 ;;Name           Elev       MaxDepth   InitDepth  Shape      Curve/Params
 ;;-------------- ---------- ---------- ---------- ---------- ----------
-basin            8.10       0          20.40      FUNCTIONAL 0 0          0
-4-c              7.50       0          18.20      FUNCTIONAL 0 0          0
-basin            7.50       0          13.20      FUNCTIONAL 0 0          0
-basin            7.50       0          22.40      FUNCTIONAL 0 0          0
-basin            7.50       0          18.20      FUNCTIONAL 0 0          0
-basin            8.10       0          10.60      FUNCTIONAL 0 0          0
-basin            7.00       0          10.60      FUNCTIONAL 0 0          0
-basin            7.00       0          9.10       FUNCTIONAL 0 0          0
+basin            8.10       10.00      10.00      FUNCTIONAL 1000.00 0          0
+4-c              7.50       10.00      10.00      FUNCTIONAL 1000.00 0          0
+basin_2          7.50       10.00      10.00      FUNCTIONAL 1000.00 0          0
+basin_3          7.50       10.00      10.00      FUNCTIONAL 1000.00 0          0
+basin_4          7.50       10.00      10.00      FUNCTIONAL 1000.00 0          0
+basin_5          8.10       10.00      10.00      FUNCTIONAL 1000.00 0          0
+basin_6          7.00       10.00      10.00      FUNCTIONAL 1000.00 0          0
+basin_7          7.00       10.00      9.10       FUNCTIONAL 1000.00 0          0
 
 [CONDUITS]
 ;;Name           From             To               Length     Roughness  InOffset   OutOffset  InitFlow   MaxFlow
 ;;-------------- ---------------- ---------------- ---------- ---------- ---------- ---------- ---------- ----------
-4-e              basin            17               1270.00    0.0200     -15.70     -15.70     0          0
+4-e              basin            17               1270.00    0.0200     0          0          0          0
 30"              17               21               85.00      0.0150     0.85       0.60       0          0
-4-d              basin            21               2870.00    0.0200     -17.70     -17.70     0          0
+4-d              basin            21               2870.00    0.0200     0          0          0          0
 42"              21               4-c              141.00     0.0150     0.90       0.36       0          0
-4-c              basin            4-c              500.00     0.0200     -13.50     -13.50     0          0
+4-c              basin            4-c              500.00     0.0200     0          0          0          0
 48"              4-c              29               113.00     0.0150     0.42       0.03       0          0
-4-b              basin            29               1260.00    0.0200     -8.50      -8.50      0          0
+4-b              basin            29               1260.00    0.0200     0          0          0          0
 60"              29               31               212.00     0.0150     1.42       1.30       0          0
-2a-e             64               43               2600.00    0.0200     -5.90      -5.90      0          0
-2a-d             44               basin            1270.00    0.0200     -5.90      -5.90      0          0
-2a-c             basin            45               1100.00    0.0200     -1.12      -1.12      0          0
+weir_4           basin            basin            50.00      0.0140     6.84       6.84       0          0
+2a-e             64               43               2600.00    0.0200     0          0          0          0
+2a-d             44               basin            1270.00    0.0200     0          0          0          0
+2a-c             basin            45               1100.00    0.0200     0          0          0          0
 2-36"            45               46               70.00      0.0300     0.53       0.53       0          0
-2a-b             62               46               527.00     0.0200     -4.40      -4.40      0          0
-2-30"            44               43               100.00     0.0300     -1.77      -1.77      0          0
-2-72"            59               47               70.00      0.0300     -0.24      -0.24      0          0
+2a-b             62               46               527.00     0.0200     0          0          0          0
+2-60"            43               46               71.00      0.0300     0          0          0          0
+2-30"            44               43               100.00     0.0300     0          0          0          0
+2-72"            59               47               70.00      0.0300     0          0          0          0
 
 [WEIRS]
 ;;Name           From             To               Type       CrestHt    Qcoeff     Gated    EndCon   EndCoeff   Surcharge
@@ -74,41 +92,46 @@ basin            7.00       0          9.10       FUNCTIONAL 0 0          0
 weir-1           basin            basin            TRANSVERSE 7.50       1.840      NO       0        0          YES
 weir-2           basin            basin            TRANSVERSE 7.50       1.840      NO       0        0          YES
 weir-3           basin            basin            TRANSVERSE 7.50       1.840      NO       0        0          YES
-weir 4           basin            basin            TRANSVERSE 7.50       1.840      NO       0        0          YES
-2-60"            43               46               TRANSVERSE 0          1.840      NO       0        0          YES
 2-21             basin            62               TRANSVERSE 7.00       1.840      NO       0        0          YES
 2a-36"           basin            64               TRANSVERSE 7.00       1.840      NO       0        0          YES
 
 [PUMPS]
 ;;Name           From             To               PumpCurve  Status   Startup    Shutoff
 ;;-------------- ---------------- ---------------- ---------- -------- ---------- ----------
-ps-2a            46               59               *          ON       0          0         
+ps-2a            46               59               PC_ps-2a   ON       1.00       0         
+
+[CURVES]
+;;Name           Type       X-Value    Y-Value
+;;-------------- ---------- ---------- ----------
+;; Synthesized generic pump curves — replace with actual pump data
+PC_ps-2a         Pump1      0          5
+PC_ps-2a                    10         10
 
 [XSECTIONS]
 ;;Link           Shape        Geom1      Geom2      Geom3      Geom4      Barrels
 ;;-------------- ------------ ---------- ---------- ---------- ---------- ----------
-4-e              TRAPEZOIDAL  23.00      44.00      0          0          1
+4-e              TRAPEZOIDAL  23.00      44.00      1          1          1
 30"              CIRCULAR     2.50       0          0          0          1
-4-d              TRAPEZOIDAL  25.00      16.00      0          0          1
+4-d              TRAPEZOIDAL  25.00      16.00      1          1          1
 42"              CIRCULAR     3.50       0          0          0          1
-4-c              TRAPEZOIDAL  21.00      56.00      0          0          1
+4-c              TRAPEZOIDAL  21.00      56.00      1          1          1
 48"              CIRCULAR     4.00       0          0          0          1
-4-b              TRAPEZOIDAL  16.00      60.00      0          0          1
+4-b              TRAPEZOIDAL  16.00      60.00      1          1          1
 60"              CIRCULAR     5.00       0          0          0          1
-2a-e             TRAPEZOIDAL  13.40      270.00     0          0          1
-2a-d             TRAPEZOIDAL  12.90      159.00     0          0          1
-2a-c             TRAPEZOIDAL  8.12       130.00     0          0          1
+weir_4           TRAPEZOIDAL  1.26       10.00      2          2          1
+2a-e             TRAPEZOIDAL  13.40      270.00     1          1          1
+2a-d             TRAPEZOIDAL  12.90      159.00     1          1          1
+2a-c             TRAPEZOIDAL  8.12       130.00     1          1          1
 2-36"            CIRCULAR     3.00       0          0          0          1
-2a-b             TRAPEZOIDAL  11.40      70.00      0          0          1
+2a-b             TRAPEZOIDAL  11.40      70.00      1          1          1
+2-60"            CIRCULAR     5.00       0          0          0          1
 2-30"            CIRCULAR     2.50       0          0          0          1
 2-72"            CIRCULAR     6.00       0          0          0          1
-weir-1           RECT_OPEN    0          300.00     0          0          
-weir-2           RECT_OPEN    0          300.00     0          0          
-weir-3           RECT_OPEN    0          300.00     0          0          
-weir 4           RECT_OPEN    0          250.00     0          0          
-2-60"            RECT_OPEN    0          0          0          0          
-2-21             RECT_OPEN    0          300.00     0          0          
-2a-36"           RECT_OPEN    0          300.00     0          0          
+weir-1           RECT_OPEN    1.00       300.00     0          0
+weir-2           RECT_OPEN    1.00       300.00     0          0
+weir-3           RECT_OPEN    1.00       300.00     0          0
+2-21             RECT_OPEN    1.00       300.00     0          0
+2a-36"           RECT_OPEN    1.00       300.00     0          0
 
 [LOSSES]
 ;;Link           Inlet      Outlet     Average    Flap Gate
@@ -121,11 +144,13 @@ weir 4           RECT_OPEN    0          250.00     0          0
 48"              0          0          0          NO
 4-b              0          0          0          NO
 60"              0          0          0          NO
+weir_4           0          0          0          NO
 2a-e             0          0          0          NO
 2a-d             0          0          0          NO
 2a-c             0          0          0          NO
 2-36"            0          0          0          NO
 2a-b             0          0          0          NO
+2-60"            0          0          0          NO
 2-30"            0          0          0          NO
 2-72"            0          0          0          NO
 
@@ -138,12 +163,12 @@ basin            97.64              157.64
 4-c              47.64              87.64             
 29               77.64              57.64             
 31               97.64              7.64              
-basin            97.64              67.64             
-basin            97.64              127.64            
-basin            97.64              97.64             
-basin            117.64             157.64            
-basin            107.64             107.64            
-basin            107.64             37.64             
+basin_2          97.64              67.64             
+basin_3          97.64              127.64            
+basin_4          97.64              97.64             
+basin_5          117.64             157.64            
+basin_6          107.64             107.64            
+basin_7          107.64             37.64             
 43               147.64             157.64            
 44               137.64             127.64            
 45               127.64             87.64             

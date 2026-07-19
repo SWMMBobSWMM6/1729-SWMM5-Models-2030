@@ -20,6 +20,18 @@ INERTIAL_DAMPING     PARTIAL
 NORMAL_FLOW_LIMITED  BOTH
 MAX_TRIALS           50
 HEAD_TOLERANCE       .001
+START_DATE           01/01/2001
+START_TIME           00:00:00
+REPORT_START_DATE    01/01/2001
+REPORT_START_TIME    00:00:00
+END_DATE             01/02/2001
+END_TIME             00:00:00
+SWEEP_START          01/01
+SWEEP_END            12/31
+DRY_DAYS             0
+REPORT_STEP          00:15:00
+WET_STEP             00:05:00
+DRY_STEP             01:00:00
 
 [JUNCTIONS]
 ;;Name           Elev       MaxDepth   InitDepth  SurDepth   Aponded
@@ -31,7 +43,6 @@ E                110.00     0          0          0          0
 D                110.00     0          0          0          0
 C                110.00     0          0          0          0
 B                110.00     0          0          0          0
-STWEast          110.00     0          0          0          0
 N                110.00     0          0          0          0
 P                110.00     0          0          0          0
 Q                110.00     0          0          0          0
@@ -42,12 +53,17 @@ Lcon             110.00     0          0          0          0
 I                110.00     0          0          0          0
 Dcon             110.00     0          0          0          0
 
+[OUTFALLS]
+;;Name           Elev       Type       Stage      Gated
+;;-------------- ---------- ---------- ---------- -----
+STWEast          110.00     FREE                  NO
+
 [STORAGE]
 ;;Name           Elev       MaxDepth   InitDepth  Shape      Curve/Params
 ;;-------------- ---------- ---------- ---------- ---------- ----------
-K                110.00     0          0          FUNCTIONAL 25.00 0          0
-L                110.00     0          0          FUNCTIONAL 25.00 0          0
-M                110.00     0          0          FUNCTIONAL 25.00 0          0
+K                110.00     10.00      0          FUNCTIONAL 25.00 0          0
+L                110.00     10.00      0          FUNCTIONAL 25.00 0          0
+M                110.00     10.00      0          FUNCTIONAL 25.00 0          0
 
 [CONDUITS]
 ;;Name           From             To               Length     Roughness  InOffset   OutOffset  InitFlow   MaxFlow
@@ -70,7 +86,7 @@ L_con            L                Lcon             614.00     0.0110     96.30  
 N-K_2            Mcon             Lcon             1955.00    0.0110     93.96      92.98      0          0
 I-H              I                H                8000.00    0.0110     100.00     96.00      0          0
 E-C_2            Dcon             C                2972.00    0.0110     89.58      88.09      0          0
-44               Q                Dcon             0          0          0          0          0          0
+44               Q                Dcon             100.00     0.0130     0          0          0          0
 
 [XSECTIONS]
 ;;Link           Shape        Geom1      Geom2      Geom3      Geom4      Barrels
@@ -93,7 +109,7 @@ L_con            CIRCULAR     2.00       0          0          0          1
 N-K_2            CIRCULAR     5.00       0          0          0          1
 I-H              CIRCULAR     3.00       0          0          0          1
 E-C_2            CIRCULAR     4.50       0          0          0          1
-44               CIRCULAR     0          0          0          0          1
+44               CIRCULAR     1.00       0          0          0          1
 
 [LOSSES]
 ;;Link           Inlet      Outlet     Average    Flap Gate

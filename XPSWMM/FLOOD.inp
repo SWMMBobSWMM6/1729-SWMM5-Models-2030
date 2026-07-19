@@ -20,26 +20,45 @@ INERTIAL_DAMPING     PARTIAL
 NORMAL_FLOW_LIMITED  BOTH
 MAX_TRIALS           50
 HEAD_TOLERANCE       .001
+START_DATE           01/01/2001
+START_TIME           00:00:00
+REPORT_START_DATE    01/01/2001
+REPORT_START_TIME    00:00:00
+END_DATE             01/02/2001
+END_TIME             00:00:00
+SWEEP_START          01/01
+SWEEP_END            12/31
+DRY_DAYS             0
+REPORT_STEP          00:15:00
+WET_STEP             00:05:00
+DRY_STEP             01:00:00
 
 [JUNCTIONS]
 ;;Name           Elev       MaxDepth   InitDepth  SurDepth   Aponded
 ;;-------------- ---------- ---------- ---------- ---------- ----------
 1                110.00     0          0          0          0
 2                110.00     0          0          0          0
-4                110.00     0          0          0          0
-Node_205         99.00      0          0.00       0          0
+Node_205         99.00      0          0          0          0
 1b               110.00     0          0          0          0
 4b               110.00     0          0          0          0
-Node_210         99.00      0          0.00       0          0
+Node_210         99.00      0          0          0          0
 1a               110.00     0          0          0          0
 2a               110.00     0          0          0          0
 4a               110.00     0          0          0          0
-Node_219         99.00      0          0.00       0          0
+Node_219         99.00      0          0          0          0
+trap             100.00     0          0          0          0
+trapb            100.00     0          0          0          0
+trapa            100.00     0          0          0          0
+
+[OUTFALLS]
+;;Name           Elev       Type       Stage      Gated
+;;-------------- ---------- ---------- ---------- -----
+4                110.00     FREE                  NO
 
 [STORAGE]
 ;;Name           Elev       MaxDepth   InitDepth  Shape      Curve/Params
 ;;-------------- ---------- ---------- ---------- ---------- ----------
-2b               110.00     0          0          FUNCTIONAL 1000.00 0          0
+2b               110.00     10.00      0          FUNCTIONAL 1000.00 0          0
 
 [CONDUITS]
 ;;Name           From             To               Length     Roughness  InOffset   OutOffset  InitFlow   MaxFlow
@@ -48,18 +67,8 @@ sub              trap             2                100.00     0.0140     100.00 
 5                2                4                100.00     0.0140     99.00      98.00      0          0
 subb             trapb            2b               100.00     0.0140     100.00     99.00      0          0
 5b               2b               4b               100.00     0.0140     99.00      98.00      0          0
+suba             trapa            2a               100.00     0.0140     100.00     99.00      0          0
 5a               2a               4a               100.00     0.0140     99.00      98.00      0          0
-
-[PUMPS]
-;;Name           From             To               PumpCurve  Status   Startup    Shutoff
-;;-------------- ---------------- ---------------- ---------- -------- ---------- ----------
-suba             trapa            2a               PC_suba    ON       0          0         
-
-[CURVES]
-;;Name           Type       X-Value    Y-Value
-;;-------------- ---------- ---------- ----------
-PC_suba          Pump3      0          0
-;
 
 [XSECTIONS]
 ;;Link           Shape        Geom1      Geom2      Geom3      Geom4      Barrels
@@ -68,6 +77,7 @@ sub              CIRCULAR     2.00       0          0          0          1
 5                CIRCULAR     2.00       2.00       0          0          1
 subb             CIRCULAR     2.00       0          0          0          1
 5b               CIRCULAR     2.00       2.00       0          0          1
+suba             CIRCULAR     2.00       0          0          0          1
 5a               CIRCULAR     2.00       2.00       0          0          1
 
 [LOSSES]
@@ -77,6 +87,7 @@ sub              0          0          0          NO
 5                0          0          0          NO
 subb             0          0          0          NO
 5b               0          0          0          NO
+suba             0          0          0          NO
 5a               0          0          0          NO
 
 [INFLOWS]

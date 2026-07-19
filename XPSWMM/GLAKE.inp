@@ -19,6 +19,18 @@ VARIABLE_STEP        0.75
 INERTIAL_DAMPING     NONE
 NORMAL_FLOW_LIMITED  BOTH
 MAX_TRIALS           50
+START_DATE           01/01/2001
+START_TIME           00:00:00
+REPORT_START_DATE    01/01/2001
+REPORT_START_TIME    00:00:00
+END_DATE             01/02/2001
+END_TIME             00:00:00
+SWEEP_START          01/01
+SWEEP_END            12/31
+DRY_DAYS             0
+REPORT_STEP          00:15:00
+WET_STEP             00:05:00
+DRY_STEP             01:00:00
 
 [JUNCTIONS]
 ;;Name           Elev       MaxDepth   InitDepth  SurDepth   Aponded
@@ -34,7 +46,6 @@ MAX_TRIALS           50
 25               200.00     0          0          0          0
 15               169.00     0          0          0          0
 6                160.00     0          0          0          0
-5                155.20     0          0          0          0
 118              0          0          0          0          0
 109              0          0          0          0          0
 115              0          0          0          0          0
@@ -55,6 +66,11 @@ MAX_TRIALS           50
 175              0          0          0          0          0
 185              0          0          0          0          0
 195              0          0          0          0          0
+
+[OUTFALLS]
+;;Name           Elev       Type       Stage      Gated
+;;-------------- ---------- ---------- ---------- -----
+5                155.20     FREE                  NO
 
 [CONDUITS]
 ;;Name           From             To               Length     Roughness  InOffset   OutOffset  InitFlow   MaxFlow
@@ -104,9 +120,9 @@ MAX_TRIALS           50
 20               CIRCULAR     3.50       0          0          0          1
 11               CIRCULAR     4.00       0          0          0          1
 10               CIRCULAR     4.00       0          0          0          1
-124              TRAPEZOIDAL  2.00       3.00       0          0          1
-119              TRAPEZOIDAL  1.00       2.00       0          0          1
-116              TRAPEZOIDAL  2.00       5.00       0          0          1
+124              TRAPEZOIDAL  2.00       3.00       1          1          1
+119              TRAPEZOIDAL  1.00       2.00       1          1          1
+116              TRAPEZOIDAL  2.00       5.00       1          1          1
 108              CIRCULAR     1.50       0          0          0          1
 106              CIRCULAR     1.50       0          0          0          1
 94               CIRCULAR     2.50       0          0          0          1

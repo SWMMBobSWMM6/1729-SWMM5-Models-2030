@@ -20,6 +20,18 @@ INERTIAL_DAMPING     PARTIAL
 NORMAL_FLOW_LIMITED  BOTH
 MAX_TRIALS           100
 HEAD_TOLERANCE       0.0033
+START_DATE           01/01/2001
+START_TIME           00:00:00
+REPORT_START_DATE    01/01/2001
+REPORT_START_TIME    00:00:00
+END_DATE             01/02/2001
+END_TIME             00:00:00
+SWEEP_START          01/01
+SWEEP_END            12/31
+DRY_DAYS             0
+REPORT_STEP          00:15:00
+WET_STEP             00:05:00
+DRY_STEP             01:00:00
 
 [JUNCTIONS]
 ;;Name           Elev       MaxDepth   InitDepth  SurDepth   Aponded
@@ -71,7 +83,6 @@ HEAD_TOLERANCE       0.0033
 14125            29.12      0          0          0          0
 14127            31.36      0          0          0          0
 14129            32.82      0          0          0          0
-10000            25.00      0          0          0          0
 10308            17.52      0          0          0          0
 10310            17.55      0          0          0          0
 10107            19.20      0          0          0          0
@@ -163,14 +174,14 @@ HEAD_TOLERANCE       0.0033
 12101            19.59      0          0          0          0
 12102            19.83      0          0          0          0
 10339            35.00      0          0          0          0
-U12305           25.00      0          0.22       0          0
+U12305           25.00      0          0          0          0
 U12304           25.00      0          0          0          0
 U12306           25.00      0          0          0          0
-1000.4           24.00      0          5.60       0          0
+1000.4           24.00      0          0          0          0
 midpoint         30.00      0          0          0          0
-Pumpout          25.00      0          3.80       0          0
+Pumpout          25.00      0          0          0          0
 B                35.00      0          0          0          0
-BPumpout         25.00      0          3.80       0          0
+BPumpout         25.00      0          0          0          0
 CUTOFF4          27.97      0          0          0          0
 CUTOFF3          25.23      0          0          0          0
 CUTOFF2          23.79      0          0          0          0
@@ -238,62 +249,72 @@ U12310           27.00      0          0          0          0
 U12311           27.00      0          0          0          0
 CUTOFF3A         25.23      0          0          0          0
 P13903           23.38      0          0          0          0
+PUMP2            0          0          0          0          0
+PUMP3            0          0          0          0          0
+BPUMP2           0          0          0          0          0
+BPUMP3           0          0          0          0          0
+Siphon2          5.00       0          0          0          0
+
+[OUTFALLS]
+;;Name           Elev       Type       Stage      Gated
+;;-------------- ---------- ---------- ---------- -----
+10000            25.00      FREE                  NO
 
 [STORAGE]
 ;;Name           Elev       MaxDepth   InitDepth  Shape      Curve/Params
 ;;-------------- ---------- ---------- ---------- ---------- ----------
-10101            15.06      -0.11      2.63       FUNCTIONAL 0 0          0
-10103            16.41      0.08       1.54       FUNCTIONAL 0 0          0
-10105            16.24      0          0.25       FUNCTIONAL 0 0          0
-10301            15.21      0          1.16       FUNCTIONAL 0 0          0
-10302            15.70      0          0.48       FUNCTIONAL 0 0          0
-10303            15.73      0          0.11       FUNCTIONAL 0 0          0
-10304            17.06      0          0          FUNCTIONAL 0 0          0
-10305            17.29      -3.31      0          FUNCTIONAL 0 0          0
-11701            27.20      0          0          FUNCTIONAL 0 0          0
-12801            16.39      -3.70      0          FUNCTIONAL 0 0          0
-12904            17.76      -3.41      0          FUNCTIONAL 0 0          0
-13202            15.87      0          0          FUNCTIONAL 0 0          0
-13204            15.38      -4.50      0          FUNCTIONAL 0 0          0
-13205            16.52      0          0          FUNCTIONAL 0 0          0
-13501            15.11      -1.94      0          FUNCTIONAL 0 0          0
-13504            15.79      0          0          FUNCTIONAL 0 0          0
-13505            15.71      0          0          FUNCTIONAL 0 0          0
-10102            14.61      -1.95      2.45       FUNCTIONAL 0 0          0
-10104            14.88      -3.70      1.02       FUNCTIONAL 0 0          0
-13203            16.27      0          0          FUNCTIONAL 0 0          0
-13502            15.31      -1.74      0          FUNCTIONAL 0 0          0
-13503            16.47      0          0          FUNCTIONAL 0 0          0
-10207            15.29      0.42       0          FUNCTIONAL 0 0          0
-10206            16.01      0          0          FUNCTIONAL 0 0          0
-10205            15.15      0.54       0.03       FUNCTIONAL 0 0          0
-10204            15.51      0          0.55       FUNCTIONAL 0 0          0
-10203            15.14      0.20       0.71       FUNCTIONAL 0 0          0
-10202            15.93      0          1.15       FUNCTIONAL 0 0          0
-10201            15.35      0.90       1.42       FUNCTIONAL 0 0          0
-13101            15.73      0          0          FUNCTIONAL 0 0          0
-13102            17.09      0          0          FUNCTIONAL 0 0          0
-12501            15.73      0.75       0          FUNCTIONAL 0 0          0
-12502            15.80      0.62       0          FUNCTIONAL 0 0          0
-wetwell          17.67      -2.10      12.00      FUNCTIONAL 2045.00 0          0
-Bwetwell         25.00      -9.43      12.00      FUNCTIONAL 3400.00 0          0
-P10205           15.15      0.54       0.03       FUNCTIONAL 0 0          0
-P10204           15.51      0          0.55       FUNCTIONAL 0 0          0
-P10203           15.14      0.20       0.71       FUNCTIONAL 0 0          0
-P10202           15.93      0          1.15       FUNCTIONAL 0 0          0
-P10201           15.35      0.90       1.42       FUNCTIONAL 0 0          0
-P10206           16.01      0          0          FUNCTIONAL 0 0          0
-P10207           15.29      0.42       0          FUNCTIONAL 0 0          0
-P13205           16.52      0          0          FUNCTIONAL 0 0          0
-P13204           15.38      -4.50      0          FUNCTIONAL 0 0          0
-P13203           16.27      0          0          FUNCTIONAL 0 0          0
-P13202           15.87      0          0          FUNCTIONAL 0 0          0
-P13101           15.73      0          0          FUNCTIONAL 0 0          0
-P13102           17.09      0          0          FUNCTIONAL 0 0          0
-P12501           15.73      0.75       0          FUNCTIONAL 0 0          0
-P12502           15.80      0.62       0          FUNCTIONAL 0 0          0
-P12801           16.39      -3.70      0          FUNCTIONAL 0 0          0
-P12904           17.76      -3.41      0          FUNCTIONAL 0 0          0
+10101            15.06      10.00      2.63       FUNCTIONAL 1000.00 0          0
+10103            16.41      0.08       0.08       FUNCTIONAL 1000.00 0          0
+10105            16.24      10.00      0.25       FUNCTIONAL 1000.00 0          0
+10301            15.21      10.00      1.16       FUNCTIONAL 1000.00 0          0
+10302            15.70      10.00      0.48       FUNCTIONAL 1000.00 0          0
+10303            15.73      10.00      0.11       FUNCTIONAL 1000.00 0          0
+10304            17.06      10.00      0          FUNCTIONAL 1000.00 0          0
+10305            17.29      10.00      0          FUNCTIONAL 1000.00 0          0
+11701            27.20      10.00      0          FUNCTIONAL 1000.00 0          0
+12801            16.39      10.00      0          FUNCTIONAL 1000.00 0          0
+12904            17.76      10.00      0          FUNCTIONAL 1000.00 0          0
+13202            15.87      10.00      0          FUNCTIONAL 1000.00 0          0
+13204            15.38      10.00      0          FUNCTIONAL 1000.00 0          0
+13205            16.52      10.00      0          FUNCTIONAL 1000.00 0          0
+13501            15.11      10.00      0          FUNCTIONAL 1000.00 0          0
+13504            15.79      10.00      0          FUNCTIONAL 1000.00 0          0
+13505            15.71      10.00      0          FUNCTIONAL 1000.00 0          0
+10102            14.61      10.00      2.45       FUNCTIONAL 1000.00 0          0
+10104            14.88      10.00      1.02       FUNCTIONAL 1000.00 0          0
+13203            16.27      10.00      0          FUNCTIONAL 1000.00 0          0
+13502            15.31      10.00      0          FUNCTIONAL 1000.00 0          0
+13503            16.47      10.00      0          FUNCTIONAL 1000.00 0          0
+10207            15.29      0.42       0          FUNCTIONAL 1000.00 0          0
+10206            16.01      10.00      0          FUNCTIONAL 1000.00 0          0
+10205            15.15      0.54       0.03       FUNCTIONAL 1000.00 0          0
+10204            15.51      10.00      0.55       FUNCTIONAL 1000.00 0          0
+10203            15.14      0.20       0.20       FUNCTIONAL 1000.00 0          0
+10202            15.93      10.00      1.15       FUNCTIONAL 1000.00 0          0
+10201            15.35      0.90       0.90       FUNCTIONAL 1000.00 0          0
+13101            15.73      10.00      0          FUNCTIONAL 1000.00 0          0
+13102            17.09      10.00      0          FUNCTIONAL 1000.00 0          0
+12501            15.73      0.75       0          FUNCTIONAL 1000.00 0          0
+12502            15.80      0.62       0          FUNCTIONAL 1000.00 0          0
+wetwell          17.67      10.00      10.00      FUNCTIONAL 2045.00 0          0
+Bwetwell         25.00      10.00      10.00      FUNCTIONAL 3400.00 0          0
+P10205           15.15      0.54       0.03       FUNCTIONAL 1000.00 0          0
+P10204           15.51      10.00      0.55       FUNCTIONAL 1000.00 0          0
+P10203           15.14      0.20       0.20       FUNCTIONAL 1000.00 0          0
+P10202           15.93      10.00      1.15       FUNCTIONAL 1000.00 0          0
+P10201           15.35      0.90       0.90       FUNCTIONAL 1000.00 0          0
+P10206           16.01      10.00      0          FUNCTIONAL 1000.00 0          0
+P10207           15.29      0.42       0          FUNCTIONAL 1000.00 0          0
+P13205           16.52      10.00      0          FUNCTIONAL 1000.00 0          0
+P13204           15.38      10.00      0          FUNCTIONAL 1000.00 0          0
+P13203           16.27      10.00      0          FUNCTIONAL 1000.00 0          0
+P13202           15.87      10.00      0          FUNCTIONAL 1000.00 0          0
+P13101           15.73      10.00      0          FUNCTIONAL 1000.00 0          0
+P13102           17.09      10.00      0          FUNCTIONAL 1000.00 0          0
+P12501           15.73      0.75       0          FUNCTIONAL 1000.00 0          0
+P12502           15.80      0.62       0          FUNCTIONAL 1000.00 0          0
+P12801           16.39      10.00      0          FUNCTIONAL 1000.00 0          0
+P12904           17.76      10.00      0          FUNCTIONAL 1000.00 0          0
 
 [CONDUITS]
 ;;Name           From             To               Length     Roughness  InOffset   OutOffset  InitFlow   MaxFlow
@@ -335,7 +356,7 @@ CHME10319        10319            10318            56.91      0.0150     9.66   
 CHME10318        10318            10317            46.71      0.0150     9.63       9.57       0          0
 L10317           10317            10316            26.73      0.0150     9.57       9.53       0          0
 L12401           12401            12401A           215.13     0.0150     15.63      15.33      0          0
-L12401A          ?                ?                259.06     0.0150     15.33      14.57      0          0
+L12401A          12401A           12205            259.06     0.0150     15.33      14.57      0          0
 L10110           10110            10109            467.73     0.0150     9.35       8.35       0          0
 L10111           10111            10110            594.91     0.0150     10.73      9.35       0          0
 L10112           10112            10111            593.16     0.0150     12.05      10.73      0          0
@@ -474,9 +495,9 @@ L10339           10339            10338            397.00     0.0150     24.25  
 L10201           10201            10201A           45.00      0.1500     4.58       4.47       0          0
 LU12306          U12306           U12305           700.00     0.0150     8.10       4.60       0          0
 dnpipe           midpoint         Pumpout          70.00      0.0130     20.00      11.40      0          0
-L10000.4         1000.4           wetwell          70.00      0.0150     0.40       -0.20      0          0
+L10000.4         1000.4           wetwell          70.00      0.0150     0.40       0          0          0
 Rincon           10101            1000.4           420.00     0.0150     3.37       2.40       0          0
-Component        U12305           Bwetwell         1400.00    0.0150     2.60       -0.20      0          0
+Component        U12305           Bwetwell         1400.00    0.0150     2.60       0          0          0
 LLU11702         P11702           U12306           620.00     0.0150     11.20      8.10       0          0
 LLU12303         CUTOFF1          U12304           900.00     0.0150     6.20       4.40       0          0
 LU12304          U12304           U12305           900.00     0.0150     4.40       2.60       0          0
@@ -552,7 +573,7 @@ PL14122          P14122           P14121           376.78     0.0150     19.39  
 PL14123          P14123           P14122           284.11     0.0150     20.33      19.39      0          0
 PL14124          P14124           P14123           298.76     0.0150     21.14      20.33      0          0
 PL14125          P14125           P14124           305.28     0.0150     22.36      21.14      0          0
-514.1            P14120           CUTOFF4          64.00      0.0150     18.19      17.87      0          0
+514.1_2          P14120           CUTOFF4          64.00      0.0150     18.19      17.87      0          0
 PL14121          P14121           P14120           346.86     0.0150     18.79      18.19      0          0
 PP14120          14120            P14120           20.00      0.0150     18.19      18.19      0          0
 PP14121          14121            P14121           20.00      0.0150     18.79      18.79      0          0
@@ -642,7 +663,7 @@ PP12101          12101            P12101           20.00      0.0150     11.08  
 LU10325          10325            U12310           750.00     0.0150     11.00      6.80       0          0
 LU12310          U12310           U12305           750.00     0.0150     6.80       2.60       0          0
 LU12311          U12311           CUTOFF1          800.00     0.0150     10.20      6.20       0          0
-Siphon1          Siphon2          CUTOFF3          40.00      0          5.00       5.00       0          0
+Siphon1          Siphon2          CUTOFF3          40.00      0.0130     5.00       5.00       0          0
 PP13517          13517            CUTOFF3A         25.00      0.0150     14.67      14.17      0          0
 PL13903          P13903           CUTOFF3A         660.00     0.0150     12.80      11.48      0          0
 PP13903          13903            P13903           20.00      0.0150     15.89      15.49      0          0
@@ -656,16 +677,17 @@ Montague         10301            10103            V-NOTCH    16.20      1.840  
 [PUMPS]
 ;;Name           From             To               PumpCurve  Status   Startup    Shutoff
 ;;-------------- ---------------- ---------------- ---------- -------- ---------- ----------
-PUMP1            PUMP2            PUMP3            PC_PUMP1   ON       0          0         
-BPUMP1           BPUMP2           BPUMP3           PC_BPUMP1  ON       0          0         
+PUMP1            PUMP2            PUMP3            PC_PUMP1   ON       1.00       0         
+BPUMP1           BPUMP2           BPUMP3           PC_BPUMP1  ON       1.00       0         
 
 [CURVES]
 ;;Name           Type       X-Value    Y-Value
 ;;-------------- ---------- ---------- ----------
-PC_PUMP1         Pump2      0          0
-;
-PC_BPUMP1        Pump2      0          0
-;
+;; Synthesized generic pump curves — replace with actual pump data
+PC_PUMP1         Pump1      0          5
+PC_PUMP1                    10         10
+PC_BPUMP1        Pump1      0          5
+PC_BPUMP1                   10         10
 
 [XSECTIONS]
 ;;Link           Shape        Geom1      Geom2      Geom3      Geom4      Barrels
@@ -924,7 +946,7 @@ PL14122          CIRCULAR     4.00       0          0          0          1
 PL14123          CIRCULAR     4.00       0          0          0          1
 PL14124          CIRCULAR     4.00       0          0          0          1
 PL14125          CIRCULAR     4.00       0          0          0          1
-514.1            CIRCULAR     4.00       0          0          0          1
+514.1_2          CIRCULAR     4.00       0          0          0          1
 PL14121          CIRCULAR     4.00       0          0          0          1
 PP14120          CIRCULAR     4.00       0          0          0          1
 PP14121          CIRCULAR     4.00       0          0          0          1
@@ -1014,12 +1036,12 @@ PP12101          CIRCULAR     2.00       0          0          0          1
 LU10325          CIRCULAR     6.00       0          0          0          1
 LU12310          CIRCULAR     6.00       0          0          0          1
 LU12311          CIRCULAR     4.00       0          0          0          1
-Siphon1          CIRCULAR     0          0          0          0          1
+Siphon1          CIRCULAR     1.00       0          0          0          1
 PP13517          CIRCULAR     3.00       0          0          0          1
 PL13903          CIRCULAR     8.00       0          0          0          1
 PP13903          CIRCULAR     5.00       0          0          0          1
 LLL13516         CIRCULAR     5.00       0          0          0          1
-Montague         RECT_OPEN    0          300.00     0          0          
+Montague         TRIANGULAR   1.00       300.00     0          0
 
 [LOSSES]
 ;;Link           Inlet      Outlet     Average    Flap Gate
@@ -1278,7 +1300,7 @@ PL14122          0          0          0          NO
 PL14123          0          0          0          NO
 PL14124          0          0          0          NO
 PL14125          0          0          0          NO
-514.1            0          0          0          NO
+514.1_2          0          0          0          NO
 PL14121          0          0          0          NO
 PP14120          0          0          0          NO
 PP14121          0          0          0          NO

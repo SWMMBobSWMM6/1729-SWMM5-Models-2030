@@ -16,11 +16,22 @@ ALLOW_PONDING        NO
 SKIP_STEADY_STATE    NO
 INERTIAL_DAMPING     PARTIAL
 NORMAL_FLOW_LIMITED  BOTH
+START_DATE           01/01/2001
+START_TIME           00:00:00
+REPORT_START_DATE    01/01/2001
+REPORT_START_TIME    00:00:00
+END_DATE             01/02/2001
+END_TIME             00:00:00
+SWEEP_START          01/01
+SWEEP_END            12/31
+DRY_DAYS             0
+REPORT_STEP          00:15:00
+WET_STEP             00:05:00
+DRY_STEP             01:00:00
 
 [JUNCTIONS]
 ;;Name           Elev       MaxDepth   InitDepth  SurDepth   Aponded
 ;;-------------- ---------- ---------- ---------- ---------- ----------
-195              0          0          0          0          0
 440              0          0          0          0          0
 445              0          0          0          0          0
 455              0          0          0          0          0
@@ -29,6 +40,11 @@ NORMAL_FLOW_LIMITED  BOTH
 485              0          0          0          0          0
 495              0          0          0          0          0
 505              0          0          0          0          0
+
+[OUTFALLS]
+;;Name           Elev       Type       Stage      Gated
+;;-------------- ---------- ---------- ---------- -----
+195              0          FREE                  NO
 
 [CONDUITS]
 ;;Name           From             To               Length     Roughness  InOffset   OutOffset  InitFlow   MaxFlow
@@ -48,9 +64,9 @@ Dumlink2         445              440              33.00      0.0140     0      
 435              CIRCULAR     1.50       0          0          0          1
 450              CIRCULAR     2.00       0          0          0          1
 460              CIRCULAR     2.00       0          0          0          1
-470              TRAPEZOIDAL  3.00       1.00       0          0          1
+470              TRAPEZOIDAL  3.00       1.00       1          1          1
 480              CIRCULAR     1.00       0          0          0          1
-490              TRAPEZOIDAL  2.00       1.00       0          0          1
+490              TRAPEZOIDAL  2.00       1.00       1          1          1
 Dumlink1         CIRCULAR     99.99      0          0          0          1
 Dumlink2         CIRCULAR     99.99      0          0          0          1
 

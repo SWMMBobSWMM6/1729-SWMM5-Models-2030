@@ -19,12 +19,23 @@ VARIABLE_STEP        0.75
 INERTIAL_DAMPING     PARTIAL
 NORMAL_FLOW_LIMITED  BOTH
 MAX_TRIALS           50
+START_DATE           01/01/2001
+START_TIME           00:00:00
+REPORT_START_DATE    01/01/2001
+REPORT_START_TIME    00:00:00
+END_DATE             01/02/2001
+END_TIME             00:00:00
+SWEEP_START          01/01
+SWEEP_END            12/31
+DRY_DAYS             0
+REPORT_STEP          00:15:00
+WET_STEP             00:05:00
+DRY_STEP             01:00:00
 
 [JUNCTIONS]
 ;;Name           Elev       MaxDepth   InitDepth  SurDepth   Aponded
 ;;-------------- ---------- ---------- ---------- ---------- ----------
 A                10.00      0          0          0          0
-A1               10.00      0          0          0          0
 B                10.00      0          0          0          0
 B1               10.00      0          0          0          0
 B2               10.00      0          0          0          0
@@ -34,31 +45,36 @@ C2               10.00      0          0          0          0
 C3               10.00      0          0          0          0
 C4               10.00      0          0          0          0
 
+[OUTFALLS]
+;;Name           Elev       Type       Stage      Gated
+;;-------------- ---------- ---------- ---------- -----
+A1               10.00      FREE                  NO
+
 [CONDUITS]
 ;;Name           From             To               Length     Roughness  InOffset   OutOffset  InitFlow   MaxFlow
 ;;-------------- ---------------- ---------------- ---------- ---------- ---------- ---------- ---------- ----------
 Aout             A                A1               1000.00    0.0110     0          0          0          0
-206              ?                ?                500.00     0.0120     0          0          0          0
+206              B                B1               500.00     0.0120     0          0          0          0
 Bout             B1               B2               500.00     0.0120     0          0          0          0
-211              ?                ?                250.00     0.0140     0          0          0          0
-213              ?                ?                250.00     0.0140     0          0          0          0
-215              ?                ?                250.00     0.0140     0          0          0          0
+211              C                C1               250.00     0.0140     0          0          0          0
+213              C1               C2               250.00     0.0140     0          0          0          0
+215              C2               C3               250.00     0.0140     0          0          0          0
 Cout             C3               C4               250.00     0.0140     0          0          0          0
-218              ?                ?                0          0          0          0          0          0
-219              ?                ?                0          0          0          0          0          0
+218              A                B                100.00     0.0130     0          0          0          0
+219              B                C                100.00     0.0130     0          0          0          0
 
 [XSECTIONS]
 ;;Link           Shape        Geom1      Geom2      Geom3      Geom4      Barrels
 ;;-------------- ------------ ---------- ---------- ---------- ---------- ----------
-Aout             TRAPEZOIDAL  5.00       2.00       0          0          1
-206              TRAPEZOIDAL  5.00       2.00       0          0          1
-Bout             TRAPEZOIDAL  5.00       2.00       0          0          1
-211              TRAPEZOIDAL  5.00       2.00       0          0          1
-213              TRAPEZOIDAL  5.00       2.00       0          0          1
-215              TRAPEZOIDAL  5.00       2.00       0          0          1
-Cout             TRAPEZOIDAL  5.00       2.00       0          0          1
-218              CIRCULAR     0          0          0          0          1
-219              CIRCULAR     0          0          0          0          1
+Aout             TRAPEZOIDAL  5.00       2.00       1          1          1
+206              TRAPEZOIDAL  5.00       2.00       1          1          1
+Bout             TRAPEZOIDAL  5.00       2.00       1          1          1
+211              TRAPEZOIDAL  5.00       2.00       1          1          1
+213              TRAPEZOIDAL  5.00       2.00       1          1          1
+215              TRAPEZOIDAL  5.00       2.00       1          1          1
+Cout             TRAPEZOIDAL  5.00       2.00       1          1          1
+218              CIRCULAR     1.00       0          0          0          1
+219              CIRCULAR     1.00       0          0          0          1
 
 [LOSSES]
 ;;Link           Inlet      Outlet     Average    Flap Gate

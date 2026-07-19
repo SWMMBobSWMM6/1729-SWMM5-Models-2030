@@ -2,207 +2,857 @@
   EPA STORM WATER MANAGEMENT MODEL - VERSION 5.2 (Build 5.2.4)
   ------------------------------------------------------------
 
+  Hoboken-Union City-Weehawken New Jersey 
+  WARNING 04: minimum elevation drop used for Conduit IC1-H7
+  WARNING 04: minimum elevation drop used for Conduit IC2-H7
+  WARNING 04: minimum elevation drop used for Conduit IC1-H6
+  WARNING 04: minimum elevation drop used for Conduit IC2-H6
+  WARNING 04: minimum elevation drop used for Conduit IC1-H5
+  WARNING 04: minimum elevation drop used for Conduit IC2-H5
+  WARNING 04: minimum elevation drop used for Conduit IC1-H4
+  WARNING 04: minimum elevation drop used for Conduit IC2-H4
+  WARNING 04: minimum elevation drop used for Conduit IC1-H3
+  WARNING 04: minimum elevation drop used for Conduit IC2-H3
+  WARNING 04: minimum elevation drop used for Conduit IC1-H2
+  WARNING 04: minimum elevation drop used for Conduit IC2-H2
+  WARNING 04: minimum elevation drop used for Conduit OF3-H2
+  WARNING 04: minimum elevation drop used for Conduit IC1-H1
+  WARNING 04: minimum elevation drop used for Conduit IC2-H1
+  WARNING 04: minimum elevation drop used for Conduit WWTP
+  WARNING 04: minimum elevation drop used for Conduit OF3-18PS
   
-  ERROR 209: undefined object TS1B-W2 at line 205 of [CONDUIT] section:
-  TS1A-W2          TS1B-W2          W2               550.00     0.0130     155.00     54.82      0          0
-
+  ****************
+  Analysis Options
+  ****************
+  Flow Units ............... CFS
+  Process Models:
+    Rainfall/Runoff ........ NO
+    RDII ................... NO
+    Snowmelt ............... NO
+    Groundwater ............ NO
+    Flow Routing ........... YES
+    Ponding Allowed ........ NO
+    Water Quality .......... NO
+  Flow Routing Method ...... DYNWAVE
+  Surcharge Method ......... EXTRAN
+  Starting Date ............ 01/01/2001 00:00:00
+  Ending Date .............. 01/02/2001 00:00:00
+  Antecedent Dry Days ...... 0.0
+  Report Time Step ......... 00:15:00
+  Routing Time Step ........ 60.00 sec
+  Variable Time Step ....... YES
+  Maximum Trials ........... 50
+  Number of Threads ........ 1
+  Head Tolerance ........... 0.003300 ft
   
-  ERROR 209: undefined object 12INCH at line 214 of [CONDUIT] section:
-  24INCH           12INCH           HOB.             2400.00    0          20.90      -4.06      0          0
-
   
-  ERROR 211: invalid number  at line 381 of [XSECT] section:
-  24INCH           CIRCULAR     0          0          0          0          1
-
+  **************************        Volume        Volume
+  Flow Routing Continuity        acre-feet      10^6 gal
+  **************************     ---------     ---------
+  Dry Weather Inflow .......         0.000         0.000
+  Wet Weather Inflow .......         0.000         0.000
+  Groundwater Inflow .......         0.000         0.000
+  RDII Inflow ..............         0.000         0.000
+  External Inflow ..........         4.463         1.454
+  External Outflow .........         0.000         0.000
+  Flooding Loss ............         3.709         1.209
+  Evaporation Loss .........         0.000         0.000
+  Exfiltration Loss ........         0.000         0.000
+  Initial Stored Volume ....         0.000         0.000
+  Final Stored Volume ......         0.647         0.211
+  Continuity Error (%) .....         2.395
   
-  ERROR 211: invalid number  at line 415 of [XSECT] section:
-  TS1-HSI          CIRCULAR     0          0          0          0          1
-
   
-  ERROR 211: invalid number  at line 443 of [XSECT] section:
-  IC1-W5           RECT_CLOSED  0.42       0          0          0          
-
+  *************************
+  Highest Continuity Errors
+  *************************
+  Node HOB. (100.00%)
+  Node H3-03-040 (23.81%)
+  Node H4 (-7.74%)
+  Node SIPHON-HO (3.84%)
+  Node P5-HU-100 (2.67%)
   
-  ERROR 211: invalid number  at line 444 of [XSECT] section:
-  IC2-W5           RECT_CLOSED  0.33       0          0          0          
-
   
-  ERROR 211: invalid number  at line 445 of [XSECT] section:
-  IC1-W4           RECT_CLOSED  0.63       0          0          0          
-
+  ***************************
+  Time-Step Critical Elements
+  ***************************
+  Link IC2-H4 (66.60%)
+  Link IC1-H3 (33.18%)
   
-  ERROR 211: invalid number  at line 446 of [XSECT] section:
-  IC1-W1           RECT_CLOSED  0.63       0          0          0          
-
   
-  ERROR 211: invalid number  at line 447 of [XSECT] section:
-  IC1-W3           RECT_CLOSED  0.63       0          0          0          
-
+  ********************************
+  Highest Flow Instability Indexes
+  ********************************
+  Link IC2-H4 (100)
+  Link OF1-H4 (100)
+  Link IC1-H4 (100)
+  Link OF2-H4 (100)
   
-  ERROR 211: invalid number  at line 448 of [XSECT] section:
-  OF1-W2           RECT_CLOSED  2.50       0          0          0          
-
   
-  ERROR 211: invalid number  at line 449 of [XSECT] section:
-  IC1-W2           RECT_CLOSED  1.00       0          0          0          
-
+  *********************************
+  Most Frequent Nonconverging Nodes
+  *********************************
+  Convergence obtained at all time steps.
   
-  ERROR 211: invalid number  at line 450 of [XSECT] section:
-  IC2-W2           RECT_CLOSED  0.51       0          0          0          
-
   
-  ERROR 211: invalid number  at line 451 of [XSECT] section:
-  IC2-W3           RECT_CLOSED  0.58       0          0          0          
-
+  *************************
+  Routing Time Step Summary
+  *************************
+  Minimum Time Step           :     0.10 sec
+  Average Time Step           :     0.50 sec
+  Maximum Time Step           :    30.40 sec
+  % of Time in Steady State   :     0.00
+  Average Iterations per Step :     2.00
+  % of Steps Not Converging   :     0.00
+  Time Step Frequencies       :
+     60.000 - 23.031 sec      :     0.00 %
+     23.031 -  8.841 sec      :     0.00 %
+      8.841 -  3.393 sec      :     0.00 %
+      3.393 -  1.303 sec      :     0.00 %
+      1.303 -  0.500 sec      :   100.00 %
   
-  ERROR 211: invalid number  at line 452 of [XSECT] section:
-  IC2-W1           RECT_CLOSED  0.54       0          0          0          
-
   
-  ERROR 211: invalid number  at line 453 of [XSECT] section:
-  IC1-H7           RECT_CLOSED  1.33       0          0          0          
-
+  ******************
+  Node Depth Summary
+  ******************
   
-  ERROR 211: invalid number  at line 454 of [XSECT] section:
-  IC2-H7           RECT_CLOSED  0.63       0          0          0          
-
+  ---------------------------------------------------------------------------------
+                                 Average  Maximum  Maximum  Time of Max    Reported
+                                   Depth    Depth      HGL   Occurrence   Max Depth
+  Node                 Type         Feet     Feet     Feet  days hr:min        Feet
+  ---------------------------------------------------------------------------------
+  W5-PE-100            JUNCTION     0.00     0.00   151.18     0  00:00        0.00
+  W5-PE-010            JUNCTION     0.00     0.00    36.41     0  00:00        0.00
+  W5-BA-020            JUNCTION     0.00     0.00     6.83     0  00:00        0.00
+  W4-HW-100            JUNCTION     0.00     0.00   150.90     0  00:00        0.00
+  W4-EH-080            JUNCTION     0.00     0.00   128.90     0  00:00        0.00
+  W4-EH-100            JUNCTION     0.00     0.00   162.90     0  00:00        0.00
+  W5-OF                JUNCTION     0.00     0.00   153.40     0  00:00        0.00
+  W5-PE-020            JUNCTION     0.00     0.00    39.13     0  00:00        0.00
+  SIPHON-PA            JUNCTION     0.00     0.00   130.40     0  00:00        0.00
+  W4-OF                JUNCTION     0.00     0.00    33.60     0  00:00        0.00
+  W4-EH-020            JUNCTION     0.00     0.00    47.70     0  00:00        0.00
+  W4-EH-060            JUNCTION     0.00     0.00    97.30     0  00:00        0.00
+  W4-EH-040            JUNCTION     0.00     0.00    78.52     0  00:00        0.00
+  W1-OF                JUNCTION     0.00     0.00    67.67     0  00:00        0.00
+  W2-OF                JUNCTION     0.00     0.00    61.90     0  00:00        0.00
+  W123-OF              JUNCTION     0.00     0.00    58.55     0  00:00        0.00
+  W1234-OF             JUNCTION     0.00     0.00    14.68     0  00:00        0.00
+  013                  JUNCTION     0.00     0.00     5.00     0  00:00        0.00
+  W1-PA-030            JUNCTION     0.00     0.00   119.71     0  00:00        0.00
+  W1-PA-050            JUNCTION     0.00     0.00   154.30     0  00:00        0.00
+  U1-39-110            JUNCTION     0.00     0.00   161.00     0  00:00        0.00
+  U1-39-140            JUNCTION     0.00     0.00   169.00     0  00:00        0.00
+  W3-HP-010            JUNCTION     0.00     0.00   128.45     0  00:00        0.00
+  W3-HP-030            JUNCTION     0.00     0.00   169.70     0  00:00        0.00
+  W3-HP-100            JUNCTION     0.00     0.00   185.70     0  00:00        0.00
+  U3-PA-210            JUNCTION     0.00     0.00   193.80     0  00:00        0.00
+  U3-32-150            JUNCTION     0.00     0.00   187.40     0  00:00        0.00
+  U3-32-160            JUNCTION     0.00     0.00   175.77     0  00:00        0.00
+  U3-26-300            JUNCTION     0.00     0.00   190.07     0  00:00        0.00
+  W2-SH-030            JUNCTION     0.00     0.00   166.20     0  00:00        0.00
+  W2-MA-090            JUNCTION     0.00     0.00   186.50     0  00:00        0.00
+  U2-27-140            JUNCTION     0.00     0.00   186.00     0  00:00        0.00
+  W2-GR-050            JUNCTION     0.00     0.00   177.60     0  00:00        0.00
+  W2S-WA-090           JUNCTION     0.00     0.00   194.20     0  00:00        0.00
+  U2-MO-100            JUNCTION     0.00     0.00   193.60     0  00:00        0.00
+  U2-PA-100            JUNCTION     0.00     0.00   195.20     0  00:00        0.00
+  W12&3-IC1            JUNCTION     0.00     0.00    57.54     0  00:00        0.00
+  HOB.                 JUNCTION     3.15     5.07    21.01     1  00:00        5.07
+  W3-OF                JUNCTION     0.00     0.00    65.20     0  00:00        0.00
+  18-18-030            JUNCTION     0.00     0.00     4.80     0  00:00        0.00
+  18-18-050            JUNCTION     0.00     0.00     3.00     0  00:00        0.00
+  18-18-060            JUNCTION     0.00     0.00     2.80     0  00:00        0.00
+  18-18-070            JUNCTION     0.00     0.00     2.10     0  00:00        0.00
+  18-18-100            JUNCTION     0.00     0.00     5.20     0  00:00        0.00
+  O12-D                JUNCTION     0.00     0.00     5.00     0  00:00        0.00
+  008                  JUNCTION     0.00     0.00     5.96     0  00:00        0.00
+  H7-15-010            JUNCTION     0.00     0.00     7.50     0  00:00        0.00
+  H7-15-100            JUNCTION     0.00     0.00     5.70     0  00:00        0.00
+  H7-15-110            JUNCTION     0.00     0.00     5.40     0  00:00        0.00
+  H7-15-150            JUNCTION     0.00     0.00     5.60     0  00:00        0.00
+  007                  JUNCTION     0.00     0.00     5.00     0  00:00        0.00
+  006                  JUNCTION     0.00     0.00     5.00     0  00:00        0.00
+  016                  JUNCTION     0.00     0.00    10.00     0  00:00        0.00
+  005                  JUNCTION     1.75     3.09    13.09     1  00:00        3.09
+  004                  JUNCTION     0.71     0.90    12.90     0  12:15        0.90
+  003                  JUNCTION     0.01     0.01    10.05     0  01:28        0.01
+  002                  JUNCTION     0.00     0.00     5.00     0  00:00        0.00
+  SIPHON-HO            JUNCTION    10.55    10.90    32.24     0  03:51       10.90
+  H6-14-010            JUNCTION     0.00     0.00     7.37     0  00:00        0.00
+  H5-11-020            JUNCTION     0.00     0.00    19.18     0  00:00        0.00
+  H5-11-090            JUNCTION     0.00     0.00    18.09     0  00:00        0.00
+  H5-11-200            JUNCTION     0.00     0.00    11.10     0  00:00        0.00
+  H5-11-220            JUNCTION     0.00     0.00     5.80     0  00:00        0.00
+  HSI-05-010           JUNCTION     0.00     0.00     0.00     0  00:00        0.00
+  H4-04-010            JUNCTION     0.00     0.00    21.92     0  00:00        0.00
+  H4-07-080            JUNCTION     0.00     0.00     7.80     0  00:00        0.00
+  H4-07-150            JUNCTION     0.00     0.00     5.00     0  00:00        0.00
+  H4-07-140            JUNCTION     0.00     0.00     4.80     0  00:00        0.00
+  H3-03-010            JUNCTION     0.18     0.18    12.50     0  03:15        0.18
+  H3-03-040            JUNCTION     3.44     4.00    10.70     0  07:01        4.00
+  H3-03-050            JUNCTION     3.34     3.90    10.70     0  07:01        3.90
+  H2-NE-010            JUNCTION     0.00     0.00    10.64     0  00:00        0.00
+  H1-OB-010            JUNCTION     0.00     0.00     9.29     0  00:00        0.00
+  N553                 JUNCTION     0.00     0.00     3.92     0  00:00        0.00
+  H1-OB-090            JUNCTION     0.00     0.00     4.06     0  00:00        0.00
+  H1-01-100            JUNCTION     0.00     0.00     3.97     0  00:00        0.00
+  H1-01-080            JUNCTION     0.00     0.00     4.51     0  00:00        0.00
+  H1-03-100            JUNCTION     0.00     0.00     3.96     0  00:00        0.00
+  H1-03-090            JUNCTION     0.00     0.00     3.94     0  00:00        0.00
+  H65-IC               JUNCTION     0.00     0.00    18.26     0  00:00        0.00
+  H1-01-110            JUNCTION     0.00     0.00     3.17     0  00:00        0.00
+  P5-HU-100            JUNCTION    26.36    26.71    62.34     0  04:40       26.71
+  WWTP-BC              JUNCTION     0.00     0.00    15.94     0  00:00        0.00
+  012                  JUNCTION     0.00     0.00     5.00     0  00:00        0.00
+  W12&3-IC3            JUNCTION     0.00     0.00   137.54     0  00:00        0.00
+  W12&3-IC2            JUNCTION     0.00     0.00   142.00     0  00:00        0.00
+  BPS-FM3              JUNCTION     0.00     0.00   115.40     0  00:00        0.00
+  BPS-FM2              JUNCTION     0.00     0.00   134.80     0  00:00        0.00
+  BPS-FM1              JUNCTION     0.00     0.00   107.50     0  00:00        0.00
+  BPS-FM4              JUNCTION     0.00     0.00   131.40     0  00:00        0.00
+  TS1B-W2              JUNCTION     0.00     0.00   155.00     0  00:00        0.00
+  12INCH               JUNCTION     0.00     0.00    20.90     0  00:00        0.00
+  015                  OUTFALL      0.00     0.00    10.00     0  00:00        0.00
+  BPS                  STORAGE      0.00     0.00     8.71     0  00:00        0.00
+  W5                   STORAGE      0.00     0.00   153.42     0  00:00        0.00
+  W5-IC                STORAGE      0.00     0.00   153.40     0  00:00        0.00
+  W5-BE-010            STORAGE      0.00     0.00   152.47     0  00:00        0.00
+  W4                   STORAGE      0.00     0.00    33.60     0  00:00        0.00
+  W4-IC                STORAGE      0.00     0.00    33.60     0  00:00        0.00
+  W1                   STORAGE      0.00     0.00    67.67     0  00:00        0.00
+  W1-IC                STORAGE      0.00     0.00    67.67     0  00:00        0.00
+  W3                   STORAGE      0.00     0.00    65.20     0  00:00        0.00
+  W2&3-IC              STORAGE      0.00     0.00    61.89     0  00:00        0.00
+  W2                   STORAGE      0.00     0.00    61.90     0  00:00        0.00
+  W2-IC                STORAGE      0.00     0.00    61.90     0  00:00        0.00
+  W3-IC                STORAGE      0.00     0.00    65.20     0  00:00        0.00
+  18PS                 STORAGE      0.00     0.00     5.95     0  00:00        0.00
+  H7-OF                STORAGE      0.00     0.00     7.02     0  00:00        0.00
+  H7                   STORAGE      0.00     0.00     7.02     0  00:00        0.00
+  H7-IC                STORAGE      0.00     0.00     7.02     0  00:00        0.00
+  H7-WW                STORAGE      0.00     0.00     7.02     0  00:00        0.00
+  H6-OF                STORAGE      0.00     0.00     7.49     0  00:00        0.00
+  H6                   STORAGE      0.00     0.00     7.49     0  00:00        0.00
+  H6-IC                STORAGE      0.00     0.00     7.49     0  00:00        0.00
+  H6-WW                STORAGE      0.00     0.00     7.49     0  00:00        0.00
+  H5-OF                STORAGE      0.00     0.00    19.60     0  00:00        0.00
+  H5                   STORAGE      0.00     0.00    19.62     0  00:00        0.00
+  H5-IC                STORAGE      0.00     0.00    19.62     0  00:00        0.00
+  H5-WW                STORAGE      0.00     0.00    19.62     0  00:00        0.00
+  HSI                  STORAGE      0.00     0.00     8.29     0  00:00        0.00
+  P5-SH-010            STORAGE      0.27     0.27     9.45     0  00:57        0.27
+  H4-OF                STORAGE      0.02     0.02    18.00     0  00:00        0.02
+  H4                   STORAGE      0.15     0.15    18.13     0  00:52        0.15
+  H4-IC                STORAGE      0.10     0.10    18.08     0  00:30        0.10
+  H4-WW                STORAGE      0.15     0.15    18.13     0  00:30        0.15
+  H3-OF                STORAGE      0.03     0.03    12.90     0  00:00        0.03
+  H3                   STORAGE      0.14     0.14    13.01     0  02:48        0.14
+  H3-IC                STORAGE      0.14     0.14    13.01     0  02:48        0.14
+  H3-WW                STORAGE      0.14     0.14    13.01     0  02:48        0.14
+  H2-OF                STORAGE      0.01     0.01    10.05     0  00:06        0.01
+  H2                   STORAGE      0.06     0.06    10.10     1  00:00        0.06
+  H2-IC                STORAGE      0.06     0.06    10.10     0  02:51        0.06
+  H2-WW                STORAGE      0.06     0.06    10.10     0  02:51        0.06
+  H1-OF                STORAGE      0.00     0.00    10.38     0  00:00        0.00
+  H1                   STORAGE      0.00     0.00    10.38     0  00:00        0.00
+  H1-IC                STORAGE      0.00     0.00    10.38     0  00:00        0.00
+  H1-WW                STORAGE      0.00     0.00    10.38     0  00:00        0.00
+  5PS                  STORAGE      0.00     0.00     9.20     0  00:00        0.00
+  11PS                 STORAGE      0.00     0.00    20.92     0  00:00        0.00
+  H1-OB-050            STORAGE      0.00     0.00     4.67     0  00:00        0.00
+  18PS-WW              STORAGE      0.00     0.00     5.95     0  00:00        0.00
+  H0-OF                STORAGE      0.00     0.00     4.15     0  00:00        0.00
+  18PS-DW              STORAGE      0.00     0.00   130.40     0  00:00        0.00
   
-  ERROR 211: invalid number  at line 455 of [XSECT] section:
-  IC1-H6           RECT_CLOSED  0.54       0          0          0          
-
   
-  ERROR 211: invalid number  at line 456 of [XSECT] section:
-  IC2-H6           RECT_CLOSED  0.54       0          0          0          
-
+  *******************
+  Node Inflow Summary
+  *******************
   
-  ERROR 211: invalid number  at line 457 of [XSECT] section:
-  IC1-H5           RECT_CLOSED  1.00       0          0          0          
-
+  -------------------------------------------------------------------------------------------------
+                                  Maximum  Maximum                  Lateral       Total        Flow
+                                  Lateral    Total  Time of Max      Inflow      Inflow     Balance
+                                   Inflow   Inflow   Occurrence      Volume      Volume       Error
+  Node                 Type           CFS      CFS  days hr:min    10^6 gal    10^6 gal     Percent
+  -------------------------------------------------------------------------------------------------
+  W5-PE-100            JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  W5-PE-010            JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  W5-BA-020            JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  W4-HW-100            JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  W4-EH-080            JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  W4-EH-100            JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  W5-OF                JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  W5-PE-020            JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  SIPHON-PA            JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  W4-OF                JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  W4-EH-020            JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  W4-EH-060            JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  W4-EH-040            JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  W1-OF                JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  W2-OF                JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  W123-OF              JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  W1234-OF             JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  013                  JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  W1-PA-030            JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  W1-PA-050            JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  U1-39-110            JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  U1-39-140            JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  W3-HP-010            JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  W3-HP-030            JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  W3-HP-100            JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  U3-PA-210            JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  U3-32-150            JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  U3-32-160            JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  U3-26-300            JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  W2-SH-030            JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  W2-MA-090            JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  U2-27-140            JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  W2-GR-050            JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  W2S-WA-090           JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  U2-MO-100            JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  U2-PA-100            JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  W12&3-IC1            JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  HOB.                 JUNCTION      0.00     0.26     0  03:54           0       0.146  146472.844 gal
+  W3-OF                JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  18-18-030            JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  18-18-050            JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  18-18-060            JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  18-18-070            JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  18-18-100            JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  O12-D                JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  008                  JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  H7-15-010            JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  H7-15-100            JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  H7-15-110            JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  H7-15-150            JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  007                  JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  006                  JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  016                  JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  005                  JUNCTION      0.00     0.01     0  00:01           0     0.00908       0.000
+  004                  JUNCTION      0.00     0.01     0  00:05           0     0.00281       0.000
+  003                  JUNCTION      0.00     0.00     0  00:24           0    1.81e-06       0.000 gal
+  002                  JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  SIPHON-HO            JUNCTION      0.00     0.24     0  04:40           0       0.152       3.997
+  H6-14-010            JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  H5-11-020            JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  H5-11-090            JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  H5-11-200            JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  H5-11-220            JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  HSI-05-010           JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  H4-04-010            JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  H4-07-080            JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  H4-07-150            JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  H4-07-140            JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  H3-03-010            JUNCTION      0.00     0.40     0  02:47           0       0.256       0.273
+  H3-03-040            JUNCTION      0.00     0.44     0  07:02           0       0.262      31.254
+  H3-03-050            JUNCTION      0.00     0.10     0  00:18           0      0.0176     197.934
+  H2-NE-010            JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  H1-OB-010            JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  N553                 JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  H1-OB-090            JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  H1-01-100            JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  H1-01-080            JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  H1-03-100            JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  H1-03-090            JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  H65-IC               JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  H1-01-110            JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  P5-HU-100            JUNCTION      0.00     0.24     0  00:57           0       0.157       2.742
+  WWTP-BC              JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  012                  JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  W12&3-IC3            JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  W12&3-IC2            JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  BPS-FM3              JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  BPS-FM2              JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  BPS-FM1              JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  BPS-FM4              JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  TS1B-W2              JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  12INCH               JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  015                  OUTFALL       0.00     0.00     0  00:00           0           0       0.000 gal
+  BPS                  STORAGE       0.00     0.00     0  00:00           0           0       0.000 gal
+  W5                   STORAGE       0.00     0.00     0  00:00           0           0       0.000 gal
+  W5-IC                STORAGE       0.00     0.00     0  00:00           0           0       0.000 gal
+  W5-BE-010            STORAGE       0.00     0.00     0  00:00           0           0       0.000 gal
+  W4                   STORAGE       0.00     0.00     0  00:00           0           0       0.000 gal
+  W4-IC                STORAGE       0.00     0.00     0  00:00           0           0       0.000 gal
+  W1                   STORAGE       0.00     0.00     0  00:00           0           0       0.000 gal
+  W1-IC                STORAGE       0.00     0.00     0  00:00           0           0       0.000 gal
+  W3                   STORAGE       0.00     0.00     0  00:00           0           0       0.000 gal
+  W2&3-IC              STORAGE       0.00     0.00     0  00:00           0           0       0.000 gal
+  W2                   STORAGE       0.00     0.00     0  00:00           0           0       0.000 gal
+  W2-IC                STORAGE       0.00     0.00     0  00:00           0           0       0.000 gal
+  W3-IC                STORAGE       0.00     0.00     0  00:00           0           0       0.000 gal
+  18PS                 STORAGE       0.00     0.00     0  00:00           0           0       0.000 gal
+  H7-OF                STORAGE       0.00     0.00     0  00:00           0           0       0.000 gal
+  H7                   STORAGE       0.00     0.00     0  00:00           0           0       0.000 gal
+  H7-IC                STORAGE       0.00     0.00     0  00:00           0           0       0.000 gal
+  H7-WW                STORAGE       0.00     0.00     0  00:00           0           0       0.000 gal
+  H6-OF                STORAGE       0.00     0.00     0  00:00           0           0       0.000 gal
+  H6                   STORAGE       0.00     0.00     0  00:00           0           0       0.000 gal
+  H6-IC                STORAGE       0.00     0.00     0  00:00           0           0       0.000 gal
+  H6-WW                STORAGE       0.00     0.00     0  00:00           0           0       0.000 gal
+  H5-OF                STORAGE       0.00     0.00     0  00:00           0           0       0.000 gal
+  H5                   STORAGE       0.00     0.00     0  00:00           0           0       0.000 gal
+  H5-IC                STORAGE       0.00     0.00     0  00:00           0           0       0.000 gal
+  H5-WW                STORAGE       0.00     0.00     0  00:00           0           0       0.000 gal
+  HSI                  STORAGE       0.00     0.00     0  00:00           0           0       0.000 gal
+  P5-SH-010            STORAGE       0.00     0.24     0  00:30           0       0.157       0.328
+  H4-OF                STORAGE       0.00     0.93     1  00:00           0       0.599       0.006
+  H4                   STORAGE       0.00     1.25     0  00:00           0       0.124      -7.185
+  H4-IC                STORAGE       0.00     0.62     0  00:03           0       0.268       0.807
+  H4-WW                STORAGE       1.34     1.34     0  00:00       0.866       0.866       0.949
+  H3-OF                STORAGE       0.00     0.58     0  12:17           0       0.368       0.004
+  H3                   STORAGE       0.00     0.64     0  00:00           0       0.257       0.010
+  H3-IC                STORAGE       0.00     0.55     0  00:02           0       0.184       0.382
+  H3-WW                STORAGE       0.91     0.91     0  00:00       0.588       0.588      -0.000
+  H2-OF                STORAGE       0.00     0.11     0  01:35           0      0.0714       0.002
+  H2                   STORAGE       0.00     0.06     0  02:47           0      0.0354       0.093
+  H2-IC                STORAGE       0.00     0.12     0  00:16           0      0.0718       0.436
+  H2-WW                STORAGE       0.00     0.11     0  02:50           0      0.0714      -0.000
+  H1-OF                STORAGE       0.00     0.00     0  00:00           0           0       0.000 gal
+  H1                   STORAGE       0.00     0.00     0  00:00           0           0       0.000 gal
+  H1-IC                STORAGE       0.00     0.00     0  00:00           0           0       0.000 gal
+  H1-WW                STORAGE       0.00     0.00     0  00:00           0           0       0.000 gal
+  5PS                  STORAGE       0.00     0.24     0  00:57           0       0.157       0.000
+  11PS                 STORAGE       0.00     0.00     0  00:00           0           0       0.000 gal
+  H1-OB-050            STORAGE       0.00     0.00     0  00:00           0           0       0.000 gal
+  18PS-WW              STORAGE       0.00     0.00     0  00:00           0           0       0.000 gal
+  H0-OF                STORAGE       0.00     0.00     0  00:00           0           0       0.000 gal
+  18PS-DW              STORAGE       0.00     0.00     0  00:00           0           0       0.000 gal
   
-  ERROR 211: invalid number  at line 458 of [XSECT] section:
-  IC2-H5           RECT_CLOSED  0.63       0          0          0          
-
   
-  ERROR 211: invalid number  at line 459 of [XSECT] section:
-  IC1-HSI          RECT_CLOSED  0.42       0          0          0          
-
+  **********************
+  Node Surcharge Summary
+  **********************
   
-  ERROR 211: invalid number  at line 460 of [XSECT] section:
-  IC1-H4           RECT_CLOSED  0.63       0          0          0          
-
+  Surcharging occurs when water rises above the top of the highest conduit.
+  ---------------------------------------------------------------------
+                                               Max. Height   Min. Depth
+                                   Hours       Above Crown    Below Rim
+  Node                 Type      Surcharged           Feet         Feet
+  ---------------------------------------------------------------------
+  H3-03-040            JUNCTION       16.97          0.000        0.000
   
-  ERROR 211: invalid number  at line 461 of [XSECT] section:
-  IC2-H4           RECT_CLOSED  0.63       0          0          0          
-
   
-  ERROR 211: invalid number  at line 462 of [XSECT] section:
-  IC1-H3           RECT_CLOSED  0.63       0          0          0          
-
+  *********************
+  Node Flooding Summary
+  *********************
   
-  ERROR 211: invalid number  at line 463 of [XSECT] section:
-  IC2-H3           RECT_CLOSED  1.00       0          0          0          
-
+  Flooding refers to all water that overflows a node, whether it ponds or not.
+  --------------------------------------------------------------------------
+                                                             Total   Maximum
+                                 Maximum   Time of Max       Flood    Ponded
+                        Hours       Rate    Occurrence      Volume     Depth
+  Node                 Flooded       CFS   days hr:min    10^6 gal      Feet
+  --------------------------------------------------------------------------
+  H3-03-040              16.97      0.44      0  07:02       0.182     0.000
+  H4-OF                  24.00      0.92      1  00:00       0.590     0.000
+  H3-OF                  24.00      0.58      0  12:17       0.365     0.000
+  H2-OF                  23.89      0.11      0  01:35       0.071     0.000
   
-  ERROR 211: invalid number  at line 464 of [XSECT] section:
-  IC1-H2           RECT_CLOSED  0.63       0          0          0          
-
   
-  ERROR 211: invalid number  at line 465 of [XSECT] section:
-  IC2-H2           RECT_CLOSED  0.63       0          0          0          
-
+  **********************
+  Storage Volume Summary
+  **********************
   
-  ERROR 211: invalid number  at line 466 of [XSECT] section:
-  IC1-H1           RECT_CLOSED  1.00       0          0          0          
-
+  ------------------------------------------------------------------------------------------------
+                         Average    Avg   Evap  Exfil     Maximum    Max    Time of Max    Maximum
+                          Volume   Pcnt   Pcnt   Pcnt      Volume   Pcnt     Occurrence    Outflow
+  Storage Unit          1000 ft³   Full   Loss   Loss    1000 ft³   Full    days hr:min        CFS
+  ------------------------------------------------------------------------------------------------
+  BPS                      0.000    0.0    0.0    0.0       0.000    0.0       0  00:00       0.00
+  W5                       0.000    0.0    0.0    0.0       0.000    0.0       0  00:00       0.00
+  W5-IC                    0.000    0.0    0.0    0.0       0.000    0.0       0  00:00       0.00
+  W5-BE-010                0.000    0.0    0.0    0.0       0.000    0.0       0  00:00       0.00
+  W4                       0.000    0.0    0.0    0.0       0.000    0.0       0  00:00       0.00
+  W4-IC                    0.000    0.0    0.0    0.0       0.000    0.0       0  00:00       0.00
+  W1                       0.000    0.0    0.0    0.0       0.000    0.0       0  00:00       0.00
+  W1-IC                    0.000    0.0    0.0    0.0       0.000    0.0       0  00:00       0.00
+  W3                       0.000    0.0    0.0    0.0       0.000    0.0       0  00:00       0.00
+  W2&3-IC                  0.000    0.0    0.0    0.0       0.000    0.0       0  00:00       0.00
+  W2                       0.000    0.0    0.0    0.0       0.000    0.0       0  00:00       0.00
+  W2-IC                    0.000    0.0    0.0    0.0       0.000    0.0       0  00:00       0.00
+  W3-IC                    0.000    0.0    0.0    0.0       0.000    0.0       0  00:00       0.00
+  18PS                     0.000    0.0    0.0    0.0       0.000    0.0       0  00:00       0.00
+  H7-OF                    0.000    0.0    0.0    0.0       0.000    0.0       0  00:00       0.00
+  H7                       0.000    0.0    0.0    0.0       0.000    0.0       0  00:00       0.00
+  H7-IC                    0.000    0.0    0.0    0.0       0.000    0.0       0  00:00       0.00
+  H7-WW                    0.000    0.0    0.0    0.0       0.000    0.0       0  00:00       0.00
+  H6-OF                    0.000    0.0    0.0    0.0       0.000    0.0       0  00:00       0.00
+  H6                       0.000    0.0    0.0    0.0       0.000    0.0       0  00:00       0.00
+  H6-IC                    0.000    0.0    0.0    0.0       0.000    0.0       0  00:00       0.00
+  H6-WW                    0.000    0.0    0.0    0.0       0.000    0.0       0  00:00       0.00
+  H5-OF                    0.000    0.0    0.0    0.0       0.000    0.0       0  00:00       0.00
+  H5                       0.000    0.0    0.0    0.0       0.000    0.0       0  00:00       0.00
+  H5-IC                    0.000    0.0    0.0    0.0       0.000    0.0       0  00:00       0.00
+  H5-WW                    0.000    0.0    0.0    0.0       0.000    0.0       0  00:00       0.00
+  HSI                      0.000    0.0    0.0    0.0       0.000    0.0       0  00:00       0.00
+  P5-SH-010                0.010    1.1    0.0    0.0       0.010    1.1       0  00:57       0.24
+  H4-OF                    0.002  100.0    0.0    0.0       0.002  100.0       0  00:00       0.01
+  H4                       0.012    1.5    0.0    0.0       0.012    1.5       0  00:52       0.31
+  H4-IC                    0.004    1.0    0.0    0.0       0.004    1.0       0  00:30       0.41
+  H4-WW                    0.012    1.5    0.0    0.0       0.012    1.5       0  00:30       2.12
+  H3-OF                    0.002  100.0    0.0    0.0       0.002  100.0       0  00:00       0.01
+  H3                       0.009    1.4    0.0    0.0       0.009    1.4       0  02:48       0.44
+  H3-IC                    0.005    1.4    0.0    0.0       0.005    1.4       0  02:48       0.29
+  H3-WW                    0.009    1.4    0.0    0.0       0.009    1.4       0  02:48       1.27
+  H2-OF                    0.001   99.6    0.0    0.0       0.001  100.0       0  00:06       0.00
+  H2                       0.003    0.6    0.0    0.0       0.003    0.6       1  00:00       0.06
+  H2-IC                    0.002    0.6    0.0    0.0       0.002    0.6       0  02:51       0.11
+  H2-WW                    0.003    0.6    0.0    0.0       0.003    0.6       0  02:51       0.11
+  H1-OF                    0.000    0.0    0.0    0.0       0.000    0.0       0  00:00       0.00
+  H1                       0.000    0.0    0.0    0.0       0.000    0.0       0  00:00       0.00
+  H1-IC                    0.000    0.0    0.0    0.0       0.000    0.0       0  00:00       0.00
+  H1-WW                    0.000    0.0    0.0    0.0       0.000    0.0       0  00:00       0.00
+  5PS                      0.000    0.0    0.0    0.0       0.000    0.0       0  00:00       0.24
+  11PS                     0.000    0.0    0.0    0.0       0.000    0.0       0  00:00       0.00
+  H1-OB-050                0.000    0.0    0.0    0.0       0.000    0.0       0  00:00       0.00
+  18PS-WW                  0.000    0.0    0.0    0.0       0.000    0.0       0  00:00       0.00
+  H0-OF                    0.000    0.0    0.0    0.0       0.000    0.0       0  00:00       0.00
+  18PS-DW                  0.000    0.0    0.0    0.0       0.000    0.0       0  00:00       0.00
   
-  ERROR 211: invalid number  at line 467 of [XSECT] section:
-  IC2-H1           RECT_CLOSED  1.33       0          0          0          
-
   
-  ERROR 211: invalid number  at line 468 of [XSECT] section:
-  OF1-W5           RECT_OPEN    0          2.00       0          0          
-
+  ***********************
+  Outfall Loading Summary
+  ***********************
   
-  ERROR 211: invalid number  at line 469 of [XSECT] section:
-  OF1-W4           RECT_OPEN    0          3.00       0          0          
-
+  -----------------------------------------------------------
+                         Flow       Avg       Max       Total
+                         Freq      Flow      Flow      Volume
+  Outfall Node           Pcnt       CFS       CFS    10^6 gal
+  -----------------------------------------------------------
+  015                    0.00      0.00      0.00       0.000
+  -----------------------------------------------------------
+  System                 0.00      0.00      0.00       0.000
   
-  ERROR 211: invalid number  at line 470 of [XSECT] section:
-  OF1-W1           RECT_OPEN    0          3.75       0          0          
-
   
-  ERROR 211: invalid number  at line 471 of [XSECT] section:
-  OF1-W3           RECT_OPEN    0          3.00       0          0          
-
+  ********************
+  Link Flow Summary
+  ********************
   
-  ERROR 211: invalid number  at line 472 of [XSECT] section:
-  OF1-H7           RECT_OPEN    0          13.00      0          0          
-
+  -----------------------------------------------------------------------------
+                                 Maximum  Time of Max   Maximum    Max/    Max/
+                                  |Flow|   Occurrence   |Veloc|    Full    Full
+  Link                 Type          CFS  days hr:min    ft/sec    Flow   Depth
+  -----------------------------------------------------------------------------
+  IC5-W5               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  TS6-W4               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  TS1-W4               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  TS5-W4               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  OF2-W5               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  IC1-W5               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  TS1-W5               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  IC3-W5               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  IC6-W5               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  IC2-W5               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  IC4-W5               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  IC1-W4               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  TS4-W4               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  TS2-W4               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  TS3-W4               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  IC1-W1               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  IC1-W3               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  IC1-W2               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  OF2-W1               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  OF2-W2               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  OF3-W2               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  OF-W12&3             CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  OF3-W4               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  OF-W123&4            CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  TS1-W1               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  TS2-W1               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  TS3-W1               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  TS4-W1               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  TS1-W3               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  TS2-W3               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  TS3-W3               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  TS4-W3               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  TS5-W3               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  TS6-W3               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  TS7-W3               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  TS1A-W2              CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  TS2-W2               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  TS3-W2               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  TS4-W2               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  TS5-W2               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  TS6-W2               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  TS7-W2               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  IC1-W2&3             CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  IC1-W12&3            CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  24INCH               CONDUIT      0.00     0  00:00      0.00    0.00    0.50
+  IC2-W2               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  IC2-W3               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  IC2-W1               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  OF2-W3               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  TS2-18PS             CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  TS1-18PS             CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  TS3-18PS             CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  TS4-18S              CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  TS5-18PS             CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  FM-18PS-D            CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  IC1-H7               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  IC2-H7               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  OF3-H7               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  TS1-H7               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  TS2-H7               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  TS3-H7               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  TS4-H7               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  IC1-H6               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  IC2-H6               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  OF3-H6               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  IC1-H5               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  IC2-H5               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  OF3-H5               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  IC3-H7               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  IC1-H6&7             CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  IC1-HSI              CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  IC1-H4               CONDUIT      0.31     0  00:03      2.58    0.40    0.20
+  IC2-H4               CONDUIT      0.32     0  00:03      2.71    0.40    0.20
+  OF3-H4               CONDUIT      0.01     0  00:01      1.73    0.00    0.39
+  IC1-H3               CONDUIT      0.25     0  00:01      2.73    0.24    0.22
+  IC2-H3               CONDUIT      0.23     0  00:01      2.65    0.16    0.14
+  OF3-H3               CONDUIT      0.01     0  00:05      0.79    0.00    0.12
+  IC1-H2               CONDUIT      0.06     0  02:47      1.12    0.09    0.10
+  IC2-H2               CONDUIT      0.06     0  02:50      1.14    0.10    0.10
+  OF3-H2               CONDUIT      0.00     0  00:24      0.00    0.00    0.00
+  IC1-H1               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  IC2-H1               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  OF3-H1               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  IC3-H1               CONDUIT      0.00     0  00:00      0.00    0.00    0.01
+  IC1-H1&2             CONDUIT      0.12     0  00:16      1.62    0.00    0.03
+  IC1-H12&3            CONDUIT      0.17     0  00:30      1.70    0.00    0.03
+  IC1-H123&4           CONDUIT      0.24     0  00:30      2.87    0.00    0.05
+  IC1-H1-SI            CONDUIT      0.24     0  00:57      1.86    0.01    0.03
+  FM2-5PS              CONDUIT      0.24     0  04:40      2.27    0.00    0.05
+  IC1-H56&7            CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  SI-HO                CONDUIT      0.26     0  03:54      1.63    0.01    0.53
+  TS1-H6               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  TS1-H5               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  TS2-H5               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  TS3-H5               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  TS4-H5               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  TS1-HSI              CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  TS1-H4               CONDUIT      0.00     0  00:00      0.00    0.00    0.02
+  TS2-H4               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  TS4-H4               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  TS3-H4               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  TS1-H3               CONDUIT      0.40     0  02:47      3.21    0.00    0.03
+  TS2-H3               CONDUIT      0.40     0  02:57      2.19    0.00    0.52
+  TS3-H3               CONDUIT      0.10     0  00:18      0.38    0.00    0.99
+  TS1-H2               CONDUIT      0.00     0  00:00      0.00    0.00    0.01
+  TS1-H1               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  TS2-H1               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  TS3-H1               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  TS4-H1               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  TS5-H1               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  TS6-H1               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  TS7-H1               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  IC2-H6&7             CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  TS8-H1               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  OF2-H0               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  WWTP                 CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  OF3-18PS             CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  IC3-W12&3            CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  IC2-W12&3            CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  IC2-W4               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  FM5-BPS              CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  FM3-BPS              CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  FM2-BPS              CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  FM4-BPS              CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  OF1-W2               ORIFICE      0.00     0  00:00                      0.00
+  OF1-W5               WEIR         0.00     0  00:00                      0.00
+  OF1-W4               WEIR         0.00     0  00:00                      0.00
+  OF1-W1               WEIR         0.00     0  00:00                      0.00
+  OF1-W3               WEIR         0.00     0  00:00                      0.00
+  OF1-H7               WEIR         0.00     0  00:00                      0.00
+  OF2-H7               WEIR         0.00     0  00:00                      0.00
+  OF1-H6               WEIR         0.00     0  00:00                      0.00
+  OF2-H6               WEIR         0.00     0  00:00                      0.00
+  OF1-H5               WEIR         0.00     0  00:00                      0.00
+  OF2-H5               WEIR         0.00     0  00:00                      0.00
+  OF1-HSI              WEIR         0.00     0  00:00                      0.00
+  OF1-H4               WEIR         1.25     0  00:00                      0.15
+  OF2-H4               WEIR         0.93     1  00:00                      0.15
+  OF1-H3               WEIR         0.64     0  00:00                      0.14
+  OF2-H3               WEIR         0.57     0  02:47                      0.14
+  OF1-H2               WEIR         0.06     0  02:50                      0.06
+  OF2-H2               WEIR         0.11     1  00:00                      0.06
+  OF1-H1               WEIR         0.00     0  00:00                      0.00
+  OF2-H1               WEIR         0.00     0  00:00                      0.00
+  OF1-H0               WEIR         0.00     0  00:00                      0.00
+  OF1-18PS             WEIR         0.00     0  00:00                      0.00
+  FM1-BPS              PUMP         0.00     0  00:00              0.00
+  OF2-18PS             PUMP         0.00     0  00:00              0.00
+  FM-11PS              PUMP         0.00     0  00:00              0.00
+  FM1-5PS              PUMP         0.24     0  00:57              0.02
+  FM-18PS              PUMP         0.00     0  00:00              0.00
   
-  ERROR 211: invalid number  at line 473 of [XSECT] section:
-  OF2-H7           RECT_OPEN    0          8.00       0          0          
-
   
-  ERROR 211: invalid number  at line 474 of [XSECT] section:
-  OF1-H6           RECT_OPEN    0          7.00       0          0          
-
+  ***************************
+  Flow Classification Summary
+  ***************************
   
-  ERROR 211: invalid number  at line 475 of [XSECT] section:
-  OF2-H6           RECT_OPEN    0          3.75       0          0          
-
+  -------------------------------------------------------------------------------------
+                      Adjusted    ---------- Fraction of Time in Flow Class ---------- 
+                       /Actual         Up    Down  Sub   Sup   Up    Down  Norm  Inlet 
+  Conduit               Length    Dry  Dry   Dry   Crit  Crit  Crit  Crit  Ltd   Ctrl  
+  -------------------------------------------------------------------------------------
+  IC5-W5                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  TS6-W4                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  TS1-W4                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  TS5-W4                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  OF2-W5                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  IC1-W5                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  TS1-W5                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  IC3-W5                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  IC6-W5                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  IC2-W5                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  IC4-W5                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  IC1-W4                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  TS4-W4                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  TS2-W4                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  TS3-W4                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  IC1-W1                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  IC1-W3                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  IC1-W2                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  OF2-W1                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  OF2-W2                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  OF3-W2                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  OF-W12&3                1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  OF3-W4                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  OF-W123&4               1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  TS1-W1                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  TS2-W1                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  TS3-W1                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  TS4-W1                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  TS1-W3                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  TS2-W3                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  TS3-W3                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  TS4-W3                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  TS5-W3                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  TS6-W3                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  TS7-W3                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  TS1A-W2                 1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  TS2-W2                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  TS3-W2                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  TS4-W2                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  TS5-W2                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  TS6-W2                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  TS7-W2                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  IC1-W2&3                1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  IC1-W12&3               1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  24INCH                  1.00   0.04  0.96  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  IC2-W2                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  IC2-W3                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  IC2-W1                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  OF2-W3                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  TS2-18PS                1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  TS1-18PS                1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  TS3-18PS                1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  TS4-18S                 1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  TS5-18PS                1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  FM-18PS-D               1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  IC1-H7                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  IC2-H7                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  OF3-H7                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  TS1-H7                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  TS2-H7                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  TS3-H7                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  TS4-H7                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  IC1-H6                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  IC2-H6                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  OF3-H6                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  IC1-H5                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  IC2-H5                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  OF3-H5                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  IC3-H7                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  IC1-H6&7                1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  IC1-HSI                 1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  IC1-H4                  1.00   0.00  0.00  0.00  0.67  0.33  0.00  0.00  0.33  0.00
+  IC2-H4                  1.00   0.00  0.00  0.00  0.67  0.33  0.00  0.00  0.33  0.00
+  OF3-H4                  1.00   0.00  0.00  0.00  1.00  0.00  0.00  0.00  1.00  0.00
+  IC1-H3                  1.00   0.00  0.00  0.00  1.00  0.00  0.00  0.00  0.00  0.00
+  IC2-H3                  1.00   0.00  0.00  0.00  1.00  0.00  0.00  0.00  0.00  0.00
+  OF3-H3                  1.00   0.00  0.00  0.00  1.00  0.00  0.00  0.00  0.51  0.00
+  IC1-H2                  1.00   0.00  0.00  0.00  1.00  0.00  0.00  0.00  0.00  0.00
+  IC2-H2                  1.00   0.00  0.00  0.00  1.00  0.00  0.00  0.00  0.00  0.00
+  OF3-H2                  1.00   0.00  0.00  0.00  1.00  0.00  0.00  0.00  0.00  0.00
+  IC1-H1                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  IC2-H1                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  OF3-H1                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  IC3-H1                  1.00   0.00  1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  IC1-H1&2                1.00   0.00  0.00  0.00  0.99  0.01  0.00  0.00  0.00  0.00
+  IC1-H12&3               1.00   0.00  0.00  0.00  1.00  0.00  0.00  0.00  1.00  0.00
+  IC1-H123&4              1.00   0.00  0.00  0.00  1.00  0.00  0.00  0.00  1.00  0.00
+  IC1-H1-SI               1.00   0.00  0.00  0.00  0.01  0.99  0.00  0.00  0.00  0.00
+  FM2-5PS                 1.00   0.02  0.00  0.00  0.07  0.87  0.00  0.04  0.94  0.00
+  IC1-H56&7               1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  SI-HO                   1.00   0.04  0.00  0.00  0.84  0.00  0.00  0.12  0.84  0.00
+  TS1-H6                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  TS1-H5                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  TS2-H5                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  TS3-H5                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  TS4-H5                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  TS1-HSI                 1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  TS1-H4                  1.00   0.00  1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  TS2-H4                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  TS4-H4                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  TS3-H4                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  TS1-H3                  1.00   0.00  0.00  0.00  0.00  1.00  0.00  0.00  1.00  0.00
+  TS2-H3                  1.00   0.00  0.00  0.00  0.99  0.01  0.00  0.00  0.99  0.00
+  TS3-H3                  1.00   0.00  0.01  0.00  0.99  0.00  0.00  0.00  0.00  0.00
+  TS1-H2                  1.00   0.00  1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  TS1-H1                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  TS2-H1                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  TS3-H1                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  TS4-H1                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  TS5-H1                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  TS6-H1                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  TS7-H1                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  IC2-H6&7                1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  TS8-H1                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  OF2-H0                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  WWTP                    1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  OF3-18PS                1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  IC3-W12&3               1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  IC2-W12&3               1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  IC2-W4                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  FM5-BPS                 1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  FM3-BPS                 1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  FM2-BPS                 1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  FM4-BPS                 1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
   
-  ERROR 211: invalid number  at line 476 of [XSECT] section:
-  OF1-H5           RECT_OPEN    0          27.00      0          0          
-
   
-  ERROR 211: invalid number  at line 477 of [XSECT] section:
-  OF2-H5           RECT_OPEN    0          9.00       0          0          
-
+  *************************
+  Conduit Surcharge Summary
+  *************************
   
-  ERROR 211: invalid number  at line 478 of [XSECT] section:
-  OF1-HSI          RECT_OPEN    0          1.33       0          0          
-
+  ----------------------------------------------------------------------------
+                                                           Hours        Hours 
+                         --------- Hours Full --------   Above Full   Capacity
+  Conduit                Both Ends  Upstream  Dnstream   Normal Flow   Limited
+  ----------------------------------------------------------------------------
+  SI-HO                       0.01      0.01      0.64      0.01         0.01
+  TS2-H3                      0.01      0.01     16.97      0.01         0.01
+  TS3-H3                      0.01      0.01     16.97      0.01         0.01
   
-  ERROR 211: invalid number  at line 479 of [XSECT] section:
-  OF1-H4           RECT_OPEN    0          19.00      0          0          
-
   
-  ERROR 211: invalid number  at line 480 of [XSECT] section:
-  OF2-H4           RECT_OPEN    0          9.00       0          0          
-
+  ***************
+  Pumping Summary
+  ***************
   
-  ERROR 211: invalid number  at line 481 of [XSECT] section:
-  OF1-H3           RECT_OPEN    0          9.00       0          0          
-
+  ---------------------------------------------------------------------------------------------------------
+                                                  Min       Avg       Max     Total     Power    % Time Off
+                        Percent   Number of      Flow      Flow      Flow    Volume     Usage    Pump Curve
+  Pump                 Utilized   Start-Ups       CFS       CFS       CFS  10^6 gal     Kw-hr    Low   High
+  ---------------------------------------------------------------------------------------------------------
+  FM1-BPS                  0.00           0      0.00      0.00      0.00     0.000      0.00    0.0    0.0
+  OF2-18PS                 0.00           0      0.00      0.00      0.00     0.000      0.00    0.0    0.0
+  FM-11PS                  0.00           0      0.00      0.00      0.00     0.000      0.00    0.0    0.0
+  FM1-5PS                 99.86           1      0.00      0.24      0.24     0.157     26.02    0.0    0.0
+  FM-18PS                  0.00           0      0.00      0.00      0.00     0.000      0.00    0.0    0.0
   
-  ERROR 211: invalid number  at line 482 of [XSECT] section:
-  OF2-H3           RECT_OPEN    0          6.00       0          0          
 
-  
-  ERROR 211: invalid number  at line 483 of [XSECT] section:
-  OF1-H2           RECT_OPEN    0          17.00      0          0          
-
-  
-  ERROR 211: invalid number  at line 484 of [XSECT] section:
-  OF2-H2           RECT_OPEN    0          4.50       0          0          
-
-  
-  ERROR 211: invalid number  at line 485 of [XSECT] section:
-  OF1-H1           RECT_OPEN    0          16.50      0          0          
-
-  
-  ERROR 211: invalid number  at line 486 of [XSECT] section:
-  OF2-H1           RECT_OPEN    0          6.00       0          0          
-
-  
-  ERROR 211: invalid number  at line 487 of [XSECT] section:
-  OF1-H0           RECT_OPEN    0          6.00       0          0          
-
-  
-  ERROR 211: invalid number  at line 488 of [XSECT] section:
-  OF1-18PS         RECT_OPEN    0          4.00       0          0          
-
-
-  Analysis begun on:  Mon Jul 13 08:04:18 2026
-  Analysis ended on:  Mon Jul 13 08:04:18 2026
-  Total elapsed time: < 1 sec
+  Analysis begun on:  Sun Jul 19 15:23:53 2026
+  Analysis ended on:  Sun Jul 19 15:23:57 2026
+  Total elapsed time: 00:00:04

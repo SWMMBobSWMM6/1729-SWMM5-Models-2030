@@ -14,12 +14,24 @@ LINK_OFFSETS         DEPTH
 MIN_SLOPE            0.0
 ALLOW_PONDING        NO
 SKIP_STEADY_STATE    NO
-ROUTING_STEP         00:00:60
+ROUTING_STEP         00:01:00
 VARIABLE_STEP        0.75
 INERTIAL_DAMPING     PARTIAL
 NORMAL_FLOW_LIMITED  BOTH
 MAX_TRIALS           50
 HEAD_TOLERANCE       .0001
+START_DATE           01/01/2001
+START_TIME           00:00:00
+REPORT_START_DATE    01/01/2001
+REPORT_START_TIME    00:00:00
+END_DATE             01/02/2001
+END_TIME             00:00:00
+SWEEP_START          01/01
+SWEEP_END            12/31
+DRY_DAYS             0
+REPORT_STEP          00:15:00
+WET_STEP             00:05:00
+DRY_STEP             01:00:00
 
 [JUNCTIONS]
 ;;Name           Elev       MaxDepth   InitDepth  SurDepth   Aponded
@@ -40,67 +52,78 @@ CN-C8-030e       12.00      0          0          0          0
 CN-OL-005a       12.00      0          0          0          0
 CN-C8-030b       0          0          0          0          0
 
+[OUTFALLS]
+;;Name           Elev       Type       Stage      Gated
+;;-------------- ---------- ---------- ---------- -----
+S-28             12.30      FREE                  NO
+
 [STORAGE]
 ;;Name           Elev       MaxDepth   InitDepth  Shape      Curve/Params
 ;;-------------- ---------- ---------- ---------- ---------- ----------
-N-C834-S         12.00      0          13.70      FUNCTIONAL 6067908.00 0          0
-N-C8-030         12.00      0          13.70      FUNCTIONAL 0 0          0
-N-C8-025         12.00      0          13.70      FUNCTIONAL 0 0          0
-N-SP-050         12.00      0          11.90      FUNCTIONAL 0 0          0
-N-C8-020         12.00      0          14.10      FUNCTIONAL 0 0          0
-N-C8-015         12.00      0          15.10      FUNCTIONAL 0 0          0
-S-28             12.30      -0.30      15.10      FUNCTIONAL 0 0          0
-N-C8-010         12.30      -0.30      15.10      FUNCTIONAL 0 0          0
-N-SEABOARD       12.00      -2.00      1.00       FUNCTIONAL 43560.00 0          0
+N-C834-S         12.00      10.00      10.00      FUNCTIONAL 6067908.00 0          0
+N-C8-030         12.00      10.00      10.00      FUNCTIONAL 1000.00 0          0
+N-C8-025         12.00      10.00      10.00      FUNCTIONAL 1000.00 0          0
+N-SP-050         12.00      10.00      10.00      FUNCTIONAL 1000.00 0          0
+N-C8-020         12.00      10.00      10.00      FUNCTIONAL 1000.00 0          0
+N-C8-015         12.00      10.00      10.00      FUNCTIONAL 1000.00 0          0
+N-C8-010         12.30      10.00      10.00      FUNCTIONAL 1000.00 0          0
+N-SEABOARD       12.00      10.00      1.00       FUNCTIONAL 43560.00 0          0
 
 [CONDUITS]
 ;;Name           From             To               Length     Roughness  InOffset   OutOffset  InitFlow   MaxFlow
 ;;-------------- ---------------- ---------------- ---------- ---------- ---------- ---------- ---------- ----------
-C827301          N-C834-S         N-C8-030         2500.00    0          -11.60     -11.60     0          0
-C827300          N-C8-030         N-C8-025         6800.00    0          -11.60     -11.60     0          0
-C821400          N-C8-025         N-C8-020         3900.00    0          -10.20     -10.20     0          0
-C819100          N-C8-020         N-C8-015         3500.00    0          -12.00     -12.00     0          0
-C815600          N-C8-015         N-C8-010         3400.00    0          -13.00     -13.00     0          0
-C810000          N-C8-010         S-28             3200.00    0          -13.00     -13.00     0          0
-SPC01200         N-SP-050         N-C8-025         4500.00    0          -9.80      -9.80      0          0
-213              CN-C8-005        N-C8-010         0          0          0          0          0          0
-215              CN-C8-010a       N-C8-010         0          0          0          0          0          0
-217              CN-C8-020        N-C8-020         0          0          0          0          0          0
-219              CN-C8-025a       N-C8-025         0          0          0          0          0          0
-221              CN-C8-030a       N-C8-030         0          0          0          0          0          0
-229              CN-C834-S        N-C834-S         0          0          0          0          0          0
-296              CN-C8-010b       N-C8-010         0          0          0          0          0          0
-302              CN-C8-030c       N-C8-030         0          0          0          0          0          0
-305              CN-C8-030d       N-C8-030         0          0          0          0          0          0
-306              CN-C8-030e       N-C8-030         0          0          0          0          0          0
-388              CN-C8-030b       N-C8-030         0          0          0          0          0          0
+C827301          N-C834-S         N-C8-030         2500.00    0.0130     0          0          0          0
+C827300          N-C8-030         N-C8-025         6800.00    0.0130     0          0          0          0
+C821400          N-C8-025         N-C8-020         3900.00    0.0130     0          0          0          0
+C819100          N-C8-020         N-C8-015         3500.00    0.0130     0          0          0          0
+C815600          N-C8-015         N-C8-010         3400.00    0.0130     0          0          0          0
+C810000          N-C8-010         S-28             3200.00    0.0130     0          0          0          0
+SPC01200         N-SP-050         N-C8-025         4500.00    0.0130     0          0          0          0
+213              CN-C8-005        N-C8-010         100.00     0.0130     0          0          0          0
+215              CN-C8-010a       N-C8-010         100.00     0.0130     0          0          0          0
+217              CN-C8-020        N-C8-020         100.00     0.0130     0          0          0          0
+219              CN-C8-025a       N-C8-025         100.00     0.0130     0          0          0          0
+221              CN-C8-030a       N-C8-030         100.00     0.0130     0          0          0          0
+229              CN-C834-S        N-C834-S         100.00     0.0130     0          0          0          0
+296              CN-C8-010b       N-C8-010         100.00     0.0130     0          0          0          0
+302              CN-C8-030c       N-C8-030         100.00     0.0130     0          0          0          0
+305              CN-C8-030d       N-C8-030         100.00     0.0130     0          0          0          0
+306              CN-C8-030e       N-C8-030         100.00     0.0130     0          0          0          0
+388              CN-C8-030b       N-C8-030         100.00     0.0130     0          0          0          0
 
 [PUMPS]
 ;;Name           From             To               PumpCurve  Status   Startup    Shutoff
 ;;-------------- ---------------- ---------------- ---------- -------- ---------- ----------
-PUMP             N-SEABOARD       N-C8-020         *          ON       0          0         
+PUMP             N-SEABOARD       N-C8-020         PC_PUMP    ON       1.00       0         
+
+[CURVES]
+;;Name           Type       X-Value    Y-Value
+;;-------------- ---------- ---------- ----------
+;; Synthesized generic pump curves — replace with actual pump data
+PC_PUMP          Pump1      0          5
+PC_PUMP                     10         10
 
 [XSECTIONS]
 ;;Link           Shape        Geom1      Geom2      Geom3      Geom4      Barrels
 ;;-------------- ------------ ---------- ---------- ---------- ---------- ----------
-C827301          IRREGULAR    0          0          0          0          1
-C827300          IRREGULAR    0          0          0          0          1
-C821400          IRREGULAR    0          0          0          0          1
-C819100          IRREGULAR    0          0          0          0          1
-C815600          IRREGULAR    0          0          0          0          1
-C810000          IRREGULAR    0          0          0          0          1
-SPC01200         IRREGULAR    0          0          0          0          1
-213              CIRCULAR     0          0          0          0          1
-215              CIRCULAR     0          0          0          0          1
-217              CIRCULAR     0          0          0          0          1
-219              CIRCULAR     0          0          0          0          1
-221              CIRCULAR     0          0          0          0          1
-229              CIRCULAR     0          0          0          0          1
-296              CIRCULAR     0          0          0          0          1
-302              CIRCULAR     0          0          0          0          1
-305              CIRCULAR     0          0          0          0          1
-306              CIRCULAR     0          0          0          0          1
-388              CIRCULAR     0          0          0          0          1
+C827301          TRAPEZOIDAL  1.00       10.00      2          2          1
+C827300          TRAPEZOIDAL  1.00       10.00      2          2          1
+C821400          TRAPEZOIDAL  1.00       10.00      2          2          1
+C819100          TRAPEZOIDAL  1.00       10.00      2          2          1
+C815600          TRAPEZOIDAL  1.00       10.00      2          2          1
+C810000          TRAPEZOIDAL  1.00       10.00      2          2          1
+SPC01200         TRAPEZOIDAL  1.00       10.00      2          2          1
+213              CIRCULAR     1.00       0          0          0          1
+215              CIRCULAR     1.00       0          0          0          1
+217              CIRCULAR     1.00       0          0          0          1
+219              CIRCULAR     1.00       0          0          0          1
+221              CIRCULAR     1.00       0          0          0          1
+229              CIRCULAR     1.00       0          0          0          1
+296              CIRCULAR     1.00       0          0          0          1
+302              CIRCULAR     1.00       0          0          0          1
+305              CIRCULAR     1.00       0          0          0          1
+306              CIRCULAR     1.00       0          0          0          1
+388              CIRCULAR     1.00       0          0          0          1
 
 [LOSSES]
 ;;Link           Inlet      Outlet     Average    Flap Gate

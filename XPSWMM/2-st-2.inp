@@ -20,6 +20,18 @@ INERTIAL_DAMPING     PARTIAL
 NORMAL_FLOW_LIMITED  BOTH
 MAX_TRIALS           75
 HEAD_TOLERANCE       0.0001
+START_DATE           01/01/2001
+START_TIME           00:00:00
+REPORT_START_DATE    01/01/2001
+REPORT_START_TIME    00:00:00
+END_DATE             01/02/2001
+END_TIME             00:00:00
+SWEEP_START          01/01
+SWEEP_END            12/31
+DRY_DAYS             0
+REPORT_STEP          00:15:00
+WET_STEP             00:05:00
+DRY_STEP             01:00:00
 
 [JUNCTIONS]
 ;;Name           Elev       MaxDepth   InitDepth  SurDepth   Aponded
@@ -28,40 +40,45 @@ J407             200.00     0          0          0          0
 J2407            100.00     0          0          0          0
 Fallon           1.00       0          0          0          0
 
+[OUTFALLS]
+;;Name           Elev       Type       Stage      Gated
+;;-------------- ---------- ---------- ---------- -----
+S408             6.40       FREE                  NO
+
 [STORAGE]
 ;;Name           Elev       MaxDepth   InitDepth  Shape      Curve/Params
 ;;-------------- ---------- ---------- ---------- ---------- ----------
-S408             6.40       0          0          FUNCTIONAL 20.00 0          0
-S407             4.70       0          0          FUNCTIONAL 20.00 0          0
+S407             4.70       10.00      0          FUNCTIONAL 20.00 0          0
 
 [CONDUITS]
 ;;Name           From             To               Length     Roughness  InOffset   OutOffset  InitFlow   MaxFlow
 ;;-------------- ---------------- ---------------- ---------- ---------- ---------- ---------- ---------- ----------
 407              J407             J2407            882.00     0.0120     5.00       5.00       0          0
-G2407            J2407            S408             1725.00    0.0140     5.00       -0.17      0          0
+2407             J2407            S408             1725.00    0.0140     5.00       0          0          0
 
 [PUMPS]
 ;;Name           From             To               PumpCurve  Status   Startup    Shutoff
 ;;-------------- ---------------- ---------------- ---------- -------- ---------- ----------
-8407             S407             J407             PC_8407    ON       -7.49      -7.50     
+8407             S407             J407             PC_8407    ON       1.00       0         
 
 [CURVES]
 ;;Name           Type       X-Value    Y-Value
 ;;-------------- ---------- ---------- ----------
-PC_8407          Pump3      0          0
-;
+;; Synthesized generic pump curves — replace with actual pump data
+PC_8407          Pump1      0          5
+PC_8407                     10         10
 
 [XSECTIONS]
 ;;Link           Shape        Geom1      Geom2      Geom3      Geom4      Barrels
 ;;-------------- ------------ ---------- ---------- ---------- ---------- ----------
 407              CIRCULAR     0.33       0          0          0          1
-G2407            CIRCULAR     0.67       0          0          0          1
+2407             CIRCULAR     0.67       0          0          0          1
 
 [LOSSES]
 ;;Link           Inlet      Outlet     Average    Flap Gate
 ;;-------------- ---------- ---------- ---------- ----------
 407              0          0          0          NO
-G2407            0          0          0          NO
+2407             0          0          0          NO
 
 [COORDINATES]
 ;;Node           X-Coord            Y-Coord

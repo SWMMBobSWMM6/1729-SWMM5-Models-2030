@@ -14,23 +14,34 @@ LINK_OFFSETS         DEPTH
 MIN_SLOPE            0.0
 ALLOW_PONDING        NO
 SKIP_STEADY_STATE    NO
-ROUTING_STEP         00:00:300
+ROUTING_STEP         00:05:00
 VARIABLE_STEP        0.75
 INERTIAL_DAMPING     PARTIAL
 NORMAL_FLOW_LIMITED  BOTH
 MAX_TRIALS           50
 HEAD_TOLERANCE       .00001
+START_DATE           01/01/2001
+START_TIME           00:00:00
+REPORT_START_DATE    01/01/2001
+REPORT_START_TIME    00:00:00
+END_DATE             01/02/2001
+END_TIME             00:00:00
+SWEEP_START          01/01
+SWEEP_END            12/31
+DRY_DAYS             0
+REPORT_STEP          00:15:00
+WET_STEP             00:05:00
+DRY_STEP             01:00:00
 
 [JUNCTIONS]
 ;;Name           Elev       MaxDepth   InitDepth  SurDepth   Aponded
 ;;-------------- ---------- ---------- ---------- ---------- ----------
-A1               10.00      0          0.47       0          0
-A2               10.00      0          0.35       0          0
-A3               4.94       0          0.46       0          0
-A4               25.09      0          0.61       0          0
-A5               38.92      0          0.53       0          0
-A6               16.69      0          0.57       0          0
-A7               38.23      0          0.56       0          0
+A2               10.00      0          0          0          0
+A3               4.94       0          0          0          0
+A4               25.09      0          0          0          0
+A5               38.92      0          0          0          0
+A6               16.69      0          0          0          0
+A7               38.23      0          0          0          0
 F6               9.72       0          0          0          0
 F8               8.66       0          0          0          0
 F9               8.64       0          0          0          0
@@ -51,28 +62,28 @@ E7               13.72      0          0          0          0
 E8               14.20      0          0          0          0
 E9               14.73      0          0          0          0
 E10              17.12      0          0          0          0
-G25              9.85       0          0.21       0          0
+G25              9.85       0          0          0          0
 G33              12.91      0          0          0          0
 G34              11.80      0          0          0          0
 G44              13.71      0          0          0          0
 G45              13.73      0          0          0          0
 G46              14.06      0          0          0          0
-I3               10.34      0          0.48       0          0
-I5               11.31      0          0.47       0          0
-I6               9.91       0          0.44       0          0
-I7               10.03      0          0.41       0          0
-H11cLA1          12.00      0          0.14       0          0
+I3               10.34      0          0          0          0
+I5               11.31      0          0          0          0
+I6               9.91       0          0          0          0
+I7               10.03      0          0          0          0
+H11cLA1          12.00      0          0          0          0
 K28              14.30      0          0          0          0
 K29              15.00      0          0          0          0
 B5               14.10      0          0          0          0
 B6               14.80      0          0          0          0
 C1               15.65      0          0          0          0
 C13              28.19      0          0          0          0
-A2a              10.00      0          0.68       0          0
+A2a              10.00      0          0          0          0
 A1a              10.00      0          0          0          0
-A3c              14.98      0          0.51       0          0
-A3b              12.96      0          0.52       0          0
-A3a              10.87      0          0.48       0          0
+A3c              14.98      0          0          0          0
+A3b              12.96      0          0          0          0
+A3a              10.87      0          0          0          0
 F7LA2            10.21      0          0          0          0
 G40LA1           12.51      0          0          0          0
 G42LA5           15.30      0          0          0          0
@@ -96,8 +107,8 @@ B4LA18           46.80      0          0          0          0
 B4LA16           45.00      0          0          0          0
 B1bLA3           15.50      0          0          0          0
 B1bLA4           20.30      0          0          0          0
-H11eLA4          11.00      0          0.08       0          0
-H11eLA2          11.00      0          0.14       0          0
+H11eLA4          11.00      0          0          0          0
+H11eLA2          11.00      0          0          0          0
 K13LA1           12.30      0          0          0          0
 SYCBout          11.00      0          0          0          0
 LSCBout          13.00      0          0          0          0
@@ -110,184 +121,260 @@ SSCBout          58.00      0          0          0          0
 ASCBout          24.00      0          0          0          0
 PRCBout          30.30      0          0          0          0
 ARCBout          45.00      0          0          0          0
+HP11_2           0          0          0          0          0
+HP3L_1           0          0          0          0          0
+HP3L_3           0          0          0          0          0
+FL10_2           0          0          0          0          0
+FL9_2            0          0          0          0          0
+FL8_2            0          0          0          0          0
+FL7_2            0          0          0          0          0
+FL6_2            0          0          0          0          0
+FL5_2            0          0          0          0          0
+SY4_2            0          0          0          0          0
+SY3_2            0          0          0          0          0
+SY2_2            0          0          0          0          0
+BG30_2           0          0          0          0          0
+BG31_2           0          0          0          0          0
+OS3_2            0          0          0          0          0
+AS10_2           0          0          0          0          0
+AS11_2           0          0          0          0          0
+XJ2_2            0          0          0          0          0
+XJ1_2            0          0          0          0          0
+XJ5_2            0          0          0          0          0
+XJ12_2           0          0          0          0          0
+XJ11_2           0          0          0          0          0
+XJ13_2           0          0          0          0          0
+HL1W_2           7.00       0          0          0          0
+HL2W_2           7.00       0          0          0          0
+HL3W_2           7.00       0          0          0          0
+HL4W_2           7.00       0          0          0          0
+F7L1_2           0          0          0          0          0
+F12L1_2          0          0          0          0          0
+F7L2_2           0          0          0          0          0
+G52L1_2          13.98      0          0          0          0
+G52L1_3          12.44      0          0          0          0
+G52L2_2          22.69      0          0          0          0
+G42L2_2          11.70      0          0          0          0
+G42L6_2          16.89      0          0          0          0
+G42L6_3          13.40      0          0          0          0
+G42L5_2          13.40      0          0          0          0
+G42L5_3          12.39      0          0          0          0
+G42L4_2          12.39      0          0          0          0
+G42L4_3          11.38      0          0          0          0
+G42L3_2          11.38      0          0          0          0
+G32L2_2          11.07      0          0          0          0
+G32L1_2          10.73      0          0          0          0
+H11bL2_2         9.16       0          0          0          0
+H11bL1_2         8.76       0          0          0          0
+K19L7_2          0          0          0          0          0
+C3L9_2           0          0          0          0          0
+C3L8_2           0          0          0          0          0
+C3L7_2           0          0          0          0          0
+C3L6_2           0          0          0          0          0
+C13L2_2          0          0          0          0          0
+C13L3_2          0          0          0          0          0
+C13L5_2          0          0          0          0          0
+C13L6_2          0          0          0          0          0
+C13L7_2          0          0          0          0          0
+C13L13_2         0          0          0          0          0
+C13L10_2         29.42      0          0          0          0
+C13L14_2         0          0          0          0          0
+C13L4_2          0          0          0          0          0
+B4L2_2           0          0          0          0          0
+B4L4_2           0          0          0          0          0
+B4L3_2           0          0          0          0          0
+B4L15_2          0          0          0          0          0
+B4L14_2          0          0          0          0          0
+B4L13_2          0          0          0          0          0
+B4L18_2          0          0          0          0          0
+B4L19_2          0          0          0          0          0
+B1bL1_2          10.10      0          0          0          0
+B1bL6_2          25.30      0          0          0          0
+K13L2_2          10.62      0          0          0          0
+K13L1_2          10.49      0          0          0          0
+
+[OUTFALLS]
+;;Name           Elev       Type       Stage      Gated
+;;-------------- ---------- ---------- ---------- -----
+A1               10.00      FREE                  NO
 
 [STORAGE]
 ;;Name           Elev       MaxDepth   InitDepth  Shape      Curve/Params
 ;;-------------- ---------- ---------- ---------- ---------- ----------
-A8               8.00       0          0.53       FUNCTIONAL 0 0          0
-A9               8.10       0          0.46       FUNCTIONAL 10.00 0          0
-A10              8.00       0          0.63       FUNCTIONAL 0 0          0
-A11              9.00       0          0.58       FUNCTIONAL 10.00 0          0
-A12              9.00       0          0.68       FUNCTIONAL 10.00 0          0
-A13              11.90      0          0.56       FUNCTIONAL 10.00 0          0
-A14              11.90      0          0.66       FUNCTIONAL 10.00 0          0
-A19              8.09       0          0.56       FUNCTIONAL 10.00 0          0
-F1               8.59       0          0          FUNCTIONAL 10.00 0          0
-F2               8.64       0          0          FUNCTIONAL 10.00 0          0
-F4               8.72       0          0          FUNCTIONAL 10.00 0          0
-F5               8.79       0          0          FUNCTIONAL 10.00 0          0
-F7               9.73       0          0          FUNCTIONAL 0 0          0
-F10              8.85       0          0          FUNCTIONAL 10.00 0          0
-F12              8.80       0          0          FUNCTIONAL 10.00 0          0
-F3               8.72       0          0          FUNCTIONAL 10.00 0          0
-D1               8.75       0          0          FUNCTIONAL 10.00 0          0
-D3               8.55       0          0          FUNCTIONAL 0 0          0
-E1               8.65       0          0          FUNCTIONAL 0 0          0
-SYCB             11.00      0          0.24       FUNCTIONAL 0 0          0
-H1               8.18       0          0.54       FUNCTIONAL 10.00 0          0
-G23              9.15       0          0.44       FUNCTIONAL 10.00 0          0
-G24              9.25       0          0.38       FUNCTIONAL 0 0          0
-G26              10.47      0          0          FUNCTIONAL 10.00 0          0
-G31              11.59      0          0          FUNCTIONAL 10.00 0          0
-GX1              12.50      0          0          FUNCTIONAL 10.00 0          0
-GX2              12.60      0          0          FUNCTIONAL 10.00 0          0
-G32              13.30      0          0          FUNCTIONAL 0 0          0
-G35              12.05      0          0          FUNCTIONAL 0 0          0
-G36              12.00      0          0          FUNCTIONAL 0 0          0
-G39              12.44      0          0          FUNCTIONAL 10.00 0          0
-G40              12.42      0          0          FUNCTIONAL 10.00 0          0
-G41              12.60      0          0          FUNCTIONAL 10.00 0          0
-G42              13.17      0          0          FUNCTIONAL 10.00 0          0
-G43              13.49      0          0          FUNCTIONAL 10.00 0          0
-G47              14.40      0          0          FUNCTIONAL 0 0          0
-G50              14.61      0          0          FUNCTIONAL 10.00 0          0
-G51              14.69      0          0          FUNCTIONAL 0 0          0
-G52              14.80      0          0          FUNCTIONAL 0 0          0
-H2               8.24       0          0.50       FUNCTIONAL 10.00 0          0
-H4               8.67       0          0.27       FUNCTIONAL 10.00 0          0
-H5               8.80       0          0.48       FUNCTIONAL 10.00 0          0
-H7               9.93       0          0.21       FUNCTIONAL 10.00 0          0
-H8               10.00      0          0.35       FUNCTIONAL 0 0          0
-H9               10.16      0          0.53       FUNCTIONAL 0 0          0
-I2               10.16      0          0.51       FUNCTIONAL 0 0          0
-I4               10.22      0          0.48       FUNCTIONAL 10.00 0          0
-H10              10.60      0          0.14       FUNCTIONAL 10.00 0          0
-H11              10.88      0          0.20       FUNCTIONAL 10.00 0          0
-H11c             10.98      0          0.19       FUNCTIONAL 0 0          0
-H11d             11.05      0          0.19       FUNCTIONAL 10.00 0          0
-H11dLA1          11.05      0          0.14       FUNCTIONAL 0 0          0
-H14              11.16      0          0.17       FUNCTIONAL 10.00 0          0
-H15              10.67      0          0.15       FUNCTIONAL 0 0          0
-H16              10.86      0          0.10       FUNCTIONAL 10.00 0          0
-H17              10.96      0          0.17       FUNCTIONAL 10.00 0          0
-H18              11.00      0          0.19       FUNCTIONAL 10.00 0          0
-H19              11.73      0          0.21       FUNCTIONAL 0 0          0
-H20              11.78      0          0.17       FUNCTIONAL 0 0          0
-B1               11.79      0          0.16       FUNCTIONAL 0 0          0
-J3               12.35      0          0          FUNCTIONAL 10.00 0          0
-J4               13.00      0          0          FUNCTIONAL 0 0          0
-J5               12.50      0          0          FUNCTIONAL 10.00 0          0
-J6               12.56      0          0          FUNCTIONAL 10.00 0          0
-J7               13.24      0          0          FUNCTIONAL 10.00 0          0
-K1               11.93      0          0.02       FUNCTIONAL 0 0          0
-K6               12.21      0          0          FUNCTIONAL 10.00 0          0
-K7               11.76      0          0          FUNCTIONAL 0 0          0
-K13              12.04      0          0          FUNCTIONAL 0 0          0
-K19              12.34      0          0          FUNCTIONAL 0 0          0
-K26              14.00      0          0          FUNCTIONAL 10.00 0          0
-K27              14.30      0          0          FUNCTIONAL 0 0          0
-B1b              11.89      0          0.06       FUNCTIONAL 0 0          0
-B2               12.00      0          0.02       FUNCTIONAL 10.00 0          0
-B3               12.00      0          0          FUNCTIONAL 0 0          0
-B4               12.34      0          0          FUNCTIONAL 0 0          0
-BX2              13.71      0          0          FUNCTIONAL 10.00 0          0
-C2               17.20      0          0          FUNCTIONAL 100.00 0          0
-C3               17.33      0          0          FUNCTIONAL 0 0          0
-C4               17.32      0          0          FUNCTIONAL 0 0          0
-C5               18.04      0          0          FUNCTIONAL 0 0          0
-C6               19.90      0          0          FUNCTIONAL 0 0          0
-C7               20.29      0          0          FUNCTIONAL 0 0          0
-C8               22.81      0          0          FUNCTIONAL 0 0          0
-C9               25.35      0          0          FUNCTIONAL 0 0          0
-C10              26.11      0          0          FUNCTIONAL 0 0          0
-C11              26.34      0          0          FUNCTIONAL 0 0          0
-C12              27.57      0          0          FUNCTIONAL 0 0          0
-SDCB             14.00      0          0          FUNCTIONAL 0 0          0
-B4LA12           37.30      0          0          FUNCTIONAL 0 0          0
-LSCB             13.00      0          0.13       FUNCTIONAL 0 0          0
-PRCB             30.30      0          0          FUNCTIONAL 0 0          0
-A8LA1            8.00       0          0          FUNCTIONAL 0 0          0
-A17              8.00       0          0.59       FUNCTIONAL 10.00 0          0
-HLK1             8.24       0          2.10       FUNCTIONAL 0 0          0
-HLK2             8.27       0          2.00       FUNCTIONAL 0 0          0
-BGCS             8.27       0          0.46       FUNCTIONAL 10.00 0          0
-HLK3             8.27       0          2.00       FUNCTIONAL 0 0          0
-F7LA1            10.21      0          0          FUNCTIONAL 10.00 0          0
-F12LA1           10.21      0          0          FUNCTIONAL 10.00 0          0
-G36a             12.08      0          0          FUNCTIONAL 0 0          0
-G42LA1           13.45      0          0          FUNCTIONAL 10.00 0          0
-G52LA1           15.80      0          0          FUNCTIONAL 0 0          0
-G52LA2           25.30      0          0          FUNCTIONAL 10.00 0          0
-G42LA2           14.90      0          0          FUNCTIONAL 10.00 0          0
-G42LA6           18.30      0          0          FUNCTIONAL 0 0          0
-G42LA4           14.30      0          0          FUNCTIONAL 0 0          0
-G32LA2           13.61      0          0          FUNCTIONAL 0 0          0
-G32LA1           13.30      0          0          FUNCTIONAL 10.00 0          0
-G32LA3           13.00      0          0          FUNCTIONAL 10.00 0          0
-H8a              10.05      0          0.20       FUNCTIONAL 0 0          0
-SACB1            10.05      0          0.75       FUNCTIONAL 0 0          0
-JKLK             10.00      0          1.34       FUNCTIONAL 0 0          0
-H9a              10.98      0          0.14       FUNCTIONAL 10.00 0          0
-SACB2            11.03      0          1.60       FUNCTIONAL 0 0          0
-H11b             10.96      0          0.19       FUNCTIONAL 0 0          0
-H11a             10.92      0          0.20       FUNCTIONAL 0 0          0
-H11bLA2          11.80      0          0          FUNCTIONAL 10.00 0          0
-H11cLA2          12.00      0          0.02       FUNCTIONAL 0 0          0
-H11e             11.14      0          0.18       FUNCTIONAL 0 0          0
-J2               12.09      0          0          FUNCTIONAL 0 0          0
-J2LA1            13.00      0          0          FUNCTIONAL 0 0          0
-B1a              11.85      0          0.10       FUNCTIONAL 0 0          0
-B1aLA1           14.00      0          0.06       FUNCTIONAL 10.00 0          0
-K19LA2           14.11      0          0          FUNCTIONAL 10.00 0          0
-K19LA7           14.30      0          0          FUNCTIONAL 10.00 0          0
-K19LA8           14.10      0          0          FUNCTIONAL 0 0          0
-B4a              12.82      0          0          FUNCTIONAL 10.00 0          0
-C3LA9            34.80      0          0          FUNCTIONAL 0 0          0
-C3LA8            31.30      0          0          FUNCTIONAL 10.00 0          0
-C3LA7            28.30      0          0          FUNCTIONAL 10.00 0          0
-C3LA6            28.30      0          0          FUNCTIONAL 0 0          0
-C3LA2            21.00      0          0          FUNCTIONAL 10.00 0          0
-C13LA1           27.80      0          0          FUNCTIONAL 0 0          0
-C13LA2           32.30      0          0          FUNCTIONAL 10.00 0          0
-C13LA8           32.00      0          0          FUNCTIONAL 10.00 0          0
-C13LA4           29.30      0          0          FUNCTIONAL 10.00 0          0
-ASCB             24.00      0          0          FUNCTIONAL 0 0          0
-C13LA6           25.10      0          0          FUNCTIONAL 0 0          0
-C13LA5           25.30      0          0          FUNCTIONAL 10.00 0          0
-C13LA16          54.30      0          0          FUNCTIONAL 0 0          0
-C13LA15          47.30      0          0          FUNCTIONAL 0 0          0
-C13LA13          45.10      0          0          FUNCTIONAL 10.00 0          0
-C13LA12          44.30      0          0          FUNCTIONAL 0 0          0
-C13LA11          38.80      0          0          FUNCTIONAL 10.00 0          0
-C13LA10          33.30      0          0          FUNCTIONAL 0 0          0
-ARCB             45.00      0          0          FUNCTIONAL 0 0          0
-C13LA3           28.80      0          0          FUNCTIONAL 10.00 0          0
-K19LA1           12.38      0          0          FUNCTIONAL 10.00 0          0
-C13LA17          56.30      0          0          FUNCTIONAL 0 0          0
-HLK3LA1          8.00       0          2.00       FUNCTIONAL 0 0          0
-B5LA1            15.80      0          0          FUNCTIONAL 0 0          0
-B4b              13.26      0          0          FUNCTIONAL 10.00 0          0
-B4LA1            13.38      0          0          FUNCTIONAL 10.00 0          0
-B4LA2            14.50      0          0          FUNCTIONAL 0 0          0
-B4LA4            17.30      0          0          FUNCTIONAL 10.00 0          0
-B4LA8            23.30      0          0          FUNCTIONAL 0 0          0
-B4LA9            22.80      0          0          FUNCTIONAL 0 0          0
-CRCB             23.00      0          0          FUNCTIONAL 0 0          0
-B4LA11           25.30      0          0          FUNCTIONAL 0 0          0
-B4LA14           40.30      0          0          FUNCTIONAL 0 0          0
-B4LA17           45.30      0          0          FUNCTIONAL 0 0          0
-SSCB             58.00      0          0          FUNCTIONAL 0 0          0
-B4LA19           53.30      0          0          FUNCTIONAL 10.00 0          0
-B1bLA2           15.20      0          0          FUNCTIONAL 10.00 0          0
-B1bLA1           12.00      0          0          FUNCTIONAL 10.00 0          0
-B1bLA5           20.30      0          0          FUNCTIONAL 10.00 0          0
-B1bLA6           26.30      0          0          FUNCTIONAL 10.00 0          0
-B1bLA7           20.80      0          0          FUNCTIONAL 10.00 0          0
-H11eLA6          11.00      0          0          FUNCTIONAL 0 0          0
-H11eLA5          11.00      0          0.05       FUNCTIONAL 10.00 0          0
-H11eLA3          11.00      0          0.12       FUNCTIONAL 10.00 0          0
-H11eLA1          11.16      0          0.16       FUNCTIONAL 10.00 0          0
-K13LA2           13.30      0          0          FUNCTIONAL 10.00 0          0
+A8               8.00       10.00      0.53       FUNCTIONAL 1000.00 0          0
+A9               8.10       10.00      0.46       FUNCTIONAL 10.00 0          0
+A10              8.00       10.00      0.63       FUNCTIONAL 1000.00 0          0
+A11              9.00       10.00      0.58       FUNCTIONAL 10.00 0          0
+A12              9.00       10.00      0.68       FUNCTIONAL 10.00 0          0
+A13              11.90      10.00      0.56       FUNCTIONAL 10.00 0          0
+A14              11.90      10.00      0.66       FUNCTIONAL 10.00 0          0
+A19              8.09       10.00      0.56       FUNCTIONAL 10.00 0          0
+F1               8.59       10.00      0          FUNCTIONAL 10.00 0          0
+F2               8.64       10.00      0          FUNCTIONAL 10.00 0          0
+F4               8.72       10.00      0          FUNCTIONAL 10.00 0          0
+F5               8.79       10.00      0          FUNCTIONAL 10.00 0          0
+F7               9.73       10.00      0          FUNCTIONAL 1000.00 0          0
+F10              8.85       10.00      0          FUNCTIONAL 10.00 0          0
+F12              8.80       10.00      0          FUNCTIONAL 10.00 0          0
+F3               8.72       10.00      0          FUNCTIONAL 10.00 0          0
+D1               8.75       10.00      0          FUNCTIONAL 10.00 0          0
+D3               8.55       10.00      0          FUNCTIONAL 1000.00 0          0
+E1               8.65       10.00      0          FUNCTIONAL 1000.00 0          0
+SYCB             11.00      10.00      0.24       FUNCTIONAL 1000.00 0          0
+H1               8.18       10.00      0.54       FUNCTIONAL 10.00 0          0
+G23              9.15       10.00      0.44       FUNCTIONAL 10.00 0          0
+G24              9.25       10.00      0.38       FUNCTIONAL 1000.00 0          0
+G26              10.47      10.00      0          FUNCTIONAL 10.00 0          0
+G31              11.59      10.00      0          FUNCTIONAL 10.00 0          0
+GX1              12.50      10.00      0          FUNCTIONAL 10.00 0          0
+GX2              12.60      10.00      0          FUNCTIONAL 10.00 0          0
+G32              13.30      10.00      0          FUNCTIONAL 1000.00 0          0
+G35              12.05      10.00      0          FUNCTIONAL 1000.00 0          0
+G36              12.00      10.00      0          FUNCTIONAL 1000.00 0          0
+G39              12.44      10.00      0          FUNCTIONAL 10.00 0          0
+G40              12.42      10.00      0          FUNCTIONAL 10.00 0          0
+G41              12.60      10.00      0          FUNCTIONAL 10.00 0          0
+G42              13.17      10.00      0          FUNCTIONAL 10.00 0          0
+G43              13.49      10.00      0          FUNCTIONAL 10.00 0          0
+G47              14.40      10.00      0          FUNCTIONAL 1000.00 0          0
+G50              14.61      10.00      0          FUNCTIONAL 10.00 0          0
+G51              14.69      10.00      0          FUNCTIONAL 1000.00 0          0
+G52              14.80      10.00      0          FUNCTIONAL 1000.00 0          0
+H2               8.24       10.00      0.50       FUNCTIONAL 10.00 0          0
+H4               8.67       10.00      0.27       FUNCTIONAL 10.00 0          0
+H5               8.80       10.00      0.48       FUNCTIONAL 10.00 0          0
+H7               9.93       10.00      0.21       FUNCTIONAL 10.00 0          0
+H8               10.00      10.00      0.35       FUNCTIONAL 1000.00 0          0
+H9               10.16      10.00      0.53       FUNCTIONAL 1000.00 0          0
+I2               10.16      10.00      0.51       FUNCTIONAL 1000.00 0          0
+I4               10.22      10.00      0.48       FUNCTIONAL 10.00 0          0
+H10              10.60      10.00      0.14       FUNCTIONAL 10.00 0          0
+H11              10.88      10.00      0.20       FUNCTIONAL 10.00 0          0
+H11c             10.98      10.00      0.19       FUNCTIONAL 1000.00 0          0
+H11d             11.05      10.00      0.19       FUNCTIONAL 10.00 0          0
+H11dLA1          11.05      10.00      0.14       FUNCTIONAL 1000.00 0          0
+H14              11.16      10.00      0.17       FUNCTIONAL 10.00 0          0
+H15              10.67      10.00      0.15       FUNCTIONAL 1000.00 0          0
+H16              10.86      10.00      0.10       FUNCTIONAL 10.00 0          0
+H17              10.96      10.00      0.17       FUNCTIONAL 10.00 0          0
+H18              11.00      10.00      0.19       FUNCTIONAL 10.00 0          0
+H19              11.73      10.00      0.21       FUNCTIONAL 1000.00 0          0
+H20              11.78      10.00      0.17       FUNCTIONAL 1000.00 0          0
+B1               11.79      10.00      0.16       FUNCTIONAL 1000.00 0          0
+J3               12.35      10.00      0          FUNCTIONAL 10.00 0          0
+J4               13.00      10.00      0          FUNCTIONAL 1000.00 0          0
+J5               12.50      10.00      0          FUNCTIONAL 10.00 0          0
+J6               12.56      10.00      0          FUNCTIONAL 10.00 0          0
+J7               13.24      10.00      0          FUNCTIONAL 10.00 0          0
+K1               11.93      10.00      0.02       FUNCTIONAL 1000.00 0          0
+K6               12.21      10.00      0          FUNCTIONAL 10.00 0          0
+K7               11.76      10.00      0          FUNCTIONAL 1000.00 0          0
+K13              12.04      10.00      0          FUNCTIONAL 1000.00 0          0
+K19              12.34      10.00      0          FUNCTIONAL 1000.00 0          0
+K26              14.00      10.00      0          FUNCTIONAL 10.00 0          0
+K27              14.30      10.00      0          FUNCTIONAL 1000.00 0          0
+B1b              11.89      10.00      0.06       FUNCTIONAL 1000.00 0          0
+B2               12.00      10.00      0.02       FUNCTIONAL 10.00 0          0
+B3               12.00      10.00      0          FUNCTIONAL 1000.00 0          0
+B4               12.34      10.00      0          FUNCTIONAL 1000.00 0          0
+BX2              13.71      10.00      0          FUNCTIONAL 10.00 0          0
+C2               17.20      10.00      0          FUNCTIONAL 100.00 0          0
+C3               17.33      10.00      0          FUNCTIONAL 1000.00 0          0
+C4               17.32      10.00      0          FUNCTIONAL 1000.00 0          0
+C5               18.04      10.00      0          FUNCTIONAL 1000.00 0          0
+C6               19.90      10.00      0          FUNCTIONAL 1000.00 0          0
+C7               20.29      10.00      0          FUNCTIONAL 1000.00 0          0
+C8               22.81      10.00      0          FUNCTIONAL 1000.00 0          0
+C9               25.35      10.00      0          FUNCTIONAL 1000.00 0          0
+C10              26.11      10.00      0          FUNCTIONAL 1000.00 0          0
+C11              26.34      10.00      0          FUNCTIONAL 1000.00 0          0
+C12              27.57      10.00      0          FUNCTIONAL 1000.00 0          0
+SDCB             14.00      10.00      0          FUNCTIONAL 1000.00 0          0
+B4LA12           37.30      10.00      0          FUNCTIONAL 1000.00 0          0
+LSCB             13.00      10.00      0.13       FUNCTIONAL 1000.00 0          0
+PRCB             30.30      10.00      0          FUNCTIONAL 1000.00 0          0
+A8LA1            8.00       10.00      0          FUNCTIONAL 1000.00 0          0
+A17              8.00       10.00      0.59       FUNCTIONAL 10.00 0          0
+HLK1             8.24       10.00      2.10       FUNCTIONAL 1000.00 0          0
+HLK2             8.27       10.00      2.00       FUNCTIONAL 1000.00 0          0
+BGCS             8.27       10.00      0.46       FUNCTIONAL 10.00 0          0
+HLK3             8.27       10.00      2.00       FUNCTIONAL 1000.00 0          0
+F7LA1            10.21      10.00      0          FUNCTIONAL 10.00 0          0
+F12LA1           10.21      10.00      0          FUNCTIONAL 10.00 0          0
+G36a             12.08      10.00      0          FUNCTIONAL 1000.00 0          0
+G42LA1           13.45      10.00      0          FUNCTIONAL 10.00 0          0
+G52LA1           15.80      10.00      0          FUNCTIONAL 1000.00 0          0
+G52LA2           25.30      10.00      0          FUNCTIONAL 10.00 0          0
+G42LA2           14.90      10.00      0          FUNCTIONAL 10.00 0          0
+G42LA6           18.30      10.00      0          FUNCTIONAL 1000.00 0          0
+G42LA4           14.30      10.00      0          FUNCTIONAL 1000.00 0          0
+G32LA2           13.61      10.00      0          FUNCTIONAL 1000.00 0          0
+G32LA1           13.30      10.00      0          FUNCTIONAL 10.00 0          0
+G32LA3           13.00      10.00      0          FUNCTIONAL 10.00 0          0
+H8a              10.05      10.00      0.20       FUNCTIONAL 1000.00 0          0
+SACB1            10.05      10.00      0.75       FUNCTIONAL 1000.00 0          0
+JKLK             10.00      10.00      1.34       FUNCTIONAL 1000.00 0          0
+H9a              10.98      10.00      0.14       FUNCTIONAL 10.00 0          0
+SACB2            11.03      10.00      1.60       FUNCTIONAL 1000.00 0          0
+H11b             10.96      10.00      0.19       FUNCTIONAL 1000.00 0          0
+H11a             10.92      10.00      0.20       FUNCTIONAL 1000.00 0          0
+H11bLA2          11.80      10.00      0          FUNCTIONAL 10.00 0          0
+H11cLA2          12.00      10.00      0.02       FUNCTIONAL 1000.00 0          0
+H11e             11.14      10.00      0.18       FUNCTIONAL 1000.00 0          0
+J2               12.09      10.00      0          FUNCTIONAL 1000.00 0          0
+J2LA1            13.00      10.00      0          FUNCTIONAL 1000.00 0          0
+B1a              11.85      10.00      0.10       FUNCTIONAL 1000.00 0          0
+B1aLA1           14.00      10.00      0.06       FUNCTIONAL 10.00 0          0
+K19LA2           14.11      10.00      0          FUNCTIONAL 10.00 0          0
+K19LA7           14.30      10.00      0          FUNCTIONAL 10.00 0          0
+K19LA8           14.10      10.00      0          FUNCTIONAL 1000.00 0          0
+B4a              12.82      10.00      0          FUNCTIONAL 10.00 0          0
+C3LA9            34.80      10.00      0          FUNCTIONAL 1000.00 0          0
+C3LA8            31.30      10.00      0          FUNCTIONAL 10.00 0          0
+C3LA7            28.30      10.00      0          FUNCTIONAL 10.00 0          0
+C3LA6            28.30      10.00      0          FUNCTIONAL 1000.00 0          0
+C3LA2            21.00      10.00      0          FUNCTIONAL 10.00 0          0
+C13LA1           27.80      10.00      0          FUNCTIONAL 1000.00 0          0
+C13LA2           32.30      10.00      0          FUNCTIONAL 10.00 0          0
+C13LA8           32.00      10.00      0          FUNCTIONAL 10.00 0          0
+C13LA4           29.30      10.00      0          FUNCTIONAL 10.00 0          0
+ASCB             24.00      10.00      0          FUNCTIONAL 1000.00 0          0
+C13LA6           25.10      10.00      0          FUNCTIONAL 1000.00 0          0
+C13LA5           25.30      10.00      0          FUNCTIONAL 10.00 0          0
+C13LA16          54.30      10.00      0          FUNCTIONAL 1000.00 0          0
+C13LA15          47.30      10.00      0          FUNCTIONAL 1000.00 0          0
+C13LA13          45.10      10.00      0          FUNCTIONAL 10.00 0          0
+C13LA12          44.30      10.00      0          FUNCTIONAL 1000.00 0          0
+C13LA11          38.80      10.00      0          FUNCTIONAL 10.00 0          0
+C13LA10          33.30      10.00      0          FUNCTIONAL 1000.00 0          0
+ARCB             45.00      10.00      0          FUNCTIONAL 1000.00 0          0
+C13LA3           28.80      10.00      0          FUNCTIONAL 10.00 0          0
+K19LA1           12.38      10.00      0          FUNCTIONAL 10.00 0          0
+C13LA17          56.30      10.00      0          FUNCTIONAL 1000.00 0          0
+HLK3LA1          8.00       10.00      2.00       FUNCTIONAL 1000.00 0          0
+B5LA1            15.80      10.00      0          FUNCTIONAL 1000.00 0          0
+B4b              13.26      10.00      0          FUNCTIONAL 10.00 0          0
+B4LA1            13.38      10.00      0          FUNCTIONAL 10.00 0          0
+B4LA2            14.50      10.00      0          FUNCTIONAL 1000.00 0          0
+B4LA4            17.30      10.00      0          FUNCTIONAL 10.00 0          0
+B4LA8            23.30      10.00      0          FUNCTIONAL 1000.00 0          0
+B4LA9            22.80      10.00      0          FUNCTIONAL 1000.00 0          0
+CRCB             23.00      10.00      0          FUNCTIONAL 1000.00 0          0
+B4LA11           25.30      10.00      0          FUNCTIONAL 1000.00 0          0
+B4LA14           40.30      10.00      0          FUNCTIONAL 1000.00 0          0
+B4LA17           45.30      10.00      0          FUNCTIONAL 1000.00 0          0
+SSCB             58.00      10.00      0          FUNCTIONAL 1000.00 0          0
+B4LA19           53.30      10.00      0          FUNCTIONAL 10.00 0          0
+B1bLA2           15.20      10.00      0          FUNCTIONAL 10.00 0          0
+B1bLA1           12.00      10.00      0          FUNCTIONAL 10.00 0          0
+B1bLA5           20.30      10.00      0          FUNCTIONAL 10.00 0          0
+B1bLA6           26.30      10.00      0          FUNCTIONAL 10.00 0          0
+B1bLA7           20.80      10.00      0          FUNCTIONAL 10.00 0          0
+H11eLA6          11.00      10.00      0          FUNCTIONAL 1000.00 0          0
+H11eLA5          11.00      10.00      0.05       FUNCTIONAL 10.00 0          0
+H11eLA3          11.00      10.00      0.12       FUNCTIONAL 10.00 0          0
+H11eLA1          11.16      10.00      0.16       FUNCTIONAL 10.00 0          0
+K13LA2           13.30      10.00      0          FUNCTIONAL 10.00 0          0
 
 [CONDUITS]
 ;;Name           From             To               Length     Roughness  InOffset   OutOffset  InitFlow   MaxFlow
@@ -416,7 +503,11 @@ HM15_1           A12              A11              36.60      0.0120     5.81   
 HM19_1           A17              A14              186.30     0.0250     6.07       6.03       0          0
 HM20_1           A19              A17              424.82     0.0250     6.16       6.07       0          0
 OS2_1            H4               H2               544.80     0.0250     6.74       6.31       0          0
+HL1W_1           HL1W_2           HLK1             4.00       0.0600     7.00       7.00       0          0
+HL2W_1           HL2W_2           HLK2             4.00       0.0600     7.00       7.03       0          0
 BG3_1            G23              BGCS             200.00     0.0250     6.36       6.34       0          0
+HL3W_1           HL3W_2           HLK2             4.00       0.0600     7.00       7.00       0          0
+HL4W_1           HL4W_2           HLK3             4.00       0.0600     7.00       7.00       0          0
 F7L1_1           F7L1_2           F7               55.10      0.1000     0          0          0          0
 F12L1_1          F12L1_2          F12              55.10      0.1000     0          0          0          0
 F12L2_1          F7LA2            F12              115.80     0.0120     8.21       7.82       0          0
@@ -556,39 +647,38 @@ RATING10         PRCB             PRCBout          10.00      0.0140     27.00  
 RATING11         ARCB             ARCBout          10.00      0.0140     41.90      41.90      0          0
 C13L22_1         ASCB             C7               275.00     0.0150     23.70      19.99      0          0
 
-[WEIRS]
-;;Name           From             To               Type       CrestHt    Qcoeff     Gated    EndCon   EndCoeff   Surcharge
-;;-------------- ---------------- ---------------- ---------- ---------- ---------- -------- -------- ---------- ----------
-HL1W_1           HL1W_2           HLK1             V-NOTCH    7.00       1.840      NO       0        0          YES
-HL2W_1           HL2W_2           HLK2             V-NOTCH    7.00       1.840      NO       0        0          YES
-HL3W_1           HL3W_2           HLK2             V-NOTCH    7.00       1.840      NO       0        0          YES
-HL4W_1           HL4W_2           HLK3             V-NOTCH    7.00       1.840      NO       0        0          YES
-
 [PUMPS]
 ;;Name           From             To               PumpCurve  Status   Startup    Shutoff
 ;;-------------- ---------------- ---------------- ---------- -------- ---------- ----------
-SYPMP_1          SYCB             E10              *          ON       0          0         
+SYPMP_1          SYCB             E10              PC_SYPMP_1 ON       1.00       0         
+
+[CURVES]
+;;Name           Type       X-Value    Y-Value
+;;-------------- ---------- ---------- ----------
+;; Synthesized generic pump curves — replace with actual pump data
+PC_SYPMP_1       Pump1      0          5
+PC_SYPMP_1                  10         10
 
 [XSECTIONS]
 ;;Link           Shape        Geom1      Geom2      Geom3      Geom4      Barrels
 ;;-------------- ------------ ---------- ---------- ---------- ---------- ----------
 HM17_1           CIRCULAR     1.57       0          0          0          1
-HM16_1           TRAPEZOIDAL  3.19       5.50       0          0          1
-HM14_1           TRAPEZOIDAL  2.25       5.50       0          0          1
+HM16_1           TRAPEZOIDAL  3.19       5.50       1          1          1
+HM14_1           TRAPEZOIDAL  2.25       5.50       1          1          1
 HM13_1           CIRCULAR     1.52       0          0          0          1
-HM12_1           TRAPEZOIDAL  2.36       5.50       0          0          1
-HP5_1            TRAPEZOIDAL  1.54       2.00       0          0          1
+HM12_1           TRAPEZOIDAL  2.36       5.50       1          1          1
+HP5_1            TRAPEZOIDAL  1.54       2.00       1          1          1
 HP13_1           CIRCULAR     0.30       0          0          0          1
 HP12_1           CIRCULAR     0.23       0          0          0          1
 HP11_1           CIRCULAR     0.09       0          0          0          1
 HP10_1           CIRCULAR     0.46       0          0          0          1
 HP9_1            CIRCULAR     0.68       0          0          0          1
 HP8_1            CIRCULAR     0.68       0          0          0          1
-HP7_1            TRAPEZOIDAL  1.00       2.00       0          0          1
+HP7_1            TRAPEZOIDAL  1.00       2.00       1          1          1
 HP6_1            CIRCULAR     0.68       0          0          0          1
-HP4_1            TRAPEZOIDAL  1.54       2.00       0          0          1
+HP4_1            TRAPEZOIDAL  1.54       2.00       1          1          1
 HP3_1            CIRCULAR     0.09       0          0          0          2
-HP2_1            TRAPEZOIDAL  1.54       2.00       0          0          1
+HP2_1            TRAPEZOIDAL  1.54       2.00       1          1          1
 FL10_1           CIRCULAR     0.09       0          0          0          1
 FL9_1            CIRCULAR     0.09       0          0          0          1
 FL8_1            CIRCULAR     0.09       0          0          0          1
@@ -607,12 +697,12 @@ SY4_1            CIRCULAR     0.09       0          0          0          1
 SY3_1            CIRCULAR     0.09       0          0          0          1
 SY2_1            CIRCULAR     0.09       0          0          0          1
 SY1_1            CIRCULAR     0.61       0          0          0          1
-HM21_1           TRAPEZOIDAL  1.93       3.00       0          0          1
+HM21_1           TRAPEZOIDAL  1.93       3.00       1          1          1
 BG4_1            CIRCULAR     1.83       0          0          0          1
-BG2_1            TRAPEZOIDAL  1.93       3.00       0          0          1
+BG2_1            TRAPEZOIDAL  1.93       3.00       1          1          1
 BG6_1            CIRCULAR     1.83       0          0          0          1
 BG5_1            CIRCULAR     1.83       0          0          0          1
-BG13_1           TRAPEZOIDAL  2.19       2.00       0          0          1
+BG13_1           TRAPEZOIDAL  2.19       2.00       1          1          1
 BG12_1           CIRCULAR     1.83       0          0          0          1
 BG14_1           CIRCULAR     1.83       0          0          0          1
 BG15_1           CIRCULAR     1.83       0          0          0          1
@@ -620,19 +710,19 @@ BG18_1           RECT_CLOSED  1.24       1.83       0          0          1
 BG17_1           RECT_CLOSED  1.24       1.83       0          0          1
 BG16_1           RECT_CLOSED  1.24       1.83       0          0          1
 BG23_1           CIRCULAR     1.22       0          0          0          2
-BG22_1           TRAPEZOIDAL  2.15       2.00       0          0          1
+BG22_1           TRAPEZOIDAL  2.15       2.00       1          1          1
 BG21_1           CIRCULAR     1.22       0          0          0          2
-BG24_1           TRAPEZOIDAL  2.57       2.00       0          0          1
+BG24_1           TRAPEZOIDAL  2.57       2.00       1          1          1
 BG25_1           CIRCULAR     1.22       0          0          0          1
 BG28_1           CIRCULAR     1.07       0          0          0          1
 BG27_1           CIRCULAR     1.07       0          0          0          1
 BG26_1           CIRCULAR     1.22       0          0          0          1
 BG30_1           CIRCULAR     0.09       0          0          0          1
 BG31_1           CIRCULAR     0.09       0          0          0          1
-OS1_1            TRAPEZOIDAL  1.93       3.00       0          0          1
+OS1_1            TRAPEZOIDAL  1.93       3.00       1          1          1
 OS3_1            CIRCULAR     0.09       0          0          0          1
 OS5_1            CIRCULAR     0.91       0          0          0          2
-OS4_1            TRAPEZOIDAL  1.93       3.00       0          0          1
+OS4_1            TRAPEZOIDAL  1.93       3.00       1          1          1
 JK5_1            CIRCULAR     0.46       0          0          0          1
 JK4_1            CIRCULAR     0.46       0          0          0          1
 JK3_1            CIRCULAR     0.46       0          0          0          1
@@ -641,28 +731,28 @@ JK6_1            CIRCULAR     0.46       0          0          0          1
 JK8_1            CIRCULAR     0.46       0          0          0          1
 JK7_1            CIRCULAR     0.46       0          0          0          1
 OS11_1           CIRCULAR     1.22       0          0          0          2
-H11cL1_1         TRAPEZOIDAL  2.66       1.00       0          0          1
+H11cL1_1         TRAPEZOIDAL  2.66       1.00       1          1          1
 H11dL1_1         CIRCULAR     1.22       0          0          0          1
-OS15_1           TRAPEZOIDAL  2.66       5.00       0          0          1
+OS15_1           TRAPEZOIDAL  2.66       5.00       1          1          1
 OS18_1           CIRCULAR     1.52       0          0          0          2
-OS16_1           TRAPEZOIDAL  2.66       5.00       0          0          1
+OS16_1           TRAPEZOIDAL  2.66       5.00       1          1          1
 OS20_1           CIRCULAR     1.07       0          0          0          2
-OS19_1           TRAPEZOIDAL  2.02       5.00       0          0          1
-OS24_1           IRREGULAR    2.36       0          0          0          1
+OS19_1           TRAPEZOIDAL  2.02       5.00       1          1          1
+OS24_1           TRAPEZOIDAL  2.36       10.00      2          2          1
 OS22_1           CIRCULAR     1.07       0          0          0          2
-AS1_1            TRAPEZOIDAL  2.36       6.00       0          0          1
+AS1_1            TRAPEZOIDAL  2.36       6.00       1          1          1
 HT5_1            CIRCULAR     1.22       0          0          0          1
-HT6_1            TRAPEZOIDAL  2.10       1.00       0          0          1
-HT4_1            TRAPEZOIDAL  2.36       1.00       0          0          1
-HT3_1            TRAPEZOIDAL  2.36       1.00       0          0          1
+HT6_1            TRAPEZOIDAL  2.10       1.00       1          1          1
+HT4_1            TRAPEZOIDAL  2.36       1.00       1          1          1
+HT3_1            TRAPEZOIDAL  2.36       1.00       1          1          1
 JN3_1            CIRCULAR     0.91       0          0          0          1
 JN8_1            CIRCULAR     0.82       0          0          0          1
 JN7_1            CIRCULAR     0.91       0          0          0          1
 JN9_1            CIRCULAR     0.76       0          0          0          1
 AS5_1            CIRCULAR     1.07       0          0          0          2
-AS4_1            TRAPEZOIDAL  2.36       6.00       0          0          1
-AS6_1            TRAPEZOIDAL  2.41       6.00       0          0          1
-AS7_1            TRAPEZOIDAL  2.41       4.00       0          0          1
+AS4_1            TRAPEZOIDAL  2.36       6.00       1          1          1
+AS6_1            TRAPEZOIDAL  2.41       6.00       1          1          1
+AS7_1            TRAPEZOIDAL  2.41       4.00       1          1          1
 AS10_1           CIRCULAR     0.09       0          0          0          1
 AS11_1           CIRCULAR     0.09       0          0          0          1
 XJ2_1            CIRCULAR     0.09       0          0          0          1
@@ -678,7 +768,7 @@ XJ11_1           CIRCULAR     0.09       0          0          0          1
 XJ10_1           CIRCULAR     0.76       0          0          0          1
 XJ9_1            CIRCULAR     0.76       0          0          0          1
 XJ13_1           CIRCULAR     0.09       0          0          0          1
-BG20_1           TRAPEZOIDAL  1.80       2.00       0          0          1
+BG20_1           TRAPEZOIDAL  1.80       2.00       1          1          1
 HM1a_1           CIRCULAR     0.88       0          0          0          1
 HM1b_1           CIRCULAR     0.60       0          0          0          1
 HM2_1            CIRCULAR     1.34       0          0          0          1
@@ -693,20 +783,24 @@ HM3_1            HORSESHOE    1.83       1.52       0          0          1
 HM4_1            HORSESHOE    1.52       1.52       0          0          1
 A8L1_1           CIRCULAR     0.61       0          0          0          1
 HM15_1           CIRCULAR     1.52       0          0          0          1
-HM19_1           TRAPEZOIDAL  1.93       3.00       0          0          1
-HM20_1           TRAPEZOIDAL  1.93       3.00       0          0          1
-OS2_1            TRAPEZOIDAL  1.93       3.00       0          0          1
-BG3_1            TRAPEZOIDAL  1.93       3.00       0          0          1
+HM19_1           TRAPEZOIDAL  1.93       3.00       1          1          1
+HM20_1           TRAPEZOIDAL  1.93       3.00       1          1          1
+OS2_1            TRAPEZOIDAL  1.93       3.00       1          1          1
+HL1W_1           TRAPEZOIDAL  1.24       3.00       1          1          1
+HL2W_1           TRAPEZOIDAL  1.24       3.00       1          1          1
+BG3_1            TRAPEZOIDAL  1.93       3.00       1          1          1
+HL3W_1           TRAPEZOIDAL  1.27       3.00       1          1          1
+HL4W_1           TRAPEZOIDAL  1.27       3.00       1          1          1
 F7L1_1           CIRCULAR     0.09       0          0          0          1
 F12L1_1          CIRCULAR     0.09       0          0          0          1
 F12L2_1          CIRCULAR     0.30       0          0          0          1
 F7L2_1           CIRCULAR     0.09       0          0          0          1
-FL2_1            TRAPEZOIDAL  2.02       2.00       0          0          1
-BG8_1            TRAPEZOIDAL  1.71       3.00       0          0          1
-BG19_1           TRAPEZOIDAL  1.80       2.00       0          0          1
-G40L1_1          TRAPEZOIDAL  2.15       1.00       0          0          1
-G42L1_1          TRAPEZOIDAL  2.57       1.00       0          0          1
-BG29_1           TRAPEZOIDAL  2.76       2.00       0          0          1
+FL2_1            TRAPEZOIDAL  2.02       2.00       1          1          1
+BG8_1            TRAPEZOIDAL  1.71       3.00       1          1          1
+BG19_1           TRAPEZOIDAL  1.80       2.00       1          1          1
+G40L1_1          TRAPEZOIDAL  2.15       1.00       1          1          1
+G42L1_1          TRAPEZOIDAL  2.57       1.00       1          1          1
+BG29_1           TRAPEZOIDAL  2.76       2.00       1          1          1
 G52L1_1          CIRCULAR     0.61       0          0          0          1
 G52L2_1          CIRCULAR     0.46       0          0          0          1
 G42L2_1          CIRCULAR     0.76       0          0          0          1
@@ -719,32 +813,32 @@ G32L1_1          CIRCULAR     1.22       0          0          0          1
 G32L5_1          CIRCULAR     0.61       0          0          0          1
 G32L4_1          CIRCULAR     0.68       0          0          0          1
 G32L3_1          CIRCULAR     0.76       0          0          0          1
-OS7_1            TRAPEZOIDAL  2.37       5.00       0          0          1
-OS8_1            TRAPEZOIDAL  2.37       5.00       0          0          1
+OS7_1            TRAPEZOIDAL  2.37       5.00       1          1          1
+OS8_1            TRAPEZOIDAL  2.37       5.00       1          1          1
 H8aL1_1          RECT_CLOSED  0.33       1.24       0          0          2
-OS10_1           TRAPEZOIDAL  2.53       5.00       0          0          1
-OS9_1            TRAPEZOIDAL  2.37       5.00       0          0          1
+OS10_1           TRAPEZOIDAL  2.53       5.00       1          1          1
+OS9_1            TRAPEZOIDAL  2.37       5.00       1          1          1
 H9aL1_1          RECT_CLOSED  0.33       1.24       0          0          2
-OS14_1           TRAPEZOIDAL  2.66       5.00       0          0          1
-OS13_1           TRAPEZOIDAL  2.66       5.00       0          0          1
-OS12_1           TRAPEZOIDAL  2.66       5.00       0          0          1
+OS14_1           TRAPEZOIDAL  2.66       5.00       1          1          1
+OS13_1           TRAPEZOIDAL  2.66       5.00       1          1          1
+OS12_1           TRAPEZOIDAL  2.66       5.00       1          1          1
 H11bL2_1         CIRCULAR     0.61       0          0          0          1
 H11bL1_1         CIRCULAR     0.76       0          0          0          1
 H11cL2_1         CIRCULAR     1.22       0          0          0          1
-OS17_1           TRAPEZOIDAL  2.66       5.00       0          0          1
-OS21_1           IRREGULAR    1.81       0          0          0          1
-HT2_1            TRAPEZOIDAL  2.36       3.00       0          0          1
-HT1_1            TRAPEZOIDAL  2.36       3.00       0          0          1
+OS17_1           TRAPEZOIDAL  2.66       5.00       1          1          1
+OS21_1           TRAPEZOIDAL  1.81       10.00      2          2          1
+HT2_1            TRAPEZOIDAL  2.36       3.00       1          1          1
+HT1_1            TRAPEZOIDAL  2.36       3.00       1          1          1
 J2L1_1           CIRCULAR     1.22       0          0          0          1
-JN1_1            TRAPEZOIDAL  2.36       3.00       0          0          1
-JN2_1            TRAPEZOIDAL  2.36       3.00       0          0          1
-AS3_1            TRAPEZOIDAL  2.36       6.00       0          0          1
-AS2_1            TRAPEZOIDAL  2.36       6.00       0          0          1
-B1aL1_1          TRAPEZOIDAL  2.36       1.00       0          0          1
-JN4_1            TRAPEZOIDAL  1.73       3.00       0          0          1
-JN5_1            TRAPEZOIDAL  1.73       3.00       0          0          1
-AL1_1            TRAPEZOIDAL  2.12       4.00       0          0          1
-JN6_1            TRAPEZOIDAL  1.73       3.00       0          0          1
+JN1_1            TRAPEZOIDAL  2.36       3.00       1          1          1
+JN2_1            TRAPEZOIDAL  2.36       3.00       1          1          1
+AS3_1            TRAPEZOIDAL  2.36       6.00       1          1          1
+AS2_1            TRAPEZOIDAL  2.36       6.00       1          1          1
+B1aL1_1          TRAPEZOIDAL  2.36       1.00       1          1          1
+JN4_1            TRAPEZOIDAL  1.73       3.00       1          1          1
+JN5_1            TRAPEZOIDAL  1.73       3.00       1          1          1
+AL1_1            TRAPEZOIDAL  2.12       4.00       1          1          1
+JN6_1            TRAPEZOIDAL  1.73       3.00       1          1          1
 K19L6_1          CIRCULAR     0.38       0          0          0          1
 K19L4_1          CIRCULAR     0.61       0          0          0          1
 K19L3_1          CIRCULAR     1.37       0          0          0          1
@@ -752,7 +846,7 @@ K19L2_1          CIRCULAR     1.37       0          0          0          1
 K19L7_1          CIRCULAR     0.09       0          0          0          1
 K19L8_1          CIRCULAR     1.22       0          0          0          1
 K19L5_1          CIRCULAR     0.46       0          0          0          1
-AS8_1            TRAPEZOIDAL  2.41       2.00       0          0          1
+AS8_1            TRAPEZOIDAL  2.41       2.00       1          1          1
 C3L9_1           CIRCULAR     0.09       0          0          0          1
 C3L8_1           CIRCULAR     0.09       0          0          0          1
 C3L7_1           CIRCULAR     0.09       0          0          0          1
@@ -778,12 +872,12 @@ C13L11_1         CIRCULAR     0.76       0          0          0          1
 C13L10_1         CIRCULAR     0.91       0          0          0          1
 C13L14_1         CIRCULAR     0.09       0          0          0          1
 C13L4_1          CIRCULAR     0.09       0          0          0          1
-K19L1_1          TRAPEZOIDAL  1.93       2.00       0          0          1
+K19L1_1          TRAPEZOIDAL  1.93       2.00       1          1          1
 C13L17_1         CIRCULAR     0.61       0          0          0          1
 HLK3L1_1         CIRCULAR     1.07       0          0          0          1
 B5L1_1           CIRCULAR     0.91       0          0          0          1
-AS9_1            TRAPEZOIDAL  2.41       2.00       0          0          1
-B4L1_1           TRAPEZOIDAL  1.22       1.00       0          0          1
+AS9_1            TRAPEZOIDAL  2.41       2.00       1          1          1
+B4L1_1           TRAPEZOIDAL  1.22       1.00       1          1          1
 B4L2_1           CIRCULAR     0.09       0          0          0          1
 B4L4_1           CIRCULAR     0.09       0          0          0          1
 B4L3_1           CIRCULAR     0.09       0          0          0          1
@@ -804,41 +898,37 @@ B4L16_1          CIRCULAR     0.53       0          0          0          1
 B4L20_1          CIRCULAR     0.61       0          0          0          1
 B4L19_1          CIRCULAR     0.09       0          0          0          1
 B1bL3_1          CIRCULAR     1.07       0          0          0          1
-B1bL2_1          TRAPEZOIDAL  1.90       1.00       0          0          1
+B1bL2_1          TRAPEZOIDAL  1.90       1.00       1          1          1
 B1bL1_1          CIRCULAR     0.61       0          0          0          2
 B1bL4_1          CIRCULAR     0.91       0          0          0          1
 B1bL5_1          CIRCULAR     0.76       0          0          0          1
 B1bL6_1          CIRCULAR     0.30       0          0          0          1
 B1bL7_1          CIRCULAR     0.91       0          0          0          1
 H11eL6_1         CIRCULAR     1.52       0          0          0          1
-H11eL5_1         TRAPEZOIDAL  2.39       1.00       0          0          1
+H11eL5_1         TRAPEZOIDAL  2.39       1.00       1          1          1
 H11eL4_1         CIRCULAR     1.52       0          0          0          1
-H11eL3_1         TRAPEZOIDAL  2.46       1.00       0          0          1
+H11eL3_1         TRAPEZOIDAL  2.46       1.00       1          1          1
 H11eL2_1         CIRCULAR     1.52       0          0          0          1
-H11eL1_1         TRAPEZOIDAL  2.66       1.00       0          0          1
+H11eL1_1         TRAPEZOIDAL  2.66       1.00       1          1          1
 K13L2_1          CIRCULAR     0.46       0          0          0          1
 K13L1_1          CIRCULAR     0.76       0          0          0          1
-B1bL9_1          TRAPEZOIDAL  0.30       0.10       0          0          1
-B1bL8_1          TRAPEZOIDAL  0.30       0.10       0          0          1
-C13L20_1         TRAPEZOIDAL  0.30       0.10       0          0          1
-C13L21_1         TRAPEZOIDAL  0.30       0.10       0          0          1
-C3L10_1          TRAPEZOIDAL  0.30       0.10       0          0          1
-RATING1          CUSTOM       0          0          0          0          1
-RATING2          CUSTOM       0          0          0          0          1
-RATING3          CUSTOM       0          0          0          0          1
-RATING4          CUSTOM       0          0          0          0          1
-RATING5          CUSTOM       0          0          0          0          1
-RATING6          CUSTOM       0          0          0          0          1
-RATING7          CUSTOM       0          0          0          0          1
-RATING8          CUSTOM       0          0          0          0          1
-RATING9          CUSTOM       0          0          0          0          1
-RATING10         CUSTOM       0          0          0          0          1
-RATING11         CUSTOM       0          0          0          0          1
-C13L22_1         TRAPEZOIDAL  0.30       0.10       0          0          1
-HL1W_1           RECT_OPEN    0          3.00       0          0          
-HL2W_1           RECT_OPEN    0          3.00       0          0          
-HL3W_1           RECT_OPEN    0          3.00       0          0          
-HL4W_1           RECT_OPEN    0          3.00       0          0          
+B1bL9_1          TRAPEZOIDAL  0.30       0.10       1          1          1
+B1bL8_1          TRAPEZOIDAL  0.30       0.10       1          1          1
+C13L20_1         TRAPEZOIDAL  0.30       0.10       1          1          1
+C13L21_1         TRAPEZOIDAL  0.30       0.10       1          1          1
+C3L10_1          TRAPEZOIDAL  0.30       0.10       1          1          1
+RATING1          TRAPEZOIDAL  1.00       10.00      2          2          1
+RATING2          TRAPEZOIDAL  1.00       10.00      2          2          1
+RATING3          TRAPEZOIDAL  1.00       10.00      2          2          1
+RATING4          TRAPEZOIDAL  1.00       10.00      2          2          1
+RATING5          TRAPEZOIDAL  1.00       10.00      2          2          1
+RATING6          TRAPEZOIDAL  1.00       10.00      2          2          1
+RATING7          TRAPEZOIDAL  1.00       10.00      2          2          1
+RATING8          TRAPEZOIDAL  1.00       10.00      2          2          1
+RATING9          TRAPEZOIDAL  1.00       10.00      2          2          1
+RATING10         TRAPEZOIDAL  1.00       10.00      2          2          1
+RATING11         TRAPEZOIDAL  1.00       10.00      2          2          1
+C13L22_1         TRAPEZOIDAL  0.30       0.10       1          1          1
 
 [LOSSES]
 ;;Link           Inlet      Outlet     Average    Flap Gate
@@ -967,7 +1057,11 @@ HM15_1           0          0          0          NO
 HM19_1           0          0          0          NO
 HM20_1           0          0          0          NO
 OS2_1            0          0          0          NO
+HL1W_1           0          0          0          NO
+HL2W_1           0          0          0          NO
 BG3_1            0          0          0          NO
+HL3W_1           0          0          0          NO
+HL4W_1           0          0          0          NO
 F7L1_1           0          0          0          NO
 F12L1_1          0          0          0          NO
 F12L2_1          0          0          0          NO

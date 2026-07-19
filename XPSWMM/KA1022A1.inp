@@ -20,6 +20,18 @@ INERTIAL_DAMPING     PARTIAL
 NORMAL_FLOW_LIMITED  BOTH
 MAX_TRIALS           100
 HEAD_TOLERANCE       .001
+START_DATE           01/01/2001
+START_TIME           00:00:00
+REPORT_START_DATE    01/01/2001
+REPORT_START_TIME    00:00:00
+END_DATE             01/02/2001
+END_TIME             00:00:00
+SWEEP_START          01/01
+SWEEP_END            12/31
+DRY_DAYS             0
+REPORT_STEP          00:15:00
+WET_STEP             00:05:00
+DRY_STEP             01:00:00
 
 [JUNCTIONS]
 ;;Name           Elev       MaxDepth   InitDepth  SurDepth   Aponded
@@ -331,10 +343,18 @@ K5-4.1           10.54      0          0          0          0
 1065.1           10.39      0          0          0          0
 1070.1           10.37      0          0          0          0
 OUT.1            12.00      0          0          0          0
-OUT.2            12.00      0          0          0          0
 619              12.00      0          0          0          0
 621              12.00      0          0          0          0
 masu             10.12      0          0          0          0
+USUI2            0          0          0          0          0
+USUI3            0          0          0          0          0
+OSUI2            0          0          0          0          0
+OSUI3            0          0          0          0          0
+
+[OUTFALLS]
+;;Name           Elev       Type       Stage      Gated
+;;-------------- ---------- ---------- ---------- -----
+OUT.2            12.00      FREE                  NO
 
 [CONDUITS]
 ;;Name           From             To               Length     Roughness  InOffset   OutOffset  InitFlow   MaxFlow
@@ -636,7 +656,7 @@ K30a             K30a.1           K31.1            4.25       0.0130     6.91   
 1044             1044.1           1046.1           52.96      0.0130     9.13       8.87       0          0
 1046             1046.1           1047.1           75.39      0.0130     8.68       8.46       0          0
 1047             1047.1           1052.1           41.10      0.0130     8.46       8.41       0          0
-1052             1052.1           1053.1           63.00      0.0130     -3.00      -3.00      0          0
+1052             1052.1           1053.1           63.00      0.0130     0          0          0          0
 1053             1053.1           1054.1           7.50       0.0130     7.69       8.08       0          0
 1054             1054.1           1056.1           25.10      0.0130     8.08       7.86       0          0
 1056             1056.1           1061.1           58.82      0.0130     7.86       7.54       0          0
@@ -651,16 +671,17 @@ Pumpmasu         Pump.1           masu             40.00      0.0130     6.60   
 [PUMPS]
 ;;Name           From             To               PumpCurve  Status   Startup    Shutoff
 ;;-------------- ---------------- ---------------- ---------- -------- ---------- ----------
-USUI1            USUI2            USUI3            PC_USUI1   ON       0          0         
+USUI1            USUI2            USUI3            PC_USUI1   ON       1.00       0         
 OSUI1            OSUI2            OSUI3            PC_OSUI1   ON       6.65       6.40      
 
 [CURVES]
 ;;Name           Type       X-Value    Y-Value
 ;;-------------- ---------- ---------- ----------
-PC_USUI1         Pump2      0          0
-;
-PC_OSUI1         Pump4      0          0
-;
+;; Synthesized generic pump curves — replace with actual pump data
+PC_USUI1         Pump1      0          5
+PC_USUI1                    10         10
+PC_OSUI1         Pump1      0          5
+PC_OSUI1                    10         10
 
 [XSECTIONS]
 ;;Link           Shape        Geom1      Geom2      Geom3      Geom4      Barrels
@@ -970,7 +991,7 @@ K30a             RECT_CLOSED  2.20       4.20       0          0          1
 1065             CIRCULAR     1.20       0          0          0          1
 1070             CIRCULAR     1.35       0          0          0          1
 K31              RECT_CLOSED  2.20       4.20       0          0          1
-618              TRAPEZOIDAL  6.17       5.00       0          0          1
+618              TRAPEZOIDAL  6.17       5.00       1          1          1
 622              CIRCULAR     1.00       1.00       0          0          1
 Pumpmasu         RECT_CLOSED  3.40       15.00      0          0          1
 

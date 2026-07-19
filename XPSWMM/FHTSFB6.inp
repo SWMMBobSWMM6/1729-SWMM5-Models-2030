@@ -20,6 +20,18 @@ INERTIAL_DAMPING     NONE
 NORMAL_FLOW_LIMITED  BOTH
 MAX_TRIALS           50
 HEAD_TOLERANCE       0.0033
+START_DATE           01/01/2001
+START_TIME           00:00:00
+REPORT_START_DATE    01/01/2001
+REPORT_START_TIME    00:00:00
+END_DATE             01/02/2001
+END_TIME             00:00:00
+SWEEP_START          01/01
+SWEEP_END            12/31
+DRY_DAYS             0
+REPORT_STEP          00:15:00
+WET_STEP             00:05:00
+DRY_STEP             01:00:00
 
 [JUNCTIONS]
 ;;Name           Elev       MaxDepth   InitDepth  SurDepth   Aponded
@@ -30,7 +42,6 @@ FHC046007N       821.50     0          0          0          0
 FHC047014N       791.20     0          0          0          0
 FHC050CMCN       769.00     0          0          0          0
 FHC051019N       746.24     0          0          0          0
-FHC052089N       714.30     0          0          0          0
 FHC051005N       736.30     0          0          0          0
 FHC094046N       712.60     0          0          0          0
 FHC095048N       698.00     0          0          0          0
@@ -120,6 +131,13 @@ FHC013028N       865.50     0          0          0          0
 FHC050020N       752.45     0          0          0          0
 FHC050019N       752.45     0          0          0          0
 FHC05007N        750.60     0          0          0          0
+Node_5007        740.58     0          0          0          0
+Node_1003762     720.09     0          0          0          0
+
+[OUTFALLS]
+;;Name           Elev       Type       Stage      Gated
+;;-------------- ---------- ---------- ---------- -----
+FHC052089N       714.30     FREE                  NO
 
 [CONDUITS]
 ;;Name           From             To               Length     Roughness  InOffset   OutOffset  InitFlow   MaxFlow
@@ -215,9 +233,9 @@ WBT111001C       WBT111001N       WBT129002N       4495.15    0.0130     932.33 
 WBT129002C       WBT129002N       WBT135027N       4593.35    0.0130     908.86     883.70     0          0
 WBT135027C       WBT135027N       FHC009070N       1542.77    0.0130     883.53     879.27     0          0
 FHC013028C       FHC013028N       FHC011016N       2271.00    0.0130     856.23     851.35     0          0
-FHC050020C       FHC050020N       FHC050019N       497.90     0.0130     743.96     739.85     0          0
-FHC050019C       FHC050019N       FHC051019N       1986.80    0.0130     739.43     724.19     0          0
-FHC05007C        Node_5007        Node_1003762     3014.00    0.0120     740.58     720.09     0          0
+HC050020C        FHC050020N       FHC050019N       497.90     0.0130     743.96     739.85     0          0
+HC050019C        FHC050019N       FHC051019N       1986.80    0.0130     739.43     724.19     0          0
+HC05007C         Node_5007        Node_1003762     3014.00    0.0120     740.58     720.09     0          0
 
 [XSECTIONS]
 ;;Link           Shape        Geom1      Geom2      Geom3      Geom4      Barrels
@@ -313,9 +331,9 @@ WBT111001C       CIRCULAR     1.00       0          0          0          1
 WBT129002C       CIRCULAR     1.25       0          0          0          1
 WBT135027C       CIRCULAR     1.50       0          0          0          1
 FHC013028C       CIRCULAR     1.50       0          0          0          1
-FHC050020C       CIRCULAR     1.50       0          0          0          1
-FHC050019C       CIRCULAR     1.75       0          0          0          1
-FHC05007C        CIRCULAR     3.00       0          0          0          1
+HC050020C        CIRCULAR     1.50       0          0          0          1
+HC050019C        CIRCULAR     1.75       0          0          0          1
+HC05007C         CIRCULAR     3.00       0          0          0          1
 
 [LOSSES]
 ;;Link           Inlet      Outlet     Average    Flap Gate
@@ -411,9 +429,9 @@ WBT111001C       0          0          0          NO
 WBT129002C       0          0          0          NO
 WBT135027C       0          0          0          NO
 FHC013028C       0          0          0          NO
-FHC050020C       0          0          0          NO
-FHC050019C       0          0          0          NO
-FHC05007C        0          0          0          NO
+HC050020C        0          0          0          NO
+HC050019C        0          0          0          NO
+HC05007C         0          0          0          NO
 
 [COORDINATES]
 ;;Node           X-Coord            Y-Coord

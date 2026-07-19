@@ -19,6 +19,18 @@ VARIABLE_STEP        0.75
 INERTIAL_DAMPING     PARTIAL
 NORMAL_FLOW_LIMITED  BOTH
 MAX_TRIALS           50
+START_DATE           01/01/2001
+START_TIME           00:00:00
+REPORT_START_DATE    01/01/2001
+REPORT_START_TIME    00:00:00
+END_DATE             01/02/2001
+END_TIME             00:00:00
+SWEEP_START          01/01
+SWEEP_END            12/31
+DRY_DAYS             0
+REPORT_STEP          00:15:00
+WET_STEP             00:05:00
+DRY_STEP             01:00:00
 
 [JUNCTIONS]
 ;;Name           Elev       MaxDepth   InitDepth  SurDepth   Aponded
@@ -98,11 +110,15 @@ ChelsaMan1       60.00      0          0          0          0
 ChelsaMan2       60.00      0          0          0          0
 ChelsaMan3       60.00      0          0          0          0
 ChelsaMan4       60.00      0          0          0          0
-Basin1           60.00      0          0          0          0
 ChelsaInl1       60.00      0          0          0          0
 ChelsaInl3       60.00      0          0          0          0
 ChelsaInl4       0          0          0          0          0
 ChelsaMan5       0          0          0          0          0
+
+[OUTFALLS]
+;;Name           Elev       Type       Stage      Gated
+;;-------------- ---------- ---------- ---------- -----
+Basin1           60.00      FREE                  NO
 
 [CONDUITS]
 ;;Name           From             To               Length     Roughness  InOffset   OutOffset  InitFlow   MaxFlow
@@ -114,7 +130,7 @@ GidBas24         210              Basin#43         50.00      0.0140     50.00  
 BasFri12         Basin44          FrMan2           50.00      0.0140     50.00      50.00      0          0
 Frierson1        FrMan2           FrIn3            50.00      0.0140     50.00      50.00      0          0
 Frierson2        FrIn3            FrMan1           50.00      0.0140     50.00      50.00      0          0
-222              ?                ?                50.00      0.0140     50.00      50.00      0          0
+222              FrMan1           Basin#43         50.00      0.0140     50.00      50.00      0          0
 Fr30#2           FrIn1            FrIn2            50.00      0.0140     50.00      50.00      0          0
 Fr30#1           FrIn2            Basin44          50.00      0.0140     50.00      50.00      0          0
 Shadow24         Basin#43         ShadMan2         50.00      0.0140     50.00      50.00      0          0
@@ -147,7 +163,7 @@ Osborne54        LouInl2          OsbornInl1       50.00      0.0140     50.00  
 Curtis54         OsbornInl1       282              50.00      0.0140     50.00      50.00      0          0
 Pali54.1         282              PaliInl1         50.00      0.0140     50.00      50.00      0          0
 Pali54.2         PaliInl1         Basin19          50.00      0.0140     50.00      50.00      0          0
-289              ?                ?                50.00      0.0140     50.00      50.00      0          0
+289              PaliInl2         PaliInl1         50.00      0.0140     50.00      50.00      0          0
 Pali18           PaliInl4         PaliInl3         50.00      0.0140     50.00      50.00      0          0
 Pali27           PaliInl3         PaliInl2         50.00      0.0140     50.00      50.00      0          0
 Curtis54.3       CurtisMan1       PaliInl2         50.00      0.0140     50.00      50.00      0          0
@@ -184,8 +200,8 @@ Chelsa60         ChelsaMan3       Basin1           50.00      0.0140     50.00  
 Chelsa18         ChelsaInl1       ChelsaMan1       50.00      0.0140     50.00      50.00      0          0
 Chelsa54.1       30thInl3         ChelsaMan1       50.00      0.0140     50.00      50.00      0          0
 Chelsa15.1       ChelsaInl3       ChelsaMan2       50.00      0.0140     50.00      50.00      0          0
-Chelsa18.1       ChelsaInl4       ChelsaMan5       0          0          0          0          0          0
-Chelsa18.2       ChelsaMan5       ChelsaMan4       0          0          0          0          0          0
+Chelsa18.1       ChelsaInl4       ChelsaMan5       100.00     0.0130     0          0          0          0
+Chelsa18.2       ChelsaMan5       ChelsaMan4       100.00     0.0130     0          0          0          0
 
 [XSECTIONS]
 ;;Link           Shape        Geom1      Geom2      Geom3      Geom4      Barrels
@@ -267,8 +283,8 @@ Chelsa60         CIRCULAR     2.00       0          0          0          1
 Chelsa18         CIRCULAR     2.00       0          0          0          1
 Chelsa54.1       CIRCULAR     2.00       0          0          0          1
 Chelsa15.1       CIRCULAR     2.00       0          0          0          1
-Chelsa18.1       CIRCULAR     0          0          0          0          1
-Chelsa18.2       CIRCULAR     0          0          0          0          1
+Chelsa18.1       CIRCULAR     1.00       0          0          0          1
+Chelsa18.2       CIRCULAR     1.00       0          0          0          1
 
 [LOSSES]
 ;;Link           Inlet      Outlet     Average    Flap Gate

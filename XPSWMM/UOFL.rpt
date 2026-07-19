@@ -2,19 +2,309 @@
   EPA STORM WATER MANAGEMENT MODEL - VERSION 5.2 (Build 5.2.4)
   ------------------------------------------------------------
 
+  U of L Simulation 
+  WARNING 08: elevation drop exceeds length for Conduit 56
   
-  ERROR 209: undefined object ? at line 80 of [CONDUIT] section:
-  C82470           ?                ?                2548.00    0.0140     483.00     456.77     0          0
-
+  ****************
+  Analysis Options
+  ****************
+  Flow Units ............... CFS
+  Process Models:
+    Rainfall/Runoff ........ NO
+    RDII ................... NO
+    Snowmelt ............... NO
+    Groundwater ............ NO
+    Flow Routing ........... YES
+    Ponding Allowed ........ NO
+    Water Quality .......... NO
+  Flow Routing Method ...... DYNWAVE
+  Surcharge Method ......... EXTRAN
+  Starting Date ............ 01/01/2001 00:00:00
+  Ending Date .............. 01/02/2001 00:00:00
+  Antecedent Dry Days ...... 0.0
+  Report Time Step ......... 00:15:00
+  Routing Time Step ........ 3.00 sec
+  Variable Time Step ....... YES
+  Maximum Trials ........... 50
+  Number of Threads ........ 1
+  Head Tolerance ........... 0.003300 ft
   
-  ERROR 211: invalid number  at line 114 of [XSECT] section:
-  56               CIRCULAR     0          0          0          0          1
-
   
-  ERROR 211: invalid number  at line 115 of [XSECT] section:
-  C82471           RECT_OPEN    0          10.00      0          0          
+  **************************        Volume        Volume
+  Flow Routing Continuity        acre-feet      10^6 gal
+  **************************     ---------     ---------
+  Dry Weather Inflow .......         0.000         0.000
+  Wet Weather Inflow .......         0.000         0.000
+  Groundwater Inflow .......         0.000         0.000
+  RDII Inflow ..............         0.000         0.000
+  External Inflow ..........         5.296         1.726
+  External Outflow .........         0.000         0.000
+  Flooding Loss ............         3.429         1.117
+  Evaporation Loss .........         0.000         0.000
+  Exfiltration Loss ........         0.000         0.000
+  Initial Stored Volume ....         0.000         0.000
+  Final Stored Volume ......         0.302         0.099
+  Continuity Error (%) .....        29.545
+  
+  
+  *************************
+  Highest Continuity Errors
+  *************************
+  Node 8235 (100.00%)
+  Node 8233 (74.23%)
+  Node 8234 (27.78%)
+  Node 8245 (10.04%)
+  Node 8246 (9.20%)
+  
+  
+  ***************************
+  Time-Step Critical Elements
+  ***************************
+  None
+  
+  
+  ********************************
+  Highest Flow Instability Indexes
+  ********************************
+  All links are stable.
+  
+  
+  *********************************
+  Most Frequent Nonconverging Nodes
+  *********************************
+  Node 823 (0.05%)
+  Node 8241 (0.01%)
+  Node 8240 (0.01%)
+  Node 8243 (0.01%)
+  Node 8245 (0.01%)
+  
+  
+  *************************
+  Routing Time Step Summary
+  *************************
+  Minimum Time Step           :     2.50 sec
+  Average Time Step           :     3.00 sec
+  Maximum Time Step           :     3.00 sec
+  % of Time in Steady State   :     0.00
+  Average Iterations per Step :     2.02
+  % of Steps Not Converging   :     0.05
+  Time Step Frequencies       :
+      3.000 -  2.096 sec      :   100.00 %
+      2.096 -  1.465 sec      :     0.00 %
+      1.465 -  1.024 sec      :     0.00 %
+      1.024 -  0.715 sec      :     0.00 %
+      0.715 -  0.500 sec      :     0.00 %
+  
+  
+  ******************
+  Node Depth Summary
+  ******************
+  
+  ---------------------------------------------------------------------------------
+                                 Average  Maximum  Maximum  Time of Max    Reported
+                                   Depth    Depth      HGL   Occurrence   Max Depth
+  Node                 Type         Feet     Feet     Feet  days hr:min        Feet
+  ---------------------------------------------------------------------------------
+  8247                 JUNCTION   438.25   457.01   926.72     0  04:46      457.01
+  8246                 JUNCTION   395.43   453.95   922.66     0  05:21      453.95
+  8245                 JUNCTION   354.29   449.98   913.41     0  07:23      449.98
+  8242                 JUNCTION   409.72   444.79   903.39     0  07:33      444.79
+  8241                 JUNCTION   384.61   443.85   902.35     0  07:35      443.85
+  8240                 JUNCTION   359.43   442.46   897.96     0  08:24      442.46
+  8239                 JUNCTION   333.04   441.13   897.23     0  08:26      441.13
+  8238                 JUNCTION   403.28   441.79   895.19     0  09:27      441.79
+  8237                 JUNCTION     0.09     0.12   456.32     0  09:41        0.12
+  8236                 JUNCTION     0.00     0.00   458.20     0  00:00        0.00
+  8235                 JUNCTION   184.22   435.20   890.40     1  00:00      435.20
+  8234                 JUNCTION   374.41   433.96   892.26     0  11:26      433.96
+  8233                 JUNCTION   198.51   433.18   891.48     0  21:54      433.18
+  8232                 JUNCTION    14.43   165.03   624.23     1  00:00      165.03
+  8231                 JUNCTION     0.00     0.00   459.50     0  00:00        0.00
+  8230                 JUNCTION     0.00     0.00   463.00     0  00:00        0.00
+  8243                 JUNCTION   433.94   445.42   904.42     0  02:12      445.42
+  82342                JUNCTION     0.00     0.00   459.00     0  00:00        0.00
+  82341                JUNCTION     0.00     0.00   457.99     0  00:00        0.00
+  82340                JUNCTION     0.00     0.00   456.55     0  00:00        0.00
+  55                   JUNCTION     0.72     1.00     2.00     0  06:48        1.00
+  823                  OUTFALL      0.00     0.00   461.00     0  00:00        0.00
+  82470                STORAGE      0.00     0.00   493.00     0  00:00        0.00
+  82471                STORAGE      0.00     0.00   493.00     0  00:00        0.00
+  82472                STORAGE      0.00     0.00   493.00     0  00:00        0.00
+  
+  
+  *******************
+  Node Inflow Summary
+  *******************
+  
+  -------------------------------------------------------------------------------------------------
+                                  Maximum  Maximum                  Lateral       Total        Flow
+                                  Lateral    Total  Time of Max      Inflow      Inflow     Balance
+                                   Inflow   Inflow   Occurrence      Volume      Volume       Error
+  Node                 Type           CFS      CFS  days hr:min    10^6 gal    10^6 gal     Percent
+  -------------------------------------------------------------------------------------------------
+  8247                 JUNCTION      0.81     0.81     0  00:00       0.523       0.523       9.683
+  8246                 JUNCTION      0.00     0.81     0  04:47           0       0.477      10.131
+  8245                 JUNCTION      0.00     0.83     0  06:09           0       0.433      11.160
+  8242                 JUNCTION      0.00     2.07     0  07:24           0        1.16       4.120
+  8241                 JUNCTION      0.00     2.07     1  00:00           0        1.12       4.209
+  8240                 JUNCTION      0.00     2.07     0  07:35           0        1.07       4.870
+  8239                 JUNCTION      0.00     2.07     0  08:27           0        1.02       4.324
+  8238                 JUNCTION      0.37     2.44     0  08:26       0.239        1.22       8.912
+  8237                 JUNCTION      0.00     2.44     0  09:29           0        1.12       0.002
+  8236                 JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  8235                 JUNCTION      0.00     0.13     0  22:01           0      0.0471   47149.779 gal
+  8234                 JUNCTION      0.23     0.23     0  00:00       0.149       0.149      38.473
+  8233                 JUNCTION      0.00     0.27     0  19:17           0      0.0602     288.054
+  8232                 JUNCTION      0.00     0.17     0  21:54           0      0.0155   15511.814 gal
+  8231                 JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  8230                 JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  8243                 JUNCTION      1.26     1.26     0  00:00       0.814       0.814       5.599
+  82342                JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  82341                JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  82340                JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  55                   JUNCTION      0.00     2.44     0  09:29           0        1.12       0.000
+  823                  OUTFALL       0.00     0.00     0  00:00           0           0       0.000 gal
+  82470                STORAGE       0.00     0.00     0  00:00           0           0       0.000 gal
+  82471                STORAGE       0.00     0.00     0  00:00           0           0       0.000 gal
+  82472                STORAGE       0.00     0.00     0  00:00           0           0       0.000 gal
+  
+  
+  **********************
+  Node Surcharge Summary
+  **********************
+  
+  Surcharging occurs when water rises above the top of the highest conduit.
+  ---------------------------------------------------------------------
+                                               Max. Height   Min. Depth
+                                   Hours       Above Crown    Below Rim
+  Node                 Type      Surcharged           Feet         Feet
+  ---------------------------------------------------------------------
+  55                   JUNCTION       17.19          0.000        0.000
+  
+  
+  *********************
+  Node Flooding Summary
+  *********************
+  
+  Flooding refers to all water that overflows a node, whether it ponds or not.
+  --------------------------------------------------------------------------
+                                                             Total   Maximum
+                                 Maximum   Time of Max       Flood    Ponded
+                        Hours       Rate    Occurrence      Volume     Depth
+  Node                 Flooded       CFS   days hr:min    10^6 gal      Feet
+  --------------------------------------------------------------------------
+  55                     17.19      2.44      0  09:29       1.117     0.000
+  
+  
+  **********************
+  Storage Volume Summary
+  **********************
+  
+  ------------------------------------------------------------------------------------------------
+                         Average    Avg   Evap  Exfil     Maximum    Max    Time of Max    Maximum
+                          Volume   Pcnt   Pcnt   Pcnt      Volume   Pcnt     Occurrence    Outflow
+  Storage Unit          1000 ft³   Full   Loss   Loss    1000 ft³   Full    days hr:min        CFS
+  ------------------------------------------------------------------------------------------------
+  82470                    0.000    0.0    0.0    0.0       0.000    0.0       0  00:00       0.00
+  82471                    0.000    0.0    0.0    0.0       0.000    0.0       0  00:00       0.00
+  82472                    0.000    0.0    0.0    0.0       0.000    0.0       0  00:00       0.00
+  
+  
+  ***********************
+  Outfall Loading Summary
+  ***********************
+  
+  -----------------------------------------------------------
+                         Flow       Avg       Max       Total
+                         Freq      Flow      Flow      Volume
+  Outfall Node           Pcnt       CFS       CFS    10^6 gal
+  -----------------------------------------------------------
+  823                    0.00      0.00      0.00       0.000
+  -----------------------------------------------------------
+  System                 0.00      0.00      0.00       0.000
+  
+  
+  ********************
+  Link Flow Summary
+  ********************
+  
+  -----------------------------------------------------------------------------
+                                 Maximum  Time of Max   Maximum    Max/    Max/
+                                  |Flow|   Occurrence   |Veloc|    Full    Full
+  Link                 Type          CFS  days hr:min    ft/sec    Flow   Depth
+  -----------------------------------------------------------------------------
+  C8247                CONDUIT      0.81     0  04:47      2.56    0.01    0.06
+  C8246                CONDUIT      0.83     0  06:09      3.06    0.00    0.03
+  C8245                CONDUIT      0.81     0  07:24      3.08    0.00    0.03
+  C8242                CONDUIT      2.07     1  00:00      2.00    0.01    0.05
+  C8241                CONDUIT      2.07     0  07:35      2.66    0.00    0.05
+  C8240                CONDUIT      2.07     0  08:27      1.69    0.01    0.05
+  C8239                CONDUIT      2.07     0  08:26      0.57    0.00    0.16
+  C8238                CONDUIT      2.44     0  09:29      0.39    0.01    0.16
+  C8237                CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  C8236                CONDUIT      0.00     0  00:00      0.00    0.00    0.03
+  C8235                CONDUIT      0.13     0  22:01      0.82    0.00    0.03
+  C8234                CONDUIT      0.27     0  19:17      1.07    0.00    0.04
+  C8233                CONDUIT      0.17     0  21:54      0.29    0.00    0.03
+  C8232                CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  C8231                CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  C8230                CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  C8243                CONDUIT      1.33     0  02:35      2.12    0.00    0.04
+  C82342               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  C82341               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  C82340               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  C82470               CONDUIT      0.00     0  00:00      0.00    0.00    0.03
+  C82472               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  56                   CONDUIT      2.44     0  09:29      9.42    0.03    0.56
+  C82471               WEIR         0.00     0  00:00                      0.00
+  
+  
+  ***************************
+  Flow Classification Summary
+  ***************************
+  
+  -------------------------------------------------------------------------------------
+                      Adjusted    ---------- Fraction of Time in Flow Class ---------- 
+                       /Actual         Up    Down  Sub   Sup   Up    Down  Norm  Inlet 
+  Conduit               Length    Dry  Dry   Dry   Crit  Crit  Crit  Crit  Ltd   Ctrl  
+  -------------------------------------------------------------------------------------
+  C8247                   1.00   0.08  0.00  0.00  0.00  0.00  0.00  0.92  0.00  0.00
+  C8246                   1.00   0.17  0.00  0.00  0.00  0.75  0.00  0.08  0.74  0.00
+  C8245                   1.00   0.25  0.00  0.00  0.00  0.00  0.00  0.75  0.00  0.00
+  C8242                   1.00   0.10  0.00  0.00  0.10  0.00  0.00  0.80  0.00  0.00
+  C8241                   1.00   0.16  0.00  0.00  0.78  0.00  0.00  0.05  0.78  0.00
+  C8240                   1.00   0.21  0.00  0.00  0.00  0.00  0.00  0.79  0.00  0.00
+  C8239                   1.00   0.17  0.10  0.00  0.73  0.00  0.00  0.00  0.73  0.00
+  C8238                   1.00   0.17  0.11  0.00  0.00  0.00  0.72  0.00  0.00  0.00
+  C8237                   1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  C8236                   1.00   0.91  0.09  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  C8235                   1.00   0.27  0.00  0.00  0.09  0.00  0.00  0.64  0.08  0.00
+  C8234                   1.00   0.27  0.00  0.00  0.20  0.00  0.00  0.53  0.20  0.00
+  C8233                   1.00   0.80  0.02  0.00  0.00  0.00  0.18  0.00  0.00  0.00
+  C8232                   1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  C8231                   1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  C8230                   1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  C8243                   1.00   0.05  0.00  0.00  0.89  0.00  0.00  0.05  0.89  0.00
+  C82342                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  C82341                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  C82340                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  C82470                  1.00   0.08  0.92  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  C82472                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  56                      1.00   0.28  0.00  0.00  0.01  0.71  0.00  0.00  0.72  0.00
+  
+  
+  *************************
+  Conduit Surcharge Summary
+  *************************
+  
+  ----------------------------------------------------------------------------
+                                                           Hours        Hours 
+                         --------- Hours Full --------   Above Full   Capacity
+  Conduit                Both Ends  Upstream  Dnstream   Normal Flow   Limited
+  ----------------------------------------------------------------------------
+  56                          0.01      0.01     17.19      0.01         0.01
+  
 
-
-  Analysis begun on:  Mon Jul 13 08:04:20 2026
-  Analysis ended on:  Mon Jul 13 08:04:20 2026
+  Analysis begun on:  Sun Jul 19 15:24:37 2026
+  Analysis ended on:  Sun Jul 19 15:24:37 2026
   Total elapsed time: < 1 sec

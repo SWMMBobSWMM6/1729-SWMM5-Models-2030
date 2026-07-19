@@ -19,6 +19,18 @@ VARIABLE_STEP        0.75
 INERTIAL_DAMPING     PARTIAL
 NORMAL_FLOW_LIMITED  BOTH
 MAX_TRIALS           50
+START_DATE           01/01/2001
+START_TIME           00:00:00
+REPORT_START_DATE    01/01/2001
+REPORT_START_TIME    00:00:00
+END_DATE             01/02/2001
+END_TIME             00:00:00
+SWEEP_START          01/01
+SWEEP_END            12/31
+DRY_DAYS             0
+REPORT_STEP          00:15:00
+WET_STEP             00:05:00
+DRY_STEP             01:00:00
 
 [JUNCTIONS]
 ;;Name           Elev       MaxDepth   InitDepth  SurDepth   Aponded
@@ -32,34 +44,47 @@ MAX_TRIALS           50
 212              30.00      0          0          0          0
 214              30.00      0          0          0          0
 216              30.00      0          0          0          0
-Outfall          30.00      0          0          0          0
 220              30.00      0          0          0          0
+
+[OUTFALLS]
+;;Name           Elev       Type       Stage      Gated
+;;-------------- ---------- ---------- ---------- -----
+Outfall          30.00      FREE                  NO
 
 [STORAGE]
 ;;Name           Elev       MaxDepth   InitDepth  Shape      Curve/Params
 ;;-------------- ---------- ---------- ---------- ---------- ----------
-225              30.00      0          0          FUNCTIONAL 10000.00 0          0
-227              30.00      0          0          FUNCTIONAL 10000.00 0          0
+225              30.00      10.00      0          FUNCTIONAL 10000.00 0          0
+227              30.00      10.00      0          FUNCTIONAL 10000.00 0          0
 
 [CONDUITS]
 ;;Name           From             To               Length     Roughness  InOffset   OutOffset  InitFlow   MaxFlow
 ;;-------------- ---------------- ---------------- ---------- ---------- ---------- ---------- ---------- ----------
-FM1              ?                ?                50.00      0.0110     0          0          0          0
-fm3              ?                ?                50.00      0.0110     0          0          0          0
+FM1              201              202              50.00      0.0110     0          0          0          0
+fm3              202              204              50.00      0.0110     0          0          0          0
 ss1              204              206              50.00      0.0110     0          0          0          0
 ss2              206              208              50.00      0.0110     0          0          0          0
-fm6              ?                ?                50.00      0.0110     0          0          0          0
-FM7              ?                ?                50.00      0.0110     0          0          0          0
-fm8              ?                ?                50.00      0.0110     0          0          0          0
-fm9              ?                ?                50.00      0.0110     0          0          0          0
-FM11             ?                ?                50.00      0.0110     0          0          0          0
-fm2              ?                ?                50.00      0.0110     0          0          0          0
+fm6              208              210              50.00      0.0110     0          0          0          0
+FM7              210              212              50.00      0.0110     0          0          0          0
+fm8              212              214              50.00      0.0110     0          0          0          0
+fm9              214              216              50.00      0.0110     0          0          0          0
+FM11             216              Outfall          50.00      0.0110     0          0          0          0
+fm2              220              202              50.00      0.0110     0          0          0          0
 
 [PUMPS]
 ;;Name           From             To               PumpCurve  Status   Startup    Shutoff
 ;;-------------- ---------------- ---------------- ---------- -------- ---------- ----------
-P1               225              201              *          ON       0          0         
-P2               227              220              *          ON       0          0         
+P1               225              201              PC_P1      ON       1.00       0         
+P2               227              220              PC_P2      ON       1.00       0         
+
+[CURVES]
+;;Name           Type       X-Value    Y-Value
+;;-------------- ---------- ---------- ----------
+;; Synthesized generic pump curves — replace with actual pump data
+PC_P1            Pump1      0          5
+PC_P1                       10         10
+PC_P2            Pump1      0          5
+PC_P2                       10         10
 
 [XSECTIONS]
 ;;Link           Shape        Geom1      Geom2      Geom3      Geom4      Barrels

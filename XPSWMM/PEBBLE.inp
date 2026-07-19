@@ -19,6 +19,18 @@ VARIABLE_STEP        0.75
 INERTIAL_DAMPING     PARTIAL
 NORMAL_FLOW_LIMITED  BOTH
 MAX_TRIALS           50
+START_DATE           01/01/2001
+START_TIME           00:00:00
+REPORT_START_DATE    01/01/2001
+REPORT_START_TIME    00:00:00
+END_DATE             01/02/2001
+END_TIME             00:00:00
+SWEEP_START          01/01
+SWEEP_END            12/31
+DRY_DAYS             0
+REPORT_STEP          00:15:00
+WET_STEP             00:05:00
+DRY_STEP             01:00:00
 
 [JUNCTIONS]
 ;;Name           Elev       MaxDepth   InitDepth  SurDepth   Aponded
@@ -26,32 +38,36 @@ MAX_TRIALS           50
 10A              56.00      0          0          0          0
 50A              56.00      0          0          0          0
 50B              55.60      0          0          0          0
-50-BOUNDRY       55.50      0          0          0          0
 D.A.E1a          55.00      0          0          0          0
 228              56.00      0          0          0          0
+
+[OUTFALLS]
+;;Name           Elev       Type       Stage      Gated
+;;-------------- ---------- ---------- ---------- -----
+50-BOUNDRY       55.50      FREE                  NO
 
 [STORAGE]
 ;;Name           Elev       MaxDepth   InitDepth  Shape      Curve/Params
 ;;-------------- ---------- ---------- ---------- ---------- ----------
-D.A.             56.50      0          0          FUNCTIONAL 0 0          0
-D.A.             56.50      0          0          FUNCTIONAL 0 0          0
-D.A.             55.00      0          0          FUNCTIONAL 0 0          0
-D.A.             56.50      0          0          FUNCTIONAL 0 0          0
+D.A.             56.50      10.00      0          FUNCTIONAL 1000.00 0          0
+D.A._2           56.50      10.00      0          FUNCTIONAL 1000.00 0          0
+D.A._3           55.00      10.00      0          FUNCTIONAL 1000.00 0          0
+D.A._4           56.50      10.00      0          FUNCTIONAL 1000.00 0          0
 
 [CONDUITS]
 ;;Name           From             To               Length     Roughness  InOffset   OutOffset  InitFlow   MaxFlow
 ;;-------------- ---------------- ---------------- ---------- ---------- ---------- ---------- ---------- ----------
 NEW              10A              50A              535.00     0.0120     51.60      50.40      0          0
 REACH            50A              50B              25.00      0.0120     50.40      50.10      0          0
-REACH            50B              50-BOUNDRY       85.00      0.0110     50.10      49.72      0          0
-REACH            D.A.             D.A.             604.00     0.0130     52.70      49.50      0          0
+REACH_2          50B              50-BOUNDRY       85.00      0.0110     50.10      49.72      0          0
+REACH_3          D.A.             D.A.             604.00     0.0130     52.70      49.50      0          0
 reach11c         D.A.E1a          50B              405.00     0.0130     51.56      50.10      0          0
 reach1a          228              10A              104.00     0.0120     52.00      51.60      0          0
 
 [ORIFICES]
 ;;Name           From             To               Type       Offset     Qcoeff     Gated    CloseTime
 ;;-------------- ---------------- ---------------- ---------- ---------- ---------- -------- ----------
-REACH 11         D.A.             D.A.E1a          SIDE       51.56      0.650      NO       0
+REACH_11         D.A.             D.A.E1a          SIDE       51.56      0.650      NO       0
 reach4           D.A.             50B              SIDE       50.50      0.650      NO       0
 
 [WEIRS]
@@ -64,21 +80,21 @@ reach2           D.A.             10A              TRANSVERSE 54.30      1.840  
 ;;-------------- ------------ ---------- ---------- ---------- ---------- ----------
 NEW              CIRCULAR     3.00       0          0          0          1
 REACH            CIRCULAR     3.00       0          0          0          1
-REACH            CIRCULAR     4.00       0          0          0          1
-REACH            CIRCULAR     2.00       0          0          0          1
+REACH_2          CIRCULAR     4.00       0          0          0          1
+REACH_3          CIRCULAR     2.00       0          0          0          1
 reach11c         CIRCULAR     1.50       0          0          0          1
 reach1a          CIRCULAR     2.50       0          0          0          1
-REACH 11         RECT_CLOSED  0.60       0          0          0          
-reach4           RECT_CLOSED  0.65       0          0          0          
-reach2           RECT_OPEN    0          14.32      0          0          
+REACH_11         RECT_CLOSED  0.60       0.60       0          0
+reach4           RECT_CLOSED  0.65       0.65       0          0
+reach2           RECT_OPEN    1.00       14.32      0          0
 
 [LOSSES]
 ;;Link           Inlet      Outlet     Average    Flap Gate
 ;;-------------- ---------- ---------- ---------- ----------
 NEW              0          0          0          NO
 REACH            0          0          0          NO
-REACH            0          0          0          NO
-REACH            0          0          0          NO
+REACH_2          0          0          0          NO
+REACH_3          0          0          0          NO
 reach11c         0          0          0          NO
 reach1a          0          0          0          NO
 
@@ -90,9 +106,9 @@ reach1a          0          0          0          NO
 50B              59.01              44.12             
 50-BOUNDRY       73.89              43.91             
 D.A.             53.79              9.48              
-D.A.             57.18              26.37             
-D.A.             54.31              89.59             
-D.A.             33.69              73.79             
+D.A._2           57.18              26.37             
+D.A._3           54.31              89.59             
+D.A._4           33.69              73.79             
 D.A.E1a          55.61              73.57             
 228              25.07              43.91             
 

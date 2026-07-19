@@ -20,6 +20,18 @@ INERTIAL_DAMPING     PARTIAL
 NORMAL_FLOW_LIMITED  BOTH
 MAX_TRIALS           50
 HEAD_TOLERANCE       0.0033
+START_DATE           01/01/2001
+START_TIME           00:00:00
+REPORT_START_DATE    01/01/2001
+REPORT_START_TIME    00:00:00
+END_DATE             01/02/2001
+END_TIME             00:00:00
+SWEEP_START          01/01
+SWEEP_END            12/31
+DRY_DAYS             0
+REPORT_STEP          00:15:00
+WET_STEP             00:05:00
+DRY_STEP             01:00:00
 
 [JUNCTIONS]
 ;;Name           Elev       MaxDepth   InitDepth  SurDepth   Aponded
@@ -46,9 +58,13 @@ HEAD_TOLERANCE       0.0033
 26710044         875.87     0          0          0          0
 25040088         878.89     0          0          0          0
 25130052         873.71     0          0          0          0
-25130134         866.33     0          0          0          0
 25040999         900.00     0          0          0          0
 25130132         900.00     0          0          0          0
+
+[OUTFALLS]
+;;Name           Elev       Type       Stage      Gated
+;;-------------- ---------- ---------- ---------- -----
+25130134         866.33     FREE                  NO
 
 [CONDUITS]
 ;;Name           From             To               Length     Roughness  InOffset   OutOffset  InitFlow   MaxFlow
@@ -77,7 +93,7 @@ HEAD_TOLERANCE       0.0033
 25131052         25130052         25130134         85.00      0.0240     862.23     860.83     0          0
 25041088         25040088         25040999         900.00     0.0180     870.36     874.50     0          0
 25041999         25040999         25130052         500.00     0.0180     874.50     867.71     0          0
-25048018         ?                ?                675.00     0.0190     868.71     865.50     0          0
+25048018         25040018         25130132         675.00     0.0190     868.71     865.50     0          0
 
 [XSECTIONS]
 ;;Link           Shape        Geom1      Geom2      Geom3      Geom4      Barrels

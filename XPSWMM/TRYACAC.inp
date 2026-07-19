@@ -19,12 +19,23 @@ VARIABLE_STEP        0.75
 INERTIAL_DAMPING     NONE
 NORMAL_FLOW_LIMITED  BOTH
 MAX_TRIALS           30
+START_DATE           01/01/2001
+START_TIME           00:00:00
+REPORT_START_DATE    01/01/2001
+REPORT_START_TIME    00:00:00
+END_DATE             01/02/2001
+END_TIME             00:00:00
+SWEEP_START          01/01
+SWEEP_END            12/31
+DRY_DAYS             0
+REPORT_STEP          00:15:00
+WET_STEP             00:05:00
+DRY_STEP             01:00:00
 
 [JUNCTIONS]
 ;;Name           Elev       MaxDepth   InitDepth  SurDepth   Aponded
 ;;-------------- ---------- ---------- ---------- ---------- ----------
 6203             710.00     0          0          0          0
-6200             700.00     0          0          0          0
 6230             747.30     0          0          0          0
 6235             751.20     0          0          0          0
 6240             753.20     0          0          0          0
@@ -35,22 +46,27 @@ MAX_TRIALS           30
 6256             743.10     0          0          0          0
 6257             743.10     0          0          0          0
 
+[OUTFALLS]
+;;Name           Elev       Type       Stage      Gated
+;;-------------- ---------- ---------- ---------- -----
+6200             700.00     FREE                  NO
+
 [STORAGE]
 ;;Name           Elev       MaxDepth   InitDepth  Shape      Curve/Params
 ;;-------------- ---------- ---------- ---------- ---------- ----------
-6206             723.30     0          0          FUNCTIONAL 75.00 0          0
-6205             710.00     0          0          FUNCTIONAL 177661.00 0          0
-6210             723.30     0          0          FUNCTIONAL 75.00 0          0
-6215             726.10     0          0          FUNCTIONAL 75.00 0          0
-6220             728.80     0          0          FUNCTIONAL 75.00 0          0
-6225             730.50     0          0          FUNCTIONAL 75.00 0          0
-6245             741.90     0          0          FUNCTIONAL 75.00 0          0
+6206             723.30     10.00      0          FUNCTIONAL 75.00 0          0
+6205             710.00     10.00      0          FUNCTIONAL 177661.00 0          0
+6210             723.30     10.00      0          FUNCTIONAL 75.00 0          0
+6215             726.10     10.00      0          FUNCTIONAL 75.00 0          0
+6220             728.80     10.00      0          FUNCTIONAL 75.00 0          0
+6225             730.50     10.00      0          FUNCTIONAL 75.00 0          0
+6245             741.90     10.00      0          FUNCTIONAL 75.00 0          0
 
 [CONDUITS]
 ;;Name           From             To               Length     Roughness  InOffset   OutOffset  InitFlow   MaxFlow
 ;;-------------- ---------------- ---------------- ---------- ---------- ---------- ---------- ---------- ----------
-6203a            ?                ?                200.00     0.0130     676.00     675.00     0          0
-6206a            ?                ?                767.00     0.0130     689.81     685.99     0          0
+6203a            6203             6200             200.00     0.0130     676.00     675.00     0          0
+6206a            6206             6205             767.00     0.0130     689.81     685.99     0          0
 6210a            6210             6206             200.00     0.0130     690.80     689.81     0          0
 6215a            6215             6210             1353.00    0.0130     697.60     690.80     0          0
 6220a            6220             6215             1350.00    0.0130     704.80     698.05     0          0
@@ -90,7 +106,7 @@ MUL1             6205             6203             TRANSVERSE 689.00     1.840  
 6255a            CIRCULAR     2.75       0          0          0          1
 62561            RECT_CLOSED  0.63       0.97       0          0          1
 62562            CIRCULAR     2.50       0          0          0          1
-MUL1             RECT_OPEN    0          1000.00    0          0          
+MUL1             RECT_OPEN    1.00       1000.00    0          0
 
 [LOSSES]
 ;;Link           Inlet      Outlet     Average    Flap Gate

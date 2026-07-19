@@ -14,12 +14,24 @@ LINK_OFFSETS         DEPTH
 MIN_SLOPE            0.0
 ALLOW_PONDING        NO
 SKIP_STEADY_STATE    NO
-ROUTING_STEP         00:00:60
+ROUTING_STEP         00:01:00
 VARIABLE_STEP        0.75
 INERTIAL_DAMPING     PARTIAL
 NORMAL_FLOW_LIMITED  BOTH
 MAX_TRIALS           50
 HEAD_TOLERANCE       0.0033
+START_DATE           01/01/2001
+START_TIME           00:00:00
+REPORT_START_DATE    01/01/2001
+REPORT_START_TIME    00:00:00
+END_DATE             01/02/2001
+END_TIME             00:00:00
+SWEEP_START          01/01
+SWEEP_END            12/31
+DRY_DAYS             0
+REPORT_STEP          00:15:00
+WET_STEP             00:05:00
+DRY_STEP             01:00:00
 
 [JUNCTIONS]
 ;;Name           Elev       MaxDepth   InitDepth  SurDepth   Aponded
@@ -209,6 +221,16 @@ HEAD_TOLERANCE       0.0033
 467              21.20      0          0          0          0
 468              20.00      0          0          0          0
 469              11.00      0          0          0          0
+RD-BR            6.90       0          0          0          0
+RD-138           0          0          0          0          0
+WR-DR1           14.00      0          0          0          0
+DRweir           8.13       0          0          0          0
+WR-FPLDR2        13.23      0          0          0          0
+WR-JDSP1         12.50      0          0          0          0
+dirt_rd          14.00      0          0          0          0
+34_cul           14.00      0          0          0          0
+DIRT_RD2         7.33       0          0          0          0
+weirplug         12.10      0          0          0          0
 
 [OUTFALLS]
 ;;Name           Elev       Type       Stage      Gated
@@ -253,7 +275,7 @@ HEAD_TOLERANCE       0.0033
 707              207              208              500.00     0.0140     6.10       6.80       0          0
 708              208              209              900.00     0.0140     6.80       7.30       0          0
 709              209              210              900.00     0.0140     7.30       7.30       0          0
-CMP-C-2          RD-138           211              0          0          0          0          0          0
+CMP-C-2          RD-138           211              100.00     0.0130     0          0          0          0
 711              211              169              2600.00    0.0140     8.23       5.50       0          0
 872              181              183              500.00     0.0600     12.50      12.00      0          0
 706              206              207              800.00     0.0140     7.25       6.10       0          0
@@ -262,6 +284,7 @@ CMP-C-2          RD-138           211              0          0          0      
 720              221              205              1400.00    0.0600     10.80      6.90       0          0
 719              220              221              2200.00    0.0600     11.20      10.80      0          0
 718              466              220              3000.00    0.0600     11.30      11.20      0          0
+CMP-4NBR1        WR-DR1           225              30.00      0.0240     14.00      14.00      0          0
 724              225              462              2400.00    0.0650     14.00      13.50      0          0
 778              274              461              500.00     0.0140     14.00      14.00      0          0
 779              275              276              480.00     0.0140     17.00      14.00      0          0
@@ -269,12 +292,15 @@ CMP-C-2          RD-138           211              0          0          0      
 781              277              278              500.00     0.0140     14.00      14.00      0          0
 782              278              205              500.00     0.0140     14.00      6.90       0          0
 738              239              211              700.00     0.0140     9.34       8.64       0          0
-713              213              214              1800.00    0.0140     0.30       -3.80      0          0
-714              214              215              1900.00    0.0140     -2.30      -3.80      0          0
-715              215              216              1900.00    0.0140     -3.80      -12.00     0          0
-716              216              217              2400.00    0.0140     -12.00     -12.00     0          0
+713              213              214              1800.00    0.0140     0.30       0          0          0
+714              214              215              1900.00    0.0140     0          0          0          0
+715              215              216              1900.00    0.0140     0          0          0          0
+716              216              217              2400.00    0.0140     0          0          0          0
 755              254              434              2000.00    0.0140     18.00      17.00      0          0
+CMP-C4           DRweir           170              38.80      0.0240     8.13       7.97       0          0
 711.2            170              463              2000.00    0.0140     7.97       7.33       0          0
+RCP-NBR2         WR-FPLDR2        226.1            60.00      0.0120     13.23      13.23      0          0
+CMP-2.5GAT       WR-JDSP1         181              21.00      0.0240     12.50      12.50      0          0
 873              183              459              500.00     0.0140     12.00      12.00      0          0
 765              261              262              500.00     0.0140     17.00      17.00      0          0
 766              262              263              500.00     0.0140     17.00      17.00      0          0
@@ -292,9 +318,9 @@ CMP-C-2          RD-138           211              0          0          0      
 502              3                5                500.00     0.0140     18.00      17.00      0          0
 503              5                7                500.00     0.0140     17.00      18.00      0          0
 504              7                9                500.00     0.0140     18.00      18.00      0          0
-505              9                13               1000.00    0          18.00      18.00      0          0
-507              13               17               1000.00    0          18.00      18.00      0          0
-509              17               21               1000.00    0          18.00      18.00      0          0
+505              9                13               1000.00    0.0130     18.00      18.00      0          0
+507              13               17               1000.00    0.0130     18.00      18.00      0          0
+509              17               21               1000.00    0.0130     18.00      18.00      0          0
 511              21               23               500.00     0.0140     18.00      18.00      0          0
 514              23               31               2000.00    0.0140     18.00      17.00      0          0
 516              31               35               1000.00    0.0140     17.00      17.00      0          0
@@ -386,210 +412,202 @@ CMP-C-2          RD-138           211              0          0          0      
 870              458              250              500.00     0.0140     17.00      12.50      0          0
 874              459              251              1000.00    0.0140     12.00      7.80       0          0
 875              460              257              1000.00    0.0140     15.00      11.00      0          0
-36 cul           dirt rd          34 cul           20.00      0.0240     14.00      14.00      0          0
-CMP  C-11        DIRT RD2         464              21.00      0.0240     7.33       6.97       0          0
+36_cul           dirt_rd          34_cul           20.00      0.0240     14.00      14.00      0          0
+CMP_C-11         DIRT_RD2         464              21.00      0.0240     7.33       6.97       0          0
 880              464              212              1000.00    0.0140     6.97       2.90       0          0
 882              465              205              300.00     0.0140     9.80       6.90       0          0
 881              462              226              100.00     0.0140     13.50      13.23      0          0
 883              219              466              280.00     0.0140     11.50      11.30      0          0
+30cmpSOD         weirplug         467              21.00      0.0240     12.10      12.10      0          0
 884              467              219              410.00     0.0140     12.10      11.50      0          0
 886              244              468              1480.00    0.0140     12.60      12.10      0          0
-887              469              214              100.00     0.0140     7.00       -2.30      0          0
-
-[WEIRS]
-;;Name           From             To               Type       CrestHt    Qcoeff     Gated    EndCon   EndCoeff   Surcharge
-;;-------------- ---------------- ---------------- ---------- ---------- ---------- -------- -------- ---------- ----------
-CMP-4NBR1        WR-DR1           225              TRANSVERSE 19.00      1.840      NO       0        0          YES
-CMP-C4           DRweir           170              V-NOTCH    14.60      1.840      NO       0        0          YES
-RCP-NBR2         WR-FPLDR2        226.1            TRANSVERSE 17.08      1.840      NO       0        0          YES
-CMP-2.5GAT       WR-JDSP1         181              TRANSVERSE 16.00      1.840      NO       0        0          YES
-30cmpSOD         weirplug         467              V-NOTCH    15.00      1.840      NO       0        0          YES
+887              469              214              100.00     0.0140     7.00       0          0          0
 
 [XSECTIONS]
 ;;Link           Shape        Geom1      Geom2      Geom3      Geom4      Barrels
 ;;-------------- ------------ ---------- ---------- ---------- ---------- ----------
-728              IRREGULAR    3.50       0          0          0          1
-729              IRREGULAR    3.96       0          0          0          1
-730              IRREGULAR    4.06       0          0          0          1
-731              IRREGULAR    4.00       0          0          0          1
-732              IRREGULAR    4.96       0          0          0          1
-733              IRREGULAR    5.42       0          0          0          1
-734              IRREGULAR    5.42       0          0          0          1
-735              IRREGULAR    4.52       0          0          0          1
-736              IRREGULAR    4.52       0          0          0          1
-737              IRREGULAR    5.66       0          0          0          1
-739              IRREGULAR    3.00       0          0          0          1
+728              TRAPEZOIDAL  3.50       10.00      2          2          1
+729              TRAPEZOIDAL  3.96       10.00      2          2          1
+730              TRAPEZOIDAL  4.06       10.00      2          2          1
+731              TRAPEZOIDAL  4.00       10.00      2          2          1
+732              TRAPEZOIDAL  4.96       10.00      2          2          1
+733              TRAPEZOIDAL  5.42       10.00      2          2          1
+734              TRAPEZOIDAL  5.42       10.00      2          2          1
+735              TRAPEZOIDAL  4.52       10.00      2          2          1
+736              TRAPEZOIDAL  4.52       10.00      2          2          1
+737              TRAPEZOIDAL  5.66       10.00      2          2          1
+739              TRAPEZOIDAL  3.00       10.00      2          2          1
 254.1            RECT_CLOSED  8.00       10.00      0          0          1
 722              CIRCULAR     4.00       0          0          0          1
 721              CIRCULAR     4.00       0          0          0          2
 717              CIRCULAR     4.00       0          0          0          2
-727              IRREGULAR    2.50       0          0          0          1
+727              TRAPEZOIDAL  2.50       10.00      2          2          1
 743              CIRCULAR     4.00       0          0          0          1
 753              CIRCULAR     2.50       0          0          0          2
-748              IRREGULAR    3.00       5.00       0          0          1
-749              IRREGULAR    3.00       8.00       0          0          1
+748              TRAPEZOIDAL  3.00       5.00       2          2          1
+749              TRAPEZOIDAL  3.00       8.00       2          2          1
 268.1            CIRCULAR     2.50       0          0          0          2
-744              IRREGULAR    6.00       6.00       0          0          1
-745              TRAPEZOIDAL  3.00       6.00       0          0          1
+744              TRAPEZOIDAL  6.00       6.00       2          2          1
+745              TRAPEZOIDAL  3.00       6.00       1          1          1
 759              CIRCULAR     0.16       0          0          0          1
-760              IRREGULAR    1.30       0          0          0          1
-761              IRREGULAR    2.00       0          0          0          1
-762              IRREGULAR    4.00       0          0          0          1
-763              IRREGULAR    0.80       0          0          0          1
-758              IRREGULAR    5.00       0          0          0          1
-751              IRREGULAR    7.00       0          0          0          1
-752              IRREGULAR    3.00       0          0          0          1
-712              IRREGULAR    10.00      0          0          0          1
-707              IRREGULAR    11.90      0          0          0          1
-708              IRREGULAR    8.60       0          0          0          1
-709              IRREGULAR    15.30      0          0          0          1
-CMP-C-2          CIRCULAR     0          0          0          0          1
-711              IRREGULAR    10.00      0          0          0          1
-872              IRREGULAR    5.50       18.00      0          0          1
-706              IRREGULAR    12.00      0          0          0          1
+760              TRAPEZOIDAL  1.30       10.00      2          2          1
+761              TRAPEZOIDAL  2.00       10.00      2          2          1
+762              TRAPEZOIDAL  4.00       10.00      2          2          1
+763              TRAPEZOIDAL  0.80       10.00      2          2          1
+758              TRAPEZOIDAL  5.00       10.00      2          2          1
+751              TRAPEZOIDAL  7.00       10.00      2          2          1
+752              TRAPEZOIDAL  3.00       10.00      2          2          1
+712              TRAPEZOIDAL  10.00      10.00      2          2          1
+707              TRAPEZOIDAL  11.90      10.00      2          2          1
+708              TRAPEZOIDAL  8.60       10.00      2          2          1
+709              TRAPEZOIDAL  15.30      10.00      2          2          1
+CMP-C-2          CIRCULAR     1.00       0          0          0          1
+711              TRAPEZOIDAL  10.00      10.00      2          2          1
+872              TRAPEZOIDAL  5.50       18.00      2          2          1
+706              TRAPEZOIDAL  12.00      10.00      2          2          1
 726              CIRCULAR     4.00       0          0          0          1
-725              IRREGULAR    4.50       11.00      0          0          1
-720              IRREGULAR    8.00       11.00      0          0          1
-719              IRREGULAR    6.00       11.00      0          0          1
-718              IRREGULAR    8.00       11.00      0          0          1
-724              IRREGULAR    5.00       11.00      0          0          1
-778              IRREGULAR    4.00       0          0          0          1
-779              IRREGULAR    3.00       0          0          0          1
-780              IRREGULAR    3.00       0          0          0          1
-781              IRREGULAR    6.00       0          0          0          1
-782              IRREGULAR    4.00       0          0          0          1
-738              IRREGULAR    7.66       0          0          0          1
-713              IRREGULAR    12.00      0          0          0          1
-714              IRREGULAR    17.30      0          0          0          1
-715              IRREGULAR    15.80      0          0          0          1
-716              IRREGULAR    20.00      0          0          0          1
-755              IRREGULAR    2.00       0          0          0          1
-711.2            IRREGULAR    7.80       0          0          0          1
-873              IRREGULAR    6.00       0          0          0          1
-765              IRREGULAR    1.00       0          0          0          1
-766              IRREGULAR    5.00       0          0          0          1
-767              IRREGULAR    1.00       0          0          0          1
-768              IRREGULAR    2.00       0          0          0          1
-769              IRREGULAR    2.00       0          0          0          1
-770              IRREGULAR    4.00       0          0          0          1
-771              IRREGULAR    1.00       0          0          0          1
-772              IRREGULAR    1.00       0          0          0          1
-773              IRREGULAR    7.30       0          0          0          1
-774              IRREGULAR    7.40       0          0          0          1
-775              IRREGULAR    9.50       0          0          0          1
-776              IRREGULAR    11.60      0          0          0          1
-501              IRREGULAR    4.00       0          0          0          1
-502              IRREGULAR    4.00       0          0          0          1
-503              IRREGULAR    4.00       0          0          0          1
-504              IRREGULAR    4.00       0          0          0          1
-505              IRREGULAR    4.00       0          0          0          1
-507              IRREGULAR    2.00       0          0          0          1
-509              IRREGULAR    4.00       0          0          0          1
-511              IRREGULAR    4.00       0          0          0          1
-514              IRREGULAR    7.00       0          0          0          1
-516              IRREGULAR    7.00       0          0          0          1
-518              IRREGULAR    7.00       0          0          0          1
-520              IRREGULAR    7.00       0          0          0          1
-522              IRREGULAR    7.00       0          0          0          1
-524              IRREGULAR    7.00       0          0          0          1
-783              IRREGULAR    7.00       0          0          0          1
-784              IRREGULAR    5.00       0          0          0          1
-785              IRREGULAR    3.00       0          0          0          1
-786              IRREGULAR    5.00       0          0          0          1
-787              IRREGULAR    7.00       0          0          0          1
-788              IRREGULAR    4.00       0          0          0          1
-789              IRREGULAR    5.00       0          0          0          1
-790              IRREGULAR    7.00       0          0          0          1
-791              IRREGULAR    5.00       0          0          0          1
-792              IRREGULAR    9.50       0          0          0          1
-777              IRREGULAR    11.70      0          0          0          1
-793              IRREGULAR    1.00       0          0          0          1
-794              IRREGULAR    3.00       0          0          0          1
-795              IRREGULAR    1.00       0          0          0          1
-796              IRREGULAR    3.00       0          0          0          1
-797              IRREGULAR    1.00       0          0          0          1
-798              IRREGULAR    3.00       0          0          0          1
-799              IRREGULAR    3.00       0          0          0          1
-800              IRREGULAR    3.00       0          0          0          1
-801              IRREGULAR    2.00       0          0          0          1
-802              IRREGULAR    1.00       0          0          0          1
-803              IRREGULAR    3.00       0          0          0          1
-804              IRREGULAR    1.00       0          0          0          1
-805              IRREGULAR    2.00       0          0          0          1
-806              IRREGULAR    2.50       0          0          0          1
-807              IRREGULAR    2.50       0          0          0          1
-808              IRREGULAR    3.00       0          0          0          1
-809              IRREGULAR    4.00       0          0          0          1
-810              IRREGULAR    2.50       0          0          0          1
-811              IRREGULAR    2.00       0          0          0          1
-812              IRREGULAR    2.00       0          0          0          1
-813              IRREGULAR    2.00       0          0          0          1
-814              IRREGULAR    3.00       0          0          0          1
-815              IRREGULAR    3.00       0          0          0          1
-816              IRREGULAR    2.00       0          0          0          1
-817              IRREGULAR    3.00       0          0          0          1
-818              IRREGULAR    2.00       0          0          0          1
-819              IRREGULAR    2.00       0          0          0          1
-820              IRREGULAR    3.00       0          0          0          1
-821              IRREGULAR    3.00       0          0          0          1
-822              IRREGULAR    4.00       0          0          0          1
-823              IRREGULAR    6.00       0          0          0          1
-824              IRREGULAR    1.00       0          0          0          1
-825              IRREGULAR    1.00       0          0          0          1
-826              IRREGULAR    1.00       0          0          0          1
-827              IRREGULAR    1.00       0          0          0          1
-828              IRREGULAR    1.00       0          0          0          1
-829              IRREGULAR    3.00       0          0          0          1
-830              IRREGULAR    3.00       0          0          0          1
-831              IRREGULAR    3.00       0          0          0          1
-832              IRREGULAR    2.00       0          0          0          1
-386              IRREGULAR    5.00       0          0          0          1
-839              IRREGULAR    3.00       5.00       0          0          1
-840              IRREGULAR    5.00       5.00       0          0          1
-841              IRREGULAR    5.00       5.00       0          0          1
-842              IRREGULAR    5.00       5.00       0          0          1
-843              IRREGULAR    5.00       5.00       0          0          1
-844              IRREGULAR    3.00       5.00       0          0          1
-845              IRREGULAR    5.00       5.00       0          0          1
-846              IRREGULAR    5.00       5.00       0          0          1
-847              IRREGULAR    5.00       0          0          0          1
-848              IRREGULAR    2.00       0          0          0          1
-849              IRREGULAR    2.00       0          0          0          1
-850              IRREGULAR    2.00       0          0          0          1
-851              IRREGULAR    4.00       0          0          0          1
-852              IRREGULAR    5.00       0          0          0          1
-854              IRREGULAR    5.00       0          0          0          1
-855              IRREGULAR    4.00       0          0          0          1
-856              IRREGULAR    2.00       0          0          0          1
-857              IRREGULAR    3.00       0          0          0          1
-858              IRREGULAR    3.00       0          0          0          1
-853              TRAPEZOIDAL  7.00       8.00       0          0          1
-860              IRREGULAR    1.00       0          0          0          1
-861              IRREGULAR    3.00       0          0          0          1
-862              IRREGULAR    3.00       0          0          0          1
-863              IRREGULAR    3.00       0          0          0          1
-864              IRREGULAR    3.00       0          0          0          1
-865              IRREGULAR    3.00       0          0          0          1
-866              IRREGULAR    3.00       0          0          0          1
-867              IRREGULAR    3.00       0          0          0          1
-868              IRREGULAR    2.00       0          0          0          1
-870              IRREGULAR    3.00       0          0          0          1
-874              IRREGULAR    5.00       0          0          0          1
-875              IRREGULAR    2.00       0          0          0          1
-36 cul           CIRCULAR     3.00       0          0          0          1
-CMP  C-11        CIRCULAR     4.00       0          0          0          1
-880              IRREGULAR    7.80       0          0          0          1
-882              IRREGULAR    8.00       0          0          0          1
-881              IRREGULAR    3.80       0          0          0          1
-883              IRREGULAR    8.00       0          0          0          1
-884              IRREGULAR    8.00       0          0          0          1
-886              IRREGULAR    6.00       0          0          0          1
-887              IRREGULAR    4.00       0          0          0          1
-CMP-4NBR1        RECT_OPEN    0          100.00     0          0          
-CMP-C4           RECT_OPEN    0          100.00     0          0          
-RCP-NBR2         RECT_OPEN    0          50.00      0          0          
-CMP-2.5GAT       RECT_OPEN    0          50.00      0          0          
-30cmpSOD         RECT_OPEN    0          12.50      0          0          
+725              TRAPEZOIDAL  4.50       11.00      2          2          1
+720              TRAPEZOIDAL  8.00       11.00      2          2          1
+719              TRAPEZOIDAL  6.00       11.00      2          2          1
+718              TRAPEZOIDAL  8.00       11.00      2          2          1
+CMP-4NBR1        CIRCULAR     4.00       0          0          0          1
+724              TRAPEZOIDAL  5.00       11.00      2          2          1
+778              TRAPEZOIDAL  4.00       10.00      2          2          1
+779              TRAPEZOIDAL  3.00       10.00      2          2          1
+780              TRAPEZOIDAL  3.00       10.00      2          2          1
+781              TRAPEZOIDAL  6.00       10.00      2          2          1
+782              TRAPEZOIDAL  4.00       10.00      2          2          1
+738              TRAPEZOIDAL  7.66       10.00      2          2          1
+713              TRAPEZOIDAL  12.00      10.00      2          2          1
+714              TRAPEZOIDAL  17.30      10.00      2          2          1
+715              TRAPEZOIDAL  15.80      10.00      2          2          1
+716              TRAPEZOIDAL  20.00      10.00      2          2          1
+755              TRAPEZOIDAL  2.00       10.00      2          2          1
+CMP-C4           HORSESHOE    5.00       0          0          0          1
+711.2            TRAPEZOIDAL  7.80       10.00      2          2          1
+RCP-NBR2         CIRCULAR     2.00       0          0          0          3
+CMP-2.5GAT       CIRCULAR     2.50       0          0          0          1
+873              TRAPEZOIDAL  6.00       10.00      2          2          1
+765              TRAPEZOIDAL  1.00       10.00      2          2          1
+766              TRAPEZOIDAL  5.00       10.00      2          2          1
+767              TRAPEZOIDAL  1.00       10.00      2          2          1
+768              TRAPEZOIDAL  2.00       10.00      2          2          1
+769              TRAPEZOIDAL  2.00       10.00      2          2          1
+770              TRAPEZOIDAL  4.00       10.00      2          2          1
+771              TRAPEZOIDAL  1.00       10.00      2          2          1
+772              TRAPEZOIDAL  1.00       10.00      2          2          1
+773              TRAPEZOIDAL  7.30       10.00      2          2          1
+774              TRAPEZOIDAL  7.40       10.00      2          2          1
+775              TRAPEZOIDAL  9.50       10.00      2          2          1
+776              TRAPEZOIDAL  11.60      10.00      2          2          1
+501              TRAPEZOIDAL  4.00       10.00      2          2          1
+502              TRAPEZOIDAL  4.00       10.00      2          2          1
+503              TRAPEZOIDAL  4.00       10.00      2          2          1
+504              TRAPEZOIDAL  4.00       10.00      2          2          1
+505              TRAPEZOIDAL  4.00       10.00      2          2          1
+507              TRAPEZOIDAL  2.00       10.00      2          2          1
+509              TRAPEZOIDAL  4.00       10.00      2          2          1
+511              TRAPEZOIDAL  4.00       10.00      2          2          1
+514              TRAPEZOIDAL  7.00       10.00      2          2          1
+516              TRAPEZOIDAL  7.00       10.00      2          2          1
+518              TRAPEZOIDAL  7.00       10.00      2          2          1
+520              TRAPEZOIDAL  7.00       10.00      2          2          1
+522              TRAPEZOIDAL  7.00       10.00      2          2          1
+524              TRAPEZOIDAL  7.00       10.00      2          2          1
+783              TRAPEZOIDAL  7.00       10.00      2          2          1
+784              TRAPEZOIDAL  5.00       10.00      2          2          1
+785              TRAPEZOIDAL  3.00       10.00      2          2          1
+786              TRAPEZOIDAL  5.00       10.00      2          2          1
+787              TRAPEZOIDAL  7.00       10.00      2          2          1
+788              TRAPEZOIDAL  4.00       10.00      2          2          1
+789              TRAPEZOIDAL  5.00       10.00      2          2          1
+790              TRAPEZOIDAL  7.00       10.00      2          2          1
+791              TRAPEZOIDAL  5.00       10.00      2          2          1
+792              TRAPEZOIDAL  9.50       10.00      2          2          1
+777              TRAPEZOIDAL  11.70      10.00      2          2          1
+793              TRAPEZOIDAL  1.00       10.00      2          2          1
+794              TRAPEZOIDAL  3.00       10.00      2          2          1
+795              TRAPEZOIDAL  1.00       10.00      2          2          1
+796              TRAPEZOIDAL  3.00       10.00      2          2          1
+797              TRAPEZOIDAL  1.00       10.00      2          2          1
+798              TRAPEZOIDAL  3.00       10.00      2          2          1
+799              TRAPEZOIDAL  3.00       10.00      2          2          1
+800              TRAPEZOIDAL  3.00       10.00      2          2          1
+801              TRAPEZOIDAL  2.00       10.00      2          2          1
+802              TRAPEZOIDAL  1.00       10.00      2          2          1
+803              TRAPEZOIDAL  3.00       10.00      2          2          1
+804              TRAPEZOIDAL  1.00       10.00      2          2          1
+805              TRAPEZOIDAL  2.00       10.00      2          2          1
+806              TRAPEZOIDAL  2.50       10.00      2          2          1
+807              TRAPEZOIDAL  2.50       10.00      2          2          1
+808              TRAPEZOIDAL  3.00       10.00      2          2          1
+809              TRAPEZOIDAL  4.00       10.00      2          2          1
+810              TRAPEZOIDAL  2.50       10.00      2          2          1
+811              TRAPEZOIDAL  2.00       10.00      2          2          1
+812              TRAPEZOIDAL  2.00       10.00      2          2          1
+813              TRAPEZOIDAL  2.00       10.00      2          2          1
+814              TRAPEZOIDAL  3.00       10.00      2          2          1
+815              TRAPEZOIDAL  3.00       10.00      2          2          1
+816              TRAPEZOIDAL  2.00       10.00      2          2          1
+817              TRAPEZOIDAL  3.00       10.00      2          2          1
+818              TRAPEZOIDAL  2.00       10.00      2          2          1
+819              TRAPEZOIDAL  2.00       10.00      2          2          1
+820              TRAPEZOIDAL  3.00       10.00      2          2          1
+821              TRAPEZOIDAL  3.00       10.00      2          2          1
+822              TRAPEZOIDAL  4.00       10.00      2          2          1
+823              TRAPEZOIDAL  6.00       10.00      2          2          1
+824              TRAPEZOIDAL  1.00       10.00      2          2          1
+825              TRAPEZOIDAL  1.00       10.00      2          2          1
+826              TRAPEZOIDAL  1.00       10.00      2          2          1
+827              TRAPEZOIDAL  1.00       10.00      2          2          1
+828              TRAPEZOIDAL  1.00       10.00      2          2          1
+829              TRAPEZOIDAL  3.00       10.00      2          2          1
+830              TRAPEZOIDAL  3.00       10.00      2          2          1
+831              TRAPEZOIDAL  3.00       10.00      2          2          1
+832              TRAPEZOIDAL  2.00       10.00      2          2          1
+386              TRAPEZOIDAL  5.00       10.00      2          2          1
+839              TRAPEZOIDAL  3.00       5.00       2          2          1
+840              TRAPEZOIDAL  5.00       5.00       2          2          1
+841              TRAPEZOIDAL  5.00       5.00       2          2          1
+842              TRAPEZOIDAL  5.00       5.00       2          2          1
+843              TRAPEZOIDAL  5.00       5.00       2          2          1
+844              TRAPEZOIDAL  3.00       5.00       2          2          1
+845              TRAPEZOIDAL  5.00       5.00       2          2          1
+846              TRAPEZOIDAL  5.00       5.00       2          2          1
+847              TRAPEZOIDAL  5.00       10.00      2          2          1
+848              TRAPEZOIDAL  2.00       10.00      2          2          1
+849              TRAPEZOIDAL  2.00       10.00      2          2          1
+850              TRAPEZOIDAL  2.00       10.00      2          2          1
+851              TRAPEZOIDAL  4.00       10.00      2          2          1
+852              TRAPEZOIDAL  5.00       10.00      2          2          1
+854              TRAPEZOIDAL  5.00       10.00      2          2          1
+855              TRAPEZOIDAL  4.00       10.00      2          2          1
+856              TRAPEZOIDAL  2.00       10.00      2          2          1
+857              TRAPEZOIDAL  3.00       10.00      2          2          1
+858              TRAPEZOIDAL  3.00       10.00      2          2          1
+853              TRAPEZOIDAL  7.00       8.00       1          1          1
+860              TRAPEZOIDAL  1.00       10.00      2          2          1
+861              TRAPEZOIDAL  3.00       10.00      2          2          1
+862              TRAPEZOIDAL  3.00       10.00      2          2          1
+863              TRAPEZOIDAL  3.00       10.00      2          2          1
+864              TRAPEZOIDAL  3.00       10.00      2          2          1
+865              TRAPEZOIDAL  3.00       10.00      2          2          1
+866              TRAPEZOIDAL  3.00       10.00      2          2          1
+867              TRAPEZOIDAL  3.00       10.00      2          2          1
+868              TRAPEZOIDAL  2.00       10.00      2          2          1
+870              TRAPEZOIDAL  3.00       10.00      2          2          1
+874              TRAPEZOIDAL  5.00       10.00      2          2          1
+875              TRAPEZOIDAL  2.00       10.00      2          2          1
+36_cul           CIRCULAR     3.00       0          0          0          1
+CMP_C-11         CIRCULAR     4.00       0          0          0          1
+880              TRAPEZOIDAL  7.80       10.00      2          2          1
+882              TRAPEZOIDAL  8.00       10.00      2          2          1
+881              TRAPEZOIDAL  3.80       10.00      2          2          1
+883              TRAPEZOIDAL  8.00       10.00      2          2          1
+30cmpSOD         CIRCULAR     0.16       0          0          0          2
+884              TRAPEZOIDAL  8.00       10.00      2          2          1
+886              TRAPEZOIDAL  6.00       10.00      2          2          1
+887              TRAPEZOIDAL  4.00       10.00      2          2          1
 
 [LOSSES]
 ;;Link           Inlet      Outlet     Average    Flap Gate
@@ -638,6 +656,7 @@ CMP-C-2          0          0          0          NO
 720              0          0          0          NO
 719              0          0          0          NO
 718              0          0          0          NO
+CMP-4NBR1        0          0          0          NO
 724              0          0          0          NO
 778              0          0          0          NO
 779              0          0          0          NO
@@ -650,7 +669,10 @@ CMP-C-2          0          0          0          NO
 715              0          0          0          NO
 716              0          0          0          NO
 755              0          0          0          NO
+CMP-C4           0          0          0          NO
 711.2            0          0          0          NO
+RCP-NBR2         0          0          0          NO
+CMP-2.5GAT       0          0          0          NO
 873              0          0          0          NO
 765              0          0          0          NO
 766              0          0          0          NO
@@ -762,12 +784,13 @@ CMP-C-2          0          0          0          NO
 870              0          0          0          NO
 874              0          0          0          NO
 875              0          0          0          NO
-36 cul           0          0          0          NO
-CMP  C-11        0          0          0          NO
+36_cul           0          0          0          NO
+CMP_C-11         0          0          0          NO
 880              0          0          0          NO
 882              0          0          0          NO
 881              0          0          0          NO
 883              0          0          0          NO
+30cmpSOD         0          0          0          NO
 884              0          0          0          NO
 886              0          0          0          NO
 887              0          0          0          NO

@@ -20,6 +20,18 @@ INERTIAL_DAMPING     PARTIAL
 NORMAL_FLOW_LIMITED  BOTH
 MAX_TRIALS           50
 HEAD_TOLERANCE       .001
+START_DATE           01/01/2001
+START_TIME           00:00:00
+REPORT_START_DATE    01/01/2001
+REPORT_START_TIME    00:00:00
+END_DATE             01/02/2001
+END_TIME             00:00:00
+SWEEP_START          01/01
+SWEEP_END            12/31
+DRY_DAYS             0
+REPORT_STEP          00:15:00
+WET_STEP             00:05:00
+DRY_STEP             01:00:00
 
 [JUNCTIONS]
 ;;Name           Elev       MaxDepth   InitDepth  SurDepth   Aponded
@@ -27,7 +39,6 @@ HEAD_TOLERANCE       .001
 CBA5             30.77      0          0          0          0
 CBA4             29.61      0          0          0          0
 CBA3             28.65      0          0          0          0
-CBA2             28.03      0          0          0          0
 ODA10            28.08      0          0          0          0
 ODA9             28.05      0          0          0          0
 ODA8             27.24      0          0          0          0
@@ -50,19 +61,26 @@ oda2.1           24.87      0          0          0          0
 oda1.1           24.74      0          0          0          0
 oda3.1           25.75      0          0          0          0
 oda7.1           26.98      0          0          0          0
+AGROUND          24.96      0          0          0          0
+LCBA2AG          25.91      0          0          0          0
+
+[OUTFALLS]
+;;Name           Elev       Type       Stage      Gated
+;;-------------- ---------- ---------- ---------- -----
+CBA2             28.03      FREE                  NO
 
 [STORAGE]
 ;;Name           Elev       MaxDepth   InitDepth  Shape      Curve/Params
 ;;-------------- ---------- ---------- ---------- ---------- ----------
-ACBA             30.69      0          0          FUNCTIONAL 0 0          0
-CBA1             28.00      0          0          FUNCTIONAL 1.20 0          0
-ODA6             26.39      0          0          FUNCTIONAL 0 0          0
-CBA6             30.69      0          0          FUNCTIONAL 0 0          0
-oda11.1          28.23      0          0          FUNCTIONAL 1.20 0          0
-dummy.1          28.23      0          0          FUNCTIONAL 1.20 0          0
-275              28.00      0          0          FUNCTIONAL 1.20 0          0
-6.1              26.39      0          0          FUNCTIONAL 0 0          0
-oda6.1           26.39      0          0          FUNCTIONAL 0 0          0
+ACBA             30.69      10.00      0          FUNCTIONAL 1000.00 0          0
+CBA1             28.00      10.00      0          FUNCTIONAL 1.20 0          0
+ODA6             26.39      10.00      0          FUNCTIONAL 1000.00 0          0
+CBA6             30.69      10.00      0          FUNCTIONAL 1000.00 0          0
+oda11.1          28.23      10.00      0          FUNCTIONAL 1.20 0          0
+dummy.1          28.23      10.00      0          FUNCTIONAL 1.20 0          0
+275              28.00      10.00      0          FUNCTIONAL 1.20 0          0
+6.1              26.39      10.00      0          FUNCTIONAL 1000.00 0          0
+oda6.1           26.39      10.00      0          FUNCTIONAL 1000.00 0          0
 
 [CONDUITS]
 ;;Name           From             To               Length     Roughness  InOffset   OutOffset  InitFlow   MaxFlow
@@ -88,8 +106,8 @@ UGROUND          AGROUND          ODA7             100.00     0.0140     24.96  
 LCBA2BG          LCBA2AG          CBA1             33.00      0.0140     25.91      25.77      0          0
 lCBA6            CBA6             CBA5             80.00      0.0140     28.34      28.07      0          0
 lcba1.1          CBA1             ODA10            77.00      0.0140     25.58      25.42      0          0
-276              ?                ?                100.00     0.0140     25.58      25.58      0          0
-282              ?                ?                77.00      0.0140     25.58      25.42      0          0
+276              275              dummy.1          100.00     0.0140     25.58      25.58      0          0
+282              oda11.1          oda10.1          77.00      0.0140     25.58      25.42      0          0
 l                308              7.1              20.00      0.0140     24.00      23.96      0          0
 l7.1             7.1              6.1              114.00     0.0140     23.96      23.80      0          0
 link2            ODA2             oda2.1           10.00      0.0140     22.39      22.34      0          0
@@ -126,7 +144,7 @@ lnew1            CIRCULAR     0.90       0          0          0          1
 lnew2            CIRCULAR     0.90       0          0          0          1
 lCOMM            CIRCULAR     0.90       0          0          0          1
 lPARK            CIRCULAR     0.90       0          0          0          1
-lODA             TRAPEZOIDAL  2.00       2.00       0          0          1
+lODA             TRAPEZOIDAL  2.00       2.00       1          1          1
 UGROUND          CIRCULAR     0.75       0          0          0          1
 LCBA2BG          CIRCULAR     1.05       0          0          0          1
 lCBA6            CIRCULAR     0.60       0          0          0          1
@@ -143,8 +161,8 @@ Loda3.1          CIRCULAR     0.90       0          0          0          1
 link4            CIRCULAR     0.60       0          0          0          1
 loda7.1          CIRCULAR     0.60       0          0          0          1
 link5            CIRCULAR     0.60       0          0          0          1
-ORIF             RECT_CLOSED  0          0          0          0          
-orif2.2          RECT_CLOSED  0          0          0          0          
+ORIF             RECT_CLOSED  0.41       0.41       0          0
+orif2.2          RECT_CLOSED  0.32       0.32       0          0
 
 [LOSSES]
 ;;Link           Inlet      Outlet     Average    Flap Gate

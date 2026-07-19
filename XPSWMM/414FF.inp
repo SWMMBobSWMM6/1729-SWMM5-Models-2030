@@ -20,6 +20,18 @@ INERTIAL_DAMPING     PARTIAL
 NORMAL_FLOW_LIMITED  BOTH
 MAX_TRIALS           100
 HEAD_TOLERANCE       0.0001
+START_DATE           01/01/2001
+START_TIME           00:00:00
+REPORT_START_DATE    01/01/2001
+REPORT_START_TIME    00:00:00
+END_DATE             01/02/2001
+END_TIME             00:00:00
+SWEEP_START          01/01
+SWEEP_END            12/31
+DRY_DAYS             0
+REPORT_STEP          00:15:00
+WET_STEP             00:05:00
+DRY_STEP             01:00:00
 
 [JUNCTIONS]
 ;;Name           Elev       MaxDepth   InitDepth  SurDepth   Aponded
@@ -37,28 +49,34 @@ J2337            15.00      0          0          0          0
 J2487            15.00      0          0          0          0
 J337             15.00      0          0          0          0
 J487             15.00      0          0          0          0
-J4487            15.00      0          0          0          0
 J332             15.00      0          0          0          0
 J329             15.00      0          0          0          0
 J331             15.00      0          0          0          0
 J330             15.00      0          0          0          0
 J1331            15.00      0          0          0          0
+5487_ll          5.00       0          0          0          0
+2339_ll          5.00       0          0          0          0
+
+[OUTFALLS]
+;;Name           Elev       Type       Stage      Gated
+;;-------------- ---------- ---------- ---------- -----
+J4487            15.00      FREE                  NO
 
 [STORAGE]
 ;;Name           Elev       MaxDepth   InitDepth  Shape      Curve/Params
 ;;-------------- ---------- ---------- ---------- ---------- ----------
-S333             10.00      0          0          FUNCTIONAL 28.00 0          0
-S332             10.00      0          0          FUNCTIONAL 28.00 0          0
-S414             10.00      0          0          FUNCTIONAL 28.00 0          0
-S330             10.00      0          0          FUNCTIONAL 28.00 0          0
-S487             10.00      0          0          FUNCTIONAL 0 0          0
-S337             10.00      0          0          FUNCTIONAL 0 0          0
-S433             10.00      0          0          FUNCTIONAL 0 0          0
-S341             10.00      0          0          FUNCTIONAL 0 0          0
-S339             10.00      0          0          FUNCTIONAL 0 0          0
-S331             10.00      0          0          FUNCTIONAL 0 0          0
-S329             8.79       0          0          FUNCTIONAL 0 0          0
-S335             10.00      0          0          FUNCTIONAL 0 0          0
+S333             10.00      10.00      0          FUNCTIONAL 28.00 0          0
+S332             10.00      10.00      0          FUNCTIONAL 28.00 0          0
+S414             10.00      10.00      0          FUNCTIONAL 28.00 0          0
+S330             10.00      10.00      0          FUNCTIONAL 28.00 0          0
+S487             10.00      10.00      0          FUNCTIONAL 1000.00 0          0
+S337             10.00      10.00      0          FUNCTIONAL 1000.00 0          0
+S433             10.00      10.00      0          FUNCTIONAL 1000.00 0          0
+S341             10.00      10.00      0          FUNCTIONAL 1000.00 0          0
+S339             10.00      10.00      0          FUNCTIONAL 1000.00 0          0
+S331             10.00      10.00      0          FUNCTIONAL 1000.00 0          0
+S329             8.79       10.00      0          FUNCTIONAL 1000.00 0          0
+S335             10.00      10.00      0          FUNCTIONAL 1000.00 0          0
 
 [CONDUITS]
 ;;Name           From             To               Length     Roughness  InOffset   OutOffset  InitFlow   MaxFlow
@@ -74,10 +92,10 @@ S335             10.00      0          0          FUNCTIONAL 0 0          0
 2487             J2337            J2487            1554.00    0.0120     5.00       5.00       0          0
 337              J337             J2337            1726.00    0.0120     5.00       5.00       0          0
 487              J487             J2487            5576.00    0.0120     5.00       5.00       0          0
-5487             5487 ll          J2339            1681.00    0.0120     5.00       5.00       0          0
+5487             5487_ll          J2339            1681.00    0.0120     5.00       5.00       0          0
 3487             J2487            J4487            1208.00    0.0120     5.00       5.00       0          0
-332              ?                ?                1397.00    0.0120     5.00       5.00       0          0
-2339             2339 ll          J3339            2581.00    0.0120     5.00       5.00       0          0
+332              J332             J3339            1397.00    0.0120     5.00       5.00       0          0
+2339             2339_ll          J3339            2581.00    0.0120     5.00       5.00       0          0
 329              J329             J2329            2184.00    0.0120     5.00       5.00       0          0
 G414             J2329            S414             50.00      0.0140     5.00       4.85       0          0
 2331             J331             J1331            2300.00    0.0120     5.00       5.00       0          0
@@ -86,43 +104,44 @@ G414             J2329            S414             50.00      0.0140     5.00   
 [PUMPS]
 ;;Name           From             To               PumpCurve  Status   Startup    Shutoff
 ;;-------------- ---------------- ---------------- ---------- -------- ---------- ----------
-8333             S333             J333             PC_8333    ON       -7.17      -8.17     
-8339             S339             J339             PC_8339    ON       -3.83      -6.67     
-8335             S335             J335             PC_8335    ON       -7.17      -9.50     
-8341             S341             J341             PC_8341    ON       -4.83      -6.83     
-8433             S433             J433             PC_8433    ON       -8.58      -10.42    
-8337             S337             J337             PC_8337    ON       -6.67      -8.50     
-8487             S487             J487             PC_8487    ON       -6.42      -8.59     
-8332             S332             J332             PC_8332    ON       -1.83      -3.67     
-8329             S329             J329             PC_8329    ON       -9.96      -10.79    
-8330             S330             J330             PC_8330    ON       -4.50      -5.34     
-8331             S331             J331             PC_8331    ON       -5.67      -8.67     
+8333             S333             J333             PC_8333    ON       1.00       0         
+8339             S339             J339             PC_8339    ON       1.00       0         
+8335             S335             J335             PC_8335    ON       1.00       0         
+8341             S341             J341             PC_8341    ON       1.00       0         
+8433             S433             J433             PC_8433    ON       1.00       0         
+8337             S337             J337             PC_8337    ON       1.00       0         
+8487             S487             J487             PC_8487    ON       1.00       0         
+8332             S332             J332             PC_8332    ON       1.00       0         
+8329             S329             J329             PC_8329    ON       1.00       0         
+8330             S330             J330             PC_8330    ON       1.00       0         
+8331             S331             J331             PC_8331    ON       1.00       0         
 
 [CURVES]
 ;;Name           Type       X-Value    Y-Value
 ;;-------------- ---------- ---------- ----------
-PC_8333          Pump3      0          0
-;
-PC_8339          Pump3      0          0
-;
-PC_8335          Pump3      0          0
-;
-PC_8341          Pump3      0          0
-;
-PC_8433          Pump3      0          0
-;
-PC_8337          Pump3      0          0
-;
-PC_8487          Pump3      0          0
-;
-PC_8332          Pump3      0          0
-;
-PC_8329          Pump3      0          0
-;
-PC_8330          Pump3      0          0
-;
-PC_8331          Pump3      0          0
-;
+;; Synthesized generic pump curves — replace with actual pump data
+PC_8333          Pump1      0          5
+PC_8333                     10         10
+PC_8339          Pump1      0          5
+PC_8339                     10         10
+PC_8335          Pump1      0          5
+PC_8335                     10         10
+PC_8341          Pump1      0          5
+PC_8341                     10         10
+PC_8433          Pump1      0          5
+PC_8433                     10         10
+PC_8337          Pump1      0          5
+PC_8337                     10         10
+PC_8487          Pump1      0          5
+PC_8487                     10         10
+PC_8332          Pump1      0          5
+PC_8332                     10         10
+PC_8329          Pump1      0          5
+PC_8329                     10         10
+PC_8330          Pump1      0          5
+PC_8330                     10         10
+PC_8331          Pump1      0          5
+PC_8331                     10         10
 
 [XSECTIONS]
 ;;Link           Shape        Geom1      Geom2      Geom3      Geom4      Barrels

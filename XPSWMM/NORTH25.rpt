@@ -2,23 +2,363 @@
   EPA STORM WATER MANAGEMENT MODEL - VERSION 5.2 (Build 5.2.4)
   ------------------------------------------------------------
 
+  Mertz Tract 
   
-  ERROR 207: duplicate ID name etloss at line 102 of [PUMP] section:
-  etloss           W1               etout            *          ON       0          0         
-
+  ****************
+  Analysis Options
+  ****************
+  Flow Units ............... CFS
+  Process Models:
+    Rainfall/Runoff ........ NO
+    RDII ................... NO
+    Snowmelt ............... NO
+    Groundwater ............ NO
+    Flow Routing ........... YES
+    Ponding Allowed ........ NO
+    Water Quality .......... NO
+  Flow Routing Method ...... DYNWAVE
+  Surcharge Method ......... EXTRAN
+  Starting Date ............ 01/01/2001 00:00:00
+  Ending Date .............. 01/02/2001 00:00:00
+  Antecedent Dry Days ...... 0.0
+  Report Time Step ......... 00:15:00
+  Routing Time Step ........ 10.00 sec
+  Variable Time Step ....... YES
+  Maximum Trials ........... 50
+  Number of Threads ........ 1
+  Head Tolerance ........... 0.003300 ft
   
-  ERROR 207: duplicate ID name etloss at line 103 of [PUMP] section:
-  etloss           W6-C             etout            *          ON       0          0         
-
   
-  ERROR 207: duplicate ID name etloss at line 104 of [PUMP] section:
-  etloss           W4               etout            *          ON       0          0         
-
+  **************************        Volume        Volume
+  Flow Routing Continuity        acre-feet      10^6 gal
+  **************************     ---------     ---------
+  Dry Weather Inflow .......         0.000         0.000
+  Wet Weather Inflow .......         0.000         0.000
+  Groundwater Inflow .......         0.000         0.000
+  RDII Inflow ..............         0.000         0.000
+  External Inflow ..........         0.000         0.000
+  External Outflow .........         0.000         0.000
+  Flooding Loss ............         0.013         0.004
+  Evaporation Loss .........         0.000         0.000
+  Exfiltration Loss ........         0.000         0.000
+  Initial Stored Volume ....         3.813         1.243
+  Final Stored Volume ......         3.810         1.242
+  Continuity Error (%) .....        -0.260
   
-  ERROR 207: duplicate ID name etloss at line 105 of [PUMP] section:
-  etloss           W6-B             etout            *          ON       0          0         
+  
+  *************************
+  Highest Continuity Errors
+  *************************
+  Node etout (36.42%)
+  Node W1 (-15.78%)
+  Node W6-C (-4.49%)
+  Node W6-B (-4.49%)
+  Node W6-A (-1.47%)
+  
+  
+  ***************************
+  Time-Step Critical Elements
+  ***************************
+  None
+  
+  
+  ********************************
+  Highest Flow Instability Indexes
+  ********************************
+  All links are stable.
+  
+  
+  *********************************
+  Most Frequent Nonconverging Nodes
+  *********************************
+  Node etout (0.01%)
+  Node etoutf (0.01%)
+  Node OUT3 (0.01%)
+  
+  
+  *************************
+  Routing Time Step Summary
+  *************************
+  Minimum Time Step           :     1.31 sec
+  Average Time Step           :     9.98 sec
+  Maximum Time Step           :    10.00 sec
+  % of Time in Steady State   :     0.00
+  Average Iterations per Step :    11.84
+  % of Steps Not Converging   :     0.01
+  Time Step Frequencies       :
+     10.000 -  5.493 sec      :    99.83 %
+      5.493 -  3.017 sec      :     0.15 %
+      3.017 -  1.657 sec      :     0.00 %
+      1.657 -  0.910 sec      :     0.02 %
+      0.910 -  0.500 sec      :     0.00 %
+  
+  
+  ******************
+  Node Depth Summary
+  ******************
+  
+  ---------------------------------------------------------------------------------
+                                 Average  Maximum  Maximum  Time of Max    Reported
+                                   Depth    Depth      HGL   Occurrence   Max Depth
+  Node                 Type         Feet     Feet     Feet  days hr:min        Feet
+  ---------------------------------------------------------------------------------
+  OUT5                 JUNCTION     0.00     0.00   100.00     0  00:00        0.00
+  etout                JUNCTION     9.76    10.03   110.03     0  00:05        9.97
+  etoutf               JUNCTION     9.79    10.00   110.00     0  00:04        9.99
+  weir2                JUNCTION     0.00     0.00     0.00     0  00:00        0.00
+  weir3                JUNCTION     0.00     0.00     0.00     0  00:00        0.00
+  OUT3                 OUTFALL      0.00     0.00   100.00     0  00:00        0.00
+  RD8-3                STORAGE     10.00    10.00   110.00     0  00:00       10.00
+  W6-B                 STORAGE      0.00     0.80   100.80     0  00:00        0.00
+  RD4-4                STORAGE     10.00    10.00   110.00     0  00:00       10.00
+  RD4-C                STORAGE      9.30     9.30   109.30     0  00:00        9.30
+  RD4-3                STORAGE      9.40     9.40   109.40     0  00:00        9.40
+  RD4-1                STORAGE      9.50     9.50   109.50     0  00:00        9.50
+  RD5-2                STORAGE      8.50     8.50   108.50     0  00:00        8.50
+  RD5-1                STORAGE      8.60     8.60   108.60     0  00:00        8.60
+  RD5-1A               STORAGE      7.00     7.00   107.00     0  00:00        7.00
+  RD1-6                STORAGE      6.50     6.50   106.50     0  00:00        6.50
+  RD1-5                STORAGE      6.60     6.60   106.60     0  00:00        6.60
+  RD1-4                STORAGE      9.30     9.30   109.30     0  00:00        9.30
+  RD1-3                STORAGE      6.10     6.10   106.10     0  00:00        6.10
+  RD1-1                STORAGE      6.20     6.20   106.20     0  00:00        6.20
+  RD6-1                STORAGE      6.70     6.70   106.70     0  00:00        6.70
+  RD7-1                STORAGE      5.10     5.10   105.10     0  00:00        5.10
+  W4                   STORAGE      0.00     2.10   102.10     0  00:00        0.00
+  W1                   STORAGE      0.00     0.20   100.20     0  00:00        0.00
+  HW                   STORAGE      0.00     0.00   100.00     0  00:00        0.00
+  RD8-1                STORAGE     10.00    10.00   110.00     0  00:00       10.00
+  W6-A                 STORAGE      0.01     3.40   103.40     0  00:00        0.00
+  RD4-A                STORAGE     10.00    10.00   110.00     0  00:00       10.00
+  W6-C                 STORAGE      0.00     0.80   100.80     0  00:00        0.00
+  RD8-2                STORAGE     10.00    10.00   110.00     0  00:00       10.00
+  RD8-C                STORAGE     10.00    10.00   110.00     0  00:00       10.00
+  
+  
+  *******************
+  Node Inflow Summary
+  *******************
+  
+  -------------------------------------------------------------------------------------------------
+                                  Maximum  Maximum                  Lateral       Total        Flow
+                                  Lateral    Total  Time of Max      Inflow      Inflow     Balance
+                                   Inflow   Inflow   Occurrence      Volume      Volume       Error
+  Node                 Type           CFS      CFS  days hr:min    10^6 gal    10^6 gal     Percent
+  -------------------------------------------------------------------------------------------------
+  OUT5                 JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  etout                JUNCTION      0.00    50.90     0  00:00           0      0.0575      57.275
+  etoutf               JUNCTION      0.00   103.71     0  00:00           0      0.0365       0.000
+  weir2                JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  weir3                JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  OUT3                 OUTFALL       0.00     0.00     0  00:00           0           0       0.000 gal
+  RD8-3                STORAGE       0.00     0.00     0  00:00           0      0.0748       0.000
+  W6-B                 STORAGE       0.00     0.00     0  00:00           0     0.00598      -4.294
+  RD4-4                STORAGE       0.00     0.00     0  00:00           0      0.0748       0.000
+  RD4-C                STORAGE       0.00     0.00     0  00:00           0      0.0696       0.000
+  RD4-3                STORAGE       0.00     0.00     0  00:00           0      0.0703       0.000
+  RD4-1                STORAGE       0.00     0.00     0  00:00           0      0.0711       0.000
+  RD5-2                STORAGE       0.00     0.00     0  00:00           0      0.0636       0.000
+  RD5-1                STORAGE       0.00     0.00     0  00:00           0      0.0643       0.000
+  RD5-1A               STORAGE       0.00     0.00     0  00:00           0      0.0524       0.000
+  RD1-6                STORAGE       0.00     0.00     0  00:00           0      0.0486       0.000
+  RD1-5                STORAGE       0.00     0.00     0  00:00           0      0.0494       0.000
+  RD1-4                STORAGE       0.00     0.00     0  00:00           0      0.0696       0.000
+  RD1-3                STORAGE       0.00     0.00     0  00:00           0      0.0456       0.000
+  RD1-1                STORAGE       0.00     0.00     0  00:00           0      0.0464       0.000
+  RD6-1                STORAGE       0.00     0.00     0  00:00           0      0.0501       0.000
+  RD7-1                STORAGE       0.00     0.00     0  00:00           0      0.0381       0.000
+  W4                   STORAGE       0.00     0.00     0  00:00           0      0.0157      -2.326
+  W1                   STORAGE       0.00     0.00     0  00:00           0      0.0015     -13.629
+  HW                   STORAGE       0.00     0.00     0  00:00           0           0       0.000 gal
+  RD8-1                STORAGE       0.00     0.00     0  00:00           0      0.0748       0.000
+  W6-A                 STORAGE       0.00     0.00     0  00:00           0      0.0254      -1.450
+  RD4-A                STORAGE       0.00     0.00     0  00:00           0      0.0748       0.000
+  W6-C                 STORAGE       0.00     0.00     0  00:00           0     0.00598      -4.295
+  RD8-2                STORAGE       0.00     0.00     0  00:00           0      0.0748       0.000
+  RD8-C                STORAGE       0.00     0.00     0  00:00           0      0.0748       0.000
+  
+  
+  **********************
+  Node Surcharge Summary
+  **********************
+  
+  Surcharging occurs when water rises above the top of the highest conduit.
+  ---------------------------------------------------------------------
+                                               Max. Height   Min. Depth
+                                   Hours       Above Crown    Below Rim
+  Node                 Type      Surcharged           Feet         Feet
+  ---------------------------------------------------------------------
+  etoutf               JUNCTION        0.02          0.000        0.000
+  
+  
+  *********************
+  Node Flooding Summary
+  *********************
+  
+  Flooding refers to all water that overflows a node, whether it ponds or not.
+  --------------------------------------------------------------------------
+                                                             Total   Maximum
+                                 Maximum   Time of Max       Flood    Ponded
+                        Hours       Rate    Occurrence      Volume     Depth
+  Node                 Flooded       CFS   days hr:min    10^6 gal      Feet
+  --------------------------------------------------------------------------
+  etoutf                  0.02     11.47      0  00:05       0.004     0.000
+  
+  
+  **********************
+  Storage Volume Summary
+  **********************
+  
+  ------------------------------------------------------------------------------------------------
+                         Average    Avg   Evap  Exfil     Maximum    Max    Time of Max    Maximum
+                          Volume   Pcnt   Pcnt   Pcnt      Volume   Pcnt     Occurrence    Outflow
+  Storage Unit          1000 ft³   Full   Loss   Loss    1000 ft³   Full    days hr:min        CFS
+  ------------------------------------------------------------------------------------------------
+  RD8-3                   10.000  100.0    0.0    0.0      10.000  100.0       0  00:00       0.00
+  W6-B                     0.001    0.0    0.0    0.0       0.798    8.0       0  00:00      10.00
+  RD4-4                   10.000  100.0    0.0    0.0      10.000  100.0       0  00:00       0.00
+  RD4-C                    9.300   93.0    0.0    0.0       9.300   93.0       0  00:00       0.00
+  RD4-3                    9.400   94.0    0.0    0.0       9.400   94.0       0  00:00       0.00
+  RD4-1                    9.500   95.0    0.0    0.0       9.500   95.0       0  00:00       0.00
+  RD5-2                    8.500   85.0    0.0    0.0       8.500   85.0       0  00:00       0.00
+  RD5-1                    8.600   86.0    0.0    0.0       8.600   86.0       0  00:00       0.00
+  RD5-1A                   7.000   70.0    0.0    0.0       7.000   70.0       0  00:00       0.00
+  RD1-6                    6.500   65.0    0.0    0.0       6.500   65.0       0  00:00       0.00
+  RD1-5                    6.600   66.0    0.0    0.0       6.600   66.0       0  00:00       0.00
+  RD1-4                    9.300   93.0    0.0    0.0       9.300   93.0       0  00:00       0.00
+  RD1-3                    6.100   61.0    0.0    0.0       6.100   61.0       0  00:00       0.00
+  RD1-1                    6.200   62.0    0.0    0.0       6.200   62.0       0  00:00       0.00
+  RD6-1                    6.700   67.0    0.0    0.0       6.700   67.0       0  00:00       0.00
+  RD7-1                    5.100   51.0    0.0    0.0       5.100   51.0       0  00:00       0.00
+  W4                       0.004    0.0    0.0    0.0       2.098   21.0       0  00:00      10.00
+  W1                       0.000    0.0    0.0    0.0       0.198    2.0       0  00:00      10.00
+  HW                       0.000    0.0    0.0    0.0       0.000    0.0       0  00:00       0.00
+  RD8-1                   10.000  100.0    0.0    0.0      10.000  100.0       0  00:00       0.00
+  W6-A                     0.011    0.1    0.0    0.0       3.398   34.0       0  00:00      10.00
+  RD4-A                   10.000  100.0    0.0    0.0      10.000  100.0       0  00:00       0.00
+  W6-C                     0.001    0.0    0.0    0.0       0.798    8.0       0  00:00      10.00
+  RD8-2                   10.000  100.0    0.0    0.0      10.000  100.0       0  00:00       0.00
+  RD8-C                   10.000  100.0    0.0    0.0      10.000  100.0       0  00:00       0.00
+  
+  
+  ***********************
+  Outfall Loading Summary
+  ***********************
+  
+  -----------------------------------------------------------
+                         Flow       Avg       Max       Total
+                         Freq      Flow      Flow      Volume
+  Outfall Node           Pcnt       CFS       CFS    10^6 gal
+  -----------------------------------------------------------
+  OUT3                   0.00      0.00      0.00       0.000
+  -----------------------------------------------------------
+  System                 0.00      0.00      0.00       0.000
+  
+  
+  ********************
+  Link Flow Summary
+  ********************
+  
+  -----------------------------------------------------------------------------
+                                 Maximum  Time of Max   Maximum    Max/    Max/
+                                  |Flow|   Occurrence   |Veloc|    Full    Full
+  Link                 Type          CFS  days hr:min    ft/sec    Flow   Depth
+  -----------------------------------------------------------------------------
+  OUT-3                CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  RD1-25               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  RD5-1                CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  RD5-28               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  RD4-24               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  RD4-8                CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  RD4-16               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  RD5-8                CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  RD1-5                CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  RD1-15               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  RD4-32               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  OUT-5                CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  W6BC                 CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  RD8-2                CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  RD8-3                CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  RD8-1                CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  W6AC                 CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  W6C-1                CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  W4-1                 CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  et-out               CONDUIT    103.71     0  00:00      9.68    0.05    0.90
+  48"_pipe             WEIR         0.00     0  00:00                      0.00
+  W1W6                 WEIR         0.00     0  00:00                      0.00
+  rd1-w1               WEIR         0.00     0  00:00                      0.00
+  weir_1               WEIR         0.00     0  00:00                      0.00
+  out4weir             WEIR         0.00     0  00:00                      0.00
+  rd1-10w              WEIR         0.00     0  00:00                      0.00
+  w6b-1                WEIR         0.00     0  00:00                      0.00
+  W6B-2                WEIR         0.00     0  00:00                      0.00
+  W6-2                 WEIR         0.00     0  00:00                      0.00
+  etloss               PUMP        10.00     0  00:00              1.00
+  etloss_2             PUMP        10.00     0  00:00              1.00
+  etloss_3             PUMP        10.00     0  00:00              1.00
+  etloss_4             PUMP        10.00     0  00:00              1.00
+  etloss_5             PUMP        10.00     0  00:00              1.00
+  
+  
+  ***************************
+  Flow Classification Summary
+  ***************************
+  
+  -------------------------------------------------------------------------------------
+                      Adjusted    ---------- Fraction of Time in Flow Class ---------- 
+                       /Actual         Up    Down  Sub   Sup   Up    Down  Norm  Inlet 
+  Conduit               Length    Dry  Dry   Dry   Crit  Crit  Crit  Crit  Ltd   Ctrl  
+  -------------------------------------------------------------------------------------
+  OUT-3                   1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  RD1-25                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  RD5-1                   1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  RD5-28                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  RD4-24                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  RD4-8                   1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  RD4-16                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  RD5-8                   1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  RD1-5                   1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  RD1-15                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  RD4-32                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  OUT-5                   1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  W6BC                    1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  RD8-2                   1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  RD8-3                   1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  RD8-1                   1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  W6AC                    1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  W6C-1                   1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  W4-1                    1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  et-out                  1.00   0.00  0.00  0.00  1.00  0.00  0.00  0.00  0.00  0.00
+  
+  
+  *************************
+  Conduit Surcharge Summary
+  *************************
+  
+  ----------------------------------------------------------------------------
+                                                           Hours        Hours 
+                         --------- Hours Full --------   Above Full   Capacity
+  Conduit                Both Ends  Upstream  Dnstream   Normal Flow   Limited
+  ----------------------------------------------------------------------------
+  et-out                      0.01      0.01      0.03      0.01         0.01
+  
+  
+  ***************
+  Pumping Summary
+  ***************
+  
+  ---------------------------------------------------------------------------------------------------------
+                                                  Min       Avg       Max     Total     Power    % Time Off
+                        Percent   Number of      Flow      Flow      Flow    Volume     Usage    Pump Curve
+  Pump                 Utilized   Start-Ups       CFS       CFS       CFS  10^6 gal     Kw-hr    Low   High
+  ---------------------------------------------------------------------------------------------------------
+  etloss                   0.40           1      0.00      9.91     10.00     0.025      0.47    0.0   97.1
+  etloss_2                 0.03           1      0.00      9.38     10.00     0.002      0.02    0.0   76.9
+  etloss_3                 0.09           1      0.00      9.88     10.00     0.006      0.08    0.0   90.9
+  etloss_4                 0.25           1      0.00      9.88     10.00     0.016      0.26    0.0   95.3
+  etloss_5                 0.09           1      0.00      9.88     10.00     0.006      0.08    0.0   90.9
+  
 
-
-  Analysis begun on:  Mon Jul 13 08:04:08 2026
-  Analysis ended on:  Mon Jul 13 08:04:08 2026
+  Analysis begun on:  Sun Jul 19 15:21:23 2026
+  Analysis ended on:  Sun Jul 19 15:21:23 2026
   Total elapsed time: < 1 sec

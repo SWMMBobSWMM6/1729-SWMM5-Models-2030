@@ -20,6 +20,18 @@ INERTIAL_DAMPING     PARTIAL
 NORMAL_FLOW_LIMITED  BOTH
 MAX_TRIALS           50
 HEAD_TOLERANCE       0.000
+START_DATE           01/01/2001
+START_TIME           00:00:00
+REPORT_START_DATE    01/01/2001
+REPORT_START_TIME    00:00:00
+END_DATE             01/02/2001
+END_TIME             00:00:00
+SWEEP_START          01/01
+SWEEP_END            12/31
+DRY_DAYS             0
+REPORT_STEP          00:15:00
+WET_STEP             00:05:00
+DRY_STEP             01:00:00
 
 [JUNCTIONS]
 ;;Name           Elev       MaxDepth   InitDepth  SurDepth   Aponded
@@ -29,7 +41,6 @@ HEAD_TOLERANCE       0.000
 625              160.00     0          0          0          0
 635              152.20     0          0          0          0
 645              150.10     0          0          0          0
-655              150.00     0          0          0          0
 515              171.00     0          0          0          0
 565              168.10     0          0          0          0
 575              168.00     0          0          0          0
@@ -37,15 +48,20 @@ HEAD_TOLERANCE       0.000
 5955             167.52     0          0          0          0
 246              171.10     0          0          0          0
 
+[OUTFALLS]
+;;Name           Elev       Type       Stage      Gated
+;;-------------- ---------- ---------- ---------- -----
+655              150.00     FREE                  NO
+
 [STORAGE]
 ;;Name           Elev       MaxDepth   InitDepth  Shape      Curve/Params
 ;;-------------- ---------- ---------- ---------- ---------- ----------
-505              170.10     -2.00      0          FUNCTIONAL 63.60 0          0
-5755             168.70     0          0          FUNCTIONAL 10000.00 0          0
-813              169.80     0          0          FUNCTIONAL 63.60 0          0
-809              169.40     0          0          FUNCTIONAL 63.60 0          0
-248              167.52     0          0          FUNCTIONAL 19.60 0          0
-252              169.80     0          0          FUNCTIONAL 19.60 0          0
+505              170.10     10.00      0          FUNCTIONAL 63.60 0          0
+5755             168.70     10.00      0          FUNCTIONAL 10000.00 0          0
+813              169.80     10.00      0          FUNCTIONAL 63.60 0          0
+809              169.40     10.00      0          FUNCTIONAL 63.60 0          0
+248              167.52     10.00      0          FUNCTIONAL 19.60 0          0
+252              169.80     10.00      0          FUNCTIONAL 19.60 0          0
 
 [CONDUITS]
 ;;Name           From             To               Length     Roughness  InOffset   OutOffset  InitFlow   MaxFlow
@@ -65,7 +81,7 @@ HEAD_TOLERANCE       0.000
 532              5755             252              300.00     0.0130     155.30     154.01     0          0
 810              813              809              173.00     0.0130     154.00     153.34     0          0
 808              809              248              100.00     0.0130     153.34     153.11     0          0
-249              ?                ?                150.00     0.0130     153.11     151.57     0          0
+249              248              5955             150.00     0.0130     153.11     151.57     0          0
 
 [ORIFICES]
 ;;Name           From             To               Type       Offset     Qcoeff     Gated    CloseTime
@@ -81,9 +97,9 @@ WEIR1            505              246              TRANSVERSE 160.90     1.840  
 ;;Link           Shape        Geom1      Geom2      Geom3      Geom4      Barrels
 ;;-------------- ------------ ---------- ---------- ---------- ---------- ----------
 510              CIRCULAR     4.00       0          0          0          1
-620              TRAPEZOIDAL  6.00       9.50       0          0          1
+620              TRAPEZOIDAL  6.00       9.50       1          1          1
 630              CIRCULAR     2.50       0          0          0          1
-640              TRAPEZOIDAL  3.50       6.50       0          0          1
+640              TRAPEZOIDAL  3.50       6.50       1          1          1
 650              CIRCULAR     2.50       0          0          0          1
 520              CIRCULAR     2.00       0          0          0          1
 530              CIRCULAR     2.00       0          0          0          1
@@ -96,8 +112,8 @@ WEIR1            505              246              TRANSVERSE 160.90     1.840  
 810              CIRCULAR     5.00       0          0          0          1
 808              CIRCULAR     5.00       0          0          0          1
 249              CIRCULAR     3.00       0          0          0          1
-dummy            RECT_CLOSED  5.00       0          0          0          
-WEIR1            RECT_OPEN    0          1.50       0          0          
+dummy            RECT_CLOSED  5.00       5.00       0          0
+WEIR1            RECT_OPEN    1.00       1.50       0          0
 
 [LOSSES]
 ;;Link           Inlet      Outlet     Average    Flap Gate

@@ -20,6 +20,18 @@ INERTIAL_DAMPING     PARTIAL
 NORMAL_FLOW_LIMITED  BOTH
 MAX_TRIALS           50
 HEAD_TOLERANCE       0.00033
+START_DATE           01/01/2001
+START_TIME           00:00:00
+REPORT_START_DATE    01/01/2001
+REPORT_START_TIME    00:00:00
+END_DATE             01/02/2001
+END_TIME             00:00:00
+SWEEP_START          01/01
+SWEEP_END            12/31
+DRY_DAYS             0
+REPORT_STEP          00:15:00
+WET_STEP             00:05:00
+DRY_STEP             01:00:00
 
 [JUNCTIONS]
 ;;Name           Elev       MaxDepth   InitDepth  SurDepth   Aponded
@@ -29,17 +41,21 @@ HEAD_TOLERANCE       0.00033
 131+80           900.00     0          0          0          0
 79+60            900.00     0          0          0          0
 26+50            900.00     0          0          0          0
-Buffalo          900.00     0          0          0          0
-237+23           902.94     0          0          0          0
-184+54           901.71     0          0          0          0
-131+80           900.00     0          0          0          0
-79+60            900.00     0          0          0          0
-26+50            900.00     0          0          0          0
+237+23_2         902.94     0          0          0          0
+184+54_2         901.71     0          0          0          0
+131+80_2         900.00     0          0          0          0
+79+60_2          900.00     0          0          0          0
+26+50_2          900.00     0          0          0          0
 0+00             900.00     0          0          0          0
 186+54           902.00     0          0          0          0
-186+54           902.00     0          0          0          0
+186+54_2         902.00     0          0          0          0
 211+03           902.04     0          0          0          0
-211+03           902.00     0          0          0          0
+211+03_2         902.00     0          0          0          0
+
+[OUTFALLS]
+;;Name           Elev       Type       Stage      Gated
+;;-------------- ---------- ---------- ---------- -----
+Buffalo          900.00     FREE                  NO
 
 [CONDUITS]
 ;;Name           From             To               Length     Roughness  InOffset   OutOffset  InitFlow   MaxFlow
@@ -63,11 +79,11 @@ Sta211+03        211+03           211+03           36.00      0.0240     894.43 
 [XSECTIONS]
 ;;Link           Shape        Geom1      Geom2      Geom3      Geom4      Barrels
 ;;-------------- ------------ ---------- ---------- ---------- ---------- ----------
-M20DitchA        IRREGULAR    6.50       0          0          0          1
-M19Ditch         IRREGULAR    8.03       0          0          0          1
-K24Ditch         IRREGULAR    8.60       0          0          0          1
-K23Ditch         IRREGULAR    6.90       0          0          0          1
-K22Ditch         IRREGULAR    9.79       0          0          0          1
+M20DitchA        TRAPEZOIDAL  6.50       10.00      2          2          1
+M19Ditch         TRAPEZOIDAL  8.03       10.00      2          2          1
+K24Ditch         TRAPEZOIDAL  8.60       10.00      2          2          1
+K23Ditch         TRAPEZOIDAL  6.90       10.00      2          2          1
+K22Ditch         TRAPEZOIDAL  9.79       10.00      2          2          1
 Sta237+23        CIRCULAR     3.00       0          0          0          1
 Sta184+54        CIRCULAR     3.00       0          0          0          1
 Sta131+80        CIRCULAR     3.50       0          0          0          1
@@ -75,8 +91,8 @@ Sta79+60         CIRCULAR     4.00       0          0          0          1
 Sta26+50         HORSESHOE    7.00       0          0          0          1
 Sta0+00          CIRCULAR     4.00       0          0          0          1
 Sta186+54        CIRCULAR     3.00       0          0          0          1
-M20DitchC        IRREGULAR    7.20       0          0          0          1
-M20DitchB        IRREGULAR    7.20       0          0          0          1
+M20DitchC        TRAPEZOIDAL  7.20       10.00      2          2          1
+M20DitchB        TRAPEZOIDAL  7.20       10.00      2          2          1
 Sta211+03        CIRCULAR     2.50       0          0          0          1
 
 [LOSSES]
@@ -107,16 +123,16 @@ Sta211+03        0          0          0          NO
 79+60            37.39              112.80            
 26+50            37.39              74.31             
 Buffalo          36.07              8.71              
-237+23           38.17              226.49            
-184+54           37.68              186.48            
-131+80           37.66              142.08            
-79+60            36.88              99.68             
-26+50            36.35              62.21             
+237+23_2         38.17              226.49            
+184+54_2         37.68              186.48            
+131+80_2         37.66              142.08            
+79+60_2          36.88              99.68             
+26+50_2          36.35              62.21             
 0+00             35.56              33.76             
 186+54           29.27              211.00            
-186+54           30.81              202.81            
+186+54_2         30.81              202.81            
 211+03           30.33              218.36            
-211+03           30.99              224.51            
+211+03_2         30.99              224.51            
 
 [MAP]
 DIMENSIONS 29.27 8.71 38.17 242.58

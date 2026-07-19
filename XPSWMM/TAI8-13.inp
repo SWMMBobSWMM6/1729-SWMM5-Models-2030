@@ -14,11 +14,23 @@ LINK_OFFSETS         DEPTH
 MIN_SLOPE            0.0
 ALLOW_PONDING        NO
 SKIP_STEADY_STATE    NO
-ROUTING_STEP         00:00:60
+ROUTING_STEP         00:01:00
 VARIABLE_STEP        0.75
 INERTIAL_DAMPING     PARTIAL
 NORMAL_FLOW_LIMITED  BOTH
 MAX_TRIALS           100
+START_DATE           01/01/2001
+START_TIME           00:00:00
+REPORT_START_DATE    01/01/2001
+REPORT_START_TIME    00:00:00
+END_DATE             01/02/2001
+END_TIME             00:00:00
+SWEEP_START          01/01
+SWEEP_END            12/31
+DRY_DAYS             0
+REPORT_STEP          00:15:00
+WET_STEP             00:05:00
+DRY_STEP             01:00:00
 
 [JUNCTIONS]
 ;;Name           Elev       MaxDepth   InitDepth  SurDepth   Aponded
@@ -26,20 +38,24 @@ MAX_TRIALS           100
 201              168.90     0          0          0          0
 202              168.50     0          0          0          0
 204              167.50     0          0          0          0
-208              167.52     0          0          0          0
+
+[OUTFALLS]
+;;Name           Elev       Type       Stage      Gated
+;;-------------- ---------- ---------- ---------- -----
+208              167.52     FREE                  NO
 
 [STORAGE]
 ;;Name           Elev       MaxDepth   InitDepth  Shape      Curve/Params
 ;;-------------- ---------- ---------- ---------- ---------- ----------
-flood            167.52     0          0          FUNCTIONAL 0 0          0
+flood            167.52     10.00      0          FUNCTIONAL 1000.00 0          0
 
 [CONDUITS]
 ;;Name           From             To               Length     Roughness  InOffset   OutOffset  InitFlow   MaxFlow
 ;;-------------- ---------------- ---------------- ---------- ---------- ---------- ---------- ---------- ----------
-203              ?                ?                600.00     0.0130     160.90     157.30     0          0
-205              ?                ?                76.00      0.0130     157.30     153.68     0          0
-207              ?                ?                47.60      0.0140     153.34     153.11     0          0
-209              ?                ?                150.00     0.0130     153.11     151.57     0          0
+203              201              202              600.00     0.0130     160.90     157.30     0          0
+205              202              204              76.00      0.0130     157.30     153.68     0          0
+207              204              flood            47.60      0.0140     153.34     153.11     0          0
+209              flood            208              150.00     0.0130     153.11     151.57     0          0
 
 [XSECTIONS]
 ;;Link           Shape        Geom1      Geom2      Geom3      Geom4      Barrels

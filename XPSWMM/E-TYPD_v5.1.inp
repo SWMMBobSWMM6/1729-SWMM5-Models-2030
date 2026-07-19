@@ -20,6 +20,18 @@ INERTIAL_DAMPING     PARTIAL
 NORMAL_FLOW_LIMITED  BOTH
 MAX_TRIALS           50
 HEAD_TOLERANCE       0.0033
+START_DATE           01/01/2001
+START_TIME           00:00:00
+REPORT_START_DATE    01/01/2001
+REPORT_START_TIME    00:00:00
+END_DATE             01/02/2001
+END_TIME             00:00:00
+SWEEP_START          01/01
+SWEEP_END            12/31
+DRY_DAYS             0
+REPORT_STEP          00:15:00
+WET_STEP             00:05:00
+DRY_STEP             01:00:00
 
 [JUNCTIONS]
 ;;Name           Elev       MaxDepth   InitDepth  SurDepth   Aponded
@@ -40,7 +52,6 @@ IWTP001N         698.00     0          0          0          0
 IWTPOO3N         697.00     0          0          0          0
 IWTP004N         702.00     0          0          0          0
 I009006N         694.00     0          0          0          0
-I009008N         696.00     0          0          0          0
 I009009N         697.00     0          0          0          0
 I010011N         701.00     0          0          0          0
 T010005N         700.00     0          0          0          0
@@ -207,46 +218,52 @@ T002010CN        699.00     0          0          0          0
 T002010DN        699.00     0          0          0          0
 T002010EN        699.00     0          0          0          0
 T002010FN        699.00     0          0          0          0
+MH008#2          682.29     0          0          0          0
+
+[OUTFALLS]
+;;Name           Elev       Type       Stage      Gated
+;;-------------- ---------- ---------- ---------- -----
+I009008N         696.00     FREE                  NO
 
 [STORAGE]
 ;;Name           Elev       MaxDepth   InitDepth  Shape      Curve/Params
 ;;-------------- ---------- ---------- ---------- ---------- ----------
-CSO002           699.00     0          0          FUNCTIONAL 13.00 0          0
-CSO021           705.19     0          0          FUNCTIONAL 13.00 0          0
-CSO003N          710.00     0          0          FUNCTIONAL 32.00 0          0
-CSO009           692.79     -2.79      0          FUNCTIONAL 13.00 0          0
-CSO010           696.00     0          0          FUNCTIONAL 63.00 0          0
-CSO014           701.00     -1.00      0          FUNCTIONAL 13.00 0          0
-I014019N         698.00     0          0          FUNCTIONAL 13.00 0          0
-CSO018           713.12     -0.12      0          FUNCTIONAL 13.00 0          0
-CSO020           730.00     0          0          FUNCTIONAL 13.00 0          0
-I009220N         695.00     0          0          FUNCTIONAL 13.00 0          0
-I009210N         717.00     0          0          FUNCTIONAL 13.00 0          0
-CSO012           715.09     -0.09      0          FUNCTIONAL 13.00 0          0
-CSO012A          714.65     -0.65      0          FUNCTIONAL 30.00 0          0
-CSO12B           721.00     0          0          FUNCTIONAL 60.00 0          0
-I12B093N         722.00     0          0          FUNCTIONAL 13.00 0          0
-I12B097N         721.00     0          0          FUNCTIONAL 13.00 0          0
-CSO013           725.00     0          0          FUNCTIONAL 25.00 0          0
-CSO011           697.00     0          0          FUNCTIONAL 16.00 0          0
-CSO019           710.69     -0.69      0          FUNCTIONAL 13.00 0          0
-CSO015N          699.00     0          0          FUNCTIONAL 13.00 0          0
-CSO006           716.00     0          0          FUNCTIONAL 13.00 0          0
-CSO008           719.00     0          0          FUNCTIONAL 13.00 0          0
-CSO007           714.04     -0.04      0          FUNCTIONAL 50.00 0          0
-CSO005           714.06     -0.06      0          FUNCTIONAL 13.00 0          0
-CSO003           710.31     -0.31      0          FUNCTIONAL 42.00 0          0
-CSO004           711.33     -0.33      0          FUNCTIONAL 26.00 0          0
-CSO015           699.31     -0.31      0          FUNCTIONAL 13.00 0          0
-CSO016           722.82     -0.82      0          FUNCTIONAL 26.00 0          0
-CSO004N          711.00     0          0          FUNCTIONAL 26.00 0          0
-CSO014N          700.00     0          0          FUNCTIONAL 13.00 0          0
-CSO016N          722.00     0          0          FUNCTIONAL 13.00 0          0
-CSO018N          713.00     0          0          FUNCTIONAL 13.00 0          0
-03-GWTR          724.00     0          0          FUNCTIONAL 0 0          0
-11-1GWTR         730.00     0          0          FUNCTIONAL 0 0          0
-11-2GWTR         750.00     0          0          FUNCTIONAL 0 0          0
-19-GWTRN         720.00     0          0          FUNCTIONAL 0 0          0
+CSO002           699.00     10.00      0          FUNCTIONAL 13.00 0          0
+CSO021           705.19     10.00      0          FUNCTIONAL 13.00 0          0
+CSO003N          710.00     10.00      0          FUNCTIONAL 32.00 0          0
+CSO009           692.79     10.00      0          FUNCTIONAL 13.00 0          0
+CSO010           696.00     10.00      0          FUNCTIONAL 63.00 0          0
+CSO014           701.00     10.00      0          FUNCTIONAL 13.00 0          0
+I014019N         698.00     10.00      0          FUNCTIONAL 13.00 0          0
+CSO018           713.12     10.00      0          FUNCTIONAL 13.00 0          0
+CSO020           730.00     10.00      0          FUNCTIONAL 13.00 0          0
+I009220N         695.00     10.00      0          FUNCTIONAL 13.00 0          0
+I009210N         717.00     10.00      0          FUNCTIONAL 13.00 0          0
+CSO012           715.09     10.00      0          FUNCTIONAL 13.00 0          0
+CSO012A          714.65     10.00      0          FUNCTIONAL 30.00 0          0
+CSO12B           721.00     10.00      0          FUNCTIONAL 60.00 0          0
+I12B093N         722.00     10.00      0          FUNCTIONAL 13.00 0          0
+I12B097N         721.00     10.00      0          FUNCTIONAL 13.00 0          0
+CSO013           725.00     10.00      0          FUNCTIONAL 25.00 0          0
+CSO011           697.00     10.00      0          FUNCTIONAL 16.00 0          0
+CSO019           710.69     10.00      0          FUNCTIONAL 13.00 0          0
+CSO015N          699.00     10.00      0          FUNCTIONAL 13.00 0          0
+CSO006           716.00     10.00      0          FUNCTIONAL 13.00 0          0
+CSO008           719.00     10.00      0          FUNCTIONAL 13.00 0          0
+CSO007           714.04     10.00      0          FUNCTIONAL 50.00 0          0
+CSO005           714.06     10.00      0          FUNCTIONAL 13.00 0          0
+CSO003           710.31     10.00      0          FUNCTIONAL 42.00 0          0
+CSO004           711.33     10.00      0          FUNCTIONAL 26.00 0          0
+CSO015           699.31     10.00      0          FUNCTIONAL 13.00 0          0
+CSO016           722.82     10.00      0          FUNCTIONAL 26.00 0          0
+CSO004N          711.00     10.00      0          FUNCTIONAL 26.00 0          0
+CSO014N          700.00     10.00      0          FUNCTIONAL 13.00 0          0
+CSO016N          722.00     10.00      0          FUNCTIONAL 13.00 0          0
+CSO018N          713.00     10.00      0          FUNCTIONAL 13.00 0          0
+03-GWTR          724.00     10.00      0          FUNCTIONAL 1000.00 0          0
+11-1GWTR         730.00     10.00      0          FUNCTIONAL 1000.00 0          0
+11-2GWTR         750.00     10.00      0          FUNCTIONAL 1000.00 0          0
+19-GWTRN         720.00     10.00      0          FUNCTIONAL 1000.00 0          0
 
 [CONDUITS]
 ;;Name           From             To               Length     Roughness  InOffset   OutOffset  InitFlow   MaxFlow
@@ -479,16 +496,17 @@ CSO0130FW        CSO013           CSO013OFN        V-NOTCH    716.86     1.840  
 [PUMPS]
 ;;Name           From             To               PumpCurve  Status   Startup    Shutoff
 ;;-------------- ---------------- ---------------- ---------- -------- ---------- ----------
-CSO002P          CSO002           409              PC_CSO002P ON       0          0         
-PUMP             WWTP             WWTPN            PC_PUMP    ON       0          0         
+CSO002P          CSO002           409              PC_CSO002P ON       1.00       0         
+PUMP             WWTP             WWTPN            PC_PUMP    ON       1.00       0         
 
 [CURVES]
 ;;Name           Type       X-Value    Y-Value
 ;;-------------- ---------- ---------- ----------
-PC_CSO002P       Pump2      0          0
-;
-PC_PUMP          Pump2      0          0
-;
+;; Synthesized generic pump curves — replace with actual pump data
+PC_CSO002P       Pump1      0          5
+PC_CSO002P                  10         10
+PC_PUMP          Pump1      0          5
+PC_PUMP                     10         10
 
 [XSECTIONS]
 ;;Link           Shape        Geom1      Geom2      Geom3      Geom4      Barrels
@@ -680,35 +698,35 @@ T002010CC        CIRCULAR     2.75       0          0          0          1
 T002010DC        CIRCULAR     2.75       0          0          0          1
 T002010EC        CIRCULAR     2.75       0          0          0          1
 T002010FC        CIRCULAR     2.75       0          0          0          1
-ORIFICE3         RECT_CLOSED  1.50       0          0          0          
-CSO015ORF        RECT_CLOSED  1.00       0          0          0          
-CSO019O          RECT_CLOSED  0.83       0          0          0          
-CSO004ORF        RECT_CLOSED  1.00       0          0          0          
-CSO009ORF        RECT_CLOSED  2.00       0          0          0          
-CSO011ORF        RECT_CLOSED  0.83       0          0          0          
-CSO014ORF        RECT_CLOSED  2.50       0          0          0          
-CSO016ORF        RECT_CLOSED  1.25       0          0          0          
-meter            RECT_CLOSED  1.50       0          0          0          
-CSO020ORF        RECT_CLOSED  0.72       0          0          0          
-CSO004W          RECT_OPEN    0          7.50       0          0          
-CSO009OFW        RECT_OPEN    0          10.00      0          0          
-CSO011OFW        RECT_OPEN    0          4.00       0          0          
-CSO012OFW        RECT_OPEN    0          4.00       0          0          
-CSO012AOFW       RECT_OPEN    0          4.00       0          0          
-CSO012BOFW       RECT_OPEN    0          4.00       0          0          
-CSO016OFW        RECT_OPEN    0          4.00       0          0          
-CSO018OFW        RECT_OPEN    0          10.00      0          0          
-CSO020OFW        RECT_OPEN    0          2.50       0          0          
-CSO019OFW        RECT_OPEN    0          7.00       0          0          
-CSO002OFW        RECT_OPEN    0          2.00       0          0          
-h                RECT_OPEN    0          3.50       0          0          
-CSO015OFW        RECT_OPEN    0          3.00       0          0          
-CSO006OFW        RECT_OPEN    0          4.00       0          0          
-T003015C         RECT_OPEN    0          1.00       0          0          
-T011030C         RECT_OPEN    0          5.00       0          0          
-T011006C         RECT_OPEN    0          5.00       0          0          
-CSO0130FW        RECT_OPEN    0          5.50       0          0          
-19-GWTRW         RECT_OPEN    0          1.00       0          0          
+ORIFICE3         RECT_CLOSED  1.50       1.50       0          0
+CSO015ORF        RECT_CLOSED  1.00       1.00       0          0
+CSO019O          RECT_CLOSED  0.83       0.83       0          0
+CSO004ORF        RECT_CLOSED  1.00       1.00       0          0
+CSO009ORF        RECT_CLOSED  2.00       2.00       0          0
+CSO011ORF        RECT_CLOSED  0.83       0.83       0          0
+CSO014ORF        RECT_CLOSED  2.50       2.50       0          0
+CSO016ORF        RECT_CLOSED  1.25       1.25       0          0
+meter            RECT_CLOSED  1.50       1.50       0          0
+CSO020ORF        RECT_CLOSED  0.72       0.72       0          0
+CSO004W          RECT_OPEN    1.00       7.50       0          0
+CSO009OFW        RECT_OPEN    1.00       10.00      0          0
+CSO011OFW        RECT_OPEN    1.00       4.00       0          0
+CSO012OFW        RECT_OPEN    1.00       4.00       0          0
+CSO012AOFW       RECT_OPEN    1.00       4.00       0          0
+CSO012BOFW       RECT_OPEN    1.00       4.00       0          0
+CSO016OFW        RECT_OPEN    1.00       4.00       0          0
+CSO018OFW        RECT_OPEN    1.00       10.00      0          0
+CSO020OFW        RECT_OPEN    1.00       2.50       0          0
+CSO019OFW        RECT_OPEN    1.00       7.00       0          0
+CSO002OFW        RECT_OPEN    1.00       2.00       0          0
+h                RECT_OPEN    1.00       3.50       0          0
+CSO015OFW        RECT_OPEN    1.00       3.00       0          0
+CSO006OFW        RECT_OPEN    1.00       4.00       0          0
+T003015C         RECT_OPEN    1.00       1.00       0          0
+T011030C         RECT_OPEN    1.00       5.00       0          0
+T011006C         RECT_OPEN    1.00       5.00       0          0
+CSO0130FW        TRIANGULAR   1.00       5.50       0          0
+19-GWTRW         RECT_OPEN    1.00       1.00       0          0
 
 [LOSSES]
 ;;Link           Inlet      Outlet     Average    Flap Gate

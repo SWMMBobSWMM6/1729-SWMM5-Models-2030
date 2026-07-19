@@ -2,39 +2,381 @@
   EPA STORM WATER MANAGEMENT MODEL - VERSION 5.2 (Build 5.2.4)
   ------------------------------------------------------------
 
+  Converted from XPSWMM .xp file 
+  WARNING 04: minimum elevation drop used for Conduit 441
+  WARNING 04: minimum elevation drop used for Conduit 440
+  WARNING 04: minimum elevation drop used for Conduit 442
+  WARNING 04: minimum elevation drop used for Conduit 2441
+  WARNING 04: minimum elevation drop used for Conduit 303
+  WARNING 04: minimum elevation drop used for Conduit 2302
+  WARNING 04: minimum elevation drop used for Conduit 3302
+  WARNING 04: minimum elevation drop used for Conduit 302
+  WARNING 04: minimum elevation drop used for Conduit 445
+  WARNING 04: minimum elevation drop used for Conduit 2445
+  WARNING 04: minimum elevation drop used for Conduit 2444
+  WARNING 04: minimum elevation drop used for Conduit 2443
+  WARNING 04: minimum elevation drop used for Conduit 3443
+  WARNING 04: minimum elevation drop used for Conduit 443
+  WARNING 04: minimum elevation drop used for Conduit 444
+  WARNING 04: minimum elevation drop used for Conduit 0422
+  WARNING 04: minimum elevation drop used for Conduit 4302
+  WARNING 04: minimum elevation drop used for Conduit out
   
-  ERROR 211: invalid number -13.83 at line 86 of [PUMP] section:
-  8441             S441             J441             PC_8441    ON       -13.83     -14.33    
-
+  ****************
+  Analysis Options
+  ****************
+  Flow Units ............... CFS
+  Process Models:
+    Rainfall/Runoff ........ NO
+    RDII ................... NO
+    Snowmelt ............... NO
+    Groundwater ............ NO
+    Flow Routing ........... YES
+    Ponding Allowed ........ NO
+    Water Quality .......... NO
+  Flow Routing Method ...... DYNWAVE
+  Surcharge Method ......... EXTRAN
+  Starting Date ............ 01/01/2001 00:00:00
+  Ending Date .............. 01/02/2001 00:00:00
+  Antecedent Dry Days ...... 0.0
+  Report Time Step ......... 00:15:00
+  Routing Time Step ........ 4.00 sec
+  Variable Time Step ....... YES
+  Maximum Trials ........... 50
+  Number of Threads ........ 1
+  Head Tolerance ........... 0.000100 ft
   
-  ERROR 211: invalid number -3.17 at line 87 of [PUMP] section:
-  8440             S440             J440             PC_8440    ON       -3.17      -3.67     
-
   
-  ERROR 211: invalid number -6.52 at line 88 of [PUMP] section:
-  8442             S442             J442             PC_8442    ON       -6.52      -7.93     
-
+  **************************        Volume        Volume
+  Flow Routing Continuity        acre-feet      10^6 gal
+  **************************     ---------     ---------
+  Dry Weather Inflow .......         0.000         0.000
+  Wet Weather Inflow .......         0.000         0.000
+  Groundwater Inflow .......         0.000         0.000
+  RDII Inflow ..............         0.000         0.000
+  External Inflow ..........         0.317         0.103
+  External Outflow .........         0.000         0.000
+  Flooding Loss ............         0.023         0.008
+  Evaporation Loss .........         0.000         0.000
+  Exfiltration Loss ........         0.000         0.000
+  Initial Stored Volume ....         0.000         0.000
+  Final Stored Volume ......         0.256         0.084
+  Continuity Error (%) .....        11.842
   
-  ERROR 211: invalid number -2.33 at line 89 of [PUMP] section:
-  8303             S303             J303             PC_8303    ON       -2.33      -4.33     
-
   
-  ERROR 211: invalid number -1.50 at line 90 of [PUMP] section:
-  8302             S302             J302             PC_8302    ON       -1.50      -9.50     
-
+  *************************
+  Highest Continuity Errors
+  *************************
+  Node J445 (100.00%)
+  Node J440 (99.10%)
+  Node J441 (99.06%)
+  Node J444 (90.95%)
+  Node J302 (86.58%)
   
-  ERROR 211: invalid number -4.55 at line 91 of [PUMP] section:
-  8445             S445             J445             PC_8445    ON       -4.55      -5.63     
-
   
-  ERROR 211: invalid number -4.35 at line 92 of [PUMP] section:
-  8443             S443             J443             PC_8443    ON       0.95       -4.35     
-
+  ***************************
+  Time-Step Critical Elements
+  ***************************
+  Link 2445 (7.01%)
   
-  ERROR 211: invalid number -3.04 at line 93 of [PUMP] section:
-  8444             S444             J444             PC_8444    ON       -3.04      -4.71     
+  
+  ********************************
+  Highest Flow Instability Indexes
+  ********************************
+  All links are stable.
+  
+  
+  *********************************
+  Most Frequent Nonconverging Nodes
+  *********************************
+  Node 80 (0.06%)
+  Node J3443 (0.01%)
+  Node J4302 (0.01%)
+  Node J440 (0.01%)
+  Node J2444 (0.00%)
+  
+  
+  *************************
+  Routing Time Step Summary
+  *************************
+  Minimum Time Step           :     2.32 sec
+  Average Time Step           :     3.99 sec
+  Maximum Time Step           :     4.00 sec
+  % of Time in Steady State   :     0.00
+  Average Iterations per Step :     2.03
+  % of Steps Not Converging   :     0.06
+  Time Step Frequencies       :
+      4.000 -  2.639 sec      :   100.00 %
+      2.639 -  1.741 sec      :     0.00 %
+      1.741 -  1.149 sec      :     0.00 %
+      1.149 -  0.758 sec      :     0.00 %
+      0.758 -  0.500 sec      :     0.00 %
+  
+  
+  ******************
+  Node Depth Summary
+  ******************
+  
+  ---------------------------------------------------------------------------------
+                                 Average  Maximum  Maximum  Time of Max    Reported
+                                   Depth    Depth      HGL   Occurrence   Max Depth
+  Node                 Type         Feet     Feet     Feet  days hr:min        Feet
+  ---------------------------------------------------------------------------------
+  J422                 JUNCTION     0.00     0.00   150.00     0  00:00        0.00
+  J441                 JUNCTION     2.35     5.50   155.50     0  23:35        5.50
+  J2441                JUNCTION     4.01     5.50   155.50     0  23:34        5.50
+  J440                 JUNCTION     2.42     5.50   155.50     0  23:35        5.50
+  J442                 JUNCTION     3.87     5.33   155.33     0  19:57        5.33
+  J303                 JUNCTION     3.33     5.33   155.33     0  11:08        5.33
+  J2302                JUNCTION     4.34     5.50   155.50     1  00:00        5.50
+  J3302                JUNCTION     5.02     5.51   155.51     1  00:00        5.51
+  J302                 JUNCTION     3.74     5.50   155.50     0  23:59        5.50
+  J445                 JUNCTION     4.24     5.51   155.51     1  00:00        5.51
+  J2444                JUNCTION     4.74     5.51   155.51     1  00:00        5.51
+  J2443                JUNCTION     4.23     5.51   155.51     1  00:00        5.51
+  J3443                JUNCTION     4.16     5.51   155.51     1  00:00        5.51
+  J443                 JUNCTION     3.75     5.50   155.50     0  23:32        5.50
+  J444                 JUNCTION     4.42     5.51   155.51     1  00:00        5.51
+  J4302                JUNCTION     5.39     5.54   155.54     1  00:00        5.54
+  M-27                 JUNCTION     5.44     5.55   155.55     1  00:00        5.55
+  80                   OUTFALL      0.00     0.00   150.00     0  00:00        0.00
+  S441                 STORAGE      0.00     0.00     5.17     0  00:00        0.00
+  S440                 STORAGE      0.00     0.00    10.00     0  00:00        0.00
+  S442                 STORAGE      0.00     0.00     6.40     0  00:00        0.00
+  J4443                STORAGE      4.70     5.51   155.51     1  00:00        5.51
+  S303                 STORAGE      0.00     0.00    10.00     0  00:00        0.00
+  S302                 STORAGE      0.00     0.00    10.00     0  00:00        0.00
+  S445                 STORAGE      0.00     0.00     8.95     0  00:00        0.00
+  S443                 STORAGE      0.00     0.00    10.00     0  00:00        0.00
+  S444                 STORAGE      0.00     0.00     6.80     0  00:00        0.00
+  S422                 STORAGE      2.49     5.51   155.51     1  00:00        5.51
+  
+  
+  *******************
+  Node Inflow Summary
+  *******************
+  
+  -------------------------------------------------------------------------------------------------
+                                  Maximum  Maximum                  Lateral       Total        Flow
+                                  Lateral    Total  Time of Max      Inflow      Inflow     Balance
+                                   Inflow   Inflow   Occurrence      Volume      Volume       Error
+  Node                 Type           CFS      CFS  days hr:min    10^6 gal    10^6 gal     Percent
+  -------------------------------------------------------------------------------------------------
+  J422                 JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  J441                 JUNCTION      0.00     0.02     0  20:56           0     0.00203   10536.107
+  J2441                JUNCTION      0.00     0.05     0  20:42           0     0.00826     111.203
+  J440                 JUNCTION      0.00     0.01     0  20:37           0     0.00172   10963.200
+  J442                 JUNCTION      0.00     0.03     1  00:00           0     0.00315      28.987
+  J303                 JUNCTION      0.00     0.02     1  00:00           0     0.00565      19.126
+  J2302                JUNCTION      0.00     0.04     0  08:04           0      0.0102      60.398
+  J3302                JUNCTION      0.00     0.08     0  05:51           0      0.0402      12.991
+  J302                 JUNCTION      0.00     0.02     0  08:00           0    0.000688     645.376
+  J445                 JUNCTION      0.00     0.02     0  06:27           0     0.00198    1975.286 gal
+  J2444                JUNCTION      0.00     0.07     0  04:45           0      0.0256      20.835
+  J2443                JUNCTION      0.00     0.05     0  18:57           0      0.0187      21.199
+  J3443                JUNCTION      0.00     0.05     0  18:54           0      0.0156      17.561
+  J443                 JUNCTION      0.00     0.04     1  00:00           0    0.000934     176.694
+  J444                 JUNCTION      0.00     0.03     0  04:42           0    0.000675    1005.379
+  J4302                JUNCTION      0.02     0.16     0  01:03      0.0129       0.103      14.349
+  M-27                 JUNCTION      0.14     0.14     0  00:00      0.0905      0.0905       0.692
+  80                   OUTFALL       0.00     0.00     0  00:00           0           0       0.000 gal
+  S441                 STORAGE       0.00     0.00     0  00:00           0           0       0.000 gal
+  S440                 STORAGE       0.00     0.00     0  00:00           0           0       0.000 gal
+  S442                 STORAGE       0.00     0.00     0  00:00           0           0       0.000 gal
+  J4443                STORAGE       0.00     0.15     0  18:55           0      0.0628      12.405
+  S303                 STORAGE       0.00     0.00     0  00:00           0           0       0.000 gal
+  S302                 STORAGE       0.00     0.00     0  00:00           0           0       0.000 gal
+  S445                 STORAGE       0.00     0.00     0  00:00           0           0       0.000 gal
+  S443                 STORAGE       0.00     0.00     0  00:00           0           0       0.000 gal
+  S444                 STORAGE       0.00     0.00     0  00:00           0           0       0.000 gal
+  S422                 STORAGE       0.00     0.13     0  18:42           0      0.0413       0.268
+  
+  
+  **********************
+  Node Surcharge Summary
+  **********************
+  
+  Surcharging occurs when water rises above the top of the highest conduit.
+  ---------------------------------------------------------------------
+                                               Max. Height   Min. Depth
+                                   Hours       Above Crown    Below Rim
+  Node                 Type      Surcharged           Feet         Feet
+  ---------------------------------------------------------------------
+  J441                 JUNCTION        0.42          0.000        0.000
+  J2441                JUNCTION        0.42          0.000        0.000
+  J440                 JUNCTION        0.42          0.000        0.000
+  J442                 JUNCTION        4.04          0.000        0.000
+  J303                 JUNCTION       12.87          0.000        0.000
+  J443                 JUNCTION        0.45          0.000        0.000
+  
+  
+  *********************
+  Node Flooding Summary
+  *********************
+  
+  Flooding refers to all water that overflows a node, whether it ponds or not.
+  --------------------------------------------------------------------------
+                                                             Total   Maximum
+                                 Maximum   Time of Max       Flood    Ponded
+                        Hours       Rate    Occurrence      Volume     Depth
+  Node                 Flooded       CFS   days hr:min    10^6 gal      Feet
+  --------------------------------------------------------------------------
+  J441                    0.41      0.00      0  23:35       0.000     0.000
+  J2441                   0.42      0.02      1  00:00       0.000     0.000
+  J440                    0.41      0.00      0  23:35       0.000     0.000
+  J442                    4.04      0.03      1  00:00       0.002     0.000
+  J303                   12.87      0.02      1  00:00       0.005     0.000
+  J443                    0.44      0.04      1  00:00       0.000     0.000
+  
+  
+  **********************
+  Storage Volume Summary
+  **********************
+  
+  ------------------------------------------------------------------------------------------------
+                         Average    Avg   Evap  Exfil     Maximum    Max    Time of Max    Maximum
+                          Volume   Pcnt   Pcnt   Pcnt      Volume   Pcnt     Occurrence    Outflow
+  Storage Unit          1000 ft³   Full   Loss   Loss    1000 ft³   Full    days hr:min        CFS
+  ------------------------------------------------------------------------------------------------
+  S441                     0.000    0.0    0.0    0.0       0.000    0.0       0  00:00       0.00
+  S440                     0.000    0.0    0.0    0.0       0.000    0.0       0  00:00       0.00
+  S442                     0.000    0.0    0.0    0.0       0.000    0.0       0  00:00       0.00
+  J4443                    0.235   47.0    0.0    0.0       0.276   55.1       1  00:00       0.14
+  S303                     0.000    0.0    0.0    0.0       0.000    0.0       0  00:00       0.00
+  S302                     0.000    0.0    0.0    0.0       0.000    0.0       0  00:00       0.00
+  S445                     0.000    0.0    0.0    0.0       0.000    0.0       0  00:00       0.00
+  S443                     0.000    0.0    0.0    0.0       0.000    0.0       0  00:00       0.00
+  S444                     0.000    0.0    0.0    0.0       0.000    0.0       0  00:00       0.00
+  S422                     2.488   24.9    0.0    0.0       5.510   55.1       1  00:00       0.00
+  
+  
+  ***********************
+  Outfall Loading Summary
+  ***********************
+  
+  -----------------------------------------------------------
+                         Flow       Avg       Max       Total
+                         Freq      Flow      Flow      Volume
+  Outfall Node           Pcnt       CFS       CFS    10^6 gal
+  -----------------------------------------------------------
+  80                     0.00      0.00      0.00       0.000
+  -----------------------------------------------------------
+  System                 0.00      0.00      0.00       0.000
+  
+  
+  ********************
+  Link Flow Summary
+  ********************
+  
+  -----------------------------------------------------------------------------
+                                 Maximum  Time of Max   Maximum    Max/    Max/
+                                  |Flow|   Occurrence   |Veloc|    Full    Full
+  Link                 Type          CFS  days hr:min    ft/sec    Flow   Depth
+  -----------------------------------------------------------------------------
+  441                  CONDUIT      0.02     0  20:56      0.16    3.60    1.00
+  440                  CONDUIT      0.01     0  20:37      0.17    2.45    1.00
+  442                  CONDUIT      0.03     1  00:00      0.36   13.42    1.00
+  2441                 CONDUIT      0.05     0  20:42      0.38    6.66    1.00
+  303                  CONDUIT      0.02     1  00:00      0.28   13.19    1.00
+  2302                 CONDUIT      0.03     0  09:04      0.28    3.43    0.76
+  3302                 CONDUIT      0.08     0  05:51      0.49    6.93    0.79
+  302                  CONDUIT      0.02     0  08:00      0.51    0.52    0.75
+  445                  CONDUIT      0.02     0  06:27      0.28    2.17    0.76
+  2445                 CONDUIT      0.06     0  04:43      1.02    0.61    0.76
+  2444                 CONDUIT      0.05     0  19:00      0.32    3.99    0.76
+  2443                 CONDUIT      0.05     0  18:54      0.29    4.62    0.76
+  3443                 CONDUIT      0.05     0  18:44      0.37    1.49    0.61
+  443                  CONDUIT      0.04     1  00:00      0.54    2.55    1.00
+  444                  CONDUIT      0.03     0  04:42      0.58    0.82    0.76
+  0422                 CONDUIT      0.13     0  18:42      1.03    0.07    0.20
+  4302                 CONDUIT      0.10     0  19:22      0.36    2.27    0.40
+  PM-27                CONDUIT      0.14     0  01:03      1.49    0.08    0.44
+  out                  CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  8441                 PUMP         0.00     0  00:00              0.00
+  8440                 PUMP         0.00     0  00:00              0.00
+  8442                 PUMP         0.00     0  00:00              0.00
+  8303                 PUMP         0.00     0  00:00              0.00
+  8302                 PUMP         0.00     0  00:00              0.00
+  8445                 PUMP         0.00     0  00:00              0.00
+  8443                 PUMP         0.00     0  00:00              0.00
+  8444                 PUMP         0.00     0  00:00              0.00
+  8422                 PUMP         0.00     0  00:00              0.00
+  
+  
+  ***************************
+  Flow Classification Summary
+  ***************************
+  
+  -------------------------------------------------------------------------------------
+                      Adjusted    ---------- Fraction of Time in Flow Class ---------- 
+                       /Actual         Up    Down  Sub   Sup   Up    Down  Norm  Inlet 
+  Conduit               Length    Dry  Dry   Dry   Crit  Crit  Crit  Crit  Ltd   Ctrl  
+  -------------------------------------------------------------------------------------
+  441                     1.00   0.29  0.00  0.00  0.35  0.00  0.37  0.00  0.00  0.00
+  440                     1.00   0.29  0.00  0.00  0.37  0.00  0.35  0.00  0.00  0.00
+  442                     1.00   0.14  0.00  0.00  0.66  0.00  0.20  0.00  0.00  0.00
+  2441                    1.00   0.14  0.00  0.00  0.67  0.00  0.19  0.00  0.00  0.00
+  303                     1.00   0.23  0.00  0.00  0.58  0.00  0.19  0.00  0.00  0.00
+  2302                    1.00   0.08  0.00  0.00  0.76  0.00  0.17  0.00  0.00  0.00
+  3302                    1.00   0.01  0.00  0.00  0.90  0.00  0.09  0.00  0.00  0.00
+  302                     1.00   0.23  0.00  0.00  0.67  0.00  0.10  0.00  0.00  0.00
+  445                     1.00   0.13  0.00  0.00  0.76  0.00  0.11  0.00  0.00  0.00
+  2445                    1.00   0.08  0.00  0.00  0.85  0.00  0.07  0.00  0.00  0.00
+  2444                    1.00   0.13  0.00  0.00  0.75  0.00  0.00  0.12  0.00  0.00
+  2443                    1.00   0.24  0.00  0.00  0.75  0.00  0.00  0.02  0.00  0.00
+  3443                    1.00   0.14  0.00  0.00  0.74  0.00  0.12  0.00  0.00  0.00
+  443                     1.00   0.24  0.00  0.00  0.68  0.00  0.09  0.00  0.00  0.00
+  444                     1.00   0.13  0.00  0.00  0.80  0.00  0.07  0.00  0.00  0.00
+  0422                    1.00   0.14  0.00  0.00  0.22  0.00  0.00  0.64  0.00  0.00
+  4302                    1.00   0.01  0.00  0.00  0.85  0.00  0.00  0.14  0.00  0.00
+  PM-27                   1.00   0.01  0.00  0.00  0.97  0.00  0.00  0.03  0.08  0.00
+  out                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  
+  
+  *************************
+  Conduit Surcharge Summary
+  *************************
+  
+  ----------------------------------------------------------------------------
+                                                           Hours        Hours 
+                         --------- Hours Full --------   Above Full   Capacity
+  Conduit                Both Ends  Upstream  Dnstream   Normal Flow   Limited
+  ----------------------------------------------------------------------------
+  441                         0.41      0.41      0.42      7.74         0.01
+  440                         0.41      0.41      0.42      5.41         0.01
+  442                         4.04      4.04      4.04      9.51         0.01
+  2441                        0.42      0.42      0.45     15.91         0.01
+  303                        12.87     12.87     13.03     16.76         0.01
+  2302                        0.01      0.01      0.01     18.89         0.01
+  3302                        0.01      0.01      0.01     22.82         0.01
+  445                         0.01      0.01      0.01      1.87         0.01
+  2444                        0.01      0.01      0.01     17.87         0.01
+  2443                        0.01      0.01      0.01     14.46         0.01
+  3443                        0.01      0.01      0.01      8.39         0.01
+  443                         0.44      0.45      0.45      0.89         0.01
+  4302                        0.01      0.01      0.01     21.07         0.01
+  
+  
+  ***************
+  Pumping Summary
+  ***************
+  
+  ---------------------------------------------------------------------------------------------------------
+                                                  Min       Avg       Max     Total     Power    % Time Off
+                        Percent   Number of      Flow      Flow      Flow    Volume     Usage    Pump Curve
+  Pump                 Utilized   Start-Ups       CFS       CFS       CFS  10^6 gal     Kw-hr    Low   High
+  ---------------------------------------------------------------------------------------------------------
+  8441                     0.00           0      0.00      0.00      0.00     0.000      0.00    0.0    0.0
+  8440                     0.00           0      0.00      0.00      0.00     0.000      0.00    0.0    0.0
+  8442                     0.00           0      0.00      0.00      0.00     0.000      0.00    0.0    0.0
+  8303                     0.00           0      0.00      0.00      0.00     0.000      0.00    0.0    0.0
+  8302                     0.00           0      0.00      0.00      0.00     0.000      0.00    0.0    0.0
+  8445                     0.00           0      0.00      0.00      0.00     0.000      0.00    0.0    0.0
+  8443                     0.00           0      0.00      0.00      0.00     0.000      0.00    0.0    0.0
+  8444                     0.00           0      0.00      0.00      0.00     0.000      0.00    0.0    0.0
+  8422                     0.00           0      0.00      0.00      0.00     0.000      0.00    0.0    0.0
+  
 
-
-  Analysis begun on:  Mon Jul 13 08:03:44 2026
-  Analysis ended on:  Mon Jul 13 08:03:44 2026
+  Analysis begun on:  Sun Jul 19 15:10:59 2026
+  Analysis ended on:  Sun Jul 19 15:10:59 2026
   Total elapsed time: < 1 sec

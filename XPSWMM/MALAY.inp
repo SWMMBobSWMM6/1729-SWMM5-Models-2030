@@ -19,25 +19,41 @@ VARIABLE_STEP        0.75
 INERTIAL_DAMPING     PARTIAL
 NORMAL_FLOW_LIMITED  BOTH
 MAX_TRIALS           100
+START_DATE           01/01/2001
+START_TIME           00:00:00
+REPORT_START_DATE    01/01/2001
+REPORT_START_TIME    00:00:00
+END_DATE             01/02/2001
+END_TIME             00:00:00
+SWEEP_START          01/01
+SWEEP_END            12/31
+DRY_DAYS             0
+REPORT_STEP          00:15:00
+WET_STEP             00:05:00
+DRY_STEP             01:00:00
 
 [JUNCTIONS]
 ;;Name           Elev       MaxDepth   InitDepth  SurDepth   Aponded
 ;;-------------- ---------- ---------- ---------- ---------- ----------
-Node1            2.40       0          1.30       0          0
-Node2            2.40       0          3.00       0          0
-Node3            2.40       0          3.40       0          0
+Node1            2.40       0          0          0          0
+Node2            2.40       0          0          0          0
+
+[OUTFALLS]
+;;Name           Elev       Type       Stage      Gated
+;;-------------- ---------- ---------- ---------- -----
+Node3            2.40       FREE                  NO
 
 [CONDUITS]
 ;;Name           From             To               Length     Roughness  InOffset   OutOffset  InitFlow   MaxFlow
 ;;-------------- ---------------- ---------------- ---------- ---------- ---------- ---------- ---------- ----------
-ReachA           Node1            Node2            270.00     0.0140     -0.40      -1.30      0          0
-ReachB           Node2            Node3            430.00     0.0140     -1.30      -1.73      0          0
+ReachA           Node1            Node2            270.00     0.0140     0          0          0          0
+ReachB           Node2            Node3            430.00     0.0140     0          0          0          0
 
 [XSECTIONS]
 ;;Link           Shape        Geom1      Geom2      Geom3      Geom4      Barrels
 ;;-------------- ------------ ---------- ---------- ---------- ---------- ----------
-ReachA           TRAPEZOIDAL  2.80       5.00       0          0          1
-ReachB           TRAPEZOIDAL  3.70       10.00      0          0          1
+ReachA           TRAPEZOIDAL  2.80       5.00       1          1          1
+ReachB           TRAPEZOIDAL  3.70       10.00      1          1          1
 
 [LOSSES]
 ;;Link           Inlet      Outlet     Average    Flap Gate

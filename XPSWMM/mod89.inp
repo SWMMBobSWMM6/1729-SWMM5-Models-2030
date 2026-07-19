@@ -14,25 +14,41 @@ LINK_OFFSETS         DEPTH
 MIN_SLOPE            0.0
 ALLOW_PONDING        NO
 SKIP_STEADY_STATE    NO
-ROUTING_STEP         00:00:60
+ROUTING_STEP         00:01:00
 VARIABLE_STEP        0.75
 INERTIAL_DAMPING     PARTIAL
 NORMAL_FLOW_LIMITED  BOTH
+START_DATE           01/01/2001
+START_TIME           00:00:00
+REPORT_START_DATE    01/01/2001
+REPORT_START_TIME    00:00:00
+END_DATE             01/02/2001
+END_TIME             00:00:00
+SWEEP_START          01/01
+SWEEP_END            12/31
+DRY_DAYS             0
+REPORT_STEP          00:15:00
+WET_STEP             00:05:00
+DRY_STEP             01:00:00
 
 [JUNCTIONS]
 ;;Name           Elev       MaxDepth   InitDepth  SurDepth   Aponded
 ;;-------------- ---------- ---------- ---------- ---------- ----------
-0                10.00      0          0          0          0
-0                10.00      0          0          0          0
-0                10.00      0          0          0          0
-0                10.00      0          0          0          0
+1                10.00      0          0          0          0
+2                10.00      0          0          0          0
+4                10.00      0          0          0          0
+
+[OUTFALLS]
+;;Name           Elev       Type       Stage      Gated
+;;-------------- ---------- ---------- ---------- -----
+6                10.00      FREE                  NO
 
 [CONDUITS]
 ;;Name           From             To               Length     Roughness  InOffset   OutOffset  InitFlow   MaxFlow
 ;;-------------- ---------------- ---------------- ---------- ---------- ---------- ---------- ---------- ----------
-201              0                0                100.00     0.0120     0          0          0          0
-202              0                0                100.00     0.0120     0          0          0          0
-204              0                0                100.00     0.0120     0          0          0          0
+201              1                2                100.00     0.0120     0          0          0          0
+202              2                4                100.00     0.0120     0          0          0          0
+204              4                6                100.00     0.0120     0          0          0          0
 
 [XSECTIONS]
 ;;Link           Shape        Geom1      Geom2      Geom3      Geom4      Barrels
@@ -51,10 +67,10 @@ NORMAL_FLOW_LIMITED  BOTH
 [COORDINATES]
 ;;Node           X-Coord            Y-Coord
 ;;-------------- ------------------ ------------------
-0                19.22              16.62             
-0                49.50              70.69             
-0                70.04              114.47            
-0                84.26              183.87            
+1                19.22              16.62             
+2                49.50              70.69             
+4                70.04              114.47            
+6                84.26              183.87            
 
 [MAP]
 DIMENSIONS 19.22 16.62 84.26 183.87

@@ -14,12 +14,24 @@ LINK_OFFSETS         DEPTH
 MIN_SLOPE            0.0
 ALLOW_PONDING        NO
 SKIP_STEADY_STATE    NO
-ROUTING_STEP         00:00:60
+ROUTING_STEP         00:01:00
 VARIABLE_STEP        0.75
 INERTIAL_DAMPING     PARTIAL
 NORMAL_FLOW_LIMITED  BOTH
 MAX_TRIALS           50
 HEAD_TOLERANCE       0.0033
+START_DATE           01/01/2001
+START_TIME           00:00:00
+REPORT_START_DATE    01/01/2001
+REPORT_START_TIME    00:00:00
+END_DATE             01/02/2001
+END_TIME             00:00:00
+SWEEP_START          01/01
+SWEEP_END            12/31
+DRY_DAYS             0
+REPORT_STEP          00:15:00
+WET_STEP             00:05:00
+DRY_STEP             01:00:00
 
 [JUNCTIONS]
 ;;Name           Elev       MaxDepth   InitDepth  SurDepth   Aponded
@@ -37,51 +49,81 @@ LBC-A1           1000.00    0          0          0          0
 LBC-A5           1000.00    0          0          0          0
 BoundCond        1000.00    0          0          0          0
 Culv@12          1000.00    0          0          0          0
+CR7-top          976.50     0          0          0          0
+Mann-25B         966.74     0          0          0          0
+MannRdtopA       965.77     0          0          0          0
+Mann5Rdtop       949.70     0          0          0          0
+Mann7RdTop       940.87     0          0          0          0
+op               919.08     0          0          0          0
+pRd              893.60     0          0          0          0
+Mstrmnculv       953.40     0          0          0          0
+Hwy96Rd          901.30     0          0          0          0
+w                897.00     0          0          0          0
+Hxw5C2           906.90     0          0          0          0
+PatLkDrvwy       950.50     0          0          0          0
+GSL1ovflw        0          0          0          0          0
+dovf             967.00     0          0          0          0
+SSC2             971.00     0          0          0          0
+SSRdtop          970.80     0          0          0          0
+Mann-GSL-6       978.60     0          0          0          0
+GSL3ovflw        0          0          0          0          0
+GateC2           903.97     0          0          0          0
+culvert          897.10     0          0          0          0
+llw2             878.00     0          0          0          0
+rTop             908.00     0          0          0          0
+vflw             861.70     0          0          0          0
+RR_Oval          857.00     0          0          0          0
+f                856.50     0          0          0          0
+Ovf              849.23     0          0          0          0
+
+[OUTFALLS]
+;;Name           Elev       Type       Stage      Gated
+;;-------------- ---------- ---------- ---------- -----
+CBC-A3           1000.00    FREE                  NO
 
 [STORAGE]
 ;;Name           Elev       MaxDepth   InitDepth  Shape      Curve/Params
 ;;-------------- ---------- ---------- ---------- ---------- ----------
-UBC-A3           1000.00    0          0          FUNCTIONAL 0 0          0
-UBC-A0           1000.00    0          3.60       FUNCTIONAL 0 0          0
-UBC-A1           1000.00    0          0          FUNCTIONAL 0 0          0
-UBC-A2           1000.00    0          5.40       FUNCTIONAL 0 0          0
-UBC-A5           1000.00    0          0          FUNCTIONAL 0 0          0
-UBC-A6           1000.00    0          2.00       FUNCTIONAL 0 0          0
-UBC-A7           1000.00    0          4.00       FUNCTIONAL 0 0          0
-UBC-A9           1000.00    0          10.00      FUNCTIONAL 0 0          0
-CBC-A6           1000.00    0          1.00       FUNCTIONAL 0 0          0
-CBC-A7           1000.00    0          0.50       FUNCTIONAL 0 0          0
-KPL-A4           1000.00    0          14.20      FUNCTIONAL 0 0          0
-KPL-A5           1000.00    0          10.00      FUNCTIONAL 0 0          0
-KPL-A3           1000.00    0          8.00       FUNCTIONAL 0 0          0
-KPL-A2           1000.00    0          20.60      FUNCTIONAL 0 0          0
-KPL-A1           1000.00    0          5.00       FUNCTIONAL 0 0          0
-CBC-A5           1000.00    0          0.42       FUNCTIONAL 0 0          0
-CBC-A8           1000.00    0          0          FUNCTIONAL 0 0          0
-CBC-A3           1000.00    0          4.00       FUNCTIONAL 0 0          0
-CBC-A1           1000.00    0          9.90       FUNCTIONAL 0 0          0
-CBC-A9a          901.40     0          0          FUNCTIONAL 0 0          0
-SCT-A4           1000.00    0          0          FUNCTIONAL 0 0          0
-SCT-A2           1000.00    0          0          FUNCTIONAL 0 0          0
-SCT-A3           1000.00    0          0          FUNCTIONAL 0 0          0
-SCT-A1a          1000.00    0          0          FUNCTIONAL 0 0          0
-SLB-A1           1000.00    0          20.10      FUNCTIONAL 0 0          0
-SCT-A1b          1000.00    0          0          FUNCTIONAL 0 0          0
-LL-A5            1000.00    0          1.00       FUNCTIONAL 0 0          0
-LL-A4            1000.00    0          8.20       FUNCTIONAL 0 0          0
-LL-A2            1000.00    0          0          FUNCTIONAL 0 0          0
-LL-A3            1000.00    0          6.70       FUNCTIONAL 0 0          0
-CBC-A0           1000.00    0          2.23       FUNCTIONAL 0 0          0
-CBC-A9b          1000.00    0          0          FUNCTIONAL 0 0          0
-GSL-A1           1000.00    0          7.00       FUNCTIONAL 0 0          0
-GSL-A2           1000.00    0          13.00      FUNCTIONAL 0 0          0
-GSL-A5           1000.00    0          25.00      FUNCTIONAL 0 0          0
-GSL-A7           1000.00    0          21.00      FUNCTIONAL 0 0          0
-GSL-A3           1000.00    0          2.00       FUNCTIONAL 0 0          0
-GSL-A4           1050.00    0          10.00      FUNCTIONAL 0 0          0
-GSL-A6           1050.00    0          2.60       FUNCTIONAL 0 0          0
-storage@68       1000.00    0          0          FUNCTIONAL 0 0          0
-CBC-A9c          1000.00    0          1.00       FUNCTIONAL 0 0          0
+UBC-A3           1000.00    10.00      0          FUNCTIONAL 1000.00 0          0
+UBC-A0           1000.00    10.00      3.60       FUNCTIONAL 1000.00 0          0
+UBC-A1           1000.00    10.00      0          FUNCTIONAL 1000.00 0          0
+UBC-A2           1000.00    10.00      5.40       FUNCTIONAL 1000.00 0          0
+UBC-A5           1000.00    10.00      0          FUNCTIONAL 1000.00 0          0
+UBC-A6           1000.00    10.00      2.00       FUNCTIONAL 1000.00 0          0
+UBC-A7           1000.00    10.00      4.00       FUNCTIONAL 1000.00 0          0
+UBC-A9           1000.00    10.00      10.00      FUNCTIONAL 1000.00 0          0
+CBC-A6           1000.00    10.00      1.00       FUNCTIONAL 1000.00 0          0
+CBC-A7           1000.00    10.00      0.50       FUNCTIONAL 1000.00 0          0
+KPL-A4           1000.00    10.00      10.00      FUNCTIONAL 1000.00 0          0
+KPL-A5           1000.00    10.00      10.00      FUNCTIONAL 1000.00 0          0
+KPL-A3           1000.00    10.00      8.00       FUNCTIONAL 1000.00 0          0
+KPL-A2           1000.00    10.00      10.00      FUNCTIONAL 1000.00 0          0
+KPL-A1           1000.00    10.00      5.00       FUNCTIONAL 1000.00 0          0
+CBC-A5           1000.00    10.00      0.42       FUNCTIONAL 1000.00 0          0
+CBC-A8           1000.00    10.00      0          FUNCTIONAL 1000.00 0          0
+CBC-A1           1000.00    10.00      9.90       FUNCTIONAL 1000.00 0          0
+CBC-A9a          901.40     10.00      0          FUNCTIONAL 1000.00 0          0
+SCT-A4           1000.00    10.00      0          FUNCTIONAL 1000.00 0          0
+SCT-A2           1000.00    10.00      0          FUNCTIONAL 1000.00 0          0
+SCT-A3           1000.00    10.00      0          FUNCTIONAL 1000.00 0          0
+SCT-A1a          1000.00    10.00      0          FUNCTIONAL 1000.00 0          0
+SLB-A1           1000.00    10.00      10.00      FUNCTIONAL 1000.00 0          0
+SCT-A1b          1000.00    10.00      0          FUNCTIONAL 1000.00 0          0
+LL-A5            1000.00    10.00      1.00       FUNCTIONAL 1000.00 0          0
+LL-A4            1000.00    10.00      8.20       FUNCTIONAL 1000.00 0          0
+LL-A2            1000.00    10.00      0          FUNCTIONAL 1000.00 0          0
+LL-A3            1000.00    10.00      6.70       FUNCTIONAL 1000.00 0          0
+CBC-A0           1000.00    10.00      2.23       FUNCTIONAL 1000.00 0          0
+CBC-A9b          1000.00    10.00      0          FUNCTIONAL 1000.00 0          0
+GSL-A1           1000.00    10.00      7.00       FUNCTIONAL 1000.00 0          0
+GSL-A2           1000.00    10.00      10.00      FUNCTIONAL 1000.00 0          0
+GSL-A5           1000.00    10.00      10.00      FUNCTIONAL 1000.00 0          0
+GSL-A7           1000.00    10.00      10.00      FUNCTIONAL 1000.00 0          0
+GSL-A3           1000.00    10.00      2.00       FUNCTIONAL 1000.00 0          0
+GSL-A4           1050.00    10.00      10.00      FUNCTIONAL 1000.00 0          0
+GSL-A6           1050.00    10.00      2.60       FUNCTIONAL 1000.00 0          0
+storage@68       1000.00    10.00      0          FUNCTIONAL 1000.00 0          0
+CBC-A9c          1000.00    10.00      1.00       FUNCTIONAL 1000.00 0          0
 
 [CONDUITS]
 ;;Name           From             To               Length     Roughness  InOffset   OutOffset  InitFlow   MaxFlow
@@ -90,59 +132,58 @@ CR7-culvrt       CR7-top          UBC-A3           70.00      0.0130     976.50 
 Mann-C5A         Mann-25B         MannRdtopA       70.00      0.0130     966.74     965.77     0          0
 Mann-C6          Mann5Rdtop       UBC-A0           70.00      0.0230     949.70     946.64     0          0
 Mann-C7          Mann7RdTop       UBC-A0           108.00     0.0240     940.87     940.65     0          0
-633              ?                ?                0          0          0          0          0          0
-636              ?                ?                0          0          0          0          0          0
-BassLk           KPL-A2           KPL-A5           0          0          0          0          0          0
-645              ?                ?                0          0          0          0          0          0
+Hwy68culv        op               CBC-A6           75.00      0.0130     919.08     918.83     0          0
+CoRd15BC         pRd              CBC-A5           48.00      0.0130     893.60     893.50     0          0
+633              CBC-A4           CBC-A7           100.00     0.0130     0          0          0          0
+636              CBC-A2           CBC-A7           100.00     0.0130     0          0          0          0
+BassLk           KPL-A2           KPL-A5           100.00     0.0130     0          0          0          0
+645              KPL-A1           KPL-A5           100.00     0.0130     0          0          0          0
 Hwy96Culv        Hwy96Rd          CBC-A7           74.00      0.0240     901.30     900.90     0          0
-WoodplOver       SLB-A1           SLB-A2/3         0          0          0          0          0          0
-671              ?                ?                0          0          0          0          0          0
-692              ?                ?                0          0          0          0          0          0
+WoodplOver       SLB-A1           SLB-A2/3         100.00     0.0130     0          0          0          0
+671              SLB-A2/3         SCT-A1a          100.00     0.0130     0          0          0          0
+CSAH12           w                SCT-A2           116.00     0.0120     897.00     896.20     0          0
+692              LL-A1            LL-A4            100.00     0.0130     0          0          0          0
 LL-A2C           LL-A2            LL-A4            384.00     0.0130     902.74     901.84     0          0
-Reach 4          LBC-A2           LBC-A3           3600.00    0          848.00     817.00     0          0
-LL-UBC-A4        UBC-A4           UBC-A0           0          0          0          0          0          0
-July             UBC-A2           UBC-A0           0          0          0          0          0          0
-740              ?                ?                0          0          0          0          0          0
-742              ?                ?                0          0          0          0          0          0
-743              ?                ?                0          0          0          0          0          0
-744              ?                ?                0          0          0          0          0          0
+Hwy5C1           Hxw5C2           LL-A4            135.00     0.0130     906.90     904.20     0          0
+Reach_4          LBC-A2           LBC-A3           3600.00    0.0130     848.00     817.00     0          0
+LL-UBC-A4        UBC-A4           UBC-A0           100.00     0.0130     0          0          0          0
+July             UBC-A2           UBC-A0           100.00     0.0130     0          0          0          0
+740              UBC-A8           UBC-A0           100.00     0.0130     0          0          0          0
+742              KPL-A3           KPL-A2           100.00     0.0130     0          0          0          0
+743              KPL-A5           CBC-A6           100.00     0.0130     0          0          0          0
+744              LBC-A1           LBC-A3           100.00     0.0130     0          0          0          0
 PatLkCulvt       PatLkDrvwy       CBC-A6           50.00      0.0240     950.50     949.50     0          0
 GSL-1ovflw       GSL1ovflw        GSL-A2           33.00      0.0140     0          0          0          0
 SSC1             SSC2             SSRdtop          38.00      0.0230     971.00     970.80     0          0
 LynchLkOvf       GSL-A4           GSL-A6           33.00      0.0140     0          0          0          0
 CTYRD58C         Mann-GSL-6       GSL-A7           70.00      0.0240     978.60     978.50     0          0
-GSL-3ovflw       GSL3ovflw        GSL-A2           0          0          0          0          0          0
+DrivewayC        UBC-A0           storage@68       50.00      0.0230     919.98     919.95     0          0
 GateC1           GateC2           CBC-A7           71.00      0.0230     903.97     903.95     0          0
-CS-7             CBC-A8           CBC-A9a          5520.00    0          890.45     867.00     0          0
-SCT4-Chan        SCT-A4           CBC-A9c          1320.00    0          886.50     874.00     0          0
-Reach3LBC3       LBC-A3           LBC-A4           1680.00    0          817.00     738.00     0          0
-Reach2LBC4       LBC-A4           LBC-A5           2400.00    0          738.00     690.00     0          0
-Reach1LBC5       LBC-A5           BoundCond        2640.00    0          690.00     676.00     0          0
+cattlepass       culvert          SCT-A2           50.00      0.0120     897.10     897.00     0          0
+96-xing          CBC-A5           CBC-A8           70.00      0.0130     890.46     890.45     0          0
+CS-7             CBC-A8           CBC-A9a          5520.00    0.0130     890.45     867.00     0          0
+Boutw1llc        LL-A5            CBC-A9c          70.00      0.0230     882.00     881.50     0          0
+Bout#1llc2       llw2             CBC-A9c          70.00      0.0240     878.00     877.50     0          0
+MannCulv         rTop             SCT-A1b          62.00      0.0120     908.00     907.60     0          0
+SCT4-Chan        SCT-A4           CBC-A9c          1320.00    0.0130     886.50     874.00     0          0
+Fish_Weir        vflw             CBC-A9b          78.00      0.0150     861.70     860.90     0          0
+RR_Elipt         RR_Oval          f                32.00      0.0130     857.00     856.50     0          0
+Fish_Weir2       Ovf              LBC-A2           80.00      0.0150     849.23     848.89     0          0
+Reach3LBC3       LBC-A3           LBC-A4           1680.00    0.0130     817.00     738.00     0          0
+Reach2LBC4       LBC-A4           LBC-A5           2400.00    0.0130     738.00     690.00     0          0
+Reach1LBC5       LBC-A5           BoundCond        2640.00    0.0130     690.00     676.00     0          0
 TrbRR-xing       CBC-A9c          CBC-A9b          52.00      0.0130     863.00     862.50     0          0
-816              ?                ?                0          0          0          0          0          0
+816              GSL-A7           UBC-A0           100.00     0.0130     0          0          0          0
+culv#2c          Culv@12          LL-A5            70.00      0.0120     889.00     888.80     0          0
 
 [WEIRS]
 ;;Name           From             To               Type       CrestHt    Qcoeff     Gated    EndCon   EndCoeff   Surcharge
 ;;-------------- ---------------- ---------------- ---------- ---------- ---------- -------- -------- ---------- ----------
 OvfDeW           UBC-A3           UBC-A0           TRANSVERSE 970.00     1.840      NO       0        0          YES
 BenzLkOutl       UBC-A9           UBC-A0           TRANSVERSE 953.00     1.840      NO       0        0          YES
-Hwy68culv        op               CBC-A6           TRANSVERSE 935.00     1.840      NO       0        0          YES
-CoRd15BC         pRd              CBC-A5           TRANSVERSE 900.00     1.840      NO       0        0          YES
 op               Mstrmnculv       CBC-A3           TRANSVERSE 965.40     1.840      NO       0        0          YES
-CSAH12           w                SCT-A2           TRANSVERSE 907.00     1.840      NO       0        0          YES
-Hwy5C1           Hxw5C2           LL-A4            TRANSVERSE 905.00     1.840      NO       0        0          YES
 special          LL-A4            Culv@12          TRANSVERSE 889.00     1.840      NO       0        0          YES
 plaisc           dovf             GSL-A5           TRANSVERSE 0          1.840      NO       0        0          YES
-DrivewayC        UBC-A0           storage@68       TRANSVERSE 923.57     1.840      NO       0        0          YES
-cattlepass       culvert          SCT-A2           TRANSVERSE 903.70     1.840      NO       0        0          YES
-96-xing          CBC-A5           CBC-A8           TRANSVERSE 900.46     1.840      NO       0        0          YES
-Boutw1llc        LL-A5            CBC-A9c          TRANSVERSE 889.00     1.840      NO       0        0          YES
-Bout#1llc2       llw2             CBC-A9c          TRANSVERSE 883.50     1.840      NO       0        0          YES
-MannCulv         rTop             SCT-A1b          TRANSVERSE 915.00     1.840      NO       0        0          YES
-Fish Weir        vflw             CBC-A9b          TRANSVERSE 875.50     1.840      NO       0        0          YES
-RR Elipt         RR Oval          f                TRANSVERSE 870.00     1.840      NO       0        0          YES
-Fish Weir2       Ovf              LBC-A2           TRANSVERSE 855.50     1.840      NO       0        0          YES
-culv#2c          Culv@12          LL-A5            TRANSVERSE 889.00     1.840      NO       0        0          YES
 
 [XSECTIONS]
 ;;Link           Shape        Geom1      Geom2      Geom3      Geom4      Barrels
@@ -151,55 +192,54 @@ CR7-culvrt       CIRCULAR     2.75       0          0          0          1
 Mann-C5A         CIRCULAR     2.00       0          0          0          1
 Mann-C6          CIRCULAR     3.00       0          0          0          1
 Mann-C7          CIRCULAR     2.00       0          0          0          1
-633              CIRCULAR     0          0          0          0          1
-636              CIRCULAR     0          0          0          0          1
-BassLk           CIRCULAR     0          0          0          0          1
-645              CIRCULAR     0          0          0          0          1
+Hwy68culv        CIRCULAR     4.00       0          0          0          1
+CoRd15BC         HORSESHOE    5.20       0          0          0          1
+633              CIRCULAR     1.00       0          0          0          1
+636              CIRCULAR     1.00       0          0          0          1
+BassLk           CIRCULAR     1.00       0          0          0          1
+645              CIRCULAR     1.00       0          0          0          1
 Hwy96Culv        CIRCULAR     3.00       0          0          0          1
-WoodplOver       CIRCULAR     0          0          0          0          1
-671              CIRCULAR     0          0          0          0          1
-692              CIRCULAR     0          0          0          0          1
+WoodplOver       CIRCULAR     1.00       0          0          0          1
+671              CIRCULAR     1.00       0          0          0          1
+CSAH12           CIRCULAR     4.50       0          0          0          1
+692              CIRCULAR     1.00       0          0          0          1
 LL-A2C           CIRCULAR     2.50       0          0          0          1
-Reach 4          IRREGULAR    11.10      0          0          0          1
-LL-UBC-A4        CIRCULAR     0          0          0          0          1
-July             CIRCULAR     0          0          0          0          1
-740              CIRCULAR     0          0          0          0          1
-742              CIRCULAR     0          0          0          0          1
-743              CIRCULAR     0          0          0          0          1
-744              CIRCULAR     0          0          0          0          1
+Hwy5C1           CIRCULAR     3.00       0          0          0          1
+Reach_4          TRAPEZOIDAL  11.10      10.00      2          2          1
+LL-UBC-A4        CIRCULAR     1.00       0          0          0          1
+July             CIRCULAR     1.00       0          0          0          1
+740              CIRCULAR     1.00       0          0          0          1
+742              CIRCULAR     1.00       0          0          0          1
+743              CIRCULAR     1.00       0          0          0          1
+744              CIRCULAR     1.00       0          0          0          1
 PatLkCulvt       CIRCULAR     1.25       0          0          0          1
 GSL-1ovflw       CIRCULAR     0.00       0          0          0          1
 SSC1             CIRCULAR     2.00       0          0          0          1
 LynchLkOvf       CIRCULAR     0.00       0          0          0          1
 CTYRD58C         CIRCULAR     1.50       0          0          0          1
-GSL-3ovflw       CIRCULAR     0          0          0          0          1
+DrivewayC        CIRCULAR     3.00       0          0          0          1
 GateC1           CIRCULAR     6.00       0          0          0          1
-CS-7             IRREGULAR    21.60      0          0          0          1
-SCT4-Chan        IRREGULAR    9.50       0          0          0          1
-Reach3LBC3       IRREGULAR    18.00      0          0          0          1
-Reach2LBC4       IRREGULAR    14.40      0          0          0          1
-Reach1LBC5       IRREGULAR    13.80      0          0          0          1
+cattlepass       CIRCULAR     5.00       0          0          0          1
+96-xing          RECT_CLOSED  6.00       8.00       0          0          1
+CS-7             TRAPEZOIDAL  21.60      10.00      2          2          1
+Boutw1llc        CIRCULAR     2.00       0          0          0          1
+Bout#1llc2       CIRCULAR     3.00       0          0          0          2
+MannCulv         CIRCULAR     2.50       0          0          0          1
+SCT4-Chan        TRAPEZOIDAL  9.50       10.00      2          2          1
+Fish_Weir        RECT_CLOSED  12.00      8.00       0          0          1
+RR_Elipt         HORSESHOE    4.50       0          0          0          1
+Fish_Weir2       RECT_CLOSED  12.00      8.00       0          0          1
+Reach3LBC3       TRAPEZOIDAL  18.00      10.00      2          2          1
+Reach2LBC4       TRAPEZOIDAL  14.40      10.00      2          2          1
+Reach1LBC5       TRAPEZOIDAL  13.80      10.00      2          2          1
 TrbRR-xing       HORSESHOE    7.00       0          0          0          1
-816              CIRCULAR     0          0          0          0          1
-OvfDeW           RECT_OPEN    0          40.00      0          0          
-BenzLkOutl       RECT_OPEN    0          2.00       0          0          
-Hwy68culv        RECT_OPEN    0          50.00      0          0          
-CoRd15BC         RECT_OPEN    0          40.00      0          0          
-op               RECT_OPEN    0          50.00      0          0          
-CSAH12           RECT_OPEN    0          50.00      0          0          
-Hwy5C1           RECT_OPEN    0          12.00      0          0          
-special          RECT_OPEN    0          1.00       0          0          
-plaisc           RECT_OPEN    0          0          0          0          
-DrivewayC        RECT_OPEN    0          40.00      0          0          
-cattlepass       RECT_OPEN    0          40.00      0          0          
-96-xing          RECT_OPEN    0          50.00      0          0          
-Boutw1llc        RECT_OPEN    0          50.00      0          0          
-Bout#1llc2       RECT_OPEN    0          20.00      0          0          
-MannCulv         RECT_OPEN    0          50.00      0          0          
-Fish Weir        RECT_OPEN    0          50.00      0          0          
-RR Elipt         RECT_OPEN    0          50.00      0          0          
-Fish Weir2       RECT_OPEN    0          50.00      0          0          
-culv#2c          RECT_OPEN    0          1.00       0          0          
+816              CIRCULAR     1.00       0          0          0          1
+culv#2c          CIRCULAR     2.50       0          0          0          2
+OvfDeW           RECT_OPEN    1.00       40.00      0          0
+BenzLkOutl       RECT_OPEN    1.00       2.00       0          0
+op               RECT_OPEN    1.00       50.00      0          0
+special          RECT_OPEN    1.00       1.00       0          0
+plaisc           RECT_OPEN    1.00       1.00       0          0
 
 [LOSSES]
 ;;Link           Inlet      Outlet     Average    Flap Gate
@@ -208,6 +248,8 @@ CR7-culvrt       0          0          0          NO
 Mann-C5A         0          0          0          NO
 Mann-C6          0          0          0          NO
 Mann-C7          0          0          0          NO
+Hwy68culv        0          0          0          NO
+CoRd15BC         0          0          0          NO
 633              0          0          0          NO
 636              0          0          0          NO
 BassLk           0          0          0          NO
@@ -215,9 +257,11 @@ BassLk           0          0          0          NO
 Hwy96Culv        0          0          0          NO
 WoodplOver       0          0          0          NO
 671              0          0          0          NO
+CSAH12           0          0          0          NO
 692              0          0          0          NO
 LL-A2C           0          0          0          NO
-Reach 4          0          0          0          NO
+Hwy5C1           0          0          0          NO
+Reach_4          0          0          0          NO
 LL-UBC-A4        0          0          0          NO
 July             0          0          0          NO
 740              0          0          0          NO
@@ -229,15 +273,24 @@ GSL-1ovflw       0          0          0          NO
 SSC1             0          0          0          NO
 LynchLkOvf       0          0          0          NO
 CTYRD58C         0          0          0          NO
-GSL-3ovflw       0          0          0          NO
+DrivewayC        0          0          0          NO
 GateC1           0          0          0          NO
+cattlepass       0          0          0          NO
+96-xing          0          0          0          NO
 CS-7             0          0          0          NO
+Boutw1llc        0          0          0          NO
+Bout#1llc2       0          0          0          NO
+MannCulv         0          0          0          NO
 SCT4-Chan        0          0          0          NO
+Fish_Weir        0          0          0          NO
+RR_Elipt         0          0          0          NO
+Fish_Weir2       0          0          0          NO
 Reach3LBC3       0          0          0          NO
 Reach2LBC4       0          0          0          NO
 Reach1LBC5       0          0          0          NO
 TrbRR-xing       0          0          0          NO
 816              0          0          0          NO
+culv#2c          0          0          0          NO
 
 [INFLOWS]
 ;;Node           Constituent  Time Series      Type     Mfactor  Sfactor  Baseline Pattern

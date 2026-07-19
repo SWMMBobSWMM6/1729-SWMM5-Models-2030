@@ -20,34 +20,51 @@ INERTIAL_DAMPING     PARTIAL
 NORMAL_FLOW_LIMITED  BOTH
 MAX_TRIALS           50
 HEAD_TOLERANCE       0.0033
+START_DATE           01/01/2001
+START_TIME           00:00:00
+REPORT_START_DATE    01/01/2001
+REPORT_START_TIME    00:00:00
+END_DATE             01/02/2001
+END_TIME             00:00:00
+SWEEP_START          01/01
+SWEEP_END            12/31
+DRY_DAYS             0
+REPORT_STEP          00:15:00
+WET_STEP             00:05:00
+DRY_STEP             01:00:00
 
 [JUNCTIONS]
 ;;Name           Elev       MaxDepth   InitDepth  SurDepth   Aponded
 ;;-------------- ---------- ---------- ---------- ---------- ----------
-Inflow           40.00      0          4.90       0          0
-203              40.00      0          4.90       0          0
-205              40.00      0          5.00       0          0
-207              40.00      0          5.10       0          0
-209              40.00      0          5.10       0          0
-Outflow          40.00      0          5.10       0          0
+Inflow           40.00      0          0          0          0
+203              40.00      0          0          0          0
+207              40.00      0          0          0          0
+209              40.00      0          0          0          0
+Outflow          40.00      0          0          0          0
+Overtop          25.00      0          0          0          0
+
+[OUTFALLS]
+;;Name           Elev       Type       Stage      Gated
+;;-------------- ---------- ---------- ---------- -----
+205              40.00      FREE                  NO
 
 [CONDUITS]
 ;;Name           From             To               Length     Roughness  InOffset   OutOffset  InitFlow   MaxFlow
 ;;-------------- ---------------- ---------------- ---------- ---------- ---------- ---------- ---------- ----------
-Section4         Inflow           203              55.00      0          25.10      25.10      0          0
-Section3         203              205              50.00      0          25.10      25.00      0          0
+Section4         Inflow           203              55.00      0.0130     25.10      25.10      0          0
+Section3         203              205              50.00      0.0130     25.10      25.00      0          0
 Culvert          Overtop          207              50.00      0.0130     25.00      24.90      0          0
-Section2         207              209              50.00      0          24.90      24.90      0          0
-Section1         209              Outflow          100.00     0          24.90      24.90      0          0
+Section2         207              209              50.00      0.0130     24.90      24.90      0          0
+Section1         209              Outflow          100.00     0.0130     24.90      24.90      0          0
 
 [XSECTIONS]
 ;;Link           Shape        Geom1      Geom2      Geom3      Geom4      Barrels
 ;;-------------- ------------ ---------- ---------- ---------- ---------- ----------
-Section4         IRREGULAR    0          0          0          0          1
-Section3         IRREGULAR    0          0          0          0          1
+Section4         TRAPEZOIDAL  1.00       10.00      2          2          1
+Section3         TRAPEZOIDAL  1.00       10.00      2          2          1
 Culvert          RECT_CLOSED  6.00       10.00      0          0          1
-Section2         IRREGULAR    0          0          0          0          1
-Section1         IRREGULAR    0          0          0          0          1
+Section2         TRAPEZOIDAL  1.00       10.00      2          2          1
+Section1         TRAPEZOIDAL  1.00       10.00      2          2          1
 
 [LOSSES]
 ;;Link           Inlet      Outlet     Average    Flap Gate

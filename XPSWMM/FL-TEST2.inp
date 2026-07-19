@@ -20,38 +20,54 @@ INERTIAL_DAMPING     PARTIAL
 NORMAL_FLOW_LIMITED  BOTH
 MAX_TRIALS           50
 HEAD_TOLERANCE       0.0033
+START_DATE           01/01/2001
+START_TIME           00:00:00
+REPORT_START_DATE    01/01/2001
+REPORT_START_TIME    00:00:00
+END_DATE             01/02/2001
+END_TIME             00:00:00
+SWEEP_START          01/01
+SWEEP_END            12/31
+DRY_DAYS             0
+REPORT_STEP          00:15:00
+WET_STEP             00:05:00
+DRY_STEP             01:00:00
 
 [JUNCTIONS]
 ;;Name           Elev       MaxDepth   InitDepth  SurDepth   Aponded
 ;;-------------- ---------- ---------- ---------- ---------- ----------
-U1W              6.40       0          0.86       0          0
-U1E              7.48       0          4.70       0          0
-U2W              7.48       0          4.70       0          0
-U2E              8.17       0          5.50       0          0
-U3W              8.17       0          5.50       0          0
-U3E              7.43       0          6.51       0          0
-U4FC15           7.43       0          6.51       0          0
-L31E3            3.82       0          12.60      0          0
+U1W              6.40       0          0          0          0
+U1E              7.48       0          0          0          0
+U2W              7.48       0          0          0          0
+U2E              8.17       0          0          0          0
+U3W              8.17       0          0          0          0
+U3E              7.43       0          0          0          0
+U4FC15           7.43       0          0          0          0
+
+[OUTFALLS]
+;;Name           Elev       Type       Stage      Gated
+;;-------------- ---------- ---------- ---------- -----
+L31E3            3.82       FREE                  NO
 
 [STORAGE]
 ;;Name           Elev       MaxDepth   InitDepth  Shape      Curve/Params
 ;;-------------- ---------- ---------- ---------- ---------- ----------
-FCS1             10.00      0          0          FUNCTIONAL 735591.00 0          0
-FCS2             10.00      0          0          FUNCTIONAL 19400000.00 0          0
-FCN1             10.00      0          0          FUNCTIONAL 1780000.00 0          0
-FCN2             10.00      0          0          FUNCTIONAL 2610000.00 0          0
-FCN3             10.00      0          0          FUNCTIONAL 7300000.00 0          0
+FCS1             10.00      10.00      0          FUNCTIONAL 735591.00 0          0
+FCS2             10.00      10.00      0          FUNCTIONAL 19400000.00 0          0
+FCN1             10.00      10.00      0          FUNCTIONAL 1780000.00 0          0
+FCN2             10.00      10.00      0          FUNCTIONAL 2610000.00 0          0
+FCN3             10.00      10.00      0          FUNCTIONAL 7300000.00 0          0
 
 [CONDUITS]
 ;;Name           From             To               Length     Roughness  InOffset   OutOffset  InitFlow   MaxFlow
 ;;-------------- ---------------- ---------------- ---------- ---------- ---------- ---------- ---------- ----------
-U1               U1W              U1E              130.00     0.0140     0.84       -2.31      0          0
-FCC1             U1E              U2W              500.00     0.0140     -3.00      -3.01      0          0
-U2               U2W              U2E              120.00     0.0140     -2.00      -2.00      0          0
-FCC2             U2E              U3W              1026.00    0.0140     -3.80      -3.81      0          0
-U3               U3W              U3E              115.00     0.0140     -2.10      -2.20      0          0
-FCC3             U3E              U4FC15           2633.00    0.0140     -4.81      -4.82      0          0
-U4               U4FC15           L31E3            663.00     0.0140     -4.70      -4.71      0          0
+U1               U1W              U1E              130.00     0.0140     0.84       0          0          0
+FCC1             U1E              U2W              500.00     0.0140     0          0          0          0
+U2               U2W              U2E              120.00     0.0140     0          0          0          0
+FCC2             U2E              U3W              1026.00    0.0140     0          0          0          0
+U3               U3W              U3E              115.00     0.0140     0          0          0          0
+FCC3             U3E              U4FC15           2633.00    0.0140     0          0          0          0
+U4               U4FC15           L31E3            663.00     0.0140     0          0          0          0
 
 [WEIRS]
 ;;Name           From             To               Type       CrestHt    Qcoeff     Gated    EndCon   EndCoeff   Surcharge
@@ -69,20 +85,20 @@ FCS12            FCS1             FCS2             TRANSVERSE 3.50       1.840  
 ;;Link           Shape        Geom1      Geom2      Geom3      Geom4      Barrels
 ;;-------------- ------------ ---------- ---------- ---------- ---------- ----------
 U1               CIRCULAR     4.50       0          0          0          1
-FCC1             IRREGULAR    0          0          0          0          1
+FCC1             TRAPEZOIDAL  1.00       10.00      2          2          1
 U2               CIRCULAR     6.00       0          0          0          1
-FCC2             IRREGULAR    0          0          0          0          1
+FCC2             TRAPEZOIDAL  1.00       10.00      2          2          1
 U3               CIRCULAR     6.00       0          0          0          1
-FCC3             IRREGULAR    0          0          0          0          1
+FCC3             TRAPEZOIDAL  1.00       10.00      2          2          1
 U4               CIRCULAR     8.00       0          0          0          1
-FCWS1            RECT_OPEN    0          500.00     0          0          
-FCWS2            RECT_OPEN    0          2610.00    0          0          
-FCWN1            RECT_OPEN    0          500.00     0          0          
-FCWN2            RECT_OPEN    0          1100.00    0          0          
-FCWN3            RECT_OPEN    0          2600.00    0          0          
-FCN12            RECT_OPEN    0          2670.00    0          0          
-FCN23            RECT_OPEN    0          2650.00    0          0          
-FCS12            RECT_OPEN    0          5260.00    0          0          
+FCWS1            RECT_OPEN    1.00       500.00     0          0
+FCWS2            RECT_OPEN    1.00       2610.00    0          0
+FCWN1            RECT_OPEN    1.00       500.00     0          0
+FCWN2            RECT_OPEN    1.00       1100.00    0          0
+FCWN3            RECT_OPEN    1.00       2600.00    0          0
+FCN12            RECT_OPEN    1.00       2670.00    0          0
+FCN23            RECT_OPEN    1.00       2650.00    0          0
+FCS12            RECT_OPEN    1.00       5260.00    0          0
 
 [LOSSES]
 ;;Link           Inlet      Outlet     Average    Flap Gate

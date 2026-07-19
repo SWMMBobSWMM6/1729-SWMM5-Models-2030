@@ -20,21 +20,37 @@ INERTIAL_DAMPING     PARTIAL
 NORMAL_FLOW_LIMITED  BOTH
 MAX_TRIALS           50
 HEAD_TOLERANCE       1.
+START_DATE           01/01/2001
+START_TIME           00:00:00
+REPORT_START_DATE    01/01/2001
+REPORT_START_TIME    00:00:00
+END_DATE             01/02/2001
+END_TIME             00:00:00
+SWEEP_START          01/01
+SWEEP_END            12/31
+DRY_DAYS             0
+REPORT_STEP          00:15:00
+WET_STEP             00:05:00
+DRY_STEP             01:00:00
 
 [JUNCTIONS]
 ;;Name           Elev       MaxDepth   InitDepth  SurDepth   Aponded
 ;;-------------- ---------- ---------- ---------- ---------- ----------
 MH               26.00      0          0          0          0
-MH               25.40      0          0          0          0
-MH               26.80      0          0          0          0
-MH               26.00      0          0          0          0
-OUTLET           22.00      0          0          0          0
+MH_2             25.40      0          0          0          0
+MH_3             26.80      0          0          0          0
+MH_4             26.00      0          0          0          0
+
+[OUTFALLS]
+;;Name           Elev       Type       Stage      Gated
+;;-------------- ---------- ---------- ---------- -----
+OUTLET           22.00      FREE                  NO
 
 [STORAGE]
 ;;Name           Elev       MaxDepth   InitDepth  Shape      Curve/Params
 ;;-------------- ---------- ---------- ---------- ---------- ----------
-Pond             25.73      -3.27      0          FUNCTIONAL 0 0          0
-Pond             25.73      -1.47      0          FUNCTIONAL 0 0          0
+Pond             25.73      10.00      0          FUNCTIONAL 1000.00 0          0
+Pond_2           25.73      10.00      0          FUNCTIONAL 1000.00 0          0
 
 [CONDUITS]
 ;;Name           From             To               Length     Roughness  InOffset   OutOffset  InitFlow   MaxFlow
@@ -58,7 +74,7 @@ Box              RECT_CLOSED  1.70       5.00       0          0          1
 Pipe             CIRCULAR     3.00       0          0          0          1
 Crossing         CIRCULAR     2.25       0          0          0          1
 HP               CIRCULAR     3.00       0          0          0          1
-36"outlet        RECT_CLOSED  1.60       0          0          0          
+36"outlet        RECT_CLOSED  1.60       1.60       0          0
 
 [LOSSES]
 ;;Link           Inlet      Outlet     Average    Flap Gate
@@ -73,11 +89,11 @@ HP               0          0          0          NO
 ;;Node           X-Coord            Y-Coord
 ;;-------------- ------------------ ------------------
 Pond             57.01              38.69             
-Pond             56.45              76.45             
+Pond_2           56.45              76.45             
 MH               56.06              109.48            
-MH               78.83              117.35            
-MH               102.01             117.99            
-MH               101.06             159.68            
+MH_2             78.83              117.35            
+MH_3             102.01             117.99            
+MH_4             101.06             159.68            
 OUTLET           127.14             169.96            
 
 [MAP]

@@ -14,25 +14,41 @@ LINK_OFFSETS         DEPTH
 MIN_SLOPE            0.0
 ALLOW_PONDING        NO
 SKIP_STEADY_STATE    NO
-ROUTING_STEP         00:00:60
+ROUTING_STEP         00:01:00
 VARIABLE_STEP        0.75
 INERTIAL_DAMPING     PARTIAL
 NORMAL_FLOW_LIMITED  BOTH
 HEAD_TOLERANCE       0.0033
+START_DATE           01/01/2001
+START_TIME           00:00:00
+REPORT_START_DATE    01/01/2001
+REPORT_START_TIME    00:00:00
+END_DATE             01/02/2001
+END_TIME             00:00:00
+SWEEP_START          01/01
+SWEEP_END            12/31
+DRY_DAYS             0
+REPORT_STEP          00:15:00
+WET_STEP             00:05:00
+DRY_STEP             01:00:00
 
 [JUNCTIONS]
 ;;Name           Elev       MaxDepth   InitDepth  SurDepth   Aponded
 ;;-------------- ---------- ---------- ---------- ---------- ----------
 Upstream         770.00     0          0          0          0
-Upper            753.00     0          7.00       0          0
-Lower            746.00     0          6.00       0          0
+Upper            753.00     0          0          0          0
+Lower            746.00     0          0          0          0
 MH               750.00     0          0          0          0
-DS               750.00     0          0          0          0
+
+[OUTFALLS]
+;;Name           Elev       Type       Stage      Gated
+;;-------------- ---------- ---------- ---------- -----
+DS               750.00     FREE                  NO
 
 [STORAGE]
 ;;Name           Elev       MaxDepth   InitDepth  Shape      Curve/Params
 ;;-------------- ---------- ---------- ---------- ---------- ----------
-Split            757.00     0          0          FUNCTIONAL 0.00 0          0
+Split            757.00     10.00      0          FUNCTIONAL 0.00 0          0
 
 [CONDUITS]
 ;;Name           From             To               Length     Roughness  InOffset   OutOffset  InitFlow   MaxFlow
@@ -41,12 +57,8 @@ Split            757.00     0          0          FUNCTIONAL 0.00 0          0
 Diversion        Split            Upper            60.00      0.0120     745.50     745.00     0          0
 Up               Upper            Lower            150.00     0.0120     745.00     743.50     0          0
 Low              Lower            MH               150.00     0.0120     741.75     741.00     0          0
-66"              MH               DS               300.00     0.0120     737.00     732.80     0          0
-
-[WEIRS]
-;;Name           From             To               Type       CrestHt    Qcoeff     Gated    EndCon   EndCoeff   Surcharge
-;;-------------- ---------------- ---------------- ---------- ---------- ---------- -------- -------- ---------- ----------
-66rcp            Split            MH               TRANSVERSE 750.30     1.840      NO       0        0          YES
+66rcp            Split            MH               500.00     0.0140     747.00     740.00     0          0
+66"_2            MH               DS               300.00     0.0120     737.00     732.80     0          0
 
 [XSECTIONS]
 ;;Link           Shape        Geom1      Geom2      Geom3      Geom4      Barrels
@@ -55,8 +67,8 @@ Low              Lower            MH               150.00     0.0120     741.75 
 Diversion        CIRCULAR     3.00       0          0          0          1
 Up               CIRCULAR     2.00       0          0          0          1
 Low              CIRCULAR     2.00       0          0          0          1
-66"              CIRCULAR     5.50       0          0          0          1
-66rcp            RECT_OPEN    0          5.50       0          0          
+66rcp            CIRCULAR     5.50       0          0          0          1
+66"_2            CIRCULAR     5.50       0          0          0          1
 
 [LOSSES]
 ;;Link           Inlet      Outlet     Average    Flap Gate
@@ -65,7 +77,8 @@ Low              CIRCULAR     2.00       0          0          0          1
 Diversion        0          0          0          NO
 Up               0          0          0          NO
 Low              0          0          0          NO
-66"              0          0          0          NO
+66rcp            0          0          0          NO
+66"_2            0          0          0          NO
 
 [COORDINATES]
 ;;Node           X-Coord            Y-Coord

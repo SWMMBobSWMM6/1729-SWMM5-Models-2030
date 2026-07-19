@@ -14,12 +14,24 @@ LINK_OFFSETS         DEPTH
 MIN_SLOPE            0.0
 ALLOW_PONDING        NO
 SKIP_STEADY_STATE    NO
-ROUTING_STEP         00:00:60
+ROUTING_STEP         00:01:00
 VARIABLE_STEP        0.75
 INERTIAL_DAMPING     PARTIAL
 NORMAL_FLOW_LIMITED  BOTH
 MAX_TRIALS           50
 HEAD_TOLERANCE       0.0033
+START_DATE           01/01/2001
+START_TIME           00:00:00
+REPORT_START_DATE    01/01/2001
+REPORT_START_TIME    00:00:00
+END_DATE             01/02/2001
+END_TIME             00:00:00
+SWEEP_START          01/01
+SWEEP_END            12/31
+DRY_DAYS             0
+REPORT_STEP          00:15:00
+WET_STEP             00:05:00
+DRY_STEP             01:00:00
 
 [JUNCTIONS]
 ;;Name           Elev       MaxDepth   InitDepth  SurDepth   Aponded
@@ -32,30 +44,34 @@ HEAD_TOLERANCE       0.0033
 920320           790.00     0          0          0          0
 920310           790.00     0          0          0          0
 920300           780.00     0          0          0          0
-920290           780.00     0          0          0          0
+
+[OUTFALLS]
+;;Name           Elev       Type       Stage      Gated
+;;-------------- ---------- ---------- ---------- -----
+920290           780.00     FREE                  NO
 
 [CONDUITS]
 ;;Name           From             To               Length     Roughness  InOffset   OutOffset  InitFlow   MaxFlow
 ;;-------------- ---------------- ---------------- ---------- ---------- ---------- ---------- ---------- ----------
 20370            920370           920360           50.00      0.0140     790.10     790.00     0          0
-20360            920360           920350           1680.00    0          790.00     786.90     0          0
-20350            920350           920340           2800.00    0          786.90     781.70     0          0
-20340            920340           920330           250.00     0          781.70     781.30     0          0
-20330            920330           920320           630.00     0          781.30     780.10     0          0
+20360            920360           920350           1680.00    0.0130     790.00     786.90     0          0
+20350            920350           920340           2800.00    0.0130     786.90     781.70     0          0
+20340            920340           920330           250.00     0.0130     781.70     781.30     0          0
+20330            920330           920320           630.00     0.0130     781.30     780.10     0          0
 20320            920320           920310           50.00      0.0140     780.10     780.00     0          0
-20310            920310           920300           1840.00    0          780.00     772.70     0          0
+20310            920310           920300           1840.00    0.0130     780.00     772.70     0          0
 20300            920300           920290           50.00      0.0300     772.70     772.20     0          0
 
 [XSECTIONS]
 ;;Link           Shape        Geom1      Geom2      Geom3      Geom4      Barrels
 ;;-------------- ------------ ---------- ---------- ---------- ---------- ----------
 20370            HORSESHOE    1.10       0          0          0          1
-20360            IRREGULAR    4.00       0          0          0          1
-20350            IRREGULAR    39.00      0          0          0          1
-20340            IRREGULAR    39.00      0          0          0          1
-20330            IRREGULAR    9.90       0          0          0          1
+20360            TRAPEZOIDAL  4.00       10.00      2          2          1
+20350            TRAPEZOIDAL  39.00      10.00      2          2          1
+20340            TRAPEZOIDAL  39.00      10.00      2          2          1
+20330            TRAPEZOIDAL  9.90       10.00      2          2          1
 20320            RECT_CLOSED  3.00       5.00       0          0          1
-20310            IRREGULAR    7.30       0          0          0          1
+20310            TRAPEZOIDAL  7.30       10.00      2          2          1
 20300            HORSESHOE    3.50       0          0          0          1
 
 [LOSSES]

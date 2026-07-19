@@ -19,6 +19,18 @@ VARIABLE_STEP        0.75
 INERTIAL_DAMPING     PARTIAL
 NORMAL_FLOW_LIMITED  BOTH
 MAX_TRIALS           4
+START_DATE           01/01/2001
+START_TIME           00:00:00
+REPORT_START_DATE    01/01/2001
+REPORT_START_TIME    00:00:00
+END_DATE             01/02/2001
+END_TIME             00:00:00
+SWEEP_START          01/01
+SWEEP_END            12/31
+DRY_DAYS             0
+REPORT_STEP          00:15:00
+WET_STEP             00:05:00
+DRY_STEP             01:00:00
 
 [JUNCTIONS]
 ;;Name           Elev       MaxDepth   InitDepth  SurDepth   Aponded
@@ -26,15 +38,19 @@ MAX_TRIALS           4
 Inlet            250.00     0          0          0          0
 DropMan          250.00     0          0          0          0
 204              -90.00     0          0          0          0
-Outlet           -90.00     0          0          0          0
 208              0          0          0          0          0
+
+[OUTFALLS]
+;;Name           Elev       Type       Stage      Gated
+;;-------------- ---------- ---------- ---------- -----
+Outlet           -90.00     FREE                  NO
 
 [CONDUITS]
 ;;Name           From             To               Length     Roughness  InOffset   OutOffset  InitFlow   MaxFlow
 ;;-------------- ---------------- ---------------- ---------- ---------- ---------- ---------- ---------- ----------
-203              ?                ?                100.00     0.0140     202.00     201.00     0          0
-Drop             DropMan          204              300.00     0.0140     201.00     -99.00     0          0
-Relief           204              Outlet           100.00     0.0140     -99.00     -100.00    0          0
+203              Inlet            DropMan          100.00     0.0140     202.00     201.00     0          0
+Drop             DropMan          204              300.00     0.0140     201.00     0          0          0
+Relief           204              Outlet           100.00     0.0140     0          0          0          0
 
 [XSECTIONS]
 ;;Link           Shape        Geom1      Geom2      Geom3      Geom4      Barrels

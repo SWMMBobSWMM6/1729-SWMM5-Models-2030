@@ -20,26 +20,42 @@ INERTIAL_DAMPING     PARTIAL
 NORMAL_FLOW_LIMITED  BOTH
 MAX_TRIALS           50
 HEAD_TOLERANCE       .001
+START_DATE           01/01/2001
+START_TIME           00:00:00
+REPORT_START_DATE    01/01/2001
+REPORT_START_TIME    00:00:00
+END_DATE             01/02/2001
+END_TIME             00:00:00
+SWEEP_START          01/01
+SWEEP_END            12/31
+DRY_DAYS             0
+REPORT_STEP          00:15:00
+WET_STEP             00:05:00
+DRY_STEP             01:00:00
 
 [JUNCTIONS]
 ;;Name           Elev       MaxDepth   InitDepth  SurDepth   Aponded
 ;;-------------- ---------- ---------- ---------- ---------- ----------
 INLET12345       104.00     0          0          0          0
 3                300.00     0          0          0          0
-outlet           300.00     0          0          0          0
 210              300.00     0          0          0          0
+
+[OUTFALLS]
+;;Name           Elev       Type       Stage      Gated
+;;-------------- ---------- ---------- ---------- -----
+outlet           300.00     FREE                  NO
 
 [STORAGE]
 ;;Name           Elev       MaxDepth   InitDepth  Shape      Curve/Params
 ;;-------------- ---------- ---------- ---------- ---------- ----------
-2                200.00     0          0          FUNCTIONAL 100.00 0          0
+2                200.00     10.00      0          FUNCTIONAL 100.00 0          0
 
 [CONDUITS]
 ;;Name           From             To               Length     Roughness  InOffset   OutOffset  InitFlow   MaxFlow
 ;;-------------- ---------------- ---------------- ---------- ---------- ---------- ---------- ---------- ----------
 Pipe123456       INLET12345       2                2000.00    0.0110     100.00     99.75      0          0
 Pipe3            3                210              2000.00    0.0110     95.00      95.00      0          0
-211              ?                ?                2000.00    0.0110     95.00      94.00      0          0
+211              210              outlet           2000.00    0.0110     95.00      94.00      0          0
 
 [WEIRS]
 ;;Name           From             To               Type       CrestHt    Qcoeff     Gated    EndCon   EndCoeff   Surcharge
@@ -52,7 +68,7 @@ REACT            2                3                TRANSVERSE 103.00     1.840  
 Pipe123456       CIRCULAR     3.00       0          0          0          1
 Pipe3            CIRCULAR     2.00       0          0          0          1
 211              CIRCULAR     2.00       0          0          0          1
-REACT            RECT_OPEN    0          50.00      0          0          
+REACT            RECT_OPEN    1.00       50.00      0          0
 
 [LOSSES]
 ;;Link           Inlet      Outlet     Average    Flap Gate

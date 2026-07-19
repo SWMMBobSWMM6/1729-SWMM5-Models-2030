@@ -16,13 +16,24 @@ ALLOW_PONDING        NO
 SKIP_STEADY_STATE    NO
 INERTIAL_DAMPING     PARTIAL
 NORMAL_FLOW_LIMITED  BOTH
+START_DATE           01/01/2001
+START_TIME           00:00:00
+REPORT_START_DATE    01/01/2001
+REPORT_START_TIME    00:00:00
+END_DATE             01/02/2001
+END_TIME             00:00:00
+SWEEP_START          01/01
+SWEEP_END            12/31
+DRY_DAYS             0
+REPORT_STEP          00:15:00
+WET_STEP             00:05:00
+DRY_STEP             01:00:00
 
 [JUNCTIONS]
 ;;Name           Elev       MaxDepth   InitDepth  SurDepth   Aponded
 ;;-------------- ---------- ---------- ---------- ---------- ----------
 214              0          0          0          0          0
 215              0          0          0          0          0
-217              0          0          0          0          0
 219              0          0          0          0          0
 220              0          0          0          0          0
 222              0          0          0          0          0
@@ -42,45 +53,50 @@ NORMAL_FLOW_LIMITED  BOTH
 246              0          0          0          0          0
 248              0          0          0          0          0
 
+[OUTFALLS]
+;;Name           Elev       Type       Stage      Gated
+;;-------------- ---------- ---------- ---------- -----
+217              0          FREE                  NO
+
 [CONDUITS]
 ;;Name           From             To               Length     Roughness  InOffset   OutOffset  InitFlow   MaxFlow
 ;;-------------- ---------------- ---------------- ---------- ---------- ---------- ---------- ---------- ----------
-216              ?                ?                0          0          0          0          0          0
-218              ?                ?                0          0          0          0          0          0
-221              ?                ?                0          0          0          0          0          0
-223              ?                ?                0          0          0          0          0          0
-225              ?                ?                0          0          0          0          0          0
-228              ?                ?                0          0          0          0          0          0
-230              ?                ?                0          0          0          0          0          0
-232              ?                ?                0          0          0          0          0          0
-235              ?                ?                0          0          0          0          0          0
-237              ?                ?                0          0          0          0          0          0
-239              ?                ?                0          0          0          0          0          0
-242              ?                ?                0          0          0          0          0          0
-245              ?                ?                0          0          0          0          0          0
-247              ?                ?                0          0          0          0          0          0
-249              ?                ?                0          0          0          0          0          0
-250              ?                ?                0          0          0          0          0          0
+216              214              215              100.00     0.0130     0          0          0          0
+218              215              217              100.00     0.0130     0          0          0          0
+221              219              220              100.00     0.0130     0          0          0          0
+223              222              220              100.00     0.0130     0          0          0          0
+225              220              224              100.00     0.0130     0          0          0          0
+228              226              227              100.00     0.0130     0          0          0          0
+230              226              229              100.00     0.0130     0          0          0          0
+232              229              231              100.00     0.0130     0          0          0          0
+235              233              234              100.00     0.0130     0          0          0          0
+237              234              236              100.00     0.0130     0          0          0          0
+239              236              238              100.00     0.0130     0          0          0          0
+242              240              241              100.00     0.0130     0          0          0          0
+245              243              244              100.00     0.0130     0          0          0          0
+247              241              246              100.00     0.0130     0          0          0          0
+249              244              248              100.00     0.0130     0          0          0          0
+250              241              244              100.00     0.0130     0          0          0          0
 
 [XSECTIONS]
 ;;Link           Shape        Geom1      Geom2      Geom3      Geom4      Barrels
 ;;-------------- ------------ ---------- ---------- ---------- ---------- ----------
-216              CIRCULAR     0          0          0          0          1
-218              CIRCULAR     0          0          0          0          1
-221              CIRCULAR     0          0          0          0          1
-223              CIRCULAR     0          0          0          0          1
-225              CIRCULAR     0          0          0          0          1
-228              CIRCULAR     0          0          0          0          1
-230              CIRCULAR     0          0          0          0          1
-232              CIRCULAR     0          0          0          0          1
-235              CIRCULAR     0          0          0          0          1
-237              CIRCULAR     0          0          0          0          1
-239              CIRCULAR     0          0          0          0          1
-242              CIRCULAR     0          0          0          0          1
-245              CIRCULAR     0          0          0          0          1
-247              CIRCULAR     0          0          0          0          1
-249              CIRCULAR     0          0          0          0          1
-250              CIRCULAR     0          0          0          0          1
+216              CIRCULAR     1.00       0          0          0          1
+218              CIRCULAR     1.00       0          0          0          1
+221              CIRCULAR     1.00       0          0          0          1
+223              CIRCULAR     1.00       0          0          0          1
+225              CIRCULAR     1.00       0          0          0          1
+228              CIRCULAR     1.00       0          0          0          1
+230              CIRCULAR     1.00       0          0          0          1
+232              CIRCULAR     1.00       0          0          0          1
+235              CIRCULAR     1.00       0          0          0          1
+237              CIRCULAR     1.00       0          0          0          1
+239              CIRCULAR     1.00       0          0          0          1
+242              CIRCULAR     1.00       0          0          0          1
+245              CIRCULAR     1.00       0          0          0          1
+247              CIRCULAR     1.00       0          0          0          1
+249              CIRCULAR     1.00       0          0          0          1
+250              CIRCULAR     1.00       0          0          0          1
 
 [LOSSES]
 ;;Link           Inlet      Outlet     Average    Flap Gate

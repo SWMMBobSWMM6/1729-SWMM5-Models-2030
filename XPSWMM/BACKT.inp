@@ -19,6 +19,18 @@ VARIABLE_STEP        0.75
 INERTIAL_DAMPING     PARTIAL
 NORMAL_FLOW_LIMITED  BOTH
 MAX_TRIALS           50
+START_DATE           01/01/2001
+START_TIME           00:00:00
+REPORT_START_DATE    01/01/2001
+REPORT_START_TIME    00:00:00
+END_DATE             01/02/2001
+END_TIME             00:00:00
+SWEEP_START          01/01
+SWEEP_END            12/31
+DRY_DAYS             0
+REPORT_STEP          00:15:00
+WET_STEP             00:05:00
+DRY_STEP             01:00:00
 
 [JUNCTIONS]
 ;;Name           Elev       MaxDepth   InitDepth  SurDepth   Aponded
@@ -31,7 +43,6 @@ F-OUT            100.00     0          0          0          0
 G                100.00     0          0          0          0
 H                100.00     0          0          0          0
 I                100.00     0          0          0          0
-O                100.00     0          0          0          0
 Dummy-1          100.00     0          0          0          0
 MH-D3            100.00     0          0          0          0
 MH-D2            100.00     0          0          0          0
@@ -47,38 +58,44 @@ MH-C2            100.00     0          0          0          0
 Dummy-2          100.00     0          0          0          0
 264              100.00     0          0          0          0
 
+[OUTFALLS]
+;;Name           Elev       Type       Stage      Gated
+;;-------------- ---------- ---------- ---------- -----
+O                100.00     FREE                  NO
+
 [STORAGE]
 ;;Name           Elev       MaxDepth   InitDepth  Shape      Curve/Params
 ;;-------------- ---------- ---------- ---------- ---------- ----------
-F-IN             100.00     0          0          FUNCTIONAL 0 0          0
-F-E1             100.00     -5.00      0          FUNCTIONAL 0 0          0
-F-E2             100.00     -5.00      0          FUNCTIONAL 0 0          0
-D1               100.00     0          0          FUNCTIONAL 0 0          0
-D2               100.00     -5.00      0          FUNCTIONAL 0 0          0
-D3               100.00     -5.00      0          FUNCTIONAL 0 0          0
-CS               100.00     -5.00      0          FUNCTIONAL 0 0          0
-C1               100.00     0          0          FUNCTIONAL 0 0          0
-C3               100.00     0          0          FUNCTIONAL 0 0          0
-C4               100.00     0          0          FUNCTIONAL 0 0          0
-C5               100.00     0          0          FUNCTIONAL 0 0          0
-AS               100.00     0          0          FUNCTIONAL 0 0          0
-DN               100.00     0          0          FUNCTIONAL 0 0          0
-CN               100.00     -5.00      0          FUNCTIONAL 0 0          0
-BN               100.00     0          0          FUNCTIONAL 0 0          0
-C2               100.00     -5.00      0          FUNCTIONAL 0 0          0
-N2               100.00     0          0          FUNCTIONAL 0 0          0
+F-IN             100.00     10.00      0          FUNCTIONAL 1000.00 0          0
+F-E1             100.00     10.00      0          FUNCTIONAL 1000.00 0          0
+F-E2             100.00     10.00      0          FUNCTIONAL 1000.00 0          0
+D1               100.00     10.00      0          FUNCTIONAL 1000.00 0          0
+D2               100.00     10.00      0          FUNCTIONAL 1000.00 0          0
+D3               100.00     10.00      0          FUNCTIONAL 1000.00 0          0
+CS               100.00     10.00      0          FUNCTIONAL 1000.00 0          0
+C1               100.00     10.00      0          FUNCTIONAL 1000.00 0          0
+C3               100.00     10.00      0          FUNCTIONAL 1000.00 0          0
+C4               100.00     10.00      0          FUNCTIONAL 1000.00 0          0
+C5               100.00     10.00      0          FUNCTIONAL 1000.00 0          0
+AS               100.00     10.00      0          FUNCTIONAL 1000.00 0          0
+DN               100.00     10.00      0          FUNCTIONAL 1000.00 0          0
+CN               100.00     10.00      0          FUNCTIONAL 1000.00 0          0
+BN               100.00     10.00      0          FUNCTIONAL 1000.00 0          0
+C2               100.00     10.00      0          FUNCTIONAL 1000.00 0          0
+N2               100.00     10.00      0          FUNCTIONAL 1000.00 0          0
 
 [CONDUITS]
 ;;Name           From             To               Length     Roughness  InOffset   OutOffset  InitFlow   MaxFlow
 ;;-------------- ---------------- ---------------- ---------- ---------- ---------- ---------- ---------- ----------
 CH(A-B)          A                B                1400.00    0.0140     84.44      81.92      0          0
 CH(B-C)          B                C                1250.00    0.0140     81.92      79.61      0          0
-CH(C-D)          C                D                700.00     0          79.61      78.07      0          0
-CH(D-E-F)        D                F-IN             1180.00    0          78.07      76.53      0          0
-CH(F-G)          F-OUT            G                800.00     0          55.00      52.76      0          0
-CH(G-H)          G                H                350.00     0          52.76      51.78      0          0
-CH(H-I)          H                I                900.00     0          51.78      51.59      0          0
-CH(I-O)          I                O                1837.00    0          51.59      51.15      0          0
+CH(C-D)          C                D                700.00     0.0130     79.61      78.07      0          0
+CH(D-E-F)        D                F-IN             1180.00    0.0130     78.07      76.53      0          0
+CH(F-G)          F-OUT            G                800.00     0.0130     55.00      52.76      0          0
+CH(G-H)          G                H                350.00     0.0130     52.76      51.78      0          0
+CH(H-I)          H                I                900.00     0.0130     51.78      51.59      0          0
+CH(I-O)          I                O                1837.00    0.0130     51.59      51.15      0          0
+culv             F-IN             F-OUT            150.00     0.0130     0          0          0          0
 CAVES            Dummy-1          F-OUT            100.00     0.0140     71.00      70.40      0          0
 P-(D3-D2)        MH-D3            MH-D2            150.00     0.0130     83.93      83.37      0          0
 P-(D2-D1)        MH-D2            MH-D1            268.00     0.0130     82.69      82.29      0          0
@@ -99,7 +116,6 @@ Quality          F-IN             Dummy-1          50.00      0.0130     78.00  
 [ORIFICES]
 ;;Name           From             To               Type       Offset     Qcoeff     Gated    CloseTime
 ;;-------------- ---------------- ---------------- ---------- ---------- ---------- -------- ----------
-culv             F-IN             F-OUT            SIDE       0          0.650      NO       0
 ICD-D1           D1               MH-D1            SIDE       0          0.650      NO       0
 ICD-D2           D2               MH-D2            SIDE       0          0.650      NO       0
 ICD-D3           D3               MH-D3            SIDE       0          0.650      NO       0
@@ -120,15 +136,16 @@ flush            Dummy-2          F-IN             SIDE       0          0.650  
 [XSECTIONS]
 ;;Link           Shape        Geom1      Geom2      Geom3      Geom4      Barrels
 ;;-------------- ------------ ---------- ---------- ---------- ---------- ----------
-CH(A-B)          IRREGULAR    2.00       0          0          0          1
-CH(B-C)          IRREGULAR    2.50       0          0          0          1
-CH(C-D)          IRREGULAR    6.85       0          0          0          1
-CH(D-E-F)        IRREGULAR    6.85       0          0          0          1
-CH(F-G)          IRREGULAR    5.89       0          0          0          1
-CH(G-H)          IRREGULAR    6.92       0          0          0          1
-CH(H-I)          IRREGULAR    5.80       0          0          0          1
-CH(I-O)          IRREGULAR    4.50       0          0          0          1
-CAVES            TRAPEZOIDAL  3.00       6.00       0          0          1
+CH(A-B)          TRAPEZOIDAL  2.00       10.00      2          2          1
+CH(B-C)          TRAPEZOIDAL  2.50       10.00      2          2          1
+CH(C-D)          TRAPEZOIDAL  6.85       10.00      2          2          1
+CH(D-E-F)        TRAPEZOIDAL  6.85       10.00      2          2          1
+CH(F-G)          TRAPEZOIDAL  5.89       10.00      2          2          1
+CH(G-H)          TRAPEZOIDAL  6.92       10.00      2          2          1
+CH(H-I)          TRAPEZOIDAL  5.80       10.00      2          2          1
+CH(I-O)          TRAPEZOIDAL  4.50       10.00      2          2          1
+culv             RECT_CLOSED  8.00       8.00       0          0          1
+CAVES            TRAPEZOIDAL  3.00       6.00       1          1          1
 P-(D3-D2)        CIRCULAR     1.05       0          0          0          1
 P-(D2-D1)        CIRCULAR     1.80       0          0          0          1
 P-(D1-D)         CIRCULAR     1.80       0          0          0          1
@@ -144,23 +161,22 @@ OVERFLOW         CIRCULAR     1.50       0          0          0          1
 Quality          CIRCULAR     0.70       0          0          0          1
 263              CIRCULAR     0.75       0          0          0          1
 265              CIRCULAR     1.05       0          0          0          1
-culv             RECT_CLOSED  1.00       0          0          0          
-ICD-D1           RECT_CLOSED  0          0          0          0          
-ICD-D2           RECT_CLOSED  0          0          0          0          
-ICD-D3           RECT_CLOSED  0          0          0          0          
-ICD-CS           RECT_CLOSED  0          0          0          0          
-ICD-C1           RECT_CLOSED  0          0          0          0          
-ICD-C3           RECT_CLOSED  0          0          0          0          
-OR-C4            RECT_CLOSED  2.00       0          0          0          
-OR-C5            RECT_CLOSED  2.00       0          0          0          
-or-as            RECT_CLOSED  2.00       0          0          0          
-ICD-DN           RECT_CLOSED  0          0          0          0          
-ICD-CN           RECT_CLOSED  0          0          0          0          
-ICD-BN           RECT_CLOSED  0          0          0          0          
-ICD-C2           RECT_CLOSED  0          0          0          0          
-orfi1            RECT_CLOSED  2.50       0          0          0          
-orife2           RECT_CLOSED  1.00       0          0          0          
-flush            RECT_CLOSED  2.00       0          0          0          
+ICD-D1           RECT_CLOSED  0.56       0.56       0          0
+ICD-D2           RECT_CLOSED  0.89       0.89       0          0
+ICD-D3           RECT_CLOSED  0.56       0.56       0          0
+ICD-CS           RECT_CLOSED  0.56       0.56       0          0
+ICD-C1           RECT_CLOSED  0.56       0.56       0          0
+ICD-C3           RECT_CLOSED  0.56       0.56       0          0
+OR-C4            RECT_CLOSED  2.00       2.00       0          0
+OR-C5            RECT_CLOSED  2.00       2.00       0          0
+or-as            RECT_CLOSED  2.00       2.00       0          0
+ICD-DN           RECT_CLOSED  0.77       0.77       0          0
+ICD-CN           RECT_CLOSED  0.69       0.69       0          0
+ICD-BN           RECT_CLOSED  0.56       0.56       0          0
+ICD-C2           RECT_CLOSED  0.89       0.89       0          0
+orfi1            RECT_CLOSED  2.50       2.50       0          0
+orife2           RECT_CLOSED  1.00       1.00       0          0
+flush            RECT_CLOSED  2.00       2.00       0          0
 
 [LOSSES]
 ;;Link           Inlet      Outlet     Average    Flap Gate
@@ -173,6 +189,7 @@ CH(F-G)          0          0          0          NO
 CH(G-H)          0          0          0          NO
 CH(H-I)          0          0          0          NO
 CH(I-O)          0          0          0          NO
+culv             0          0          0          NO
 CAVES            0          0          0          NO
 P-(D3-D2)        0          0          0          NO
 P-(D2-D1)        0          0          0          NO

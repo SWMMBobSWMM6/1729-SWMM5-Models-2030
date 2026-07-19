@@ -18,6 +18,18 @@ ROUTING_STEP         00:00:15
 VARIABLE_STEP        0.75
 INERTIAL_DAMPING     PARTIAL
 NORMAL_FLOW_LIMITED  BOTH
+START_DATE           01/01/2001
+START_TIME           00:00:00
+REPORT_START_DATE    01/01/2001
+REPORT_START_TIME    00:00:00
+END_DATE             01/02/2001
+END_TIME             00:00:00
+SWEEP_START          01/01
+SWEEP_END            12/31
+DRY_DAYS             0
+REPORT_STEP          00:15:00
+WET_STEP             00:05:00
+DRY_STEP             01:00:00
 
 [JUNCTIONS]
 ;;Name           Elev       MaxDepth   InitDepth  SurDepth   Aponded
@@ -62,8 +74,12 @@ NORMAL_FLOW_LIMITED  BOTH
 38               11.40      0          0          0          0
 86               11.22      0          0          0          0
 88               11.22      0          0          0          0
-90               11.22      0          0          0          0
 out              11.22      0          0          0          0
+
+[OUTFALLS]
+;;Name           Elev       Type       Stage      Gated
+;;-------------- ---------- ---------- ---------- -----
+90               11.22      FREE                  NO
 
 [CONDUITS]
 ;;Name           From             To               Length     Roughness  InOffset   OutOffset  InitFlow   MaxFlow
@@ -160,8 +176,8 @@ WEIR             17               86               TRANSVERSE 8.45       1.840  
 75               CIRCULAR     0.70       0          0          0          1
 91               RECT_CLOSED  1.65       1.65       0          0          1
 94               CIRCULAR     0.50       0          0          0          1
-vortex           RECT_CLOSED  0.40       0          0          0          
-WEIR             RECT_OPEN    0          2.35       0          0          
+vortex           RECT_CLOSED  0.40       0.40       0          0
+WEIR             RECT_OPEN    1.00       2.35       0          0
 
 [LOSSES]
 ;;Link           Inlet      Outlet     Average    Flap Gate

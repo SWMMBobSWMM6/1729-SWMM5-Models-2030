@@ -14,45 +14,68 @@ LINK_OFFSETS         DEPTH
 MIN_SLOPE            0.0
 ALLOW_PONDING        NO
 SKIP_STEADY_STATE    NO
-ROUTING_STEP         00:00:60
+ROUTING_STEP         00:01:00
 VARIABLE_STEP        0.75
 INERTIAL_DAMPING     PARTIAL
 NORMAL_FLOW_LIMITED  BOTH
+START_DATE           01/01/2001
+START_TIME           00:00:00
+REPORT_START_DATE    01/01/2001
+REPORT_START_TIME    00:00:00
+END_DATE             01/02/2001
+END_TIME             00:00:00
+SWEEP_START          01/01
+SWEEP_END            12/31
+DRY_DAYS             0
+REPORT_STEP          00:15:00
+WET_STEP             00:05:00
+DRY_STEP             01:00:00
 
 [JUNCTIONS]
 ;;Name           Elev       MaxDepth   InitDepth  SurDepth   Aponded
 ;;-------------- ---------- ---------- ---------- ---------- ----------
 lakea            100.00     0          0          0          0
-ds               100.00     0          0          0          0
 irrig            130.00     0          0          0          0
 o/flow           130.00     0          0          0          0
+
+[OUTFALLS]
+;;Name           Elev       Type       Stage      Gated
+;;-------------- ---------- ---------- ---------- -----
+ds               100.00     FREE                  NO
 
 [STORAGE]
 ;;Name           Elev       MaxDepth   InitDepth  Shape      Curve/Params
 ;;-------------- ---------- ---------- ---------- ---------- ----------
-lake             103.00     -3.00      0          FUNCTIONAL 0 0          0
-reserv           150.00     0          0          FUNCTIONAL 10.00 0          0
+lake             103.00     10.00      0          FUNCTIONAL 1000.00 0          0
+reserv           150.00     10.00      0          FUNCTIONAL 10.00 0          0
 
 [CONDUITS]
 ;;Name           From             To               Length     Roughness  InOffset   OutOffset  InitFlow   MaxFlow
 ;;-------------- ---------------- ---------------- ---------- ---------- ---------- ---------- ---------- ----------
 tunnel           lakea            lake             500.00     0.0050     71.00      70.00      0          0
-river            lake             ds               500.00     0          68.00      60.00      0          0
+river            lake             ds               500.00     0.0130     68.00      60.00      0          0
 chan1            reserv           irrig            500.00     0.0200     100.00     99.00      0          0
 spill            reserv           o/flow           100.00     0.0050     103.00     103.00     0          0
 
 [PUMPS]
 ;;Name           From             To               PumpCurve  Status   Startup    Shutoff
 ;;-------------- ---------------- ---------------- ---------- -------- ---------- ----------
-212.1            lakea            reserv           *          ON       0          0         
+212.1            lakea            reserv           PC_212_1   ON       1.00       0         
+
+[CURVES]
+;;Name           Type       X-Value    Y-Value
+;;-------------- ---------- ---------- ----------
+;; Synthesized generic pump curves — replace with actual pump data
+PC_212_1         Pump1      0          5
+PC_212_1                    10         10
 
 [XSECTIONS]
 ;;Link           Shape        Geom1      Geom2      Geom3      Geom4      Barrels
 ;;-------------- ------------ ---------- ---------- ---------- ---------- ----------
 tunnel           HORSESHOE    10.00      0          0          0          1
-river            IRREGULAR    15.00      0          0          0          1
+river            TRAPEZOIDAL  15.00      10.00      2          2          1
 chan1            POWER        10.00      16.00      0          0          1
-spill            TRAPEZOIDAL  20.00      20.00      0          0          1
+spill            TRAPEZOIDAL  20.00      20.00      1          1          1
 
 [LOSSES]
 ;;Link           Inlet      Outlet     Average    Flap Gate

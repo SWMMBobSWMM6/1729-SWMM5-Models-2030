@@ -14,10 +14,22 @@ LINK_OFFSETS         DEPTH
 MIN_SLOPE            0.0
 ALLOW_PONDING        NO
 SKIP_STEADY_STATE    NO
-ROUTING_STEP         00:00:300
+ROUTING_STEP         00:05:00
 VARIABLE_STEP        0.75
 INERTIAL_DAMPING     PARTIAL
 NORMAL_FLOW_LIMITED  BOTH
+START_DATE           01/01/2001
+START_TIME           00:00:00
+REPORT_START_DATE    01/01/2001
+REPORT_START_TIME    00:00:00
+END_DATE             01/02/2001
+END_TIME             00:00:00
+SWEEP_START          01/01
+SWEEP_END            12/31
+DRY_DAYS             0
+REPORT_STEP          00:15:00
+WET_STEP             00:05:00
+DRY_STEP             01:00:00
 
 [JUNCTIONS]
 ;;Name           Elev       MaxDepth   InitDepth  SurDepth   Aponded
@@ -30,7 +42,6 @@ H6-65            179.00     0          0          0          0
 H6-100           177.47     0          0          0          0
 H6-35            179.56     0          0          0          0
 H6-41            178.74     0          0          0          0
-Outfall          180.00     0          0          0          0
 WPCP             175.00     0          0          0          0
 H5-130           178.22     0          0          0          0
 H5-34            178.20     0          0          0          0
@@ -51,10 +62,15 @@ E7-124           182.50     0          0          0          0
 Drop             180.00     0          0          0          0
 132              0          0          0          0          0
 
+[OUTFALLS]
+;;Name           Elev       Type       Stage      Gated
+;;-------------- ---------- ---------- ---------- -----
+Outfall          180.00     FREE                  NO
+
 [STORAGE]
 ;;Name           Elev       MaxDepth   InitDepth  Shape      Curve/Params
 ;;-------------- ---------- ---------- ---------- ---------- ----------
-Pond             177.29     0          0.45       FUNCTIONAL 0 0          0
+Pond             177.29     10.00      0.45       FUNCTIONAL 1000.00 0          0
 
 [CONDUITS]
 ;;Name           From             To               Length     Roughness  InOffset   OutOffset  InitFlow   MaxFlow

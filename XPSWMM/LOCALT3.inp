@@ -20,49 +20,66 @@ INERTIAL_DAMPING     PARTIAL
 NORMAL_FLOW_LIMITED  BOTH
 MAX_TRIALS           50
 HEAD_TOLERANCE       0.0033
+START_DATE           01/01/2001
+START_TIME           00:00:00
+REPORT_START_DATE    01/01/2001
+REPORT_START_TIME    00:00:00
+END_DATE             01/02/2001
+END_TIME             00:00:00
+SWEEP_START          01/01
+SWEEP_END            12/31
+DRY_DAYS             0
+REPORT_STEP          00:15:00
+WET_STEP             00:05:00
+DRY_STEP             01:00:00
 
 [JUNCTIONS]
 ;;Name           Elev       MaxDepth   InitDepth  SurDepth   Aponded
 ;;-------------- ---------- ---------- ---------- ---------- ----------
 RCB              1570.00    0          0          0          0
 OLCE             1570.00    0          0          0          0
+DECKPIERS        1527.73    0          0          0          0
+OLTRAP           1527.73    0          0          0          0
+SPTRAP           1527.73    0          0          0          0
+WSBRIDS          1539.19    0          0          0          0
+
+[OUTFALLS]
+;;Name           Elev       Type       Stage      Gated
+;;-------------- ---------- ---------- ---------- -----
+D1A              1570.00    FREE                  NO
 
 [STORAGE]
 ;;Name           Elev       MaxDepth   InitDepth  Shape      Curve/Params
 ;;-------------- ---------- ---------- ---------- ---------- ----------
-OLCAPB           1564.96    -3.96      0          FUNCTIONAL 0 0          0
-D1STOR           1564.96    -4.96      0          FUNCTIONAL 0 0          0
-DIKE2            1560.00    -6.00      0          FUNCTIONAL 0 0          0
-D1A              1570.00    -9.00      0          FUNCTIONAL 0 0          0
-ICHGRO           1570.00    0          0          FUNCTIONAL 0 0          0
+OLCAPB           1564.96    10.00      0          FUNCTIONAL 1000.00 0          0
+D1STOR           1564.96    10.00      0          FUNCTIONAL 1000.00 0          0
+DIKE2            1560.00    10.00      0          FUNCTIONAL 1000.00 0          0
+ICHGRO           1570.00    10.00      0          FUNCTIONAL 1000.00 0          0
 
 [CONDUITS]
 ;;Name           From             To               Length     Roughness  InOffset   OutOffset  InitFlow   MaxFlow
 ;;-------------- ---------------- ---------------- ---------- ---------- ---------- ---------- ---------- ----------
+OLCAPBRD         DECKPIERS        OLTRAP           166.00     0.0140     1527.73    1527.73    0          0
 INWEIR           DIKE2            D1STOR           100.00     0.0140     1530.54    1530.54    0          0
 SPCAPB           SPTRAP           D1STOR           200.00     0.0350     1527.73    1527.73    0          0
 5-10x8RCB        RCB              D1STOR           400.00     0.0140     1538.58    1536.48    0          0
 WSBRIDN          WSBRIDS          D1A              292.00     0.0160     1539.19    1539.04    0          0
 OLCERT           OLCE             D1STOR           57.00      0.0170     1559.71    1559.71    0          0
 
-[WEIRS]
-;;Name           From             To               Type       CrestHt    Qcoeff     Gated    EndCon   EndCoeff   Surcharge
-;;-------------- ---------------- ---------------- ---------- ---------- ---------- -------- -------- ---------- ----------
-OLCAPBRD         DECKPIERS        OLTRAP           TRANSVERSE 0          1.840      NO       0        0          YES
-
 [XSECTIONS]
 ;;Link           Shape        Geom1      Geom2      Geom3      Geom4      Barrels
 ;;-------------- ------------ ---------- ---------- ---------- ---------- ----------
-INWEIR           CUSTOM       0          0          0          0          1
-SPCAPB           CUSTOM       0          0          0          0          1
+OLCAPBRD         TRAPEZOIDAL  32.30      10.00      2          2          1
+INWEIR           TRAPEZOIDAL  1.00       10.00      2          2          1
+SPCAPB           TRAPEZOIDAL  1.00       10.00      2          2          1
 5-10x8RCB        RECT_CLOSED  8.00       50.00      0          0          1
 WSBRIDN          RECT_CLOSED  8.17       52.00      0          0          1
-OLCERT           CUSTOM       0          0          0          0          1
-OLCAPBRD         RECT_OPEN    0          200.00     0          0          
+OLCERT           TRAPEZOIDAL  1.00       10.00      2          2          1
 
 [LOSSES]
 ;;Link           Inlet      Outlet     Average    Flap Gate
 ;;-------------- ---------- ---------- ---------- ----------
+OLCAPBRD         0          0          0          NO
 INWEIR           0          0          0          NO
 SPCAPB           0          0          0          NO
 5-10x8RCB        0          0          0          NO

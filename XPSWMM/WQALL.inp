@@ -16,13 +16,24 @@ ALLOW_PONDING        NO
 SKIP_STEADY_STATE    NO
 INERTIAL_DAMPING     PARTIAL
 NORMAL_FLOW_LIMITED  BOTH
+START_DATE           01/01/2001
+START_TIME           00:00:00
+REPORT_START_DATE    01/01/2001
+REPORT_START_TIME    00:00:00
+END_DATE             01/02/2001
+END_TIME             00:00:00
+SWEEP_START          01/01
+SWEEP_END            12/31
+DRY_DAYS             0
+REPORT_STEP          00:15:00
+WET_STEP             00:05:00
+DRY_STEP             01:00:00
 
 [JUNCTIONS]
 ;;Name           Elev       MaxDepth   InitDepth  SurDepth   Aponded
 ;;-------------- ---------- ---------- ---------- ---------- ----------
 EMC              0          0          0          0          0
 ratingcurv       0          0          0          0          0
-time/rate        0          0          0          0          0
 land/rate        0          0          0          0          0
 time1rate        0          0          0          0          0
 time2rate        0          0          0          0          0
@@ -31,31 +42,36 @@ time4rate        0          0          0          0          0
 time5rate        0          0          0          0          0
 time6rate        0          0          0          0          0
 
+[OUTFALLS]
+;;Name           Elev       Type       Stage      Gated
+;;-------------- ---------- ---------- ---------- -----
+time/rate        0          FREE                  NO
+
 [CONDUITS]
 ;;Name           From             To               Length     Roughness  InOffset   OutOffset  InitFlow   MaxFlow
 ;;-------------- ---------------- ---------------- ---------- ---------- ---------- ---------- ---------- ----------
-5                ratingcurv       EMC              0          0          0          0          0          0
-6                EMC              time/rate        0          0          0          0          0          0
-8                ratingcurv       land/rate        0          0          0          0          0          0
-11               time1rate        time2rate        0          0          0          0          0          0
-13               time2rate        time3rate        0          0          0          0          0          0
-15               time3rate        time4rate        0          0          0          0          0          0
-16               time4rate        land/rate        0          0          0          0          0          0
-18               time3rate        time5rate        0          0          0          0          0          0
-20               time5rate        time6rate        0          0          0          0          0          0
+5                ratingcurv       EMC              100.00     0.0130     0          0          0          0
+6                EMC              time/rate        100.00     0.0130     0          0          0          0
+8                ratingcurv       land/rate        100.00     0.0130     0          0          0          0
+11               time1rate        time2rate        100.00     0.0130     0          0          0          0
+13               time2rate        time3rate        100.00     0.0130     0          0          0          0
+15               time3rate        time4rate        100.00     0.0130     0          0          0          0
+16               time4rate        land/rate        100.00     0.0130     0          0          0          0
+18               time3rate        time5rate        100.00     0.0130     0          0          0          0
+20               time5rate        time6rate        100.00     0.0130     0          0          0          0
 
 [XSECTIONS]
 ;;Link           Shape        Geom1      Geom2      Geom3      Geom4      Barrels
 ;;-------------- ------------ ---------- ---------- ---------- ---------- ----------
-5                CIRCULAR     0          0          0          0          1
-6                CIRCULAR     0          0          0          0          1
-8                CIRCULAR     0          0          0          0          1
-11               CIRCULAR     0          0          0          0          1
-13               CIRCULAR     0          0          0          0          1
-15               CIRCULAR     0          0          0          0          1
-16               CIRCULAR     0          0          0          0          1
-18               CIRCULAR     0          0          0          0          1
-20               CIRCULAR     0          0          0          0          1
+5                CIRCULAR     1.00       0          0          0          1
+6                CIRCULAR     1.00       0          0          0          1
+8                CIRCULAR     1.00       0          0          0          1
+11               CIRCULAR     1.00       0          0          0          1
+13               CIRCULAR     1.00       0          0          0          1
+15               CIRCULAR     1.00       0          0          0          1
+16               CIRCULAR     1.00       0          0          0          1
+18               CIRCULAR     1.00       0          0          0          1
+20               CIRCULAR     1.00       0          0          0          1
 
 [LOSSES]
 ;;Link           Inlet      Outlet     Average    Flap Gate

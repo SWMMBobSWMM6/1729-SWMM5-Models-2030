@@ -20,6 +20,18 @@ INERTIAL_DAMPING     PARTIAL
 NORMAL_FLOW_LIMITED  BOTH
 MAX_TRIALS           50
 HEAD_TOLERANCE       0.0033
+START_DATE           01/01/2001
+START_TIME           00:00:00
+REPORT_START_DATE    01/01/2001
+REPORT_START_TIME    00:00:00
+END_DATE             01/02/2001
+END_TIME             00:00:00
+SWEEP_START          01/01
+SWEEP_END            12/31
+DRY_DAYS             0
+REPORT_STEP          00:15:00
+WET_STEP             00:05:00
+DRY_STEP             01:00:00
 
 [JUNCTIONS]
 ;;Name           Elev       MaxDepth   InitDepth  SurDepth   Aponded
@@ -39,95 +51,107 @@ M                248.00     0          0          0          0
 N                234.00     0          0          0          0
 O                211.00     0          0          0          0
 64               205.50     0          0          0          0
-Offsite          203.00     0          0          0          0
 Null             217.00     0          0          0          0
-Null             245.50     0          0          0          0
+Null_2           245.50     0          0          0          0
 Outfall          235.00     0          0          0          0
-Outfall          228.00     0          0          0          0
-Outfall          228.00     0          0          0          0
-Outfall          246.00     0          0          0          0
-Outfall          248.00     0          0          0          0
-Outfall          262.00     0          0          0          0
-Outfall          253.00     0          0          0          0
-Outfall          252.00     0          0          0          0
-Outfall          250.00     0          0          0          0
-Outfall          234.00     0          0          0          0
-Outfall          209.00     0          0          0          0
+Outfall_2        228.00     0          0          0          0
+Outfall_3        228.00     0          0          0          0
+Outfall_4        246.00     0          0          0          0
+Outfall_5        248.00     0          0          0          0
+Outfall_6        262.00     0          0          0          0
+Outfall_7        253.00     0          0          0          0
+Outfall_8        252.00     0          0          0          0
+Outfall_9        250.00     0          0          0          0
+Outfall_10       234.00     0          0          0          0
+Outfall_11       209.00     0          0          0          0
+Outfall_E        257.90     0          0          0          0
+Outfall_H        248.90     0          0          0          0
+Outfall_G        244.90     0          0          0          0
+Outfall_B        241.90     0          0          0          0
+Ditch_A          230.90     0          0          0          0
+Outfall_L        223.70     0          0          0          0
+Ditch_J-64       218.90     0          0          0          0
+
+[OUTFALLS]
+;;Name           Elev       Type       Stage      Gated
+;;-------------- ---------- ---------- ---------- -----
+Offsite          203.00     FREE                  NO
 
 [CONDUITS]
 ;;Name           From             To               Length     Roughness  InOffset   OutOffset  InitFlow   MaxFlow
 ;;-------------- ---------------- ---------------- ---------- ---------- ---------- ---------- ---------- ----------
 ImpCulvert       64               Offsite          200.00     0.0140     199.00     197.00     0          0
-Ditch            Null             64               3185.00    0.0240     213.00     199.00     0          0
-Ditch            Null             K                1364.00    0.0240     241.50     227.00     0          0
-311              ?                ?                275.00     0.0140     225.00     223.00     0          0
+Ditch_7          Null             64               3185.00    0.0240     213.00     199.00     0          0
+Ditch_8          Null             K                1364.00    0.0240     241.50     227.00     0          0
+Str_H            H                Outfall          20.00      0.0140     249.00     248.90     0          0
+311              K                L                275.00     0.0140     225.00     223.00     0          0
 
 [WEIRS]
 ;;Name           From             To               Type       CrestHt    Qcoeff     Gated    EndCon   EndCoeff   Surcharge
 ;;-------------- ---------------- ---------------- ---------- ---------- ---------- -------- -------- ---------- ----------
-Outfall N        Outfall          O                TRANSVERSE 228.00     1.840      NO       0        0          YES
-Outfall I        Outfall          O                TRANSVERSE 246.00     1.840      NO       0        0          YES
-Ditch            Outfall E        H                TRANSVERSE 258.00     1.840      NO       0        0          YES
-Ditch            Outfall H        F                TRANSVERSE 248.00     1.840      NO       0        0          YES
-Ditch            Outfall G        Null             TRANSVERSE 245.00     1.840      NO       0        0          YES
-Ditch            Outfall B        K                TRANSVERSE 242.00     1.840      NO       0        0          YES
-Ditch            Ditch A          J                TRANSVERSE 231.00     1.840      NO       0        0          YES
-Outfall M        Outfall          Null             TRANSVERSE 242.00     1.840      NO       0        0          YES
-Ditch            Outfall L        Null             TRANSVERSE 224.00     1.840      NO       0        0          YES
-Weir             Ditch J-64       Null             TRANSVERSE 219.00     1.840      NO       0        0          YES
-Outfall O        Outfall          64               TRANSVERSE 202.00     1.840      NO       0        0          YES
-Str A            ?                ?                TRANSVERSE 231.00     1.840      NO       0        0          YES
-Str J            ?                ?                TRANSVERSE 219.00     1.840      NO       0        0          YES
-Str N            ?                ?                TRANSVERSE 228.00     1.840      NO       0        0          YES
-Str I            ?                ?                TRANSVERSE 248.00     1.840      NO       0        0          YES
-Str CD           ?                ?                V-NOTCH    254.50     1.840      NO       0        0          YES
-Str G            ?                ?                TRANSVERSE 250.50     1.840      NO       0        0          YES
-Str H            ?                ?                TRANSVERSE 251.00     1.840      NO       0        0          YES
-Str E            ?                ?                TRANSVERSE 258.00     1.840      NO       0        0          YES
-Str F            ?                ?                TRANSVERSE 250.00     1.840      NO       0        0          YES
-Str M            ?                ?                TRANSVERSE 243.80     1.840      NO       0        0          YES
-Str B            ?                ?                TRANSVERSE 242.00     1.840      NO       0        0          YES
-Str O            ?                ?                TRANSVERSE 202.00     1.840      NO       0        0          YES
-Str L            ?                ?                TRANSVERSE 223.00     1.840      NO       0        0          YES
+Outfall_N        Outfall          O                TRANSVERSE 228.00     1.840      NO       0        0          YES
+Outfall_I        Outfall          O                TRANSVERSE 246.00     1.840      NO       0        0          YES
+Ditch            Outfall_E        H                TRANSVERSE 258.00     1.840      NO       0        0          YES
+Ditch_2          Outfall_H        F                TRANSVERSE 248.00     1.840      NO       0        0          YES
+Ditch_3          Outfall_G        Null             TRANSVERSE 245.00     1.840      NO       0        0          YES
+Ditch_4          Outfall_B        K                TRANSVERSE 242.00     1.840      NO       0        0          YES
+Ditch_5          Ditch_A          J                TRANSVERSE 231.00     1.840      NO       0        0          YES
+Outfall_M        Outfall          Null             TRANSVERSE 242.00     1.840      NO       0        0          YES
+Ditch_6          Outfall_L        Null             TRANSVERSE 224.00     1.840      NO       0        0          YES
+Weir             Ditch_J-64       Null             TRANSVERSE 219.00     1.840      NO       0        0          YES
+Outfall_O        Outfall          64               TRANSVERSE 202.00     1.840      NO       0        0          YES
+Str_A            A                Outfall          TRANSVERSE 231.00     1.840      NO       0        0          YES
+Str_J            J                Outfall          TRANSVERSE 219.00     1.840      NO       0        0          YES
+Str_N            N                Outfall          TRANSVERSE 228.00     1.840      NO       0        0          YES
+Str_I            I                Outfall          TRANSVERSE 248.00     1.840      NO       0        0          YES
+Str_CD           C/D              G                V-NOTCH    254.50     1.840      NO       0        0          YES
+Str_G            G                Outfall          TRANSVERSE 250.50     1.840      NO       0        0          YES
+Str_E            E                Outfall          TRANSVERSE 258.00     1.840      NO       0        0          YES
+Str_F            F                G                TRANSVERSE 250.00     1.840      NO       0        0          YES
+Str_M            M                Outfall          TRANSVERSE 243.80     1.840      NO       0        0          YES
+Str_B            B                Outfall          TRANSVERSE 242.00     1.840      NO       0        0          YES
+Str_O            O                Outfall          TRANSVERSE 202.00     1.840      NO       0        0          YES
+Str_L            L                Outfall          TRANSVERSE 223.00     1.840      NO       0        0          YES
 
 [XSECTIONS]
 ;;Link           Shape        Geom1      Geom2      Geom3      Geom4      Barrels
 ;;-------------- ------------ ---------- ---------- ---------- ---------- ----------
 ImpCulvert       CIRCULAR     4.00       0          0          0          1
-Ditch            TRAPEZOIDAL  4.00       4.00       0          0          1
-Ditch            TRAPEZOIDAL  3.00       2.00       0          0          1
+Ditch_7          TRAPEZOIDAL  4.00       4.00       1          1          1
+Ditch_8          TRAPEZOIDAL  3.00       2.00       1          1          1
+Str_H            CIRCULAR     2.00       0          0          0          1
 311              RECT_CLOSED  3.00       5.00       0          0          2
-Outfall N        RECT_OPEN    0          4.00       0          0          
-Outfall I        RECT_OPEN    0          4.00       0          0          
-Ditch            RECT_OPEN    0          4.00       0          0          
-Ditch            RECT_OPEN    0          4.00       0          0          
-Ditch            RECT_OPEN    0          4.00       0          0          
-Ditch            RECT_OPEN    0          4.00       0          0          
-Ditch            RECT_OPEN    0          4.00       0          0          
-Outfall M        RECT_OPEN    0          4.00       0          0          
-Ditch            RECT_OPEN    0          4.00       0          0          
-Weir             RECT_OPEN    0          4.00       0          0          
-Outfall O        RECT_OPEN    0          4.00       0          0          
-Str A            RECT_OPEN    0          3.25       0          0          
-Str J            RECT_OPEN    0          0.50       0          0          
-Str N            RECT_OPEN    0          1.30       0          0          
-Str I            RECT_OPEN    0          4.00       0          0          
-Str CD           RECT_OPEN    0          4.00       0          0          
-Str G            RECT_OPEN    0          6.00       0          0          
-Str H            RECT_OPEN    0          4.00       0          0          
-Str E            RECT_OPEN    0          3.00       0          0          
-Str F            RECT_OPEN    0          4.00       0          0          
-Str M            RECT_OPEN    0          4.00       0          0          
-Str B            RECT_OPEN    0          0.50       0          0          
-Str O            RECT_OPEN    0          0.35       0          0          
-Str L            RECT_OPEN    0          1.60       0          0          
+Outfall_N        RECT_OPEN    1.00       4.00       0          0
+Outfall_I        RECT_OPEN    1.00       4.00       0          0
+Ditch            RECT_OPEN    1.00       4.00       0          0
+Ditch_2          RECT_OPEN    1.00       4.00       0          0
+Ditch_3          RECT_OPEN    1.00       4.00       0          0
+Ditch_4          RECT_OPEN    1.00       4.00       0          0
+Ditch_5          RECT_OPEN    1.00       4.00       0          0
+Outfall_M        RECT_OPEN    1.00       4.00       0          0
+Ditch_6          RECT_OPEN    1.00       4.00       0          0
+Weir             RECT_OPEN    1.00       4.00       0          0
+Outfall_O        RECT_OPEN    1.00       4.00       0          0
+Str_A            RECT_OPEN    1.00       3.25       0          0
+Str_J            RECT_OPEN    1.00       0.50       0          0
+Str_N            RECT_OPEN    1.00       1.30       0          0
+Str_I            RECT_OPEN    1.00       4.00       0          0
+Str_CD           TRIANGULAR   1.00       4.00       0          0
+Str_G            RECT_OPEN    1.00       6.00       0          0
+Str_E            RECT_OPEN    1.00       3.00       0          0
+Str_F            RECT_OPEN    1.00       4.00       0          0
+Str_M            RECT_OPEN    1.00       4.00       0          0
+Str_B            RECT_OPEN    1.00       0.50       0          0
+Str_O            RECT_OPEN    1.00       0.35       0          0
+Str_L            RECT_OPEN    1.00       1.60       0          0
 
 [LOSSES]
 ;;Link           Inlet      Outlet     Average    Flap Gate
 ;;-------------- ---------- ---------- ---------- ----------
 ImpCulvert       0          0          0          NO
-Ditch            0          0          0          NO
-Ditch            0          0          0          NO
+Ditch_7          0          0          0          NO
+Ditch_8          0          0          0          NO
+Str_H            0          0          0          NO
 311              0          0          0          NO
 
 [COORDINATES]
@@ -150,18 +174,18 @@ O                28.08              60.68
 64               27.48              60.68             
 Offsite          27.48              61.18             
 Null             27.48              59.88             
-Null             27.68              58.98             
+Null_2           27.68              58.98             
 Outfall          26.98              59.08             
-Outfall          26.98              59.88             
-Outfall          27.48              59.58             
-Outfall          27.28              58.98             
-Outfall          27.68              58.28             
-Outfall          28.28              57.98             
-Outfall          28.28              58.38             
-Outfall          27.98              58.98             
-Outfall          28.28              60.68             
-Outfall          28.08              60.38             
-Outfall          27.78              60.68             
+Outfall_2        26.98              59.88             
+Outfall_3        27.48              59.58             
+Outfall_4        27.28              58.98             
+Outfall_5        27.68              58.28             
+Outfall_6        28.28              57.98             
+Outfall_7        28.28              58.38             
+Outfall_8        27.98              58.98             
+Outfall_9        28.28              60.68             
+Outfall_10       28.08              60.38             
+Outfall_11       27.78              60.68             
 
 [MAP]
 DIMENSIONS 26.98 57.78 28.28 61.18

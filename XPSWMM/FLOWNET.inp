@@ -19,12 +19,23 @@ VARIABLE_STEP        0.75
 INERTIAL_DAMPING     PARTIAL
 NORMAL_FLOW_LIMITED  BOTH
 MAX_TRIALS           50
+START_DATE           01/01/2001
+START_TIME           00:00:00
+REPORT_START_DATE    01/01/2001
+REPORT_START_TIME    00:00:00
+END_DATE             01/02/2001
+END_TIME             00:00:00
+SWEEP_START          01/01
+SWEEP_END            12/31
+DRY_DAYS             0
+REPORT_STEP          00:15:00
+WET_STEP             00:05:00
+DRY_STEP             01:00:00
 
 [JUNCTIONS]
 ;;Name           Elev       MaxDepth   InitDepth  SurDepth   Aponded
 ;;-------------- ---------- ---------- ---------- ---------- ----------
 A                35.00      0          0          0          0
-A020/B           21.50      0          0          0          0
 A019/C           18.06      0          0          0          0
 A017/D           14.80      0          0          0          0
 A016/E           14.76      0          0          0          0
@@ -60,12 +71,25 @@ Dummy            6.00       0          0          0          0
 542              0          0          0          0          0
 543              6.00       0          0          0          0
 544              6.30       0          0          0          0
+EquivWeir        0          0          0          0          0
+A_O/F            32.16      0          0          0          0
+A20O/F           20.06      0          0          0          0
+A19O/F           16.15      0          0          0          0
+A18O/F           15.02      0          0          0          0
+A17O/F           12.56      0          0          0          0
+A16O/F           12.15      0          0          0          0
+F_O/F            11.61      0          0          0          0
+
+[OUTFALLS]
+;;Name           Elev       Type       Stage      Gated
+;;-------------- ---------- ---------- ---------- -----
+A020/B           21.50      FREE                  NO
 
 [STORAGE]
 ;;Name           Elev       MaxDepth   InitDepth  Shape      Curve/Params
 ;;-------------- ---------- ---------- ---------- ---------- ----------
-X001CB           6.00       0          0          FUNCTIONAL 0 0          0
-A10A/J           6.30       0          0          FUNCTIONAL 2.62 0          0
+X001CB           6.00       10.00      0          FUNCTIONAL 1000.00 0          0
+A10A/J           6.30       10.00      0          FUNCTIONAL 2.62 0          0
 
 [CONDUITS]
 ;;Name           From             To               Length     Roughness  InOffset   OutOffset  InitFlow   MaxFlow
@@ -98,16 +122,16 @@ Weir8A           A008A            A8ADum           40.00      0.0380     6.39   
 A14-13           A014/G           A013             26.60      0.0130     7.34       5.91       0          0
 X3-Dum           X003             DumCB            10.00      0.0250     4.40       4.30       0          0
 Dum-CB           DumCB            X001CB           10.00      0.0250     4.30       4.20       0          0
-A-A020           A O/F            A020/B           279.40     0.0130     32.16      20.12      0          0
+A-A020           A_O/F            A020/B           279.40     0.0130     32.16      20.12      0          0
 A20-19           A20O/F           A019/C           81.90      0.0130     20.06      16.16      0          0
 A19-18           A19O/F           A018             48.90      0.0130     16.15      15.10      0          0
 A18-17           A18O/F           A017/D           129.10     0.0130     15.02      12.97      0          0
 A17-16           A17O/F           A016/E           121.20     0.0130     12.56      12.18      0          0
 A016-F           A16O/F           F                116.40     0.0130     12.15      11.61      0          0
-F-A015           F O/F            A015             73.10      0.0130     11.61      11.27      0          0
+F-A015           F_O/F            A015             73.10      0.0130     11.61      11.27      0          0
 A017/O           A017/D           A014/G           300.00     0.0250     14.60      8.61       0          0
 RATING1          X001CB           CB               30.00      0.0130     3.60       3.50       0          0
-541              ?                ?                50.00      0.0140     3.60       3.10       0          0
+541              542              Dummy            50.00      0.0140     3.60       3.10       0          0
 RATING2          A10A/J           544              30.00      0.0130     3.50       3.20       0          0
 
 [ORIFICES]
@@ -118,7 +142,7 @@ Orifice          EquivWeir        A10Dum           SIDE       0          0.650  
 [WEIRS]
 ;;Name           From             To               Type       CrestHt    Qcoeff     Gated    EndCon   EndCoeff   Surcharge
 ;;-------------- ---------------- ---------------- ---------- ---------- ---------- -------- -------- ---------- ----------
-CB O/F           X001CB           A010/K           TRANSVERSE 5.80       1.840      NO       0        0          YES
+CB_O/F           X001CB           A010/K           TRANSVERSE 5.80       1.840      NO       0        0          YES
 
 [XSECTIONS]
 ;;Link           Shape        Geom1      Geom2      Geom3      Geom4      Barrels
@@ -147,10 +171,10 @@ CB-10A           RECT_CLOSED  1.24       1.83       0          0          1
 A10B-A           CIRCULAR     1.07       0          0          0          1
 A10-K            CIRCULAR     0.45       0          0          0          1
 A08A-8           CIRCULAR     0.68       0          0          0          1
-Weir8A           TRAPEZOIDAL  0.45       1.30       0          0          1
+Weir8A           TRAPEZOIDAL  0.45       1.30       1          1          1
 A14-13           CIRCULAR     0.60       0          0          0          1
-X3-Dum           TRAPEZOIDAL  1.60       10.00      0          0          1
-Dum-CB           TRAPEZOIDAL  1.70       10.00      0          0          1
+X3-Dum           TRAPEZOIDAL  1.60       10.00      1          1          1
+Dum-CB           TRAPEZOIDAL  1.70       10.00      1          1          1
 A-A020           CIRCULAR     0.45       0          0          0          1
 A20-19           CIRCULAR     0.52       0          0          0          1
 A19-18           CIRCULAR     0.52       0          0          0          1
@@ -158,12 +182,12 @@ A18-17           CIRCULAR     0.60       0          0          0          1
 A17-16           CIRCULAR     0.91       0          0          0          1
 A016-F           CIRCULAR     0.91       0          0          0          1
 F-A015           CIRCULAR     0.91       0          0          0          1
-A017/O           TRAPEZOIDAL  0.20       20.00      0          0          1
-RATING1          CUSTOM       1.50       2.40       0          0          1
+A017/O           TRAPEZOIDAL  0.20       20.00      1          1          1
+RATING1          TRAPEZOIDAL  1.50       2.40       2          2          1
 541              CIRCULAR     1.00       0          0          0          1
-RATING2          CUSTOM       1.50       2.40       0          0          1
-Orifice          RECT_CLOSED  0.30       0          0          0          
-CB O/F           RECT_OPEN    0          30.00      0          0          
+RATING2          TRAPEZOIDAL  1.50       2.40       2          2          1
+Orifice          RECT_CLOSED  0.30       0.30       0          0
+CB_O/F           RECT_OPEN    1.00       30.00      0          0
 
 [LOSSES]
 ;;Link           Inlet      Outlet     Average    Flap Gate

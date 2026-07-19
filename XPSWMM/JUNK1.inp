@@ -18,6 +18,18 @@ ROUTING_STEP         00:00:15
 VARIABLE_STEP        0.75
 INERTIAL_DAMPING     PARTIAL
 NORMAL_FLOW_LIMITED  BOTH
+START_DATE           01/01/2001
+START_TIME           00:00:00
+REPORT_START_DATE    01/01/2001
+REPORT_START_TIME    00:00:00
+END_DATE             01/02/2001
+END_TIME             00:00:00
+SWEEP_START          01/01
+SWEEP_END            12/31
+DRY_DAYS             0
+REPORT_STEP          00:15:00
+WET_STEP             00:05:00
+DRY_STEP             01:00:00
 
 [JUNCTIONS]
 ;;Name           Elev       MaxDepth   InitDepth  SurDepth   Aponded
@@ -39,7 +51,11 @@ NORMAL_FLOW_LIMITED  BOTH
 9052             21.50      0          0          0          0
 9054             22.50      0          0          0          0
 9062             13.90      0          0          0          0
-9072             17.30      0          0          0          0
+
+[OUTFALLS]
+;;Name           Elev       Type       Stage      Gated
+;;-------------- ---------- ---------- ---------- -----
+9072             17.30      FREE                  NO
 
 [CONDUITS]
 ;;Name           From             To               Length     Roughness  InOffset   OutOffset  InitFlow   MaxFlow
@@ -65,23 +81,23 @@ NORMAL_FLOW_LIMITED  BOTH
 [XSECTIONS]
 ;;Link           Shape        Geom1      Geom2      Geom3      Geom4      Barrels
 ;;-------------- ------------ ---------- ---------- ---------- ---------- ----------
-8072             TRAPEZOIDAL  30.00      0          0          0          1
-8070             TRAPEZOIDAL  30.00      0          0          0          1
-8062             TRAPEZOIDAL  30.00      0          0          0          1
-8060             TRAPEZOIDAL  30.00      0          0          0          1
-8054             TRAPEZOIDAL  30.00      0          0          0          1
-8052             TRAPEZOIDAL  30.00      0          0          0          1
-8050             TRAPEZOIDAL  30.00      0          0          0          1
-8042             TRAPEZOIDAL  30.00      0          0          0          1
-8040             TRAPEZOIDAL  30.00      0          0          0          1
-8032             TRAPEZOIDAL  30.00      0          0          0          1
-8030             TRAPEZOIDAL  30.00      0          0          0          1
-8024             TRAPEZOIDAL  30.00      0          0          0          1
-8022             TRAPEZOIDAL  30.00      0          0          0          1
-8020             TRAPEZOIDAL  30.00      0          0          0          1
-8014             TRAPEZOIDAL  30.00      0          0          0          1
-8012             TRAPEZOIDAL  30.00      0          0          0          1
-8010             TRAPEZOIDAL  30.00      0          0          0          1
+8072             TRAPEZOIDAL  30.00      1.00       1          1          1
+8070             TRAPEZOIDAL  30.00      1.00       1          1          1
+8062             TRAPEZOIDAL  30.00      1.00       1          1          1
+8060             TRAPEZOIDAL  30.00      1.00       1          1          1
+8054             TRAPEZOIDAL  30.00      1.00       1          1          1
+8052             TRAPEZOIDAL  30.00      1.00       1          1          1
+8050             TRAPEZOIDAL  30.00      1.00       1          1          1
+8042             TRAPEZOIDAL  30.00      1.00       1          1          1
+8040             TRAPEZOIDAL  30.00      1.00       1          1          1
+8032             TRAPEZOIDAL  30.00      1.00       1          1          1
+8030             TRAPEZOIDAL  30.00      1.00       1          1          1
+8024             TRAPEZOIDAL  30.00      1.00       1          1          1
+8022             TRAPEZOIDAL  30.00      1.00       1          1          1
+8020             TRAPEZOIDAL  30.00      1.00       1          1          1
+8014             TRAPEZOIDAL  30.00      1.00       1          1          1
+8012             TRAPEZOIDAL  30.00      1.00       1          1          1
+8010             TRAPEZOIDAL  30.00      1.00       1          1          1
 
 [LOSSES]
 ;;Link           Inlet      Outlet     Average    Flap Gate

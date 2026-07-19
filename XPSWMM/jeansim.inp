@@ -20,6 +20,18 @@ INERTIAL_DAMPING     PARTIAL
 NORMAL_FLOW_LIMITED  BOTH
 MAX_TRIALS           50
 HEAD_TOLERANCE       .001
+START_DATE           01/01/2001
+START_TIME           00:00:00
+REPORT_START_DATE    01/01/2001
+REPORT_START_TIME    00:00:00
+END_DATE             01/02/2001
+END_TIME             00:00:00
+SWEEP_START          01/01
+SWEEP_END            12/31
+DRY_DAYS             0
+REPORT_STEP          00:15:00
+WET_STEP             00:05:00
+DRY_STEP             01:00:00
 
 [JUNCTIONS]
 ;;Name           Elev       MaxDepth   InitDepth  SurDepth   Aponded
@@ -35,13 +47,12 @@ HEAD_TOLERANCE       .001
 202              0          0          0          0          0
 204              25.00      0          0          0          0
 1004             130.00     0          0          0          0
-1000             130.00     0          0          0          0
+1000_2           130.00     0          0          0          0
 206              130.00     0          0          0          0
 207              130.00     0          0          0          0
 203              0          0          0          0          0
 302              0          0          0          0          0
 402              0          0          0          0          0
-303              0          0          0          0          0
 403              0          0          0          0          0
 1002             130.00     0          0          0          0
 1003             130.00     0          0          0          0
@@ -51,11 +62,16 @@ HEAD_TOLERANCE       .001
 205              0          0          0          0          0
 1005             130.00     0          0          0          0
 
+[OUTFALLS]
+;;Name           Elev       Type       Stage      Gated
+;;-------------- ---------- ---------- ---------- -----
+303              0          FREE                  NO
+
 [STORAGE]
 ;;Name           Elev       MaxDepth   InitDepth  Shape      Curve/Params
 ;;-------------- ---------- ---------- ---------- ---------- ----------
-1000             130.00     -15.50     0          FUNCTIONAL 3000.00 0          0
-207              130.00     -15.00     0          FUNCTIONAL 2500.00 0          0
+1000             130.00     10.00      0          FUNCTIONAL 3000.00 0          0
+207_2            130.00     10.00      0          FUNCTIONAL 2500.00 0          0
 
 [CONDUITS]
 ;;Name           From             To               Length     Roughness  InOffset   OutOffset  InitFlow   MaxFlow
@@ -68,6 +84,7 @@ HEAD_TOLERANCE       .001
 125              104              105              680.00     0.0140     0          0          0          0
 Ferguson         102              105              10.00      0.0140     0          0          0          0
 174              204              205              850.00     0.0130     13.22      11.95      0          0
+388.1            1000             1000             50.00      0.0140     111.00     110.50     0          0
 192              206              207              10.00      0.0140     113.02     113.00     0          0
 409.1            1001             1002             10.00      0.0120     105.90     105.88     0          0
 22               203              205              10.00      0.0140     0          0          0          0
@@ -86,21 +103,17 @@ Ferguson         102              105              10.00      0.0140     0      
 318              205              206              10.00      0.0140     0          0          0          0
 322              1004             1005             10.00      0.0140     105.07     105.05     0          0
 
-[WEIRS]
-;;Name           From             To               Type       CrestHt    Qcoeff     Gated    EndCon   EndCoeff   Surcharge
-;;-------------- ---------------- ---------------- ---------- ---------- ---------- -------- -------- ---------- ----------
-388.1            1000             1000             TRANSVERSE 109.02     1.840      NO       0        0          YES
-
 [PUMPS]
 ;;Name           From             To               PumpCurve  Status   Startup    Shutoff
 ;;-------------- ---------------- ---------------- ---------- -------- ---------- ----------
-409.1            1000             1001             PC_409.1   ON       0          0         
+409.1_2          1000             1001             PC_409_1_2 ON       1.00       0         
 
 [CURVES]
 ;;Name           Type       X-Value    Y-Value
 ;;-------------- ---------- ---------- ----------
-PC_409.1         Pump2      0          0
-;
+;; Synthesized generic pump curves — replace with actual pump data
+PC_409_1_2       Pump1      0          5
+PC_409_1_2                  10         10
 
 [XSECTIONS]
 ;;Link           Shape        Geom1      Geom2      Geom3      Geom4      Barrels
@@ -113,6 +126,7 @@ PC_409.1         Pump2      0          0
 125              CIRCULAR     1.20       0          0          0          1
 Ferguson         CIRCULAR     1.22       0          0          0          1
 174              CIRCULAR     3.60       0          0          0          1
+388.1            CIRCULAR     1.20       0          0          0          1
 192              CIRCULAR     2.00       0          0          0          1
 409.1            CIRCULAR     0.69       0          0          0          1
 22               CIRCULAR     1.22       0          0          0          1
@@ -130,7 +144,6 @@ Ferguson         CIRCULAR     1.22       0          0          0          1
 316              CIRCULAR     1.50       0          0          0          1
 318              CIRCULAR     1.80       0          0          0          1
 322              CIRCULAR     1.20       0          0          0          1
-388.1            RECT_OPEN    0          10.00      0          0          
 
 [LOSSES]
 ;;Link           Inlet      Outlet     Average    Flap Gate
@@ -143,6 +156,7 @@ Ferguson         CIRCULAR     1.22       0          0          0          1
 125              0          0          0          NO
 Ferguson         0          0          0          NO
 174              0          0          0          NO
+388.1            0          0          0          NO
 192              0          0          0          NO
 409.1            0          0          0          NO
 22               0          0          0          NO
@@ -176,7 +190,7 @@ Ferguson         0          0          0          NO
 204              65.63              166.62            
 1000             132.34             35.51             
 1004             142.38             150.11            
-1000             142.31             18.34             
+1000_2           142.31             18.34             
 206              105.81             150.96            
 207              120.98             180.74            
 203              72.38              146.68            
@@ -188,7 +202,7 @@ Ferguson         0          0          0          NO
 1003             137.39             107.88            
 1001             132.77             55.60             
 106              119.03             42.06             
-207              119.07             149.35            
+207_2            119.07             149.35            
 105              99.60              47.60             
 205              92.28              151.44            
 1005             142.86             182.71            

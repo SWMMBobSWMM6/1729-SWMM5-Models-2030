@@ -14,10 +14,22 @@ LINK_OFFSETS         DEPTH
 MIN_SLOPE            0.0
 ALLOW_PONDING        NO
 SKIP_STEADY_STATE    NO
-ROUTING_STEP         00:00:60
+ROUTING_STEP         00:01:00
 VARIABLE_STEP        0.75
 INERTIAL_DAMPING     PARTIAL
 NORMAL_FLOW_LIMITED  BOTH
+START_DATE           01/01/2001
+START_TIME           00:00:00
+REPORT_START_DATE    01/01/2001
+REPORT_START_TIME    00:00:00
+END_DATE             01/02/2001
+END_TIME             00:00:00
+SWEEP_START          01/01
+SWEEP_END            12/31
+DRY_DAYS             0
+REPORT_STEP          00:15:00
+WET_STEP             00:05:00
+DRY_STEP             01:00:00
 
 [JUNCTIONS]
 ;;Name           Elev       MaxDepth   InitDepth  SurDepth   Aponded
@@ -31,7 +43,6 @@ mh6              18.75      0          0          0          0
 mh7              18.50      0          0          0          0
 mh8              18.25      0          0          0          0
 mh9              18.00      0          0          0          0
-frdrnout1        20.00      0          0          0          0
 frdrnout2        20.00      0          0          0          0
 frdrnout3        20.00      0          0          0          0
 frdrnout4        20.00      0          0          0          0
@@ -39,6 +50,11 @@ frdrnout5        20.00      0          0          0          0
 frdrnout6        20.00      0          0          0          0
 frdrnout7        20.00      0          0          0          0
 frdrnout8        20.00      0          0          0          0
+
+[OUTFALLS]
+;;Name           Elev       Type       Stage      Gated
+;;-------------- ---------- ---------- ---------- -----
+frdrnout1        20.00      FREE                  NO
 
 [CONDUITS]
 ;;Name           From             To               Length     Roughness  InOffset   OutOffset  InitFlow   MaxFlow
@@ -51,14 +67,6 @@ frdrain5         mh5              mh6              200.00     0.0140     9.00   
 frdrain6         mh6              mh7              200.00     0.0140     8.75       8.50       0          0
 frdrain7         mh7              mh8              200.00     0.0140     8.50       8.25       0          0
 frdrain8         mh8              mh9              200.00     0.0140     8.25       8.00       0          0
-drainloss1       mh2              frdrnout1        0          0          0          0          0          0
-drainloss2       mh3              frdrnout2        0          0          0          0          0          0
-drainloss3       mh4              frdrnout3        0          0          0          0          0          0
-drainloss4       mh5              frdrnout4        0          0          0          0          0          0
-drainloss5       mh6              frdrnout5        0          0          0          0          0          0
-drainloss6       mh7              frdrnout6        0          0          0          0          0          0
-drainloss7       mh8              frdrnout7        0          0          0          0          0          0
-drainloss8       mh9              frdrnout8        0          0          0          0          0          0
 
 [XSECTIONS]
 ;;Link           Shape        Geom1      Geom2      Geom3      Geom4      Barrels
@@ -71,14 +79,6 @@ frdrain5         CIRCULAR     2.00       0          0          0          1
 frdrain6         CIRCULAR     2.00       0          0          0          1
 frdrain7         CIRCULAR     2.00       0          0          0          1
 frdrain8         CIRCULAR     2.00       0          0          0          1
-drainloss1       CIRCULAR     0          0          0          0          1
-drainloss2       CIRCULAR     0          0          0          0          1
-drainloss3       CIRCULAR     0          0          0          0          1
-drainloss4       CIRCULAR     0          0          0          0          1
-drainloss5       CIRCULAR     0          0          0          0          1
-drainloss6       CIRCULAR     0          0          0          0          1
-drainloss7       CIRCULAR     0          0          0          0          1
-drainloss8       CIRCULAR     0          0          0          0          1
 
 [LOSSES]
 ;;Link           Inlet      Outlet     Average    Flap Gate
@@ -91,14 +91,6 @@ frdrain5         0          0          0          NO
 frdrain6         0          0          0          NO
 frdrain7         0          0          0          NO
 frdrain8         0          0          0          NO
-drainloss1       0          0          0          NO
-drainloss2       0          0          0          NO
-drainloss3       0          0          0          NO
-drainloss4       0          0          0          NO
-drainloss5       0          0          0          NO
-drainloss6       0          0          0          NO
-drainloss7       0          0          0          NO
-drainloss8       0          0          0          NO
 
 [INFLOWS]
 ;;Node           Constituent  Time Series      Type     Mfactor  Sfactor  Baseline Pattern

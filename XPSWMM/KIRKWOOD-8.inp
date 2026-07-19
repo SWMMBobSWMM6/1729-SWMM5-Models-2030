@@ -20,6 +20,18 @@ INERTIAL_DAMPING     PARTIAL
 NORMAL_FLOW_LIMITED  BOTH
 MAX_TRIALS           50
 HEAD_TOLERANCE       0.133
+START_DATE           01/01/2001
+START_TIME           00:00:00
+REPORT_START_DATE    01/01/2001
+REPORT_START_TIME    00:00:00
+END_DATE             01/02/2001
+END_TIME             00:00:00
+SWEEP_START          01/01
+SWEEP_END            12/31
+DRY_DAYS             0
+REPORT_STEP          00:15:00
+WET_STEP             00:05:00
+DRY_STEP             01:00:00
 
 [JUNCTIONS]
 ;;Name           Elev       MaxDepth   InitDepth  SurDepth   Aponded
@@ -94,7 +106,6 @@ HEAD_TOLERANCE       0.133
 1841             76.41      0          0          0          0
 1839             76.87      0          0          0          0
 1838             78.05      0          0          0          0
-110              78.10      0          0          0          0
 1944             74.31      0          0          0          0
 1943             75.10      0          0          0          0
 20917            74.16      0          0          0          0
@@ -112,6 +123,11 @@ HEAD_TOLERANCE       0.133
 185              77.65      0          0          0          0
 188              73.80      0          0          0          0
 204              74.90      0          0          0          0
+
+[OUTFALLS]
+;;Name           Elev       Type       Stage      Gated
+;;-------------- ---------- ---------- ---------- -----
+110              78.10      FREE                  NO
 
 [CONDUITS]
 ;;Name           From             To               Length     Roughness  InOffset   OutOffset  InitFlow   MaxFlow
@@ -135,7 +151,7 @@ HEAD_TOLERANCE       0.133
 2930             1930             1922             241.14     0.0130     67.60      67.15      0          0
 78               20805            20826            40.74      0.0130     69.73      69.67      0          0
 180              179              20856            271.39     0.0140     72.80      71.80      0          0
-30901            ?                ?                47.04      0.0130     70.81      70.63      0          0
+30901            20901            1930             47.04      0.0130     70.81      70.63      0          0
 30928            20928            1950             16.03      0.0130     71.20      71.10      0          0
 30856            20856            20918            37.83      0.0130     69.36      68.68      0          0
 30855            20855            20919            44.39      0.0130     69.97      69.50      0          0
@@ -216,19 +232,19 @@ HEAD_TOLERANCE       0.133
 2846             CIRCULAR     2.00       0          0          0          1
 30633            CIRCULAR     2.00       0          0          0          1
 2837             CIRCULAR     2.00       0          0          0          1
-178              TRAPEZOIDAL  0.50       25.00      0          0          1
-166              TRAPEZOIDAL  0.50       25.00      0          0          1
+178              TRAPEZOIDAL  0.50       25.00      1          1          1
+166              TRAPEZOIDAL  0.50       25.00      1          1          1
 160              CIRCULAR     2.00       0          0          0          1
 2940             CIRCULAR     3.50       0          0          0          1
 30919            CIRCULAR     2.00       0          0          0          1
 2923             CIRCULAR     2.00       0          0          0          1
-184              TRAPEZOIDAL  0.50       25.00      0          0          1
-176              TRAPEZOIDAL  0.50       25.00      0          0          1
-174              TRAPEZOIDAL  0.50       25.00      0          0          1
+184              TRAPEZOIDAL  0.50       25.00      1          1          1
+176              TRAPEZOIDAL  0.50       25.00      1          1          1
+174              TRAPEZOIDAL  0.50       25.00      1          1          1
 30918            CIRCULAR     2.00       0          0          0          1
 2930             CIRCULAR     2.00       0          0          0          1
 78               CIRCULAR     2.00       0          0          0          1
-180              TRAPEZOIDAL  0.50       25.00      0          0          1
+180              TRAPEZOIDAL  0.50       25.00      1          1          1
 30901            CIRCULAR     2.00       0          0          0          1
 30928            CIRCULAR     2.00       0          0          0          1
 30856            CIRCULAR     2.00       0          0          0          1
@@ -240,7 +256,7 @@ HEAD_TOLERANCE       0.133
 30929            CIRCULAR     2.00       0          0          0          1
 30858            CIRCULAR     2.00       0          0          0          1
 30746            CIRCULAR     2.00       0          0          0          1
-172              TRAPEZOIDAL  0.50       25.00      0          0          1
+172              TRAPEZOIDAL  0.50       25.00      1          1          1
 159              CIRCULAR     2.00       0          0          0          1
 2941             CIRCULAR     2.50       0          0          0          1
 2947             CIRCULAR     2.00       0          0          0          1
@@ -257,7 +273,7 @@ HEAD_TOLERANCE       0.133
 2925             CIRCULAR     2.00       0          0          0          1
 2922             CIRCULAR     2.00       0          0          0          1
 81               CIRCULAR     2.00       0          0          0          1
-186              TRAPEZOIDAL  0.50       25.00      0          0          1
+186              TRAPEZOIDAL  0.50       25.00      1          1          1
 30914            CIRCULAR     2.00       0          0          0          1
 30791            CIRCULAR     2.00       0          0          0          1
 2945             CIRCULAR     2.50       0          0          0          1
@@ -271,19 +287,19 @@ HEAD_TOLERANCE       0.133
 2707             CIRCULAR     2.00       0          0          0          1
 2706             CIRCULAR     2.00       0          0          0          1
 2705             CIRCULAR     2.00       0          0          0          1
-168              TRAPEZOIDAL  0.50       25.00      0          0          1
+168              TRAPEZOIDAL  0.50       25.00      1          1          1
 30850            CIRCULAR     2.00       0          0          0          1
 30748            CIRCULAR     2.00       0          0          0          1
 2939             CIRCULAR     2.00       0          0          0          1
 30857            CIRCULAR     2.00       0          0          0          1
 2928             CIRCULAR     2.00       0          0          0          1
 30895            CIRCULAR     2.00       0          0          0          1
-190              TRAPEZOIDAL  0.50       25.00      0          0          1
-189              TRAPEZOIDAL  0.50       25.00      0          0          1
-187              TRAPEZOIDAL  0.50       25.00      0          0          1
+190              TRAPEZOIDAL  0.50       25.00      1          1          1
+189              TRAPEZOIDAL  0.50       25.00      1          1          1
+187              TRAPEZOIDAL  0.50       25.00      1          1          1
 154              CIRCULAR     4.00       0          0          0          1
 30932            CIRCULAR     2.00       0          0          0          1
-170              TRAPEZOIDAL  0.50       25.00      0          0          1
+170              TRAPEZOIDAL  0.50       25.00      1          1          1
 30853            CIRCULAR     2.00       0          0          0          1
 2850             CIRCULAR     2.00       0          0          0          1
 2848             CIRCULAR     2.00       0          0          0          1
@@ -293,7 +309,7 @@ HEAD_TOLERANCE       0.133
 30789            CIRCULAR     2.00       0          0          0          1
 30917            CIRCULAR     2.00       0          0          0          1
 79               CIRCULAR     2.00       0          0          0          1
-205              TRAPEZOIDAL  0.50       25.00      0          0          1
+205              TRAPEZOIDAL  0.50       25.00      1          1          1
 153              CIRCULAR     2.00       0          0          0          1
 2838             CIRCULAR     4.50       0          0          0          1
 2933             CIRCULAR     3.50       0          0          0          1

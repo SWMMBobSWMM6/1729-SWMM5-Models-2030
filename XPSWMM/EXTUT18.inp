@@ -20,6 +20,18 @@ INERTIAL_DAMPING     PARTIAL
 NORMAL_FLOW_LIMITED  BOTH
 MAX_TRIALS           50
 HEAD_TOLERANCE       1e-5
+START_DATE           01/01/2001
+START_TIME           00:00:00
+REPORT_START_DATE    01/01/2001
+REPORT_START_TIME    00:00:00
+END_DATE             01/02/2001
+END_TIME             00:00:00
+SWEEP_START          01/01
+SWEEP_END            12/31
+DRY_DAYS             0
+REPORT_STEP          00:15:00
+WET_STEP             00:05:00
+DRY_STEP             01:00:00
 
 [JUNCTIONS]
 ;;Name           Elev       MaxDepth   InitDepth  SurDepth   Aponded
@@ -28,15 +40,19 @@ inflow           120.00     0          0          0          0
 flowin           120.00     0          0          0          0
 flowing          120.00     0          0          0          0
 
+[OUTFALLS]
+;;Name           Elev       Type       Stage      Gated
+;;-------------- ---------- ---------- ---------- -----
+outlet           100.00     FREE                  NO
+
 [STORAGE]
 ;;Name           Elev       MaxDepth   InitDepth  Shape      Curve/Params
 ;;-------------- ---------- ---------- ---------- ---------- ----------
-middle           115.00     0          0          FUNCTIONAL 10000.00 0          0
-outlet           100.00     0          0          FUNCTIONAL 10000.00 0          0
-maddle           115.00     0          0          FUNCTIONAL 10000.00 0          0
-last             100.00     0          0          FUNCTIONAL 10000.00 0          0
-muddle           115.00     0          0          FUNCTIONAL 10000.00 0          0
-theend           100.00     0          0          FUNCTIONAL 10000.00 0          0
+middle           115.00     10.00      0          FUNCTIONAL 10000.00 0          0
+maddle           115.00     10.00      0          FUNCTIONAL 10000.00 0          0
+last             100.00     10.00      0          FUNCTIONAL 10000.00 0          0
+muddle           115.00     10.00      0          FUNCTIONAL 10000.00 0          0
+theend           100.00     10.00      0          FUNCTIONAL 10000.00 0          0
 
 [CONDUITS]
 ;;Name           From             To               Length     Roughness  InOffset   OutOffset  InitFlow   MaxFlow
@@ -47,20 +63,20 @@ supalways        flowin           maddle           100.00     0.0130     100.00 
 always           maddle           last             100.00     0.0130     50.00      50.00      0          0
 super            flowing          muddle           100.00     0.0130     100.00     50.00      0          0
 standard         muddle           theend           100.00     0.0130     50.00      50.00      0          0
-36               flowin           inflow           0          0          0          0          0          0
-37               inflow           flowing          0          0          0          0          0          0
+36               flowin           inflow           100.00     0.0130     0          0          0          0
+37               inflow           flowing          100.00     0.0130     0          0          0          0
 
 [XSECTIONS]
 ;;Link           Shape        Geom1      Geom2      Geom3      Geom4      Barrels
 ;;-------------- ------------ ---------- ---------- ---------- ---------- ----------
-supernever       TRAPEZOIDAL  5.00       10.00      0          0          1
-never            TRAPEZOIDAL  5.00       0          0          0          1
-supalways        TRAPEZOIDAL  5.00       10.00      0          0          1
-always           TRAPEZOIDAL  5.00       0          0          0          1
-super            TRAPEZOIDAL  5.00       10.00      0          0          1
-standard         TRAPEZOIDAL  5.00       0          0          0          1
-36               CIRCULAR     0          10.00      0          0          1
-37               CIRCULAR     0          10.00      0          0          1
+supernever       TRAPEZOIDAL  5.00       10.00      1          1          1
+never            TRAPEZOIDAL  5.00       1.00       1          1          1
+supalways        TRAPEZOIDAL  5.00       10.00      1          1          1
+always           TRAPEZOIDAL  5.00       1.00       1          1          1
+super            TRAPEZOIDAL  5.00       10.00      1          1          1
+standard         TRAPEZOIDAL  5.00       1.00       1          1          1
+36               CIRCULAR     1.00       10.00      0          0          1
+37               CIRCULAR     1.00       10.00      0          0          1
 
 [LOSSES]
 ;;Link           Inlet      Outlet     Average    Flap Gate

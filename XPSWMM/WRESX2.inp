@@ -18,41 +18,64 @@ ROUTING_STEP         00:00:10
 VARIABLE_STEP        0.75
 INERTIAL_DAMPING     PARTIAL
 NORMAL_FLOW_LIMITED  BOTH
+START_DATE           01/01/2001
+START_TIME           00:00:00
+REPORT_START_DATE    01/01/2001
+REPORT_START_TIME    00:00:00
+END_DATE             01/02/2001
+END_TIME             00:00:00
+SWEEP_START          01/01
+SWEEP_END            12/31
+DRY_DAYS             0
+REPORT_STEP          00:15:00
+WET_STEP             00:05:00
+DRY_STEP             01:00:00
 
 [JUNCTIONS]
 ;;Name           Elev       MaxDepth   InitDepth  SurDepth   Aponded
 ;;-------------- ---------- ---------- ---------- ---------- ----------
 Lake             100.00     0          0          0          0
-Lake             103.00     0          0          0          0
-DS               100.00     0          0          0          0
+Lake_2           103.00     0          0          0          0
 Irrig            130.00     0          0          0          0
 Outflow          130.00     0          0          0          0
+
+[OUTFALLS]
+;;Name           Elev       Type       Stage      Gated
+;;-------------- ---------- ---------- ---------- -----
+DS               100.00     FREE                  NO
 
 [STORAGE]
 ;;Name           Elev       MaxDepth   InitDepth  Shape      Curve/Params
 ;;-------------- ---------- ---------- ---------- ---------- ----------
-Reserv           150.00     0          0          FUNCTIONAL 10.00 0          0
+Reserv           150.00     10.00      0          FUNCTIONAL 10.00 0          0
 
 [CONDUITS]
 ;;Name           From             To               Length     Roughness  InOffset   OutOffset  InitFlow   MaxFlow
 ;;-------------- ---------------- ---------------- ---------- ---------- ---------- ---------- ---------- ----------
 Tunnel           Lake             Lake             500.00     0.0050     71.00      70.00      0          0
-River            Lake             DS               500.00     0          68.00      60.00      0          0
+River            Lake             DS               500.00     0.0130     68.00      60.00      0          0
 Chan             Reserv           Irrig            500.00     0.0200     100.00     99.00      0          0
 Spill            Reserv           Outflow          100.00     0.0050     103.00     103.00     0          0
 
 [PUMPS]
 ;;Name           From             To               PumpCurve  Status   Startup    Shutoff
 ;;-------------- ---------------- ---------------- ---------- -------- ---------- ----------
-vv               Lake             Reserv           *          ON       0          0         
+vv               Lake             Reserv           PC_vv      ON       1.00       0         
+
+[CURVES]
+;;Name           Type       X-Value    Y-Value
+;;-------------- ---------- ---------- ----------
+;; Synthesized generic pump curves — replace with actual pump data
+PC_vv            Pump1      0          5
+PC_vv                       10         10
 
 [XSECTIONS]
 ;;Link           Shape        Geom1      Geom2      Geom3      Geom4      Barrels
 ;;-------------- ------------ ---------- ---------- ---------- ---------- ----------
 Tunnel           HORSESHOE    10.00      0.00       0          0          1
-River            IRREGULAR    0          0          0          0          1
+River            TRAPEZOIDAL  1.00       10.00      2          2          1
 Chan             POWER        10.00      16.00      0          0          1
-Spill            TRAPEZOIDAL  20.00      20.00      0          0          1
+Spill            TRAPEZOIDAL  20.00      20.00      1          1          1
 
 [LOSSES]
 ;;Link           Inlet      Outlet     Average    Flap Gate
@@ -65,13 +88,13 @@ Spill            0          0          0          NO
 [INFLOWS]
 ;;Node           Constituent  Time Series      Type     Mfactor  Sfactor  Baseline Pattern
 ;;-------------- ------------ ---------------- -------- -------- -------- -------- --------
-Lake             FLOW         ""               FLOW     1.0      1.0      10.00
+Lake_2           FLOW         ""               FLOW     1.0      1.0      10.00
 
 [COORDINATES]
 ;;Node           X-Coord            Y-Coord
 ;;-------------- ------------------ ------------------
 Lake             117.64             37.64             
-Lake             117.64             117.64            
+Lake_2           117.64             117.64            
 DS               157.64             157.64            
 Reserv           37.64              77.64             
 Irrig            -2.36              77.64             

@@ -14,21 +14,37 @@ LINK_OFFSETS         DEPTH
 MIN_SLOPE            0.0
 ALLOW_PONDING        NO
 SKIP_STEADY_STATE    NO
-ROUTING_STEP         00:00:60
+ROUTING_STEP         00:01:00
 VARIABLE_STEP        0.75
 INERTIAL_DAMPING     PARTIAL
 NORMAL_FLOW_LIMITED  BOTH
 HEAD_TOLERANCE       0.0033
+START_DATE           01/01/2001
+START_TIME           00:00:00
+REPORT_START_DATE    01/01/2001
+REPORT_START_TIME    00:00:00
+END_DATE             01/02/2001
+END_TIME             00:00:00
+SWEEP_START          01/01
+SWEEP_END            12/31
+DRY_DAYS             0
+REPORT_STEP          00:15:00
+WET_STEP             00:05:00
+DRY_STEP             01:00:00
 
 [JUNCTIONS]
 ;;Name           Elev       MaxDepth   InitDepth  SurDepth   Aponded
 ;;-------------- ---------- ---------- ---------- ---------- ----------
 Basin            25.00      0          0          0          0
-Basin            25.00      0          0          0          0
-Basin            25.00      0          0          0          0
-Outfall          25.00      0          0          0          0
-Basin            25.00      0          0          0          0
-Basin            25.00      0          0          0          0
+Basin_2          25.00      0          0          0          0
+Basin_3          25.00      0          0          0          0
+Basin_4          25.00      0          0          0          0
+Basin_5          25.00      0          0          0          0
+
+[OUTFALLS]
+;;Name           Elev       Type       Stage      Gated
+;;-------------- ---------- ---------- ---------- -----
+Outfall          25.00      FREE                  NO
 
 [CONDUITS]
 ;;Name           From             To               Length     Roughness  InOffset   OutOffset  InitFlow   MaxFlow
@@ -42,11 +58,11 @@ EMR03            Basin            Basin            275.00     0.0140     0.02   
 [XSECTIONS]
 ;;Link           Shape        Geom1      Geom2      Geom3      Geom4      Barrels
 ;;-------------- ------------ ---------- ---------- ---------- ---------- ----------
-PUDR01           IRREGULAR    17.00      4.00       0          0          1
-EMR02            IRREGULAR    17.00      0          0          0          1
-EMR01            IRREGULAR    17.00      0          0          0          1
-OFR01            IRREGULAR    17.00      0          0          0          1
-EMR03            IRREGULAR    17.00      0          0          0          1
+PUDR01           TRAPEZOIDAL  17.00      4.00       2          2          1
+EMR02            TRAPEZOIDAL  17.00      10.00      2          2          1
+EMR01            TRAPEZOIDAL  17.00      10.00      2          2          1
+OFR01            TRAPEZOIDAL  17.00      10.00      2          2          1
+EMR03            TRAPEZOIDAL  17.00      10.00      2          2          1
 
 [LOSSES]
 ;;Link           Inlet      Outlet     Average    Flap Gate
@@ -61,11 +77,11 @@ EMR03            0          0          0          NO
 ;;Node           X-Coord            Y-Coord
 ;;-------------- ------------------ ------------------
 Basin            -398051.50         752388.50         
-Basin            -396826.50         752363.50         
-Basin            -396746.50         753583.50         
+Basin_2          -396826.50         752363.50         
+Basin_3          -396746.50         753583.50         
 Outfall          -396661.50         754233.50         
-Basin            -398066.50         753658.50         
-Basin            -397496.50         751433.50         
+Basin_4          -398066.50         753658.50         
+Basin_5          -397496.50         751433.50         
 
 [MAP]
 DIMENSIONS -398066.50 751433.50 -396661.50 754233.50

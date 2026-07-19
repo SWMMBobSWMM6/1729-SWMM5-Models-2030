@@ -16,43 +16,59 @@ ALLOW_PONDING        NO
 SKIP_STEADY_STATE    NO
 INERTIAL_DAMPING     PARTIAL
 NORMAL_FLOW_LIMITED  BOTH
+START_DATE           01/01/2001
+START_TIME           00:00:00
+REPORT_START_DATE    01/01/2001
+REPORT_START_TIME    00:00:00
+END_DATE             01/02/2001
+END_TIME             00:00:00
+SWEEP_START          01/01
+SWEEP_END            12/31
+DRY_DAYS             0
+REPORT_STEP          00:15:00
+WET_STEP             00:05:00
+DRY_STEP             01:00:00
 
 [JUNCTIONS]
 ;;Name           Elev       MaxDepth   InitDepth  SurDepth   Aponded
 ;;-------------- ---------- ---------- ---------- ---------- ----------
 Node             0          0          0          0          0
-Node             0          0          0          0          0
-Outlet           0          0          0          0          0
-Node             0          0          0          0          0
+Node_2           0          0          0          0          0
+Node_3           0          0          0          0          0
+
+[OUTFALLS]
+;;Name           Elev       Type       Stage      Gated
+;;-------------- ---------- ---------- ---------- -----
+Outlet           0          FREE                  NO
 
 [CONDUITS]
 ;;Name           From             To               Length     Roughness  InOffset   OutOffset  InitFlow   MaxFlow
 ;;-------------- ---------------- ---------------- ---------- ---------- ---------- ---------- ---------- ----------
 Pipe             Node             Node             60.00      0.0140     34.75      30.00      0          0
 Dummy            Node             Outlet           10.00      0.0140     30.00      29.50      0          0
-Pipe             Node             Node             290.00     0.0130     42.00      30.00      0          0
+Pipe_2           Node             Node             290.00     0.0130     42.00      30.00      0          0
 
 [XSECTIONS]
 ;;Link           Shape        Geom1      Geom2      Geom3      Geom4      Barrels
 ;;-------------- ------------ ---------- ---------- ---------- ---------- ----------
 Pipe             CIRCULAR     1.50       0          0          0          1
 Dummy            CIRCULAR     5.00       1.00       0          0          1
-Pipe             CIRCULAR     1.00       0          0          0          1
+Pipe_2           CIRCULAR     1.00       0          0          0          1
 
 [LOSSES]
 ;;Link           Inlet      Outlet     Average    Flap Gate
 ;;-------------- ---------- ---------- ---------- ----------
 Pipe             0          0          0          NO
 Dummy            0          0          0          NO
-Pipe             0          0          0          NO
+Pipe_2           0          0          0          NO
 
 [COORDINATES]
 ;;Node           X-Coord            Y-Coord
 ;;-------------- ------------------ ------------------
 Node             19.94              46.41             
-Node             47.45              83.77             
+Node_2           47.45              83.77             
 Outlet           92.52              83.77             
-Node             20.89              129.01            
+Node_3           20.89              129.01            
 
 [MAP]
 DIMENSIONS 19.94 46.41 92.52 129.01

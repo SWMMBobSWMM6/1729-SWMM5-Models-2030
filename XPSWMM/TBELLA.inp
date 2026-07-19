@@ -20,26 +20,44 @@ INERTIAL_DAMPING     PARTIAL
 NORMAL_FLOW_LIMITED  BOTH
 MAX_TRIALS           50
 HEAD_TOLERANCE       .001
+START_DATE           01/01/2001
+START_TIME           00:00:00
+REPORT_START_DATE    01/01/2001
+REPORT_START_TIME    00:00:00
+END_DATE             01/02/2001
+END_TIME             00:00:00
+SWEEP_START          01/01
+SWEEP_END            12/31
+DRY_DAYS             0
+REPORT_STEP          00:15:00
+WET_STEP             00:05:00
+DRY_STEP             01:00:00
 
 [JUNCTIONS]
 ;;Name           Elev       MaxDepth   InitDepth  SurDepth   Aponded
 ;;-------------- ---------- ---------- ---------- ---------- ----------
-U1               98.05      0          1.60       0          0
-U2               98.43      0          1.60       0          0
-D1               98.42      0          1.60       0          0
-D2               98.35      0          1.60       0          0
+U1               98.05      0          0          0          0
+D1               98.42      0          0          0          0
+D2               98.35      0          0          0          0
 Node1            105.00     0          0          0          0
 Node2            105.00     0          0          0          0
 Node3            105.00     0          0          0          0
 Node4            105.00     0          0          0          0
 Node5            105.00     0          0          0          0
 Node6            105.00     0          0          0          0
+road             88.01      0          0          0          0
+spanb            88.01      0          0          0          0
+
+[OUTFALLS]
+;;Name           Elev       Type       Stage      Gated
+;;-------------- ---------- ---------- ---------- -----
+U2               98.43      FREE                  NO
 
 [CONDUITS]
 ;;Name           From             To               Length     Roughness  InOffset   OutOffset  InitFlow   MaxFlow
 ;;-------------- ---------------- ---------------- ---------- ---------- ---------- ---------- ---------- ----------
-upstrm           U1               U2               95.00      0          88.08      88.01      0          0
-dnstrm           D1               D2               95.00      0          88.00      87.93      0          0
+upstrm           U1               U2               95.00      0.0130     88.08      88.01      0          0
+dnstrm           D1               D2               95.00      0.0130     88.00      87.93      0          0
 spana            road             spanb            10.00      0.0140     88.01      88.01      0          0
 207              Node1            Node2            100.00     0.0140     100.00     99.90      0          0
 208              Node2            Node3            100.00     0.0140     99.90      99.80      0          0
@@ -50,9 +68,9 @@ spana            road             spanb            10.00      0.0140     88.01  
 [XSECTIONS]
 ;;Link           Shape        Geom1      Geom2      Geom3      Geom4      Barrels
 ;;-------------- ------------ ---------- ---------- ---------- ---------- ----------
-upstrm           IRREGULAR    9.00       0          0          0          1
-dnstrm           IRREGULAR    0          0          0          0          1
-spana            CUSTOM       0          0          0          0          1
+upstrm           TRAPEZOIDAL  9.00       10.00      2          2          1
+dnstrm           TRAPEZOIDAL  1.00       10.00      2          2          1
+spana            TRAPEZOIDAL  1.00       10.00      2          2          1
 207              POWER        5.00       5.00       0          0          1
 208              POWER        5.00       5.00       0          0          1
 209              POWER        5.00       5.00       0          0          1

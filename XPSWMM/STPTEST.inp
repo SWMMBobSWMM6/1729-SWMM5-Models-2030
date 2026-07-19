@@ -19,33 +19,58 @@ VARIABLE_STEP        0.75
 INERTIAL_DAMPING     NONE
 NORMAL_FLOW_LIMITED  BOTH
 MAX_TRIALS           10
+START_DATE           01/01/2001
+START_TIME           00:00:00
+REPORT_START_DATE    01/01/2001
+REPORT_START_TIME    00:00:00
+END_DATE             01/02/2001
+END_TIME             00:00:00
+SWEEP_START          01/01
+SWEEP_END            12/31
+DRY_DAYS             0
+REPORT_STEP          00:15:00
+WET_STEP             00:05:00
+DRY_STEP             01:00:00
+
+[JUNCTIONS]
+;;Name           Elev       MaxDepth   InitDepth  SurDepth   Aponded
+;;-------------- ---------- ---------- ---------- ---------- ----------
+1700005          97.82      0          0          0          0
+1700105          97.66      0          0          0          0
+1701102          97.25      0          0          0          0
+1701003          97.00      0          0          0          0
+
+[OUTFALLS]
+;;Name           Elev       Type       Stage      Gated
+;;-------------- ---------- ---------- ---------- -----
+1701502          120.00     FREE                  NO
 
 [STORAGE]
 ;;Name           Elev       MaxDepth   InitDepth  Shape      Curve/Params
 ;;-------------- ---------- ---------- ---------- ---------- ----------
-1700504          120.00     0          3.50       FUNCTIONAL 0 0          0
-880504           200.00     0          2.00       FUNCTIONAL 50.00 0          0
-1700506          120.00     0          3.30       FUNCTIONAL 0 0          0
-880506           200.00     0          0          FUNCTIONAL 50.00 0          0
-1701500          120.00     -15.70     2.00       FUNCTIONAL 0 0          0
-881500           200.00     0          0.83       FUNCTIONAL 50.00 0          0
-1701502          120.00     0          1.75       FUNCTIONAL 0 0          0
-881502           200.00     0          0.50       FUNCTIONAL 50.00 0          0
-1700508          120.00     0          4.20       FUNCTIONAL 0 0          0
-880508           200.00     0          0          FUNCTIONAL 50.00 0          0
-1700505          120.00     0          3.40       FUNCTIONAL 0 0          0
-880505           200.00     0          3.70       FUNCTIONAL 50.00 0          0
-1701501          120.00     0          3.00       FUNCTIONAL 0 0          0
-881501           200.00     0          0          FUNCTIONAL 50.00 0          0
-1700502          120.00     0          3.51       FUNCTIONAL 0 0          0
-880502           200.00     0          1.00       FUNCTIONAL 50.00 0          0
-1                120.00     0          1.00       FUNCTIONAL 0 0          0
-WierN            120.00     0          3.50       FUNCTIONAL 0 0          0
-88Wier           200.00     0          2.00       FUNCTIONAL 50.00 0          0
+1700504          120.00     10.00      3.50       FUNCTIONAL 1000.00 0          0
+880504           200.00     10.00      2.00       FUNCTIONAL 50.00 0          0
+1700506          120.00     10.00      3.30       FUNCTIONAL 1000.00 0          0
+880506           200.00     10.00      0          FUNCTIONAL 50.00 0          0
+1701500          120.00     10.00      2.00       FUNCTIONAL 1000.00 0          0
+881500           200.00     10.00      0.83       FUNCTIONAL 50.00 0          0
+881502           200.00     10.00      0.50       FUNCTIONAL 50.00 0          0
+1700508          120.00     10.00      4.20       FUNCTIONAL 1000.00 0          0
+880508           200.00     10.00      0          FUNCTIONAL 50.00 0          0
+1700505          120.00     10.00      3.40       FUNCTIONAL 1000.00 0          0
+880505           200.00     10.00      3.70       FUNCTIONAL 50.00 0          0
+1701501          120.00     10.00      3.00       FUNCTIONAL 1000.00 0          0
+881501           200.00     10.00      0          FUNCTIONAL 50.00 0          0
+1700502          120.00     10.00      3.51       FUNCTIONAL 1000.00 0          0
+880502           200.00     10.00      1.00       FUNCTIONAL 50.00 0          0
+1                120.00     10.00      1.00       FUNCTIONAL 1000.00 0          0
+WierN            120.00     10.00      3.50       FUNCTIONAL 1000.00 0          0
+88Wier           200.00     10.00      2.00       FUNCTIONAL 50.00 0          0
 
 [CONDUITS]
 ;;Name           From             To               Length     Roughness  InOffset   OutOffset  InitFlow   MaxFlow
 ;;-------------- ---------------- ---------------- ---------- ---------- ---------- ---------- ---------- ----------
+1700004          1700005          1700105          30.00      0.0290     97.82      97.66      0          0
 1700006          1700505          WierN            150.00     0.0330     95.60      95.50      0          0
 1701000          1701500          1700506          170.00     0.0160     98.67      98.33      0          0
 1700008          1700508          1700506          750.00     0.0330     95.80      95.70      0          0
@@ -61,41 +86,41 @@ WierN            120.00     0          3.50       FUNCTIONAL 0 0          0
 870505           880505           1700505          50.00      0.2000     96.30      95.60      0          0
 871501           881501           1701501          50.00      0.2000     96.00      96.00      0          0
 870502           880502           1700502          50.00      0.2000     97.00      95.49      0          0
-2                1700502          1                115.00     0          95.49      98.00      0          0
+2                1700502          1                115.00     0.0130     95.49      98.00      0          0
 87Wier           88Wier           WierN            50.00      0.2000     97.00      95.50      0          0
 
 [WEIRS]
 ;;Name           From             To               Type       CrestHt    Qcoeff     Gated    EndCon   EndCoeff   Surcharge
 ;;-------------- ---------------- ---------------- ---------- ---------- ---------- -------- -------- ---------- ----------
-1700004          1700005          1700105          TRANSVERSE 103.20     1.840      NO       0        0          YES
 Wier             WierN            1700504          TRANSVERSE 99.00      1.840      NO       0        0          YES
 
 [XSECTIONS]
 ;;Link           Shape        Geom1      Geom2      Geom3      Geom4      Barrels
 ;;-------------- ------------ ---------- ---------- ---------- ---------- ----------
-1700006          TRAPEZOIDAL  12.00      15.00      0          0          1
+1700004          CIRCULAR     4.00       0          0          0          1
+1700006          TRAPEZOIDAL  12.00      15.00      1          1          1
 1701000          CIRCULAR     3.00       7.00       0          0          1
-1700008          TRAPEZOIDAL  12.00      15.00      0          0          1
+1700008          TRAPEZOIDAL  12.00      15.00      1          1          1
 870508           RECT_CLOSED  6.00       0.20       0          0          1
 870506           RECT_CLOSED  6.00       0.20       0          0          1
 871500           RECT_CLOSED  6.00       0.20       0          0          1
 871502           RECT_CLOSED  6.00       0.20       0          0          1
 870504           RECT_CLOSED  6.00       0.20       0          0          1
 1701002          CIRCULAR     3.50       0          0          0          1
-1700007          TRAPEZOIDAL  12.00      15.00      0          0          1
+1700007          TRAPEZOIDAL  12.00      15.00      1          1          1
 1701003          CIRCULAR     4.00       0          0          0          1
 1701001          CIRCULAR     4.50       0          0          0          1
 870505           RECT_CLOSED  7.00       0.20       0          0          1
 871501           RECT_CLOSED  6.00       0.20       0          0          1
 870502           RECT_CLOSED  6.00       0.20       0          0          1
-2                IRREGULAR    0          0          0          0          1
+2                TRAPEZOIDAL  1.00       10.00      2          2          1
 87Wier           RECT_CLOSED  6.00       0.20       0          0          1
-1700004          RECT_OPEN    0          50.00      0          0          
-Wier             RECT_OPEN    0          25.50      0          0          
+Wier             RECT_OPEN    1.00       25.50      0          0
 
 [LOSSES]
 ;;Link           Inlet      Outlet     Average    Flap Gate
 ;;-------------- ---------- ---------- ---------- ----------
+1700004          0          0          0          NO
 1700006          0          0          0          NO
 1701000          0          0          0          NO
 1700008          0          0          0          NO

@@ -18,43 +18,60 @@ ROUTING_STEP         00:00:05
 VARIABLE_STEP        0.75
 INERTIAL_DAMPING     PARTIAL
 NORMAL_FLOW_LIMITED  BOTH
+START_DATE           01/01/2001
+START_TIME           00:00:00
+REPORT_START_DATE    01/01/2001
+REPORT_START_TIME    00:00:00
+END_DATE             01/02/2001
+END_TIME             00:00:00
+SWEEP_START          01/01
+SWEEP_END            12/31
+DRY_DAYS             0
+REPORT_STEP          00:15:00
+WET_STEP             00:05:00
+DRY_STEP             01:00:00
 
 [JUNCTIONS]
 ;;Name           Elev       MaxDepth   InitDepth  SurDepth   Aponded
 ;;-------------- ---------- ---------- ---------- ---------- ----------
-0                10.00      0          0          0          0
-0                10.00      0          0          0          0
-0                10.00      0          0          0          0
-0                10.00      0          0          0          0
-0                10.00      0          0          0          0
-0                10.00      0          0          0          0
-0                10.00      0          0          0          0
+node02           10.00      0          0          0          0
+node04           10.00      0          0          0          0
+node05           10.00      0          0          0          0
+out02            10.00      0          0          0          0
+node06           10.00      0          0          0          0
+node01           10.00      0          0          0          0
+
+[OUTFALLS]
+;;Name           Elev       Type       Stage      Gated
+;;-------------- ---------- ---------- ---------- -----
+out01            10.00      FREE                  NO
 
 [STORAGE]
 ;;Name           Elev       MaxDepth   InitDepth  Shape      Curve/Params
 ;;-------------- ---------- ---------- ---------- ---------- ----------
-0                10.00      0          0          FUNCTIONAL 10.00 0          0
+node03           10.00      10.00      0          FUNCTIONAL 10.00 0          0
 
 [CONDUITS]
 ;;Name           From             To               Length     Roughness  InOffset   OutOffset  InitFlow   MaxFlow
 ;;-------------- ---------------- ---------------- ---------- ---------- ---------- ---------- ---------- ----------
-201              0                0                50.00      0.0130     0.38       0.25       0          0
-202              0                0                50.00      0.0130     0.25       0          0          0
-206              0                0                50.00      0.0130     0.50       0.13       0          0
-208              0                0                50.00      0.0130     0.13       0          0          0
-212              0                0                50.00      0.0130     0.25       0.13       0          0
-214              0                0                50.00      0.0130     0.50       0.38       0          0
+201              node02           node03           50.00      0.0130     0.38       0.25       0          0
+202              node03           out01            50.00      0.0130     0.25       0          0          0
+206              node04           node05           50.00      0.0130     0.50       0.13       0          0
+208              node05           out02            50.00      0.0130     0.13       0          0          0
+212              node06           node05           50.00      0.0130     0.25       0.13       0          0
+214              node01           node02           50.00      0.0130     0.50       0.38       0          0
 
 [PUMPS]
 ;;Name           From             To               PumpCurve  Status   Startup    Shutoff
 ;;-------------- ---------------- ---------------- ---------- -------- ---------- ----------
-P-01             0                0                PC_P-01    ON       0.60       0.30      
+P-01             node03           node04           PC_P-01    ON       0.60       0.30      
 
 [CURVES]
 ;;Name           Type       X-Value    Y-Value
 ;;-------------- ---------- ---------- ----------
-PC_P-01          Pump3      0          0
-;
+;; Synthesized generic pump curves — replace with actual pump data
+PC_P-01          Pump1      0          5
+PC_P-01                     10         10
 
 [XSECTIONS]
 ;;Link           Shape        Geom1      Geom2      Geom3      Geom4      Barrels
@@ -79,19 +96,19 @@ PC_P-01          Pump3      0          0
 [INFLOWS]
 ;;Node           Constituent  Time Series      Type     Mfactor  Sfactor  Baseline Pattern
 ;;-------------- ------------ ---------------- -------- -------- -------- -------- --------
-0                FLOW         ""               FLOW     1.0      1.0      1.50
+node06           FLOW         ""               FLOW     1.0      1.0      1.50
 
 [COORDINATES]
 ;;Node           X-Coord            Y-Coord
 ;;-------------- ------------------ ------------------
-0                34.63              40.34             
-0                34.63              76.86             
-0                34.63              138.69            
-0                58.92              76.78             
-0                59.21              107.84            
-0                59.21              141.33            
-0                75.86              107.84            
-0                34.52              11.34             
+node02           34.63              40.34             
+node03           34.63              76.86             
+out01            34.63              138.69            
+node04           58.92              76.78             
+node05           59.21              107.84            
+out02            59.21              141.33            
+node06           75.86              107.84            
+node01           34.52              11.34             
 
 [MAP]
 DIMENSIONS 34.52 11.34 75.86 141.33

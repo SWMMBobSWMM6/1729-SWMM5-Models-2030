@@ -14,46 +14,62 @@ LINK_OFFSETS         DEPTH
 MIN_SLOPE            0.0
 ALLOW_PONDING        NO
 SKIP_STEADY_STATE    NO
-ROUTING_STEP         00:00:60
+ROUTING_STEP         00:01:00
 VARIABLE_STEP        0.75
 INERTIAL_DAMPING     PARTIAL
 NORMAL_FLOW_LIMITED  BOTH
 HEAD_TOLERANCE       0.0033
+START_DATE           01/01/2001
+START_TIME           00:00:00
+REPORT_START_DATE    01/01/2001
+REPORT_START_TIME    00:00:00
+END_DATE             01/02/2001
+END_TIME             00:00:00
+SWEEP_START          01/01
+SWEEP_END            12/31
+DRY_DAYS             0
+REPORT_STEP          00:15:00
+WET_STEP             00:05:00
+DRY_STEP             01:00:00
 
 [JUNCTIONS]
 ;;Name           Elev       MaxDepth   InitDepth  SurDepth   Aponded
 ;;-------------- ---------- ---------- ---------- ---------- ----------
 inlet            0          0          0          0          0
-inlet            0          0          0          0          0
-outlet           0          0          0          0          0
-inlet            0          0          0          0          0
+inlet_2          0          0          0          0          0
+inlet_3          0          0          0          0          0
 _inlet           0          0          0          0          0
 @inlet           0          0          0          0          0
+
+[OUTFALLS]
+;;Name           Elev       Type       Stage      Gated
+;;-------------- ---------- ---------- ---------- -----
+outlet           0          FREE                  NO
 
 [CONDUITS]
 ;;Name           From             To               Length     Roughness  InOffset   OutOffset  InitFlow   MaxFlow
 ;;-------------- ---------------- ---------------- ---------- ---------- ---------- ---------- ---------- ----------
 pipe             inlet            inlet            127.00     0.0140     0          0          0          0
 channel          inlet            outlet           381.00     0.0350     0          0          0          0
-pipe             inlet            inlet            276.00     0.0140     0          0          0          0
-210              ?                ?                0          0          0          0          0          0
-212              ?                ?                0          0          0          0          0          0
+pipe_2           inlet            inlet            276.00     0.0140     0          0          0          0
+210              inlet            _inlet           100.00     0.0130     0          0          0          0
+212              _inlet           @inlet           100.00     0.0130     0          0          0          0
 
 [XSECTIONS]
 ;;Link           Shape        Geom1      Geom2      Geom3      Geom4      Barrels
 ;;-------------- ------------ ---------- ---------- ---------- ---------- ----------
 pipe             CIRCULAR     0.45       0          0          0          1
-channel          TRAPEZOIDAL  1.00       1.00       0          0          1
-pipe             CIRCULAR     0.90       0          0          0          1
-210              CIRCULAR     0          0          0          0          1
-212              CIRCULAR     0          0          0          0          1
+channel          TRAPEZOIDAL  1.00       1.00       1          1          1
+pipe_2           CIRCULAR     0.90       0          0          0          1
+210              CIRCULAR     1.00       0          0          0          1
+212              CIRCULAR     1.00       0          0          0          1
 
 [LOSSES]
 ;;Link           Inlet      Outlet     Average    Flap Gate
 ;;-------------- ---------- ---------- ---------- ----------
 pipe             0          0          0          NO
 channel          0          0          0          NO
-pipe             0          0          0          NO
+pipe_2           0          0          0          NO
 210              0          0          0          NO
 212              0          0          0          NO
 
@@ -61,9 +77,9 @@ pipe             0          0          0          NO
 ;;Node           X-Coord            Y-Coord
 ;;-------------- ------------------ ------------------
 inlet            17.64              42.64             
-inlet            22.64              52.64             
+inlet_2          22.64              52.64             
 outlet           32.64              52.64             
-inlet            17.64              62.64             
+inlet_3          17.64              62.64             
 _inlet           16.75              51.75             
 @inlet           16.75              56.75             
 

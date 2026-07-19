@@ -14,10 +14,22 @@ LINK_OFFSETS         DEPTH
 MIN_SLOPE            0.0
 ALLOW_PONDING        NO
 SKIP_STEADY_STATE    NO
-ROUTING_STEP         00:00:300
+ROUTING_STEP         00:05:00
 VARIABLE_STEP        0.75
 INERTIAL_DAMPING     PARTIAL
 NORMAL_FLOW_LIMITED  BOTH
+START_DATE           01/01/2001
+START_TIME           00:00:00
+REPORT_START_DATE    01/01/2001
+REPORT_START_TIME    00:00:00
+END_DATE             01/02/2001
+END_TIME             00:00:00
+SWEEP_START          01/01
+SWEEP_END            12/31
+DRY_DAYS             0
+REPORT_STEP          00:15:00
+WET_STEP             00:05:00
+DRY_STEP             01:00:00
 
 [JUNCTIONS]
 ;;Name           Elev       MaxDepth   InitDepth  SurDepth   Aponded
@@ -25,7 +37,6 @@ NORMAL_FLOW_LIMITED  BOTH
 A-1              245.00     0          0          0          0
 A-2              214.20     0          0          0          0
 A-3              206.00     0          0          0          0
-A-4              203.50     0          0          0          0
 B-2              233.00     0          0          0          0
 B-3              225.00     0          0          0          0
 C-2              257.50     0          0          0          0
@@ -52,15 +63,20 @@ J-2              233.00     0          0          0          0
 J-4              220.50     0          0          0          0
 G-4              214.00     0          0          0          0
 
+[OUTFALLS]
+;;Name           Elev       Type       Stage      Gated
+;;-------------- ---------- ---------- ---------- -----
+A-4              203.50     FREE                  NO
+
 [STORAGE]
 ;;Name           Elev       MaxDepth   InitDepth  Shape      Curve/Params
 ;;-------------- ---------- ---------- ---------- ---------- ----------
-B-1              250.00     -17.00     0          FUNCTIONAL 0 0          0
-C-1              260.84     -2.74      0          FUNCTIONAL 0 0          0
-D-1              293.65     -4.10      0          FUNCTIONAL 0 0          0
-E-1              295.29     -0.19      0          FUNCTIONAL 0 0          0
-F-1              287.09     -6.58      0          FUNCTIONAL 0 0          0
-G-1              293.65     -2.28      0          FUNCTIONAL 0 0          0
+B-1              250.00     10.00      0          FUNCTIONAL 1000.00 0          0
+C-1              260.84     10.00      0          FUNCTIONAL 1000.00 0          0
+D-1              293.65     10.00      0          FUNCTIONAL 1000.00 0          0
+E-1              295.29     10.00      0          FUNCTIONAL 1000.00 0          0
+F-1              287.09     10.00      0          FUNCTIONAL 1000.00 0          0
+G-1              293.65     10.00      0          FUNCTIONAL 1000.00 0          0
 
 [CONDUITS]
 ;;Name           From             To               Length     Roughness  InOffset   OutOffset  InitFlow   MaxFlow
@@ -73,8 +89,8 @@ B2-3             B-2              B-3              150.00     0.0140     226.00 
 C1-2             C-1              C-2              68.00      0.0140     254.58     249.60     0          0
 C2-3             C-2              C-3              123.00     0.0140     249.60     244.00     0          0
 C3-4             C-3              C-4              184.00     0.0140     244.00     239.50     0          0
-25               C-1              B-1              0          0          0          0          0          0
-27               C-1              D-1              0          0          0          0          0          0
+25               C-1              B-1              100.00     0.0130     0          0          0          0
+27               C-1              D-1              100.00     0.0130     0          0          0          0
 D1-2             D-1              D-2              141.00     0.0140     287.05     248.00     0          0
 D2-3             D-2              D-3              161.00     0.0140     248.00     240.40     0          0
 D3-4             D-3              D-4              284.00     0.0140     240.40     238.33     0          0
@@ -94,11 +110,11 @@ I3-J3            I-3              J-3              424.00     0.0140     220.11 
 J1-2             J-1              J-2              157.00     0.0140     265.00     222.00     0          0
 J2-3             J-2              J-3              162.00     0.0140     222.00     212.55     0          0
 J3-4             J-3              J-4              154.00     0.0140     212.55     207.76     0          0
-74               H-1              G-1              0          0          0          0          0          0
-75               F-1              E-1              0          0          0          0          0          0
+74               H-1              G-1              100.00     0.0130     0          0          0          0
+75               F-1              E-1              100.00     0.0130     0          0          0          0
 E1-2             E-1              E-2              143.00     0.0140     293.60     248.00     0          0
 G3-4             G-3              G-4              432.00     0.0140     231.50     209.99     0          0
-84               A-1              B-1              0          0          0          0          0          0
+84               A-1              B-1              100.00     0.0130     0          0          0          0
 
 [XSECTIONS]
 ;;Link           Shape        Geom1      Geom2      Geom3      Geom4      Barrels
@@ -111,8 +127,8 @@ B2-3             CIRCULAR     4.00       0          0          0          1
 C1-2             CIRCULAR     3.50       0          0          0          1
 C2-3             CIRCULAR     3.00       0          0          0          1
 C3-4             CIRCULAR     3.00       0          0          0          1
-25               CIRCULAR     0          0          0          0          1
-27               CIRCULAR     0          0          0          0          1
+25               CIRCULAR     1.00       0          0          0          1
+27               CIRCULAR     1.00       0          0          0          1
 D1-2             CIRCULAR     2.50       0          0          0          1
 D2-3             CIRCULAR     2.50       0          0          0          1
 D3-4             CIRCULAR     2.50       0          0          0          1
@@ -132,11 +148,11 @@ I3-J3            CIRCULAR     2.00       0          0          0          1
 J1-2             CIRCULAR     1.50       0          0          0          1
 J2-3             CIRCULAR     1.50       0          0          0          1
 J3-4             CIRCULAR     2.00       0          0          0          1
-74               CIRCULAR     0          0          0          0          1
-75               CIRCULAR     0          0          0          0          1
+74               CIRCULAR     1.00       0          0          0          1
+75               CIRCULAR     1.00       0          0          0          1
 E1-2             CIRCULAR     1.50       0          0          0          1
 G3-4             CIRCULAR     2.50       0          0          0          1
-84               CIRCULAR     0          0          0          0          1
+84               CIRCULAR     1.00       0          0          0          1
 
 [LOSSES]
 ;;Link           Inlet      Outlet     Average    Flap Gate

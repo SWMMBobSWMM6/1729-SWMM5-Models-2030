@@ -19,6 +19,18 @@ VARIABLE_STEP        0.75
 INERTIAL_DAMPING     PARTIAL
 NORMAL_FLOW_LIMITED  BOTH
 MAX_TRIALS           50
+START_DATE           01/01/2001
+START_TIME           00:00:00
+REPORT_START_DATE    01/01/2001
+REPORT_START_TIME    00:00:00
+END_DATE             01/02/2001
+END_TIME             00:00:00
+SWEEP_START          01/01
+SWEEP_END            12/31
+DRY_DAYS             0
+REPORT_STEP          00:15:00
+WET_STEP             00:05:00
+DRY_STEP             01:00:00
 
 [JUNCTIONS]
 ;;Name           Elev       MaxDepth   InitDepth  SurDepth   Aponded
@@ -160,7 +172,6 @@ MAX_TRIALS           50
 902              608.00     0          0          0          0
 901              608.00     0          0          0          0
 900              596.00     0          0          0          0
-044              589.00     0          0          0          0
 003              589.00     0          0          0          0
 033              593.00     0          0          0          0
 031              593.00     0          0          0          0
@@ -217,16 +228,21 @@ DROP             590.00     0          0          0          0
 OUTFALL          591.00     0          0          0          0
 041              589.00     0          0          0          0
 004              589.00     0          0          0          0
-DROP             589.50     0          0          0          0
+DROP_2           589.50     0          0          0          0
 051              589.50     0          0          0          0
-DROP             589.00     0          0          0          0
+DROP_3           589.00     0          0          0          0
 092              596.00     0          0          0          0
 032              591.00     0          0          0          0
+
+[OUTFALLS]
+;;Name           Elev       Type       Stage      Gated
+;;-------------- ---------- ---------- ---------- -----
+044              589.00     FREE                  NO
 
 [STORAGE]
 ;;Name           Elev       MaxDepth   InitDepth  Shape      Curve/Params
 ;;-------------- ---------- ---------- ---------- ---------- ----------
-OUTLET           591.00     0          0          FUNCTIONAL 0 0          0
+OUTLET           591.00     10.00      0          FUNCTIONAL 1000.00 0          0
 
 [CONDUITS]
 ;;Name           From             To               Length     Roughness  InOffset   OutOffset  InitFlow   MaxFlow
@@ -375,7 +391,7 @@ OUTLET           591.00     0          0          FUNCTIONAL 0 0          0
 0046             046              402              600.00     0.0130     573.62     573.28     0          0
 0031             031              032              800.00     0.0130     569.80     570.70     0          0
 1417             045              417              1025.00    0.0130     581.59     580.43     0          0
-548              ?                ?                20.00      0.0130     579.80     579.80     0          0
+548              415              304              20.00      0.0130     579.80     579.80     0          0
 1501             502              501              200.00     0.0130     572.70     572.55     0          0
 1502             503              502              350.00     0.0130     573.00     572.70     0          0
 1503             595              503              90.00      0.0130     573.10     573.00     0          0
@@ -419,9 +435,9 @@ OUTLET           591.00     0          0          FUNCTIONAL 0 0          0
 0001             OUTLET           OUTFALL          200.00     0.0130     573.00     572.00     0          0
 0041             041              DROP             250.00     0.0140     566.00     565.75     0          0
 DEAIR            DROP             004              150.00     0.0130     448.65     448.50     0          0
-DEAIR            DROP             002              300.00     0.0130     442.25     441.95     0          0
+DEAIR_2          DROP             002              300.00     0.0130     442.25     441.95     0          0
 0051             051              DROP             1120.00    0.0130     569.70     568.21     0          0
-DEAIR            DROP             003              340.00     0.0130     444.19     443.85     0          0
+DEAIR_3          DROP             003              340.00     0.0130     444.19     443.85     0          0
 0092             091              092              150.00     0.0130     581.33     581.32     0          0
 0032             032              DROP             870.00     0.0140     561.00     560.13     0          0
 
@@ -429,18 +445,18 @@ DEAIR            DROP             003              340.00     0.0130     444.19 
 ;;Name           From             To               Type       Offset     Qcoeff     Gated    CloseTime
 ;;-------------- ---------------- ---------------- ---------- ---------- ---------- -------- ----------
 ORIFICE          400              044              SIDE       0          0.650      NO       0
-ORIFICE          300              033              SIDE       0          0.650      NO       0
-ORIFICE          900              093              SIDE       0          0.650      NO       0
-ORIFICE          500              055              SIDE       0          0.650      NO       0
+ORIFICE_2        300              033              SIDE       0          0.650      NO       0
+ORIFICE_3        900              093              SIDE       0          0.650      NO       0
+ORIFICE_4        500              055              SIDE       0          0.650      NO       0
 
 [WEIRS]
 ;;Name           From             To               Type       CrestHt    Qcoeff     Gated    EndCon   EndCoeff   Surcharge
 ;;-------------- ---------------- ---------------- ---------- ---------- ---------- -------- -------- ---------- ----------
 WEIR             900              091              TRANSVERSE 585.08     1.840      NO       0        0          YES
-weir 14          042              041              TRANSVERSE 576.85     1.840      NO       0        0          YES
-WEIR 13          300              031              TRANSVERSE 571.72     1.840      NO       0        0          YES
-weir 5           413              045              TRANSVERSE 585.09     1.840      NO       0        0          YES
-weir 15          500              051              TRANSVERSE 575.63     1.840      NO       0        0          YES
+weir_14          042              041              TRANSVERSE 576.85     1.840      NO       0        0          YES
+WEIR_13          300              031              TRANSVERSE 571.72     1.840      NO       0        0          YES
+weir_5           413              045              TRANSVERSE 585.09     1.840      NO       0        0          YES
+weir_15          500              051              TRANSVERSE 575.63     1.840      NO       0        0          YES
 
 [XSECTIONS]
 ;;Link           Shape        Geom1      Geom2      Geom3      Geom4      Barrels
@@ -633,20 +649,20 @@ weir 15          500              051              TRANSVERSE 575.63     1.840  
 0001             RECT_CLOSED  10.00      20.00      0          0          1
 0041             CIRCULAR     10.00      10.00      0          0          1
 DEAIR            CIRCULAR     10.00      0          0          0          1
-DEAIR            CIRCULAR     10.00      0          0          0          1
+DEAIR_2          CIRCULAR     10.00      0          0          0          1
 0051             CIRCULAR     9.00       0          0          0          1
-DEAIR            CIRCULAR     10.00      0          0          0          1
+DEAIR_3          CIRCULAR     10.00      0          0          0          1
 0092             CIRCULAR     6.25       0          0          0          1
 0032             CIRCULAR     10.00      0          0          0          1
-ORIFICE          RECT_CLOSED  1.00       0          0          0          
-ORIFICE          RECT_CLOSED  0.75       0          0          0          
-ORIFICE          RECT_CLOSED  0.50       0          0          0          
-ORIFICE          RECT_CLOSED  0          0          0          0          
-WEIR             RECT_OPEN    0          19.00      0          0          
-weir 14          RECT_OPEN    0          48.00      0          0          
-WEIR 13          RECT_OPEN    0          8.00       0          0          
-weir 5           RECT_OPEN    0          5.00       0          0          
-weir 15          RECT_OPEN    0          25.00      0          0          
+ORIFICE          RECT_CLOSED  1.00       1.00       0          0
+ORIFICE_2        RECT_CLOSED  0.75       0.75       0          0
+ORIFICE_3        RECT_CLOSED  0.50       0.50       0          0
+ORIFICE_4        RECT_CLOSED  0.89       0.89       0          0
+WEIR             RECT_OPEN    1.00       19.00      0          0
+weir_14          RECT_OPEN    1.00       48.00      0          0
+WEIR_13          RECT_OPEN    1.00       8.00       0          0
+weir_5           RECT_OPEN    1.00       5.00       0          0
+weir_15          RECT_OPEN    1.00       25.00      0          0
 
 [LOSSES]
 ;;Link           Inlet      Outlet     Average    Flap Gate
@@ -839,9 +855,9 @@ weir 15          RECT_OPEN    0          25.00      0          0
 0001             0          0          0          NO
 0041             0          0          0          NO
 DEAIR            0          0          0          NO
-DEAIR            0          0          0          NO
+DEAIR_2          0          0          0          NO
 0051             0          0          0          NO
-DEAIR            0          0          0          NO
+DEAIR_3          0          0          0          NO
 0092             0          0          0          NO
 0032             0          0          0          NO
 
@@ -1043,9 +1059,9 @@ OUTLET           2217.00            7331.00
 OUTFALL          2956.00            6902.00           
 041              -1911.00           791.00            
 004              -3463.00           -544.00           
-DROP             -1925.00           3912.00           
+DROP_2           -1925.00           3912.00           
 051              -1940.00           4479.00           
-DROP             -2275.00           1064.00           
+DROP_3           -2275.00           1064.00           
 092              -3799.00           -8513.00          
 032              -1290.00           -1468.00          
 

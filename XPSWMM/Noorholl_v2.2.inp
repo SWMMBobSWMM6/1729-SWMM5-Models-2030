@@ -20,6 +20,18 @@ INERTIAL_DAMPING     PARTIAL
 NORMAL_FLOW_LIMITED  BOTH
 MAX_TRIALS           50
 HEAD_TOLERANCE       0.0033
+START_DATE           01/01/2001
+START_TIME           00:00:00
+REPORT_START_DATE    01/01/2001
+REPORT_START_TIME    00:00:00
+END_DATE             01/02/2001
+END_TIME             00:00:00
+SWEEP_START          01/01
+SWEEP_END            12/31
+DRY_DAYS             0
+REPORT_STEP          00:15:00
+WET_STEP             00:05:00
+DRY_STEP             01:00:00
 
 [JUNCTIONS]
 ;;Name           Elev       MaxDepth   InitDepth  SurDepth   Aponded
@@ -42,7 +54,6 @@ NB30             173.50     0          0          0          0
 NB22             174.05     0          0          0          0
 NB24             174.20     0          0          0          0
 NC01             175.80     0          0          0          0
-NA36             183.50     0          0          0          0
 NA00             190.00     0          0          0          0
 ND00             180.70     0          0          0          0
 ND10             178.90     0          0          0          0
@@ -84,11 +95,17 @@ N2N90            188.30     0          0          0          0
 N2N35            192.40     0          0          0          0
 NN37             193.52     0          0          0          0
 NN38             193.63     0          0          0          0
+CA36.2           156.42     0          0          0          0
+
+[OUTFALLS]
+;;Name           Elev       Type       Stage      Gated
+;;-------------- ---------- ---------- ---------- -----
+NA36             183.50     FREE                  NO
 
 [STORAGE]
 ;;Name           Elev       MaxDepth   InitDepth  Shape      Curve/Params
 ;;-------------- ---------- ---------- ---------- ---------- ----------
-96               178.00     0          0          FUNCTIONAL 7187430.00 0          0
+96               178.00     10.00      0          FUNCTIONAL 7187430.00 0          0
 
 [CONDUITS]
 ;;Name           From             To               Length     Roughness  InOffset   OutOffset  InitFlow   MaxFlow
@@ -182,7 +199,7 @@ CD05             CIRCULAR     9.00       0          0          0          1
 CD10             CIRCULAR     9.00       0          0          0          1
 CD15             CIRCULAR     9.00       0          0          0          1
 75               CIRCULAR     9.00       0          0          0          1
-84               IRREGULAR    10.60      0          0          0          1
+84               TRAPEZOIDAL  10.60      10.00      2          2          1
 90               CIRCULAR     1.25       0          0          0          1
 92               CIRCULAR     1.25       0          0          0          1
 94               CIRCULAR     1.25       0          0          0          1

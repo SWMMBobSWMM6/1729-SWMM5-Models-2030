@@ -16,6 +16,18 @@ ALLOW_PONDING        NO
 SKIP_STEADY_STATE    NO
 INERTIAL_DAMPING     PARTIAL
 NORMAL_FLOW_LIMITED  BOTH
+START_DATE           01/01/2001
+START_TIME           00:00:00
+REPORT_START_DATE    01/01/2001
+REPORT_START_TIME    00:00:00
+END_DATE             01/02/2001
+END_TIME             00:00:00
+SWEEP_START          01/01
+SWEEP_END            12/31
+DRY_DAYS             0
+REPORT_STEP          00:15:00
+WET_STEP             00:05:00
+DRY_STEP             01:00:00
 
 [JUNCTIONS]
 ;;Name           Elev       MaxDepth   InitDepth  SurDepth   Aponded
@@ -48,7 +60,11 @@ SNAIL            0          0          0          0          0
 9-3              0          0          0          0          0
 9-4              0          0          0          0          0
 10-1             0          0          0          0          0
-New              0          0          0          0          0
+
+[OUTFALLS]
+;;Name           Elev       Type       Stage      Gated
+;;-------------- ---------- ---------- ---------- -----
+New              0          FREE                  NO
 
 [CONDUITS]
 ;;Name           From             To               Length     Roughness  InOffset   OutOffset  InitFlow   MaxFlow
@@ -90,11 +106,11 @@ SL-1/1-1         CIRCULAR     1.75       0          0          0          1
 1-2/SL           CIRCULAR     2.50       0          0          0          1
 SL-2/SL-3        CIRCULAR     1.00       0          0          0          1
 SL-5/5-1         CIRCULAR     1.25       0          0          0          1
-5-1/5-2          TRAPEZOIDAL  2.00       3.00       0          0          1
+5-1/5-2          TRAPEZOIDAL  2.00       3.00       1          1          1
 5-2/5-3          CIRCULAR     1.25       0          0          0          1
-5-3/5-4          TRAPEZOIDAL  2.00       3.00       0          0          1
+5-3/5-4          TRAPEZOIDAL  2.00       3.00       1          1          1
 5-4/5-5          CIRCULAR     1.25       3.00       0          0          1
-5-5/5-6          TRAPEZOIDAL  2.00       3.00       0          0          1
+5-5/5-6          TRAPEZOIDAL  2.00       3.00       1          1          1
 SL-3/3-1         CIRCULAR     1.25       0          0          0          1
 3-1/SL           CIRCULAR     2.50       0          0          0          1
 SL-4/3-1         CIRCULAR     1.00       0          0          0          1
@@ -111,7 +127,7 @@ SL-9/9-1         CIRCULAR     3.00       0          0          0          1
 SL-10/10-1       CIRCULAR     2.25       0          0          0          1
 10-1/SL          CIRCULAR     2.50       0          0          0          1
 SL-11/SL         CIRCULAR     2.50       0          0          0          1
-SL-12/SL         TRAPEZOIDAL  3.00       3.00       0          0          1
+SL-12/SL         TRAPEZOIDAL  3.00       3.00       1          1          1
 New              CIRCULAR     2.00       0          0          0          1
 
 [LOSSES]

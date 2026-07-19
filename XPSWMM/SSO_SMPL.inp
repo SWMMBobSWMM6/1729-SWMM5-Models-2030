@@ -14,35 +14,51 @@ LINK_OFFSETS         DEPTH
 MIN_SLOPE            0.0
 ALLOW_PONDING        NO
 SKIP_STEADY_STATE    NO
-ROUTING_STEP         00:00:300
+ROUTING_STEP         00:05:00
 VARIABLE_STEP        0.75
 INERTIAL_DAMPING     PARTIAL
 NORMAL_FLOW_LIMITED  BOTH
 MAX_TRIALS           50
 HEAD_TOLERANCE       .0001
+START_DATE           01/01/2001
+START_TIME           00:00:00
+REPORT_START_DATE    01/01/2001
+REPORT_START_TIME    00:00:00
+END_DATE             01/02/2001
+END_TIME             00:00:00
+SWEEP_START          01/01
+SWEEP_END            12/31
+DRY_DAYS             0
+REPORT_STEP          00:15:00
+WET_STEP             00:05:00
+DRY_STEP             01:00:00
 
 [JUNCTIONS]
 ;;Name           Elev       MaxDepth   InitDepth  SurDepth   Aponded
 ;;-------------- ---------- ---------- ---------- ---------- ----------
 mh               138.00     0          0          0          0
-mh               135.00     0          0          0          0
-mh               138.00     0          0          0          0
-mh               125.00     0          0          0          0
-mh               120.00     0          0          0          0
-mh               111.00     0          0          0          0
-outlet           100.00     0          0          0          0
-mh               137.00     0          0          0          0
-mh               130.00     0          0          0          0
-mh               125.00     0          0          0          0
+mh_2             135.00     0          0          0          0
+mh_3             138.00     0          0          0          0
+mh_4             125.00     0          0          0          0
+mh_5             120.00     0          0          0          0
+mh_6             111.00     0          0          0          0
+mh_7             137.00     0          0          0          0
+mh_8             130.00     0          0          0          0
+mh_9             125.00     0          0          0          0
 Inlet            105.00     0          0          0          0
 Rec              115.00     0          0          0          0
+
+[OUTFALLS]
+;;Name           Elev       Type       Stage      Gated
+;;-------------- ---------- ---------- ---------- -----
+outlet           100.00     FREE                  NO
 
 [STORAGE]
 ;;Name           Elev       MaxDepth   InitDepth  Shape      Curve/Params
 ;;-------------- ---------- ---------- ---------- ---------- ----------
-Well             110.00     -5.00      0          FUNCTIONAL 5.00 0          0
-Well             112.00     -2.00      0          FUNCTIONAL 5.00 0          0
-Outfall          125.00     0          0          FUNCTIONAL 10000.00 0          0
+Well             110.00     10.00      0          FUNCTIONAL 5.00 0          0
+Well_2           112.00     10.00      0          FUNCTIONAL 5.00 0          0
+Outfall          125.00     10.00      0          FUNCTIONAL 10000.00 0          0
 
 [CONDUITS]
 ;;Name           From             To               Length     Roughness  InOffset   OutOffset  InitFlow   MaxFlow
@@ -69,10 +85,11 @@ DSPUMP           Well             Outfall          PC_DSPUMP  ON       102.00   
 [CURVES]
 ;;Name           Type       X-Value    Y-Value
 ;;-------------- ---------- ---------- ----------
-PC_pumpit        Pump3      0          0
-;
-PC_DSPUMP        Pump3      0          0
-;
+;; Synthesized generic pump curves — replace with actual pump data
+PC_pumpit        Pump1      0          5
+PC_pumpit                   10         10
+PC_DSPUMP        Pump1      0          5
+PC_DSPUMP                   10         10
 
 [XSECTIONS]
 ;;Link           Shape        Geom1      Geom2      Geom3      Geom4      Barrels
@@ -115,19 +132,19 @@ Inlet            FLOW         ""               FLOW     1.0      1.0      10.00
 ;;Node           X-Coord            Y-Coord
 ;;-------------- ------------------ ------------------
 mh               -51.52             -1.52             
-mh               -51.52             48.48             
-mh               -1.52              48.48             
-mh               98.48              48.48             
-mh               98.48              98.48             
-mh               98.48              198.48            
+mh_2             -51.52             48.48             
+mh_3             -1.52              48.48             
+mh_4             98.48              48.48             
+mh_5             98.48              98.48             
+mh_6             98.48              198.48            
 outlet           98.48              298.48            
-mh               0.44               246.85            
-mh               -1.52              148.48            
-mh               -1.52              98.48             
+mh_7             0.44               246.85            
+mh_8             -1.52              148.48            
+mh_9             -1.52              98.48             
 Inlet            147.64             -52.36            
 Well             147.64             97.64             
 Rec              147.64             147.64            
-Well             147.64             197.64            
+Well_2           147.64             197.64            
 Outfall          147.64             297.64            
 
 [MAP]

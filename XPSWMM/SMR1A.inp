@@ -20,11 +20,22 @@ INERTIAL_DAMPING     NONE
 NORMAL_FLOW_LIMITED  BOTH
 MAX_TRIALS           30
 HEAD_TOLERANCE       2.
+START_DATE           01/01/2001
+START_TIME           00:00:00
+REPORT_START_DATE    01/01/2001
+REPORT_START_TIME    00:00:00
+END_DATE             01/02/2001
+END_TIME             00:00:00
+SWEEP_START          01/01
+SWEEP_END            12/31
+DRY_DAYS             0
+REPORT_STEP          00:15:00
+WET_STEP             00:05:00
+DRY_STEP             01:00:00
 
 [JUNCTIONS]
 ;;Name           Elev       MaxDepth   InitDepth  SurDepth   Aponded
 ;;-------------- ---------- ---------- ---------- ---------- ----------
-W1               718.40     0          0          0          0
 O14              718.40     0          0          0          0
 1                731.60     0          0          0          0
 4                731.20     0          0          0          0
@@ -234,59 +245,64 @@ M29A             865.00     0          0          0          0
 M51              887.00     0          0          0          0
 M79              947.00     0          0          0          0
 
+[OUTFALLS]
+;;Name           Elev       Type       Stage      Gated
+;;-------------- ---------- ---------- ---------- -----
+W1               718.40     FREE                  NO
+
 [STORAGE]
 ;;Name           Elev       MaxDepth   InitDepth  Shape      Curve/Params
 ;;-------------- ---------- ---------- ---------- ---------- ----------
-O1               718.40     -6.40      0          FUNCTIONAL 100.00 0          0
-D1               718.00     -8.00      0          FUNCTIONAL 100.00 0          0
-ND1              718.00     -8.00      0          FUNCTIONAL 100.00 0          0
-3A               731.20     -11.20     0          FUNCTIONAL 100.00 0          0
-O42              744.00     -8.50      0          FUNCTIONAL 100.00 0          0
-D42A             743.70     -9.20      0          FUNCTIONAL 100.00 0          0
-D42              744.50     -2.50      0          FUNCTIONAL 100.00 0          0
-18               769.60     -17.60     0          FUNCTIONAL 100.00 0          0
-D39              788.60     -5.20      0          FUNCTIONAL 100.00 0          0
-1A               796.20     -10.20     0          FUNCTIONAL 100.00 0          0
-M0               797.00     -7.65      0          FUNCTIONAL 100.00 0          0
-M8A              820.90     -12.40     0          FUNCTIONAL 100.00 0          0
-D36              824.90     -8.40      0          FUNCTIONAL 100.00 0          0
-33               823.50     0          0          FUNCTIONAL 100.00 0          0
-D34              827.90     -10.30     0          FUNCTIONAL 100.00 0          0
-D33              846.80     -6.80      0          FUNCTIONAL 100.00 0          0
-M19A             854.40     -17.70     0          FUNCTIONAL 100.00 0          0
-60383            847.50     -12.60     0          FUNCTIONAL 100.00 0          0
-60394            872.90     -5.10      0          FUNCTIONAL 100.00 0          0
-D30              859.90     -7.90      0          FUNCTIONAL 100.00 0          0
-44A              864.30     -11.10     0          FUNCTIONAL 100.00 0          0
-D29              864.80     -14.30     0          FUNCTIONAL 100.00 0          0
-M33B             867.00     -5.70      0          FUNCTIONAL 100.00 0          0
-D28              875.90     -9.40      0          FUNCTIONAL 100.00 0          0
-55               886.50     -6.60      0          FUNCTIONAL 100.00 0          0
-60557            905.70     -14.10     0          FUNCTIONAL 100.00 0          0
-60556            890.30     -12.30     0          FUNCTIONAL 100.00 0          0
-68               901.52     -7.12      0          FUNCTIONAL 100.00 0          0
-D18              932.00     -12.10     0          FUNCTIONAL 100.00 0          0
-89               936.50     -6.00      0          FUNCTIONAL 100.00 0          0
-102              954.30     -9.38      0          FUNCTIONAL 50.00 0          0
-C10              987.70     -8.70      0          FUNCTIONAL 50.00 0          0
-C11              989.00     -10.00     0          FUNCTIONAL 50.00 0          0
-C19              1002.20    -5.70      0          FUNCTIONAL 50.00 0          0
-C23              1013.90    0          0          FUNCTIONAL 50.00 0          0
-C25              1015.20    0          0          FUNCTIONAL 100.00 0          0
-C30              1028.60    -8.60      0          FUNCTIONAL 100.00 0          0
-C31              1028.00    -8.00      0          FUNCTIONAL 100.00 0          0
-C33              1024.90    -5.40      0          FUNCTIONAL 100.00 0          0
-C34              1024.60    -4.60      0          FUNCTIONAL 100.00 0          0
-C42              1053.70    -10.70     0          FUNCTIONAL 100.00 0          0
-C52              1070.80    -0.80      0          FUNCTIONAL 100.00 0          0
-C53              1072.40    -4.40      0          FUNCTIONAL 100.00 0          0
-N3               748.00     -18.00     0          FUNCTIONAL 100.00 0          0
-N4               749.50     -24.50     0          FUNCTIONAL 100.00 0          0
-M1               797.00     -5.30      0          FUNCTIONAL 0 0          0
-M19              842.00     -9.40      0          FUNCTIONAL 0 0          0
-M29              847.10     -0.10      0          FUNCTIONAL 0 0          0
-M42              871.00     12.50      0          FUNCTIONAL 0 0          0
-D35              834.60     -7.70      0          FUNCTIONAL 100.00 0          0
+O1               718.40     10.00      0          FUNCTIONAL 100.00 0          0
+D1               718.00     10.00      0          FUNCTIONAL 100.00 0          0
+ND1              718.00     10.00      0          FUNCTIONAL 100.00 0          0
+3A               731.20     10.00      0          FUNCTIONAL 100.00 0          0
+O42              744.00     10.00      0          FUNCTIONAL 100.00 0          0
+D42A             743.70     10.00      0          FUNCTIONAL 100.00 0          0
+D42              744.50     10.00      0          FUNCTIONAL 100.00 0          0
+18               769.60     10.00      0          FUNCTIONAL 100.00 0          0
+D39              788.60     10.00      0          FUNCTIONAL 100.00 0          0
+1A               796.20     10.00      0          FUNCTIONAL 100.00 0          0
+M0               797.00     10.00      0          FUNCTIONAL 100.00 0          0
+M8A              820.90     10.00      0          FUNCTIONAL 100.00 0          0
+D36              824.90     10.00      0          FUNCTIONAL 100.00 0          0
+33               823.50     10.00      0          FUNCTIONAL 100.00 0          0
+D34              827.90     10.00      0          FUNCTIONAL 100.00 0          0
+D33              846.80     10.00      0          FUNCTIONAL 100.00 0          0
+M19A             854.40     10.00      0          FUNCTIONAL 100.00 0          0
+60383            847.50     10.00      0          FUNCTIONAL 100.00 0          0
+60394            872.90     10.00      0          FUNCTIONAL 100.00 0          0
+D30              859.90     10.00      0          FUNCTIONAL 100.00 0          0
+44A              864.30     10.00      0          FUNCTIONAL 100.00 0          0
+D29              864.80     10.00      0          FUNCTIONAL 100.00 0          0
+M33B             867.00     10.00      0          FUNCTIONAL 100.00 0          0
+D28              875.90     10.00      0          FUNCTIONAL 100.00 0          0
+55               886.50     10.00      0          FUNCTIONAL 100.00 0          0
+60557            905.70     10.00      0          FUNCTIONAL 100.00 0          0
+60556            890.30     10.00      0          FUNCTIONAL 100.00 0          0
+68               901.52     10.00      0          FUNCTIONAL 100.00 0          0
+D18              932.00     10.00      0          FUNCTIONAL 100.00 0          0
+89               936.50     10.00      0          FUNCTIONAL 100.00 0          0
+102              954.30     10.00      0          FUNCTIONAL 50.00 0          0
+C10              987.70     10.00      0          FUNCTIONAL 50.00 0          0
+C11              989.00     10.00      0          FUNCTIONAL 50.00 0          0
+C19              1002.20    10.00      0          FUNCTIONAL 50.00 0          0
+C23              1013.90    10.00      0          FUNCTIONAL 50.00 0          0
+C25              1015.20    10.00      0          FUNCTIONAL 100.00 0          0
+C30              1028.60    10.00      0          FUNCTIONAL 100.00 0          0
+C31              1028.00    10.00      0          FUNCTIONAL 100.00 0          0
+C33              1024.90    10.00      0          FUNCTIONAL 100.00 0          0
+C34              1024.60    10.00      0          FUNCTIONAL 100.00 0          0
+C42              1053.70    10.00      0          FUNCTIONAL 100.00 0          0
+C52              1070.80    10.00      0          FUNCTIONAL 100.00 0          0
+C53              1072.40    10.00      0          FUNCTIONAL 100.00 0          0
+N3               748.00     10.00      0          FUNCTIONAL 100.00 0          0
+N4               749.50     10.00      0          FUNCTIONAL 100.00 0          0
+M1               797.00     10.00      0          FUNCTIONAL 1000.00 0          0
+M19              842.00     10.00      0          FUNCTIONAL 1000.00 0          0
+M29              847.10     10.00      0          FUNCTIONAL 1000.00 0          0
+M42              871.00     12.50      0          FUNCTIONAL 1000.00 0          0
+D35              834.60     10.00      0          FUNCTIONAL 100.00 0          0
 
 [CONDUITS]
 ;;Name           From             To               Length     Roughness  InOffset   OutOffset  InitFlow   MaxFlow
@@ -818,23 +834,23 @@ P0               CIRCULAR     3.50       0          0          0          1
 CC4              CIRCULAR     2.50       0          0          0          1
 P51              CIRCULAR     3.50       0          0          0          1
 P79              CIRCULAR     3.00       0          0          0          1
-OR1              RECT_CLOSED  1.00       0          0          0          
-OR2              RECT_CLOSED  1.95       0          0          0          
-MUL4             RECT_CLOSED  0          0          0          0          
-OR1A             RECT_CLOSED  3.50       0          0          0          
-OR36             RECT_CLOSED  0          0          0          0          
-OR35             RECT_CLOSED  0          0          0          0          
-OR34             RECT_CLOSED  0          0          0          0          
-OR33             RECT_CLOSED  0          0          0          0          
-MUL10            RECT_CLOSED  0          0          0          0          
-MUL11            RECT_CLOSED  0          0          0          0          
-OR30             RECT_CLOSED  0          0          0          0          
-OR29             RECT_CLOSED  0          0          0          0          
-OR28             RECT_CLOSED  0          0          0          0          
-MUL15            RECT_CLOSED  0          0          0          0          
-MUL16            RECT_CLOSED  0          0          0          0          
-OR18             RECT_CLOSED  0          0          0          0          
-OR3              RECT_CLOSED  1.95       0          0          0          
+OR1              RECT_CLOSED  1.00       1.00       0          0
+OR2              RECT_CLOSED  1.95       1.95       0          0
+MUL4             RECT_CLOSED  0.74       0.74       0          0
+OR1A             RECT_CLOSED  3.50       3.50       0          0
+OR36             RECT_CLOSED  0.89       0.89       0          0
+OR35             RECT_CLOSED  1.11       1.11       0          0
+OR34             RECT_CLOSED  0.59       0.59       0          0
+OR33             RECT_CLOSED  0.74       0.74       0          0
+MUL10            RECT_CLOSED  1.11       1.11       0          0
+MUL11            RECT_CLOSED  0.59       0.59       0          0
+OR30             RECT_CLOSED  1.11       1.11       0          0
+OR29             RECT_CLOSED  1.11       1.11       0          0
+OR28             RECT_CLOSED  0.59       0.59       0          0
+MUL15            RECT_CLOSED  1.11       1.11       0          0
+MUL16            RECT_CLOSED  0.74       0.74       0          0
+OR18             RECT_CLOSED  0.85       0.85       0          0
+OR3              RECT_CLOSED  1.95       1.95       0          0
 
 [LOSSES]
 ;;Link           Inlet      Outlet     Average    Flap Gate

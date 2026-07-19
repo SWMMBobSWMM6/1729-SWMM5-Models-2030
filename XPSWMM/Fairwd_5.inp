@@ -19,11 +19,22 @@ VARIABLE_STEP        0.75
 INERTIAL_DAMPING     PARTIAL
 NORMAL_FLOW_LIMITED  BOTH
 MAX_TRIALS           75
+START_DATE           01/01/2001
+START_TIME           00:00:00
+REPORT_START_DATE    01/01/2001
+REPORT_START_TIME    00:00:00
+END_DATE             01/02/2001
+END_TIME             00:00:00
+SWEEP_START          01/01
+SWEEP_END            12/31
+DRY_DAYS             0
+REPORT_STEP          00:15:00
+WET_STEP             00:05:00
+DRY_STEP             01:00:00
 
 [JUNCTIONS]
 ;;Name           Elev       MaxDepth   InitDepth  SurDepth   Aponded
 ;;-------------- ---------- ---------- ---------- ---------- ----------
-A07              15.75      0          0          0          0
 A08              15.35      0          0          0          0
 A03              15.00      0          0          0          0
 A29              15.50      0          0          0          0
@@ -57,7 +68,7 @@ C04              14.00      0          0          0          0
 C06              14.00      0          0          0          0
 C29              14.00      0          0          0          0
 C107             18.20      0          0          0          0
-C14              18.20      0          1.40       0          0
+C14              18.20      0          0          0          0
 C17              16.50      0          0          0          0
 C19              16.50      0          0          0          0
 C20              16.50      0          0          0          0
@@ -87,103 +98,190 @@ A129             16.00      0          0          0          0
 A127             16.00      0          0          0          0
 A121             16.00      0          0          0          0
 A131             16.00      0          0          0          0
+B27p2            0.60       0          0          0          0
+B27p3            0.99       0          0          0          0
+B25P2            1.66       0          0          0          0
+B25P3            1.47       0          0          0          0
+B15P2            4.01       0          0          0          0
+B15P3            4.00       0          0          0          0
+B12P2            3.91       0          0          0          0
+B12R             3.87       0          0          0          0
+A07R             7.42       0          0          0          0
+B05R             5.61       0          0          0          0
+B06R             4.76       0          0          0          0
+B10R             4.14       0          0          0          0
+B09R             4.26       0          0          0          0
+A29R             4.20       0          0          0          0
+B04R             5.96       0          0          0          0
+B01R             8.50       0          0          0          0
+B02R             7.66       0          0          0          0
+B03R             7.06       0          0          0          0
+B18R             4.25       0          0          0          0
+B20R             3.68       0          0          0          0
+A110G1           8.00       0          0          0          0
+A24R             6.03       0          0          0          0
+A22R             6.36       0          0          0          0
+A20R             6.47       0          0          0          0
+A18R             6.56       0          0          0          0
+A16R             6.57       0          0          0          0
+A10R             6.64       0          0          0          0
+A27R             5.41       0          0          0          0
+A141G1           13.50      0          0          0          0
+A124W2           13.50      0          0          0          0
+A125G1           8.00       0          0          0          0
+A130G1           13.50      0          0          0          0
+A130W2           13.50      0          0          0          0
+A119G1           6.06       0          0          0          0
+A115G1           8.00       0          0          0          0
+A116G1           6.50       0          0          0          0
+A113G1           7.50       0          0          0          0
+A101R            8.90       0          0          0          0
+A102R            8.70       0          0          0          0
+A103R            8.40       0          0          0          0
+A104G1           8.10       0          0          0          0
+A106G1           8.10       0          0          0          0
+A108G1           8.50       0          0          0          0
+A112G1           9.00       0          0          0          0
+A118R            6.19       0          0          0          0
+A114G1           6.50       0          0          0          0
+A111R            7.17       0          0          0          0
+C33R             -1.52      0          0          0          0
+C23P2            4.93       0          0          0          0
+C23R             4.80       0          0          0          0
+C20R             6.29       0          0          0          0
+C18P2            6.66       0          0          0          0
+C18R             6.60       0          0          0          0
+C16R             7.37       0          0          0          0
+C107R            6.51       0          0          0          0
+C22R             6.38       0          0          0          0
+C24R             4.80       0          0          0          0
+C25R             4.50       0          0          0          0
+C26R             3.96       0          0          0          0
+C27R             3.09       0          0          0          0
+C28R             3.09       0          0          0          0
+C02R             4.04       0          0          0          0
+C03R             3.82       0          0          0          0
+C04R             3.19       0          0          0          0
+C06R             2.77       0          0          0          0
+C01R             4.58       0          0          0          0
+C05R             5.59       0          0          0          0
+C114w2           6.00       0          0          0          0
+C105w2           7.50       0          0          0          0
+C115w2           6.00       0          0          0          0
+C111W2           6.50       0          0          0          0
+A28R             6.21       0          0          0          0
+A30R             6.87       0          0          0          0
+A26R             5.91       0          0          0          0
+A31R             6.56       0          0          0          0
+A23R             6.06       0          0          0          0
+A21R             6.37       0          0          0          0
+A19R             6.48       0          0          0          0
+A17R             6.56       0          0          0          0
+A09R             6.66       0          0          0          0
+A25R             5.79       0          0          0          0
+A131G1           8.00       0          0          0          0
+
+[OUTFALLS]
+;;Name           Elev       Type       Stage      Gated
+;;-------------- ---------- ---------- ---------- -----
+A07              15.75      FREE                  NO
 
 [STORAGE]
 ;;Name           Elev       MaxDepth   InitDepth  Shape      Curve/Params
 ;;-------------- ---------- ---------- ---------- ---------- ----------
-A06              15.84      -0.44      0          FUNCTIONAL 0 0          0
-A02              15.00      0          0          FUNCTIONAL 0 0          0
-A04              15.10      -0.10      0          FUNCTIONAL 0 0          0
-B01              15.50      0          0          FUNCTIONAL 0 0          0
-B02              15.00      0          0          FUNCTIONAL 0 0          0
-B04              15.50      0          0          FUNCTIONAL 0 0          0
-B15              16.00      0          0          FUNCTIONAL 0 0          0
-B17              16.00      0          0          FUNCTIONAL 0 0          0
-B19              16.00      0          0          FUNCTIONAL 0 0          0
-B07              16.00      0          0          FUNCTIONAL 0 0          0
-B08              16.30      -0.30      0          FUNCTIONAL 0 0          0
-B09              15.00      0          0          FUNCTIONAL 0 0          0
-B23              16.30      -0.30      0          FUNCTIONAL 0 0          0
-B24              16.10      -0.10      0          FUNCTIONAL 0 0          0
-B27              16.10      -0.10      0          FUNCTIONAL 0 0          0
-C101             15.00      0          0          FUNCTIONAL 0 0          0
-A120             16.00      0          0          FUNCTIONAL 0 0          0
-A124             16.00      0          0          FUNCTIONAL 0 0          0
-A122             16.00      0          0          FUNCTIONAL 0 0          0
-A126             16.00      0          0          FUNCTIONAL 0 0          0
-A130             16.00      0          0          FUNCTIONAL 0 0          0
-A128             16.00      0          0          FUNCTIONAL 0 0          0
-A119             15.00      0          0          FUNCTIONAL 0 0          0
-A115             16.00      0          0          FUNCTIONAL 0 0          0
-A116             16.00      0          0          FUNCTIONAL 0 0          0
-A101             16.00      0          0          FUNCTIONAL 0 0          0
-A102             16.00      0          0          FUNCTIONAL 0 0          0
-A103             16.00      0          0          FUNCTIONAL 0 0          0
-A104             16.00      0          0          FUNCTIONAL 0 0          0
-A106             16.00      0          0          FUNCTIONAL 0 0          0
-Golf             16.00      -1.00      0          FUNCTIONAL 0 0          0
-A110             16.00      0          0          FUNCTIONAL 0 0          0
-A108             16.00      0          0          FUNCTIONAL 0 0          0
-A112             15.00      0          0          FUNCTIONAL 0 0          0
-A113             15.00      0          0          FUNCTIONAL 0 0          0
-A114             16.00      0          0          FUNCTIONAL 0 0          0
-C02              14.00      0          0          FUNCTIONAL 0 0          0
-C115             14.00      0          0          FUNCTIONAL 0 0          0
-C113             18.20      -2.20      0          FUNCTIONAL 0 0          0
-C23              18.00      0          0          FUNCTIONAL 0 0          0
-C16              16.50      0          0          FUNCTIONAL 0 0          0
-C18              16.50      0          0          FUNCTIONAL 0 0          0
-C22              16.50      0          0          FUNCTIONAL 0 0          0
-C24              18.00      0          0          FUNCTIONAL 0 0          0
-C32              14.00      0          0          FUNCTIONAL 0 0          0
-C114             14.00      0          0          FUNCTIONAL 0 0          0
-C108             16.00      0          0          FUNCTIONAL 0 0          0
-C102             16.00      -1.00      1.20       FUNCTIONAL 0 0          0
-C103             16.00      -1.00      1.30       FUNCTIONAL 0 0          0
-C111             16.05      -0.05      1.50       FUNCTIONAL 0 0          0
-C110             16.50      -0.50      1.50       FUNCTIONAL 0 0          0
-C109             16.00      0          1.50       FUNCTIONAL 0 0          0
-C104             16.00      -1.00      1.40       FUNCTIONAL 0 0          0
-C105             16.00      -1.00      1.40       FUNCTIONAL 0 0          0
-A28              15.50      0          0          FUNCTIONAL 0 0          0
-A30              16.40      0          0          FUNCTIONAL 0 0          0
-A31              16.40      0          0          FUNCTIONAL 0 0          0
-A09              15.31      -0.31      0          FUNCTIONAL 0 0          0
-A19              15.00      0          0          FUNCTIONAL 0 0          0
-A21              15.00      0          0          FUNCTIONAL 0 0          0
-A23              15.21      -0.21      0          FUNCTIONAL 0 0          0
-A24              15.00      0          0          FUNCTIONAL 0 0          0
-A25              15.00      0          0          FUNCTIONAL 0 0          0
-A109             16.00      0          0          FUNCTIONAL 0 0          0
-A117             16.00      -1.00      0          FUNCTIONAL 0 0          0
+A06              15.84      10.00      0          FUNCTIONAL 1000.00 0          0
+A02              15.00      10.00      0          FUNCTIONAL 1000.00 0          0
+A04              15.10      10.00      0          FUNCTIONAL 1000.00 0          0
+B01              15.50      10.00      0          FUNCTIONAL 1000.00 0          0
+B02              15.00      10.00      0          FUNCTIONAL 1000.00 0          0
+B04              15.50      10.00      0          FUNCTIONAL 1000.00 0          0
+B15              16.00      10.00      0          FUNCTIONAL 1000.00 0          0
+B17              16.00      10.00      0          FUNCTIONAL 1000.00 0          0
+B19              16.00      10.00      0          FUNCTIONAL 1000.00 0          0
+B07              16.00      10.00      0          FUNCTIONAL 1000.00 0          0
+B08              16.30      10.00      0          FUNCTIONAL 1000.00 0          0
+B09              15.00      10.00      0          FUNCTIONAL 1000.00 0          0
+B23              16.30      10.00      0          FUNCTIONAL 1000.00 0          0
+B24              16.10      10.00      0          FUNCTIONAL 1000.00 0          0
+B27              16.10      10.00      0          FUNCTIONAL 1000.00 0          0
+C101             15.00      10.00      0          FUNCTIONAL 1000.00 0          0
+A120             16.00      10.00      0          FUNCTIONAL 1000.00 0          0
+A124             16.00      10.00      0          FUNCTIONAL 1000.00 0          0
+A122             16.00      10.00      0          FUNCTIONAL 1000.00 0          0
+A126             16.00      10.00      0          FUNCTIONAL 1000.00 0          0
+A130             16.00      10.00      0          FUNCTIONAL 1000.00 0          0
+A128             16.00      10.00      0          FUNCTIONAL 1000.00 0          0
+A119             15.00      10.00      0          FUNCTIONAL 1000.00 0          0
+A115             16.00      10.00      0          FUNCTIONAL 1000.00 0          0
+A116             16.00      10.00      0          FUNCTIONAL 1000.00 0          0
+A101             16.00      10.00      0          FUNCTIONAL 1000.00 0          0
+A102             16.00      10.00      0          FUNCTIONAL 1000.00 0          0
+A103             16.00      10.00      0          FUNCTIONAL 1000.00 0          0
+A104             16.00      10.00      0          FUNCTIONAL 1000.00 0          0
+A106             16.00      10.00      0          FUNCTIONAL 1000.00 0          0
+Golf             16.00      10.00      0          FUNCTIONAL 1000.00 0          0
+A110             16.00      10.00      0          FUNCTIONAL 1000.00 0          0
+A108             16.00      10.00      0          FUNCTIONAL 1000.00 0          0
+A112             15.00      10.00      0          FUNCTIONAL 1000.00 0          0
+A113             15.00      10.00      0          FUNCTIONAL 1000.00 0          0
+A114             16.00      10.00      0          FUNCTIONAL 1000.00 0          0
+C02              14.00      10.00      0          FUNCTIONAL 1000.00 0          0
+C115             14.00      10.00      0          FUNCTIONAL 1000.00 0          0
+C113             18.20      10.00      0          FUNCTIONAL 1000.00 0          0
+C23              18.00      10.00      0          FUNCTIONAL 1000.00 0          0
+C16              16.50      10.00      0          FUNCTIONAL 1000.00 0          0
+C18              16.50      10.00      0          FUNCTIONAL 1000.00 0          0
+C22              16.50      10.00      0          FUNCTIONAL 1000.00 0          0
+C24              18.00      10.00      0          FUNCTIONAL 1000.00 0          0
+C32              14.00      10.00      0          FUNCTIONAL 1000.00 0          0
+C114             14.00      10.00      0          FUNCTIONAL 1000.00 0          0
+C108             16.00      10.00      0          FUNCTIONAL 1000.00 0          0
+C102             16.00      10.00      1.20       FUNCTIONAL 1000.00 0          0
+C103             16.00      10.00      1.30       FUNCTIONAL 1000.00 0          0
+C111             16.05      10.00      1.50       FUNCTIONAL 1000.00 0          0
+C110             16.50      10.00      1.50       FUNCTIONAL 1000.00 0          0
+C109             16.00      10.00      1.50       FUNCTIONAL 1000.00 0          0
+C104             16.00      10.00      1.40       FUNCTIONAL 1000.00 0          0
+C105             16.00      10.00      1.40       FUNCTIONAL 1000.00 0          0
+A28              15.50      10.00      0          FUNCTIONAL 1000.00 0          0
+A30              16.40      10.00      0          FUNCTIONAL 1000.00 0          0
+A31              16.40      10.00      0          FUNCTIONAL 1000.00 0          0
+A09              15.31      10.00      0          FUNCTIONAL 1000.00 0          0
+A19              15.00      10.00      0          FUNCTIONAL 1000.00 0          0
+A21              15.00      10.00      0          FUNCTIONAL 1000.00 0          0
+A23              15.21      10.00      0          FUNCTIONAL 1000.00 0          0
+A24              15.00      10.00      0          FUNCTIONAL 1000.00 0          0
+A25              15.00      10.00      0          FUNCTIONAL 1000.00 0          0
+A109             16.00      10.00      0          FUNCTIONAL 1000.00 0          0
+A117             16.00      10.00      0          FUNCTIONAL 1000.00 0          0
 
 [CONDUITS]
 ;;Name           From             To               Length     Roughness  InOffset   OutOffset  InitFlow   MaxFlow
 ;;-------------- ---------------- ---------------- ---------- ---------- ---------- ---------- ---------- ----------
-A06C             A06              A07              550.00     0          7.50       7.42       0          0
-A08C             A08              A09              770.00     0          6.43       6.66       0          0
-A03C             A03              A04              270.00     0          7.28       7.25       0          0
-A04C             A04              A110             750.00     0          7.25       7.20       0          0
-B11C             B11              B12              360.00     0          4.56       3.91       0          0
-B13C             B13              B15              80.00      0          3.87       3.80       0          0
+A06C             A06              A07              550.00     0.0130     7.50       7.42       0          0
+A08C             A08              A09              770.00     0.0130     6.43       6.66       0          0
+A03C             A03              A04              270.00     0.0130     7.28       7.25       0          0
+A04C             A04              A110             750.00     0.0130     7.25       7.20       0          0
+B11C             B11              B12              360.00     0.0130     4.56       3.91       0          0
+B13C             B13              B15              80.00      0.0130     3.87       3.80       0          0
 B17C             B17              B18              700.00     0.0420     5.00       4.25       0          0
 B21C             B21              B22              400.00     0.0550     3.66       3.36       0          0
 B19C             B19              B20              500.00     0.0420     4.00       3.68       0          0
-B16C             B16              B22              310.00     0          3.82       3.36       0          0
-B07C             B07              B08              600.00     0          6.45       5.76       0          0
-B22C             B22              B23              320.00     0          3.36       2.36       0          0
-B23C             B23              B24              320.00     0          2.36       2.09       0          0
-B24C             B24              B25              190.00     0          2.09       1.54       0          0
-B26C             B26              B27              1050.00    0          1.36       0.50       0          0
-B28C             B28              B29              130.00     0          1.52       0.46       0          0
+B16C             B16              B22              310.00     0.0130     3.82       3.36       0          0
+B07C             B07              B08              600.00     0.0130     6.45       5.76       0          0
+B22C             B22              B23              320.00     0.0130     3.36       2.36       0          0
+B23C             B23              B24              320.00     0.0130     2.36       2.09       0          0
+B24C             B24              B25              190.00     0.0130     2.09       1.54       0          0
+B26C             B26              B27              1050.00    0.0130     1.36       0.50       0          0
+B28C             B28              B29              130.00     0.0130     1.52       0.46       0          0
 B29P             B29              B30              35.00      0.0140     0.46       0.53       0          0
 B27p1            B27p2            B27p3            42.40      0.0140     0.60       0.99       0          0
 B25P1            B25P2            B25P3            65.20      0.0140     1.66       1.47       0          0
 B15P1            B15P2            B15P3            65.00      0.0140     4.01       4.00       0          0
 B12P1            B12P2            B12R             43.10      0.0140     3.91       3.87       0          0
-B08C             B08              B09              1300.00    0          5.76       4.26       0          0
+B08C             B08              B09              1300.00    0.0130     5.76       4.26       0          0
 A07P1            A07R             A08              90.00      0.0140     7.42       6.43       0          0
-B30C             B30              B31              150.00     0          0.53       0.41       0          0
+B30C             B30              B31              150.00     0.0130     0.53       0.41       0          0
 B05P1            B05R             B06              550.00     0.0140     5.61       4.76       0          0
 B06P1            B06R             B10              400.00     0.0140     4.76       4.14       0          0
 B10P1            B10R             B11              500.00     0.0140     4.14       3.37       0          0
@@ -221,25 +319,25 @@ A108P1           A108G1           A110             200.00     0.0120     8.50   
 A112P1           A112G1           A113             450.00     0.0120     9.00       7.50       0          0
 A118P1           A118R            A23              320.00     0.0120     6.19       6.06       0          0
 A114P1           A114G1           A21              150.00     0.0120     6.50       6.37       0          0
-A02C             A02              A03              400.00     0          7.33       7.28       0          0
-A105C            A105             A03              430.00     0          8.00       7.28       0          0
-A107C            A107             A04              300.00     0          8.00       7.25       0          0
+A02C             A02              A03              400.00     0.0130     7.33       7.28       0          0
+A105C            A105             A03              430.00     0.0130     8.00       7.28       0          0
+A107C            A107             A04              300.00     0.0130     8.00       7.25       0          0
 A111P1           A111R            A16              48.90      0.0140     7.17       6.57       0          0
 Golf_p1          Golf             B07              33.00      0.0140     8.00       7.00       0          0
-C17C             C17              C18              470.00     0          7.24       6.66       0          0
-C19C             C19              C20              280.00     0          6.60       6.29       0          0
-C21C             C21              C22              620.00     0          6.06       6.38       0          0
+C17C             C17              C18              470.00     0.0130     7.24       6.66       0          0
+C19C             C19              C20              280.00     0.0130     6.60       6.29       0          0
+C21C             C21              C22              620.00     0.0130     6.06       6.38       0          0
 C29P             C29              C30              150.00     0.0240     1.38       0.96       0          0
 C30P             C30              C31              280.00     0.0140     0.96       0.92       0          0
-C31C             C31              C32              350.00     0          0.43       -1.50      0          0
-C32C             C32              C33              130.00     0          -1.50      -1.52      0          0
-C33P1            C33R             C34              151.00     0.0140     -1.52      -1.61      0          0
+C31C             C31              C32              350.00     0.0130     0.43       0          0          0
+C32C             C32              C33              130.00     0.0130     0          0          0          0
+C33P1            C33R             C34              151.00     0.0140     0          0          0          0
 C23P1            C23P2            C23R             420.00     0.0140     4.93       4.80       0          0
 C20P1            C20R             C21              86.50      0.0140     6.29       6.06       0          0
 C18P1            C18P2            C18R             90.00      0.0140     6.66       6.60       0          0
 C16P1            C16R             C17              86.00      0.0140     7.37       7.24       0          0
 C107P1           C107R            C113             100.00     0.0140     6.51       6.45       0          0
-C34C             C34              C35              200.00     0          -1.61      -1.74      0          0
+C34C             C34              C35              200.00     0.0130     0          0          0          0
 C22P1            C22R             C23              620.00     0.0140     6.38       5.76       0          0
 C24P1            C24R             C25              400.00     0.0140     4.80       4.50       0          0
 C25P1            C25R             C26              250.00     0.0140     4.50       3.96       0          0
@@ -274,13 +372,13 @@ A120P1           A120             A121             40.00      0.0120     9.00   
 A122P1           A122             A123             40.00      0.0120     9.00       8.80       0          0
 A128P1           A128             A129             40.00      0.0120     9.00       8.80       0          0
 A126P1           A126             A127             40.00      0.0120     9.00       8.80       0          0
-C14C             C14              C109             370.00     0          6.60       6.40       0          0
-C109C            C109             C110             600.00     0          6.40       6.44       0          0
-C102C            C102             C103             700.00     0          6.75       6.70       0          0
-C103C            C103             C104             270.00     0          6.70       6.63       0          0
-C104C            C104             C105             130.00     0          6.63       6.60       0          0
-C110C            C110             C111             100.00     0          6.44       6.45       0          0
-632              C101             A101             0          0          0          0          0          0
+C14C             C14              C109             370.00     0.0130     6.60       6.40       0          0
+C109C            C109             C110             600.00     0.0130     6.40       6.44       0          0
+C102C            C102             C103             700.00     0.0130     6.75       6.70       0          0
+C103C            C103             C104             270.00     0.0130     6.70       6.63       0          0
+C104C            C104             C105             130.00     0.0130     6.63       6.60       0          0
+C110C            C110             C111             100.00     0.0130     6.44       6.45       0          0
+632              C101             A101             100.00     0.0130     0          0          0          0
 
 [WEIRS]
 ;;Name           From             To               Type       CrestHt    Qcoeff     Gated    EndCon   EndCoeff   Surcharge
@@ -296,30 +394,30 @@ C111W1           C111W2           C112             TRANSVERSE 8.00       1.840  
 [XSECTIONS]
 ;;Link           Shape        Geom1      Geom2      Geom3      Geom4      Barrels
 ;;-------------- ------------ ---------- ---------- ---------- ---------- ----------
-A06C             IRREGULAR    0          0          0          0          1
-A08C             IRREGULAR    0          0          0          0          1
-A03C             IRREGULAR    0          0          0          0          1
-A04C             IRREGULAR    0          0          0          0          1
-B11C             IRREGULAR    0          0          0          0          1
-B13C             IRREGULAR    0          0          0          0          1
-B17C             IRREGULAR    0          2.50       0          0          1
-B21C             IRREGULAR    0          3.00       0          0          1
-B19C             IRREGULAR    0          2.50       0          0          1
-B16C             IRREGULAR    0          0          0          0          1
-B07C             IRREGULAR    0          0          0          0          1
-B22C             IRREGULAR    0          0          0          0          1
-B23C             IRREGULAR    0          0          0          0          1
-B24C             IRREGULAR    0          0          0          0          1
-B26C             IRREGULAR    0          0          0          0          1
-B28C             IRREGULAR    0          0          0          0          1
+A06C             TRAPEZOIDAL  1.00       10.00      2          2          1
+A08C             TRAPEZOIDAL  1.00       10.00      2          2          1
+A03C             TRAPEZOIDAL  1.00       10.00      2          2          1
+A04C             TRAPEZOIDAL  1.00       10.00      2          2          1
+B11C             TRAPEZOIDAL  1.00       10.00      2          2          1
+B13C             TRAPEZOIDAL  1.00       10.00      2          2          1
+B17C             TRAPEZOIDAL  1.00       2.50       2          2          1
+B21C             TRAPEZOIDAL  1.00       3.00       2          2          1
+B19C             TRAPEZOIDAL  1.00       2.50       2          2          1
+B16C             TRAPEZOIDAL  1.00       10.00      2          2          1
+B07C             TRAPEZOIDAL  1.00       10.00      2          2          1
+B22C             TRAPEZOIDAL  1.00       10.00      2          2          1
+B23C             TRAPEZOIDAL  1.00       10.00      2          2          1
+B24C             TRAPEZOIDAL  1.00       10.00      2          2          1
+B26C             TRAPEZOIDAL  1.00       10.00      2          2          1
+B28C             TRAPEZOIDAL  1.00       10.00      2          2          1
 B29P             HORSESHOE    6.30       6.30       0          0          1
 B27p1            CIRCULAR     3.00       0          0          0          1
 B25P1            CIRCULAR     3.00       0          0          0          1
 B15P1            CIRCULAR     3.00       0          0          0          1
 B12P1            CIRCULAR     3.00       0          0          0          1
-B08C             IRREGULAR    0          0          0          0          1
+B08C             TRAPEZOIDAL  1.00       10.00      2          2          1
 A07P1            CIRCULAR     2.00       0          0          0          1
-B30C             IRREGULAR    0          0          0          0          1
+B30C             TRAPEZOIDAL  1.00       10.00      2          2          1
 B05P1            CIRCULAR     3.00       0          0          0          2
 B06P1            CIRCULAR     3.00       0          0          0          2
 B10P1            CIRCULAR     3.00       0          0          0          2
@@ -357,25 +455,25 @@ A108P1           CIRCULAR     3.00       0          0          0          1
 A112P1           CIRCULAR     1.50       0          0          0          1
 A118P1           CIRCULAR     3.00       10.00      0          0          3
 A114P1           CIRCULAR     2.50       0.00       0          0          1
-A02C             IRREGULAR    0          0          0          0          1
-A105C            IRREGULAR    0          0          0          0          1
-A107C            IRREGULAR    0          0          0          0          1
+A02C             TRAPEZOIDAL  1.00       10.00      2          2          1
+A105C            TRAPEZOIDAL  1.00       10.00      2          2          1
+A107C            TRAPEZOIDAL  1.00       10.00      2          2          1
 A111P1           CIRCULAR     2.50       0          0          0          1
 Golf_p1          CIRCULAR     1.00       0          0          0          1
-C17C             IRREGULAR    0          0          0          0          1
-C19C             IRREGULAR    0          0          0          0          1
-C21C             IRREGULAR    0          0          0          0          1
+C17C             TRAPEZOIDAL  1.00       10.00      2          2          1
+C19C             TRAPEZOIDAL  1.00       10.00      2          2          1
+C21C             TRAPEZOIDAL  1.00       10.00      2          2          1
 C29P             HORSESHOE    5.00       0          0          0          1
 C30P             RECT_CLOSED  3.00       14.00      0          0          1
-C31C             IRREGULAR    0          0          0          0          1
-C32C             IRREGULAR    0          0          0          0          1
+C31C             TRAPEZOIDAL  1.00       10.00      2          2          1
+C32C             TRAPEZOIDAL  1.00       10.00      2          2          1
 C33P1            RECT_CLOSED  6.00       8.00       0          0          2
 C23P1            CIRCULAR     3.00       0          0          0          1
 C20P1            CIRCULAR     1.75       0          0          0          1
 C18P1            CIRCULAR     2.25       0          0          0          1
 C16P1            CIRCULAR     2.25       0          0          0          1
 C107P1           CIRCULAR     1.25       0          0          0          1
-C34C             IRREGULAR    0          0          0          0          1
+C34C             TRAPEZOIDAL  1.00       10.00      2          2          1
 C22P1            CIRCULAR     3.00       0          0          0          1
 C24P1            CIRCULAR     4.00       0          0          0          1
 C25P1            CIRCULAR     4.00       0          0          0          1
@@ -410,20 +508,20 @@ A120P1           CIRCULAR     2.00       0          0          0          1
 A122P1           CIRCULAR     2.00       0          0          0          1
 A128P1           CIRCULAR     2.00       0          0          0          1
 A126P1           CIRCULAR     2.00       0          0          0          1
-C14C             IRREGULAR    0          0          0          0          1
-C109C            IRREGULAR    0          0          0          0          1
-C102C            IRREGULAR    0          0          0          0          1
-C103C            IRREGULAR    0          0          0          0          1
-C104C            IRREGULAR    0          0          0          0          1
-C110C            IRREGULAR    0          0          0          0          1
-632              CIRCULAR     0          0          0          0          1
-A110W1           RECT_OPEN    0          2.00       0          0          
-A124W1           RECT_OPEN    0          2.00       0          0          
-A130W1           RECT_OPEN    0          2.00       0          0          
-C114w1           RECT_OPEN    0          9.00       0          0          
-C105w1           RECT_OPEN    0          4.00       0          0          
-C115w1           RECT_OPEN    0          6.00       0          0          
-C111W1           RECT_OPEN    0          4.00       0          0          
+C14C             TRAPEZOIDAL  1.00       10.00      2          2          1
+C109C            TRAPEZOIDAL  1.00       10.00      2          2          1
+C102C            TRAPEZOIDAL  1.00       10.00      2          2          1
+C103C            TRAPEZOIDAL  1.00       10.00      2          2          1
+C104C            TRAPEZOIDAL  1.00       10.00      2          2          1
+C110C            TRAPEZOIDAL  1.00       10.00      2          2          1
+632              CIRCULAR     1.00       0          0          0          1
+A110W1           RECT_OPEN    1.00       2.00       0          0
+A124W1           RECT_OPEN    1.00       2.00       0          0
+A130W1           RECT_OPEN    1.00       2.00       0          0
+C114w1           RECT_OPEN    1.00       9.00       0          0
+C105w1           RECT_OPEN    1.00       4.00       0          0
+C115w1           RECT_OPEN    1.00       6.00       0          0
+C111W1           RECT_OPEN    1.00       4.00       0          0
 
 [LOSSES]
 ;;Link           Inlet      Outlet     Average    Flap Gate

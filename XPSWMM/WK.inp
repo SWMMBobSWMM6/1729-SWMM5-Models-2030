@@ -18,12 +18,23 @@ ROUTING_STEP         00:00:07
 VARIABLE_STEP        0.75
 INERTIAL_DAMPING     PARTIAL
 NORMAL_FLOW_LIMITED  BOTH
+START_DATE           01/01/2001
+START_TIME           00:00:00
+REPORT_START_DATE    01/01/2001
+REPORT_START_TIME    00:00:00
+END_DATE             01/02/2001
+END_TIME             00:00:00
+SWEEP_START          01/01
+SWEEP_END            12/31
+DRY_DAYS             0
+REPORT_STEP          00:15:00
+WET_STEP             00:05:00
+DRY_STEP             01:00:00
 
 [JUNCTIONS]
 ;;Name           Elev       MaxDepth   InitDepth  SurDepth   Aponded
 ;;-------------- ---------- ---------- ---------- ---------- ----------
 61142            425.80     0          0          0          0
-61140            423.80     0          0          0          0
 67043            421.94     0          0          0          0
 59421            422.00     0          0          0          0
 59462            423.50     0          0          0          0
@@ -70,6 +81,49 @@ NORMAL_FLOW_LIMITED  BOTH
 59428            416.79     0          0          0          0
 71239            427.00     0          0          0          0
 71240            421.50     0          0          0          0
+wknb090a.s       414.56     0          0          0          0
+wknb100c.s       412.51     0          0          0          0
+wknb100b.s       411.37     0          0          0          0
+wknb100a.s       410.80     0          0          0          0
+wknb100d.s       413.76     0          0          0          0
+wknb180b.s       419.60     0          0          0          0
+wknb180a.s       418.10     0          0          0          0
+wknb160a.s       415.40     0          0          0          0
+wk120b.s         414.28     0          0          0          0
+wknb120a.s       413.50     0          0          0          0
+wknb110c.s       412.98     0          0          0          0
+wknb110b.s       411.35     0          0          0          0
+wknb110a.s       411.20     0          0          0          0
+wknb070a.s       411.70     0          0          0          0
+wknb200a.s       422.82     0          0          0          0
+wknb190h.2       0          0          0          0          0
+wknb190h.s       0          0          0          0          0
+wknb190F.2       421.57     0          0          0          0
+wknb190F.3       421.45     0          0          0          0
+WKNB190D.2       420.85     0          0          0          0
+wkNB190D.s       420.66     0          0          0          0
+wknb190a.s       418.42     0          0          0          0
+wk280d-fl        418.17     0          0          0          0
+wknb150b.s       418.50     0          0          0          0
+wknb150a.s       413.90     0          0          0          0
+wknb140a.s       413.20     0          0          0          0
+wk250h.st        412.40     0          0          0          0
+wknb060b.s       407.70     0          0          0          0
+wknb060a.s       407.60     0          0          0          0
+wknb050d.s       413.55     0          0          0          0
+wknb050c.s       413.49     0          0          0          0
+wknb050g.s       418.50     0          0          0          0
+wknb050f.s       415.20     0          0          0          0
+wknb050e.s       414.00     0          0          0          0
+wknb050b.s       412.23     0          0          0          0
+wknb050a.s       410.90     0          0          0          0
+WKNB030C.2       407.10     0          0          0          0
+wknb030c.s       406.00     0          0          0          0
+
+[OUTFALLS]
+;;Name           Elev       Type       Stage      Gated
+;;-------------- ---------- ---------- ---------- -----
+61140            423.80     FREE                  NO
 
 [CONDUITS]
 ;;Name           From             To               Length     Roughness  InOffset   OutOffset  InitFlow   MaxFlow
@@ -90,16 +144,16 @@ wknb110a.p       wknb110a.s       59385            120.00     0.0140     411.20 
 wknb070a.p       wknb070a.s       59401            880.00     0.0160     411.70     410.63     0          0
 wknb200a.p       wknb200a.s       62712            262.00     0.0140     422.82     422.43     0          0
 wknb190h.1       wknb190h.2       wknb190h.s       1.00       0.0140     0          0          0          0
-WKNB190G         62688            62685            470.00     0          422.27     421.57     0          0
+WKNB190G         62688            62685            470.00     0.0130     422.27     421.57     0          0
 wknb190F.1       wknb190F.2       wknb190F.3       75.00      0.0300     421.57     421.45     0          0
-WKNB190E         62684            67095            400.00     0          421.45     420.85     0          0
+WKNB190E         62684            67095            400.00     0.0130     421.45     420.85     0          0
 WKNB190D.1       WKNB190D.2       wkNB190D.s       42.00      0.0380     420.85     420.66     0          0
-WKNB190C         61049            61087            340.00     0          420.66     418.95     0          0
-WKNB190B         61087            61086            620.00     0          418.95     418.42     0          0
+WKNB190C         61049            61087            340.00     0.0130     420.66     418.95     0          0
+WKNB190B         61087            61086            620.00     0.0130     418.95     418.42     0          0
 wknb190a.c       wknb190a.s       61085            68.00      0.0290     418.42     418.34     0          0
-WKNB280E         61085            71109            350.00     0          418.34     418.17     0          0
-wkNB280d         wk280d-fl        71108            620.00     0          418.17     418.31     0          0
-WKNB280C         71108            61030            250.00     0          418.31     418.50     0          0
+WKNB280E         61085            71109            350.00     0.0130     418.34     418.17     0          0
+wkNB280d         wk280d-fl        71108            620.00     0.0130     418.17     418.31     0          0
+WKNB280C         71108            61030            250.00     0.0130     418.31     418.50     0          0
 wknb150b.c       wknb150b.s       66590            532.00     0.0160     418.50     413.90     0          0
 wknb150a.c       wknb150a.s       66212            591.00     0.0140     413.90     413.20     0          0
 wknb140a.c       wknb140a.s       61213            701.00     0.0140     413.20     412.50     0          0
@@ -114,13 +168,13 @@ wknb050e.c       wknb050e.s       59545            148.00     0.0140     414.00 
 wknb050b.c       wknb050b.s       59518            436.00     0.0150     412.23     410.90     0          0
 wknb050a.c       wknb050a.s       59519            105.00     0.0180     410.90     408.00     0          0
 WKNB030C.1       WKNB030C.2       wknb030c.s       603.00     0.0190     407.10     406.00     0          0
-WKNB030B         59425            59774            1300.00    0          405.73     403.01     0          0
-WKNB060D         59401            59428            1100.00    0          410.19     408.79     0          0
-WKNB060C         59428            59426            580.00     0          408.79     407.47     0          0
-WKNB100F         71239            71240            150.00     0          421.17     415.88     0          0
-WKNB100E         71240            67043            1930.00    0          415.88     411.84     0          0
-WKNB110D         67043            59385            400.00     0          411.84     411.33     0          0
-WKNB060E         59385            59401            900.00     0          411.33     410.19     0          0
+WKNB030B         59425            59774            1300.00    0.0130     405.73     403.01     0          0
+WKNB060D         59401            59428            1100.00    0.0130     410.19     408.79     0          0
+WKNB060C         59428            59426            580.00     0.0130     408.79     407.47     0          0
+WKNB100F         71239            71240            150.00     0.0130     421.17     415.88     0          0
+WKNB100E         71240            67043            1930.00    0.0130     415.88     411.84     0          0
+WKNB110D         67043            59385            400.00     0.0130     411.84     411.33     0          0
+WKNB060E         59385            59401            900.00     0.0130     411.33     410.19     0          0
 
 [XSECTIONS]
 ;;Link           Shape        Geom1      Geom2      Geom3      Geom4      Barrels
@@ -141,16 +195,16 @@ wknb110a.p       CIRCULAR     6.00       0          0          0          1
 wknb070a.p       CIRCULAR     4.50       0          0          0          1
 wknb200a.p       CIRCULAR     3.00       0          0          0          1
 wknb190h.1       CIRCULAR     1.00       0          0          0          1
-WKNB190G         IRREGULAR    0          0          0          0          1
+WKNB190G         TRAPEZOIDAL  1.00       10.00      2          2          1
 wknb190F.1       CIRCULAR     4.00       0          0          0          1
-WKNB190E         IRREGULAR    0          0          0          0          1
+WKNB190E         TRAPEZOIDAL  1.00       10.00      2          2          1
 WKNB190D.1       CIRCULAR     4.00       0          0          0          1
-WKNB190C         IRREGULAR    0          0          0          0          1
-WKNB190B         IRREGULAR    0          0          0          0          1
+WKNB190C         TRAPEZOIDAL  1.00       10.00      2          2          1
+WKNB190B         TRAPEZOIDAL  1.00       10.00      2          2          1
 wknb190a.c       CIRCULAR     3.50       0          0          0          1
-WKNB280E         IRREGULAR    0          0          0          0          1
-wkNB280d         IRREGULAR    0          0          0          0          1
-WKNB280C         IRREGULAR    0          0          0          0          1
+WKNB280E         TRAPEZOIDAL  1.00       10.00      2          2          1
+wkNB280d         TRAPEZOIDAL  1.00       10.00      2          2          1
+WKNB280C         TRAPEZOIDAL  1.00       10.00      2          2          1
 wknb150b.c       CIRCULAR     3.50       0          0          0          1
 wknb150a.c       CIRCULAR     3.50       0          0          0          1
 wknb140a.c       CIRCULAR     4.50       0          0          0          1
@@ -165,13 +219,13 @@ wknb050e.c       RECT_CLOSED  3.00       5.00       0          0          1
 wknb050b.c       CIRCULAR     3.00       0          0          0          1
 wknb050a.c       CIRCULAR     3.50       0          0          0          1
 WKNB030C.1       CIRCULAR     6.00       0          0          0          1
-WKNB030B         IRREGULAR    0          0          0          0          1
-WKNB060D         IRREGULAR    0          0          0          0          1
-WKNB060C         IRREGULAR    0          0          0          0          1
-WKNB100F         IRREGULAR    0          0          0          0          1
-WKNB100E         IRREGULAR    0          0          0          0          1
-WKNB110D         IRREGULAR    0          0          0          0          1
-WKNB060E         IRREGULAR    0          0          0          0          1
+WKNB030B         TRAPEZOIDAL  1.00       10.00      2          2          1
+WKNB060D         TRAPEZOIDAL  1.00       10.00      2          2          1
+WKNB060C         TRAPEZOIDAL  1.00       10.00      2          2          1
+WKNB100F         TRAPEZOIDAL  1.00       10.00      2          2          1
+WKNB100E         TRAPEZOIDAL  1.00       10.00      2          2          1
+WKNB110D         TRAPEZOIDAL  1.00       10.00      2          2          1
+WKNB060E         TRAPEZOIDAL  1.00       10.00      2          2          1
 
 [LOSSES]
 ;;Link           Inlet      Outlet     Average    Flap Gate

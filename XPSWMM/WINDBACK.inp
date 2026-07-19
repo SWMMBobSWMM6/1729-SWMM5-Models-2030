@@ -20,6 +20,18 @@ INERTIAL_DAMPING     PARTIAL
 NORMAL_FLOW_LIMITED  BOTH
 MAX_TRIALS           50
 HEAD_TOLERANCE       0.0033
+START_DATE           01/01/2001
+START_TIME           00:00:00
+REPORT_START_DATE    01/01/2001
+REPORT_START_TIME    00:00:00
+END_DATE             01/02/2001
+END_TIME             00:00:00
+SWEEP_START          01/01
+SWEEP_END            12/31
+DRY_DAYS             0
+REPORT_STEP          00:15:00
+WET_STEP             00:05:00
+DRY_STEP             01:00:00
 
 [JUNCTIONS]
 ;;Name           Elev       MaxDepth   InitDepth  SurDepth   Aponded
@@ -123,7 +135,6 @@ HEAD_TOLERANCE       0.0033
 7C56             594.00     0          0          0          0
 7C67             594.20     0          0          0          0
 7S15             594.20     0          0          0          0
-7C69             594.20     0          0          0          0
 7S34             590.00     0          0          0          0
 7C59             590.00     0          0          0          0
 7C21             599.00     0          0          0          0
@@ -171,10 +182,15 @@ forg2            570.00     0          0          0          0
 6s750            580.00     0          0          0          0
 575              585.00     0          0          0          0
 
+[OUTFALLS]
+;;Name           Elev       Type       Stage      Gated
+;;-------------- ---------- ---------- ---------- -----
+7C69             594.20     FREE                  NO
+
 [STORAGE]
 ;;Name           Elev       MaxDepth   InitDepth  Shape      Curve/Params
 ;;-------------- ---------- ---------- ---------- ---------- ----------
-6s836            574.00     -4.04      0          FUNCTIONAL 5179.00 0          0
+6s836            574.00     10.00      0          FUNCTIONAL 5179.00 0          0
 
 [CONDUITS]
 ;;Name           From             To               Length     Roughness  InOffset   OutOffset  InitFlow   MaxFlow
@@ -318,7 +334,7 @@ p36              6S751            6S4              1623.00    0.0130     561.43 
 625              624              6S193            1286.00    0.0150     572.68     571.39     0          0
 633              6s81             6s162            1758.00    0.0150     571.22     569.37     0          0
 708              6s770            6S975            328.00     0.0150     559.22     559.21     0          0
-619              ?                ?                374.00     0.0150     559.30     559.26     0          0
+619              6s410            6s411            374.00     0.0150     559.30     559.26     0          0
 6101             6s283            6s282            869.00     0.0150     564.61     564.51     0          0
 627              626              6S230            1279.00    0.0150     568.90     568.80     0          0
 629              628              6S320            1058.00    0.0150     563.73     563.53     0          0
@@ -339,7 +355,7 @@ for5             forg2            forgl            200.00     0.0160     564.19 
 or3              7c34             7c34s            SIDE       583.37     0.650      NO       0
 1s200            7S15             7c56s            SIDE       579.26     0.650      NO       0
 1501             7S6              6S60             SIDE       574.39     0.650      NO       0
-1s20             ?                ?                SIDE       579.31     0.650      NO       0
+1s20             7C67             7S15             SIDE       579.31     0.650      NO       0
 
 [PUMPS]
 ;;Name           From             To               PumpCurve  Status   Startup    Shutoff
@@ -350,10 +366,11 @@ cl1              6s474            6s556            PC_cl1     ON       552.50   
 [CURVES]
 ;;Name           Type       X-Value    Y-Value
 ;;-------------- ---------- ---------- ----------
-PC_904           Pump4      0          0
-;
-PC_cl1           Pump4      0          0
-;
+;; Synthesized generic pump curves — replace with actual pump data
+PC_904           Pump1      0          5
+PC_904                      10         10
+PC_cl1           Pump1      0          5
+PC_cl1                      10         10
 
 [XSECTIONS]
 ;;Link           Shape        Geom1      Geom2      Geom3      Geom4      Barrels
@@ -510,11 +527,11 @@ for4             CIRCULAR     4.00       0          0          0          1
 for5             CIRCULAR     4.00       0          0          0          1
 750              CIRCULAR     2.00       0          0          0          1
 1502             CIRCULAR     3.00       0          0          0          1
-1S00             RECT_CLOSED  2.00       0          0          0          
-or3              RECT_CLOSED  0.83       0          0          0          
-1s200            RECT_CLOSED  1.25       0          0          0          
-1501             RECT_CLOSED  1.25       0          0          0          
-1s20             RECT_CLOSED  1.25       0          0          0          
+1S00             RECT_CLOSED  2.00       2.00       0          0
+or3              RECT_CLOSED  0.83       0.83       0          0
+1s200            RECT_CLOSED  1.25       1.25       0          0
+1501             RECT_CLOSED  1.25       1.25       0          0
+1s20             RECT_CLOSED  1.25       1.25       0          0
 
 [LOSSES]
 ;;Link           Inlet      Outlet     Average    Flap Gate

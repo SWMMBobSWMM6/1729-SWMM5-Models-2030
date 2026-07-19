@@ -20,30 +20,46 @@ INERTIAL_DAMPING     PARTIAL
 NORMAL_FLOW_LIMITED  BOTH
 MAX_TRIALS           500
 HEAD_TOLERANCE       0.0001
+START_DATE           01/01/2001
+START_TIME           00:00:00
+REPORT_START_DATE    01/01/2001
+REPORT_START_TIME    00:00:00
+END_DATE             01/02/2001
+END_TIME             00:00:00
+SWEEP_START          01/01
+SWEEP_END            12/31
+DRY_DAYS             0
+REPORT_STEP          00:15:00
+WET_STEP             00:05:00
+DRY_STEP             01:00:00
 
 [JUNCTIONS]
 ;;Name           Elev       MaxDepth   InitDepth  SurDepth   Aponded
 ;;-------------- ---------- ---------- ---------- ---------- ----------
-Outlet1          3.00       0          0          0          0
 Outlet2          3.00       0          0          0          0
 Outlet3          3.00       0          0          0          0
 Outlet4          3.00       0          0          0          0
 
+[OUTFALLS]
+;;Name           Elev       Type       Stage      Gated
+;;-------------- ---------- ---------- ---------- -----
+Outlet1          3.00       FREE                  NO
+
 [STORAGE]
 ;;Name           Elev       MaxDepth   InitDepth  Shape      Curve/Params
 ;;-------------- ---------- ---------- ---------- ---------- ----------
-Basin1           3.00       0          0          FUNCTIONAL 0 0          0
-Lake1            3.00       0          1.00       FUNCTIONAL 0 0          0
-Basin2           3.00       0          0          FUNCTIONAL 0 0          0
-Lake2            3.00       0          1.00       FUNCTIONAL 0 0          0
-Basin3           3.00       0          0.01       FUNCTIONAL 0 0          0
-Lake3            3.00       0          1.00       FUNCTIONAL 0 0          0
-Outlet5          3.00       0          0          FUNCTIONAL 0 0          0
-Lake5            3.00       0          1.00       FUNCTIONAL 0 0          0
-Basin4           3.00       0          0.01       FUNCTIONAL 0 0          0
-Lake4            3.00       0          1.00       FUNCTIONAL 0 0          0
-Outlet6          3.00       0          0          FUNCTIONAL 0 0          0
-Lake6            3.00       0          1.00       FUNCTIONAL 0 0          0
+Basin1           3.00       10.00      0          FUNCTIONAL 1000.00 0          0
+Lake1            3.00       10.00      1.00       FUNCTIONAL 1000.00 0          0
+Basin2           3.00       10.00      0          FUNCTIONAL 1000.00 0          0
+Lake2            3.00       10.00      1.00       FUNCTIONAL 1000.00 0          0
+Basin3           3.00       10.00      0.01       FUNCTIONAL 1000.00 0          0
+Lake3            3.00       10.00      1.00       FUNCTIONAL 1000.00 0          0
+Outlet5          3.00       10.00      0          FUNCTIONAL 1000.00 0          0
+Lake5            3.00       10.00      1.00       FUNCTIONAL 1000.00 0          0
+Basin4           3.00       10.00      0.01       FUNCTIONAL 1000.00 0          0
+Lake4            3.00       10.00      1.00       FUNCTIONAL 1000.00 0          0
+Outlet6          3.00       10.00      0          FUNCTIONAL 1000.00 0          0
+Lake6            3.00       10.00      1.00       FUNCTIONAL 1000.00 0          0
 
 [CONDUITS]
 ;;Name           From             To               Length     Roughness  InOffset   OutOffset  InitFlow   MaxFlow
@@ -62,16 +78,16 @@ Drain10          Lake6            Outlet6          100.00     0.0250     0.32   
 [XSECTIONS]
 ;;Link           Shape        Geom1      Geom2      Geom3      Geom4      Barrels
 ;;-------------- ------------ ---------- ---------- ---------- ---------- ----------
-Drain1           TRAPEZOIDAL  2.00       3.00       0          0          1
-Drain2           TRAPEZOIDAL  1.00       3.00       0          0          1
-Drain4           TRAPEZOIDAL  1.00       3.00       0          0          1
-Drain3           TRAPEZOIDAL  2.00       3.00       0          0          1
-Drain6           TRAPEZOIDAL  1.00       3.00       0          0          1
-Drain5           TRAPEZOIDAL  2.00       3.00       0          0          1
-Drain9           TRAPEZOIDAL  2.00       3.00       0          0          1
-Drain8           TRAPEZOIDAL  1.00       3.00       0          0          1
-Drain7           TRAPEZOIDAL  2.00       3.00       0          0          1
-Drain10          TRAPEZOIDAL  2.00       3.00       0          0          1
+Drain1           TRAPEZOIDAL  2.00       3.00       1          1          1
+Drain2           TRAPEZOIDAL  1.00       3.00       1          1          1
+Drain4           TRAPEZOIDAL  1.00       3.00       1          1          1
+Drain3           TRAPEZOIDAL  2.00       3.00       1          1          1
+Drain6           TRAPEZOIDAL  1.00       3.00       1          1          1
+Drain5           TRAPEZOIDAL  2.00       3.00       1          1          1
+Drain9           TRAPEZOIDAL  2.00       3.00       1          1          1
+Drain8           TRAPEZOIDAL  1.00       3.00       1          1          1
+Drain7           TRAPEZOIDAL  2.00       3.00       1          1          1
+Drain10          TRAPEZOIDAL  2.00       3.00       1          1          1
 
 [LOSSES]
 ;;Link           Inlet      Outlet     Average    Flap Gate

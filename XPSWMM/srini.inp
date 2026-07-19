@@ -19,6 +19,18 @@ VARIABLE_STEP        0.75
 INERTIAL_DAMPING     NONE
 NORMAL_FLOW_LIMITED  BOTH
 MAX_TRIALS           30
+START_DATE           01/01/2001
+START_TIME           00:00:00
+REPORT_START_DATE    01/01/2001
+REPORT_START_TIME    00:00:00
+END_DATE             01/02/2001
+END_TIME             00:00:00
+SWEEP_START          01/01
+SWEEP_END            12/31
+DRY_DAYS             0
+REPORT_STEP          00:15:00
+WET_STEP             00:05:00
+DRY_STEP             01:00:00
 
 [JUNCTIONS]
 ;;Name           Elev       MaxDepth   InitDepth  SurDepth   Aponded
@@ -103,7 +115,6 @@ LS29             1011.00    0          0          0          0
 057              1032.00    0          0          0          0
 058              1032.00    0          0          0          0
 065              1009.44    0          0          0          0
-OUT65            1007.00    0          0          0          0
 059              1019.52    0          0          0          0
 064              1010.46    0          0          0          0
 060              1015.45    0          0          0          0
@@ -257,6 +268,11 @@ LS01             1030.00    0          0          0          0
 078A             1033.00    0          0          0          0
 WWTP             1015.00    0          0          0          0
 
+[OUTFALLS]
+;;Name           Elev       Type       Stage      Gated
+;;-------------- ---------- ---------- ---------- -----
+OUT65            1007.00    FREE                  NO
+
 [CONDUITS]
 ;;Name           From             To               Length     Roughness  InOffset   OutOffset  InitFlow   MaxFlow
 ;;-------------- ---------------- ---------------- ---------- ---------- ---------- ---------- ---------- ----------
@@ -385,7 +401,7 @@ OUT65a           065              OUT65            663.00     0.0130     1008.80
 141142           141              142              275.00     0.0130     1043.20    1042.20    0          0
 146147           146              147              253.00     0.0130     1039.80    1039.79    0          0
 148149           148              149              81.00      0.0130     1038.67    1037.49    0          0
-147148           ?                ?                173.00     0.0130     1039.79    1038.67    0          0
+147148           147              148              173.00     0.0130     1039.79    1038.67    0          0
 145146           145              146              200.00     0.0130     1039.90    1039.80    0          0
 151152           151              152              289.00     0.0130     1036.53    1035.67    0          0
 150151           150              151              230.00     0.0130     1036.83    1036.53    0          0
@@ -495,22 +511,23 @@ OUT65a           065              OUT65            663.00     0.0130     1008.80
 [PUMPS]
 ;;Name           From             To               PumpCurve  Status   Startup    Shutoff
 ;;-------------- ---------------- ---------------- ---------- -------- ---------- ----------
-MUL1             LS29             WWTP             PC_MUL1    ON       0          0         
-MUL2             LS30             WWTP             PC_MUL2    ON       0          0         
-MUL3             LS27             110              PC_MUL3    ON       0          0         
-MUL4             LS01             107              PC_MUL4    ON       0          0         
+MUL1             LS29             WWTP             PC_MUL1    ON       1.00       0         
+MUL2             LS30             WWTP             PC_MUL2    ON       1.00       0         
+MUL3             LS27             110              PC_MUL3    ON       1.00       0         
+MUL4             LS01             107              PC_MUL4    ON       1.00       0         
 
 [CURVES]
 ;;Name           Type       X-Value    Y-Value
 ;;-------------- ---------- ---------- ----------
-PC_MUL1          Pump2      0          0
-;
-PC_MUL2          Pump2      0          0
-;
-PC_MUL3          Pump2      0          0
-;
-PC_MUL4          Pump2      0          0
-;
+;; Synthesized generic pump curves — replace with actual pump data
+PC_MUL1          Pump1      0          5
+PC_MUL1                     10         10
+PC_MUL2          Pump1      0          5
+PC_MUL2                     10         10
+PC_MUL3          Pump1      0          5
+PC_MUL3                     10         10
+PC_MUL4          Pump1      0          5
+PC_MUL4                     10         10
 
 [XSECTIONS]
 ;;Link           Shape        Geom1      Geom2      Geom3      Geom4      Barrels
@@ -579,7 +596,7 @@ PC_MUL4          Pump2      0          0
 055056           CIRCULAR     1.00       0          0          0          1
 057058           CIRCULAR     0.66       0          0          0          1
 065066           CIRCULAR     0.66       0          0          0          1
-OUT65a           CIRCULAR     0          0          0          0          1
+OUT65a           CIRCULAR     1.00       0          0          0          1
 058059           CIRCULAR     0.66       0          0          0          1
 064065           CIRCULAR     0.66       0          0          0          1
 059060           CIRCULAR     0.66       0          0          0          1

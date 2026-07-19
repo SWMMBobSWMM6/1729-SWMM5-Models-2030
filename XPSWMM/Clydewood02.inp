@@ -20,18 +20,34 @@ INERTIAL_DAMPING     PARTIAL
 NORMAL_FLOW_LIMITED  BOTH
 MAX_TRIALS           50
 HEAD_TOLERANCE       0.00033
+START_DATE           01/01/2001
+START_TIME           00:00:00
+REPORT_START_DATE    01/01/2001
+REPORT_START_TIME    00:00:00
+END_DATE             01/02/2001
+END_TIME             00:00:00
+SWEEP_START          01/01
+SWEEP_END            12/31
+DRY_DAYS             0
+REPORT_STEP          00:15:00
+WET_STEP             00:05:00
+DRY_STEP             01:00:00
 
 [JUNCTIONS]
 ;;Name           Elev       MaxDepth   InitDepth  SurDepth   Aponded
 ;;-------------- ---------- ---------- ---------- ---------- ----------
 Sta              172.80     0          0          0          0
-Sta              165.94     0          0          0          0
-Sta              158.58     0          0          0          0
-Sta              146.00     0          0          0          0
+Sta_2            165.94     0          0          0          0
+Sta_3            158.58     0          0          0          0
+Sta_4            146.00     0          0          0          0
 8                165.94     0          0          0          0
-9                158.58     0          0          0          0
 11               165.94     0          0          0          0
 DropPipeMH       158.58     0          0          0          0
+
+[OUTFALLS]
+;;Name           Elev       Type       Stage      Gated
+;;-------------- ---------- ---------- ---------- -----
+9                158.58     FREE                  NO
 
 [CONDUITS]
 ;;Name           From             To               Length     Roughness  InOffset   OutOffset  InitFlow   MaxFlow
@@ -40,7 +56,7 @@ DropPipeMH       158.58     0          0          0          0
 205.1            Sta              DropPipeMH       350.00     0.0130     159.09     151.95     0          0
 7                Sta              Sta              237.03     0.0130     146.78     139.20     0          0
 Prop.            8                9                350.00     0.0130     159.09     146.83     0          0
-205.1            11               Sta              350.00     0.0130     159.09     146.78     0          0
+205.1_2          11               Sta              350.00     0.0130     159.09     146.78     0          0
 Drop             DropPipeMH       Sta              5.17       0.0130     151.95     146.78     0          0
 
 [XSECTIONS]
@@ -50,7 +66,7 @@ Drop             DropPipeMH       Sta              5.17       0.0130     151.95 
 205.1            CIRCULAR     0.67       0          0          0          1
 7                CIRCULAR     0.83       0          0          0          1
 Prop.            CIRCULAR     0.83       0          0          0          1
-205.1            CIRCULAR     0.67       0          0          0          1
+205.1_2          CIRCULAR     0.67       0          0          0          1
 Drop             CIRCULAR     0.25       0          0          0          1
 
 [LOSSES]
@@ -60,16 +76,16 @@ Drop             CIRCULAR     0.25       0          0          0          1
 205.1            0          0          0          NO
 7                0          0          0          NO
 Prop.            0          0          0          NO
-205.1            0          0          0          NO
+205.1_2          0          0          0          NO
 Drop             0          0          0          NO
 
 [COORDINATES]
 ;;Node           X-Coord            Y-Coord
 ;;-------------- ------------------ ------------------
 Sta              83.05              251.30            
-Sta              83.07              250.41            
-Sta              83.11              249.33            
-Sta              83.09              248.42            
+Sta_2            83.07              250.41            
+Sta_3            83.11              249.33            
+Sta_4            83.09              248.42            
 8                84.18              250.48            
 9                84.20              249.39            
 11               83.63              249.32            

@@ -19,6 +19,18 @@ VARIABLE_STEP        0.75
 INERTIAL_DAMPING     PARTIAL
 NORMAL_FLOW_LIMITED  BOTH
 MAX_TRIALS           50
+START_DATE           01/01/2001
+START_TIME           00:00:00
+REPORT_START_DATE    01/01/2001
+REPORT_START_TIME    00:00:00
+END_DATE             01/02/2001
+END_TIME             00:00:00
+SWEEP_START          01/01
+SWEEP_END            12/31
+DRY_DAYS             0
+REPORT_STEP          00:15:00
+WET_STEP             00:05:00
+DRY_STEP             01:00:00
 
 [JUNCTIONS]
 ;;Name           Elev       MaxDepth   InitDepth  SurDepth   Aponded
@@ -88,7 +100,6 @@ MAX_TRIALS           50
 248              280.09     0          0          0          0
 255              277.17     0          0          0          0
 257              277.00     0          0          0          0
-259              273.50     0          0          0          0
 266              300.00     0          0          0          0
 268              300.00     0          0          0          0
 271              284.22     0          0          0          0
@@ -125,6 +136,11 @@ MAX_TRIALS           50
 355              300.00     0          0          0          0
 366              300.00     0          0          0          0
 365              288.00     0          0          0          0
+
+[OUTFALLS]
+;;Name           Elev       Type       Stage      Gated
+;;-------------- ---------- ---------- ---------- -----
+259              273.50     FREE                  NO
 
 [CONDUITS]
 ;;Name           From             To               Length     Roughness  InOffset   OutOffset  InitFlow   MaxFlow

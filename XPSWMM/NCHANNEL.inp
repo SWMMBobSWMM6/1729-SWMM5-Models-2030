@@ -14,17 +14,28 @@ LINK_OFFSETS         DEPTH
 MIN_SLOPE            0.0
 ALLOW_PONDING        NO
 SKIP_STEADY_STATE    NO
-ROUTING_STEP         00:00:60
+ROUTING_STEP         00:01:00
 VARIABLE_STEP        0.75
 INERTIAL_DAMPING     PARTIAL
 NORMAL_FLOW_LIMITED  BOTH
 MAX_TRIALS           100
 HEAD_TOLERANCE       0.0033
+START_DATE           01/01/2001
+START_TIME           00:00:00
+REPORT_START_DATE    01/01/2001
+REPORT_START_TIME    00:00:00
+END_DATE             01/02/2001
+END_TIME             00:00:00
+SWEEP_START          01/01
+SWEEP_END            12/31
+DRY_DAYS             0
+REPORT_STEP          00:15:00
+WET_STEP             00:05:00
+DRY_STEP             01:00:00
 
 [JUNCTIONS]
 ;;Name           Elev       MaxDepth   InitDepth  SurDepth   Aponded
 ;;-------------- ---------- ---------- ---------- ---------- ----------
-KC88             126.33     0          0          0          0
 KC89             126.40     0          0          0          0
 KC90             126.44     0          0          0          0
 KC91             126.44     0          0          0          0
@@ -40,6 +51,11 @@ KC100            126.09     0          0          0          0
 KC101            126.22     0          0          0          0
 KC102            126.57     0          0          0          0
 
+[OUTFALLS]
+;;Name           Elev       Type       Stage      Gated
+;;-------------- ---------- ---------- ---------- -----
+KC88             126.33     FREE                  NO
+
 [CONDUITS]
 ;;Name           From             To               Length     Roughness  InOffset   OutOffset  InitFlow   MaxFlow
 ;;-------------- ---------------- ---------------- ---------- ---------- ---------- ---------- ---------- ----------
@@ -53,7 +69,7 @@ CHAN6            KC94             KC93             10.13      0.0130     123.37 
 CHAN5            KC92             KC93             11.40      0.0130     123.32     123.28     0          0
 CHAN4            KC91             KC92             11.31      0.0130     123.44     123.32     0          0
 CHAN3            KC91             KC90             11.07      0.0130     123.44     123.44     0          0
-CHAN1            KC89             KC88             0          0.0130     123.40     123.33     0          0
+CHAN1            KC89             KC88             100.00     0.0130     123.40     123.33     0          0
 CHAN14           KC102            KC101            12.13      0.0130     123.57     123.22     0          0
 CHAN12           KC99             KC100            11.88      0.0130     123.14     123.09     0          0
 CHAN2            KC90             KC89             11.30      0.0130     123.44     123.40     0          0

@@ -20,11 +20,22 @@ INERTIAL_DAMPING     PARTIAL
 NORMAL_FLOW_LIMITED  BOTH
 MAX_TRIALS           50
 HEAD_TOLERANCE       0.0033
+START_DATE           01/01/2001
+START_TIME           00:00:00
+REPORT_START_DATE    01/01/2001
+REPORT_START_TIME    00:00:00
+END_DATE             01/02/2001
+END_TIME             00:00:00
+SWEEP_START          01/01
+SWEEP_END            12/31
+DRY_DAYS             0
+REPORT_STEP          00:15:00
+WET_STEP             00:05:00
+DRY_STEP             01:00:00
 
 [JUNCTIONS]
 ;;Name           Elev       MaxDepth   InitDepth  SurDepth   Aponded
 ;;-------------- ---------- ---------- ---------- ---------- ----------
-312              881.06     0          0          0          0
 650              874.88     0          0          0          0
 652              874.57     0          0          0          0
 654              865.43     0          0          0          0
@@ -40,11 +51,22 @@ HEAD_TOLERANCE       0.0033
 796              860.00     0          0          0          0
 310O             888.20     0          0          0          0
 652A             874.00     0          0          0          0
+Weir             877.89     0          0          0          0
+312_IMPR         876.86     0          0          0          0
+650_IMPR         869.98     0          0          0          0
+9000_666         849.04     0          0          0          0
+796_IMPR         855.73     0          0          0          0
+OUTFLOW          877.89     0          0          0          0
+
+[OUTFALLS]
+;;Name           Elev       Type       Stage      Gated
+;;-------------- ---------- ---------- ---------- -----
+312              881.06     FREE                  NO
 
 [STORAGE]
 ;;Name           Elev       MaxDepth   InitDepth  Shape      Curve/Params
 ;;-------------- ---------- ---------- ---------- ---------- ----------
-310              888.20     0          0          FUNCTIONAL 0 0          0
+310              888.20     10.00      0          FUNCTIONAL 1000.00 0          0
 
 [CONDUITS]
 ;;Name           From             To               Length     Roughness  InOffset   OutOffset  InitFlow   MaxFlow
@@ -90,7 +112,7 @@ Orifice          Weir             310O             SIDE       877.89     0.650  
 310O_312         CIRCULAR     2.50       0          0          0          1
 652_OFLW#1       CIRCULAR     2.00       0          0          0          1
 652_OFLW#2       CIRCULAR     2.00       0          0          0          1
-Orifice          RECT_CLOSED  2.50       0          0          0          
+Orifice          RECT_CLOSED  2.50       2.50       0          0
 
 [LOSSES]
 ;;Link           Inlet      Outlet     Average    Flap Gate

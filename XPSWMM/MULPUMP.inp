@@ -20,27 +20,52 @@ INERTIAL_DAMPING     PARTIAL
 NORMAL_FLOW_LIMITED  BOTH
 MAX_TRIALS           50
 HEAD_TOLERANCE       0.0033
+START_DATE           01/01/2001
+START_TIME           00:00:00
+REPORT_START_DATE    01/01/2001
+REPORT_START_TIME    00:00:00
+END_DATE             01/02/2001
+END_TIME             00:00:00
+SWEEP_START          01/01
+SWEEP_END            12/31
+DRY_DAYS             0
+REPORT_STEP          00:15:00
+WET_STEP             00:05:00
+DRY_STEP             01:00:00
 
 [JUNCTIONS]
 ;;Name           Elev       MaxDepth   InitDepth  SurDepth   Aponded
 ;;-------------- ---------- ---------- ---------- ---------- ----------
-201              200.00     0          6.00       0          0
-202              200.00     0          6.00       0          0
-204              200.00     0          6.00       0          0
-206              200.00     0          3.00       0          0
+201              200.00     0          0          0          0
+204              200.00     0          0          0          0
+206              200.00     0          0          0          0
 208              200.00     0          0          0          0
+p2               0          0          0          0          0
+p3               0          0          0          0          0
+
+[OUTFALLS]
+;;Name           Elev       Type       Stage      Gated
+;;-------------- ---------- ---------- ---------- -----
+202              200.00     FREE                  NO
 
 [CONDUITS]
 ;;Name           From             To               Length     Roughness  InOffset   OutOffset  InitFlow   MaxFlow
 ;;-------------- ---------------- ---------------- ---------- ---------- ---------- ---------- ---------- ----------
-203              ?                ?                10000.00   0.0140     0          0          0          0
-207              ?                ?                19000.00   0.0140     0          0          0          0
-209              ?                ?                1000.00    0.0140     0          0          0          0
+203              201              202              10000.00   0.0140     0          0          0          0
+207              208              206              19000.00   0.0140     0          0          0          0
+209              204              208              1000.00    0.0140     0          0          0          0
 
 [PUMPS]
 ;;Name           From             To               PumpCurve  Status   Startup    Shutoff
 ;;-------------- ---------------- ---------------- ---------- -------- ---------- ----------
-p1               p2               p3               *          ON       0          0         
+p1               p2               p3               PC_p1      ON       1.00       0         
+
+[CURVES]
+;;Name           Type       X-Value    Y-Value
+;;-------------- ---------- ---------- ----------
+;; Synthesized generic pump curves — replace with actual pump data
+PC_p1            Pump1      0          5
+PC_p1                       10         10
 
 [XSECTIONS]
 ;;Link           Shape        Geom1      Geom2      Geom3      Geom4      Barrels

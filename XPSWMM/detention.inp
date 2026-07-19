@@ -14,12 +14,24 @@ LINK_OFFSETS         DEPTH
 MIN_SLOPE            0.0
 ALLOW_PONDING        NO
 SKIP_STEADY_STATE    NO
-ROUTING_STEP         00:00:60
+ROUTING_STEP         00:01:00
 VARIABLE_STEP        0.75
 INERTIAL_DAMPING     PARTIAL
 NORMAL_FLOW_LIMITED  BOTH
 MAX_TRIALS           50
 HEAD_TOLERANCE       0.00033
+START_DATE           01/01/2001
+START_TIME           00:00:00
+REPORT_START_DATE    01/01/2001
+REPORT_START_TIME    00:00:00
+END_DATE             01/02/2001
+END_TIME             00:00:00
+SWEEP_START          01/01
+SWEEP_END            12/31
+DRY_DAYS             0
+REPORT_STEP          00:15:00
+WET_STEP             00:05:00
+DRY_STEP             01:00:00
 
 [JUNCTIONS]
 ;;Name           Elev       MaxDepth   InitDepth  SurDepth   Aponded
@@ -69,14 +81,18 @@ NE2606.80        976.00     0          0          0          0
 2605.68          978.00     0          0          0          0
 NE2605.98        976.00     0          0          0          0
 NE2613.191       974.00     0          0          0          0
-NE2613.194       980.00     0          0          0          0
+
+[OUTFALLS]
+;;Name           Elev       Type       Stage      Gated
+;;-------------- ---------- ---------- ---------- -----
+NE2613.194       980.00     FREE                  NO
 
 [STORAGE]
 ;;Name           Elev       MaxDepth   InitDepth  Shape      Curve/Params
 ;;-------------- ---------- ---------- ---------- ---------- ----------
-NE2613.193       980.00     0          0          FUNCTIONAL 0 0          0
-POND             1007.00    0          0          FUNCTIONAL 0 0          0
-POND             1000.00    0          0          FUNCTIONAL 0 0          0
+NE2613.193       980.00     10.00      0          FUNCTIONAL 1000.00 0          0
+POND             1007.00    10.00      0          FUNCTIONAL 1000.00 0          0
+POND_2           1000.00    10.00      0          FUNCTIONAL 1000.00 0          0
 
 [CONDUITS]
 ;;Name           From             To               Length     Roughness  InOffset   OutOffset  InitFlow   MaxFlow
@@ -143,21 +159,21 @@ P2               CIRCULAR     2.00       0          0          0          1
 P3               CIRCULAR     2.00       0          0          0          1
 P4               CIRCULAR     2.00       0          0          0          1
 P5               CIRCULAR     2.00       0          0          0          1
-CH1              TRAPEZOIDAL  3.00       4.00       0          0          1
+CH1              TRAPEZOIDAL  3.00       4.00       1          1          1
 P6               HORSESHOE    6.25       0          0          0          1
-CH2              TRAPEZOIDAL  4.00       4.00       0          0          1
-CH4              TRAPEZOIDAL  3.00       4.00       0          0          1
+CH2              TRAPEZOIDAL  4.00       4.00       1          1          1
+CH4              TRAPEZOIDAL  3.00       4.00       1          1          1
 P7               CIRCULAR     3.50       0          0          0          2
-CH5              TRAPEZOIDAL  4.00       4.00       0          0          1
+CH5              TRAPEZOIDAL  4.00       4.00       1          1          1
 P8               CIRCULAR     2.00       0          0          0          1
 P9               CIRCULAR     1.50       0          0          0          1
 P10              CIRCULAR     1.50       0          0          0          1
 P11              CIRCULAR     1.50       0          0          0          1
-CH7              TRAPEZOIDAL  2.00       4.00       0          0          1
-CH8              TRAPEZOIDAL  4.00       4.00       0          0          1
-CH9              TRAPEZOIDAL  4.00       5.00       0          0          1
+CH7              TRAPEZOIDAL  2.00       4.00       1          1          1
+CH8              TRAPEZOIDAL  4.00       4.00       1          1          1
+CH9              TRAPEZOIDAL  4.00       5.00       1          1          1
 B6               RECT_CLOSED  6.00       6.00       0          0          1
-CH10             TRAPEZOIDAL  8.00       10.00      0          0          1
+CH10             TRAPEZOIDAL  8.00       10.00      1          1          1
 B7               RECT_CLOSED  4.00       14.00      0          0          1
 P12              CIRCULAR     2.00       0          0          0          1
 P13              CIRCULAR     2.00       0          0          0          1
@@ -175,11 +191,11 @@ P24              CIRCULAR     3.50       0          0          0          1
 P25              CIRCULAR     4.00       0          0          0          1
 P26              CIRCULAR     4.00       0          0          0          1
 P27              HORSESHOE    7.00       8.00       0          0          1
-CH100            TRAPEZOIDAL  5.00       35.00      0          0          1
-CH101            TRAPEZOIDAL  5.00       30.00      0          0          1
-105              TRAPEZOIDAL  3.00       4.00       0          0          1
+CH100            TRAPEZOIDAL  5.00       35.00      1          1          1
+CH101            TRAPEZOIDAL  5.00       30.00      1          1          1
+105              TRAPEZOIDAL  3.00       4.00       1          1          1
 106              CIRCULAR     2.00       0          0          0          1
-108              TRAPEZOIDAL  4.00       4.00       0          0          1
+108              TRAPEZOIDAL  4.00       4.00       1          1          1
 109              CIRCULAR     2.00       0          0          0          1
 
 [LOSSES]
@@ -285,7 +301,7 @@ NE2613.191       -200416.67         1581392.03
 NE2613.193       -200400.63         1581413.99        
 NE2613.194       -200351.82         1581435.08        
 POND             -199662.79         1578860.74        
-POND             -200173.29         1579497.29        
+POND_2           -200173.29         1579497.29        
 
 [MAP]
 DIMENSIONS -202602.27 1578266.95 -197428.72 1581531.90

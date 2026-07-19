@@ -16,6 +16,18 @@ ALLOW_PONDING        NO
 SKIP_STEADY_STATE    NO
 INERTIAL_DAMPING     PARTIAL
 NORMAL_FLOW_LIMITED  BOTH
+START_DATE           01/01/2001
+START_TIME           00:00:00
+REPORT_START_DATE    01/01/2001
+REPORT_START_TIME    00:00:00
+END_DATE             01/02/2001
+END_TIME             00:00:00
+SWEEP_START          01/01
+SWEEP_END            12/31
+DRY_DAYS             0
+REPORT_STEP          00:15:00
+WET_STEP             00:05:00
+DRY_STEP             01:00:00
 
 [JUNCTIONS]
 ;;Name           Elev       MaxDepth   InitDepth  SurDepth   Aponded
@@ -25,7 +37,11 @@ CA-8             0          0          0          0          0
 CA-7             0          0          0          0          0
 CA-1             0          0          0          0          0
 Outlet           0          0          0          0          0
-210              0          0          0          0          0
+
+[OUTFALLS]
+;;Name           Elev       Type       Stage      Gated
+;;-------------- ---------- ---------- ---------- -----
+210              0          FREE                  NO
 
 [CONDUITS]
 ;;Name           From             To               Length     Roughness  InOffset   OutOffset  InitFlow   MaxFlow
@@ -34,7 +50,7 @@ P011             CA-11            CA-7             655.00     0.0240     0      
 P009             CA-8             CA-7             505.00     0.0240     0          0          0          0
 P005             CA-7             CA-1             240.00     0.0150     0          0          0          0
 P001             CA-1             Outlet           220.00     0.0150     0          0          0          0
-211              ?                ?                33.00      0.0140     0          0          0          0
+211              Outlet           210              33.00      0.0140     0          0          0          0
 
 [XSECTIONS]
 ;;Link           Shape        Geom1      Geom2      Geom3      Geom4      Barrels
@@ -43,7 +59,7 @@ P011             CIRCULAR     2.50       0          0          0          1
 P009             CIRCULAR     2.25       0          0          0          1
 P005             CIRCULAR     3.00       0          0          0          1
 P001             CIRCULAR     4.00       0          0          0          1
-211              CIRCULAR     0          2.76       0          0          1
+211              CIRCULAR     1.00       2.76       0          0          1
 
 [LOSSES]
 ;;Link           Inlet      Outlet     Average    Flap Gate

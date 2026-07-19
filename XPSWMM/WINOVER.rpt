@@ -2,39 +2,233 @@
   EPA STORM WATER MANAGEMENT MODEL - VERSION 5.2 (Build 5.2.4)
   ------------------------------------------------------------
 
+  Converted from XPSWMM .xp file 
+  WARNING 08: elevation drop exceeds length for Conduit 3
+  WARNING 04: minimum elevation drop used for Conduit inter1
+  WARNING 04: minimum elevation drop used for Conduit inter2
+  WARNING 04: minimum elevation drop used for Conduit regulator
+  WARNING 04: minimum elevation drop used for Conduit channel
+  WARNING 04: minimum elevation drop used for Conduit 218.1
+  WARNING 04: minimum elevation drop used for Conduit 19
   
-  ERROR 211: invalid number  at line 62 of [XSECT] section:
-  3                CIRCULAR     0          0          0          0          1
-
+  ****************
+  Analysis Options
+  ****************
+  Flow Units ............... CMS
+  Process Models:
+    Rainfall/Runoff ........ NO
+    RDII ................... NO
+    Snowmelt ............... NO
+    Groundwater ............ NO
+    Flow Routing ........... YES
+    Ponding Allowed ........ NO
+    Water Quality .......... NO
+  Flow Routing Method ...... DYNWAVE
+  Surcharge Method ......... EXTRAN
+  Starting Date ............ 01/01/2001 00:00:00
+  Ending Date .............. 01/02/2001 00:00:00
+  Antecedent Dry Days ...... 0.0
+  Report Time Step ......... 00:15:00
+  Routing Time Step ........ 20.00 sec
+  Variable Time Step ....... YES
+  Maximum Trials ........... 8
+  Number of Threads ........ 1
+  Head Tolerance ........... 0.001524 m
   
-  ERROR 211: invalid number  at line 63 of [XSECT] section:
-  inter1           CIRCULAR     0          0          0          0          1
-
   
-  ERROR 211: invalid number  at line 64 of [XSECT] section:
-  inter2           CIRCULAR     0          0          0          0          1
-
+  **************************        Volume        Volume
+  Flow Routing Continuity        hectare-m      10^6 ltr
+  **************************     ---------     ---------
+  Dry Weather Inflow .......         0.000         0.000
+  Wet Weather Inflow .......         0.000         0.000
+  Groundwater Inflow .......         0.000         0.000
+  RDII Inflow ..............         0.000         0.000
+  External Inflow ..........         0.000         0.000
+  External Outflow .........         0.000         0.000
+  Flooding Loss ............         0.000         0.000
+  Evaporation Loss .........         0.000         0.000
+  Exfiltration Loss ........         0.000         0.000
+  Initial Stored Volume ....         0.000         0.000
+  Final Stored Volume ......         0.000         0.000
+  Continuity Error (%) .....         0.000
   
-  ERROR 211: invalid number  at line 65 of [XSECT] section:
-  channel          CIRCULAR     0          0          0          0          1
-
   
-  ERROR 211: invalid number  at line 66 of [XSECT] section:
-  218.1            CIRCULAR     0          0          0          0          1
-
+  ***************************
+  Time-Step Critical Elements
+  ***************************
+  None
   
-  ERROR 211: invalid number  at line 67 of [XSECT] section:
-  19               CIRCULAR     0          0          0          0          1
-
   
-  ERROR 211: invalid number  at line 68 of [XSECT] section:
-  205.1            RECT_OPEN    0          2.00       0          0          
-
+  ********************************
+  Highest Flow Instability Indexes
+  ********************************
+  All links are stable.
   
-  ERROR 211: invalid number  at line 69 of [XSECT] section:
-  regulator        RECT_OPEN    0          0          0          0          
+  
+  *********************************
+  Most Frequent Nonconverging Nodes
+  *********************************
+  Convergence obtained at all time steps.
+  
+  
+  *************************
+  Routing Time Step Summary
+  *************************
+  Minimum Time Step           :    19.50 sec
+  Average Time Step           :    20.00 sec
+  Maximum Time Step           :    20.00 sec
+  % of Time in Steady State   :     0.00
+  Average Iterations per Step :     2.00
+  % of Steps Not Converging   :     0.00
+  Time Step Frequencies       :
+     20.000 -  9.564 sec      :   100.00 %
+      9.564 -  4.573 sec      :     0.00 %
+      4.573 -  2.187 sec      :     0.00 %
+      2.187 -  1.046 sec      :     0.00 %
+      1.046 -  0.500 sec      :     0.00 %
+  
+  
+  ******************
+  Node Depth Summary
+  ******************
+  
+  ---------------------------------------------------------------------------------
+                                 Average  Maximum  Maximum  Time of Max    Reported
+                                   Depth    Depth      HGL   Occurrence   Max Depth
+  Node                 Type       Meters   Meters   Meters  days hr:min      Meters
+  ---------------------------------------------------------------------------------
+  baltimore            JUNCTION     0.00     0.00   300.00     0  00:00        0.00
+  6                    JUNCTION     0.00     0.00     0.00     0  00:00        0.00
+  8                    JUNCTION     0.00     0.00     0.00     0  00:00        0.00
+  10                   JUNCTION     0.00     0.00     0.00     0  00:00        0.00
+  23                   JUNCTION     0.00     0.00     0.00     0  00:00        0.00
+  hole                 JUNCTION     0.00     0.00     0.00     0  00:00        0.00
+  16                   JUNCTION     0.00     0.00     0.00     0  00:00        0.00
+  outfall              OUTFALL      0.00     0.00     0.00     0  00:00        0.00
+  cso                  STORAGE      0.00     0.00     0.00     0  00:00        0.00
+  wetwell              STORAGE      0.00     0.00     0.00     0  00:00        0.00
+  
+  
+  *******************
+  Node Inflow Summary
+  *******************
+  
+  -------------------------------------------------------------------------------------------------
+                                  Maximum  Maximum                  Lateral       Total        Flow
+                                  Lateral    Total  Time of Max      Inflow      Inflow     Balance
+                                   Inflow   Inflow   Occurrence      Volume      Volume       Error
+  Node                 Type           CMS      CMS  days hr:min    10^6 ltr    10^6 ltr     Percent
+  -------------------------------------------------------------------------------------------------
+  baltimore            JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
+  6                    JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
+  8                    JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
+  10                   JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
+  23                   JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
+  hole                 JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
+  16                   JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
+  outfall              OUTFALL      0.000    0.000     0  00:00           0           0       0.000 ltr
+  cso                  STORAGE      0.000    0.000     0  00:00           0           0       0.000 ltr
+  wetwell              STORAGE      0.000    0.000     0  00:00           0           0       0.000 ltr
+  
+  
+  **********************
+  Node Surcharge Summary
+  **********************
+  
+  No nodes were surcharged.
+  
+  
+  *********************
+  Node Flooding Summary
+  *********************
+  
+  No nodes were flooded.
+  
+  
+  **********************
+  Storage Volume Summary
+  **********************
+  
+  ------------------------------------------------------------------------------------------------
+                         Average    Avg   Evap  Exfil     Maximum    Max    Time of Max    Maximum
+                          Volume   Pcnt   Pcnt   Pcnt      Volume   Pcnt     Occurrence    Outflow
+  Storage Unit           1000 m³   Full   Loss   Loss     1000 m³   Full    days hr:min        CMS
+  ------------------------------------------------------------------------------------------------
+  cso                      0.000    0.0    0.0    0.0       0.000    0.0       0  00:00      0.000
+  wetwell                  0.000    0.0    0.0    0.0       0.000    0.0       0  00:00      0.000
+  
+  
+  ***********************
+  Outfall Loading Summary
+  ***********************
+  
+  -----------------------------------------------------------
+                         Flow       Avg       Max       Total
+                         Freq      Flow      Flow      Volume
+  Outfall Node           Pcnt       CMS       CMS    10^6 ltr
+  -----------------------------------------------------------
+  outfall                0.00     0.000     0.000       0.000
+  -----------------------------------------------------------
+  System                 0.00     0.000     0.000       0.000
+  
+  
+  ********************
+  Link Flow Summary
+  ********************
+  
+  -----------------------------------------------------------------------------
+                                 Maximum  Time of Max   Maximum    Max/    Max/
+                                  |Flow|   Occurrence   |Veloc|    Full    Full
+  Link                 Type          CMS  days hr:min     m/sec    Flow   Depth
+  -----------------------------------------------------------------------------
+  3                    CONDUIT     0.000     0  00:00      0.00    0.00    0.00
+  inter1               CONDUIT     0.000     0  00:00      0.00    0.00    0.00
+  inter2               CONDUIT     0.000     0  00:00      0.00    0.00    0.00
+  regulator            CONDUIT     0.000     0  00:00      0.00    0.00    0.00
+  channel              CONDUIT     0.000     0  00:00      0.00    0.00    0.00
+  218.1                CONDUIT     0.000     0  00:00      0.00    0.00    0.00
+  19                   CONDUIT     0.000     0  00:00      0.00    0.00    0.00
+  205.1                WEIR        0.000     0  00:00                      0.00
+  pumps                PUMP        0.000     0  00:00              0.00
+  
+  
+  ***************************
+  Flow Classification Summary
+  ***************************
+  
+  -------------------------------------------------------------------------------------
+                      Adjusted    ---------- Fraction of Time in Flow Class ---------- 
+                       /Actual         Up    Down  Sub   Sup   Up    Down  Norm  Inlet 
+  Conduit               Length    Dry  Dry   Dry   Crit  Crit  Crit  Crit  Ltd   Ctrl  
+  -------------------------------------------------------------------------------------
+  3                       1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  inter1                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  inter2                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  regulator               1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  channel                 1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  218.1                   1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  19                      1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  
+  
+  *************************
+  Conduit Surcharge Summary
+  *************************
+  
+  No conduits were surcharged.
+  
+  
+  ***************
+  Pumping Summary
+  ***************
+  
+  ---------------------------------------------------------------------------------------------------------
+                                                  Min       Avg       Max     Total     Power    % Time Off
+                        Percent   Number of      Flow      Flow      Flow    Volume     Usage    Pump Curve
+  Pump                 Utilized   Start-Ups       CMS       CMS       CMS  10^6 ltr     Kw-hr    Low   High
+  ---------------------------------------------------------------------------------------------------------
+  pumps                    0.00           0      0.00      0.00      0.00     0.000      0.00    0.0    0.0
+  
 
-
-  Analysis begun on:  Mon Jul 13 08:04:22 2026
-  Analysis ended on:  Mon Jul 13 08:04:22 2026
+  Analysis begun on:  Sun Jul 19 15:25:03 2026
+  Analysis ended on:  Sun Jul 19 15:25:03 2026
   Total elapsed time: < 1 sec

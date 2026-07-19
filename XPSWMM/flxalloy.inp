@@ -16,32 +16,57 @@ ALLOW_PONDING        NO
 SKIP_STEADY_STATE    NO
 INERTIAL_DAMPING     PARTIAL
 NORMAL_FLOW_LIMITED  BOTH
+START_DATE           01/01/2001
+START_TIME           00:00:00
+REPORT_START_DATE    01/01/2001
+REPORT_START_TIME    00:00:00
+END_DATE             01/02/2001
+END_TIME             00:00:00
+SWEEP_START          01/01
+SWEEP_END            12/31
+DRY_DAYS             0
+REPORT_STEP          00:15:00
+WET_STEP             00:05:00
+DRY_STEP             01:00:00
 
 [JUNCTIONS]
 ;;Name           Elev       MaxDepth   InitDepth  SurDepth   Aponded
 ;;-------------- ---------- ---------- ---------- ---------- ----------
 DET              44.00      0          0          0          0
 node             42.00      0          0          0          0
-node             44.00      0          0          0          0
+
+[OUTFALLS]
+;;Name           Elev       Type       Stage      Gated
+;;-------------- ---------- ---------- ---------- -----
+node_2           44.00      FREE                  NO
+
+[CONDUITS]
+;;Name           From             To               Length     Roughness  InOffset   OutOffset  InitFlow   MaxFlow
+;;-------------- ---------------- ---------------- ---------- ---------- ---------- ---------- ---------- ----------
+PIPE_e           DET              node             50.00      0.0150     38.00      37.75      0          0
 
 [WEIRS]
 ;;Name           From             To               Type       CrestHt    Qcoeff     Gated    EndCon   EndCoeff   Surcharge
 ;;-------------- ---------------- ---------------- ---------- ---------- ---------- -------- -------- ---------- ----------
-PIPE  e          DET              node             TRANSVERSE 40.00      1.840      NO       0        0          YES
 weir             DET              node             TRANSVERSE 0          1.840      NO       0        0          YES
 
 [XSECTIONS]
 ;;Link           Shape        Geom1      Geom2      Geom3      Geom4      Barrels
 ;;-------------- ------------ ---------- ---------- ---------- ---------- ----------
-PIPE  e          RECT_OPEN    0          10.00      0          0          
-weir             RECT_OPEN    0          10.00      0          0          
+PIPE_e           CIRCULAR     0.03       0          0          0          1
+weir             RECT_OPEN    1.00       10.00      0          0
+
+[LOSSES]
+;;Link           Inlet      Outlet     Average    Flap Gate
+;;-------------- ---------- ---------- ---------- ----------
+PIPE_e           0          0          0          NO
 
 [COORDINATES]
 ;;Node           X-Coord            Y-Coord
 ;;-------------- ------------------ ------------------
 DET              60.73              112.88            
 node             48.87              86.92             
-node             70.70              81.81             
+node_2           70.70              81.81             
 
 [MAP]
 DIMENSIONS 48.87 81.81 70.70 112.88

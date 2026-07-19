@@ -18,6 +18,18 @@ ROUTING_STEP         00:00:05
 VARIABLE_STEP        0.75
 INERTIAL_DAMPING     PARTIAL
 NORMAL_FLOW_LIMITED  BOTH
+START_DATE           01/01/2001
+START_TIME           00:00:00
+REPORT_START_DATE    01/01/2001
+REPORT_START_TIME    00:00:00
+END_DATE             01/02/2001
+END_TIME             00:00:00
+SWEEP_START          01/01
+SWEEP_END            12/31
+DRY_DAYS             0
+REPORT_STEP          00:15:00
+WET_STEP             00:05:00
+DRY_STEP             01:00:00
 
 [JUNCTIONS]
 ;;Name           Elev       MaxDepth   InitDepth  SurDepth   Aponded
@@ -28,11 +40,15 @@ Basin            958.00     0          0          0          0
 E.               973.50     0          0          0          0
 S.               973.00     0          0          0          0
 Gym              972.40     0          0          0          0
-PROP-OUT         956.00     0          0          0          0
 N.               974.00     0          0          0          0
 Gras-Inlet       972.80     0          0          0          0
 Pav-Inlet        973.80     0          0          0          0
 Junction         973.50     0          0          0          0
+
+[OUTFALLS]
+;;Name           Elev       Type       Stage      Gated
+;;-------------- ---------- ---------- ---------- -----
+PROP-OUT         956.00     FREE                  NO
 
 [CONDUITS]
 ;;Name           From             To               Length     Roughness  InOffset   OutOffset  InitFlow   MaxFlow
@@ -40,13 +56,13 @@ Junction         973.50     0          0          0          0
 8"               Yard             Gras-Inlet       210.00     0.0100     968.99     966.70     0          0
 21"              W.               Basin            230.00     0.0150     964.64     955.54     0          0
 10"              E.               S.               200.00     0.0150     971.54     968.54     0          0
-10"              S.               W.               260.00     0.0150     968.54     964.64     0          0
+10"_2            S.               W.               260.00     0.0150     968.54     964.64     0          0
 18"              Gym              W.               145.00     0.0100     965.34     964.64     0          0
 overflow         Basin            PROP-OUT         50.00      0.0200     956.50     953.00     0          0
-8"               N.               Gras-Inlet       65.00      0.0100     971.00     970.35     0          0
-18"              Gras-Inlet       Pav-Inlet        84.00      0.0100     966.70     966.29     0          0
-18"              Pav-Inlet        Junction         73.00      0.0100     966.29     965.94     0          0
-18"              Junction         Gym              123.00     0.0100     965.94     965.34     0          0
+8"_2             N.               Gras-Inlet       65.00      0.0100     971.00     970.35     0          0
+18"_2            Gras-Inlet       Pav-Inlet        84.00      0.0100     966.70     966.29     0          0
+18"_3            Pav-Inlet        Junction         73.00      0.0100     966.29     965.94     0          0
+18"_4            Junction         Gym              123.00     0.0100     965.94     965.34     0          0
 
 [XSECTIONS]
 ;;Link           Shape        Geom1      Geom2      Geom3      Geom4      Barrels
@@ -54,13 +70,13 @@ overflow         Basin            PROP-OUT         50.00      0.0200     956.50 
 8"               CIRCULAR     0.67       0          0          0          1
 21"              CIRCULAR     1.75       0          0          0          1
 10"              CIRCULAR     0.83       0          0          0          1
-10"              CIRCULAR     0.83       0          0          0          1
+10"_2            CIRCULAR     0.83       0          0          0          1
 18"              CIRCULAR     1.50       0          0          0          1
-overflow         TRAPEZOIDAL  1.00       20.00      0          0          1
-8"               CIRCULAR     0.67       0          0          0          1
-18"              CIRCULAR     1.50       0          0          0          1
-18"              CIRCULAR     1.50       0          0          0          1
-18"              CIRCULAR     1.50       0          0          0          1
+overflow         TRAPEZOIDAL  1.00       20.00      1          1          1
+8"_2             CIRCULAR     0.67       0          0          0          1
+18"_2            CIRCULAR     1.50       0          0          0          1
+18"_3            CIRCULAR     1.50       0          0          0          1
+18"_4            CIRCULAR     1.50       0          0          0          1
 
 [LOSSES]
 ;;Link           Inlet      Outlet     Average    Flap Gate
@@ -68,13 +84,13 @@ overflow         TRAPEZOIDAL  1.00       20.00      0          0          1
 8"               0          0          0          NO
 21"              0          0          0          NO
 10"              0          0          0          NO
-10"              0          0          0          NO
+10"_2            0          0          0          NO
 18"              0          0          0          NO
 overflow         0          0          0          NO
-8"               0          0          0          NO
-18"              0          0          0          NO
-18"              0          0          0          NO
-18"              0          0          0          NO
+8"_2             0          0          0          NO
+18"_2            0          0          0          NO
+18"_3            0          0          0          NO
+18"_4            0          0          0          NO
 
 [COORDINATES]
 ;;Node           X-Coord            Y-Coord

@@ -2,23 +2,241 @@
   EPA STORM WATER MANAGEMENT MODEL - VERSION 5.2 (Build 5.2.4)
   ------------------------------------------------------------
 
+  Regulator No. 8 - Runoff 5 Year Storm 
   
-  ERROR 209: undefined object ? at line 47 of [CONDUIT] section:
-  231              ?                ?                100.00     0.0140     722.60     722.56     0          0
-
+  ****************
+  Analysis Options
+  ****************
+  Flow Units ............... CFS
+  Process Models:
+    Rainfall/Runoff ........ NO
+    RDII ................... NO
+    Snowmelt ............... NO
+    Groundwater ............ NO
+    Flow Routing ........... YES
+    Ponding Allowed ........ NO
+    Water Quality .......... NO
+  Flow Routing Method ...... DYNWAVE
+  Surcharge Method ......... EXTRAN
+  Starting Date ............ 01/01/2001 00:00:00
+  Ending Date .............. 01/02/2001 00:00:00
+  Antecedent Dry Days ...... 0.0
+  Report Time Step ......... 00:15:00
+  Routing Time Step ........ 15.00 sec
+  Variable Time Step ....... YES
+  Maximum Trials ........... 50
+  Number of Threads ........ 1
+  Head Tolerance ........... 0.003300 ft
   
-  ERROR 209: undefined object ? at line 48 of [CONDUIT] section:
-  232              ?                ?                100.00     0.0140     722.56     722.52     0          0
-
   
-  ERROR 211: invalid number  at line 78 of [XSECT] section:
-  Reg8-OR          RECT_CLOSED  0.42       0          0          0          
-
+  **************************        Volume        Volume
+  Flow Routing Continuity        acre-feet      10^6 gal
+  **************************     ---------     ---------
+  Dry Weather Inflow .......         0.000         0.000
+  Wet Weather Inflow .......         0.000         0.000
+  Groundwater Inflow .......         0.000         0.000
+  RDII Inflow ..............         0.000         0.000
+  External Inflow ..........        39.668        12.926
+  External Outflow .........         0.000         0.000
+  Flooding Loss ............        31.135        10.146
+  Evaporation Loss .........         0.000         0.000
+  Exfiltration Loss ........         0.000         0.000
+  Initial Stored Volume ....         0.000         0.000
+  Final Stored Volume ......         0.177         0.058
+  Continuity Error (%) .....        21.065
   
-  ERROR 211: invalid number  at line 79 of [XSECT] section:
-  ToOutfall        RECT_OPEN    0          10.00      0          0          
+  
+  ***************************
+  Time-Step Critical Elements
+  ***************************
+  Link 231 (49.84%)
+  Link 232 (24.96%)
+  
+  
+  ********************************
+  Highest Flow Instability Indexes
+  ********************************
+  Link 231 (75)
+  Link 232 (75)
+  
+  
+  *********************************
+  Most Frequent Nonconverging Nodes
+  *********************************
+  Node P06119 (0.07%)
+  Node Reg8-OUT (0.07%)
+  Node 222 (0.06%)
+  Node 220 (0.04%)
+  
+  
+  *************************
+  Routing Time Step Summary
+  *************************
+  Minimum Time Step           :     1.56 sec
+  Average Time Step           :     6.10 sec
+  Maximum Time Step           :    15.00 sec
+  % of Time in Steady State   :     0.00
+  Average Iterations per Step :     9.24
+  % of Steps Not Converging   :     0.07
+  Time Step Frequencies       :
+     15.000 -  7.597 sec      :    25.19 %
+      7.597 -  3.848 sec      :    25.08 %
+      3.848 -  1.949 sec      :    24.91 %
+      1.949 -  0.987 sec      :    24.82 %
+      0.987 -  0.500 sec      :     0.00 %
+  
+  
+  ******************
+  Node Depth Summary
+  ******************
+  
+  ---------------------------------------------------------------------------------
+                                 Average  Maximum  Maximum  Time of Max    Reported
+                                   Depth    Depth      HGL   Occurrence   Max Depth
+  Node                 Type         Feet     Feet     Feet  days hr:min        Feet
+  ---------------------------------------------------------------------------------
+  Reg8-1               JUNCTION     0.00     0.00   768.93     0  00:00        0.00
+  Reg8                 JUNCTION     0.00     0.00   768.93     0  00:00        0.00
+  Reg8-W1              JUNCTION     0.00     0.00   768.93     0  00:00        0.00
+  Reg8-OR1             JUNCTION     0.00     0.00   768.93     0  00:00        0.00
+  P06119               JUNCTION   727.51   731.56  1500.49     0  00:12      729.65
+  220                  JUNCTION   726.86   729.52  1498.45     0  00:12      729.52
+  222                  JUNCTION   728.65   729.60  1498.53     0  00:16      729.60
+  Reg8-2               JUNCTION     0.00     0.00   782.00     0  00:00        0.00
+  Reg8-3               JUNCTION     0.00     0.00   780.00     0  00:00        0.00
+  Reg8-4               JUNCTION     0.00     0.00   795.00     0  00:00        0.00
+  Reg8-5               JUNCTION     0.00     0.00   770.00     0  00:00        0.00
+  Reg8-6               JUNCTION     0.00     0.00   770.00     0  00:00        0.00
+  Reg8-OUT             OUTFALL      0.00     0.00   765.00     0  00:00        0.00
+  
+  
+  *******************
+  Node Inflow Summary
+  *******************
+  
+  -------------------------------------------------------------------------------------------------
+                                  Maximum  Maximum                  Lateral       Total        Flow
+                                  Lateral    Total  Time of Max      Inflow      Inflow     Balance
+                                   Inflow   Inflow   Occurrence      Volume      Volume       Error
+  Node                 Type           CFS      CFS  days hr:min    10^6 gal    10^6 gal     Percent
+  -------------------------------------------------------------------------------------------------
+  Reg8-1               JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  Reg8                 JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  Reg8-W1              JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  Reg8-OR1             JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  P06119               JUNCTION      0.00   327.15     0  00:07           0        7.86       0.869
+  220                  JUNCTION      0.00   398.86     0  00:12           0        7.75       0.000
+  222                  JUNCTION     20.00   160.16     0  00:12        12.9          13      13.206
+  Reg8-2               JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  Reg8-3               JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  Reg8-4               JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  Reg8-5               JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  Reg8-6               JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  Reg8-OUT             OUTFALL       0.00     0.00     0  00:00           0           0       0.000 gal
+  
+  
+  **********************
+  Node Surcharge Summary
+  **********************
+  
+  Surcharging occurs when water rises above the top of the highest conduit.
+  ---------------------------------------------------------------------
+                                               Max. Height   Min. Depth
+                                   Hours       Above Crown    Below Rim
+  Node                 Type      Surcharged           Feet         Feet
+  ---------------------------------------------------------------------
+  P06119               JUNCTION        0.01          0.000        0.000
+  220                  JUNCTION       23.73          0.000        0.000
+  222                  JUNCTION       21.98          0.000        0.000
+  
+  
+  *********************
+  Node Flooding Summary
+  *********************
+  
+  Flooding refers to all water that overflows a node, whether it ponds or not.
+  --------------------------------------------------------------------------
+                                                             Total   Maximum
+                                 Maximum   Time of Max       Flood    Ponded
+                        Hours       Rate    Occurrence      Volume     Depth
+  Node                 Flooded       CFS   days hr:min    10^6 gal      Feet
+  --------------------------------------------------------------------------
+  P06119                  0.01    163.58      0  00:12       0.018     0.000
+  220                    23.73    108.47      0  00:12       7.670     0.000
+  222                    21.98     13.51      0  00:16       5.152     0.000
+  
+  
+  ***********************
+  Outfall Loading Summary
+  ***********************
+  
+  -----------------------------------------------------------
+                         Flow       Avg       Max       Total
+                         Freq      Flow      Flow      Volume
+  Outfall Node           Pcnt       CFS       CFS    10^6 gal
+  -----------------------------------------------------------
+  Reg8-OUT               0.00      0.00      0.00       0.000
+  -----------------------------------------------------------
+  System                 0.00      0.00      0.00       0.000
+  
+  
+  ********************
+  Link Flow Summary
+  ********************
+  
+  -----------------------------------------------------------------------------
+                                 Maximum  Time of Max   Maximum    Max/    Max/
+                                  |Flow|   Occurrence   |Veloc|    Full    Full
+  Link                 Type          CFS  days hr:min    ft/sec    Flow   Depth
+  -----------------------------------------------------------------------------
+  LReg8-1              CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  LReg8-W1             CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  LReg8-OR1            CONDUIT      0.00     0  00:00      0.00    0.00    0.02
+  231                  CONDUIT    327.15     0  00:07     17.00    2.76    1.00
+  232                  CONDUIT    398.86     0  00:12     15.73    3.36    1.00
+  LReg8-4              CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  LReg8-3              CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  LReg8-2              CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  LReg8-6              CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  LReg8-5              CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  Reg8-OR              ORIFICE      0.00     0  00:00                      0.00
+  ToOutfall            WEIR         0.00     0  00:00                      0.00
+  
+  
+  ***************************
+  Flow Classification Summary
+  ***************************
+  
+  -------------------------------------------------------------------------------------
+                      Adjusted    ---------- Fraction of Time in Flow Class ---------- 
+                       /Actual         Up    Down  Sub   Sup   Up    Down  Norm  Inlet 
+  Conduit               Length    Dry  Dry   Dry   Crit  Crit  Crit  Crit  Ltd   Ctrl  
+  -------------------------------------------------------------------------------------
+  LReg8-1                 1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  LReg8-W1                1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  LReg8-OR1               1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  231                     1.00   0.01  0.00  0.00  0.99  0.00  0.00  0.00  0.00  0.00
+  232                     1.00   0.01  0.00  0.00  0.99  0.00  0.00  0.00  0.00  0.00
+  LReg8-4                 1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  LReg8-3                 1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  LReg8-2                 1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  LReg8-6                 1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  LReg8-5                 1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  
+  
+  *************************
+  Conduit Surcharge Summary
+  *************************
+  
+  ----------------------------------------------------------------------------
+                                                           Hours        Hours 
+                         --------- Hours Full --------   Above Full   Capacity
+  Conduit                Both Ends  Upstream  Dnstream   Normal Flow   Limited
+  ----------------------------------------------------------------------------
+  231                         0.01     22.02      0.01      0.02         0.01
+  232                         0.01      0.01     23.73      0.01         0.01
+  
 
-
-  Analysis begun on:  Mon Jul 13 08:04:12 2026
-  Analysis ended on:  Mon Jul 13 08:04:12 2026
-  Total elapsed time: < 1 sec
+  Analysis begun on:  Sun Jul 19 15:22:08 2026
+  Analysis ended on:  Sun Jul 19 15:22:09 2026
+  Total elapsed time: 00:00:01

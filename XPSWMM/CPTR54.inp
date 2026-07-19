@@ -19,11 +19,22 @@ VARIABLE_STEP        0.75
 INERTIAL_DAMPING     PARTIAL
 NORMAL_FLOW_LIMITED  BOTH
 MAX_TRIALS           50
+START_DATE           01/01/2001
+START_TIME           00:00:00
+REPORT_START_DATE    01/01/2001
+REPORT_START_TIME    00:00:00
+END_DATE             01/02/2001
+END_TIME             00:00:00
+SWEEP_START          01/01
+SWEEP_END            12/31
+DRY_DAYS             0
+REPORT_STEP          00:15:00
+WET_STEP             00:05:00
+DRY_STEP             01:00:00
 
 [JUNCTIONS]
 ;;Name           Elev       MaxDepth   InitDepth  SurDepth   Aponded
 ;;-------------- ---------- ---------- ---------- ---------- ----------
-365              807.00     0          0          0          0
 406              819.30     0          0          0          0
 407              814.50     0          0          0          0
 409              814.50     0          0          0          0
@@ -31,38 +42,50 @@ MAX_TRIALS           50
 1070             820.00     0          0          0          0
 1072             809.00     0          0          0          0
 1075             810.00     0          0          0          0
+line_2           803.77     0          0          0          0
+Node_71          810.90     0          0          0          0
+Node_1270606     810.60     0          0          0          0
+Node_74          805.10     0          0          0          0
+Node_1272607     803.77     0          0          0          0
+Node_1076        805.90     0          0          0          0
+Node_12751272    805.60     0          0          0          0
+
+[OUTFALLS]
+;;Name           Elev       Type       Stage      Gated
+;;-------------- ---------- ---------- ---------- -----
+365              807.00     FREE                  NO
 
 [CONDUITS]
 ;;Name           From             To               Length     Roughness  InOffset   OutOffset  InitFlow   MaxFlow
 ;;-------------- ---------------- ---------------- ---------- ---------- ---------- ---------- ---------- ----------
 411              409              365              50.00      0.0140     802.70     801.95     0          0
-line 1           line 2           409              145.00     0.0140     803.77     802.70     0          0
+line_1           line_2           409              145.00     0.0140     803.77     802.70     0          0
 901              407              900              50.00      0.0140     804.50     802.00     0          0
-1071             Node_1071        Node_1270606     100.00     0.0140     810.90     810.60     0          0
+071              Node_71          Node_1270606     100.00     0.0140     810.90     810.60     0          0
 1073             406              1072             1900.00    0.0200     810.12     805.10     0          0
-1074             Node_1074        Node_1272607     670.00     0.0200     805.10     803.77     0          0
+074              Node_74          Node_1272607     670.00     0.0200     805.10     803.77     0          0
 1076             Node_1076        Node_12751272    100.00     0.0140     805.90     805.60     0          0
 
 [XSECTIONS]
 ;;Link           Shape        Geom1      Geom2      Geom3      Geom4      Barrels
 ;;-------------- ------------ ---------- ---------- ---------- ---------- ----------
 411              CIRCULAR     1.00       0          0          0          1
-line 1           CIRCULAR     0.67       0          0          0          1
+line_1           CIRCULAR     0.67       0          0          0          1
 901              CIRCULAR     1.00       0          0          0          1
-1071             CIRCULAR     0.83       0          0          0          1
+071              CIRCULAR     0.83       0          0          0          1
 1073             CIRCULAR     1.00       0          0          0          1
-1074             CIRCULAR     1.00       0          0          0          1
+074              CIRCULAR     1.00       0          0          0          1
 1076             CIRCULAR     0.66       0          0          0          1
 
 [LOSSES]
 ;;Link           Inlet      Outlet     Average    Flap Gate
 ;;-------------- ---------- ---------- ---------- ----------
 411              0          0          0          NO
-line 1           0          0          0          NO
+line_1           0          0          0          NO
 901              0          0          0          NO
-1071             0          0          0          NO
+071              0          0          0          NO
 1073             0          0          0          NO
-1074             0          0          0          NO
+074              0          0          0          NO
 1076             0          0          0          NO
 
 [COORDINATES]

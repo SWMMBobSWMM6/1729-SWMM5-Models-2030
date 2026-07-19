@@ -20,11 +20,22 @@ INERTIAL_DAMPING     PARTIAL
 NORMAL_FLOW_LIMITED  BOTH
 MAX_TRIALS           50
 HEAD_TOLERANCE       0.0033
+START_DATE           01/01/2001
+START_TIME           00:00:00
+REPORT_START_DATE    01/01/2001
+REPORT_START_TIME    00:00:00
+END_DATE             01/02/2001
+END_TIME             00:00:00
+SWEEP_START          01/01
+SWEEP_END            12/31
+DRY_DAYS             0
+REPORT_STEP          00:15:00
+WET_STEP             00:05:00
+DRY_STEP             01:00:00
 
 [JUNCTIONS]
 ;;Name           Elev       MaxDepth   InitDepth  SurDepth   Aponded
 ;;-------------- ---------- ---------- ---------- ---------- ----------
-LH020            93.00      0          0          0          0
 LH060            155.50     0          0          0          0
 LH020A           100.00     0          0          0          0
 LH020B           100.30     0          0          0          0
@@ -40,21 +51,29 @@ LH2GW            150.00     0          0          0          0
 LH2GWout         3.00       0          0          0          0
 LH3GW            150.00     0          0          0          0
 LH3GWout         3.00       0          0          0          0
+LH030weir        96.53      0          0          0          0
+LH040weir        122.99     0          0          0          0
+LH124Bweir       128.08     0          0          0          0
+
+[OUTFALLS]
+;;Name           Elev       Type       Stage      Gated
+;;-------------- ---------- ---------- ---------- -----
+LH020            93.00      FREE                  NO
 
 [STORAGE]
 ;;Name           Elev       MaxDepth   InitDepth  Shape      Curve/Params
 ;;-------------- ---------- ---------- ---------- ---------- ----------
-LH122            104.80     0          0          FUNCTIONAL 0 0          0
-LH124            124.00     0          0          FUNCTIONAL 0 0          0
-LH221            128.00     0          0          FUNCTIONAL 0 0          0
-LH030            108.00     0          0          FUNCTIONAL 0 0          0
-LH040            134.00     0          0          FUNCTIONAL 0 0          0
-LH130            134.60     0          0          FUNCTIONAL 0 0          0
-LH220            104.00     0          0          FUNCTIONAL 0 0          0
-LH123            134.50     0          0          FUNCTIONAL 0 0          0
-LH125            147.50     0          0          FUNCTIONAL 0 0          0
-LH126            162.00     0          0          FUNCTIONAL 0 0          0
-LH131            170.00     0          0          FUNCTIONAL 0 0          0
+LH122            104.80     10.00      0          FUNCTIONAL 1000.00 0          0
+LH124            124.00     10.00      0          FUNCTIONAL 1000.00 0          0
+LH221            128.00     10.00      0          FUNCTIONAL 1000.00 0          0
+LH030            108.00     10.00      0          FUNCTIONAL 1000.00 0          0
+LH040            134.00     10.00      0          FUNCTIONAL 1000.00 0          0
+LH130            134.60     10.00      0          FUNCTIONAL 1000.00 0          0
+LH220            104.00     10.00      0          FUNCTIONAL 1000.00 0          0
+LH123            134.50     10.00      0          FUNCTIONAL 1000.00 0          0
+LH125            147.50     10.00      0          FUNCTIONAL 1000.00 0          0
+LH126            162.00     10.00      0          FUNCTIONAL 1000.00 0          0
+LH131            170.00     10.00      0          FUNCTIONAL 1000.00 0          0
 
 [CONDUITS]
 ;;Name           From             To               Length     Roughness  InOffset   OutOffset  InitFlow   MaxFlow
@@ -86,31 +105,29 @@ LH123pipe        LH123            LH1GW            33.00      0.0140     115.60 
 LH221pipe        LH221            LH3GW            33.00      0.0140     112.10     10.00      0          0
 2124A            LH124A           LH124            400.00     0.0350     127.19     117.00     0          0
 LH124Bculv       LH124Bweir       LH124A           31.00      0.0140     128.08     127.19     0          0
-LH220GW          LH220            LH3GW            0          0          0          0          0          0
-LH125GW          LH125            LH2GW            0          0          0          0          0          0
 22GW             LH2GW            LH2GWout         50.00      0.0140     0.50       0          0          0
 23GW             LH3GW            LH3GWout         50.00      0.0140     0.50       0          0          0
 
 [XSECTIONS]
 ;;Link           Shape        Geom1      Geom2      Geom3      Geom4      Barrels
 ;;-------------- ------------ ---------- ---------- ---------- ---------- ----------
-2221             TRAPEZOIDAL  5.00       2.00       0          0          1
-2125             TRAPEZOIDAL  5.00       2.00       0          0          1
-2124             TRAPEZOIDAL  5.00       2.00       0          0          1
-2126             TRAPEZOIDAL  5.00       2.00       0          0          1
-2122             TRAPEZOIDAL  5.00       2.00       0          0          1
-2020B            TRAPEZOIDAL  7.00       2.00       0          0          1
-2220             TRAPEZOIDAL  5.00       2.00       0          0          1
-2020A            TRAPEZOIDAL  7.00       2.00       0          0          1
-2030B            TRAPEZOIDAL  5.00       2.00       0          0          1
-2130A            TRAPEZOIDAL  5.00       2.00       0          0          1
-2130             TRAPEZOIDAL  5.00       2.00       0          0          1
-2030A            TRAPEZOIDAL  10.00      2.00       0          0          1
+2221             TRAPEZOIDAL  5.00       2.00       1          1          1
+2125             TRAPEZOIDAL  5.00       2.00       1          1          1
+2124             TRAPEZOIDAL  5.00       2.00       1          1          1
+2126             TRAPEZOIDAL  5.00       2.00       1          1          1
+2122             TRAPEZOIDAL  5.00       2.00       1          1          1
+2020B            TRAPEZOIDAL  7.00       2.00       1          1          1
+2220             TRAPEZOIDAL  5.00       2.00       1          1          1
+2020A            TRAPEZOIDAL  7.00       2.00       1          1          1
+2030B            TRAPEZOIDAL  5.00       2.00       1          1          1
+2130A            TRAPEZOIDAL  5.00       2.00       1          1          1
+2130             TRAPEZOIDAL  5.00       2.00       1          1          1
+2030A            TRAPEZOIDAL  10.00      2.00       1          1          1
 LH030culv        CIRCULAR     4.00       0          0          0          1
 LH040culv        CIRCULAR     2.00       0          0          0          1
-2060             TRAPEZOIDAL  10.00      2.00       0          0          1
-2020C            TRAPEZOIDAL  5.00       2.00       0          0          1
-2131             TRAPEZOIDAL  1.00       50.00      0          0          1
+2060             TRAPEZOIDAL  10.00      2.00       1          1          1
+2020C            TRAPEZOIDAL  5.00       2.00       1          1          1
+2131             TRAPEZOIDAL  1.00       50.00      1          1          1
 LH115PIPE        CIRCULAR     2.00       0          0          0          1
 LH131pipe        CIRCULAR     2.00       0          0          0          1
 LH126pipe        CIRCULAR     2.00       0          0          0          1
@@ -119,10 +136,8 @@ LH124pipe        CIRCULAR     2.00       0          0          0          1
 LH122pipe        CIRCULAR     2.00       0          0          0          1
 LH123pipe        CIRCULAR     2.00       0          0          0          1
 LH221pipe        CIRCULAR     2.00       0          0          0          1
-2124A            TRAPEZOIDAL  5.00       2.00       0          0          1
+2124A            TRAPEZOIDAL  5.00       2.00       1          1          1
 LH124Bculv       CIRCULAR     1.50       0          0          0          1
-LH220GW          CIRCULAR     0          0          0          0          1
-LH125GW          CIRCULAR     0          0          0          0          1
 22GW             CIRCULAR     3.00       0          0          0          1
 23GW             CIRCULAR     3.00       0          0          0          1
 
@@ -156,8 +171,6 @@ LH123pipe        0          0          0          NO
 LH221pipe        0          0          0          NO
 2124A            0          0          0          NO
 LH124Bculv       0          0          0          NO
-LH220GW          0          0          0          NO
-LH125GW          0          0          0          NO
 22GW             0          0          0          NO
 23GW             0          0          0          NO
 

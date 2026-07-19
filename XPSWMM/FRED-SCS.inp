@@ -14,16 +14,27 @@ LINK_OFFSETS         DEPTH
 MIN_SLOPE            0.0
 ALLOW_PONDING        NO
 SKIP_STEADY_STATE    NO
-ROUTING_STEP         00:00:60
+ROUTING_STEP         00:01:00
 VARIABLE_STEP        0.75
 INERTIAL_DAMPING     PARTIAL
 NORMAL_FLOW_LIMITED  BOTH
 HEAD_TOLERANCE       0.0033
+START_DATE           01/01/2001
+START_TIME           00:00:00
+REPORT_START_DATE    01/01/2001
+REPORT_START_TIME    00:00:00
+END_DATE             01/02/2001
+END_TIME             00:00:00
+SWEEP_START          01/01
+SWEEP_END            12/31
+DRY_DAYS             0
+REPORT_STEP          00:15:00
+WET_STEP             00:05:00
+DRY_STEP             01:00:00
 
 [JUNCTIONS]
 ;;Name           Elev       MaxDepth   InitDepth  SurDepth   Aponded
 ;;-------------- ---------- ---------- ---------- ---------- ----------
-256              0          0          0          0          0
 323              0          0          0          0          0
 484              5.00       0          0          0          0
 255              5.00       0          0          0          0
@@ -31,24 +42,29 @@ HEAD_TOLERANCE       0.0033
 485              0          0          0          0          0
 Calibrate        0          0          0          0          0
 
+[OUTFALLS]
+;;Name           Elev       Type       Stage      Gated
+;;-------------- ---------- ---------- ---------- -----
+256              0          FREE                  NO
+
 [CONDUITS]
 ;;Name           From             To               Length     Roughness  InOffset   OutOffset  InitFlow   MaxFlow
 ;;-------------- ---------------- ---------------- ---------- ---------- ---------- ---------- ---------- ----------
-205              ?                ?                0          0          0          0          0          0
-206              ?                ?                0          0          0          0          0          0
-210              ?                ?                0          0          0          0          0          0
-211              ?                ?                0          0          0          0          0          0
-212              ?                ?                0          0          0          0          0          0
-217              ?                ?                33.00      0.0140     0.03       0          0          0
+205              323              256              100.00     0.0130     0          0          0          0
+206              484              323              100.00     0.0130     0          0          0          0
+210              255              322              100.00     0.0130     0          0          0          0
+211              322              485              100.00     0.0130     0          0          0          0
+212              484              485              100.00     0.0130     0          0          0          0
+217              484              255              33.00      0.0140     0.03       0          0          0
 
 [XSECTIONS]
 ;;Link           Shape        Geom1      Geom2      Geom3      Geom4      Barrels
 ;;-------------- ------------ ---------- ---------- ---------- ---------- ----------
-205              CIRCULAR     0          0          0          0          1
-206              CIRCULAR     0          0          0          0          1
-210              CIRCULAR     0          0          0          0          1
-211              CIRCULAR     0          0          0          0          1
-212              CIRCULAR     0          0          0          0          1
+205              CIRCULAR     1.00       0          0          0          1
+206              CIRCULAR     1.00       0          0          0          1
+210              CIRCULAR     1.00       0          0          0          1
+211              CIRCULAR     1.00       0          0          0          1
+212              CIRCULAR     1.00       0          0          0          1
 217              RECT_CLOSED  2.00       1.00       0          0          1
 
 [LOSSES]

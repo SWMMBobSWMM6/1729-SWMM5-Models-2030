@@ -19,6 +19,18 @@ VARIABLE_STEP        0.75
 INERTIAL_DAMPING     PARTIAL
 NORMAL_FLOW_LIMITED  BOTH
 MAX_TRIALS           50
+START_DATE           01/01/2001
+START_TIME           00:00:00
+REPORT_START_DATE    01/01/2001
+REPORT_START_TIME    00:00:00
+END_DATE             01/02/2001
+END_TIME             00:00:00
+SWEEP_START          01/01
+SWEEP_END            12/31
+DRY_DAYS             0
+REPORT_STEP          00:15:00
+WET_STEP             00:05:00
+DRY_STEP             01:00:00
 
 [JUNCTIONS]
 ;;Name           Elev       MaxDepth   InitDepth  SurDepth   Aponded
@@ -27,51 +39,57 @@ MAX_TRIALS           50
 202              35.00      0          0          0          0
 204              35.00      0          0          0          0
 206              35.00      0          0          0          0
-208              35.00      0          0          0          0
 210              35.00      0          0          0          0
 211              35.00      0          0          0          0
 214              35.00      0          0          0          0
 216              35.00      0          0          0          0
 
+[OUTFALLS]
+;;Name           Elev       Type       Stage      Gated
+;;-------------- ---------- ---------- ---------- -----
+208              35.00      FREE                  NO
+
 [CONDUITS]
 ;;Name           From             To               Length     Roughness  InOffset   OutOffset  InitFlow   MaxFlow
 ;;-------------- ---------------- ---------------- ---------- ---------- ---------- ---------- ---------- ----------
-CH               201              202              292.00     0          27.84      26.00      0          0
-CH               204              206              115.00     0          25.90      24.56      0          0
-CH               206              208              435.00     0          24.56      23.43      0          0
-CH               210              211              321.00     0.0140     26.92      25.49      0          0
-CH               211              206              196.00     0          25.49      24.56      0          0
+CH               201              202              292.00     0.0130     27.84      26.00      0          0
+CH_2             204              206              115.00     0.0130     25.90      24.56      0          0
+CH_3             206              208              435.00     0.0130     24.56      23.43      0          0
+CH_4             210              211              321.00     0.0140     26.92      25.49      0          0
+CH_5             211              206              196.00     0.0130     25.49      24.56      0          0
 2/1650           216              201              20.00      0.0130     28.04      27.84      0          0
+T_D              216              214              175.00     0.0300     29.80      28.50      0          0
+CULV             202              204              21.00      0.0130     26.00      25.90      0          0
 
 [WEIRS]
 ;;Name           From             To               Type       CrestHt    Qcoeff     Gated    EndCon   EndCoeff   Surcharge
 ;;-------------- ---------------- ---------------- ---------- ---------- ---------- -------- -------- ---------- ----------
-T D              216              214              TRANSVERSE 29.80      1.840      NO       0        0          YES
-CULV             202              204              TRANSVERSE 27.70      1.840      NO       0        0          YES
 2/1500           214              210              TRANSVERSE 29.82      1.840      NO       0        0          YES
 
 [XSECTIONS]
 ;;Link           Shape        Geom1      Geom2      Geom3      Geom4      Barrels
 ;;-------------- ------------ ---------- ---------- ---------- ---------- ----------
-CH               IRREGULAR    6.00       0          0          0          1
-CH               IRREGULAR    6.00       0          0          0          1
-CH               IRREGULAR    6.00       0          0          0          1
-CH               IRREGULAR    6.00       0          0          0          1
-CH               IRREGULAR    6.00       0          0          0          1
+CH               TRAPEZOIDAL  6.00       10.00      2          2          1
+CH_2             TRAPEZOIDAL  6.00       10.00      2          2          1
+CH_3             TRAPEZOIDAL  6.00       10.00      2          2          1
+CH_4             TRAPEZOIDAL  6.00       10.00      2          2          1
+CH_5             TRAPEZOIDAL  6.00       10.00      2          2          1
 2/1650           CIRCULAR     1.65       0          0          0          2
-T D              RECT_OPEN    0          10.00      0          0          
-CULV             RECT_OPEN    0          20.00      0          0          
-2/1500           RECT_OPEN    0          40.00      0          0          
+T_D              TRAPEZOIDAL  3.00       3.00       1          1          1
+CULV             RECT_CLOSED  1.20       3.60       0          0          1
+2/1500           RECT_OPEN    1.00       40.00      0          0
 
 [LOSSES]
 ;;Link           Inlet      Outlet     Average    Flap Gate
 ;;-------------- ---------- ---------- ---------- ----------
 CH               0          0          0          NO
-CH               0          0          0          NO
-CH               0          0          0          NO
-CH               0          0          0          NO
-CH               0          0          0          NO
+CH_2             0          0          0          NO
+CH_3             0          0          0          NO
+CH_4             0          0          0          NO
+CH_5             0          0          0          NO
 2/1650           0          0          0          NO
+T_D              0          0          0          NO
+CULV             0          0          0          NO
 
 [COORDINATES]
 ;;Node           X-Coord            Y-Coord

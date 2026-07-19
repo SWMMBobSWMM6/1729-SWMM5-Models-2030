@@ -2,15 +2,277 @@
   EPA STORM WATER MANAGEMENT MODEL - VERSION 5.2 (Build 5.2.4)
   ------------------------------------------------------------
 
+  MA342 POST-DEVELOPMENT AREA #1 
   
-  ERROR 207: duplicate ID name POND at line 54 of [STORAGE] section:
-  POND             178.30     0          0          FUNCTIONAL 0 0          0
-
+  ****************
+  Analysis Options
+  ****************
+  Flow Units ............... CMS
+  Process Models:
+    Rainfall/Runoff ........ NO
+    RDII ................... NO
+    Snowmelt ............... NO
+    Groundwater ............ NO
+    Flow Routing ........... YES
+    Ponding Allowed ........ NO
+    Water Quality .......... NO
+  Flow Routing Method ...... DYNWAVE
+  Surcharge Method ......... EXTRAN
+  Starting Date ............ 01/01/2001 00:00:00
+  Ending Date .............. 01/02/2001 00:00:00
+  Antecedent Dry Days ...... 0.0
+  Report Time Step ......... 00:15:00
+  Routing Time Step ........ 5.00 sec
+  Variable Time Step ....... YES
+  Maximum Trials ........... 500
+  Number of Threads ........ 1
+  Head Tolerance ........... 0.001000 m
   
-  ERROR 207: duplicate ID name POND at line 55 of [STORAGE] section:
-  POND             178.30     0          0          FUNCTIONAL 0 0          0
+  
+  **************************        Volume        Volume
+  Flow Routing Continuity        hectare-m      10^6 ltr
+  **************************     ---------     ---------
+  Dry Weather Inflow .......         0.000         0.000
+  Wet Weather Inflow .......         0.000         0.000
+  Groundwater Inflow .......         0.000         0.000
+  RDII Inflow ..............         0.000         0.000
+  External Inflow ..........         0.000         0.000
+  External Outflow .........         0.000         0.000
+  Flooding Loss ............         0.000         0.000
+  Evaporation Loss .........         0.000         0.000
+  Exfiltration Loss ........         0.000         0.000
+  Initial Stored Volume ....         0.000         0.000
+  Final Stored Volume ......         0.000         0.000
+  Continuity Error (%) .....         0.000
+  
+  
+  ***************************
+  Time-Step Critical Elements
+  ***************************
+  None
+  
+  
+  ********************************
+  Highest Flow Instability Indexes
+  ********************************
+  All links are stable.
+  
+  
+  *********************************
+  Most Frequent Nonconverging Nodes
+  *********************************
+  Convergence obtained at all time steps.
+  
+  
+  *************************
+  Routing Time Step Summary
+  *************************
+  Minimum Time Step           :     4.50 sec
+  Average Time Step           :     5.00 sec
+  Maximum Time Step           :     5.00 sec
+  % of Time in Steady State   :     0.00
+  Average Iterations per Step :     2.00
+  % of Steps Not Converging   :     0.00
+  Time Step Frequencies       :
+      5.000 -  3.155 sec      :   100.00 %
+      3.155 -  1.991 sec      :     0.00 %
+      1.991 -  1.256 sec      :     0.00 %
+      1.256 -  0.792 sec      :     0.00 %
+      0.792 -  0.500 sec      :     0.00 %
+  
+  
+  ******************
+  Node Depth Summary
+  ******************
+  
+  ---------------------------------------------------------------------------------
+                                 Average  Maximum  Maximum  Time of Max    Reported
+                                   Depth    Depth      HGL   Occurrence   Max Depth
+  Node                 Type       Meters   Meters   Meters  days hr:min      Meters
+  ---------------------------------------------------------------------------------
+  MH21                 JUNCTION     0.00     0.00   178.00     0  00:00        0.00
+  MH3                  JUNCTION     0.00     0.00   177.60     0  00:00        0.00
+  MH1                  JUNCTION     0.00     0.00   177.60     0  00:00        0.00
+  MH4                  JUNCTION     0.00     0.00   177.80     0  00:00        0.00
+  MH5                  JUNCTION     0.00     0.00   177.60     0  00:00        0.00
+  MH6                  JUNCTION     0.00     0.00   177.80     0  00:00        0.00
+  MH7                  JUNCTION     0.00     0.00   177.90     0  00:00        0.00
+  MH8                  JUNCTION     0.00     0.00   178.20     0  00:00        0.00
+  MH9                  JUNCTION     0.00     0.00   178.40     0  00:00        0.00
+  MH10                 JUNCTION     0.00     0.00   177.80     0  00:00        0.00
+  MH11                 JUNCTION     0.00     0.00   177.90     0  00:00        0.00
+  MH12                 JUNCTION     0.00     0.00   177.90     0  00:00        0.00
+  MH13                 JUNCTION     0.00     0.00   178.00     0  00:00        0.00
+  MH14                 JUNCTION     0.00     0.00   177.90     0  00:00        0.00
+  MH16                 JUNCTION     0.00     0.00   177.90     0  00:00        0.00
+  MH17                 JUNCTION     0.00     0.00   177.90     0  00:00        0.00
+  MH2                  JUNCTION     0.00     0.00   177.80     0  00:00        0.00
+  MH18                 JUNCTION     0.00     0.00   177.80     0  00:00        0.00
+  MH19                 JUNCTION     0.00     0.00   177.80     0  00:00        0.00
+  MH15                 JUNCTION     0.00     0.00   177.60     0  00:00        0.00
+  MH20                 JUNCTION     0.00     0.00   178.60     0  00:00        0.00
+  OUTLET               OUTFALL      0.00     0.00   178.00     0  00:00        0.00
+  POND                 STORAGE      0.00     0.00   178.00     0  00:00        0.00
+  POND_2               STORAGE      0.00     0.00   178.30     0  00:00        0.00
+  POND_3               STORAGE      0.00     0.00   178.30     0  00:00        0.00
+  
+  
+  *******************
+  Node Inflow Summary
+  *******************
+  
+  -------------------------------------------------------------------------------------------------
+                                  Maximum  Maximum                  Lateral       Total        Flow
+                                  Lateral    Total  Time of Max      Inflow      Inflow     Balance
+                                   Inflow   Inflow   Occurrence      Volume      Volume       Error
+  Node                 Type           CMS      CMS  days hr:min    10^6 ltr    10^6 ltr     Percent
+  -------------------------------------------------------------------------------------------------
+  MH21                 JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
+  MH3                  JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
+  MH1                  JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
+  MH4                  JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
+  MH5                  JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
+  MH6                  JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
+  MH7                  JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
+  MH8                  JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
+  MH9                  JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
+  MH10                 JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
+  MH11                 JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
+  MH12                 JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
+  MH13                 JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
+  MH14                 JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
+  MH16                 JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
+  MH17                 JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
+  MH2                  JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
+  MH18                 JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
+  MH19                 JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
+  MH15                 JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
+  MH20                 JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
+  OUTLET               OUTFALL      0.000    0.000     0  00:00           0           0       0.000 ltr
+  POND                 STORAGE      0.000    0.000     0  00:00           0           0       0.000 ltr
+  POND_2               STORAGE      0.000    0.000     0  00:00           0           0       0.000 ltr
+  POND_3               STORAGE      0.000    0.000     0  00:00           0           0       0.000 ltr
+  
+  
+  **********************
+  Node Surcharge Summary
+  **********************
+  
+  No nodes were surcharged.
+  
+  
+  *********************
+  Node Flooding Summary
+  *********************
+  
+  No nodes were flooded.
+  
+  
+  **********************
+  Storage Volume Summary
+  **********************
+  
+  ------------------------------------------------------------------------------------------------
+                         Average    Avg   Evap  Exfil     Maximum    Max    Time of Max    Maximum
+                          Volume   Pcnt   Pcnt   Pcnt      Volume   Pcnt     Occurrence    Outflow
+  Storage Unit           1000 m³   Full   Loss   Loss     1000 m³   Full    days hr:min        CMS
+  ------------------------------------------------------------------------------------------------
+  POND                     0.000    0.0    0.0    0.0       0.000    0.0       0  00:00      0.000
+  POND_2                   0.000    0.0    0.0    0.0       0.000    0.0       0  00:00      0.000
+  POND_3                   0.000    0.0    0.0    0.0       0.000    0.0       0  00:00      0.000
+  
+  
+  ***********************
+  Outfall Loading Summary
+  ***********************
+  
+  -----------------------------------------------------------
+                         Flow       Avg       Max       Total
+                         Freq      Flow      Flow      Volume
+  Outfall Node           Pcnt       CMS       CMS    10^6 ltr
+  -----------------------------------------------------------
+  OUTLET                 0.00     0.000     0.000       0.000
+  -----------------------------------------------------------
+  System                 0.00     0.000     0.000       0.000
+  
+  
+  ********************
+  Link Flow Summary
+  ********************
+  
+  -----------------------------------------------------------------------------
+                                 Maximum  Time of Max   Maximum    Max/    Max/
+                                  |Flow|   Occurrence   |Veloc|    Full    Full
+  Link                 Type          CMS  days hr:min     m/sec    Flow   Depth
+  -----------------------------------------------------------------------------
+  PIPE4                CONDUIT     0.000     0  00:00      0.00    0.00    0.00
+  PIPE5                CONDUIT     0.000     0  00:00      0.00    0.00    0.00
+  PIPE6                CONDUIT     0.000     0  00:00      0.00    0.00    0.00
+  PIPE7                CONDUIT     0.000     0  00:00      0.00    0.00    0.00
+  PIPE8                CONDUIT     0.000     0  00:00      0.00    0.00    0.00
+  PIPE9                CONDUIT     0.000     0  00:00      0.00    0.00    0.00
+  PIPEPOND2            CONDUIT     0.000     0  00:00      0.00    0.00    0.00
+  PIPE10               CONDUIT     0.000     0  00:00      0.00    0.00    0.00
+  PIPE11               CONDUIT     0.000     0  00:00      0.00    0.00    0.00
+  PIPE12               CONDUIT     0.000     0  00:00      0.00    0.00    0.00
+  PIPE13               CONDUIT     0.000     0  00:00      0.00    0.00    0.00
+  PIPE14               CONDUIT     0.000     0  00:00      0.00    0.00    0.00
+  PIPE17               CONDUIT     0.000     0  00:00      0.00    0.00    0.00
+  PIPE18               CONDUIT     0.000     0  00:00      0.00    0.00    0.00
+  PIPE19               CONDUIT     0.000     0  00:00      0.00    0.00    0.00
+  PIPEPOND3            CONDUIT     0.000     0  00:00      0.00    0.00    0.00
+  PIPE16               CONDUIT     0.000     0  00:00      0.00    0.00    0.00
+  PIPE15               CONDUIT     0.000     0  00:00      0.00    0.00    0.00
+  PIPE20               CONDUIT     0.000     0  00:00      0.00    0.00    0.00
+  PIPE21               CONDUIT     0.000     0  00:00      0.00    0.00    0.00
+  PIPE3                CONDUIT     0.000     0  00:00      0.00    0.00    0.00
+  PIPE2                CONDUIT     0.000     0  00:00      0.00    0.00    0.00
+  PIPEPOND#1           CONDUIT     0.000     0  00:00      0.00    0.00    0.00
+  PIPEOUTLET           CONDUIT     0.000     0  00:00      0.00    0.00    0.00
+  
+  
+  ***************************
+  Flow Classification Summary
+  ***************************
+  
+  -------------------------------------------------------------------------------------
+                      Adjusted    ---------- Fraction of Time in Flow Class ---------- 
+                       /Actual         Up    Down  Sub   Sup   Up    Down  Norm  Inlet 
+  Conduit               Length    Dry  Dry   Dry   Crit  Crit  Crit  Crit  Ltd   Ctrl  
+  -------------------------------------------------------------------------------------
+  PIPE4                   1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  PIPE5                   1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  PIPE6                   1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  PIPE7                   1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  PIPE8                   1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  PIPE9                   1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  PIPEPOND2               1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  PIPE10                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  PIPE11                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  PIPE12                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  PIPE13                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  PIPE14                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  PIPE17                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  PIPE18                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  PIPE19                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  PIPEPOND3               1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  PIPE16                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  PIPE15                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  PIPE20                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  PIPE21                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  PIPE3                   1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  PIPE2                   1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  PIPEPOND#1              1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  PIPEOUTLET              1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  
+  
+  *************************
+  Conduit Surcharge Summary
+  *************************
+  
+  No conduits were surcharged.
+  
 
-
-  Analysis begun on:  Mon Jul 13 08:04:10 2026
-  Analysis ended on:  Mon Jul 13 08:04:10 2026
+  Analysis begun on:  Sun Jul 19 15:21:49 2026
+  Analysis ended on:  Sun Jul 19 15:21:49 2026
   Total elapsed time: < 1 sec

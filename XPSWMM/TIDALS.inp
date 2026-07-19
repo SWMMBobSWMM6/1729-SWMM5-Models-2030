@@ -14,32 +14,48 @@ LINK_OFFSETS         DEPTH
 MIN_SLOPE            0.0
 ALLOW_PONDING        NO
 SKIP_STEADY_STATE    NO
-ROUTING_STEP         00:00:60
+ROUTING_STEP         00:01:00
 VARIABLE_STEP        0.75
 INERTIAL_DAMPING     PARTIAL
 NORMAL_FLOW_LIMITED  BOTH
 MAX_TRIALS           50
+START_DATE           01/01/2001
+START_TIME           00:00:00
+REPORT_START_DATE    01/01/2001
+REPORT_START_TIME    00:00:00
+END_DATE             01/02/2001
+END_TIME             00:00:00
+SWEEP_START          01/01
+SWEEP_END            12/31
+DRY_DAYS             0
+REPORT_STEP          00:15:00
+WET_STEP             00:05:00
+DRY_STEP             01:00:00
+
+[JUNCTIONS]
+;;Name           Elev       MaxDepth   InitDepth  SurDepth   Aponded
+;;-------------- ---------- ---------- ---------- ---------- ----------
+Tide             10.00      0          0          0          0
+202              10.00      0          0          0          0
+204              10.00      0          0          0          0
+206              10.00      0          0          0          0
+Tide_2           10.00      0          0          0          0
+210              10.00      0          0          0          0
 
 [OUTFALLS]
 ;;Name           Elev       Type       Stage      Gated
 ;;-------------- ---------- ---------- ---------- -----
-Tide             10.00      FREE                  NO
-202              10.00      FREE                  NO
-204              10.00      FREE                  NO
-206              10.00      FREE                  NO
-Tide             10.00      FREE                  NO
-210              10.00      FREE                  NO
-Tide             10.00      FREE                  NO
+Tide_3           10.00      FREE                  NO
 
 [CONDUITS]
 ;;Name           From             To               Length     Roughness  InOffset   OutOffset  InitFlow   MaxFlow
 ;;-------------- ---------------- ---------------- ---------- ---------- ---------- ---------- ---------- ----------
-203              ?                ?                100.00     0.0140     0          0          0          0
-205              ?                ?                100.00     0.0140     0          0          0          0
-207              ?                ?                100.00     0.0140     0          0          0          0
-209              ?                ?                100.00     0.0140     0          0          0          0
-211              ?                ?                100.00     0.0140     0          0          0          0
-213              ?                ?                100.00     0.0140     0          0          0          0
+203              Tide             202              100.00     0.0140     0          0          0          0
+205              202              204              100.00     0.0140     0          0          0          0
+207              204              206              100.00     0.0140     0          0          0          0
+209              206              Tide             100.00     0.0140     0          0          0          0
+211              204              210              100.00     0.0140     0          0          0          0
+213              210              Tide             100.00     0.0140     0          0          0          0
 
 [XSECTIONS]
 ;;Link           Shape        Geom1      Geom2      Geom3      Geom4      Barrels
@@ -68,9 +84,9 @@ Tide             17.64              17.64
 202              17.64              57.64             
 204              17.64              97.64             
 206              17.64              137.64            
-Tide             17.64              177.64            
+Tide_2           17.64              177.64            
 210              57.64              97.64             
-Tide             97.64              97.64             
+Tide_3           97.64              97.64             
 
 [MAP]
 DIMENSIONS 17.64 17.64 97.64 177.64

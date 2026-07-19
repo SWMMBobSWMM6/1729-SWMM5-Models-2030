@@ -19,6 +19,18 @@ VARIABLE_STEP        0.75
 INERTIAL_DAMPING     NONE
 NORMAL_FLOW_LIMITED  BOTH
 MAX_TRIALS           50
+START_DATE           01/01/2001
+START_TIME           00:00:00
+REPORT_START_DATE    01/01/2001
+REPORT_START_TIME    00:00:00
+END_DATE             01/02/2001
+END_TIME             00:00:00
+SWEEP_START          01/01
+SWEEP_END            12/31
+DRY_DAYS             0
+REPORT_STEP          00:15:00
+WET_STEP             00:05:00
+DRY_STEP             01:00:00
 
 [JUNCTIONS]
 ;;Name           Elev       MaxDepth   InitDepth  SurDepth   Aponded
@@ -26,7 +38,6 @@ MAX_TRIALS           50
 100              11.00      0          0          0          0
 101              11.00      0          0          0          0
 102              11.00      0          0          0          0
-103              11.00      0          0          0          0
 200              11.00      0          0          0          0
 201              11.00      0          0          0          0
 202              11.00      0          0          0          0
@@ -36,35 +47,40 @@ MAX_TRIALS           50
 302              11.00      0          0          0          0
 303              11.00      0          0          0          0
 
+[OUTFALLS]
+;;Name           Elev       Type       Stage      Gated
+;;-------------- ---------- ---------- ---------- -----
+103              11.00      FREE                  NO
+
 [CONDUITS]
 ;;Name           From             To               Length     Roughness  InOffset   OutOffset  InitFlow   MaxFlow
 ;;-------------- ---------------- ---------------- ---------- ---------- ---------- ---------- ---------- ----------
-shape1a          100              101              100.00     0          0.03       0.02       0          0
-shape1b          101              102              100.00     0          0.02       0.01       0          0
-shape1c          102              103              100.00     0          0.01       0          0          0
-shape2a          200              201              100.00     0          0.03       0.02       0          0
-shape2b          201              202              100.00     0          0.02       0.01       0          0
-shape2c          202              203              100.00     0          0.01       0          0          0
-240              ?                ?                0          0          0          0          0          0
-shape3a          300              301              100.00     0          0.03       0.02       0          0
-shape3b          301              302              100.00     0          0.10       0.09       0          0
-shape3c          302              303              100.00     0          0.01       0          0          0
-333              ?                ?                0          0          0          0          0          0
+shape1a          100              101              100.00     0.0130     0.03       0.02       0          0
+shape1b          101              102              100.00     0.0130     0.02       0.01       0          0
+shape1c          102              103              100.00     0.0130     0.01       0          0          0
+shape2a          200              201              100.00     0.0130     0.03       0.02       0          0
+shape2b          201              202              100.00     0.0130     0.02       0.01       0          0
+shape2c          202              203              100.00     0.0130     0.01       0          0          0
+240              200              100              100.00     0.0130     0          0          0          0
+shape3a          300              301              100.00     0.0130     0.03       0.02       0          0
+shape3b          301              302              100.00     0.0130     0.10       0.09       0          0
+shape3c          302              303              100.00     0.0130     0.01       0          0          0
+333              300              200              100.00     0.0130     0          0          0          0
 
 [XSECTIONS]
 ;;Link           Shape        Geom1      Geom2      Geom3      Geom4      Barrels
 ;;-------------- ------------ ---------- ---------- ---------- ---------- ----------
-shape1a          IRREGULAR    10.00      0          0          0          1
-shape1b          IRREGULAR    10.00      0          0          0          1
-shape1c          IRREGULAR    10.00      0          0          0          1
-shape2a          IRREGULAR    10.00      0          0          0          1
-shape2b          IRREGULAR    10.00      0          0          0          1
-shape2c          IRREGULAR    10.00      0          0          0          1
-240              CIRCULAR     0          0          0          0          1
-shape3a          IRREGULAR    10.00      0          0          0          1
-shape3b          IRREGULAR    10.00      0          0          0          1
-shape3c          IRREGULAR    10.00      0          0          0          1
-333              CIRCULAR     0          0          0          0          1
+shape1a          TRAPEZOIDAL  10.00      10.00      2          2          1
+shape1b          TRAPEZOIDAL  10.00      10.00      2          2          1
+shape1c          TRAPEZOIDAL  10.00      10.00      2          2          1
+shape2a          TRAPEZOIDAL  10.00      10.00      2          2          1
+shape2b          TRAPEZOIDAL  10.00      10.00      2          2          1
+shape2c          TRAPEZOIDAL  10.00      10.00      2          2          1
+240              CIRCULAR     1.00       0          0          0          1
+shape3a          TRAPEZOIDAL  10.00      10.00      2          2          1
+shape3b          TRAPEZOIDAL  10.00      10.00      2          2          1
+shape3c          TRAPEZOIDAL  10.00      10.00      2          2          1
+333              CIRCULAR     1.00       0          0          0          1
 
 [LOSSES]
 ;;Link           Inlet      Outlet     Average    Flap Gate

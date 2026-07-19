@@ -19,6 +19,18 @@ VARIABLE_STEP        0.75
 INERTIAL_DAMPING     PARTIAL
 NORMAL_FLOW_LIMITED  BOTH
 MAX_TRIALS           100
+START_DATE           01/01/2001
+START_TIME           00:00:00
+REPORT_START_DATE    01/01/2001
+REPORT_START_TIME    00:00:00
+END_DATE             01/02/2001
+END_TIME             00:00:00
+SWEEP_START          01/01
+SWEEP_END            12/31
+DRY_DAYS             0
+REPORT_STEP          00:15:00
+WET_STEP             00:05:00
+DRY_STEP             01:00:00
 
 [JUNCTIONS]
 ;;Name           Elev       MaxDepth   InitDepth  SurDepth   Aponded
@@ -85,7 +97,6 @@ CUL16B           840.00     0          0          0          0
 CUL17A           840.00     0          0          0          0
 CUL17B           840.00     0          0          0          0
 Wetland          840.00     0          0          0          0
-Johnson          830.00     0          0          0          0
 Apts1            815.00     0          0          0          0
 CUL15B           840.00     0          0          0          0
 CUL15A           840.00     0          0          0          0
@@ -93,12 +104,22 @@ TrailPark        840.00     0          0          0          0
 Apts2            840.00     0          0          0          0
 CUL8B            815.00     0          0          0          0
 PONDOUT2         820.00     0          0          0          0
+LAND2            819.76     0          0          0          0
+SPILLWAY         815.50     0          0          0          0
+LAND1            817.89     0          0          0          0
+SPILLWAY2        809.98     0          0          0          0
+CULVERT2b        809.75     0          0          0          0
+
+[OUTFALLS]
+;;Name           Elev       Type       Stage      Gated
+;;-------------- ---------- ---------- ---------- -----
+Johnson          830.00     FREE                  NO
 
 [STORAGE]
 ;;Name           Elev       MaxDepth   InitDepth  Shape      Curve/Params
 ;;-------------- ---------- ---------- ---------- ---------- ----------
-Pond             850.00     -28.50     0          FUNCTIONAL 0 0          0
-Wayside          820.00     -5.33      0          FUNCTIONAL 0 0          0
+Pond             850.00     10.00      0          FUNCTIONAL 1000.00 0          0
+Wayside          820.00     10.00      0          FUNCTIONAL 1000.00 0          0
 
 [CONDUITS]
 ;;Name           From             To               Length     Roughness  InOffset   OutOffset  InitFlow   MaxFlow
@@ -125,6 +146,7 @@ CULV7            CUL7A            CUL7B            65.00      0.0240     818.08 
 CH12             CUL6B            CUL7B            330.00     0.0300     818.31     817.49     0          0
 CH15             10D              Pond             120.00     0.0300     822.00     821.50     0          0
 STR2             LAND2            Pond             495.00     0.0150     819.76     816.44     0          0
+CULVERT          SPILLWAY         PONDOUT          60.00      0.0240     815.50     815.20     0          0
 CH16             PONDOUT          Wayside1         160.00     0.0300     815.20     813.50     0          0
 CH20             9                CUL8A            200.00     0.0300     817.00     806.04     0          0
 CULV12           CUL12A           CUL12B           110.00     0.0240     802.23     801.84     0          0
@@ -172,91 +194,86 @@ CH38             School           CUL13A           350.00     0.0300     800.00 
 CULV8            CUL8A            CUL8B            65.00      0.0240     806.04     805.00     0          0
 CH19A            MMold2           CUL8B            400.00     0.0300     808.00     805.00     0          0
 CH19B            CUL8B            SSOUT            150.00     0.0300     805.00     802.67     0          0
+CULVERT2         SPILLWAY2        CULVERT2b        43.00      0.0150     809.98     809.75     0          0
 CH18A            Wayside1         Wayside          100.00     0.0300     813.50     812.00     0          0
 CH18B            PONDOUT2         MMold2           150.00     0.0300     809.75     808.00     0          0
-
-[WEIRS]
-;;Name           From             To               Type       CrestHt    Qcoeff     Gated    EndCon   EndCoeff   Surcharge
-;;-------------- ---------------- ---------------- ---------- ---------- ---------- -------- -------- ---------- ----------
-CULVERT          SPILLWAY         PONDOUT          TRANSVERSE 819.50     1.840      NO       0        0          YES
-CULVERT2         SPILLWAY2        CULVERT2b        TRANSVERSE 813.69     1.840      NO       0        0          YES
 
 [XSECTIONS]
 ;;Link           Shape        Geom1      Geom2      Geom3      Geom4      Barrels
 ;;-------------- ------------ ---------- ---------- ---------- ---------- ----------
-CH3              IRREGULAR    0          0          0          0          1
-CH1              IRREGULAR    0          0          0          0          1
-CH7              IRREGULAR    0          0          0          0          1
-CH5              IRREGULAR    0          0          0          0          1
+CH3              TRAPEZOIDAL  1.00       10.00      2          2          1
+CH1              TRAPEZOIDAL  1.00       10.00      2          2          1
+CH7              TRAPEZOIDAL  1.00       10.00      2          2          1
+CH5              TRAPEZOIDAL  1.00       10.00      2          2          1
 CULV1            CIRCULAR     3.50       0          0          0          1
 CULV2            CIRCULAR     4.50       0          0          0          1
 CUL3             CIRCULAR     4.50       0          0          0          1
-CH2              IRREGULAR    0          0          0          0          1
-CH4              IRREGULAR    0          0          0          0          1
-CH6              IRREGULAR    0          0          0          0          1
+CH2              TRAPEZOIDAL  1.00       10.00      2          2          1
+CH4              TRAPEZOIDAL  1.00       10.00      2          2          1
+CH6              TRAPEZOIDAL  1.00       10.00      2          2          1
 CULV4            CIRCULAR     4.50       0          0          0          1
-CH10             IRREGULAR    0          0          0          0          1
-CH13             IRREGULAR    0          0          0          0          1
-CH8              IRREGULAR    0          0          0          0          1
-CH9              IRREGULAR    0          0          0          0          1
-CH11             IRREGULAR    0          0          0          0          1
+CH10             TRAPEZOIDAL  1.00       10.00      2          2          1
+CH13             TRAPEZOIDAL  1.00       10.00      2          2          1
+CH8              TRAPEZOIDAL  1.00       10.00      2          2          1
+CH9              TRAPEZOIDAL  1.00       10.00      2          2          1
+CH11             TRAPEZOIDAL  1.00       10.00      2          2          1
 CULV5            CIRCULAR     4.00       0          0          0          1
 CULV6            CIRCULAR     2.50       0          0          0          2
 CULV7            CIRCULAR     4.00       0          0          0          1
-CH12             IRREGULAR    0          0          0          0          1
-CH15             IRREGULAR    0          0          0          0          1
+CH12             TRAPEZOIDAL  1.00       10.00      2          2          1
+CH15             TRAPEZOIDAL  1.00       10.00      2          2          1
 STR2             CIRCULAR     2.25       0          0          0          1
-CH16             IRREGULAR    0          0          0          0          1
-CH20             IRREGULAR    0          0          0          0          1
+CULVERT          CIRCULAR     1.00       0          0          0          1
+CH16             TRAPEZOIDAL  1.00       10.00      2          2          1
+CH20             TRAPEZOIDAL  1.00       10.00      2          2          1
 CULV12           CIRCULAR     5.00       0          0          0          1
-CH36             IRREGULAR    0          0          0          0          1
-CH35             IRREGULAR    0          0          0          0          1
+CH36             TRAPEZOIDAL  1.00       10.00      2          2          1
+CH35             TRAPEZOIDAL  1.00       10.00      2          2          1
 SEWER3           CIRCULAR     3.00       0          0          0          1
 SEWER2           CIRCULAR     3.00       0          0          0          1
-CH23             IRREGULAR    0          0          0          0          1
-CH22             IRREGULAR    0          0          0          0          1
-CH21             IRREGULAR    0          0          0          0          1
+CH23             TRAPEZOIDAL  1.00       10.00      2          2          1
+CH22             TRAPEZOIDAL  1.00       10.00      2          2          1
+CH21             TRAPEZOIDAL  1.00       10.00      2          2          1
 CULV9            CIRCULAR     2.25       0          0          0          1
 CULV10           CIRCULAR     2.25       0          0          0          1
-CH24             IRREGULAR    0          0          0          0          1
-CH26             IRREGULAR    0          0          0          0          1
+CH24             TRAPEZOIDAL  1.00       10.00      2          2          1
+CH26             TRAPEZOIDAL  1.00       10.00      2          2          1
 CULV11           CIRCULAR     3.00       0          0          0          1
-CH25             IRREGULAR    0          0          0          0          1
-CH27             IRREGULAR    0          0          0          0          1
-CH28             IRREGULAR    0          0          0          0          1
-CH29             IRREGULAR    0          0          0          0          1
-CH30             IRREGULAR    0          0          0          0          1
-CH31             IRREGULAR    0          0          0          0          1
-CH32             IRREGULAR    0          0          0          0          1
-CH33             IRREGULAR    0          0          0          0          1
-CH37             IRREGULAR    0          0          0          0          1
-CH43             IRREGULAR    0          0          0          0          1
+CH25             TRAPEZOIDAL  1.00       10.00      2          2          1
+CH27             TRAPEZOIDAL  1.00       10.00      2          2          1
+CH28             TRAPEZOIDAL  1.00       10.00      2          2          1
+CH29             TRAPEZOIDAL  1.00       10.00      2          2          1
+CH30             TRAPEZOIDAL  1.00       10.00      2          2          1
+CH31             TRAPEZOIDAL  1.00       10.00      2          2          1
+CH32             TRAPEZOIDAL  1.00       10.00      2          2          1
+CH33             TRAPEZOIDAL  1.00       10.00      2          2          1
+CH37             TRAPEZOIDAL  1.00       10.00      2          2          1
+CH43             TRAPEZOIDAL  1.00       10.00      2          2          1
 CULV13           CIRCULAR     5.00       0          0          0          1
 CULV14           CIRCULAR     2.50       0          0          0          1
 CULV16           CIRCULAR     2.00       0          0          0          1
-CH41             IRREGULAR    0          0          0          0          1
-CH42             IRREGULAR    0          0          0          0          1
+CH41             TRAPEZOIDAL  1.00       10.00      2          2          1
+CH42             TRAPEZOIDAL  1.00       10.00      2          2          1
 CULV17           HORSESHOE    6.00       0          0          0          1
-CH47             IRREGULAR    0          0          0          0          1
-CH48             IRREGULAR    0          0          0          0          1
-CH49             IRREGULAR    0          0          0          0          1
-CH40             IRREGULAR    0          0          0          0          1
-CH45             IRREGULAR    0          0          0          0          1
+CH47             TRAPEZOIDAL  1.00       10.00      2          2          1
+CH48             TRAPEZOIDAL  1.00       10.00      2          2          1
+CH49             TRAPEZOIDAL  1.00       10.00      2          2          1
+CH40             TRAPEZOIDAL  1.00       10.00      2          2          1
+CH45             TRAPEZOIDAL  1.00       10.00      2          2          1
 CULV15           CIRCULAR     2.00       0          0          0          1
-CH46             IRREGULAR    0          0          0          0          1
-CH44             IRREGULAR    0          0          0          0          1
+CH46             TRAPEZOIDAL  1.00       10.00      2          2          1
+CH44             TRAPEZOIDAL  1.00       10.00      2          2          1
 STR1             CIRCULAR     2.50       0          0          0          1
-CH14             IRREGULAR    0          0          0          0          1
+CH14             TRAPEZOIDAL  1.00       10.00      2          2          1
 SEWER1           CIRCULAR     3.00       0          0          0          1
-CH39             IRREGULAR    0          0          0          0          1
-CH38             IRREGULAR    0          0          0          0          1
+CH39             TRAPEZOIDAL  1.00       10.00      2          2          1
+CH38             TRAPEZOIDAL  1.00       10.00      2          2          1
 CULV8            CIRCULAR     3.00       0          0          0          1
-CH19A            IRREGULAR    0          0          0          0          1
-CH19B            IRREGULAR    0          0          0          0          1
-CH18A            IRREGULAR    0          0          0          0          1
-CH18B            IRREGULAR    0          0          0          0          1
-CULVERT          RECT_OPEN    0          6.00       0          0          
-CULVERT2         RECT_OPEN    0          20.00      0          0          
+CH19A            TRAPEZOIDAL  1.00       10.00      2          2          1
+CH19B            TRAPEZOIDAL  1.00       10.00      2          2          1
+CULVERT2         CIRCULAR     2.50       0          0          0          2
+CH18A            TRAPEZOIDAL  1.00       10.00      2          2          1
+CH18B            TRAPEZOIDAL  1.00       10.00      2          2          1
 
 [LOSSES]
 ;;Link           Inlet      Outlet     Average    Flap Gate
@@ -283,6 +300,7 @@ CULV7            0          0          0          NO
 CH12             0          0          0          NO
 CH15             0          0          0          NO
 STR2             0          0          0          NO
+CULVERT          0          0          0          NO
 CH16             0          0          0          NO
 CH20             0          0          0          NO
 CULV12           0          0          0          NO
@@ -330,6 +348,7 @@ CH38             0          0          0          NO
 CULV8            0          0          0          NO
 CH19A            0          0          0          NO
 CH19B            0          0          0          NO
+CULVERT2         0          0          0          NO
 CH18A            0          0          0          NO
 CH18B            0          0          0          NO
 

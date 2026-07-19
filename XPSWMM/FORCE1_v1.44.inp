@@ -20,27 +20,43 @@ INERTIAL_DAMPING     PARTIAL
 NORMAL_FLOW_LIMITED  BOTH
 MAX_TRIALS           50
 HEAD_TOLERANCE       0.001
+START_DATE           01/01/2001
+START_TIME           00:00:00
+REPORT_START_DATE    01/01/2001
+REPORT_START_TIME    00:00:00
+END_DATE             01/02/2001
+END_TIME             00:00:00
+SWEEP_START          01/01
+SWEEP_END            12/31
+DRY_DAYS             0
+REPORT_STEP          00:15:00
+WET_STEP             00:05:00
+DRY_STEP             01:00:00
 
 [JUNCTIONS]
 ;;Name           Elev       MaxDepth   InitDepth  SurDepth   Aponded
 ;;-------------- ---------- ---------- ---------- ---------- ----------
-202              300.00     0          200.00     0          0
-204              300.00     0          200.00     0          0
+202              300.00     0          0          0          0
+204              300.00     0          0          0          0
 208              5.00       0          0          0          0
 210              5.00       0          0          0          0
-OUTFALL          5.00       0          0          0          0
-Airport          300.00     0          200.00     0          0
-Westlake         300.00     0          200.00     0          0
+Airport          300.00     0          0          0          0
+Westlake         300.00     0          0          0          0
 218              5.00       0          0          0          0
-222              300.00     0          200.00     0          0
-224              300.00     0          200.00     0          0
+222              300.00     0          0          0          0
+224              300.00     0          0          0          0
+
+[OUTFALLS]
+;;Name           Elev       Type       Stage      Gated
+;;-------------- ---------- ---------- ---------- -----
+OUTFALL          5.00       FREE                  NO
 
 [STORAGE]
 ;;Name           Elev       MaxDepth   InitDepth  Shape      Curve/Params
 ;;-------------- ---------- ---------- ---------- ---------- ----------
-Airpark          300.00     0          200.00     FUNCTIONAL 1000.00 0          0
-206              5.00       0          0          FUNCTIONAL 1000.00 0          0
-Uppark           300.00     0          200.00     FUNCTIONAL 1000.00 0          0
+Airpark          300.00     10.00      10.00      FUNCTIONAL 1000.00 0          0
+206              5.00       10.00      0          FUNCTIONAL 1000.00 0          0
+Uppark           300.00     10.00      10.00      FUNCTIONAL 1000.00 0          0
 
 [CONDUITS]
 ;;Name           From             To               Length     Roughness  InOffset   OutOffset  InitFlow   MaxFlow
@@ -58,9 +74,20 @@ gravity4         218              208              2000.00    0.0140     0      
 [PUMPS]
 ;;Name           From             To               PumpCurve  Status   Startup    Shutoff
 ;;-------------- ---------------- ---------------- ---------- -------- ---------- ----------
-pump1            Uppark           Airpark          *          ON       0          0         
-pump2            222              Airport          *          ON       0          0         
-pump3            224              Westlake         *          ON       0          0         
+pump1            Uppark           Airpark          PC_pump1   ON       1.00       0         
+pump2            222              Airport          PC_pump2   ON       1.00       0         
+pump3            224              Westlake         PC_pump3   ON       1.00       0         
+
+[CURVES]
+;;Name           Type       X-Value    Y-Value
+;;-------------- ---------- ---------- ----------
+;; Synthesized generic pump curves — replace with actual pump data
+PC_pump1         Pump1      0          5
+PC_pump1                    10         10
+PC_pump2         Pump1      0          5
+PC_pump2                    10         10
+PC_pump3         Pump1      0          5
+PC_pump3                    10         10
 
 [XSECTIONS]
 ;;Link           Shape        Geom1      Geom2      Geom3      Geom4      Barrels

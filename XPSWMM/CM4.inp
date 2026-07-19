@@ -14,27 +14,38 @@ LINK_OFFSETS         DEPTH
 MIN_SLOPE            0.0
 ALLOW_PONDING        NO
 SKIP_STEADY_STATE    NO
-ROUTING_STEP         00:00:3600
+ROUTING_STEP         01:00:00
 VARIABLE_STEP        0.75
 INERTIAL_DAMPING     NONE
 NORMAL_FLOW_LIMITED  BOTH
 MAX_TRIALS           100
+START_DATE           01/01/2001
+START_TIME           00:00:00
+REPORT_START_DATE    01/01/2001
+REPORT_START_TIME    00:00:00
+END_DATE             01/02/2001
+END_TIME             00:00:00
+SWEEP_START          01/01
+SWEEP_END            12/31
+DRY_DAYS             0
+REPORT_STEP          01:00:00
+WET_STEP             01:00:00
+DRY_STEP             01:00:00
 
 [JUNCTIONS]
 ;;Name           Elev       MaxDepth   InitDepth  SurDepth   Aponded
 ;;-------------- ---------- ---------- ---------- ---------- ----------
-G56H-1           16.00      0          6.87       0          0
-G56H-2           16.00      0          6.87       0          0
+G56H-2           16.00      0          0          0          0
+
+[OUTFALLS]
+;;Name           Elev       Type       Stage      Gated
+;;-------------- ---------- ---------- ---------- -----
+G56H-1           16.00      FREE                  NO
 
 [STORAGE]
 ;;Name           Elev       MaxDepth   InitDepth  Shape      Curve/Params
 ;;-------------- ---------- ---------- ---------- ---------- ----------
-CM-4             16.00      0          21.00      FUNCTIONAL 0 0          0
-
-[CONDUITS]
-;;Name           From             To               Length     Roughness  InOffset   OutOffset  InitFlow   MaxFlow
-;;-------------- ---------------- ---------------- ---------- ---------- ---------- ---------- ---------- ----------
-CS45-WEIR        CM-4             G56H-2           0          0          0          0          0          0
+CM-4             16.00      10.00      10.00      FUNCTIONAL 1000.00 0          0
 
 [PUMPS]
 ;;Name           From             To               PumpCurve  Status   Startup    Shutoff
@@ -44,18 +55,9 @@ CS45-PUMP        CM-4             G56H-1           PC_CS45-PUMP ON       11.00  
 [CURVES]
 ;;Name           Type       X-Value    Y-Value
 ;;-------------- ---------- ---------- ----------
-PC_CS45-PUMP     Pump3      0          0
-;
-
-[XSECTIONS]
-;;Link           Shape        Geom1      Geom2      Geom3      Geom4      Barrels
-;;-------------- ------------ ---------- ---------- ---------- ---------- ----------
-CS45-WEIR        CIRCULAR     0          0          0          0          1
-
-[LOSSES]
-;;Link           Inlet      Outlet     Average    Flap Gate
-;;-------------- ---------- ---------- ---------- ----------
-CS45-WEIR        0          0          0          NO
+;; Synthesized generic pump curves — replace with actual pump data
+PC_CS45-PUMP     Pump1      0          5
+PC_CS45-PUMP                10         10
 
 [COORDINATES]
 ;;Node           X-Coord            Y-Coord

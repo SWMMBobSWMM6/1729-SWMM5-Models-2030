@@ -14,12 +14,24 @@ LINK_OFFSETS         DEPTH
 MIN_SLOPE            0.0
 ALLOW_PONDING        NO
 SKIP_STEADY_STATE    NO
-ROUTING_STEP         00:00:60
+ROUTING_STEP         00:01:00
 VARIABLE_STEP        0.75
 INERTIAL_DAMPING     PARTIAL
 NORMAL_FLOW_LIMITED  BOTH
 MAX_TRIALS           50
 HEAD_TOLERANCE       0.0033
+START_DATE           01/01/2001
+START_TIME           00:00:00
+REPORT_START_DATE    01/01/2001
+REPORT_START_TIME    00:00:00
+END_DATE             01/02/2001
+END_TIME             00:00:00
+SWEEP_START          01/01
+SWEEP_END            12/31
+DRY_DAYS             0
+REPORT_STEP          00:15:00
+WET_STEP             00:05:00
+DRY_STEP             01:00:00
 
 [JUNCTIONS]
 ;;Name           Elev       MaxDepth   InitDepth  SurDepth   Aponded
@@ -44,56 +56,63 @@ D-3-2            18.00      0          0          0          0
 27-B             19.00      0          0          0          0
 22-B             20.75      0          0          0          0
 I-2-2            26.00      0          0          0          0
-TO               32.00      0          0          0          0
 O-2-6            24.00      0          0          0          0
 Sta              200.00     0          0          0          0
 OUTFALL          14.00      0          0          0          0
 JUNCTION         32.00      0          0          0          0
 newsub1          1.00       0          0          0          0
+PUMP_2           -5.00      0          0          0          0
+PUMP_3           21.03      0          0          0          0
+
+[OUTFALLS]
+;;Name           Elev       Type       Stage      Gated
+;;-------------- ---------- ---------- ---------- -----
+TO               32.00      FREE                  NO
 
 [STORAGE]
 ;;Name           Elev       MaxDepth   InitDepth  Shape      Curve/Params
 ;;-------------- ---------- ---------- ---------- ---------- ----------
-KPS              18.00      0          0          FUNCTIONAL 750.00 0          0
+KPS              18.00      10.00      0          FUNCTIONAL 750.00 0          0
 
 [CONDUITS]
 ;;Name           From             To               Length     Roughness  InOffset   OutOffset  InitFlow   MaxFlow
 ;;-------------- ---------------- ---------------- ---------- ---------- ---------- ---------- ---------- ----------
-EO/KPS           EO               KPS              80.00      0.0140     -3.95      -4.05      0          0
-O21/EO           O-2-1            EO               648.00     0.0140     -3.17      -3.95      0          0
-M21/O21          M-2-1            O-2-1            129.00     0.0140     -1.15      -1.80      0          0
-M22/M21          M-2-2            M-2-1            110.00     0.0140     0.66       -0.40      0          0
+EO/KPS           EO               KPS              80.00      0.0140     0          0          0          0
+O21/EO           O-2-1            EO               648.00     0.0140     0          0          0          0
+M21/O21          M-2-1            O-2-1            129.00     0.0140     0          0          0          0
+M22/M21          M-2-2            M-2-1            110.00     0.0140     0.66       0          0          0
 M23/M22          M-2-3            M-2-2            401.00     0.0140     1.86       0.66       0          0
-A33/KPS          A-3-3            KPS              355.00     0.0140     -2.24      -2.79      0          0
-A34/A33          A-3-4            A-3-3            545.00     0.0140     -1.59      -2.24      0          0
-A35/A34          A-3-5            A-3-4            580.00     0.0140     -0.85      -1.59      0          0
+A33/KPS          A-3-3            KPS              355.00     0.0140     0          0          0          0
+A34/A33          A-3-4            A-3-3            545.00     0.0140     0          0          0          0
+A35/A34          A-3-5            A-3-4            580.00     0.0140     0          0          0          0
 M24/M23          M-2-4            M-2-3            317.00     0.0140     3.30       1.86       0          0
-O23/M21          O-2-3            M-2-1            397.00     0.0140     1.48       -0.90      0          0
+O23/M21          O-2-3            M-2-1            397.00     0.0140     1.48       0          0          0
 024/O23          O-2-4            O-2-3            222.00     0.0140     2.82       1.48       0          0
 025/024          O-2-5            O-2-4            125.00     0.0140     3.57       2.82       0          0
 026/025          O-2-6            O-2-5            143.00     0.0140     4.43       3.57       0          0
-LCA/O21          LCA              O-2-1            80.00      0.0140     -2.56      -2.67      0          0
-D31/LCA          D-3-1            LCA              624.00     0.0140     -1.72      -2.56      0          0
-D32/D31          D-3-2            D-3-1            459.00     0.0140     0.33       -0.68      0          0
+LCA/O21          LCA              O-2-1            80.00      0.0140     0          0          0          0
+D31/LCA          D-3-1            LCA              624.00     0.0140     0          0          0          0
+D32/D31          D-3-2            D-3-1            459.00     0.0140     0.33       0          0          0
 31A/D32          31-A             D-3-2            240.00     0.0140     2.09       1.08       0          0
 27C/31/A         27-C             31-A             278.00     0.0140     3.56       2.09       0          0
 27B/27C          27-B             27-C             302.00     0.0140     5.00       3.56       0          0
 22B/27/B         22-B             27-B             351.00     0.0140     6.68       5.00       0          0
-I22/D31          I-2-2            D-3-1            226.00     0.0140     -0.07      -0.43      0          0
-7932/LCA         Sta              LCA              1868.00    0.0140     13.74      -0.46      0          0
+I22/D31          I-2-2            D-3-1            226.00     0.0140     0          0          0          0
+7932/LCA         Sta              LCA              1868.00    0.0140     13.74      0          0          0
 EO/OUT           EO               OUTFALL          80.00      0.0140     8.00       5.75       0          0
 JUN/WWTP         JUNCTION         TO               200.00     0.0140     21.03      21.03      0          0
 
 [PUMPS]
 ;;Name           From             To               PumpCurve  Status   Startup    Shutoff
 ;;-------------- ---------------- ---------------- ---------- -------- ---------- ----------
-PUMP 1           PUMP 2           PUMP 3           PC_PUMP 1  ON       0          0         
+PUMP_1           PUMP_2           PUMP_3           PC_PUMP_1  ON       1.00       0         
 
 [CURVES]
 ;;Name           Type       X-Value    Y-Value
 ;;-------------- ---------- ---------- ----------
-PC_PUMP 1        Pump2      0          0
-;
+;; Synthesized generic pump curves — replace with actual pump data
+PC_PUMP_1        Pump1      0          5
+PC_PUMP_1                   10         10
 
 [XSECTIONS]
 ;;Link           Shape        Geom1      Geom2      Geom3      Geom4      Barrels

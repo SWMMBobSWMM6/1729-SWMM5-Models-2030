@@ -14,12 +14,24 @@ LINK_OFFSETS         DEPTH
 MIN_SLOPE            0.0
 ALLOW_PONDING        NO
 SKIP_STEADY_STATE    NO
-ROUTING_STEP         00:00:60
+ROUTING_STEP         00:01:00
 VARIABLE_STEP        0.75
 INERTIAL_DAMPING     PARTIAL
 NORMAL_FLOW_LIMITED  BOTH
 MAX_TRIALS           50
 HEAD_TOLERANCE       .001
+START_DATE           01/01/2001
+START_TIME           00:00:00
+REPORT_START_DATE    01/01/2001
+REPORT_START_TIME    00:00:00
+END_DATE             01/02/2001
+END_TIME             00:00:00
+SWEEP_START          01/01
+SWEEP_END            12/31
+DRY_DAYS             0
+REPORT_STEP          00:15:00
+WET_STEP             00:05:00
+DRY_STEP             01:00:00
 
 [JUNCTIONS]
 ;;Name           Elev       MaxDepth   InitDepth  SurDepth   Aponded
@@ -30,15 +42,19 @@ HEAD_TOLERANCE       .001
 81309            130.00     0          0          0          0
 15009            125.00     0          0          0          0
 10309            111.00     0          0          0          0
-10208            100.00     0          0          0          0
 16009            120.00     0          0          0          0
 16109            125.00     0          0          0          0
 202              200.00     0          0          0          0
 
+[OUTFALLS]
+;;Name           Elev       Type       Stage      Gated
+;;-------------- ---------- ---------- ---------- -----
+10208            100.00     FREE                  NO
+
 [STORAGE]
 ;;Name           Elev       MaxDepth   InitDepth  Shape      Curve/Params
 ;;-------------- ---------- ---------- ---------- ---------- ----------
-80608            137.00     0          0          FUNCTIONAL 100.00 0          0
+80608            137.00     10.00      0          FUNCTIONAL 100.00 0          0
 
 [CONDUITS]
 ;;Name           From             To               Length     Roughness  InOffset   OutOffset  InitFlow   MaxFlow
@@ -52,7 +68,7 @@ HEAD_TOLERANCE       .001
 1600             16009            16109            500.00     0.0150     102.00     102.80     0          0
 1630             16009            10309            300.00     0.0150     102.00     101.60     0          0
 1602             82309            16109            5000.00    0.0340     112.30     102.80     0          0
-203              ?                ?                1000.00    0.0100     135.00     125.00     0          0
+203              80608            202              1000.00    0.0100     135.00     125.00     0          0
 
 [XSECTIONS]
 ;;Link           Shape        Geom1      Geom2      Geom3      Geom4      Barrels
@@ -61,10 +77,10 @@ HEAD_TOLERANCE       .001
 8060             CIRCULAR     4.00       0          0          0          1
 8100             CIRCULAR     4.50       0          0          0          1
 8130             CIRCULAR     4.50       0          0          0          1
-1030             TRAPEZOIDAL  9.00       0          0          0          1
+1030             TRAPEZOIDAL  9.00       1.00       1          1          1
 1570             CIRCULAR     5.50       0          0          0          1
 1600             CIRCULAR     6.00       0          0          0          1
-1630             TRAPEZOIDAL  9.00       0          0          0          1
+1630             TRAPEZOIDAL  9.00       1.00       1          1          1
 1602             CIRCULAR     5.00       0          0          0          1
 203              CIRCULAR     2.00       0          0          0          1
 

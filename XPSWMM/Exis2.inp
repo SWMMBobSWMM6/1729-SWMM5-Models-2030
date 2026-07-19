@@ -19,6 +19,18 @@ VARIABLE_STEP        0.75
 INERTIAL_DAMPING     PARTIAL
 NORMAL_FLOW_LIMITED  BOTH
 MAX_TRIALS           50
+START_DATE           01/01/2001
+START_TIME           00:00:00
+REPORT_START_DATE    01/01/2001
+REPORT_START_TIME    00:00:00
+END_DATE             01/02/2001
+END_TIME             00:00:00
+SWEEP_START          01/01
+SWEEP_END            12/31
+DRY_DAYS             0
+REPORT_STEP          00:15:00
+WET_STEP             00:05:00
+DRY_STEP             01:00:00
 
 [JUNCTIONS]
 ;;Name           Elev       MaxDepth   InitDepth  SurDepth   Aponded
@@ -30,8 +42,12 @@ MAX_TRIALS           50
 108              165.00     0          0          0          0
 109              65.00      0          0          0          0
 110              68.00      0          0          0          0
-111              68.00      0          0          0          0
 104.5            660.00     0          0          0          0
+
+[OUTFALLS]
+;;Name           Elev       Type       Stage      Gated
+;;-------------- ---------- ---------- ---------- -----
+111              68.00      FREE                  NO
 
 [CONDUITS]
 ;;Name           From             To               Length     Roughness  InOffset   OutOffset  InitFlow   MaxFlow
@@ -48,14 +64,14 @@ MAX_TRIALS           50
 [XSECTIONS]
 ;;Link           Shape        Geom1      Geom2      Geom3      Geom4      Barrels
 ;;-------------- ------------ ---------- ---------- ---------- ---------- ----------
-3                TRAPEZOIDAL  10.00      5.00       0          0          1
-4                TRAPEZOIDAL  10.00      5.00       0          0          1
-5                TRAPEZOIDAL  10.00      5.00       0          0          1
-6                TRAPEZOIDAL  10.00      5.00       0          0          1
-7                TRAPEZOIDAL  10.00      5.00       0          0          1
+3                TRAPEZOIDAL  10.00      5.00       1          1          1
+4                TRAPEZOIDAL  10.00      5.00       1          1          1
+5                TRAPEZOIDAL  10.00      5.00       1          1          1
+6                TRAPEZOIDAL  10.00      5.00       1          1          1
+7                TRAPEZOIDAL  10.00      5.00       1          1          1
 8                RECT_CLOSED  5.14       8.00       0          0          1
-1                TRAPEZOIDAL  10.00      5.00       0          0          1
-2                TRAPEZOIDAL  10.00      5.00       0          0          1
+1                TRAPEZOIDAL  10.00      5.00       1          1          1
+2                TRAPEZOIDAL  10.00      5.00       1          1          1
 
 [LOSSES]
 ;;Link           Inlet      Outlet     Average    Flap Gate

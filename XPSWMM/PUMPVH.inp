@@ -20,6 +20,18 @@ INERTIAL_DAMPING     NONE
 NORMAL_FLOW_LIMITED  BOTH
 MAX_TRIALS           50
 HEAD_TOLERANCE       0.
+START_DATE           01/01/2001
+START_TIME           00:00:00
+REPORT_START_DATE    01/01/2001
+REPORT_START_TIME    00:00:00
+END_DATE             01/02/2001
+END_TIME             00:00:00
+SWEEP_START          01/01
+SWEEP_END            12/31
+DRY_DAYS             0
+REPORT_STEP          00:15:00
+WET_STEP             00:05:00
+DRY_STEP             01:00:00
 
 [JUNCTIONS]
 ;;Name           Elev       MaxDepth   InitDepth  SurDepth   Aponded
@@ -30,16 +42,22 @@ AA8A             585.78     0          0          0          0
 AA9              584.46     0          0          0          0
 AA14             581.53     0          0          0          0
 Z1               581.80     0          0          0          0
-AA6-S            585.78     0          0          0          0
 AA14-S           581.53     0          0          0          0
+a                0          0          0          0          0
+z                0          0          0          0          0
+
+[OUTFALLS]
+;;Name           Elev       Type       Stage      Gated
+;;-------------- ---------- ---------- ---------- -----
+AA6-S            585.78     FREE                  NO
 
 [STORAGE]
 ;;Name           Elev       MaxDepth   InitDepth  Shape      Curve/Params
 ;;-------------- ---------- ---------- ---------- ---------- ----------
-VHPS             584.50     0          0          FUNCTIONAL 1080.00 0          0
-GZ1              1200.00    0          0          FUNCTIONAL 0 0          0
-GAA15            1200.00    0          0          FUNCTIONAL 0 0          0
-GJ2              1200.00    0          0          FUNCTIONAL 0 0          0
+VHPS             584.50     10.00      0          FUNCTIONAL 1080.00 0          0
+GZ1              1200.00    10.00      0          FUNCTIONAL 1000.00 0          0
+GAA15            1200.00    10.00      0          FUNCTIONAL 1000.00 0          0
+GJ2              1200.00    10.00      0          FUNCTIONAL 1000.00 0          0
 
 [CONDUITS]
 ;;Name           From             To               Length     Roughness  InOffset   OutOffset  InitFlow   MaxFlow
@@ -48,7 +66,7 @@ LAA9             J2               AA9              377.00     0.0130     563.07 
 LVHPS1           AA9              VHPS             150.00     0.0130     560.54     559.52     0          0
 LAA14-2          Z1               AA14             150.00     0.0130     570.80     565.25     0          0
 LAA6-S           AA8A             AA6-S            520.00     0.0130     572.16     571.50     0          0
-440              ?                ?                150.00     0.0130     562.44     561.93     0          0
+440              AA14-S           AA14             150.00     0.0130     562.44     561.93     0          0
 LVHPS2           AA14             VHPS             753.00     0.0130     561.93     559.52     0          0
 LAA14-1          AA15             AA14-S           170.00     0.0130     562.84     562.44     0          0
 
@@ -67,8 +85,9 @@ q                a                z                PC_q       ON       561.07   
 [CURVES]
 ;;Name           Type       X-Value    Y-Value
 ;;-------------- ---------- ---------- ----------
-PC_q             Pump3      0          0
-;
+;; Synthesized generic pump curves — replace with actual pump data
+PC_q             Pump1      0          5
+PC_q                        10         10
 
 [XSECTIONS]
 ;;Link           Shape        Geom1      Geom2      Geom3      Geom4      Barrels
@@ -80,9 +99,9 @@ LAA6-S           CIRCULAR     4.00       0          0          0          1
 440              CIRCULAR     3.00       0          0          0          1
 LVHPS2           CIRCULAR     3.00       0          0          0          1
 LAA14-1          CIRCULAR     3.00       0          0          0          1
-GLZ1             RECT_CLOSED  0          0          0          0          
-GLAA15           RECT_CLOSED  0          0          0          0          
-LGJ2             RECT_CLOSED  0          0          0          0          
+GLZ1             RECT_CLOSED  0.05       0.05       0          0
+GLAA15           RECT_CLOSED  0.05       0.05       0          0
+LGJ2             RECT_CLOSED  0.02       0.02       0          0
 
 [LOSSES]
 ;;Link           Inlet      Outlet     Average    Flap Gate

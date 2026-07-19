@@ -14,72 +14,74 @@ LINK_OFFSETS         DEPTH
 MIN_SLOPE            0.0
 ALLOW_PONDING        NO
 SKIP_STEADY_STATE    NO
-ROUTING_STEP         00:00:3600
+ROUTING_STEP         01:00:00
 VARIABLE_STEP        0.75
 INERTIAL_DAMPING     NONE
 NORMAL_FLOW_LIMITED  BOTH
 MAX_TRIALS           50
+START_DATE           01/01/2001
+START_TIME           00:00:00
+REPORT_START_DATE    01/01/2001
+REPORT_START_TIME    00:00:00
+END_DATE             01/02/2001
+END_TIME             00:00:00
+SWEEP_START          01/01
+SWEEP_END            12/31
+DRY_DAYS             0
+REPORT_STEP          01:00:00
+WET_STEP             01:00:00
+DRY_STEP             01:00:00
 
 [JUNCTIONS]
 ;;Name           Elev       MaxDepth   InitDepth  SurDepth   Aponded
 ;;-------------- ---------- ---------- ---------- ---------- ----------
-C14-2            14.00      0          17.50      0          0
-C14-3            14.00      0          17.50      0          0
-C14-1            14.00      0          17.50      0          0
-G56H-1           16.00      0          17.09      0          0
-G56H-2           16.00      0          17.09      0          0
-G56H-3           16.00      0          17.09      0          0
-G56H-4           16.00      0          17.09      0          0
-G56-H            16.00      0          17.09      0          0
-C14-7            14.00      0          17.50      0          0
-C14-8            14.00      0          17.50      0          0
-C14-9            14.00      0          17.50      0          0
-C14-4            14.00      0          17.50      0          0
-C14-5            14.00      0          17.50      0          0
-C14-6            14.00      0          17.50      0          0
-G56H-6           16.00      0          17.09      0          0
+C14-3            14.00      0          0          0          0
+C14-1            14.00      0          0          0          0
+G56H-1           16.00      0          0          0          0
+G56H-2           16.00      0          0          0          0
+G56H-3           16.00      0          0          0          0
+G56H-4           16.00      0          0          0          0
+G56-H            16.00      0          0          0          0
+C14-7            14.00      0          0          0          0
+C14-8            14.00      0          0          0          0
+C14-9            14.00      0          0          0          0
+C14-4            14.00      0          0          0          0
+C14-5            14.00      0          0          0          0
+C14-6            14.00      0          0          0          0
+G56H-6           16.00      0          0          0          0
+CS34-BLEED       0          0          0          0          0
+CS34-WEIR        0          0          0          0          0
+PT-TR_GW         0          0          0          0          0
+CS50-BLEED       0          0          0          0          0
+CS12-WEIR        0          0          0          0          0
+CM7-C14_GW       0          0          0          0          0
+CS49-WEIR        0          0          0          0          0
+
+[OUTFALLS]
+;;Name           Elev       Type       Stage      Gated
+;;-------------- ---------- ---------- ---------- -----
+C14-2            14.00      FREE                  NO
 
 [STORAGE]
 ;;Name           Elev       MaxDepth   InitDepth  Shape      Curve/Params
 ;;-------------- ---------- ---------- ---------- ---------- ----------
-PT               17.00      0          21.00      FUNCTIONAL 0 0          0
-TRCB             17.00      0          18.50      FUNCTIONAL 0 0          0
-CM8              14.00      0          18.50      FUNCTIONAL 1000.00 0          0
-CM6              16.00      0          21.00      FUNCTIONAL 0 0          0
-CM7              16.00      0          18.50      FUNCTIONAL 0 0          0
-CM2              16.00      0          21.00      FUNCTIONAL 0 0          0
-CM4              16.00      0          22.45      FUNCTIONAL 0 0          0
-CM5              16.00      0          21.00      FUNCTIONAL 0 0          0
-
-[CONDUITS]
-;;Name           From             To               Length     Roughness  InOffset   OutOffset  InitFlow   MaxFlow
-;;-------------- ---------------- ---------------- ---------- ---------- ---------- ---------- ---------- ----------
-CM24_GW          CM4              CM2              0          0          0          0          0          0
-CM4-5_GW         CM5              CM4              0          0          0          0          0          0
-CM5-6_GW         CM5              CM6              0          0          0          0          0          0
-CM-TR_CLV        CM5              TRCB             0          0          0          0          0          0
-CM5-7_GW         CM5              CM7              0          0          0          0          0          0
-TR-C7_GW         TRCB             CM7              0          0          0          0          0          0
-CM-Lyons1        CM6              CM7              0          0          0          0          0          0
-CM-Lyons2        CM8              CM7              0          0          0          0          0          0
-CM4-PT_GW        CM4              PT               0          0          0          0          0          0
-CM2-PT_GW        CM2              PT               0          0          0          0          0          0
-CM7C14_GW        CM7              C14-3            0          0          0          0          0          0
-PT-HC_GW         PT               G56H-6           0          0          0          0          0          0
+PT               17.00      10.00      10.00      FUNCTIONAL 1000.00 0          0
+TRCB             17.00      10.00      10.00      FUNCTIONAL 1000.00 0          0
+CM8              14.00      10.00      10.00      FUNCTIONAL 1000.00 0          0
+CM6              16.00      10.00      10.00      FUNCTIONAL 1000.00 0          0
+CM7              16.00      10.00      10.00      FUNCTIONAL 1000.00 0          0
+CM2              16.00      10.00      10.00      FUNCTIONAL 1000.00 0          0
+CM4              16.00      10.00      10.00      FUNCTIONAL 1000.00 0          0
+CM5              16.00      10.00      10.00      FUNCTIONAL 1000.00 0          0
 
 [WEIRS]
 ;;Name           From             To               Type       CrestHt    Qcoeff     Gated    EndCon   EndCoeff   Surcharge
 ;;-------------- ---------------- ---------------- ---------- ---------- ---------- -------- -------- ---------- ----------
-CS-PT            PT               G56H-1           TRANSVERSE 11.00      1.840      NO       0        0          YES
-CS46-P           CM2              G56H-2           TRANSVERSE 11.00      1.840      NO       0        0          YES
 CS46-WEIR        CM2              G56H-3           TRANSVERSE 11.00      1.840      NO       0        0          YES
 CS45-W           CM4              G56H-4           TRANSVERSE 11.00      1.840      NO       0        0          YES
-CS45-PUMP        CM4              G56-H            TRANSVERSE 11.00      1.840      NO       0        0          YES
-CS-12PUMP        CM8              C14-7            TRANSVERSE 9.00       1.840      NO       0        0          YES
 CS12-WEIR        CS12-WEIR        C14-8            TRANSVERSE 9.00       1.840      NO       0        0          YES
 CM8-12_GW        CM8              C14-9            TRANSVERSE 9.00       1.840      NO       0        0          YES
 CM7-C14_GW       CM7-C14_GW       C14-6            TRANSVERSE 9.00       1.840      NO       0        0          YES
-CS49-P           CM7              C14-4            TRANSVERSE 9.00       1.840      NO       0        0          YES
 CS49-W           CM7              CS49-WEIR        TRANSVERSE 9.00       1.840      NO       0        0          YES
 
 [PUMPS]
@@ -89,61 +91,44 @@ CS-34            CS34-BLEED       CS34-WEIR        PC_CS-34   ON       11.50    
 CS-50            PT-TR_GW         CS50-BLEED       PC_CS-50   ON       11.00      10.00     
 CS-7             TRCB             C14-2            PC_CS-7    ON       10.50      9.00      
 TR-C14_GW        TRCB             C14-1            PC_TR-C14_GW ON       10.50      9.00      
+CS-PT            PT               G56H-1           PC_CS-PT   ON       11.00      9.50      
+CS46-P           CM2              G56H-2           PC_CS46-P  ON       12.50      10.50     
+CS45-PUMP        CM4              G56-H            PC_CS45-PUMP ON       12.50      10.50     
+CS-12PUMP        CM8              C14-7            PC_CS-12PUMP ON       6.00       4.00      
+CS49-P           CM7              C14-4            PC_CS49-P  ON       9.50       8.50      
 
 [CURVES]
 ;;Name           Type       X-Value    Y-Value
 ;;-------------- ---------- ---------- ----------
-PC_CS-34         Pump3      0          0
-;
-PC_CS-50         Pump3      0          0
-;
-PC_CS-7          Pump3      0          0
-;
-PC_TR-C14_GW     Pump3      0          0
-;
+;; Synthesized generic pump curves — replace with actual pump data
+PC_CS-34         Pump1      0          5
+PC_CS-34                    10         10
+PC_CS-50         Pump1      0          5
+PC_CS-50                    10         10
+PC_CS-7          Pump1      0          5
+PC_CS-7                     10         10
+PC_TR-C14_GW     Pump1      0          5
+PC_TR-C14_GW                10         10
+PC_CS-PT         Pump1      0          5
+PC_CS-PT                    10         10
+PC_CS46-P        Pump1      0          5
+PC_CS46-P                   10         10
+PC_CS45-PUMP     Pump1      0          5
+PC_CS45-PUMP                10         10
+PC_CS-12PUMP     Pump1      0          5
+PC_CS-12PUMP                10         10
+PC_CS49-P        Pump1      0          5
+PC_CS49-P                   10         10
 
 [XSECTIONS]
 ;;Link           Shape        Geom1      Geom2      Geom3      Geom4      Barrels
 ;;-------------- ------------ ---------- ---------- ---------- ---------- ----------
-CM24_GW          CIRCULAR     0          0          0          0          1
-CM4-5_GW         CIRCULAR     0          0          0          0          1
-CM5-6_GW         CIRCULAR     0          0          0          0          1
-CM-TR_CLV        CIRCULAR     0          0          0          0          1
-CM5-7_GW         CIRCULAR     0          0          0          0          1
-TR-C7_GW         CIRCULAR     0          0          0          0          1
-CM-Lyons1        CIRCULAR     0          0          0          0          1
-CM-Lyons2        CIRCULAR     0          0          0          0          1
-CM4-PT_GW        CIRCULAR     0          0          0          0          1
-CM2-PT_GW        CIRCULAR     0          0          0          0          1
-CM7C14_GW        CIRCULAR     0          0          0          0          1
-PT-HC_GW         CIRCULAR     0          0          0          0          1
-CS-PT            RECT_OPEN    0          4.00       0          0          
-CS46-P           RECT_OPEN    0          3.00       0          0          
-CS46-WEIR        RECT_OPEN    0          3.00       0          0          
-CS45-W           RECT_OPEN    0          3.00       0          0          
-CS45-PUMP        RECT_OPEN    0          3.00       0          0          
-CS-12PUMP        RECT_OPEN    0          16.50      0          0          
-CS12-WEIR        RECT_OPEN    0          16.50      0          0          
-CM8-12_GW        RECT_OPEN    0          16.50      0          0          
-CM7-C14_GW       RECT_OPEN    0          20.00      0          0          
-CS49-P           RECT_OPEN    0          20.00      0          0          
-CS49-W           RECT_OPEN    0          20.00      0          0          
-
-[LOSSES]
-;;Link           Inlet      Outlet     Average    Flap Gate
-;;-------------- ---------- ---------- ---------- ----------
-CM24_GW          0          0          0          NO
-CM4-5_GW         0          0          0          NO
-CM5-6_GW         0          0          0          NO
-CM-TR_CLV        0          0          0          NO
-CM5-7_GW         0          0          0          NO
-TR-C7_GW         0          0          0          NO
-CM-Lyons1        0          0          0          NO
-CM-Lyons2        0          0          0          NO
-CM4-PT_GW        0          0          0          NO
-CM2-PT_GW        0          0          0          NO
-CM7C14_GW        0          0          0          NO
-PT-HC_GW         0          0          0          NO
+CS46-WEIR        RECT_OPEN    1.00       3.00       0          0
+CS45-W           RECT_OPEN    1.00       3.00       0          0
+CS12-WEIR        RECT_OPEN    1.00       16.50      0          0
+CM8-12_GW        RECT_OPEN    1.00       16.50      0          0
+CM7-C14_GW       RECT_OPEN    1.00       20.00      0          0
+CS49-W           RECT_OPEN    1.00       20.00      0          0
 
 [COORDINATES]
 ;;Node           X-Coord            Y-Coord

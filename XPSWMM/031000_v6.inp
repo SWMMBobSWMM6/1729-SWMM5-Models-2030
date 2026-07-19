@@ -14,11 +14,23 @@ LINK_OFFSETS         DEPTH
 MIN_SLOPE            0.0
 ALLOW_PONDING        NO
 SKIP_STEADY_STATE    NO
-ROUTING_STEP         00:00:60
+ROUTING_STEP         00:01:00
 VARIABLE_STEP        0.75
 INERTIAL_DAMPING     PARTIAL
 NORMAL_FLOW_LIMITED  BOTH
 MAX_TRIALS           100
+START_DATE           01/01/2001
+START_TIME           00:00:00
+REPORT_START_DATE    01/01/2001
+REPORT_START_TIME    00:00:00
+END_DATE             01/02/2001
+END_TIME             00:00:00
+SWEEP_START          01/01
+SWEEP_END            12/31
+DRY_DAYS             0
+REPORT_STEP          00:15:00
+WET_STEP             00:05:00
+DRY_STEP             01:00:00
 
 [JUNCTIONS]
 ;;Name           Elev       MaxDepth   InitDepth  SurDepth   Aponded
@@ -43,7 +55,6 @@ Struct13         608.40     0          0          0          0
 49               608.00     0          0          0          0
 51               588.30     0          0          0          0
 56               586.00     0          0          0          0
-58               582.27     0          0          0          0
 60               611.50     0          0          0          0
 65               633.00     0          0          0          0
 68               590.00     0          0          0          0
@@ -56,13 +67,18 @@ Cl2Tank          594.00     0          0          0          0
 134              593.86     0          0          0          0
 137              595.00     0          0          0          0
 
+[OUTFALLS]
+;;Name           Elev       Type       Stage      Gated
+;;-------------- ---------- ---------- ---------- -----
+58               582.27     FREE                  NO
+
 [STORAGE]
 ;;Name           Elev       MaxDepth   InitDepth  Shape      Curve/Params
 ;;-------------- ---------- ---------- ---------- ---------- ----------
-62               611.50     -24.70     0          FUNCTIONAL 540.00 0          0
-81               633.00     0          0          FUNCTIONAL 86700.00 0          0
-85               633.00     0          0          FUNCTIONAL 57800.00 0          0
-97               633.00     0          0          FUNCTIONAL 9.42 0          0
+62               611.50     10.00      0          FUNCTIONAL 540.00 0          0
+81               633.00     10.00      0          FUNCTIONAL 86700.00 0          0
+85               633.00     10.00      0          FUNCTIONAL 57800.00 0          0
+97               633.00     10.00      0          FUNCTIONAL 9.42 0          0
 
 [CONDUITS]
 ;;Name           From             To               Length     Roughness  InOffset   OutOffset  InitFlow   MaxFlow
@@ -87,11 +103,11 @@ Cl2Tank          594.00     0          0          0          0
 66               60               62               50.00      0.0150     570.50     570.35     0          0
 71               70               Struct7          25.50      0.0140     575.96     575.93     0          0
 84               65               81               33.00      0.0140     628.00     627.00     0          0
+Overflow         85               97               20.00      0.0140     628.00     627.00     0          0
 90               87               Junc             623.60     0.0140     590.18     586.85     0          0
 92               132              91               1142.92    0.0110     586.85     582.42     0          0
 95               91               Cl2Tank          93.48      0.0140     581.70     579.75     0          0
 98               97               87               50.00      0.0140     590.20     590.18     0          0
-133              Junc             132              0          0          0          0          0          0
 336.1            Junc             134              33.00      0.0140     586.85     586.75     0          0
 138              134              137              2400.00    0.0140     586.75     579.55     0          0
 
@@ -99,7 +115,6 @@ Cl2Tank          594.00     0          0          0          0
 ;;Name           From             To               Type       Offset     Qcoeff     Gated    CloseTime
 ;;-------------- ---------------- ---------------- ---------- ---------- ---------- -------- ----------
 253.1            51               26               SIDE       0          0.650      NO       0
-Overflow         85               97               SIDE       628.00     0.650      NO       0
 
 [WEIRS]
 ;;Name           From             To               Type       CrestHt    Qcoeff     Gated    EndCon   EndCoeff   Surcharge
@@ -113,16 +128,17 @@ Overflow         85               97               SIDE       628.00     0.650  
 [PUMPS]
 ;;Name           From             To               PumpCurve  Status   Startup    Shutoff
 ;;-------------- ---------------- ---------------- ---------- -------- ---------- ----------
-67               62               65               PC_67      ON       0          0         
-69               32               68               PC_69      ON       0          0         
+67               62               65               PC_67      ON       1.00       0         
+69               32               68               PC_69      ON       1.00       0         
 
 [CURVES]
 ;;Name           Type       X-Value    Y-Value
 ;;-------------- ---------- ---------- ----------
-PC_67            Pump1      0          0
-;
-PC_69            Pump1      0          0
-;
+;; Synthesized generic pump curves — replace with actual pump data
+PC_67            Pump1      0          5
+PC_67                       10         10
+PC_69            Pump1      0          5
+PC_69                       10         10
 
 [XSECTIONS]
 ;;Link           Shape        Geom1      Geom2      Geom3      Geom4      Barrels
@@ -147,20 +163,19 @@ PC_69            Pump1      0          0
 66               CIRCULAR     6.00       0          0          0          1
 71               CIRCULAR     4.50       0          0          0          1
 84               CIRCULAR     4.00       0          0          0          1
+Overflow         CIRCULAR     3.00       0          0          0          1
 90               CIRCULAR     3.00       0          0          0          1
 92               CIRCULAR     2.50       0          0          0          1
 95               CIRCULAR     3.00       0          0          0          1
 98               CIRCULAR     3.00       0          0          0          1
-133              CIRCULAR     0          0          0          0          1
 336.1            CIRCULAR     0.16       0          0          0          1
 138              CIRCULAR     7.00       0          0          0          1
-253.1            RECT_CLOSED  0          0          0          0          
-Overflow         RECT_CLOSED  632.00     0          0          0          
-246.1            RECT_OPEN    0          13.00      0          0          
-248.1            RECT_OPEN    0          8.25       0          0          
-59               RECT_OPEN    0          10.00      0          0          
-64               RECT_OPEN    0          15.00      0          0          
-86               RECT_OPEN    0          15.00      0          0          
+253.1            RECT_CLOSED  2.12       2.12       0          0
+246.1            RECT_OPEN    1.00       13.00      0          0
+248.1            RECT_OPEN    1.00       8.25       0          0
+59               RECT_OPEN    1.00       10.00      0          0
+64               TRIANGULAR   1.00       15.00      0          0
+86               RECT_OPEN    1.00       15.00      0          0
 
 [LOSSES]
 ;;Link           Inlet      Outlet     Average    Flap Gate
@@ -185,11 +200,11 @@ Overflow         RECT_CLOSED  632.00     0          0          0
 66               0          0          0          NO
 71               0          0          0          NO
 84               0          0          0          NO
+Overflow         0          0          0          NO
 90               0          0          0          NO
 92               0          0          0          NO
 95               0          0          0          NO
 98               0          0          0          NO
-133              0          0          0          NO
 336.1            0          0          0          NO
 138              0          0          0          NO
 

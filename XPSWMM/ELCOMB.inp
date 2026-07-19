@@ -20,11 +20,22 @@ INERTIAL_DAMPING     NONE
 NORMAL_FLOW_LIMITED  BOTH
 MAX_TRIALS           50
 HEAD_TOLERANCE       0.000
+START_DATE           01/01/2001
+START_TIME           00:00:00
+REPORT_START_DATE    01/01/2001
+REPORT_START_TIME    00:00:00
+END_DATE             01/02/2001
+END_TIME             00:00:00
+SWEEP_START          01/01
+SWEEP_END            12/31
+DRY_DAYS             0
+REPORT_STEP          00:15:00
+WET_STEP             00:05:00
+DRY_STEP             01:00:00
 
 [JUNCTIONS]
 ;;Name           Elev       MaxDepth   InitDepth  SurDepth   Aponded
 ;;-------------- ---------- ---------- ---------- ---------- ----------
-495              168.90     0          0          0          0
 505              168.10     0          0          0          0
 575              167.10     0          0          0          0
 813              170.00     0          0          0          0
@@ -48,6 +59,18 @@ HEAD_TOLERANCE       0.000
 725              91.50      0          0          0          0
 735              90.70      0          0          0          0
 705              75.50      0          0          0          0
+510              323.60     0          0          0          0
+600              310.61     0          0          0          0
+620              302.40     0          0          0          0
+630              290.20     0          0          0          0
+640              284.30     0          0          0          0
+650              275.00     0          0          0          0
+700              78.20      0          0          0          0
+
+[OUTFALLS]
+;;Name           Elev       Type       Stage      Gated
+;;-------------- ---------- ---------- ---------- -----
+495              168.90     FREE                  NO
 
 [STORAGE]
 ;;Name           Elev       MaxDepth   InitDepth  Shape      Curve/Params
@@ -93,26 +116,26 @@ HEAD_TOLERANCE       0.000
 810              CIRCULAR     5.00       0          0          0          1
 808              CIRCULAR     5.00       8.00       0          0          1
 600              CIRCULAR     2.00       0          0          0          1
-620              TRAPEZOIDAL  4.00       9.50       0          0          1
+620              TRAPEZOIDAL  4.00       9.50       1          1          1
 630              CIRCULAR     2.50       0          0          0          1
-640              TRAPEZOIDAL  3.50       6.50       0          0          1
+640              TRAPEZOIDAL  3.50       6.50       1          1          1
 650              CIRCULAR     2.50       0          0          0          1
 480              CIRCULAR     2.00       0          0          0          1
 490              CIRCULAR     2.50       0          0          0          1
-500              TRAPEZOIDAL  4.50       6.00       0          0          1
+500              TRAPEZOIDAL  4.50       6.00       1          1          1
 520              CIRCULAR     5.00       0          0          0          1
 530              CIRCULAR     5.00       0          0          0          1
 570              CIRCULAR     5.00       0          0          0          1
 580              CIRCULAR     5.00       0          0          0          1
 590              CIRCULAR     5.00       0          0          0          1
-660              TRAPEZOIDAL  5.00       4.00       0          0          1
+660              TRAPEZOIDAL  5.00       4.00       1          1          1
 670              CIRCULAR     2.50       0          0          0          1
-680              TRAPEZOIDAL  5.00       4.00       0          0          1
-6802             TRAPEZOIDAL  5.00       4.00       0          0          1
+680              TRAPEZOIDAL  5.00       4.00       1          1          1
+6802             TRAPEZOIDAL  5.00       4.00       1          1          1
 690              CIRCULAR     3.00       0          0          0          1
-720              TRAPEZOIDAL  5.00       4.00       0          0          1
+720              TRAPEZOIDAL  5.00       4.00       1          1          1
 730              RECT_CLOSED  6.70       4.90       0          0          1
-710              TRAPEZOIDAL  3.00       4.00       0          0          1
+710              TRAPEZOIDAL  3.00       4.00       1          1          1
 
 [LOSSES]
 ;;Link           Inlet      Outlet     Average    Flap Gate

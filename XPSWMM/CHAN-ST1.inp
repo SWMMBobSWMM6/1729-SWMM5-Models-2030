@@ -20,34 +20,47 @@ INERTIAL_DAMPING     PARTIAL
 NORMAL_FLOW_LIMITED  BOTH
 MAX_TRIALS           50
 HEAD_TOLERANCE       .001
+START_DATE           01/01/2001
+START_TIME           00:00:00
+REPORT_START_DATE    01/01/2001
+REPORT_START_TIME    00:00:00
+END_DATE             01/02/2001
+END_TIME             00:00:00
+SWEEP_START          01/01
+SWEEP_END            12/31
+DRY_DAYS             0
+REPORT_STEP          00:15:00
+WET_STEP             00:05:00
+DRY_STEP             01:00:00
+
+[OUTFALLS]
+;;Name           Elev       Type       Stage      Gated
+;;-------------- ---------- ---------- ---------- -----
+Outlet           3.00       FREE                  NO
 
 [STORAGE]
 ;;Name           Elev       MaxDepth   InitDepth  Shape      Curve/Params
 ;;-------------- ---------- ---------- ---------- ---------- ----------
-Inlet            3.00       0          1.00       FUNCTIONAL 10.00 0          0
-Outlet           3.00       22.00      0          FUNCTIONAL 10.00 0          0
-A                3.00       0          1.00       FUNCTIONAL 10000.00 0          0
+Inlet            3.00       10.00      1.00       FUNCTIONAL 10.00 0          0
+A                3.00       10.00      1.00       FUNCTIONAL 10000.00 0          0
 
 [CONDUITS]
 ;;Name           From             To               Length     Roughness  InOffset   OutOffset  InitFlow   MaxFlow
 ;;-------------- ---------------- ---------------- ---------- ---------- ---------- ---------- ---------- ----------
 2.1              Inlet            A                100.00     0.0250     0.32       0.32       0          0
-
-[ORIFICES]
-;;Name           From             To               Type       Offset     Qcoeff     Gated    CloseTime
-;;-------------- ---------------- ---------------- ---------- ---------- ---------- -------- ----------
-ORIFICE 4        A                Outlet           SIDE       2.00       0.650      NO       0
+ORIFICE_4        A                Outlet           100.00     0.0120     2.00       2.00       0          0
 
 [XSECTIONS]
 ;;Link           Shape        Geom1      Geom2      Geom3      Geom4      Barrels
 ;;-------------- ------------ ---------- ---------- ---------- ---------- ----------
-2.1              TRAPEZOIDAL  2.68       3.00       0          0          1
-ORIFICE 4        RECT_CLOSED  0.50       0          0          0          
+2.1              TRAPEZOIDAL  2.68       3.00       1          1          1
+ORIFICE_4        CIRCULAR     0.10       0          0          0          1
 
 [LOSSES]
 ;;Link           Inlet      Outlet     Average    Flap Gate
 ;;-------------- ---------- ---------- ---------- ----------
 2.1              0          0          0          NO
+ORIFICE_4        0          0          0          NO
 
 [COORDINATES]
 ;;Node           X-Coord            Y-Coord

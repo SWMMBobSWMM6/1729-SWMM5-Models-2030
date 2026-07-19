@@ -20,6 +20,18 @@ INERTIAL_DAMPING     PARTIAL
 NORMAL_FLOW_LIMITED  BOTH
 MAX_TRIALS           50
 HEAD_TOLERANCE       0.0033
+START_DATE           01/01/2001
+START_TIME           00:00:00
+REPORT_START_DATE    01/01/2001
+REPORT_START_TIME    00:00:00
+END_DATE             01/02/2001
+END_TIME             00:00:00
+SWEEP_START          01/01
+SWEEP_END            12/31
+DRY_DAYS             0
+REPORT_STEP          00:15:00
+WET_STEP             00:05:00
+DRY_STEP             01:00:00
 
 [JUNCTIONS]
 ;;Name           Elev       MaxDepth   InitDepth  SurDepth   Aponded
@@ -27,33 +39,38 @@ HEAD_TOLERANCE       0.0033
 LW1GW            150.00     0          0          0          0
 LW3GW            150.00     0          0          0          0
 LW2GW            150.00     0          0          0          0
-LW3GWout         3.00       0          0          0          0
 LW1GWout         3.00       0          0          0          0
 LW2GWout         3.00       0          0          0          0
 LW4GWout         3.00       0          0          0          0
 LW040A           40.00      0          0          0          0
+LW210weir        28.68      0          0          0          0
+
+[OUTFALLS]
+;;Name           Elev       Type       Stage      Gated
+;;-------------- ---------- ---------- ---------- -----
+LW3GWout         3.00       FREE                  NO
 
 [STORAGE]
 ;;Name           Elev       MaxDepth   InitDepth  Shape      Curve/Params
 ;;-------------- ---------- ---------- ---------- ---------- ----------
-LW211            42.00      0          0          FUNCTIONAL 0 0          0
-LW212            41.50      0          0          FUNCTIONAL 0 0          0
-LW210            37.03      0          0          FUNCTIONAL 0 0          0
-LW110            37.00      0          0          FUNCTIONAL 0 0          0
-LW111            45.87      0          0          FUNCTIONAL 0 0          0
-LW112            59.77      0          0          FUNCTIONAL 0 0          0
-LW020            33.20      0          0          FUNCTIONAL 0 0          0
-LW010            31.00      0          0          FUNCTIONAL 0 0          0
-LW030            34.20      0          0          FUNCTIONAL 0 0          0
-LW040            34.50      0          0          FUNCTIONAL 0 0          0
-LW220            34.09      0          0          FUNCTIONAL 0 0          0
-LW240            41.80      0          0          FUNCTIONAL 0 0          0
-LW242            50.00      0          0          FUNCTIONAL 0 0          0
-LW050            42.15      0          0          FUNCTIONAL 0 0          0
-LW241            48.00      0          0          FUNCTIONAL 0 0          0
-LW243            55.00      0          0          FUNCTIONAL 0 0          0
-LW244            58.00      0          0          FUNCTIONAL 0 0          0
-LW4GW            150.00     0          0          FUNCTIONAL 10.00 0          0
+LW211            42.00      10.00      0          FUNCTIONAL 1000.00 0          0
+LW212            41.50      10.00      0          FUNCTIONAL 1000.00 0          0
+LW210            37.03      10.00      0          FUNCTIONAL 1000.00 0          0
+LW110            37.00      10.00      0          FUNCTIONAL 1000.00 0          0
+LW111            45.87      10.00      0          FUNCTIONAL 1000.00 0          0
+LW112            59.77      10.00      0          FUNCTIONAL 1000.00 0          0
+LW020            33.20      10.00      0          FUNCTIONAL 1000.00 0          0
+LW010            31.00      10.00      0          FUNCTIONAL 1000.00 0          0
+LW030            34.20      10.00      0          FUNCTIONAL 1000.00 0          0
+LW040            34.50      10.00      0          FUNCTIONAL 1000.00 0          0
+LW220            34.09      10.00      0          FUNCTIONAL 1000.00 0          0
+LW240            41.80      10.00      0          FUNCTIONAL 1000.00 0          0
+LW242            50.00      10.00      0          FUNCTIONAL 1000.00 0          0
+LW050            42.15      10.00      0          FUNCTIONAL 1000.00 0          0
+LW241            48.00      10.00      0          FUNCTIONAL 1000.00 0          0
+LW243            55.00      10.00      0          FUNCTIONAL 1000.00 0          0
+LW244            58.00      10.00      0          FUNCTIONAL 1000.00 0          0
+LW4GW            150.00     10.00      0          FUNCTIONAL 10.00 0          0
 
 [CONDUITS]
 ;;Name           From             To               Length     Roughness  InOffset   OutOffset  InitFlow   MaxFlow
@@ -97,14 +114,14 @@ LW210culv        LW210            LW210weir        80.00      0.0140     29.07  
 [XSECTIONS]
 ;;Link           Shape        Geom1      Geom2      Geom3      Geom4      Barrels
 ;;-------------- ------------ ---------- ---------- ---------- ---------- ----------
-3211             TRAPEZOIDAL  5.00       2.00       0          0          1
-3212             TRAPEZOIDAL  5.00       2.00       0          0          1
-3111             TRAPEZOIDAL  5.00       2.00       0          0          1
-3112             TRAPEZOIDAL  5.00       2.00       0          0          1
-3030             TRAPEZOIDAL  5.00       2.00       0          0          1
-3020             TRAPEZOIDAL  5.00       2.00       0          0          1
-3040             TRAPEZOIDAL  5.00       2.00       0          0          1
-3244             TRAPEZOIDAL  1.90       2.00       0          0          1
+3211             TRAPEZOIDAL  5.00       2.00       1          1          1
+3212             TRAPEZOIDAL  5.00       2.00       1          1          1
+3111             TRAPEZOIDAL  5.00       2.00       1          1          1
+3112             TRAPEZOIDAL  5.00       2.00       1          1          1
+3030             TRAPEZOIDAL  5.00       2.00       1          1          1
+3020             TRAPEZOIDAL  5.00       2.00       1          1          1
+3040             TRAPEZOIDAL  5.00       2.00       1          1          1
+3244             TRAPEZOIDAL  1.90       2.00       1          1          1
 LW112pipe        CIRCULAR     2.00       0          0          0          1
 LW110pipe        CIRCULAR     2.00       0          0          0          1
 LW111pipe        CIRCULAR     2.00       0          0          0          1
@@ -126,11 +143,11 @@ LW010pipe        CIRCULAR     2.00       0          0          0          1
 33GW             CIRCULAR     3.00       0          0          0          1
 31GW             CIRCULAR     3.00       0          0          0          1
 32GW             CIRCULAR     3.00       0          0          0          1
-3110             TRAPEZOIDAL  5.00       2.00       0          0          1
-3220             TRAPEZOIDAL  5.00       2.00       0          0          1
-3050             TRAPEZOIDAL  5.00       2.00       0          0          1
-3040A            TRAPEZOIDAL  5.00       2.00       0          0          1
-3240             TRAPEZOIDAL  5.00       2.00       0          0          1
+3110             TRAPEZOIDAL  5.00       2.00       1          1          1
+3220             TRAPEZOIDAL  5.00       2.00       1          1          1
+3050             TRAPEZOIDAL  5.00       2.00       1          1          1
+3040A            TRAPEZOIDAL  5.00       2.00       1          1          1
+3240             TRAPEZOIDAL  5.00       2.00       1          1          1
 LW210culv        CIRCULAR     2.00       0          0          0          2
 
 [LOSSES]

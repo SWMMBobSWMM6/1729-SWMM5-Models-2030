@@ -20,28 +20,44 @@ INERTIAL_DAMPING     PARTIAL
 NORMAL_FLOW_LIMITED  BOTH
 MAX_TRIALS           50
 HEAD_TOLERANCE       .001
+START_DATE           01/01/2001
+START_TIME           00:00:00
+REPORT_START_DATE    01/01/2001
+REPORT_START_TIME    00:00:00
+END_DATE             01/02/2001
+END_TIME             00:00:00
+SWEEP_START          01/01
+SWEEP_END            12/31
+DRY_DAYS             0
+REPORT_STEP          00:15:00
+WET_STEP             00:05:00
+DRY_STEP             01:00:00
 
 [JUNCTIONS]
 ;;Name           Elev       MaxDepth   InitDepth  SurDepth   Aponded
 ;;-------------- ---------- ---------- ---------- ---------- ----------
 Inlet1           110.00     0          0          0          0
 Inlet2           110.00     0          0          0          0
-Mid              110.00     0          2.00       0          0
+Mid              110.00     0          0          0          0
 Inlet3           110.00     0          0          0          0
-Outfal           110.00     0          3.00       0          0
+
+[OUTFALLS]
+;;Name           Elev       Type       Stage      Gated
+;;-------------- ---------- ---------- ---------- -----
+Outfal           110.00     FREE                  NO
 
 [STORAGE]
 ;;Name           Elev       MaxDepth   InitDepth  Shape      Curve/Params
 ;;-------------- ---------- ---------- ---------- ---------- ----------
-Conflu           110.00     0          1.00       FUNCTIONAL 100.00 0          0
+Conflu           110.00     10.00      1.00       FUNCTIONAL 100.00 0          0
 
 [CONDUITS]
 ;;Name           From             To               Length     Roughness  InOffset   OutOffset  InitFlow   MaxFlow
 ;;-------------- ---------------- ---------------- ---------- ---------- ---------- ---------- ---------- ----------
-205              ?                ?                50.00      0.0140     100.00     99.00      0          0
+205              Inlet1           Conflu           50.00      0.0140     100.00     99.00      0          0
 MIDCON           Conflu           Mid              50.00      0.0140     99.00      98.00      0          0
-207              ?                ?                50.00      0.0140     100.00     99.00      0          0
-209              ?                ?                50.00      0.0140     100.00     99.00      0          0
+207              Inlet2           Conflu           50.00      0.0140     100.00     99.00      0          0
+209              Inlet3           Conflu           50.00      0.0140     100.00     99.00      0          0
 ENDCON           Mid              Outfal           50.00      0.0140     98.00      97.00      0          0
 
 [XSECTIONS]

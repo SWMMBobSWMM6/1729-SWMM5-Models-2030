@@ -18,23 +18,41 @@ ROUTING_STEP         00:00:30
 VARIABLE_STEP        0.75
 INERTIAL_DAMPING     PARTIAL
 NORMAL_FLOW_LIMITED  BOTH
+START_DATE           01/01/2001
+START_TIME           00:00:00
+REPORT_START_DATE    01/01/2001
+REPORT_START_TIME    00:00:00
+END_DATE             01/02/2001
+END_TIME             00:00:00
+SWEEP_START          01/01
+SWEEP_END            12/31
+DRY_DAYS             0
+REPORT_STEP          00:15:00
+WET_STEP             00:05:00
+DRY_STEP             01:00:00
 
 [JUNCTIONS]
 ;;Name           Elev       MaxDepth   InitDepth  SurDepth   Aponded
 ;;-------------- ---------- ---------- ---------- ---------- ----------
-0                100.00     0          0          0          0
-0                99.00      0          0          0          0
-0                98.50      0          0          0          0
-0                98.00      0          0          0          0
-0                98.00      0          0          0          0
+MH1              100.00     0          0          0          0
+MH3              98.50      0          0          0          0
+MH4              98.00      0          0          0          0
+MH5_Out          98.00      0          0          0          0
+streeta          97.00      0          0          0          0
+street2          96.50      0          0          0          0
+
+[OUTFALLS]
+;;Name           Elev       Type       Stage      Gated
+;;-------------- ---------- ---------- ---------- -----
+MH2              99.00      FREE                  NO
 
 [CONDUITS]
 ;;Name           From             To               Length     Roughness  InOffset   OutOffset  InitFlow   MaxFlow
 ;;-------------- ---------------- ---------------- ---------- ---------- ---------- ---------- ---------- ----------
-pipea            streeta          0                100.00     0.0130     97.00      96.50      0          0
-pipe2            street2          0                100.00     0.0130     96.50      96.00      0          0
-224.1            0                0                100.00     0.0130     96.00      95.50      0          0
-220              0                0                100.00     0.0130     95.50      95.00      0          0
+pipea            streeta          MH2              100.00     0.0130     97.00      96.50      0          0
+pipe2            street2          MH3              100.00     0.0130     96.50      96.00      0          0
+224.1            MH3              MH4              100.00     0.0130     96.00      95.50      0          0
+220              MH4              MH5_Out          100.00     0.0130     95.50      95.00      0          0
 
 [XSECTIONS]
 ;;Link           Shape        Geom1      Geom2      Geom3      Geom4      Barrels
@@ -55,11 +73,11 @@ pipe2            0          0          0          NO
 [COORDINATES]
 ;;Node           X-Coord            Y-Coord
 ;;-------------- ------------------ ------------------
-0                -600366.46         208468.04         
-0                -600285.96         208466.85         
-0                -600184.83         208449.02         
-0                -600147.58         208553.89         
-0                -600120.30         208636.33         
+MH1              -600366.46         208468.04         
+MH2              -600285.96         208466.85         
+MH3              -600184.83         208449.02         
+MH4              -600147.58         208553.89         
+MH5_Out          -600120.30         208636.33         
 
 [MAP]
 DIMENSIONS -600366.46 208449.02 -600120.30 208636.33

@@ -2,67 +2,289 @@
   EPA STORM WATER MANAGEMENT MODEL - VERSION 5.2 (Build 5.2.4)
   ------------------------------------------------------------
 
+  AMAZON CREEK BASIN STORM DRAINAGE MODEL - FUTURE LAND USE 
   
-  ERROR 209: undefined object AMHW020Crd at line 48 of [CONDUIT] section:
-  AMHW020C         AMHW020Crd       65295            593.00     0.0150     556.40     526.20     0          0
-
+  ****************
+  Analysis Options
+  ****************
+  Flow Units ............... CFS
+  Process Models:
+    Rainfall/Runoff ........ NO
+    RDII ................... NO
+    Snowmelt ............... NO
+    Groundwater ............ NO
+    Flow Routing ........... YES
+    Ponding Allowed ........ NO
+    Water Quality .......... NO
+  Flow Routing Method ...... DYNWAVE
+  Surcharge Method ......... EXTRAN
+  Starting Date ............ 01/01/2001 00:00:00
+  Ending Date .............. 01/02/2001 00:00:00
+  Antecedent Dry Days ...... 0.0
+  Report Time Step ......... 00:15:00
+  Routing Time Step ........ 15.00 sec
+  Variable Time Step ....... YES
+  Maximum Trials ........... 50
+  Number of Threads ........ 1
+  Head Tolerance ........... 0.003300 ft
   
-  ERROR 209: undefined object AMHW020Brd at line 49 of [CONDUIT] section:
-  AMHW020B         AMHW020Brd       66776            353.00     0.0150     526.20     516.10     0          0
-
   
-  ERROR 209: undefined object AMHW020Ard at line 50 of [CONDUIT] section:
-  AMHW020A         AMHW020Ard       65344            174.00     0.0150     514.80     510.60     0          0
-
+  **************************        Volume        Volume
+  Flow Routing Continuity        acre-feet      10^6 gal
+  **************************     ---------     ---------
+  Dry Weather Inflow .......         0.000         0.000
+  Wet Weather Inflow .......         0.000         0.000
+  Groundwater Inflow .......         0.000         0.000
+  RDII Inflow ..............         0.000         0.000
+  External Inflow ..........        21.817         7.109
+  External Outflow .........         0.000         0.000
+  Flooding Loss ............        20.934         6.822
+  Evaporation Loss .........         0.000         0.000
+  Exfiltration Loss ........         0.000         0.000
+  Initial Stored Volume ....         0.000         0.000
+  Final Stored Volume ......         0.324         0.106
+  Continuity Error (%) .....         2.562
   
-  ERROR 209: undefined object AMHW010Brd at line 51 of [CONDUIT] section:
-  AMHW010B         AMHW010Brd       66656            352.00     0.0160     510.50     504.70     0          0
-
   
-  ERROR 209: undefined object AMHW010Ard at line 52 of [CONDUIT] section:
-  AMHW010A         AMHW010Ard       66656            79.00      0.0180     510.70     506.60     0          0
-
+  *************************
+  Highest Continuity Errors
+  *************************
+  Node AMHW020Ard (97.70%)
   
-  ERROR 209: undefined object Martinrd at line 53 of [CONDUIT] section:
-  Martin           Martinrd         65379            45.00      0.0220     504.80     502.40     0          0
-
   
-  ERROR 209: undefined object Snellrd at line 54 of [CONDUIT] section:
-  Snell            Snellrd          65398            36.80      0.0340     467.00     467.00     0          0
-
+  ***************************
+  Time-Step Critical Elements
+  ***************************
+  None
   
-  ERROR 209: undefined object AMUP040Drd at line 58 of [CONDUIT] section:
-  AMUP040D         AMUP040Drd       50602            844.60     0.0150     542.40     510.00     0          0
-
   
-  ERROR 209: undefined object AMUP040A#2 at line 60 of [CONDUIT] section:
-  AMUP040A#1       AMUP040A#2       AMUP040Ard       400.90     0.0150     461.70     457.00     0          0
-
+  ********************************
+  Highest Flow Instability Indexes
+  ********************************
+  Link AMHW020A (2)
   
-  ERROR 209: undefined object canyon-rd at line 61 of [CONDUIT] section:
-  canyon           canyon-rd        Node_1524864     50.00      0.0160     511.50     510.50     0          0
-
   
-  ERROR 209: undefined object ? at line 63 of [CONDUIT] section:
-  MainUP030b       ?                Node_1526868     1700.00    0          495.70     467.00     0          0
-
+  *********************************
+  Most Frequent Nonconverging Nodes
+  *********************************
+  Node 65295 (0.12%)
+  Node AMHW020Ard (0.10%)
+  Node 65382 (0.09%)
+  Node 65344 (0.07%)
   
-  ERROR 209: undefined object 0 at line 76 of [XSECT] section:
-  MainUP020        IRREGULAR    0          0          0          0          1
-
   
-  ERROR 209: undefined object 0 at line 77 of [XSECT] section:
-  MainUP050        IRREGULAR    0          0          0          0          1
-
+  *************************
+  Routing Time Step Summary
+  *************************
+  Minimum Time Step           :    14.50 sec
+  Average Time Step           :    15.00 sec
+  Maximum Time Step           :    15.00 sec
+  % of Time in Steady State   :     0.00
+  Average Iterations per Step :     2.07
+  % of Steps Not Converging   :     0.12
+  Time Step Frequencies       :
+     15.000 -  7.597 sec      :   100.00 %
+      7.597 -  3.848 sec      :     0.00 %
+      3.848 -  1.949 sec      :     0.00 %
+      1.949 -  0.987 sec      :     0.00 %
+      0.987 -  0.500 sec      :     0.00 %
   
-  ERROR 209: undefined object 0 at line 83 of [XSECT] section:
-  MainUP30a        IRREGULAR    0          0          0          0          1
-
   
-  ERROR 209: undefined object 0 at line 84 of [XSECT] section:
-  MainUP030b       IRREGULAR    0          0          0          0          1
+  ******************
+  Node Depth Summary
+  ******************
+  
+  ---------------------------------------------------------------------------------
+                                 Average  Maximum  Maximum  Time of Max    Reported
+                                   Depth    Depth      HGL   Occurrence   Max Depth
+  Node                 Type         Feet     Feet     Feet  days hr:min        Feet
+  ---------------------------------------------------------------------------------
+  65392                JUNCTION     0.00     0.00   562.40     0  00:00        0.00
+  66776                JUNCTION     0.00     0.00   524.50     0  00:00        0.00
+  65344                JUNCTION   506.25   511.05  1032.15     0  01:47      511.04
+  66656                JUNCTION     0.00     0.00   520.80     0  00:00        0.00
+  67175                JUNCTION     0.00     0.00   520.80     0  00:00        0.00
+  65379                JUNCTION     0.00     0.00   518.80     0  00:00        0.00
+  65396                JUNCTION     0.00     0.00   476.40     0  00:00        0.00
+  65398                JUNCTION     0.00     0.00   475.14     0  00:00        0.00
+  65370                JUNCTION     0.00     0.00   465.10     0  00:00        0.00
+  65310                JUNCTION     0.00     0.00   478.80     0  00:00        0.00
+  50602                JUNCTION     0.00     0.00   519.00     0  00:00        0.00
+  50739                JUNCTION     0.00     0.00   551.00     0  00:00        0.00
+  67978                JUNCTION     0.00     0.00   460.80     0  00:00        0.00
+  65533                JUNCTION     0.00     0.00   474.00     0  00:00        0.00
+  65387                JUNCTION     0.00     0.00   521.50     0  00:00        0.00
+  65382                JUNCTION   483.52   500.70  1007.70     0  02:40      500.70
+  AMHW020Crd           JUNCTION     0.00     0.00   556.40     0  00:00        0.00
+  AMHW020Brd           JUNCTION     0.00     0.00   526.20     0  00:00        0.00
+  AMHW020Ard           JUNCTION   496.72   517.36  1032.16     0  01:42      517.35
+  AMHW010Brd           JUNCTION     0.00     0.00   510.50     0  00:00        0.00
+  AMHW010Ard           JUNCTION     0.00     0.00   510.70     0  00:00        0.00
+  Martinrd             JUNCTION     0.00     0.00   504.80     0  00:00        0.00
+  Snellrd              JUNCTION     0.00     0.00   467.00     0  00:00        0.00
+  AMUP040Drd           JUNCTION     0.00     0.00   542.40     0  00:00        0.00
+  AMUP040A#2           JUNCTION     0.00     0.00   461.70     0  00:00        0.00
+  AMUP040Ard           JUNCTION     0.00     0.00   457.00     0  00:00        0.00
+  canyon-rd            JUNCTION     0.00     0.00   511.50     0  00:00        0.00
+  Node_1524864         JUNCTION     0.00     0.00   510.50     0  00:00        0.00
+  65295                OUTFALL      0.00     0.00   534.80     0  00:00        0.00
+  
+  
+  *******************
+  Node Inflow Summary
+  *******************
+  
+  -------------------------------------------------------------------------------------------------
+                                  Maximum  Maximum                  Lateral       Total        Flow
+                                  Lateral    Total  Time of Max      Inflow      Inflow     Balance
+                                   Inflow   Inflow   Occurrence      Volume      Volume       Error
+  Node                 Type           CFS      CFS  days hr:min    10^6 gal    10^6 gal     Percent
+  -------------------------------------------------------------------------------------------------
+  65392                JUNCTION      4.00     4.00     0  00:00        2.59        2.59       0.000
+  66776                JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  65344                JUNCTION      4.00     4.73     0  01:36        2.59        2.59       1.872
+  66656                JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  67175                JUNCTION      3.00     3.00     0  00:00        1.94        1.94       0.000
+  65379                JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  65396                JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  65398                JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  65370                JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  65310                JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  50602                JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  50739                JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  67978                JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  65533                JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  65387                JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  65382                JUNCTION      0.00     5.19     0  00:27           0        2.48       0.000
+  AMHW020Crd           JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  AMHW020Brd           JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  AMHW020Ard           JUNCTION      0.00     2.90     0  00:28           0      0.0548    4245.451
+  AMHW010Brd           JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  AMHW010Ard           JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  Martinrd             JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  Snellrd              JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  AMUP040Drd           JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  AMUP040A#2           JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  AMUP040Ard           JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  canyon-rd            JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  Node_1524864         JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  65295                OUTFALL       0.00     0.00     0  00:00           0           0       0.000 gal
+  
+  
+  **********************
+  Node Surcharge Summary
+  **********************
+  
+  Surcharging occurs when water rises above the top of the highest conduit.
+  ---------------------------------------------------------------------
+                                               Max. Height   Min. Depth
+                                   Hours       Above Crown    Below Rim
+  Node                 Type      Surcharged           Feet         Feet
+  ---------------------------------------------------------------------
+  65392                JUNCTION       24.00          0.000        0.000
+  67175                JUNCTION       24.00          0.000        0.000
+  65396                JUNCTION       24.00          0.000        0.000
+  50739                JUNCTION       24.00          0.000        0.000
+  65387                JUNCTION       24.00          0.000        0.000
+  65382                JUNCTION       21.33          0.000        0.000
+  
+  
+  *********************
+  Node Flooding Summary
+  *********************
+  
+  Flooding refers to all water that overflows a node, whether it ponds or not.
+  --------------------------------------------------------------------------
+                                                             Total   Maximum
+                                 Maximum   Time of Max       Flood    Ponded
+                        Hours       Rate    Occurrence      Volume     Depth
+  Node                 Flooded       CFS   days hr:min    10^6 gal      Feet
+  --------------------------------------------------------------------------
+  65392                  24.00      4.00      0  00:00       2.585     0.000
+  67175                  24.00      3.00      0  00:00       1.939     0.000
+  65382                  21.33      4.00      0  02:41       2.298     0.000
+  
+  
+  ***********************
+  Outfall Loading Summary
+  ***********************
+  
+  -----------------------------------------------------------
+                         Flow       Avg       Max       Total
+                         Freq      Flow      Flow      Volume
+  Outfall Node           Pcnt       CFS       CFS    10^6 gal
+  -----------------------------------------------------------
+  65295                  0.00      0.00      0.00       0.000
+  -----------------------------------------------------------
+  System                 0.00      0.00      0.00       0.000
+  
+  
+  ********************
+  Link Flow Summary
+  ********************
+  
+  -----------------------------------------------------------------------------
+                                 Maximum  Time of Max   Maximum    Max/    Max/
+                                  |Flow|   Occurrence   |Veloc|    Full    Full
+  Link                 Type          CFS  days hr:min    ft/sec    Flow   Depth
+  -----------------------------------------------------------------------------
+  AMHW020C             CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  AMHW020B             CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  AMHW020A             CONDUIT      2.90     0  00:28      7.06    0.02    0.37
+  AMHW010B             CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  AMHW010A             CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  Martin               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  Snell                CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  MainUP020            CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  MainUP050            CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  UP040C-P             CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  AMUP040D             CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  UP040B-P             CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  AMUP040A#1           CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  canyon               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  MainUP30a            CONDUIT      0.00     0  00:00      0.00    0.00    0.50
+  kinney               CONDUIT      5.19     0  00:27     22.35    0.02    0.55
+  
+  
+  ***************************
+  Flow Classification Summary
+  ***************************
+  
+  -------------------------------------------------------------------------------------
+                      Adjusted    ---------- Fraction of Time in Flow Class ---------- 
+                       /Actual         Up    Down  Sub   Sup   Up    Down  Norm  Inlet 
+  Conduit               Length    Dry  Dry   Dry   Crit  Crit  Crit  Crit  Ltd   Ctrl  
+  -------------------------------------------------------------------------------------
+  AMHW020C                1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  AMHW020B                1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  AMHW020A                1.00   0.02  0.00  0.00  0.94  0.00  0.00  0.04  0.00  0.00
+  AMHW010B                1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  AMHW010A                1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  Martin                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  Snell                   1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  MainUP020               1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  MainUP050               1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  UP040C-P                1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  AMUP040D                1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  UP040B-P                1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  AMUP040A#1              1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  canyon                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  MainUP30a               1.00   0.05  0.95  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  kinney                  1.00   0.02  0.00  0.00  0.95  0.00  0.00  0.03  0.95  0.00
+  
+  
+  *************************
+  Conduit Surcharge Summary
+  *************************
+  
+  ----------------------------------------------------------------------------
+                                                           Hours        Hours 
+                         --------- Hours Full --------   Above Full   Capacity
+  Conduit                Both Ends  Upstream  Dnstream   Normal Flow   Limited
+  ----------------------------------------------------------------------------
+  kinney                      0.01      0.01     21.33      0.01         0.01
+  
 
-
-  Analysis begun on:  Mon Jul 13 08:03:48 2026
-  Analysis ended on:  Mon Jul 13 08:03:48 2026
+  Analysis begun on:  Sun Jul 19 15:11:57 2026
+  Analysis ended on:  Sun Jul 19 15:11:57 2026
   Total elapsed time: < 1 sec

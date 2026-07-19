@@ -20,6 +20,18 @@ INERTIAL_DAMPING     PARTIAL
 NORMAL_FLOW_LIMITED  BOTH
 MAX_TRIALS           50
 HEAD_TOLERANCE       0.0033
+START_DATE           01/01/2001
+START_TIME           00:00:00
+REPORT_START_DATE    01/01/2001
+REPORT_START_TIME    00:00:00
+END_DATE             01/02/2001
+END_TIME             00:00:00
+SWEEP_START          01/01
+SWEEP_END            12/31
+DRY_DAYS             0
+REPORT_STEP          00:15:00
+WET_STEP             00:05:00
+DRY_STEP             01:00:00
 
 [JUNCTIONS]
 ;;Name           Elev       MaxDepth   InitDepth  SurDepth   Aponded
@@ -40,21 +52,31 @@ HEAD_TOLERANCE       0.0033
 2800             63.28      0          0          0          0
 2300             85.00      0          0          0          0
 1000a            143.00     0          0          0          0
+putw1            52.84      0          0          0          0
+APW1             55.24      0          0          0          0
+MAGW1            59.14      0          0          0          0
+NEW30"           58.24      0          0          0          0
+Weir1            0          0          0          0          0
+Weir2            0          0          0          0          0
+
+[OUTFALLS]
+;;Name           Elev       Type       Stage      Gated
+;;-------------- ---------- ---------- ---------- -----
+1500             103.14     FREE                  NO
 
 [STORAGE]
 ;;Name           Elev       MaxDepth   InitDepth  Shape      Curve/Params
 ;;-------------- ---------- ---------- ---------- ---------- ----------
-1000             143.00     -8.85      0          FUNCTIONAL 0 0          0
-1300             123.14     -6.44      0          FUNCTIONAL 0 0          0
-1500             103.14     -3.14      0.50       FUNCTIONAL 0 0          0
-1800             90.14      -6.14      0          FUNCTIONAL 0 0          0
-2200             71.14      -2.79      0          FUNCTIONAL 0 0          0
-2250             70.14      -1.85      0          FUNCTIONAL 0 0          0
-2400             70.14      -3.40      0          FUNCTIONAL 0 0          0
-2900             59.14      -0.49      0          FUNCTIONAL 0 0          0
-3000             59.14      -3.14      0          FUNCTIONAL 0 0          0
-54               82.00      0          0          FUNCTIONAL 0 0          0
-1500a            100.00     0          0          FUNCTIONAL 50.00 0          0
+1000             143.00     10.00      0          FUNCTIONAL 1000.00 0          0
+1300             123.14     10.00      0          FUNCTIONAL 1000.00 0          0
+1800             90.14      10.00      0          FUNCTIONAL 1000.00 0          0
+2200             71.14      10.00      0          FUNCTIONAL 1000.00 0          0
+2250             70.14      10.00      0          FUNCTIONAL 1000.00 0          0
+2400             70.14      10.00      0          FUNCTIONAL 1000.00 0          0
+2900             59.14      10.00      0          FUNCTIONAL 1000.00 0          0
+3000             59.14      10.00      0          FUNCTIONAL 1000.00 0          0
+54               82.00      10.00      0          FUNCTIONAL 1000.00 0          0
+1500a            100.00     10.00      0          FUNCTIONAL 50.00 0          0
 
 [CONDUITS]
 ;;Name           From             To               Length     Roughness  InOffset   OutOffset  InitFlow   MaxFlow
@@ -79,6 +101,7 @@ HEAD_TOLERANCE       0.0033
 2829             2800             2900             230.00     0.0140     50.04      47.74      0          0
 2930             2900             3000             33.00      0.0140     47.74      46.94      0          0
 2322             2300             2200             600.00     0.0140     78.14      59.14      0          0
+putc1            putw1            2750             55.00      0.0120     52.84      50.94      0          0
 APC1             APW1             2450             350.00     0.0120     55.24      53.54      0          0
 MAGC1            MAGW1            NEW30"           40.00      0.0120     59.14      58.24      0          0
 55               54               1900             100.00     0.0300     81.00      80.00      0          0
@@ -89,40 +112,35 @@ MAGC1            MAGW1            NEW30"           40.00      0.0120     59.14  
 weir1            1000             1000a            SIDE       0          0.650      NO       0
 Orifice1         Weir1            Weir2            SIDE       0          0.650      NO       0
 
-[WEIRS]
-;;Name           From             To               Type       CrestHt    Qcoeff     Gated    EndCon   EndCoeff   Surcharge
-;;-------------- ---------------- ---------------- ---------- ---------- ---------- -------- -------- ---------- ----------
-putc1            putw1            2750             TRANSVERSE 0          1.840      NO       0        0          YES
-
 [XSECTIONS]
 ;;Link           Shape        Geom1      Geom2      Geom3      Geom4      Barrels
 ;;-------------- ------------ ---------- ---------- ---------- ---------- ----------
-1011             IRREGULAR    4.00       0          0          0          1
-1112             IRREGULAR    6.00       0          0          0          1
-1213             IRREGULAR    5.50       0          0          0          1
-1314             IRREGULAR    4.00       0          0          0          1
-1415             IRREGULAR    4.00       0          0          0          1
-1516             IRREGULAR    6.00       0          0          0          1
-1617             IRREGULAR    6.00       0          0          0          1
-1718             IRREGULAR    4.00       0          0          0          1
-1819             IRREGULAR    5.00       0          0          0          1
-1920             IRREGULAR    4.20       0          0          0          1
-2021             IRREGULAR    5.30       0          0          0          1
-2122             IRREGULAR    4.70       0          0          0          1
-2224             IRREGULAR    8.50       0          0          0          1
-2425             IRREGULAR    5.90       0          0          0          1
-2526             IRREGULAR    6.70       0          0          0          1
-2627             IRREGULAR    10.50      0          0          0          1
-2728             IRREGULAR    13.20      0          0          0          1
-2829             IRREGULAR    10.90      0          0          0          1
-2930             IRREGULAR    7.80       0          0          0          1
-2322             IRREGULAR    6.00       3.00       0          0          1
+1011             TRAPEZOIDAL  4.00       10.00      2          2          1
+1112             TRAPEZOIDAL  6.00       10.00      2          2          1
+1213             TRAPEZOIDAL  5.50       10.00      2          2          1
+1314             TRAPEZOIDAL  4.00       10.00      2          2          1
+1415             TRAPEZOIDAL  4.00       10.00      2          2          1
+1516             TRAPEZOIDAL  6.00       10.00      2          2          1
+1617             TRAPEZOIDAL  6.00       10.00      2          2          1
+1718             TRAPEZOIDAL  4.00       10.00      2          2          1
+1819             TRAPEZOIDAL  5.00       10.00      2          2          1
+1920             TRAPEZOIDAL  4.20       10.00      2          2          1
+2021             TRAPEZOIDAL  5.30       10.00      2          2          1
+2122             TRAPEZOIDAL  4.70       10.00      2          2          1
+2224             TRAPEZOIDAL  8.50       10.00      2          2          1
+2425             TRAPEZOIDAL  5.90       10.00      2          2          1
+2526             TRAPEZOIDAL  6.70       10.00      2          2          1
+2627             TRAPEZOIDAL  10.50      10.00      2          2          1
+2728             TRAPEZOIDAL  13.20      10.00      2          2          1
+2829             TRAPEZOIDAL  10.90      10.00      2          2          1
+2930             TRAPEZOIDAL  7.80       10.00      2          2          1
+2322             TRAPEZOIDAL  6.00       3.00       2          2          1
+putc1            CIRCULAR     6.00       0          0          0          1
 APC1             CIRCULAR     5.00       0          0          0          1
 MAGC1            CIRCULAR     3.00       0          0          0          1
-55               TRAPEZOIDAL  1.00       50.00      0          0          1
-weir1            RECT_CLOSED  0          0          0          0          
-Orifice1         RECT_CLOSED  0          0          0          0          
-putc1            RECT_OPEN    0          0          0          0          
+55               TRAPEZOIDAL  1.00       50.00      1          1          1
+weir1            RECT_CLOSED  0.59       0.59       0          0
+Orifice1         RECT_CLOSED  1.77       1.77       0          0
 
 [LOSSES]
 ;;Link           Inlet      Outlet     Average    Flap Gate
@@ -147,6 +165,7 @@ putc1            RECT_OPEN    0          0          0          0
 2829             0          0          0          NO
 2930             0          0          0          NO
 2322             0          0          0          NO
+putc1            0          0          0          NO
 APC1             0          0          0          NO
 MAGC1            0          0          0          NO
 55               0          0          0          NO

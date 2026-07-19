@@ -14,54 +14,73 @@ LINK_OFFSETS         DEPTH
 MIN_SLOPE            0.0
 ALLOW_PONDING        NO
 SKIP_STEADY_STATE    NO
-ROUTING_STEP         00:00:300
+ROUTING_STEP         00:05:00
 VARIABLE_STEP        0.75
 INERTIAL_DAMPING     PARTIAL
 NORMAL_FLOW_LIMITED  BOTH
 MAX_TRIALS           50
 HEAD_TOLERANCE       0.0033
+START_DATE           01/01/2001
+START_TIME           00:00:00
+REPORT_START_DATE    01/01/2001
+REPORT_START_TIME    00:00:00
+END_DATE             01/02/2001
+END_TIME             00:00:00
+SWEEP_START          01/01
+SWEEP_END            12/31
+DRY_DAYS             0
+REPORT_STEP          00:15:00
+WET_STEP             00:05:00
+DRY_STEP             01:00:00
 
 [JUNCTIONS]
 ;;Name           Elev       MaxDepth   InitDepth  SurDepth   Aponded
 ;;-------------- ---------- ---------- ---------- ---------- ----------
 LL-A1            1000.00    0          0          0          0
 Culv@12          1000.00    0          0          0          0
+Hxw5C2           906.90     0          0          0          0
+
+[OUTFALLS]
+;;Name           Elev       Type       Stage      Gated
+;;-------------- ---------- ---------- ---------- -----
+LL-A5            1000.00    FREE                  NO
 
 [STORAGE]
 ;;Name           Elev       MaxDepth   InitDepth  Shape      Curve/Params
 ;;-------------- ---------- ---------- ---------- ---------- ----------
-LL-A5            1000.00    0          1.00       FUNCTIONAL 0 0          0
-LL-A4            1000.00    0          8.20       FUNCTIONAL 0 0          0
-LL-A2            1000.00    0          0          FUNCTIONAL 0 0          0
-LL-A3            1000.00    0          6.70       FUNCTIONAL 0 0          0
+LL-A4            1000.00    10.00      8.20       FUNCTIONAL 1000.00 0          0
+LL-A2            1000.00    10.00      0          FUNCTIONAL 1000.00 0          0
+LL-A3            1000.00    10.00      6.70       FUNCTIONAL 1000.00 0          0
 
 [CONDUITS]
 ;;Name           From             To               Length     Roughness  InOffset   OutOffset  InitFlow   MaxFlow
 ;;-------------- ---------------- ---------------- ---------- ---------- ---------- ---------- ---------- ----------
-692              ?                ?                0          0          0          0          0          0
+692              LL-A1            LL-A4            100.00     0.0130     0          0          0          0
 LL-A2C           LL-A2            LL-A4            384.00     0.0130     902.74     901.84     0          0
+Hwy5C1           Hxw5C2           LL-A4            135.00     0.0130     906.90     904.20     0          0
+CSAH12c          Culv@12          LL-A5            70.00      0.0120     889.00     888.80     0          0
 
 [WEIRS]
 ;;Name           From             To               Type       CrestHt    Qcoeff     Gated    EndCon   EndCoeff   Surcharge
 ;;-------------- ---------------- ---------------- ---------- ---------- ---------- -------- -------- ---------- ----------
-Hwy5C1           Hxw5C2           LL-A4            TRANSVERSE 905.00     1.840      NO       0        0          YES
 CSAH12w1         LL-A4            Culv@12          TRANSVERSE 889.00     1.840      NO       0        0          YES
-CSAH12c          Culv@12          LL-A5            TRANSVERSE 889.00     1.840      NO       0        0          YES
 
 [XSECTIONS]
 ;;Link           Shape        Geom1      Geom2      Geom3      Geom4      Barrels
 ;;-------------- ------------ ---------- ---------- ---------- ---------- ----------
-692              CIRCULAR     0          0          0          0          1
+692              CIRCULAR     1.00       0          0          0          1
 LL-A2C           CIRCULAR     2.50       0          0          0          1
-Hwy5C1           RECT_OPEN    0          12.00      0          0          
-CSAH12w1         RECT_OPEN    0          1.00       0          0          
-CSAH12c          RECT_OPEN    0          1.00       0          0          
+Hwy5C1           CIRCULAR     3.00       0          0          0          1
+CSAH12c          CIRCULAR     2.50       0          0          0          2
+CSAH12w1         RECT_OPEN    1.00       1.00       0          0
 
 [LOSSES]
 ;;Link           Inlet      Outlet     Average    Flap Gate
 ;;-------------- ---------- ---------- ---------- ----------
 692              0          0          0          NO
 LL-A2C           0          0          0          NO
+Hwy5C1           0          0          0          NO
+CSAH12c          0          0          0          NO
 
 [COORDINATES]
 ;;Node           X-Coord            Y-Coord

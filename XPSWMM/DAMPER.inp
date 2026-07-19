@@ -14,22 +14,38 @@ LINK_OFFSETS         DEPTH
 MIN_SLOPE            0.0
 ALLOW_PONDING        NO
 SKIP_STEADY_STATE    NO
-ROUTING_STEP         00:00:60
+ROUTING_STEP         00:01:00
 VARIABLE_STEP        0.75
 INERTIAL_DAMPING     PARTIAL
 NORMAL_FLOW_LIMITED  BOTH
 MAX_TRIALS           50
 HEAD_TOLERANCE       .0001
+START_DATE           01/01/2001
+START_TIME           00:00:00
+REPORT_START_DATE    01/01/2001
+REPORT_START_TIME    00:00:00
+END_DATE             01/02/2001
+END_TIME             00:00:00
+SWEEP_START          01/01
+SWEEP_END            12/31
+DRY_DAYS             0
+REPORT_STEP          00:15:00
+WET_STEP             00:05:00
+DRY_STEP             01:00:00
 
 [JUNCTIONS]
 ;;Name           Elev       MaxDepth   InitDepth  SurDepth   Aponded
 ;;-------------- ---------- ---------- ---------- ---------- ----------
 mh               138.00     0          0          0          0
-mh               135.00     0          0          0          0
-mh               155.00     0          0          0          0
-mh               125.00     0          0          0          0
+mh_2             135.00     0          0          0          0
+mh_3             155.00     0          0          0          0
+mh_4             125.00     0          0          0          0
 202              200.00     0          0          0          0
-204              200.00     0          0          0          0
+
+[OUTFALLS]
+;;Name           Elev       Type       Stage      Gated
+;;-------------- ---------- ---------- ---------- -----
+204              200.00     FREE                  NO
 
 [CONDUITS]
 ;;Name           From             To               Length     Roughness  InOffset   OutOffset  InitFlow   MaxFlow
@@ -37,12 +53,12 @@ mh               125.00     0          0          0          0
 la1              mh               mh               1800.00    0.0150     124.60     118.30     0          0
 la2              mh               mh               2075.00    0.0150     118.30     114.50     0          0
 la3              mh               mh               5000.00    0.0340     112.30     102.80     0          0
-205              ?                ?                200.00     0          102.80     102.50     0          0
+205              202              204              200.00     0.0130     102.80     102.50     0          0
 
 [WEIRS]
 ;;Name           From             To               Type       CrestHt    Qcoeff     Gated    EndCon   EndCoeff   Surcharge
 ;;-------------- ---------------- ---------------- ---------- ---------- ---------- -------- -------- ---------- ----------
-203              ?                ?                TRANSVERSE 102.90     1.840      NO       0        0          YES
+203              mh               202              TRANSVERSE 102.90     1.840      NO       0        0          YES
 
 [XSECTIONS]
 ;;Link           Shape        Geom1      Geom2      Geom3      Geom4      Barrels
@@ -50,8 +66,8 @@ la3              mh               mh               5000.00    0.0340     112.30 
 la1              CIRCULAR     4.00       0          0          0          1
 la2              CIRCULAR     4.50       0          0          0          1
 la3              CIRCULAR     5.00       0          0          0          1
-205              CIRCULAR     0          0          0          0          1
-203              RECT_OPEN    0          1.50       0          0          
+205              CIRCULAR     1.00       0          0          0          1
+203              RECT_OPEN    1.00       1.50       0          0
 
 [LOSSES]
 ;;Link           Inlet      Outlet     Average    Flap Gate
@@ -65,9 +81,9 @@ la3              0          0          0          NO
 ;;Node           X-Coord            Y-Coord
 ;;-------------- ------------------ ------------------
 mh               32.64              70.48             
-mh               32.63              106.39            
-mh               72.12              106.39            
-mh               104.07             106.90            
+mh_2             32.63              106.39            
+mh_3             72.12              106.39            
+mh_4             104.07             106.90            
 202              104.08             137.72            
 204              104.57             176.92            
 

@@ -20,11 +20,23 @@ INERTIAL_DAMPING     PARTIAL
 NORMAL_FLOW_LIMITED  BOTH
 MAX_TRIALS           100
 HEAD_TOLERANCE       .0001
+START_DATE           01/01/2001
+START_TIME           00:00:00
+REPORT_START_DATE    01/01/2001
+REPORT_START_TIME    00:00:00
+END_DATE             01/02/2001
+END_TIME             00:00:00
+SWEEP_START          01/01
+SWEEP_END            12/31
+DRY_DAYS             0
+REPORT_STEP          00:15:00
+WET_STEP             00:05:00
+DRY_STEP             01:00:00
 
 [JUNCTIONS]
 ;;Name           Elev       MaxDepth   InitDepth  SurDepth   Aponded
 ;;-------------- ---------- ---------- ---------- ---------- ----------
-PS8-N1           3.96       0          4.64       0          0
+PS8-N1           3.96       0          0          0          0
 PS8-N10          9.14       0          0          0          0
 PS8-N20          6.60       0          0          0          0
 PS8-N30          5.55       0          0          0          0
@@ -37,7 +49,7 @@ PS8-N90          7.00       0          0          0          0
 PS8-N100         4.40       0          0          0          0
 PS8-N110         4.40       0          0          0          0
 PS8-N120         4.48       0          0          0          0
-PS7-N1           4.75       0          0.61       0          0
+PS7-N1           4.75       0          0          0          0
 PS7-N10          4.75       0          0          0          0
 PS7-N60          14.90      0          0          0          0
 PS7-N50          13.50      0          0          0          0
@@ -97,7 +109,7 @@ PS7-N410         12.10      0          0          0          0
 PS7-N400         11.00      0          0          0          0
 PS7-N390         10.50      0          0          0          0
 PS7-N380         10.70      0          0          0          0
-PS11A-N20        4.90       0          0.46       0          0
+PS11A-N20        4.90       0          0          0          0
 PS7-N550         54.10      0          0          0          0
 PS7-N540         52.60      0          0          0          0
 PS7-N530         47.20      0          0          0          0
@@ -105,24 +117,24 @@ PS7-N520         40.50      0          0          0          0
 PS7-N510         37.60      0          0          0          0
 PS7-N500         26.00      0          0          0          0
 PS7-N490         4.70       0          0          0          0
-PS11-N1          3.20       0          1.55       0          0
-PS11-N60         3.87       0          0.46       0          0
+PS11-N1          3.20       0          0          0          0
+PS11-N60         3.87       0          0          0          0
 PS11A-N50        36.00      0          0          0          0
 PS11A-N40        32.92      0          0          0          0
 PS6-N10          3.60       0          0          0          0
 PS6-N20          3.67       0          0          0          0
-PS11-N70         4.20       0          0.46       0          0
+PS11-N70         4.20       0          0          0          0
 PS5-N10          4.20       0          0          0          0
 PS5-N20          4.20       0          0          0          0
-PS11-N80         3.50       0          0.46       0          0
-PS11B-N90        7.20       0          0.46       0          0
+PS11-N80         3.50       0          0          0          0
+PS11B-N90        7.20       0          0          0          0
 PS11B-N130       44.40      0          0          0          0
 PS11B-N120       43.40      0          0          0          0
 PS11B-N110       31.50      0          0          0          0
 PS11B-N100       26.40      0          0          0          0
-PS11-N140        5.00       0          0.46       0          0
-PS11-N150        7.00       0          0.46       0          0
-PS11-N10         4.00       0          0.46       0          0
+PS11-N140        5.00       0          0          0          0
+PS11-N150        7.00       0          0          0          0
+PS11-N10         4.00       0          0          0          0
 PS7-N185         13.60      0          0          0          0
 PS7-N130         6.60       0          0          0          0
 PS7-N210         28.50      0          0          0          0
@@ -133,15 +145,25 @@ PS11-N85         24.38      0          0          0          0
 PS11-N145        20.70      0          0          0          0
 PS8-N15          9.14       0          0          0          0
 276              4.65       0          0          0          0
+PS6LAG           2.96       0          0          0          0
+PS5LAG           3.29       0          0          0          0
+PS7LAG           1.83       0          0          0          0
+DI-PR            1.69       0          0          0          0
+PS8LAG           3.35       0          0          0          0
+PS9LAG           0          0          0          0          0
+
+[OUTFALLS]
+;;Name           Elev       Type       Stage      Gated
+;;-------------- ---------- ---------- ---------- -----
+PS9-N10          4.65       FREE                  NO
 
 [STORAGE]
 ;;Name           Elev       MaxDepth   InitDepth  Shape      Curve/Params
 ;;-------------- ---------- ---------- ---------- ---------- ----------
-PS9-N10          4.65       0          0.20       FUNCTIONAL 1.12 0          0
-PS-N130          4.57       -0.01      0.23       FUNCTIONAL 1.12 0          0
-PS6-N1           3.87       0          0.23       FUNCTIONAL 1.74 0          0
-PS5-N1           4.20       0          0.23       FUNCTIONAL 1.95 0          0
-PS7-N480         3.20       -0.76      1.05       FUNCTIONAL 18.94 0          0
+PS-N130          4.57       10.00      0.23       FUNCTIONAL 1.12 0          0
+PS6-N1           3.87       10.00      0.23       FUNCTIONAL 1.74 0          0
+PS5-N1           4.20       10.00      0.23       FUNCTIONAL 1.95 0          0
+PS7-N480         3.20       10.00      1.05       FUNCTIONAL 18.94 0          0
 
 [CONDUITS]
 ;;Name           From             To               Length     Roughness  InOffset   OutOffset  InitFlow   MaxFlow
@@ -222,7 +244,7 @@ PS8L90           PS8-N90          PS8-N80          139.78     0.0110     5.19   
 7-L510           PS7-N510         PS7-N500         132.89     0.0110     35.05      24.26      0          0
 7-L500           PS7-N500         PS7-N490         180.70     0.0110     24.26      2.68       0          0
 7-L490           PS7-N490         PS7-N480         434.92     0.0110     2.68       1.24       0          0
-7-L480           PS7-N370         PS7-N480         359.70     0.0110     0.71       -0.34      0          0
+7-L480           PS7-N370         PS7-N480         359.70     0.0110     0.71       0          0          0
 11-L60           PS11A-N20        PS11-N60         510.00     0.0150     2.68       2.65       0          0
 11AL50           PS11A-N50        PS11A-N40        154.84     0.0110     34.15      31.70      0          0
 11AL30           PS11A-N30        PS11A-N20        55.00      0.0110     27.13      3.33       0          0
@@ -259,24 +281,25 @@ dummy9           276              PS9-N10          10.00      0.0010     2.50   
 ;;Name           From             To               PumpCurve  Status   Startup    Shutoff
 ;;-------------- ---------------- ---------------- ---------- -------- ---------- ----------
 PS6LEAD          PS6LAG           PS11-N60         PC_PS6LEAD ON       0.76       0.23      
-PS5LEAD          PS5LAG           PS11-N70         PC_PS5LEAD ON       0.09       -0.52     
-PS7LEAD          PS7LAG           PS11-N1          PC_PS7LEAD ON       0.16       -0.69     
-PS8LEAD          PS8LAG           PS7-N1           PC_PS8LEAD ON       0          -0.52     
+PS5LEAD          PS5LAG           PS11-N70         PC_PS5LEAD ON       0.09       0         
+PS7LEAD          PS7LAG           PS11-N1          PC_PS7LEAD ON       0.16       0         
+PS8LEAD          PS8LAG           PS7-N1           PC_PS8LEAD ON       1.00       0         
 PS9LEAD          PS9LAG           PS8-N1           PC_PS9LEAD ON       2.36       2.03      
 
 [CURVES]
 ;;Name           Type       X-Value    Y-Value
 ;;-------------- ---------- ---------- ----------
-PC_PS6LEAD       Pump3      0          0
-;
-PC_PS5LEAD       Pump3      0          0
-;
-PC_PS7LEAD       Pump3      0          0
-;
-PC_PS8LEAD       Pump3      0          0
-;
-PC_PS9LEAD       Pump3      0          0
-;
+;; Synthesized generic pump curves — replace with actual pump data
+PC_PS6LEAD       Pump1      0          5
+PC_PS6LEAD                  10         10
+PC_PS5LEAD       Pump1      0          5
+PC_PS5LEAD                  10         10
+PC_PS7LEAD       Pump1      0          5
+PC_PS7LEAD                  10         10
+PC_PS8LEAD       Pump1      0          5
+PC_PS8LEAD                  10         10
+PC_PS9LEAD       Pump1      0          5
+PC_PS9LEAD                  10         10
 
 [XSECTIONS]
 ;;Link           Shape        Geom1      Geom2      Geom3      Geom4      Barrels

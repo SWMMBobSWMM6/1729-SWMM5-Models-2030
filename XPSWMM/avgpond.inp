@@ -14,10 +14,22 @@ LINK_OFFSETS         DEPTH
 MIN_SLOPE            0.0
 ALLOW_PONDING        NO
 SKIP_STEADY_STATE    NO
-ROUTING_STEP         00:00:300
+ROUTING_STEP         00:05:00
 VARIABLE_STEP        0.75
 INERTIAL_DAMPING     PARTIAL
 NORMAL_FLOW_LIMITED  BOTH
+START_DATE           01/01/2001
+START_TIME           00:00:00
+REPORT_START_DATE    01/01/2001
+REPORT_START_TIME    00:00:00
+END_DATE             01/02/2001
+END_TIME             00:00:00
+SWEEP_START          01/01
+SWEEP_END            12/31
+DRY_DAYS             0
+REPORT_STEP          00:15:00
+WET_STEP             00:05:00
+DRY_STEP             01:00:00
 
 [JUNCTIONS]
 ;;Name           Elev       MaxDepth   InitDepth  SurDepth   Aponded
@@ -30,7 +42,6 @@ NORMAL_FLOW_LIMITED  BOTH
 11               798.50     0          0          0          0
 13               788.10     0          0          0          0
 15               792.00     0          0          0          0
-17               792.00     0          0          0          0
 19               808.20     0          0          0          0
 21               811.00     0          0          0          0
 23               811.50     0          0          0          0
@@ -234,6 +245,14 @@ NORMAL_FLOW_LIMITED  BOTH
 452              796.50     0          0          0          0
 459              0          0          0          0          0
 461              814.00     0          0          0          0
+lincoln_p2       0          0          0          0          0
+const_p2         0          0          0          0          0
+const_p3         0          0          0          0          0
+
+[OUTFALLS]
+;;Name           Elev       Type       Stage      Gated
+;;-------------- ---------- ---------- ---------- -----
+17               792.00     FREE                  NO
 
 [CONDUITS]
 ;;Name           From             To               Length     Roughness  InOffset   OutOffset  InitFlow   MaxFlow
@@ -451,24 +470,25 @@ Union            452              126              920.00     0.0140     791.00 
 446              443              445              PC_446     ON       776.67     774.17    
 453              450              452              PC_453     ON       787.00     785.00    
 462              459              461              PC_462     ON       805.50     802.17    
-lincoln p1       lincoln p2       430              PC_lincoln p1 ON       799.50     796.17    
-const p1         const p2         const p3         PC_const p1 ON       776.75     775.00    
+lincoln_p1       lincoln_p2       430              PC_lincoln_p1 ON       799.50     796.17    
+const_p1         const_p2         const_p3         PC_const_p1 ON       776.75     775.00    
 
 [CURVES]
 ;;Name           Type       X-Value    Y-Value
 ;;-------------- ---------- ---------- ----------
-PC_439           Pump4      0          0
-;
-PC_446           Pump4      0          0
-;
-PC_453           Pump4      0          0
-;
-PC_462           Pump4      0          0
-;
-PC_lincoln p1    Pump4      0          0
-;
-PC_const p1      Pump4      0          0
-;
+;; Synthesized generic pump curves — replace with actual pump data
+PC_439           Pump1      0          5
+PC_439                      10         10
+PC_446           Pump1      0          5
+PC_446                      10         10
+PC_453           Pump1      0          5
+PC_453                      10         10
+PC_462           Pump1      0          5
+PC_462                      10         10
+PC_lincoln_p1    Pump1      0          5
+PC_lincoln_p1               10         10
+PC_const_p1      Pump1      0          5
+PC_const_p1                 10         10
 
 [XSECTIONS]
 ;;Link           Shape        Geom1      Geom2      Geom3      Geom4      Barrels

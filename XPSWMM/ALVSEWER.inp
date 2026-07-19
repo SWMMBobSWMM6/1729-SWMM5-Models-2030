@@ -20,6 +20,18 @@ INERTIAL_DAMPING     NONE
 NORMAL_FLOW_LIMITED  BOTH
 MAX_TRIALS           50
 HEAD_TOLERANCE       .001
+START_DATE           01/01/2001
+START_TIME           00:00:00
+REPORT_START_DATE    01/01/2001
+REPORT_START_TIME    00:00:00
+END_DATE             01/02/2001
+END_TIME             00:00:00
+SWEEP_START          01/01
+SWEEP_END            12/31
+DRY_DAYS             0
+REPORT_STEP          00:15:00
+WET_STEP             00:05:00
+DRY_STEP             01:00:00
 
 [JUNCTIONS]
 ;;Name           Elev       MaxDepth   InitDepth  SurDepth   Aponded
@@ -37,7 +49,6 @@ ra00500          59.13      0          0          0          0
 ra00400          57.00      0          0          0          0
 ra00300          55.47      0          0          0          0
 ra00200          54.86      0          0          0          0
-ra00100          51.29      0          0          0          0
 ah01100          61.72      0          0          0          0
 ah01000          62.12      0          0          0          0
 ah00900          62.30      0          0          0          0
@@ -86,6 +97,11 @@ rp00200          54.00      0          0          0          0
 rp00300          54.86      0          0          0          0
 rz00100          54.00      0          0          0          0
 cd00300          87.60      0          0          0          0
+
+[OUTFALLS]
+;;Name           Elev       Type       Stage      Gated
+;;-------------- ---------- ---------- ---------- -----
+ra00100          51.29      FREE                  NO
 
 [CONDUITS]
 ;;Name           From             To               Length     Roughness  InOffset   OutOffset  InitFlow   MaxFlow
@@ -156,13 +172,14 @@ cd30-cd20        cd00300          cd00200          110.30     0.0140     84.29  
 [PUMPS]
 ;;Name           From             To               PumpCurve  Status   Startup    Shutoff
 ;;-------------- ---------------- ---------------- ---------- -------- ---------- ----------
-rx1rc9           rx00100          rc00900          PC_rx1rc9  ON       0          0         
+rx1rc9           rx00100          rc00900          PC_rx1rc9  ON       1.00       0         
 
 [CURVES]
 ;;Name           Type       X-Value    Y-Value
 ;;-------------- ---------- ---------- ----------
-PC_rx1rc9        Pump2      0          0
-;
+;; Synthesized generic pump curves — replace with actual pump data
+PC_rx1rc9        Pump1      0          5
+PC_rx1rc9                   10         10
 
 [XSECTIONS]
 ;;Link           Shape        Geom1      Geom2      Geom3      Geom4      Barrels

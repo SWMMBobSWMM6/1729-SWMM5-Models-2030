@@ -2,31 +2,719 @@
   EPA STORM WATER MANAGEMENT MODEL - VERSION 5.2 (Build 5.2.4)
   ------------------------------------------------------------
 
+  Berkeley Storm Drain Model 
   
-  ERROR 209: undefined object ? at line 296 of [CONDUIT] section:
-  462              ?                ?                0          0          0          0          0          0
-
+  ****************
+  Analysis Options
+  ****************
+  Flow Units ............... CFS
+  Process Models:
+    Rainfall/Runoff ........ NO
+    RDII ................... NO
+    Snowmelt ............... NO
+    Groundwater ............ NO
+    Flow Routing ........... YES
+    Ponding Allowed ........ NO
+    Water Quality .......... NO
+  Flow Routing Method ...... DYNWAVE
+  Surcharge Method ......... EXTRAN
+  Starting Date ............ 01/01/2001 00:00:00
+  Ending Date .............. 01/02/2001 00:00:00
+  Antecedent Dry Days ...... 0.0
+  Report Time Step ......... 00:15:00
+  Routing Time Step ........ 20.00 sec
+  Variable Time Step ....... YES
+  Maximum Trials ........... 50
+  Number of Threads ........ 1
+  Head Tolerance ........... 0.003300 ft
   
-  ERROR 209: undefined object ? at line 297 of [CONDUIT] section:
-  471              ?                ?                333.00     0.0140     77.10      71.80      0          0
-
   
-  ERROR 209: undefined object ? at line 303 of [WEIR] section:
-  469              ?                ?                TRANSVERSE 91.03      1.840      NO       0        0          YES
-
+  **************************        Volume        Volume
+  Flow Routing Continuity        acre-feet      10^6 gal
+  **************************     ---------     ---------
+  Dry Weather Inflow .......         0.000         0.000
+  Wet Weather Inflow .......         0.000         0.000
+  Groundwater Inflow .......         0.000         0.000
+  RDII Inflow ..............         0.000         0.000
+  External Inflow ..........         0.000         0.000
+  External Outflow .........         0.000         0.000
+  Flooding Loss ............         0.000         0.000
+  Evaporation Loss .........         0.000         0.000
+  Exfiltration Loss ........         0.000         0.000
+  Initial Stored Volume ....         0.000         0.000
+  Final Stored Volume ......         0.000         0.000
+  Continuity Error (%) .....         0.000
   
-  ERROR 211: invalid number  at line 436 of [XSECT] section:
-  462              CIRCULAR     0          0          0          0          1
-
   
-  ERROR 211: invalid number  at line 438 of [XSECT] section:
-  MUL1             RECT_OPEN    0          17.40      0          0          
-
+  ***************************
+  Time-Step Critical Elements
+  ***************************
+  None
   
-  ERROR 211: invalid number  at line 439 of [XSECT] section:
-  469              RECT_OPEN    0          10.00      0          0          
+  
+  ********************************
+  Highest Flow Instability Indexes
+  ********************************
+  All links are stable.
+  
+  
+  *********************************
+  Most Frequent Nonconverging Nodes
+  *********************************
+  Convergence obtained at all time steps.
+  
+  
+  *************************
+  Routing Time Step Summary
+  *************************
+  Minimum Time Step           :    19.50 sec
+  Average Time Step           :    20.00 sec
+  Maximum Time Step           :    20.00 sec
+  % of Time in Steady State   :     0.00
+  Average Iterations per Step :     2.00
+  % of Steps Not Converging   :     0.00
+  Time Step Frequencies       :
+     20.000 -  9.564 sec      :   100.00 %
+      9.564 -  4.573 sec      :     0.00 %
+      4.573 -  2.187 sec      :     0.00 %
+      2.187 -  1.046 sec      :     0.00 %
+      1.046 -  0.500 sec      :     0.00 %
+  
+  
+  ******************
+  Node Depth Summary
+  ******************
+  
+  ---------------------------------------------------------------------------------
+                                 Average  Maximum  Maximum  Time of Max    Reported
+                                   Depth    Depth      HGL   Occurrence   Max Depth
+  Node                 Type         Feet     Feet     Feet  days hr:min        Feet
+  ---------------------------------------------------------------------------------
+  ST0001               JUNCTION     0.00     0.00   243.70     0  00:00        0.00
+  ST0002               JUNCTION     0.00     0.00   248.20     0  00:00        0.00
+  ST0003               JUNCTION     0.00     0.00   225.00     0  00:00        0.00
+  ST0004               JUNCTION     0.00     0.00   240.63     0  00:00        0.00
+  ST0005               JUNCTION     0.00     0.00   253.25     0  00:00        0.00
+  ST0006               JUNCTION     0.00     0.00   262.17     0  00:00        0.00
+  ST0007               JUNCTION     0.00     0.00   272.13     0  00:00        0.00
+  ST0008               JUNCTION     0.00     0.00   229.75     0  00:00        0.00
+  ST0009               JUNCTION     0.00     0.00   234.60     0  00:00        0.00
+  ST0010               JUNCTION     0.00     0.00   227.20     0  00:00        0.00
+  ST0011               JUNCTION     0.00     0.00   255.80     0  00:00        0.00
+  ST0012               JUNCTION     0.00     0.00   218.09     0  00:00        0.00
+  ST0013               JUNCTION     0.00     0.00   210.36     0  00:00        0.00
+  SK0064               JUNCTION     0.00     0.00    39.60     0  00:00        0.00
+  SK0065               JUNCTION     0.00     0.00    32.50     0  00:00        0.00
+  SK0066               JUNCTION     0.00     0.00    27.17     0  00:00        0.00
+  SK0067               JUNCTION     0.00     0.00    21.85     0  00:00        0.00
+  SK0068               JUNCTION     0.00     0.00    18.75     0  00:00        0.00
+  SK0069               JUNCTION     0.00     0.00    11.15     0  00:00        0.00
+  SK0070               JUNCTION     0.00     0.00    10.30     0  00:00        0.00
+  SK0072               JUNCTION     0.00     0.00    -1.00     0  00:00        0.00
+  SK0073               JUNCTION     0.00     0.00    40.29     0  00:00        0.00
+  SK0074               JUNCTION     0.00     0.00    33.40     0  00:00        0.00
+  SK0075               JUNCTION     0.00     0.00    27.65     0  00:00        0.00
+  SK0076               JUNCTION     0.00     0.00    22.39     0  00:00        0.00
+  SK0077               JUNCTION     0.00     0.00     6.59     0  00:00        0.00
+  SK0078               JUNCTION     0.00     0.00     7.04     0  00:00        0.00
+  SK0079               JUNCTION     0.00     0.00     7.46     0  00:00        0.00
+  SK0080               JUNCTION     0.00     0.00     7.70     0  00:00        0.00
+  SK0081               JUNCTION     0.00     0.00    14.72     0  00:00        0.00
+  SK0083               JUNCTION     0.00     0.00     8.00     0  00:00        0.00
+  SK0084               JUNCTION     0.00     0.00    46.25     0  00:00        0.00
+  ST0017               JUNCTION     0.00     0.00    57.70     0  00:00        0.00
+  SK0085               JUNCTION     0.00     0.00    58.30     0  00:00        0.00
+  ST0018               JUNCTION     0.00     0.00    63.75     0  00:00        0.00
+  ST0019               JUNCTION     0.00     0.00    72.95     0  00:00        0.00
+  ST0020               JUNCTION     0.00     0.00    79.87     0  00:00        0.00
+  ST0021               JUNCTION     0.00     0.00    92.70     0  00:00        0.00
+  ST0022               JUNCTION     0.00     0.00   106.00     0  00:00        0.00
+  SK0086               JUNCTION     0.00     0.00    49.00     0  00:00        0.00
+  SK0087               JUNCTION     0.00     0.00    57.80     0  00:00        0.00
+  SK0089               JUNCTION     0.00     0.00    72.87     0  00:00        0.00
+  SK0090               JUNCTION     0.00     0.00    73.60     0  00:00        0.00
+  SK0091               JUNCTION     0.00     0.00    78.73     0  00:00        0.00
+  SK0092               JUNCTION     0.00     0.00    90.00     0  00:00        0.00
+  SK0095               JUNCTION     0.00     0.00    72.00     0  00:00        0.00
+  SK0096               JUNCTION     0.00     0.00    87.75     0  00:00        0.00
+  SK0098               JUNCTION     0.00     0.00    46.92     0  00:00        0.00
+  SK0099               JUNCTION     0.00     0.00    47.47     0  00:00        0.00
+  ST0023               JUNCTION     0.00     0.00    63.11     0  00:00        0.00
+  SK0100               JUNCTION     0.00     0.00    48.05     0  00:00        0.00
+  SK0101               JUNCTION     0.00     0.00    54.46     0  00:00        0.00
+  SK0102               JUNCTION     0.00     0.00    65.24     0  00:00        0.00
+  SK0103               JUNCTION     0.00     0.00    57.80     0  00:00        0.00
+  SK0104               JUNCTION     0.00     0.00    72.20     0  00:00        0.00
+  SK0105               JUNCTION     0.00     0.00    71.44     0  00:00        0.00
+  ST0024               JUNCTION     0.00     0.00    57.70     0  00:00        0.00
+  ST0025               JUNCTION     0.00     0.00   106.23     0  00:00        0.00
+  ST0027               JUNCTION     0.00     0.00   120.80     0  00:00        0.00
+  ST0028               JUNCTION     0.00     0.00   121.62     0  00:00        0.00
+  ST0029               JUNCTION     0.00     0.00   127.20     0  00:00        0.00
+  ST0030               JUNCTION     0.00     0.00   131.10     0  00:00        0.00
+  ST0031               JUNCTION     0.00     0.00   135.90     0  00:00        0.00
+  ST0032               JUNCTION     0.00     0.00   141.50     0  00:00        0.00
+  ST0033               JUNCTION     0.00     0.00   147.50     0  00:00        0.00
+  ST0034               JUNCTION     0.00     0.00   153.47     0  00:00        0.00
+  ST0035               JUNCTION     0.00     0.00   103.98     0  00:00        0.00
+  ST0036               JUNCTION     0.00     0.00   105.90     0  00:00        0.00
+  ST0037               JUNCTION     0.00     0.00   109.10     0  00:00        0.00
+  ST0038               JUNCTION     0.00     0.00   107.00     0  00:00        0.00
+  ST0039               JUNCTION     0.00     0.00   107.95     0  00:00        0.00
+  ST0040               JUNCTION     0.00     0.00   104.93     0  00:00        0.00
+  ST0041               JUNCTION     0.00     0.00   104.80     0  00:00        0.00
+  ST0042               JUNCTION     0.00     0.00   104.52     0  00:00        0.00
+  ST0043               JUNCTION     0.00     0.00   105.50     0  00:00        0.00
+  ST0044               JUNCTION     0.00     0.00   106.41     0  00:00        0.00
+  ST0045               JUNCTION     0.00     0.00   108.90     0  00:00        0.00
+  ST0046               JUNCTION     0.00     0.00   105.11     0  00:00        0.00
+  ST0047               JUNCTION     0.00     0.00   165.00     0  00:00        0.00
+  ST0048               JUNCTION     0.00     0.00   181.25     0  00:00        0.00
+  ST0049               JUNCTION     0.00     0.00   187.53     0  00:00        0.00
+  ST0050               JUNCTION     0.00     0.00   189.40     0  00:00        0.00
+  ST0052               JUNCTION     0.00     0.00   201.70     0  00:00        0.00
+  ST0053               JUNCTION     0.00     0.00   153.80     0  00:00        0.00
+  ST0054               JUNCTION     0.00     0.00   165.53     0  00:00        0.00
+  ST0055               JUNCTION     0.00     0.00   182.10     0  00:00        0.00
+  SK0106               JUNCTION     0.00     0.00   122.70     0  00:00        0.00
+  SK0107               JUNCTION     0.00     0.00   127.88     0  00:00        0.00
+  SK0108               JUNCTION     0.00     0.00   150.15     0  00:00        0.00
+  SK0109               JUNCTION     0.00     0.00   154.11     0  00:00        0.00
+  SK0110               JUNCTION     0.00     0.00   161.46     0  00:00        0.00
+  SK0111               JUNCTION     0.00     0.00   164.60     0  00:00        0.00
+  SK0112               JUNCTION     0.00     0.00   178.55     0  00:00        0.00
+  SK0113               JUNCTION     0.00     0.00   181.02     0  00:00        0.00
+  SK0114               JUNCTION     0.00     0.00   121.90     0  00:00        0.00
+  SK0115               JUNCTION     0.00     0.00   134.49     0  00:00        0.00
+  SK0116               JUNCTION     0.00     0.00   135.24     0  00:00        0.00
+  SK0117               JUNCTION     0.00     0.00   142.65     0  00:00        0.00
+  SK0118               JUNCTION     0.00     0.00   151.93     0  00:00        0.00
+  SK0119               JUNCTION     0.00     0.00   195.00     0  00:00        0.00
+  SK0120               JUNCTION     0.00     0.00   143.50     0  00:00        0.00
+  SK0121               JUNCTION     0.00     0.00   116.87     0  00:00        0.00
+  SK0122               JUNCTION     0.00     0.00   112.11     0  00:00        0.00
+  SK0123               JUNCTION     0.00     0.00   191.73     0  00:00        0.00
+  SK0124               JUNCTION     0.00     0.00   197.00     0  00:00        0.00
+  ST0014               JUNCTION     0.00     0.00    11.15     0  00:00        0.00
+  ST0015               JUNCTION     0.00     0.00    20.00     0  00:00        0.00
+  ST0016               JUNCTION     0.00     0.00    29.50     0  00:00        0.00
+  SI0125               JUNCTION     0.00     0.00   259.00     0  00:00        0.00
+  SI0127               JUNCTION     0.00     0.00   210.00     0  00:00        0.00
+  SI0126               JUNCTION     0.00     0.00   240.00     0  00:00        0.00
+  SI0129               JUNCTION     0.00     0.00    39.60     0  00:00        0.00
+  SI0130               JUNCTION     0.00     0.00     8.00     0  00:00        0.00
+  SI0128               JUNCTION     0.00     0.00    -1.00     0  00:00        0.00
+  SKA082               JUNCTION     0.00     0.00     6.54     0  00:00        0.00
+  468                  JUNCTION     0.00     0.00    91.03     0  00:00        0.00
+  470                  JUNCTION     0.00     0.00    91.00     0  00:00        0.00
+  SK0071               OUTFALL      0.00     0.00     8.10     0  00:00        0.00
+  SM0056               STORAGE      0.00     0.00   199.00     0  00:00        0.00
+  SM0058               STORAGE      0.00     0.00   279.63     0  00:00        0.00
+  SM0060               STORAGE      0.00     0.00    19.75     0  00:00        0.00
+  SM0061               STORAGE      0.00     0.00   154.80     0  00:00        0.00
+  SM0063               STORAGE      0.00     0.00   250.20     0  00:00        0.00
+  SK0082               STORAGE      0.00     0.00     6.54     0  00:00        0.00
+  SK0088               STORAGE      0.00     0.00    99.10     0  00:00        0.00
+  SK0093               STORAGE      0.00     0.00    89.70     0  00:00        0.00
+  SK0094               STORAGE      0.00     0.00    96.40     0  00:00        0.00
+  SK0097               STORAGE      0.00     0.00    93.00     0  00:00        0.00
+  ST0026               STORAGE      0.00     0.00   113.90     0  00:00        0.00
+  ST0051               STORAGE      0.00     0.00   194.20     0  00:00        0.00
+  SM0059               STORAGE      0.00     0.00   215.00     0  00:00        0.00
+  SM0057               STORAGE      0.00     0.00   250.00     0  00:00        0.00
+  SM0062               STORAGE      0.00     0.00   264.00     0  00:00        0.00
+  
+  
+  *******************
+  Node Inflow Summary
+  *******************
+  
+  -------------------------------------------------------------------------------------------------
+                                  Maximum  Maximum                  Lateral       Total        Flow
+                                  Lateral    Total  Time of Max      Inflow      Inflow     Balance
+                                   Inflow   Inflow   Occurrence      Volume      Volume       Error
+  Node                 Type           CFS      CFS  days hr:min    10^6 gal    10^6 gal     Percent
+  -------------------------------------------------------------------------------------------------
+  ST0001               JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  ST0002               JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  ST0003               JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  ST0004               JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  ST0005               JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  ST0006               JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  ST0007               JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  ST0008               JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  ST0009               JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  ST0010               JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  ST0011               JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  ST0012               JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  ST0013               JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  SK0064               JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  SK0065               JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  SK0066               JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  SK0067               JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  SK0068               JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  SK0069               JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  SK0070               JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  SK0072               JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  SK0073               JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  SK0074               JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  SK0075               JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  SK0076               JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  SK0077               JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  SK0078               JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  SK0079               JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  SK0080               JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  SK0081               JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  SK0083               JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  SK0084               JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  ST0017               JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  SK0085               JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  ST0018               JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  ST0019               JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  ST0020               JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  ST0021               JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  ST0022               JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  SK0086               JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  SK0087               JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  SK0089               JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  SK0090               JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  SK0091               JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  SK0092               JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  SK0095               JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  SK0096               JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  SK0098               JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  SK0099               JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  ST0023               JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  SK0100               JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  SK0101               JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  SK0102               JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  SK0103               JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  SK0104               JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  SK0105               JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  ST0024               JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  ST0025               JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  ST0027               JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  ST0028               JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  ST0029               JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  ST0030               JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  ST0031               JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  ST0032               JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  ST0033               JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  ST0034               JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  ST0035               JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  ST0036               JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  ST0037               JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  ST0038               JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  ST0039               JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  ST0040               JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  ST0041               JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  ST0042               JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  ST0043               JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  ST0044               JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  ST0045               JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  ST0046               JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  ST0047               JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  ST0048               JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  ST0049               JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  ST0050               JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  ST0052               JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  ST0053               JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  ST0054               JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  ST0055               JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  SK0106               JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  SK0107               JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  SK0108               JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  SK0109               JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  SK0110               JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  SK0111               JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  SK0112               JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  SK0113               JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  SK0114               JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  SK0115               JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  SK0116               JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  SK0117               JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  SK0118               JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  SK0119               JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  SK0120               JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  SK0121               JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  SK0122               JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  SK0123               JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  SK0124               JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  ST0014               JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  ST0015               JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  ST0016               JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  SI0125               JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  SI0127               JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  SI0126               JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  SI0129               JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  SI0130               JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  SI0128               JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  SKA082               JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  468                  JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  470                  JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  SK0071               OUTFALL       0.00     0.00     0  00:00           0           0       0.000 gal
+  SM0056               STORAGE       0.00     0.00     0  00:00           0           0       0.000 gal
+  SM0058               STORAGE       0.00     0.00     0  00:00           0           0       0.000 gal
+  SM0060               STORAGE       0.00     0.00     0  00:00           0           0       0.000 gal
+  SM0061               STORAGE       0.00     0.00     0  00:00           0           0       0.000 gal
+  SM0063               STORAGE       0.00     0.00     0  00:00           0           0       0.000 gal
+  SK0082               STORAGE       0.00     0.00     0  00:00           0           0       0.000 gal
+  SK0088               STORAGE       0.00     0.00     0  00:00           0           0       0.000 gal
+  SK0093               STORAGE       0.00     0.00     0  00:00           0           0       0.000 gal
+  SK0094               STORAGE       0.00     0.00     0  00:00           0           0       0.000 gal
+  SK0097               STORAGE       0.00     0.00     0  00:00           0           0       0.000 gal
+  ST0026               STORAGE       0.00     0.00     0  00:00           0           0       0.000 gal
+  ST0051               STORAGE       0.00     0.00     0  00:00           0           0       0.000 gal
+  SM0059               STORAGE       0.00     0.00     0  00:00           0           0       0.000 gal
+  SM0057               STORAGE       0.00     0.00     0  00:00           0           0       0.000 gal
+  SM0062               STORAGE       0.00     0.00     0  00:00           0           0       0.000 gal
+  
+  
+  **********************
+  Node Surcharge Summary
+  **********************
+  
+  No nodes were surcharged.
+  
+  
+  *********************
+  Node Flooding Summary
+  *********************
+  
+  No nodes were flooded.
+  
+  
+  **********************
+  Storage Volume Summary
+  **********************
+  
+  ------------------------------------------------------------------------------------------------
+                         Average    Avg   Evap  Exfil     Maximum    Max    Time of Max    Maximum
+                          Volume   Pcnt   Pcnt   Pcnt      Volume   Pcnt     Occurrence    Outflow
+  Storage Unit          1000 ft³   Full   Loss   Loss    1000 ft³   Full    days hr:min        CFS
+  ------------------------------------------------------------------------------------------------
+  SM0056                   0.000    0.0    0.0    0.0       0.000    0.0       0  00:00       0.00
+  SM0058                   0.000    0.0    0.0    0.0       0.000    0.0       0  00:00       0.00
+  SM0060                   0.000    0.0    0.0    0.0       0.000    0.0       0  00:00       0.00
+  SM0061                   0.000    0.0    0.0    0.0       0.000    0.0       0  00:00       0.00
+  SM0063                   0.000    0.0    0.0    0.0       0.000    0.0       0  00:00       0.00
+  SK0082                   0.000    0.0    0.0    0.0       0.000    0.0       0  00:00       0.00
+  SK0088                   0.000    0.0    0.0    0.0       0.000    0.0       0  00:00       0.00
+  SK0093                   0.000    0.0    0.0    0.0       0.000    0.0       0  00:00       0.00
+  SK0094                   0.000    0.0    0.0    0.0       0.000    0.0       0  00:00       0.00
+  SK0097                   0.000    0.0    0.0    0.0       0.000    0.0       0  00:00       0.00
+  ST0026                   0.000    0.0    0.0    0.0       0.000    0.0       0  00:00       0.00
+  ST0051                   0.000    0.0    0.0    0.0       0.000    0.0       0  00:00       0.00
+  SM0059                   0.000    0.0    0.0    0.0       0.000    0.0       0  00:00       0.00
+  SM0057                   0.000    0.0    0.0    0.0       0.000    0.0       0  00:00       0.00
+  SM0062                   0.000    0.0    0.0    0.0       0.000    0.0       0  00:00       0.00
+  
+  
+  ***********************
+  Outfall Loading Summary
+  ***********************
+  
+  -----------------------------------------------------------
+                         Flow       Avg       Max       Total
+                         Freq      Flow      Flow      Volume
+  Outfall Node           Pcnt       CFS       CFS    10^6 gal
+  -----------------------------------------------------------
+  SK0071                 0.00      0.00      0.00       0.000
+  -----------------------------------------------------------
+  System                 0.00      0.00      0.00       0.000
+  
+  
+  ********************
+  Link Flow Summary
+  ********************
+  
+  -----------------------------------------------------------------------------
+                                 Maximum  Time of Max   Maximum    Max/    Max/
+                                  |Flow|   Occurrence   |Veloc|    Full    Full
+  Link                 Type          CFS  days hr:min    ft/sec    Flow   Depth
+  -----------------------------------------------------------------------------
+  ST0001009            CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  ST0002001            CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  ST0003012            CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  ST0004010            CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  ST0005004            CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  ST0006011            CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  ST0007006            CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  ST0008010            CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  ST0009008            CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  ST0010003            CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  ST0011005            CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  ST0012013            CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  ST0064074            CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  ST0065075            CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  ST0068081            CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  ST0070082            CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  ST0073064            CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  ST0074065            CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  ST0075066            CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  ST0076067            CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  ST0077078            CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  ST0078079            CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  ST0079080            CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  ST0080071            CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  ST0081069            CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  STA082083            CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  ST0083072            CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  ST0084073            CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  ST0020019            CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  ST0021020            CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  ST0022021            CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  ST0087086            CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  ST0088094            CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  ST0089104            CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  ST0090089            CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  ST0091095            CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  ST0092096            CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  ST0093092            CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  ST0094097            CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  ST0095090            CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  ST0096091            CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  ST0097093            CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  ST0098084            CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  ST0100098            CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  ST0101100            CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  ST0104105            CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  ST0025022            CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  ST0034033            CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  ST0036043            CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  ST0037045            CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  ST0039038            CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  ST0042035            CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  ST0043042            CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  ST0044036            CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  ST0045044            CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  ST0046025            CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  ST0047053            CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  ST0048054            CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  ST0049055            CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  ST0051050            CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  ST0052051            CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  ST0053034            CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  ST0054047            CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  ST0106114            CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  ST0108120            CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  ST0109118            CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  ST0110109            CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  ST0111110            CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  ST0112111            CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  ST0114121            CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  ST0116115            CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  ST0117116            CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  ST0118108            CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  ST0120117            CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  ST0121122            CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  ST0122088            CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  ST0124119            CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  SM0013052            CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  SM0066076            CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  SM0067068            CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  SM0069070            CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  SM0082077            CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  SM0102087            CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  SM0105102            CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  SM0038037            CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  SM0040046            CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  SM0041040            CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  SM0050049            CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  SM0055048            CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  SM0107106            CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  SM0113112            CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  SM0115107            CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  SM0119123            CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  SM0123113            CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  SM0056124            CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  SM0057126            CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  SM0058007            CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  SM0059127            CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  SM0060068            CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  SM0061053            CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  SM0062125            CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  SM0063002            CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  SI0125126            CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  SI0126127            CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  SI0127035            CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  SI0014130            CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  SI0015014            CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  SI0016015            CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  SI0129016            CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  SI0130128            CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  SI0086129            CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  SI0035070            CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  SQ0017099            CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  SQ0085103            CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  SQ0018023            CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  SQ0019018            CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  SQ0099098            CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  SQ0023085            CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  SQ0103024            CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  SQ0024017            CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  SQ0026025            CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  SQ0027026            CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  SQ0028027            CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  SQ0029028            CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  SQ0030029            CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  SQ0031030            CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  SQ0032031            CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  SQ0033032            CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  462                  CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  471                  CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  MUL1                 WEIR         0.00     0  00:00                      0.00
+  469                  WEIR         0.00     0  00:00                      0.00
+  
+  
+  ***************************
+  Flow Classification Summary
+  ***************************
+  
+  -------------------------------------------------------------------------------------
+                      Adjusted    ---------- Fraction of Time in Flow Class ---------- 
+                       /Actual         Up    Down  Sub   Sup   Up    Down  Norm  Inlet 
+  Conduit               Length    Dry  Dry   Dry   Crit  Crit  Crit  Crit  Ltd   Ctrl  
+  -------------------------------------------------------------------------------------
+  ST0001009               1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  ST0002001               1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  ST0003012               1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  ST0004010               1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  ST0005004               1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  ST0006011               1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  ST0007006               1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  ST0008010               1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  ST0009008               1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  ST0010003               1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  ST0011005               1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  ST0012013               1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  ST0064074               1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  ST0065075               1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  ST0068081               1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  ST0070082               1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  ST0073064               1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  ST0074065               1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  ST0075066               1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  ST0076067               1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  ST0077078               1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  ST0078079               1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  ST0079080               1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  ST0080071               1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  ST0081069               1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  STA082083               1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  ST0083072               1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  ST0084073               1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  ST0020019               1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  ST0021020               1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  ST0022021               1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  ST0087086               1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  ST0088094               1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  ST0089104               1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  ST0090089               1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  ST0091095               1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  ST0092096               1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  ST0093092               1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  ST0094097               1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  ST0095090               1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  ST0096091               1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  ST0097093               1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  ST0098084               1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  ST0100098               1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  ST0101100               1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  ST0104105               1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  ST0025022               1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  ST0034033               1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  ST0036043               1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  ST0037045               1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  ST0039038               1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  ST0042035               1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  ST0043042               1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  ST0044036               1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  ST0045044               1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  ST0046025               1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  ST0047053               1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  ST0048054               1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  ST0049055               1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  ST0051050               1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  ST0052051               1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  ST0053034               1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  ST0054047               1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  ST0106114               1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  ST0108120               1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  ST0109118               1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  ST0110109               1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  ST0111110               1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  ST0112111               1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  ST0114121               1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  ST0116115               1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  ST0117116               1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  ST0118108               1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  ST0120117               1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  ST0121122               1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  ST0122088               1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  ST0124119               1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  SM0013052               1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  SM0066076               1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  SM0067068               1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  SM0069070               1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  SM0082077               1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  SM0102087               1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  SM0105102               1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  SM0038037               1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  SM0040046               1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  SM0041040               1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  SM0050049               1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  SM0055048               1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  SM0107106               1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  SM0113112               1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  SM0115107               1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  SM0119123               1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  SM0123113               1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  SM0056124               1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  SM0057126               1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  SM0058007               1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  SM0059127               1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  SM0060068               1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  SM0061053               1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  SM0062125               1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  SM0063002               1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  SI0125126               1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  SI0126127               1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  SI0127035               1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  SI0014130               1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  SI0015014               1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  SI0016015               1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  SI0129016               1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  SI0130128               1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  SI0086129               1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  SI0035070               1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  SQ0017099               1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  SQ0085103               1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  SQ0018023               1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  SQ0019018               1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  SQ0099098               1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  SQ0023085               1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  SQ0103024               1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  SQ0024017               1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  SQ0026025               1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  SQ0027026               1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  SQ0028027               1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  SQ0029028               1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  SQ0030029               1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  SQ0031030               1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  SQ0032031               1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  SQ0033032               1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  462                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  471                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  
+  
+  *************************
+  Conduit Surcharge Summary
+  *************************
+  
+  No conduits were surcharged.
+  
 
-
-  Analysis begun on:  Mon Jul 13 08:04:16 2026
-  Analysis ended on:  Mon Jul 13 08:04:16 2026
+  Analysis begun on:  Sun Jul 19 15:22:45 2026
+  Analysis ended on:  Sun Jul 19 15:22:45 2026
   Total elapsed time: < 1 sec

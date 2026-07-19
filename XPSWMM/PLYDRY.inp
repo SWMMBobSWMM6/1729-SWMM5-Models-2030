@@ -20,6 +20,18 @@ INERTIAL_DAMPING     PARTIAL
 NORMAL_FLOW_LIMITED  BOTH
 MAX_TRIALS           100
 HEAD_TOLERANCE       0.0033
+START_DATE           01/01/2001
+START_TIME           00:00:00
+REPORT_START_DATE    01/01/2001
+REPORT_START_TIME    00:00:00
+END_DATE             01/02/2001
+END_TIME             00:00:00
+SWEEP_START          01/01
+SWEEP_END            12/31
+DRY_DAYS             0
+REPORT_STEP          00:15:00
+WET_STEP             00:05:00
+DRY_STEP             01:00:00
 
 [JUNCTIONS]
 ;;Name           Elev       MaxDepth   InitDepth  SurDepth   Aponded
@@ -32,7 +44,6 @@ HEAD_TOLERANCE       0.0033
 8-61             776.13     0          0          0          0
 8-60             780.05     0          0          0          0
 8-24A            778.48     0          0          0          0
-CSO003           775.00     0          0          0          0
 8-63A            779.85     0          0          0          0
 CSO005           775.00     0          0          0          0
 CSO004           775.00     0          0          0          0
@@ -133,12 +144,19 @@ P-1A             776.04     0          0          0          0
 5-88             779.87     0          0          0          0
 5-21H            776.00     0          0          0          0
 9-1              793.43     0          0          0          0
+PUMP2            0          0          0          0          0
+PUMP3            0          0          0          0          0
+
+[OUTFALLS]
+;;Name           Elev       Type       Stage      Gated
+;;-------------- ---------- ---------- ---------- -----
+CSO003           775.00     FREE                  NO
 
 [STORAGE]
 ;;Name           Elev       MaxDepth   InitDepth  Shape      Curve/Params
 ;;-------------- ---------- ---------- ---------- ---------- ----------
-RAWPMP           754.40     0          0          FUNCTIONAL 0 0          0
-STMRET           786.03     0          0          FUNCTIONAL 3850.00 0          0
+RAWPMP           754.40     10.00      0          FUNCTIONAL 1000.00 0          0
+STMRET           786.03     10.00      0          FUNCTIONAL 3850.00 0          0
 
 [CONDUITS]
 ;;Name           From             To               Length     Roughness  InOffset   OutOffset  InitFlow   MaxFlow
@@ -273,7 +291,14 @@ WRRET            STMCHN           STMRET           TRANSVERSE 783.92     1.840  
 [PUMPS]
 ;;Name           From             To               PumpCurve  Status   Startup    Shutoff
 ;;-------------- ---------------- ---------------- ---------- -------- ---------- ----------
-PUMP1            PUMP2            PUMP3            *          ON       0          1.00      
+PUMP1            PUMP2            PUMP3            PC_PUMP1   ON       2.00       1.00      
+
+[CURVES]
+;;Name           Type       X-Value    Y-Value
+;;-------------- ---------- ---------- ----------
+;; Synthesized generic pump curves — replace with actual pump data
+PC_PUMP1         Pump1      0          5
+PC_PUMP1                    10         10
 
 [XSECTIONS]
 ;;Link           Shape        Geom1      Geom2      Geom3      Geom4      Barrels
@@ -380,22 +405,22 @@ P/1A             CIRCULAR     2.50       0          0          0          1
 5/88             CIRCULAR     1.00       0          0          0          1
 5/21H            CIRCULAR     1.75       0          0          0          1
 9/1              CIRCULAR     3.00       0          0          0          1
-OR005            RECT_CLOSED  0.33       0          0          0          
-OR007            RECT_CLOSED  0.33       0          0          0          
-OR010            RECT_CLOSED  0.67       0          0          0          
-OR008            RECT_CLOSED  0.33       0          0          0          
-ORP1             RECT_CLOSED  1.00       0          0          0          
-WR003            RECT_OPEN    0          0.98       0          0          
-WR004            RECT_OPEN    0          0.65       0          0          
-WR005            RECT_OPEN    0          0.98       0          0          
-WR007            RECT_OPEN    0          0.79       0          0          
-WR8/10           RECT_OPEN    0          2.00       0          0          
-WR010            RECT_OPEN    0          1.57       0          0          
-WR090            RECT_OPEN    0          0.98       0          0          
-WR008            RECT_OPEN    0          0.79       0          0          
-WR011            RECT_OPEN    0          0.65       0          0          
-WR006            RECT_OPEN    0          0.92       0          0          
-WRRET            RECT_OPEN    0          27.00      0          0          
+OR005            RECT_CLOSED  0.33       0.33       0          0
+OR007            RECT_CLOSED  0.33       0.33       0          0
+OR010            RECT_CLOSED  0.67       0.67       0          0
+OR008            RECT_CLOSED  0.33       0.33       0          0
+ORP1             RECT_CLOSED  1.00       1.00       0          0
+WR003            TRIANGULAR   1.00       0.98       0          0
+WR004            TRIANGULAR   1.00       0.65       0          0
+WR005            TRIANGULAR   1.00       0.98       0          0
+WR007            TRIANGULAR   1.00       0.79       0          0
+WR8/10           TRIANGULAR   1.00       2.00       0          0
+WR010            TRIANGULAR   1.00       1.57       0          0
+WR090            TRIANGULAR   1.00       0.98       0          0
+WR008            TRIANGULAR   1.00       0.79       0          0
+WR011            TRIANGULAR   1.00       0.65       0          0
+WR006            TRIANGULAR   1.00       0.92       0          0
+WRRET            RECT_OPEN    1.00       27.00      0          0
 
 [LOSSES]
 ;;Link           Inlet      Outlet     Average    Flap Gate

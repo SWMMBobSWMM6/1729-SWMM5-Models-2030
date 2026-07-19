@@ -20,22 +20,34 @@ INERTIAL_DAMPING     PARTIAL
 NORMAL_FLOW_LIMITED  BOTH
 MAX_TRIALS           50
 HEAD_TOLERANCE       .001
+START_DATE           01/01/2001
+START_TIME           00:00:00
+REPORT_START_DATE    01/01/2001
+REPORT_START_TIME    00:00:00
+END_DATE             01/02/2001
+END_TIME             00:00:00
+SWEEP_START          01/01
+SWEEP_END            12/31
+DRY_DAYS             0
+REPORT_STEP          00:15:00
+WET_STEP             00:05:00
+DRY_STEP             01:00:00
 
 [JUNCTIONS]
 ;;Name           Elev       MaxDepth   InitDepth  SurDepth   Aponded
 ;;-------------- ---------- ---------- ---------- ---------- ----------
-1                1020.00    0          4.65       0          0
-2                1020.00    0          5.24       0          0
-3                1020.00    0          5.84       0          0
-4                1025.00    0          6.44       0          0
-5                1025.00    0          8.63       0          0
-6                1025.00    0          10.43      0          0
-7                1025.00    0          12.22      0          0
-8                1025.00    0          14.05      0          0
-9                1025.00    0          15.82      0          0
-10               1025.00    0          17.61      0          0
-11               1025.00    0          19.41      0          0
-12               1025.00    0          21.20      0          0
+1                1020.00    0          0          0          0
+2                1020.00    0          0          0          0
+3                1020.00    0          0          0          0
+4                1025.00    0          0          0          0
+5                1025.00    0          0          0          0
+6                1025.00    0          0          0          0
+7                1025.00    0          0          0          0
+8                1025.00    0          0          0          0
+9                1025.00    0          0          0          0
+10               1025.00    0          0          0          0
+11               1025.00    0          0          0          0
+12               1025.00    0          0          0          0
 15               1125.00    0          0          0          0
 16               1125.00    0          0          0          0
 17               1125.00    0          0          0          0
@@ -189,18 +201,28 @@ HEAD_TOLERANCE       .001
 316              1318.88    0          0          0          0
 317              1318.88    0          0          0          0
 318              1318.88    0          0          0          0
+gtlp12           0          0          0          0          0
+gtlp13           0          0          0          0          0
+gtlp22           0          0          0          0          0
+gtlp23           0          0          0          0          0
+gtlps32          0          0          0          0          0
+gtlps33          0          0          0          0          0
+
+[OUTFALLS]
+;;Name           Elev       Type       Stage      Gated
+;;-------------- ---------- ---------- ---------- -----
+13               980.80     FREE                  NO
 
 [STORAGE]
 ;;Name           Elev       MaxDepth   InitDepth  Shape      Curve/Params
 ;;-------------- ---------- ---------- ---------- ---------- ----------
-13               980.80     0          23.00      FUNCTIONAL 113.10 0          0
-14               1125.00    -1.73      0          FUNCTIONAL 113.10 0          0
-23               1139.24    0          0          FUNCTIONAL 113.10 0          0
-46               1258.00    0          0          FUNCTIONAL 201.06 0          0
-47               1258.00    -12.00     0          FUNCTIONAL 24.63 0          0
-55               1258.00    -12.00     0          FUNCTIONAL 24.63 0          0
-302              1266.00    0          0          FUNCTIONAL 113.10 0          0
-303              1318.88    0          0          FUNCTIONAL 113.10 0          0
+14               1125.00    10.00      0          FUNCTIONAL 113.10 0          0
+23               1139.24    10.00      0          FUNCTIONAL 113.10 0          0
+46               1258.00    10.00      0          FUNCTIONAL 201.06 0          0
+47               1258.00    10.00      0          FUNCTIONAL 24.63 0          0
+55               1258.00    10.00      0          FUNCTIONAL 24.63 0          0
+302              1266.00    10.00      0          FUNCTIONAL 113.10 0          0
+303              1318.88    10.00      0          FUNCTIONAL 113.10 0          0
 
 [CONDUITS]
 ;;Name           From             To               Length     Roughness  InOffset   OutOffset  InitFlow   MaxFlow
@@ -379,9 +401,20 @@ HEAD_TOLERANCE       .001
 [PUMPS]
 ;;Name           From             To               PumpCurve  Status   Startup    Shutoff
 ;;-------------- ---------------- ---------------- ---------- -------- ---------- ----------
-gtlp11           gtlp12           gtlp13           *          ON       0          0         
-gtlp21           gtlp22           gtlp23           *          ON       0          0         
-gtlps31          gtlps32          gtlps33          *          ON       0          0         
+gtlp11           gtlp12           gtlp13           PC_gtlp11  ON       1.00       0         
+gtlp21           gtlp22           gtlp23           PC_gtlp21  ON       1.00       0         
+gtlps31          gtlps32          gtlps33          PC_gtlps31 ON       1.00       0         
+
+[CURVES]
+;;Name           Type       X-Value    Y-Value
+;;-------------- ---------- ---------- ----------
+;; Synthesized generic pump curves — replace with actual pump data
+PC_gtlp11        Pump1      0          5
+PC_gtlp11                   10         10
+PC_gtlp21        Pump1      0          5
+PC_gtlp21                   10         10
+PC_gtlps31       Pump1      0          5
+PC_gtlps31                  10         10
 
 [XSECTIONS]
 ;;Link           Shape        Geom1      Geom2      Geom3      Geom4      Barrels

@@ -14,28 +14,45 @@ LINK_OFFSETS         DEPTH
 MIN_SLOPE            0.0
 ALLOW_PONDING        NO
 SKIP_STEADY_STATE    NO
-ROUTING_STEP         00:00:60
+ROUTING_STEP         00:01:00
 VARIABLE_STEP        0.75
 INERTIAL_DAMPING     PARTIAL
 NORMAL_FLOW_LIMITED  BOTH
 MAX_TRIALS           50
 HEAD_TOLERANCE       0.0033
+START_DATE           01/01/2001
+START_TIME           00:00:00
+REPORT_START_DATE    01/01/2001
+REPORT_START_TIME    00:00:00
+END_DATE             01/02/2001
+END_TIME             00:00:00
+SWEEP_START          01/01
+SWEEP_END            12/31
+DRY_DAYS             0
+REPORT_STEP          00:15:00
+WET_STEP             00:05:00
+DRY_STEP             01:00:00
 
 [JUNCTIONS]
 ;;Name           Elev       MaxDepth   InitDepth  SurDepth   Aponded
 ;;-------------- ---------- ---------- ---------- ---------- ----------
 D                263.17     0          0          0          0
 E                262.76     0          0          0          0
-LAKEB(OUT)       260.40     0          0          0          0
 B                265.20     0          0          0          0
 C                264.30     0          0          0          0
+OVERFLOW         263.00     0          0          0          0
+
+[OUTFALLS]
+;;Name           Elev       Type       Stage      Gated
+;;-------------- ---------- ---------- ---------- -----
+LAKEB(OUT)       260.40     FREE                  NO
 
 [STORAGE]
 ;;Name           Elev       MaxDepth   InitDepth  Shape      Curve/Params
 ;;-------------- ---------- ---------- ---------- ---------- ----------
-A                263.20     -0.05      0          FUNCTIONAL 0 0          0
-DET              263.20     0          0          FUNCTIONAL 0 0          0
-LAKEA            262.50     0          0          FUNCTIONAL 0 0          0
+A                263.20     10.00      0          FUNCTIONAL 1000.00 0          0
+DET              263.20     10.00      0          FUNCTIONAL 1000.00 0          0
+LAKEA            262.50     10.00      0          FUNCTIONAL 1000.00 0          0
 
 [CONDUITS]
 ;;Name           From             To               Length     Roughness  InOffset   OutOffset  InitFlow   MaxFlow
@@ -58,7 +75,7 @@ P1               CIRCULAR     0.53       0          0          0          1
 P6               CIRCULAR     0.46       0          0          0          1
 P2               CIRCULAR     0.53       0          0          0          1
 P3               CIRCULAR     0.46       0          0          0          1
-DUMMY            TRAPEZOIDAL  0.15       4.00       0          0          1
+DUMMY            TRAPEZOIDAL  0.15       4.00       1          1          1
 P7               CIRCULAR     0.53       0          0          0          1
 
 [LOSSES]

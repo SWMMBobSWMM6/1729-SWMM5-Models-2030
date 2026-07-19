@@ -14,11 +14,23 @@ LINK_OFFSETS         DEPTH
 MIN_SLOPE            0.0
 ALLOW_PONDING        NO
 SKIP_STEADY_STATE    NO
-ROUTING_STEP         00:00:60
+ROUTING_STEP         00:01:00
 VARIABLE_STEP        0.75
 INERTIAL_DAMPING     PARTIAL
 NORMAL_FLOW_LIMITED  BOTH
 MAX_TRIALS           50
+START_DATE           01/01/2001
+START_TIME           00:00:00
+REPORT_START_DATE    01/01/2001
+REPORT_START_TIME    00:00:00
+END_DATE             01/02/2001
+END_TIME             00:00:00
+SWEEP_START          01/01
+SWEEP_END            12/31
+DRY_DAYS             0
+REPORT_STEP          00:15:00
+WET_STEP             00:05:00
+DRY_STEP             01:00:00
 
 [JUNCTIONS]
 ;;Name           Elev       MaxDepth   InitDepth  SurDepth   Aponded
@@ -31,7 +43,6 @@ PL265+25         22.00      0          0          0          0
 PL274+00         22.00      0          0          0          0
 PL282+75         22.00      0          0          0          0
 PL287+40         22.00      0          0          0          0
-G329A            20.00      0          0          0          0
 G329B            20.00      0          0          0          0
 G329C            20.00      0          0          0          0
 G329D            20.00      0          0          0          0
@@ -90,38 +101,43 @@ G333HW           22.00      0          0          0          0
 G333H            22.00      0          0          0          0
 ZREF=13.8        1.00       0          0          0          0
 
+[OUTFALLS]
+;;Name           Elev       Type       Stage      Gated
+;;-------------- ---------- ---------- ---------- -----
+G329A            20.00      FREE                  NO
+
 [CONDUITS]
 ;;Name           From             To               Length     Roughness  InOffset   OutOffset  InitFlow   MaxFlow
 ;;-------------- ---------------- ---------------- ---------- ---------- ---------- ---------- ---------- ----------
-IC-10            PL237+00         PL239+00         200.00     0          -4.00      -4.00      0          0
-IC-20            PL239+00         PL247+75         875.00     0          -4.00      -4.00      0          0
-IC-30            PL247+75         PL256+50         875.00     0          -4.00      -4.00      0          0
-IC-40            PL256+50         PL265+25         875.00     0          -4.00      -4.00      0          0
-IC-50            PL265+25         PL274+00         875.00     0          -4.00      -4.00      0          0
-IC-60            PL274+00         PL282+75         875.00     0          -4.00      -4.00      0          0
-IC-70            PL282+75         PL287+40         465.00     0          -4.00      -4.00      0          0
+IC-10            PL237+00         PL239+00         200.00     0.0130     0          0          0          0
+IC-20            PL239+00         PL247+75         875.00     0.0130     0          0          0          0
+IC-30            PL247+75         PL256+50         875.00     0.0130     0          0          0          0
+IC-40            PL256+50         PL265+25         875.00     0.0130     0          0          0          0
+IC-50            PL265+25         PL274+00         875.00     0.0130     0          0          0          0
+IC-60            PL274+00         PL282+75         875.00     0.0130     0          0          0          0
+IC-70            PL282+75         PL287+40         465.00     0.0130     0          0          0          0
 IC-G329A         PL239+00         G329A            65.00      0.0240     6.00       6.00       0          0
 IC-G329B         PL247+75         G329B            65.00      0.0240     6.00       6.00       0          0
 IC-G329C         PL256+50         G329C            65.00      0.0240     6.00       6.00       0          0
 IC-G329D         PL265+25         G329D            65.00      0.0240     6.00       6.00       0          0
 IC-G329E         PL274+00         G329E            65.00      0.0240     6.00       6.00       0          0
 IC-G329F         PL282+75         G329F            65.00      0.0240     6.00       6.00       0          0
-IC-80            PL287+40         PL287+80         40.00      0          -4.00      -2.00      0          0
-IC-85            PL287+80         PL293+70         590.00     0          -2.00      -2.00      0          0
-IC-90            PL293+70         PL302+11         841.00     0          -2.00      -2.00      0          0
-IC-100           PL302+11         PL312+49         1038.00    0          -2.00      -2.00      0          0
-IC-110           PL312+49         PL321+90         941.00     0          -2.00      -2.00      0          0
-IC-120           PL321+90         PL331+30         940.00     0          -2.00      -2.00      0          0
-IC-130           PL331+30         PL340+69         939.00     0          -2.00      -2.00      0          0
-IC-140           PL340+69         PL350+10         941.00     0          -2.00      -2.00      0          0
-IC-150           PL350+10         PL359+49         939.00     0          -2.00      -2.00      0          0
-IC-160           PL359+49         PL368+89         940.00     0          -2.00      -2.00      0          0
-IC-170           PL368+89         PL378+30         941.00     0          -2.00      -2.00      0          0
-IC-180           PL378+30         PL387+70         940.00     0          -2.00      -2.00      0          0
-IC-190           PL387+70         PL397+09         939.00     0          -2.00      -2.00      0          0
-IC-200           PL397+09         PL402+50         541.00     0          -2.00      -2.00      0          0
+IC-80            PL287+40         PL287+80         40.00      0.0130     0          0          0          0
+IC-85            PL287+80         PL293+70         590.00     0.0130     0          0          0          0
+IC-90            PL293+70         PL302+11         841.00     0.0130     0          0          0          0
+IC-100           PL302+11         PL312+49         1038.00    0.0130     0          0          0          0
+IC-110           PL312+49         PL321+90         941.00     0.0130     0          0          0          0
+IC-120           PL321+90         PL331+30         940.00     0.0130     0          0          0          0
+IC-130           PL331+30         PL340+69         939.00     0.0130     0          0          0          0
+IC-140           PL340+69         PL350+10         941.00     0.0130     0          0          0          0
+IC-150           PL350+10         PL359+49         939.00     0.0130     0          0          0          0
+IC-160           PL359+49         PL368+89         940.00     0.0130     0          0          0          0
+IC-170           PL368+89         PL378+30         941.00     0.0130     0          0          0          0
+IC-180           PL378+30         PL387+70         940.00     0.0130     0          0          0          0
+IC-190           PL387+70         PL397+09         939.00     0.0130     0          0          0          0
+IC-200           PL397+09         PL402+50         541.00     0.0130     0          0          0          0
 IC-G331B         PL302+11         G331B            65.00      0.0240     6.00       6.00       0          0
-IC-G331C         ?                ?                65.00      0.0240     6.00       6.00       0          0
+IC-G331C         PL312+49         G331C            65.00      0.0240     6.00       6.00       0          0
 IC-G331D         PL321+90         G331D            65.00      0.0240     6.00       6.00       0          0
 IC-G331E         PL331+30         G331E            65.00      0.0240     6.00       6.00       0          0
 IC-G331F         PL340+69         G331F            65.00      0.0240     6.00       6.00       0          0
@@ -132,15 +148,15 @@ IC-G331J         PL378+30         G331J            75.00      0.0240     6.00   
 IC-G331K         PL387+70         G331K            75.00      0.0240     6.00       6.00       0          0
 IC-G331L         PL397+09         G331L            75.00      0.0240     6.00       6.00       0          0
 IC-G331A         PL293+70         G331A            65.00      0.0240     6.00       6.00       0          0
-IC-210           PL402+50         PL405+75         325.00     0          -2.00      -2.00      0          0
-IC-220           PL405+75         PL414+00         825.00     0          -2.00      -2.00      0          0
-IC-230           PL414+00         PL422+24         824.00     0          -2.00      -2.00      0          0
-IC-240           PL422+24         PL430+48         824.00     0          -2.00      -2.00      0          0
-IC-250           PL430+48         PL438+73         825.00     0          -2.00      -2.00      0          0
-IC-260           PL438+73         PL447+00         827.00     0          -2.00      -2.00      0          0
-IC-270           PL447+00         PL455+23         823.00     0          -2.00      -2.00      0          0
-IC-280           PL455+23         PL463+47         824.00     0          -2.00      -2.00      0          0
-IC-290           PL463+47         PL466+50         303.00     0          -2.00      -2.00      0          0
+IC-210           PL402+50         PL405+75         325.00     0.0130     0          0          0          0
+IC-220           PL405+75         PL414+00         825.00     0.0130     0          0          0          0
+IC-230           PL414+00         PL422+24         824.00     0.0130     0          0          0          0
+IC-240           PL422+24         PL430+48         824.00     0.0130     0          0          0          0
+IC-250           PL430+48         PL438+73         825.00     0.0130     0          0          0          0
+IC-260           PL438+73         PL447+00         827.00     0.0130     0          0          0          0
+IC-270           PL447+00         PL455+23         823.00     0.0130     0          0          0          0
+IC-280           PL455+23         PL463+47         824.00     0.0130     0          0          0          0
+IC-290           PL463+47         PL466+50         303.00     0.0130     0          0          0          0
 IC-G333A         G333AW           G333A            75.00      0.0240     6.00       6.00       0          0
 IC-G333B         G333BW           G333B            75.00      0.0240     6.00       6.00       0          0
 IC-G333C         G333CW           G333C            75.00      0.0240     6.00       6.00       0          0
@@ -149,7 +165,7 @@ IC-G333E         G333EW           G333E            75.00      0.0240     6.00   
 IC-G333F         G333FW           G333F            75.00      0.0240     6.00       6.00       0          0
 IC-G333G         G333GW           G333G            75.00      0.0240     6.00       6.00       0          0
 IC-G333H         G333HW           G333H            75.00      0.0240     5.50       5.50       0          0
-168              PL239+00         ZREF=13.8        0          0          0          0          0          0
+168              PL239+00         ZREF=13.8        100.00     0.0130     0          0          0          0
 
 [WEIRS]
 ;;Name           From             To               Type       CrestHt    Qcoeff     Gated    EndCon   EndCoeff   Surcharge
@@ -166,33 +182,33 @@ IC-G333HW        PL463+47         G333HW           TRANSVERSE 12.00      1.840  
 [XSECTIONS]
 ;;Link           Shape        Geom1      Geom2      Geom3      Geom4      Barrels
 ;;-------------- ------------ ---------- ---------- ---------- ---------- ----------
-IC-10            IRREGULAR    0          0          0          0          1
-IC-20            IRREGULAR    0          0          0          0          1
-IC-30            IRREGULAR    0          0          0          0          1
-IC-40            IRREGULAR    0          0          0          0          1
-IC-50            IRREGULAR    0          0          0          0          1
-IC-60            IRREGULAR    0          0          0          0          1
-IC-70            IRREGULAR    0          0          0          0          1
+IC-10            TRAPEZOIDAL  1.00       10.00      2          2          1
+IC-20            TRAPEZOIDAL  1.00       10.00      2          2          1
+IC-30            TRAPEZOIDAL  1.00       10.00      2          2          1
+IC-40            TRAPEZOIDAL  1.00       10.00      2          2          1
+IC-50            TRAPEZOIDAL  1.00       10.00      2          2          1
+IC-60            TRAPEZOIDAL  1.00       10.00      2          2          1
+IC-70            TRAPEZOIDAL  1.00       10.00      2          2          1
 IC-G329A         CIRCULAR     6.00       0          0          0          1
 IC-G329B         CIRCULAR     6.00       0          0          0          1
 IC-G329C         CIRCULAR     6.00       0          0          0          1
 IC-G329D         CIRCULAR     6.00       0          0          0          1
 IC-G329E         CIRCULAR     6.00       0          0          0          1
 IC-G329F         CIRCULAR     6.00       0          0          0          1
-IC-80            IRREGULAR    0          0          0          0          1
-IC-85            IRREGULAR    0          0          0          0          1
-IC-90            IRREGULAR    0          0          0          0          1
-IC-100           IRREGULAR    0          0          0          0          1
-IC-110           IRREGULAR    0          0          0          0          1
-IC-120           IRREGULAR    0          0          0          0          1
-IC-130           IRREGULAR    0          0          0          0          1
-IC-140           IRREGULAR    0          0          0          0          1
-IC-150           IRREGULAR    0          0          0          0          1
-IC-160           IRREGULAR    0          0          0          0          1
-IC-170           IRREGULAR    0          0          0          0          1
-IC-180           IRREGULAR    0          0          0          0          1
-IC-190           IRREGULAR    0          0          0          0          1
-IC-200           IRREGULAR    0          0          0          0          1
+IC-80            TRAPEZOIDAL  1.00       10.00      2          2          1
+IC-85            TRAPEZOIDAL  1.00       10.00      2          2          1
+IC-90            TRAPEZOIDAL  1.00       10.00      2          2          1
+IC-100           TRAPEZOIDAL  1.00       10.00      2          2          1
+IC-110           TRAPEZOIDAL  1.00       10.00      2          2          1
+IC-120           TRAPEZOIDAL  1.00       10.00      2          2          1
+IC-130           TRAPEZOIDAL  1.00       10.00      2          2          1
+IC-140           TRAPEZOIDAL  1.00       10.00      2          2          1
+IC-150           TRAPEZOIDAL  1.00       10.00      2          2          1
+IC-160           TRAPEZOIDAL  1.00       10.00      2          2          1
+IC-170           TRAPEZOIDAL  1.00       10.00      2          2          1
+IC-180           TRAPEZOIDAL  1.00       10.00      2          2          1
+IC-190           TRAPEZOIDAL  1.00       10.00      2          2          1
+IC-200           TRAPEZOIDAL  1.00       10.00      2          2          1
 IC-G331B         CIRCULAR     5.50       0          0          0          1
 IC-G331C         CIRCULAR     5.50       0          0          0          1
 IC-G331D         CIRCULAR     5.50       0          0          0          1
@@ -205,15 +221,15 @@ IC-G331J         CIRCULAR     6.00       0          0          0          1
 IC-G331K         CIRCULAR     6.00       0          0          0          1
 IC-G331L         CIRCULAR     6.00       0          0          0          1
 IC-G331A         CIRCULAR     5.50       0          0          0          1
-IC-210           IRREGULAR    0          0          0          0          1
-IC-220           IRREGULAR    0          0          0          0          1
-IC-230           IRREGULAR    0          0          0          0          1
-IC-240           IRREGULAR    0          0          0          0          1
-IC-250           IRREGULAR    0          0          0          0          1
-IC-260           IRREGULAR    0          0          0          0          1
-IC-270           IRREGULAR    0          0          0          0          1
-IC-280           IRREGULAR    0          0          0          0          1
-IC-290           IRREGULAR    0          0          0          0          1
+IC-210           TRAPEZOIDAL  1.00       10.00      2          2          1
+IC-220           TRAPEZOIDAL  1.00       10.00      2          2          1
+IC-230           TRAPEZOIDAL  1.00       10.00      2          2          1
+IC-240           TRAPEZOIDAL  1.00       10.00      2          2          1
+IC-250           TRAPEZOIDAL  1.00       10.00      2          2          1
+IC-260           TRAPEZOIDAL  1.00       10.00      2          2          1
+IC-270           TRAPEZOIDAL  1.00       10.00      2          2          1
+IC-280           TRAPEZOIDAL  1.00       10.00      2          2          1
+IC-290           TRAPEZOIDAL  1.00       10.00      2          2          1
 IC-G333A         CIRCULAR     5.50       0          0          0          1
 IC-G333B         CIRCULAR     5.50       0          0          0          1
 IC-G333C         CIRCULAR     5.50       0          0          0          1
@@ -222,15 +238,15 @@ IC-G333E         CIRCULAR     5.50       0          0          0          1
 IC-G333F         CIRCULAR     5.50       0          0          0          1
 IC-G333G         CIRCULAR     5.50       0          0          0          1
 IC-G333H         CIRCULAR     6.00       0          0          0          1
-168              CIRCULAR     0          0          0          0          1
-IC-G333AW        RECT_OPEN    0          30.00      0          0          
-345.1            RECT_OPEN    0          30.00      0          0          
-349.1            RECT_OPEN    0          30.00      0          0          
-353.1            RECT_OPEN    0          30.00      0          0          
-357.1            RECT_OPEN    0          30.00      0          0          
-361.1            RECT_OPEN    0          30.00      0          0          
-365.1            RECT_OPEN    0          30.00      0          0          
-IC-G333HW        RECT_OPEN    0          36.00      0          0          
+168              CIRCULAR     1.00       0          0          0          1
+IC-G333AW        RECT_OPEN    1.00       30.00      0          0
+345.1            RECT_OPEN    1.00       30.00      0          0
+349.1            RECT_OPEN    1.00       30.00      0          0
+353.1            RECT_OPEN    1.00       30.00      0          0
+357.1            RECT_OPEN    1.00       30.00      0          0
+361.1            RECT_OPEN    1.00       30.00      0          0
+365.1            RECT_OPEN    1.00       30.00      0          0
+IC-G333HW        RECT_OPEN    1.00       36.00      0          0
 
 [LOSSES]
 ;;Link           Inlet      Outlet     Average    Flap Gate

@@ -2,27 +2,266 @@
   EPA STORM WATER MANAGEMENT MODEL - VERSION 5.2 (Build 5.2.4)
   ------------------------------------------------------------
 
+  TRENTON TEST 
   
-  ERROR 209: undefined object ? at line 51 of [CONDUIT] section:
-  440              ?                ?                150.00     0.0130     562.44     561.93     0          0
-
+  ****************
+  Analysis Options
+  ****************
+  Flow Units ............... CFS
+  Process Models:
+    Rainfall/Runoff ........ NO
+    RDII ................... NO
+    Snowmelt ............... NO
+    Groundwater ............ NO
+    Flow Routing ........... YES
+    Ponding Allowed ........ NO
+    Water Quality .......... NO
+  Flow Routing Method ...... DYNWAVE
+  Surcharge Method ......... EXTRAN
+  Starting Date ............ 01/01/2001 00:00:00
+  Ending Date .............. 01/02/2001 00:00:00
+  Antecedent Dry Days ...... 0.0
+  Report Time Step ......... 00:15:00
+  Routing Time Step ........ 10.00 sec
+  Variable Time Step ....... YES
+  Maximum Trials ........... 50
+  Number of Threads ........ 1
+  Head Tolerance ........... 0.005000 ft
   
-  ERROR 209: undefined object a at line 65 of [PUMP] section:
-  q                a                z                PC_q       ON       561.07     557.57    
-
   
-  ERROR 211: invalid number  at line 83 of [XSECT] section:
-  GLZ1             RECT_CLOSED  0          0          0          0          
-
+  **************************        Volume        Volume
+  Flow Routing Continuity        acre-feet      10^6 gal
+  **************************     ---------     ---------
+  Dry Weather Inflow .......         0.000         0.000
+  Wet Weather Inflow .......         0.000         0.000
+  Groundwater Inflow .......         0.000         0.000
+  RDII Inflow ..............         0.000         0.000
+  External Inflow ..........         3.907         1.273
+  External Outflow .........         1.853         0.604
+  Flooding Loss ............         0.755         0.246
+  Evaporation Loss .........         0.000         0.000
+  Exfiltration Loss ........         0.000         0.000
+  Initial Stored Volume ....         0.000         0.000
+  Final Stored Volume ......         0.283         0.092
+  Continuity Error (%) .....        26.004
   
-  ERROR 211: invalid number  at line 84 of [XSECT] section:
-  GLAA15           RECT_CLOSED  0          0          0          0          
-
   
-  ERROR 211: invalid number  at line 85 of [XSECT] section:
-  LGJ2             RECT_CLOSED  0          0          0          0          
+  *************************
+  Highest Continuity Errors
+  *************************
+  Node AA9 (100.00%)
+  Node J2 (82.30%)
+  Node Z1 (41.56%)
+  Node AA14 (15.90%)
+  Node AA14-S (14.63%)
+  
+  
+  ***************************
+  Time-Step Critical Elements
+  ***************************
+  None
+  
+  
+  ********************************
+  Highest Flow Instability Indexes
+  ********************************
+  All links are stable.
+  
+  
+  *********************************
+  Most Frequent Nonconverging Nodes
+  *********************************
+  Node AA6-S (0.07%)
+  Node AA14 (0.02%)
+  Node AA14-S (0.02%)
+  Node AA8A (0.02%)
+  Node J2 (0.01%)
+  
+  
+  *************************
+  Routing Time Step Summary
+  *************************
+  Minimum Time Step           :     9.50 sec
+  Average Time Step           :    10.00 sec
+  Maximum Time Step           :    10.00 sec
+  % of Time in Steady State   :     0.00
+  Average Iterations per Step :     2.04
+  % of Steps Not Converging   :     0.07
+  Time Step Frequencies       :
+     10.000 -  5.493 sec      :   100.00 %
+      5.493 -  3.017 sec      :     0.00 %
+      3.017 -  1.657 sec      :     0.00 %
+      1.657 -  0.910 sec      :     0.00 %
+      0.910 -  0.500 sec      :     0.00 %
+  
+  
+  ******************
+  Node Depth Summary
+  ******************
+  
+  ---------------------------------------------------------------------------------
+                                 Average  Maximum  Maximum  Time of Max    Reported
+                                   Depth    Depth      HGL   Occurrence   Max Depth
+  Node                 Type         Feet     Feet     Feet  days hr:min        Feet
+  ---------------------------------------------------------------------------------
+  AA15                 JUNCTION   527.53   563.03  1146.97     0  06:04      563.03
+  J2                   JUNCTION   332.54   563.22  1146.24     0  21:20      563.22
+  AA8A                 JUNCTION   549.20   572.60  1158.38     0  03:27      572.60
+  AA9                  JUNCTION    10.77   121.67   706.13     1  00:00      121.67
+  AA14                 JUNCTION   384.97   562.92  1144.45     0  15:02      562.92
+  Z1                   JUNCTION   452.37   570.90  1152.70     0  10:09      570.90
+  AA14-S               JUNCTION   456.18   562.93  1144.46     0  15:05      562.93
+  a                    JUNCTION     0.00     0.00     0.00     0  00:00        0.00
+  z                    JUNCTION     0.00     0.00     0.00     0  00:00        0.00
+  AA6-S                OUTFALL      0.00     0.00   585.78     0  00:00        0.00
+  VHPS                 STORAGE      5.22    10.00   594.50     0  13:14       10.00
+  GZ1                  STORAGE      0.00     0.00  1200.00     0  00:00        0.00
+  GAA15                STORAGE      0.00     0.00  1200.00     0  00:00        0.00
+  GJ2                  STORAGE      0.00     0.00  1200.00     0  00:00        0.00
+  
+  
+  *******************
+  Node Inflow Summary
+  *******************
+  
+  -------------------------------------------------------------------------------------------------
+                                  Maximum  Maximum                  Lateral       Total        Flow
+                                  Lateral    Total  Time of Max      Inflow      Inflow     Balance
+                                   Inflow   Inflow   Occurrence      Volume      Volume       Error
+  Node                 Type           CFS      CFS  days hr:min    10^6 gal    10^6 gal     Percent
+  -------------------------------------------------------------------------------------------------
+  AA15                 JUNCTION      0.65     0.65     0  00:00        0.42        0.42      14.489
+  J2                   JUNCTION      0.10     0.10     0  00:00      0.0646      0.0646     465.085
+  AA8A                 JUNCTION      1.02     1.02     0  00:00       0.659       0.659       9.182
+  AA9                  JUNCTION      0.00     0.10     0  21:20           0      0.0114   11436.687 gal
+  AA14                 JUNCTION      0.00     0.85     0  13:22           0       0.389      18.906
+  Z1                   JUNCTION      0.20     0.20     0  00:00       0.129       0.129      71.126
+  AA14-S               JUNCTION      0.00     0.66     0  06:04           0       0.367      17.131
+  a                    JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  z                    JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  AA6-S                OUTFALL       0.00     1.02     0  03:30           0       0.604       0.000
+  VHPS                 STORAGE       0.00     0.85     0  15:05           0       0.327       0.011
+  GZ1                  STORAGE       0.00     0.00     0  00:00           0           0       0.000 gal
+  GAA15                STORAGE       0.00     0.00     0  00:00           0           0       0.000 gal
+  GJ2                  STORAGE       0.00     0.00     0  00:00           0           0       0.000 gal
+  
+  
+  **********************
+  Node Surcharge Summary
+  **********************
+  
+  Surcharging occurs when water rises above the top of the highest conduit.
+  ---------------------------------------------------------------------
+                                               Max. Height   Min. Depth
+                                   Hours       Above Crown    Below Rim
+  Node                 Type      Surcharged           Feet         Feet
+  ---------------------------------------------------------------------
+  a                    JUNCTION       24.00          0.000        0.000
+  z                    JUNCTION       24.00          0.000        0.000
+  
+  
+  *********************
+  Node Flooding Summary
+  *********************
+  
+  Flooding refers to all water that overflows a node, whether it ponds or not.
+  --------------------------------------------------------------------------
+                                                             Total   Maximum
+                                 Maximum   Time of Max       Flood    Ponded
+                        Hours       Rate    Occurrence      Volume     Depth
+  Node                 Flooded       CFS   days hr:min    10^6 gal      Feet
+  --------------------------------------------------------------------------
+  VHPS                   10.76      0.85      0  15:05       0.246     0.000
+  
+  
+  **********************
+  Storage Volume Summary
+  **********************
+  
+  ------------------------------------------------------------------------------------------------
+                         Average    Avg   Evap  Exfil     Maximum    Max    Time of Max    Maximum
+                          Volume   Pcnt   Pcnt   Pcnt      Volume   Pcnt     Occurrence    Outflow
+  Storage Unit          1000 ft³   Full   Loss   Loss    1000 ft³   Full    days hr:min        CFS
+  ------------------------------------------------------------------------------------------------
+  VHPS                     5.643   52.2    0.0    0.0      10.800  100.0       0  13:14       0.00
+  GZ1                      0.000    0.0    0.0    0.0       0.000    0.0       0  00:00       0.00
+  GAA15                    0.000    0.0    0.0    0.0       0.000    0.0       0  00:00       0.00
+  GJ2                      0.000    0.0    0.0    0.0       0.000    0.0       0  00:00       0.00
+  
+  
+  ***********************
+  Outfall Loading Summary
+  ***********************
+  
+  -----------------------------------------------------------
+                         Flow       Avg       Max       Total
+                         Freq      Flow      Flow      Volume
+  Outfall Node           Pcnt       CFS       CFS    10^6 gal
+  -----------------------------------------------------------
+  AA6-S                 91.82      1.02      1.02       0.604
+  -----------------------------------------------------------
+  System                91.82      1.02      1.02       0.604
+  
+  
+  ********************
+  Link Flow Summary
+  ********************
+  
+  -----------------------------------------------------------------------------
+                                 Maximum  Time of Max   Maximum    Max/    Max/
+                                  |Flow|   Occurrence   |Veloc|    Full    Full
+  Link                 Type          CFS  days hr:min    ft/sec    Flow   Depth
+  -----------------------------------------------------------------------------
+  LAA9                 CONDUIT      0.10     0  21:20      1.23    0.01    0.06
+  LVHPS1               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  LAA14-2              CONDUIT      0.20     0  10:10      3.86    0.00    0.05
+  LAA6-S               CONDUIT      1.02     0  03:30      1.79    0.02    0.09
+  440                  CONDUIT      0.76     0  06:03      3.15    0.02    0.25
+  LVHPS2               CONDUIT      0.85     0  15:05      0.78    0.05    0.21
+  LAA14-1              CONDUIT      0.66     0  06:04      3.58    0.01    0.11
+  GLZ1                 ORIFICE      0.00     0  00:00                      0.00
+  GLAA15               ORIFICE      0.00     0  00:00                      0.00
+  LGJ2                 ORIFICE      0.00     0  00:00                      0.00
+  q                    PUMP         0.00     0  00:00              0.00
+  
+  
+  ***************************
+  Flow Classification Summary
+  ***************************
+  
+  -------------------------------------------------------------------------------------
+                      Adjusted    ---------- Fraction of Time in Flow Class ---------- 
+                       /Actual         Up    Down  Sub   Sup   Up    Down  Norm  Inlet 
+  Conduit               Length    Dry  Dry   Dry   Crit  Crit  Crit  Crit  Ltd   Ctrl  
+  -------------------------------------------------------------------------------------
+  LAA9                    1.00   0.82  0.00  0.00  0.00  0.00  0.00  0.18  0.00  0.00
+  LVHPS1                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  LAA14-2                 1.00   0.42  0.00  0.00  0.00  0.00  0.00  0.58  0.00  0.00
+  LAA6-S                  1.00   0.08  0.00  0.00  0.00  0.00  0.00  0.92  0.00  0.00
+  440                     1.00   0.25  0.00  0.00  0.62  0.00  0.00  0.13  0.01  0.00
+  LVHPS2                  1.00   0.38  0.01  0.00  0.00  0.00  0.62  0.00  0.00  0.00
+  LAA14-1                 1.00   0.13  0.00  0.00  0.60  0.14  0.00  0.13  0.75  0.00
+  
+  
+  *************************
+  Conduit Surcharge Summary
+  *************************
+  
+  No conduits were surcharged.
+  
+  
+  ***************
+  Pumping Summary
+  ***************
+  
+  ---------------------------------------------------------------------------------------------------------
+                                                  Min       Avg       Max     Total     Power    % Time Off
+                        Percent   Number of      Flow      Flow      Flow    Volume     Usage    Pump Curve
+  Pump                 Utilized   Start-Ups       CFS       CFS       CFS  10^6 gal     Kw-hr    Low   High
+  ---------------------------------------------------------------------------------------------------------
+  q                        0.00           0      0.00      0.00      0.00     0.000      0.00    0.0    0.0
+  
 
-
-  Analysis begun on:  Mon Jul 13 08:04:11 2026
-  Analysis ended on:  Mon Jul 13 08:04:11 2026
+  Analysis begun on:  Sun Jul 19 15:21:54 2026
+  Analysis ended on:  Sun Jul 19 15:21:54 2026
   Total elapsed time: < 1 sec

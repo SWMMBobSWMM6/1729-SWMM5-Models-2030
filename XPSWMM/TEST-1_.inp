@@ -20,6 +20,18 @@ INERTIAL_DAMPING     PARTIAL
 NORMAL_FLOW_LIMITED  BOTH
 MAX_TRIALS           50
 HEAD_TOLERANCE       .001
+START_DATE           01/01/2001
+START_TIME           00:00:00
+REPORT_START_DATE    01/01/2001
+REPORT_START_TIME    00:00:00
+END_DATE             01/02/2001
+END_TIME             00:00:00
+SWEEP_START          01/01
+SWEEP_END            12/31
+DRY_DAYS             0
+REPORT_STEP          00:15:00
+WET_STEP             00:05:00
+DRY_STEP             01:00:00
 
 [JUNCTIONS]
 ;;Name           Elev       MaxDepth   InitDepth  SurDepth   Aponded
@@ -28,15 +40,20 @@ HEAD_TOLERANCE       .001
 11               10.50      0          0          0          0
 piper            10.00      0          0          0          0
 cape             10.00      0          0          0          0
-DUMY             15.00      0          0          0          0
 20               10.50      0          0          0          0
+d/s_box          2.29       0          0          0          0
+
+[OUTFALLS]
+;;Name           Elev       Type       Stage      Gated
+;;-------------- ---------- ---------- ---------- -----
+DUMY             15.00      FREE                  NO
 
 [STORAGE]
 ;;Name           Elev       MaxDepth   InitDepth  Shape      Curve/Params
 ;;-------------- ---------- ---------- ---------- ---------- ----------
-WETLAND          10.00      0          1.00       FUNCTIONAL 0 0          0
-d/s              10.00      0          0.01       FUNCTIONAL 0 0          0
-lakesway         15.00      0          0          FUNCTIONAL 0 0          0
+WETLAND          10.00      10.00      1.00       FUNCTIONAL 1000.00 0          0
+d/s              10.00      10.00      0.01       FUNCTIONAL 1000.00 0          0
+lakesway         15.00      10.00      0          FUNCTIONAL 1000.00 0          0
 
 [CONDUITS]
 ;;Name           From             To               Length     Roughness  InOffset   OutOffset  InitFlow   MaxFlow
@@ -50,23 +67,23 @@ DUMLAK           lakesway         DUMY             30.00      0.0140     2.20   
 [WEIRS]
 ;;Name           From             To               Type       CrestHt    Qcoeff     Gated    EndCon   EndCoeff   Surcharge
 ;;-------------- ---------------- ---------------- ---------- ---------- ---------- -------- -------- ---------- ----------
-C-11             ?                ?                TRANSVERSE 4.75       1.840      NO       0        0          YES
-WETLAN           ?                ?                TRANSVERSE 3.75       1.840      NO       0        0          YES
-d/s              d/s box          ?                TRANSVERSE 3.77       1.840      NO       0        0          YES
-DIVERN           ?                ?                V-NOTCH    3.60       1.840      NO       0        0          YES
+C-11             11               WETLAND          TRANSVERSE 4.75       1.840      NO       0        0          YES
+WETLAN           WETLAND          d/s              TRANSVERSE 3.75       1.840      NO       0        0          YES
+d/s              d/s_box          lakesway         TRANSVERSE 3.77       1.840      NO       0        0          YES
+DIVERN           20               d/s              V-NOTCH    3.60       1.840      NO       0        0          YES
 
 [XSECTIONS]
 ;;Link           Shape        Geom1      Geom2      Geom3      Geom4      Barrels
 ;;-------------- ------------ ---------- ---------- ---------- ---------- ----------
-PIP-WT           TRAPEZOIDAL  2.00       30.00      0          0          5
-CAP-WT           TRAPEZOIDAL  2.50       30.00      0          0          5
-DUMLAK           TRAPEZOIDAL  7.00       30.00      0          0          1
-10-20            TRAPEZOIDAL  2.40       60.00      0          0          1
-20-11            TRAPEZOIDAL  2.40       70.00      0          0          1
-C-11             RECT_OPEN    0          50.00      0          0          
-WETLAN           RECT_OPEN    0          100.00     0          0          
-d/s              RECT_OPEN    0          100.00     0          0          
-DIVERN           RECT_OPEN    0          40.00      0          0          
+PIP-WT           TRAPEZOIDAL  2.00       30.00      1          1          5
+CAP-WT           TRAPEZOIDAL  2.50       30.00      1          1          5
+DUMLAK           TRAPEZOIDAL  7.00       30.00      1          1          1
+10-20            TRAPEZOIDAL  2.40       60.00      1          1          1
+20-11            TRAPEZOIDAL  2.40       70.00      1          1          1
+C-11             RECT_OPEN    1.00       50.00      0          0
+WETLAN           RECT_OPEN    1.00       100.00     0          0
+d/s              RECT_OPEN    1.00       100.00     0          0
+DIVERN           TRIANGULAR   1.00       40.00      0          0
 
 [LOSSES]
 ;;Link           Inlet      Outlet     Average    Flap Gate

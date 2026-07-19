@@ -20,13 +20,24 @@ INERTIAL_DAMPING     PARTIAL
 NORMAL_FLOW_LIMITED  BOTH
 MAX_TRIALS           50
 HEAD_TOLERANCE       .001
+START_DATE           01/01/2001
+START_TIME           00:00:00
+REPORT_START_DATE    01/01/2001
+REPORT_START_TIME    00:00:00
+END_DATE             01/02/2001
+END_TIME             00:00:00
+SWEEP_START          01/01
+SWEEP_END            12/31
+DRY_DAYS             0
+REPORT_STEP          00:15:00
+WET_STEP             00:05:00
+DRY_STEP             01:00:00
 
 [JUNCTIONS]
 ;;Name           Elev       MaxDepth   InitDepth  SurDepth   Aponded
 ;;-------------- ---------- ---------- ---------- ---------- ----------
 n3               858.04     0          0          0          0
 n2               858.00     0          0          0          0
-n1-OUTFALL       858.00     0          0          0          0
 n8               858.00     0          0          0          0
 n5               857.82     0          0          0          0
 n4               857.66     0          0          0          0
@@ -45,22 +56,27 @@ n15              857.63     0          0          0          0
 n14              857.80     0          0          0          0
 n19              857.25     0          0          0          0
 
+[OUTFALLS]
+;;Name           Elev       Type       Stage      Gated
+;;-------------- ---------- ---------- ---------- -----
+n1-OUTFALL       858.00     FREE                  NO
+
 [STORAGE]
 ;;Name           Elev       MaxDepth   InitDepth  Shape      Curve/Params
 ;;-------------- ---------- ---------- ---------- ---------- ----------
-n7               859.00     0          0          FUNCTIONAL 0 0          0
-n6               858.60     0          0          FUNCTIONAL 0 0          0
-n26              858.08     1.00       0          FUNCTIONAL 0 0          0
-n30              858.70     1.00       0          FUNCTIONAL 0 0          0
-n31              858.80     1.00       0          FUNCTIONAL 0 0          0
-n32              858.64     1.00       0          FUNCTIONAL 0 0          0
-n33              858.33     0          0          FUNCTIONAL 0 0          0
-n34              858.80     0          0          FUNCTIONAL 0 0          0
-n35              858.66     0          0          FUNCTIONAL 0 0          0
-n27              858.42     0          0          FUNCTIONAL 0 0          0
-n28              857.57     0          0          FUNCTIONAL 0 0          0
-n29              858.28     0          0          FUNCTIONAL 0 0          0
-n22              858.34     0          0          FUNCTIONAL 0 0          0
+n7               859.00     10.00      0          FUNCTIONAL 1000.00 0          0
+n6               858.60     10.00      0          FUNCTIONAL 1000.00 0          0
+n26              858.08     1.00       0          FUNCTIONAL 1000.00 0          0
+n30              858.70     1.00       0          FUNCTIONAL 1000.00 0          0
+n31              858.80     1.00       0          FUNCTIONAL 1000.00 0          0
+n32              858.64     1.00       0          FUNCTIONAL 1000.00 0          0
+n33              858.33     10.00      0          FUNCTIONAL 1000.00 0          0
+n34              858.80     10.00      0          FUNCTIONAL 1000.00 0          0
+n35              858.66     10.00      0          FUNCTIONAL 1000.00 0          0
+n27              858.42     10.00      0          FUNCTIONAL 1000.00 0          0
+n28              857.57     10.00      0          FUNCTIONAL 1000.00 0          0
+n29              858.28     10.00      0          FUNCTIONAL 1000.00 0          0
+n22              858.34     10.00      0          FUNCTIONAL 1000.00 0          0
 
 [CONDUITS]
 ;;Name           From             To               Length     Roughness  InOffset   OutOffset  InitFlow   MaxFlow

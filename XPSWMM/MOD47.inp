@@ -18,36 +18,52 @@ ROUTING_STEP         00:00:15
 VARIABLE_STEP        0.75
 INERTIAL_DAMPING     PARTIAL
 NORMAL_FLOW_LIMITED  BOTH
+START_DATE           01/01/2001
+START_TIME           00:00:00
+REPORT_START_DATE    01/01/2001
+REPORT_START_TIME    00:00:00
+END_DATE             01/02/2001
+END_TIME             00:00:00
+SWEEP_START          01/01
+SWEEP_END            12/31
+DRY_DAYS             0
+REPORT_STEP          00:15:00
+WET_STEP             00:05:00
+DRY_STEP             01:00:00
 
 [JUNCTIONS]
 ;;Name           Elev       MaxDepth   InitDepth  SurDepth   Aponded
 ;;-------------- ---------- ---------- ---------- ---------- ----------
 junction         100.00     0          0          0          0
-Outfall          100.00     0          0          0          0
+
+[OUTFALLS]
+;;Name           Elev       Type       Stage      Gated
+;;-------------- ---------- ---------- ---------- -----
+Outfall          100.00     FREE                  NO
 
 [STORAGE]
 ;;Name           Elev       MaxDepth   InitDepth  Shape      Curve/Params
 ;;-------------- ---------- ---------- ---------- ---------- ----------
-Storage          100.00     0          5.00       FUNCTIONAL 0 0          0
-Pond             100.00     0          2.00       FUNCTIONAL 0 0          0
+Storage          100.00     10.00      5.00       FUNCTIONAL 1000.00 0          0
+Pond             100.00     10.00      2.00       FUNCTIONAL 1000.00 0          0
 
 [CONDUITS]
 ;;Name           From             To               Length     Roughness  InOffset   OutOffset  InitFlow   MaxFlow
 ;;-------------- ---------------- ---------------- ---------- ---------- ---------- ---------- ---------- ----------
 Trap             junction         Outfall          150.00     0.0350     93.00      91.00      0          0
-8                Storage          Pond             0          0          0          0          0          0
+8                Storage          Pond             100.00     0.0130     0          0          0          0
 
-[ORIFICES]
-;;Name           From             To               Type       Offset     Qcoeff     Gated    CloseTime
-;;-------------- ---------------- ---------------- ---------- ---------- ---------- -------- ----------
-Weirs            Storage          junction         SIDE       0          0.650      NO       0
+[WEIRS]
+;;Name           From             To               Type       CrestHt    Qcoeff     Gated    EndCon   EndCoeff   Surcharge
+;;-------------- ---------------- ---------------- ---------- ---------- ---------- -------- -------- ---------- ----------
+Weirs            Storage          junction         TRANSVERSE 96.00      1.840      NO       0        0          YES
 
 [XSECTIONS]
 ;;Link           Shape        Geom1      Geom2      Geom3      Geom4      Barrels
 ;;-------------- ------------ ---------- ---------- ---------- ---------- ----------
-Trap             TRAPEZOIDAL  3.00       20.00      0          0          1
-8                CIRCULAR     0          0          0          0          1
-Weirs            RECT_CLOSED  0          0          0          0          
+Trap             TRAPEZOIDAL  3.00       20.00      1          1          1
+8                CIRCULAR     1.00       0          0          0          1
+Weirs            RECT_OPEN    1.00       22.00      0          0
 
 [LOSSES]
 ;;Link           Inlet      Outlet     Average    Flap Gate

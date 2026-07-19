@@ -18,27 +18,45 @@ ROUTING_STEP         00:00:30
 VARIABLE_STEP        0.75
 INERTIAL_DAMPING     PARTIAL
 NORMAL_FLOW_LIMITED  BOTH
+START_DATE           01/01/2001
+START_TIME           00:00:00
+REPORT_START_DATE    01/01/2001
+REPORT_START_TIME    00:00:00
+END_DATE             01/02/2001
+END_TIME             00:00:00
+SWEEP_START          01/01
+SWEEP_END            12/31
+DRY_DAYS             0
+REPORT_STEP          00:15:00
+WET_STEP             00:05:00
+DRY_STEP             01:00:00
 
 [JUNCTIONS]
 ;;Name           Elev       MaxDepth   InitDepth  SurDepth   Aponded
 ;;-------------- ---------- ---------- ---------- ---------- ----------
 tw3              540.00     0          0          0          0
-tw2              540.00     0          0          0          0
 tw1              540.00     0          0          0          0
 tw4              540.00     0          0          0          0
 tw5              540.00     0          0          0          0
+PIPE_66          513.97     0          0          0          0
+PIPE_60a         513.75     0          0          0          0
+
+[OUTFALLS]
+;;Name           Elev       Type       Stage      Gated
+;;-------------- ---------- ---------- ---------- -----
+tw2              540.00     FREE                  NO
 
 [STORAGE]
 ;;Name           Elev       MaxDepth   InitDepth  Shape      Curve/Params
 ;;-------------- ---------- ---------- ---------- ---------- ----------
-HW               532.50     0          0          FUNCTIONAL 400.00 0          0
+HW               532.50     10.00      0          FUNCTIONAL 400.00 0          0
 
 [CONDUITS]
 ;;Name           From             To               Length     Roughness  InOffset   OutOffset  InitFlow   MaxFlow
 ;;-------------- ---------------- ---------------- ---------- ---------- ---------- ---------- ---------- ----------
 PIPE_72          PIPE_66          PIPE_60a         710.00     0.0120     513.97     513.75     0          0
 pipe_66          HW               tw2              710.00     0.0120     513.97     513.75     0          0
-pipe_72          HW               tw1              710.00     0.0120     513.97     513.75     0          0
+pipe_72_2        HW               tw1              710.00     0.0120     513.97     513.75     0          0
 pipe_60b         HW               tw4              710.00     0.0120     515.50     515.00     0          0
 pipe_48          HW               tw5              710.00     0.0120     516.50     515.24     0          0
 
@@ -47,7 +65,7 @@ pipe_48          HW               tw5              710.00     0.0120     516.50 
 ;;-------------- ------------ ---------- ---------- ---------- ---------- ----------
 PIPE_72          CIRCULAR     6.00       0          0          0          1
 pipe_66          CIRCULAR     5.50       0          0          0          1
-pipe_72          CIRCULAR     6.00       0          0          0          1
+pipe_72_2        CIRCULAR     6.00       0          0          0          1
 pipe_60b         CIRCULAR     5.00       0          0          0          1
 pipe_48          CIRCULAR     4.00       0          0          0          1
 
@@ -56,7 +74,7 @@ pipe_48          CIRCULAR     4.00       0          0          0          1
 ;;-------------- ---------- ---------- ---------- ----------
 PIPE_72          0          0          0          NO
 pipe_66          0          0          0          NO
-pipe_72          0          0          0          NO
+pipe_72_2        0          0          0          NO
 pipe_60b         0          0          0          NO
 pipe_48          0          0          0          NO
 

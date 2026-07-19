@@ -20,6 +20,18 @@ INERTIAL_DAMPING     PARTIAL
 NORMAL_FLOW_LIMITED  BOTH
 MAX_TRIALS           50
 HEAD_TOLERANCE       0.0033
+START_DATE           01/01/2001
+START_TIME           00:00:00
+REPORT_START_DATE    01/01/2001
+REPORT_START_TIME    00:00:00
+END_DATE             01/02/2001
+END_TIME             00:00:00
+SWEEP_START          01/01
+SWEEP_END            12/31
+DRY_DAYS             0
+REPORT_STEP          00:15:00
+WET_STEP             00:05:00
+DRY_STEP             01:00:00
 
 [JUNCTIONS]
 ;;Name           Elev       MaxDepth   InitDepth  SurDepth   Aponded
@@ -71,16 +83,21 @@ MH12             720.00     0          0          0          0
 OUT1             712.00     0          0          0          0
 RISRBX1          660.50     0          0          0          0
 DMY              600.00     0          0          0          0
-OFALL1           545.00     0          0          0          0
 RISRBX2          592.50     0          0          0          0
 OFALL2           543.00     0          0          0          0
+culvert          560.50     0          0          0          0
+
+[OUTFALLS]
+;;Name           Elev       Type       Stage      Gated
+;;-------------- ---------- ---------- ---------- -----
+OFALL1           545.00     FREE                  NO
 
 [STORAGE]
 ;;Name           Elev       MaxDepth   InitDepth  Shape      Curve/Params
 ;;-------------- ---------- ---------- ---------- ---------- ----------
-POND             670.00     0          0          FUNCTIONAL 0 0          0
-LAKE             592.50     0          24.00      FUNCTIONAL 0 0          0
-LAKE             592.50     0          37.00      FUNCTIONAL 0 0          0
+POND             670.00     10.00      0          FUNCTIONAL 1000.00 0          0
+LAKE             592.50     10.00      10.00      FUNCTIONAL 1000.00 0          0
+LAKE_2           592.50     10.00      10.00      FUNCTIONAL 1000.00 0          0
 
 [CONDUITS]
 ;;Name           From             To               Length     Roughness  InOffset   OutOffset  InitFlow   MaxFlow
@@ -129,8 +146,8 @@ BD2A             MH11             MH12             110.00     0.0150     738.62 
 CD2A             MH12             OUT1             70.00      0.0150     710.70     710.00     0          0
 15DIV            CI14D2           MH11             44.00      0.0150     739.50     738.62     0          0
 D2               CI14D2           MH1              142.00     0.0150     741.67     705.50     0          0
-CHAN1            OUT1             POND             710.00     0          710.00     668.00     0          0
-CHAN2            OUT2             POND             465.00     0          683.35     662.00     0          0
+CHAN1            OUT1             POND             710.00     0.0130     710.00     668.00     0          0
+CHAN2            OUT2             POND             465.00     0.0130     683.35     662.00     0          0
 MAIN1            RISRBX1          DMY              450.00     0.0150     605.00     584.20     0          0
 MAIN2            DMY              LAKE             164.00     0.0150     584.20     576.63     0          0
 42"PIPE          culvert          LAKE             491.00     0.0150     560.50     546.00     0          0
@@ -190,15 +207,15 @@ BD2A             CIRCULAR     1.25       0          0          0          1
 CD2A             CIRCULAR     1.25       0          0          0          1
 15DIV            CIRCULAR     1.25       0          0          0          1
 D2               CIRCULAR     4.50       0          0          0          1
-CHAN1            IRREGULAR    2.00       0          0          0          1
-CHAN2            IRREGULAR    4.00       0          0          0          1
+CHAN1            TRAPEZOIDAL  2.00       10.00      2          2          1
+CHAN2            TRAPEZOIDAL  4.00       10.00      2          2          1
 MAIN1            CIRCULAR     5.00       0          0          0          1
 MAIN2            CIRCULAR     5.50       0          0          0          1
 42"PIPE          CIRCULAR     3.50       0          0          0          1
 36PIPE           CIRCULAR     3.00       0          0          0          1
-OUTPIPE          RECT_OPEN    0          12.57      0          0          
-\                RECT_OPEN    0          100.00     0          0          
-RISER            RECT_OPEN    0          42.00      0          0          
+OUTPIPE          RECT_OPEN    1.00       12.57      0          0
+\                RECT_OPEN    1.00       100.00     0          0
+RISER            RECT_OPEN    1.00       42.00      0          0
 
 [LOSSES]
 ;;Link           Inlet      Outlet     Average    Flap Gate
@@ -306,7 +323,7 @@ OUT1             78.84              -10.37
 RISRBX1          16.07              -43.29            
 DMY              -27.29             -41.09            
 LAKE             -42.60             9.71              
-LAKE             -54.63             50.90             
+LAKE_2           -54.63             50.90             
 OFALL1           -69.82             109.65            
 RISRBX2          -21.71             58.26             
 OFALL2           -35.28             113.40            

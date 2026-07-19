@@ -20,11 +20,22 @@ INERTIAL_DAMPING     PARTIAL
 NORMAL_FLOW_LIMITED  BOTH
 MAX_TRIALS           50
 HEAD_TOLERANCE       0.0033
+START_DATE           01/01/2001
+START_TIME           00:00:00
+REPORT_START_DATE    01/01/2001
+REPORT_START_TIME    00:00:00
+END_DATE             01/02/2001
+END_TIME             00:00:00
+SWEEP_START          01/01
+SWEEP_END            12/31
+DRY_DAYS             0
+REPORT_STEP          00:15:00
+WET_STEP             00:05:00
+DRY_STEP             01:00:00
 
 [JUNCTIONS]
 ;;Name           Elev       MaxDepth   InitDepth  SurDepth   Aponded
 ;;-------------- ---------- ---------- ---------- ---------- ----------
-6S880            575.97     0          0          0          0
 6S879            576.05     0          0          0          0
 6S878            575.56     0          0          0          0
 6S877            576.02     0          0          0          0
@@ -144,6 +155,11 @@ OUTFAL           587.00     0          0          0          0
 7c45s            590.00     0          0          0          0
 7c34s            590.00     0          0          0          0
 
+[OUTFALLS]
+;;Name           Elev       Type       Stage      Gated
+;;-------------- ---------- ---------- ---------- -----
+6S880            575.97     FREE                  NO
+
 [CONDUITS]
 ;;Name           From             To               Length     Roughness  InOffset   OutOffset  InitFlow   MaxFlow
 ;;-------------- ---------------- ---------------- ---------- ---------- ---------- ---------- ---------- ----------
@@ -255,7 +271,7 @@ OUTFAL           587.00     0          0          0          0
 1S01             7S34             7S18             1856.00    0.0150     580.92     577.89     0          0
 1C00             7C147            7C1              1732.00    0.0150     588.64     584.84     0          0
 1C01             7C1              7C59             1613.00    0.0150     584.84     583.10     0          0
-486              ?                ?                650.00     0.0150     582.65     581.58     0          0
+486              7C59             7R574            650.00     0.0150     582.65     581.58     0          0
 2c00             7C21             7c35             1148.00    0.0150     591.99     586.80     0          0
 2c01             7c35             7C59             1313.00    0.0150     586.80     582.75     0          0
 1c22             7c34             7c45             463.00     0.0150     583.37     582.74     0          0
@@ -264,7 +280,7 @@ OUTFAL           587.00     0          0          0          0
 751              6s749            6S751            812.50     0.0150     563.27     561.56     0          0
 HAWK1            7C69             7c72             1000.00    0.0150     579.45     574.20     0          0
 700B             6S881            OUTLET           50.00      0.0150     553.35     553.25     0          0
-520              ?                ?                100.00     0.0150     582.90     582.00     0          0
+520              DRAIN            OUTFAL           100.00     0.0150     582.90     582.00     0          0
 1s210            7c56s            7c45s            527.00     0.0150     577.23     575.43     0          0
 1s220            7c45s            7c34s            468.00     0.0150     575.43     574.03     0          0
 1s230            7c34s            6S60             485.00     0.0150     574.03     572.71     0          0
@@ -288,10 +304,11 @@ HAWKDR           jeffPS           DRAIN            PC_HAWKDR  ON       580.30   
 [CURVES]
 ;;Name           Type       X-Value    Y-Value
 ;;-------------- ---------- ---------- ----------
-PC_700A          Pump4      0          0
-;
-PC_HAWKDR        Pump4      0          0
-;
+;; Synthesized generic pump curves — replace with actual pump data
+PC_700A          Pump1      0          5
+PC_700A                     10         10
+PC_HAWKDR        Pump1      0          5
+PC_HAWKDR                   10         10
 
 [XSECTIONS]
 ;;Link           Shape        Geom1      Geom2      Geom3      Geom4      Barrels
@@ -417,12 +434,12 @@ HAWK1            CIRCULAR     3.00       0          0          0          1
 1s210            CIRCULAR     1.25       0          0          0          1
 1s220            CIRCULAR     1.25       0          0          0          1
 1s230            CIRCULAR     1.25       0          0          0          1
-HAWK2            RECT_CLOSED  3.00       0          0          0          
-1S00             RECT_CLOSED  2.00       0          0          0          
-or3              RECT_CLOSED  0.83       0          0          0          
-or2              RECT_CLOSED  0.83       0          0          0          
-or1              RECT_CLOSED  0.83       0          0          0          
-1s200            RECT_CLOSED  1.25       0          0          0          
+HAWK2            RECT_CLOSED  3.00       3.00       0          0
+1S00             RECT_CLOSED  2.00       2.00       0          0
+or3              RECT_CLOSED  0.83       0.83       0          0
+or2              RECT_CLOSED  0.83       0.83       0          0
+or1              RECT_CLOSED  0.83       0.83       0          0
+1s200            RECT_CLOSED  1.25       1.25       0          0
 
 [LOSSES]
 ;;Link           Inlet      Outlet     Average    Flap Gate

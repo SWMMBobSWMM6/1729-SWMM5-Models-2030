@@ -19,6 +19,18 @@ VARIABLE_STEP        0.75
 INERTIAL_DAMPING     PARTIAL
 NORMAL_FLOW_LIMITED  BOTH
 MAX_TRIALS           200
+START_DATE           01/01/2001
+START_TIME           00:00:00
+REPORT_START_DATE    01/01/2001
+REPORT_START_TIME    00:00:00
+END_DATE             01/02/2001
+END_TIME             00:00:00
+SWEEP_START          01/01
+SWEEP_END            12/31
+DRY_DAYS             0
+REPORT_STEP          00:15:00
+WET_STEP             00:05:00
+DRY_STEP             01:00:00
 
 [JUNCTIONS]
 ;;Name           Elev       MaxDepth   InitDepth  SurDepth   Aponded
@@ -159,7 +171,6 @@ MAX_TRIALS           200
 902              608.00     0          0          0          0
 901              608.00     0          0          0          0
 900              596.00     0          0          0          0
-044              589.00     0          0          0          0
 033              593.00     0          0          0          0
 031              593.00     0          0          0          0
 099              596.00     0          0          0          0
@@ -212,38 +223,43 @@ MAX_TRIALS           200
 500              589.50     0          0          0          0
 055              589.00     0          0          0          0
 043              589.00     0          0          0          0
-RIVER            587.00     0          7.77       0          0
+RIVER            587.00     0          0          0          0
 051              589.50     0          0          0          0
 045              589.00     0          0          0          0
-RIVER            596.00     0          0          0          0
-RIVER            582.00     0          0          0          0
-RIVER            583.00     0          0          0          0
+RIVER_2          596.00     0          0          0          0
+RIVER_3          582.00     0          0          0          0
+RIVER_4          583.00     0          0          0          0
 655              600.00     0          0          0          0
 657              600.00     0          0          0          0
 658              600.00     0          0          0          0
 660              600.00     0          0          0          0
 663              600.00     0          0          0          0
 TAPIN            592.00     0          0          0          0
-OUTFALL          579.00     0          0.90       0          0
-TAPIN            590.00     0          0          0          0
+OUTFALL          579.00     0          0          0          0
+TAPIN_2          590.00     0          0          0          0
 1                592.00     0          0          0          0
-2                592.00     0          0.90       0          0
-3                588.00     0          0.90       0          0
-4                584.00     0          0.90       0          0
-5                580.00     0          0.90       0          0
-6                579.00     0          0.90       0          0
-TAPIN            589.00     0          0          0          0
+2                592.00     0          0          0          0
+3                588.00     0          0          0          0
+4                584.00     0          0          0          0
+5                580.00     0          0          0          0
+6                579.00     0          0          0          0
+TAPIN_3          589.00     0          0          0          0
+
+[OUTFALLS]
+;;Name           Elev       Type       Stage      Gated
+;;-------------- ---------- ---------- ---------- -----
+044              589.00     FREE                  NO
 
 [STORAGE]
 ;;Name           Elev       MaxDepth   InitDepth  Shape      Curve/Params
 ;;-------------- ---------- ---------- ---------- ---------- ----------
-003              581.00     0          0          FUNCTIONAL 5.00 0          0
-002              580.00     0          0          FUNCTIONAL 5.00 0          0
-OUTLET           592.00     -1.00      0          FUNCTIONAL 1963.00 0          0
-004              591.00     0          0          FUNCTIONAL 5.00 0          0
-DROP             594.00     0          0          FUNCTIONAL 63.60 0          0
-DROP             581.50     0          0          FUNCTIONAL 63.60 0          0
-DROP             581.00     0          0          FUNCTIONAL 19.60 0          0
+003              581.00     10.00      0          FUNCTIONAL 5.00 0          0
+002              580.00     10.00      0          FUNCTIONAL 5.00 0          0
+OUTLET           592.00     10.00      0          FUNCTIONAL 1963.00 0          0
+004              591.00     10.00      0          FUNCTIONAL 5.00 0          0
+DROP             594.00     10.00      0          FUNCTIONAL 63.60 0          0
+DROP_2           581.50     10.00      0          FUNCTIONAL 63.60 0          0
+DROP_3           581.00     10.00      0          FUNCTIONAL 19.60 0          0
 
 [CONDUITS]
 ;;Name           From             To               Length     Roughness  InOffset   OutOffset  InitFlow   MaxFlow
@@ -392,7 +408,7 @@ DROP             581.00     0          0          FUNCTIONAL 19.60 0          0
 0046             046              402              600.00     0.0130     573.62     573.28     0          0
 0031             031              032              861.00     0.0130     569.80     570.80     0          0
 1417             048              417              1025.00    0.0130     581.59     580.43     0          0
-548              ?                ?                20.00      0.0130     579.80     579.80     0          0
+548              415              304              20.00      0.0130     579.80     579.80     0          0
 1501             502              501              200.00     0.0130     572.70     572.55     0          0
 1502             503              502              350.00     0.0130     573.00     572.70     0          0
 1503             595              503              90.00      0.0130     573.10     573.00     0          0
@@ -435,26 +451,26 @@ DROP             581.00     0          0          FUNCTIONAL 19.60 0          0
 0002             002              OUTLET           4625.00    0.0130     425.69     425.00     0          0
 0043             043              045              90.00      0.0130     568.10     568.00     0          0
 DEAIR            DROP             004              140.00     0.0130     426.67     426.65     0          0
-DEAIR            DROP             002              90.00      0.0130     425.71     425.69     0          0
+DEAIR_2          DROP             002              90.00      0.0130     425.71     425.69     0          0
 0051             051              RIVER            1364.00    0.0130     569.70     567.23     0          0
-DEAIR            DROP             003              140.00     0.0130     426.00     425.98     0          0
+DEAIR_3          DROP             003              140.00     0.0130     426.00     425.98     0          0
 0091             091              RIVER            50.00      0.0130     581.33     581.27     0          0
 0045             045              RIVER            330.00     0.0130     566.23     566.00     0          0
 0032             032              RIVER            882.00     0.0130     569.13     568.00     0          0
-656              ?                ?                100.00     0.0130     587.65     587.51     0          0
-659              ?                ?                600.00     0.0130     593.50     593.20     0          0
-661              ?                ?                500.00     0.0130     593.20     592.95     0          0
-662              ?                ?                750.00     0.0130     592.45     592.08     0          0
-664              ?                ?                60.00      0.0130     584.92     584.86     0          0
-665              ?                ?                60.00      0.0130     586.23     586.17     0          0
-666              ?                ?                10.00      0.0140     584.92     584.92     0          0
+656              314              655              100.00     0.0130     587.65     587.51     0          0
+659              657              658              600.00     0.0130     593.50     593.20     0          0
+661              658              660              500.00     0.0130     593.20     592.95     0          0
+662              660              655              750.00     0.0130     592.45     592.08     0          0
+664              663              311              60.00      0.0130     584.92     584.86     0          0
+665              427              312              60.00      0.0130     586.23     586.17     0          0
+666              663              426              10.00      0.0140     584.92     584.92     0          0
 0032A            032              TAPIN            551.00     0.0130     569.13     568.43     0          0
 INLET            TAPIN            DROP             90.00      0.0130     568.23     568.05     0          0
-INLET            TAPIN            DROP             100.00     0.0130     565.13     564.93     0          0
+INLET_2          TAPIN            DROP             100.00     0.0130     565.13     564.93     0          0
 0051A            051              TAPIN            1164.00    0.0130     569.70     567.59     0          0
-INLET            TAPIN            DROP             100.00     0.0130     567.40     567.22     0          0
+INLET_3          TAPIN            DROP             100.00     0.0130     567.40     567.22     0          0
 SCREEN           OUTLET           1                30.00      0.0140     568.00     568.00     0          0
-SCREEN           1                2                100.00     0.0140     575.00     574.98     0          0
+SCREEN_2         1                2                100.00     0.0140     575.00     574.98     0          0
 CHANNEL          2                3                155.00     0.0140     574.00     574.00     0          0
 CH-30            3                4                10.00      0.0140     574.00     574.00     0          0
 CH-40            4                5                10.00      0.0140     574.00     574.00     0          0
@@ -466,18 +482,18 @@ CH-60            6                OUTFALL          50.00      0.1000     574.00 
 ;;Name           From             To               Type       Offset     Qcoeff     Gated    CloseTime
 ;;-------------- ---------------- ---------------- ---------- ---------- ---------- -------- ----------
 ORIFICE          400              044              SIDE       0          0.650      NO       0
-ORIFICE          300              033              SIDE       0          0.650      NO       0
-ORIFICE          900              099              SIDE       0          0.650      NO       0
+ORIFICE_2        300              033              SIDE       0          0.650      NO       0
+ORIFICE_3        900              099              SIDE       0          0.650      NO       0
 orif15           500              055              SIDE       570.70     0.650      NO       0
 
 [WEIRS]
 ;;Name           From             To               Type       CrestHt    Qcoeff     Gated    EndCon   EndCoeff   Surcharge
 ;;-------------- ---------------- ---------------- ---------- ---------- ---------- -------- -------- ---------- ----------
-WEIR 14          042              043              TRANSVERSE 576.71     1.840      NO       0        0          YES
-WEIR 13          300              031              TRANSVERSE 571.72     1.840      NO       0        0          YES
-WEIR 9           900              091              TRANSVERSE 585.08     1.840      NO       0        0          YES
-OLD 5 FT         413              048              TRANSVERSE 584.01     1.840      NO       0        0          YES
-WEIR 15          500              051              TRANSVERSE 575.63     1.840      NO       0        0          YES
+WEIR_14          042              043              TRANSVERSE 576.71     1.840      NO       0        0          YES
+WEIR_13          300              031              TRANSVERSE 571.72     1.840      NO       0        0          YES
+WEIR_9           900              091              TRANSVERSE 585.08     1.840      NO       0        0          YES
+OLD_5_FT         413              048              TRANSVERSE 584.01     1.840      NO       0        0          YES
+WEIR_15          500              051              TRANSVERSE 575.63     1.840      NO       0        0          YES
 
 [XSECTIONS]
 ;;Link           Shape        Geom1      Geom2      Geom3      Geom4      Barrels
@@ -669,9 +685,9 @@ WEIR 15          500              051              TRANSVERSE 575.63     1.840  
 0002             CIRCULAR     18.00      0          0          0          1
 0043             RECT_CLOSED  11.50      10.00      0          0          1
 DEAIR            CIRCULAR     18.00      0          0          0          1
-DEAIR            CIRCULAR     11.00      0          0          0          1
+DEAIR_2          CIRCULAR     11.00      0          0          0          1
 0051             CIRCULAR     9.00       0          0          0          1
-DEAIR            CIRCULAR     18.00      0          0          0          1
+DEAIR_3          CIRCULAR     18.00      0          0          0          1
 0091             CIRCULAR     6.25       0          0          0          1
 0045             RECT_CLOSED  12.50      13.50      0          0          1
 0032             CIRCULAR     12.00      0          0          0          1
@@ -684,26 +700,26 @@ DEAIR            CIRCULAR     18.00      0          0          0          1
 666              CIRCULAR     4.50       0          0          0          1
 0032A            CIRCULAR     12.00      0          0          0          1
 INLET            RECT_CLOSED  8.00       14.00      0          0          1
-INLET            RECT_CLOSED  14.00      14.00      0          0          1
+INLET_2          RECT_CLOSED  14.00      14.00      0          0          1
 0051A            CIRCULAR     9.00       0          0          0          1
-INLET            RECT_CLOSED  4.00       11.00      0          0          1
+INLET_3          RECT_CLOSED  4.00       11.00      0          0          1
 SCREEN           RECT_CLOSED  20.00      15.00      0          0          2
-SCREEN           RECT_CLOSED  7.00       10.00      0          0          2
+SCREEN_2         RECT_CLOSED  7.00       10.00      0          0          2
 CHANNEL          RECT_CLOSED  5.00       10.00      0          0          2
 CH-30            RECT_CLOSED  5.00       15.00      0          0          2
 CH-40            RECT_CLOSED  5.00       20.00      0          0          2
-CH-50            TRAPEZOIDAL  4.50       50.00      0          0          1
-CH-60            TRAPEZOIDAL  4.50       60.00      0          0          1
+CH-50            TRAPEZOIDAL  4.50       50.00      1          1          1
+CH-60            TRAPEZOIDAL  4.50       60.00      1          1          1
 0045A            RECT_CLOSED  12.50      13.50      0          0          1
-ORIFICE          RECT_CLOSED  1.80       0          0          0          
-ORIFICE          RECT_CLOSED  1.23       0          0          0          
-ORIFICE          RECT_CLOSED  0.68       0          0          0          
-orif15           RECT_CLOSED  0.57       0          0          0          
-WEIR 14          RECT_OPEN    0          48.00      0          0          
-WEIR 13          RECT_OPEN    0          8.00       0          0          
-WEIR 9           RECT_OPEN    0          19.00      0          0          
-OLD 5 FT         RECT_OPEN    0          5.00       0          0          
-WEIR 15          RECT_OPEN    0          25.00      0          0          
+ORIFICE          RECT_CLOSED  1.80       1.80       0          0
+ORIFICE_2        RECT_CLOSED  1.23       1.23       0          0
+ORIFICE_3        RECT_CLOSED  0.68       0.68       0          0
+orif15           RECT_CLOSED  0.57       1.00       0          0
+WEIR_14          RECT_OPEN    1.00       48.00      0          0
+WEIR_13          RECT_OPEN    1.00       8.00       0          0
+WEIR_9           RECT_OPEN    1.00       19.00      0          0
+OLD_5_FT         RECT_OPEN    1.00       5.00       0          0
+WEIR_15          RECT_OPEN    1.00       25.00      0          0
 
 [LOSSES]
 ;;Link           Inlet      Outlet     Average    Flap Gate
@@ -895,9 +911,9 @@ WEIR 15          RECT_OPEN    0          25.00      0          0
 0002             0          0          0          NO
 0043             0          0          0          NO
 DEAIR            0          0          0          NO
-DEAIR            0          0          0          NO
+DEAIR_2          0          0          0          NO
 0051             0          0          0          NO
-DEAIR            0          0          0          NO
+DEAIR_3          0          0          0          NO
 0091             0          0          0          NO
 0045             0          0          0          NO
 0032             0          0          0          NO
@@ -910,11 +926,11 @@ DEAIR            0          0          0          NO
 666              0          0          0          NO
 0032A            0          0          0          NO
 INLET            0          0          0          NO
-INLET            0          0          0          NO
+INLET_2          0          0          0          NO
 0051A            0          0          0          NO
-INLET            0          0          0          NO
+INLET_3          0          0          0          NO
 SCREEN           0          0          0          NO
-SCREEN           0          0          0          NO
+SCREEN_2         0          0          0          NO
 CHANNEL          0          0          0          NO
 CH-30            0          0          0          NO
 CH-40            0          0          0          NO
@@ -1121,9 +1137,9 @@ OUTLET           1541.50            5227.50
 RIVER            -163.50            2120.50           
 051              -131.50            3036.50           
 045              -1061.50           535.50            
-RIVER            -3799.50           -8513.50          
-RIVER            -1691.50           930.50            
-RIVER            -2295.50           -1428.50          
+RIVER_2          -3799.50           -8513.50          
+RIVER_3          -1691.50           930.50            
+RIVER_4          -2295.50           -1428.50          
 655              1949.50            -5658.50          
 657              656.50             -5750.50          
 658              1324.50            -6251.50          
@@ -1131,17 +1147,17 @@ RIVER            -2295.50           -1428.50
 663              2253.50            -5087.50          
 TAPIN            -1470.50           -1205.50          
 DROP             -1724.50           -833.50           
-DROP             -1546.50           309.50            
+DROP_2           -1546.50           309.50            
 OUTFALL          3562.50            4276.50           
-TAPIN            -57.50             2728.50           
-DROP             303.50             2968.50           
+TAPIN_2          -57.50             2728.50           
+DROP_3           303.50             2968.50           
 1                1735.50            5593.50           
 2                1930.50            5904.50           
 3                2239.50            5606.50           
 4                2492.50            5378.50           
 5                2790.50            5113.50           
 6                3126.50            4736.50           
-TAPIN            -1260.50           426.50            
+TAPIN_3          -1260.50           426.50            
 
 [MAP]
 DIMENSIONS -3799.50 -10483.50 5849.50 5904.50

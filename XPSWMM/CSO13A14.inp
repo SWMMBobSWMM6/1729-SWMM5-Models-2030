@@ -19,6 +19,18 @@ VARIABLE_STEP        0.75
 INERTIAL_DAMPING     PARTIAL
 NORMAL_FLOW_LIMITED  BOTH
 MAX_TRIALS           50
+START_DATE           01/01/2001
+START_TIME           00:00:00
+REPORT_START_DATE    01/01/2001
+REPORT_START_TIME    00:00:00
+END_DATE             01/02/2001
+END_TIME             00:00:00
+SWEEP_START          01/01
+SWEEP_END            12/31
+DRY_DAYS             0
+REPORT_STEP          00:15:00
+WET_STEP             00:05:00
+DRY_STEP             01:00:00
 
 [JUNCTIONS]
 ;;Name           Elev       MaxDepth   InitDepth  SurDepth   Aponded
@@ -160,7 +172,6 @@ MAX_TRIALS           50
 902              608.00     0          0          0          0
 901              608.00     0          0          0          0
 900              596.00     0          0          0          0
-504              589.00     0          0          0          0
 506              589.00     0          0          0          0
 508              593.00     0          0          0          0
 510              593.00     0          0          0          0
@@ -174,6 +185,11 @@ MAX_TRIALS           50
 537              588.00     0          0          0          0
 544              590.00     0          0          0          0
 546              597.00     0          0          0          0
+
+[OUTFALLS]
+;;Name           Elev       Type       Stage      Gated
+;;-------------- ---------- ---------- ---------- -----
+504              589.00     FREE                  NO
 
 [CONDUITS]
 ;;Name           From             To               Length     Roughness  InOffset   OutOffset  InitFlow   MaxFlow
@@ -316,27 +332,27 @@ MAX_TRIALS           50
 1396             496              469              320.00     0.0130     590.14     585.56     0          0
 1489             489              463              200.00     0.0130     584.39     583.75     0          0
 1483             483              460              275.00     0.0130     582.92     582.00     0          0
-525              ?                ?                532.00     0.0130     567.69     568.15     0          0
-527              ?                ?                515.00     0.0130     568.15     568.60     0          0
-538              ?                ?                600.00     0.0130     574.10     573.62     0          0
-539              ?                ?                600.00     0.0130     573.62     573.28     0          0
-545              ?                ?                861.00     0.0130     569.80     570.80     0          0
+525              400              524              532.00     0.0130     567.69     568.15     0          0
+527              524              526              515.00     0.0130     568.15     568.60     0          0
+538              536              537              600.00     0.0130     574.10     573.62     0          0
+539              537              402              600.00     0.0130     573.62     573.28     0          0
+545              510              544              861.00     0.0130     569.80     570.80     0          0
 1417             546              417              1025.00    0.0130     581.59     580.43     0          0
 
 [ORIFICES]
 ;;Name           From             To               Type       Offset     Qcoeff     Gated    CloseTime
 ;;-------------- ---------------- ---------------- ---------- ---------- ---------- -------- ----------
-505              ?                ?                SIDE       0          0.650      NO       0
-509              ?                ?                SIDE       0          0.650      NO       0
-513              ?                ?                SIDE       0          0.650      NO       0
+505              400              504              SIDE       0          0.650      NO       0
+509              300              508              SIDE       0          0.650      NO       0
+513              900              512              SIDE       0          0.650      NO       0
 
 [WEIRS]
 ;;Name           From             To               Type       CrestHt    Qcoeff     Gated    EndCon   EndCoeff   Surcharge
 ;;-------------- ---------------- ---------------- ---------- ---------- ---------- -------- -------- ---------- ----------
-507              ?                ?                TRANSVERSE 576.10     1.840      NO       0        0          YES
-511              ?                ?                TRANSVERSE 571.72     1.840      NO       0        0          YES
-515              ?                ?                TRANSVERSE 585.08     1.840      NO       0        0          YES
-OLD 5 FT         ?                ?                TRANSVERSE 585.09     1.840      NO       0        0          YES
+507              526              506              TRANSVERSE 576.10     1.840      NO       0        0          YES
+511              300              510              TRANSVERSE 571.72     1.840      NO       0        0          YES
+515              900              514              TRANSVERSE 585.08     1.840      NO       0        0          YES
+OLD_5_FT         413              546              TRANSVERSE 585.09     1.840      NO       0        0          YES
 
 [XSECTIONS]
 ;;Link           Shape        Geom1      Geom2      Geom3      Geom4      Barrels
@@ -485,13 +501,13 @@ OLD 5 FT         ?                ?                TRANSVERSE 585.09     1.840  
 539              CIRCULAR     8.00       0          0          0          1
 545              CIRCULAR     11.50      0          0          0          1
 1417             CIRCULAR     5.00       0          0          0          1
-505              RECT_CLOSED  1.00       0          0          0          
-509              RECT_CLOSED  0.75       0          0          0          
-513              RECT_CLOSED  0.50       0          0          0          
-507              RECT_OPEN    0          48.00      0          0          
-511              RECT_OPEN    0          8.00       0          0          
-515              RECT_OPEN    0          19.00      0          0          
-OLD 5 FT         RECT_OPEN    0          5.00       0          0          
+505              RECT_CLOSED  1.00       1.00       0          0
+509              RECT_CLOSED  0.75       0.75       0          0
+513              RECT_CLOSED  0.50       0.50       0          0
+507              RECT_OPEN    1.00       48.00      0          0
+511              RECT_OPEN    1.00       8.00       0          0
+515              RECT_OPEN    1.00       19.00      0          0
+OLD_5_FT         RECT_OPEN    1.00       5.00       0          0
 
 [LOSSES]
 ;;Link           Inlet      Outlet     Average    Flap Gate

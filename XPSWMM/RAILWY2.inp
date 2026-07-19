@@ -20,49 +20,68 @@ INERTIAL_DAMPING     PARTIAL
 NORMAL_FLOW_LIMITED  BOTH
 MAX_TRIALS           50
 HEAD_TOLERANCE       .001
+START_DATE           01/01/2001
+START_TIME           00:00:00
+REPORT_START_DATE    01/01/2001
+REPORT_START_TIME    00:00:00
+END_DATE             01/02/2001
+END_TIME             00:00:00
+SWEEP_START          01/01
+SWEEP_END            12/31
+DRY_DAYS             0
+REPORT_STEP          00:15:00
+WET_STEP             00:05:00
+DRY_STEP             01:00:00
 
 [JUNCTIONS]
 ;;Name           Elev       MaxDepth   InitDepth  SurDepth   Aponded
 ;;-------------- ---------- ---------- ---------- ---------- ----------
 inflow           17.00      0          0          0          0
-2                17.00      0          0          0          0
 4                17.00      0          0          0          0
 6                17.00      0          0          0          0
 8                17.00      0          0          0          0
 10               17.00      0          0          0          0
 12               17.00      0          0          0          0
 14               17.00      0          0          0          0
+channel          9.95       0          0          0          0
+1.8              9.70       0          0          0          0
+3.15             8.70       0          0          0          0
+
+[OUTFALLS]
+;;Name           Elev       Type       Stage      Gated
+;;-------------- ---------- ---------- ---------- -----
+2                17.00      FREE                  NO
 
 [CONDUITS]
 ;;Name           From             To               Length     Roughness  InOffset   OutOffset  InitFlow   MaxFlow
 ;;-------------- ---------------- ---------------- ---------- ---------- ---------- ---------- ---------- ----------
-2 x 1.8a         channel          2                78.00      0.0120     9.95       9.60       0          0
-7                4                6                75.00      0          9.60       10.18      0          0
-9                6                8                68.00      0          10.18      9.88       0          0
-11               8                10               63.00      0          9.88       8.55       0          0
+2_x_1.8a         channel          2                78.00      0.0120     9.95       9.60       0          0
+7                4                6                75.00      0.0130     9.60       10.18      0          0
+9                6                8                68.00      0.0130     10.18      9.88       0          0
+11               8                10               63.00      0.0130     9.88       8.55       0          0
 15               12               14               50.00      0.0350     8.33       7.83       0          0
 
 [WEIRS]
 ;;Name           From             To               Type       CrestHt    Qcoeff     Gated    EndCon   EndCoeff   Surcharge
 ;;-------------- ---------------- ---------------- ---------- ---------- ---------- -------- -------- ---------- ----------
-2 x 1.8          1.8              4                TRANSVERSE 12.10      1.840      NO       0        0          YES
+2_x_1.8          1.8              4                TRANSVERSE 12.10      1.840      NO       0        0          YES
 2.85             3.15             12               TRANSVERSE 12.16      1.840      NO       0        0          YES
 
 [XSECTIONS]
 ;;Link           Shape        Geom1      Geom2      Geom3      Geom4      Barrels
 ;;-------------- ------------ ---------- ---------- ---------- ---------- ----------
-2 x 1.8a         CIRCULAR     1.80       0          0          0          2
-7                IRREGULAR    5.00       0          0          0          1
-9                IRREGULAR    5.00       0          0          0          1
-11               IRREGULAR    5.00       0          0          0          1
-15               TRAPEZOIDAL  3.67       10.00      0          0          1
-2 x 1.8          RECT_OPEN    0          35.00      0          0          
-2.85             RECT_OPEN    0          18.00      0          0          
+2_x_1.8a         CIRCULAR     1.80       0          0          0          2
+7                TRAPEZOIDAL  5.00       10.00      2          2          1
+9                TRAPEZOIDAL  5.00       10.00      2          2          1
+11               TRAPEZOIDAL  5.00       10.00      2          2          1
+15               TRAPEZOIDAL  3.67       10.00      1          1          1
+2_x_1.8          RECT_OPEN    1.00       35.00      0          0
+2.85             RECT_OPEN    1.00       18.00      0          0
 
 [LOSSES]
 ;;Link           Inlet      Outlet     Average    Flap Gate
 ;;-------------- ---------- ---------- ---------- ----------
-2 x 1.8a         0          0          0          NO
+2_x_1.8a         0          0          0          NO
 7                0          0          0          NO
 9                0          0          0          NO
 11               0          0          0          NO

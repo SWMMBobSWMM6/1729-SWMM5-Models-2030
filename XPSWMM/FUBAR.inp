@@ -18,45 +18,61 @@ ROUTING_STEP         00:00:30
 VARIABLE_STEP        0.75
 INERTIAL_DAMPING     PARTIAL
 NORMAL_FLOW_LIMITED  BOTH
+START_DATE           01/01/2001
+START_TIME           00:00:00
+REPORT_START_DATE    01/01/2001
+REPORT_START_TIME    00:00:00
+END_DATE             01/02/2001
+END_TIME             00:00:00
+SWEEP_START          01/01
+SWEEP_END            12/31
+DRY_DAYS             0
+REPORT_STEP          00:15:00
+WET_STEP             00:05:00
+DRY_STEP             01:00:00
 
 [JUNCTIONS]
 ;;Name           Elev       MaxDepth   InitDepth  SurDepth   Aponded
 ;;-------------- ---------- ---------- ---------- ---------- ----------
 Inlet            25.00      0          0          0          0
-Inlet            0          0          0          0          0
-Outlet           23.00      0          0          0          0
-Inlet            25.00      0          0          0          0
+Inlet_2          0          0          0          0          0
+Inlet_3          25.00      0          0          0          0
 209              0          0          0          0          0
 210              0          0          0          0          0
+
+[OUTFALLS]
+;;Name           Elev       Type       Stage      Gated
+;;-------------- ---------- ---------- ---------- -----
+Outlet           23.00      FREE                  NO
 
 [CONDUITS]
 ;;Name           From             To               Length     Roughness  InOffset   OutOffset  InitFlow   MaxFlow
 ;;-------------- ---------------- ---------------- ---------- ---------- ---------- ---------- ---------- ----------
 Pipe             Inlet            Inlet            250.00     0.0140     15.00      0          0          0
 Channel          Inlet            Outlet           75.00      0.0350     12.50      12.31      0          0
-Pipe             Inlet            Inlet            120.00     0.0130     13.70      12.50      0          0
+Pipe_2           Inlet            Inlet            120.00     0.0130     13.70      12.50      0          0
 
 [XSECTIONS]
 ;;Link           Shape        Geom1      Geom2      Geom3      Geom4      Barrels
 ;;-------------- ------------ ---------- ---------- ---------- ---------- ----------
 Pipe             CIRCULAR     1.00       0          0          0          1
-Channel          TRAPEZOIDAL  3.00       1.00       0          0          1
-Pipe             CIRCULAR     3.00       0          0          0          1
+Channel          TRAPEZOIDAL  3.00       1.00       1          1          1
+Pipe_2           CIRCULAR     3.00       0          0          0          1
 
 [LOSSES]
 ;;Link           Inlet      Outlet     Average    Flap Gate
 ;;-------------- ---------- ---------- ---------- ----------
 Pipe             0          0          0          NO
 Channel          0          0          0          NO
-Pipe             0          0          0          NO
+Pipe_2           0          0          0          NO
 
 [COORDINATES]
 ;;Node           X-Coord            Y-Coord
 ;;-------------- ------------------ ------------------
 Inlet            15.94              23.55             
-Inlet            38.65              46.50             
+Inlet_2          38.65              46.50             
 Outlet           62.40              25.93             
-Inlet            19.85              63.18             
+Inlet_3          19.85              63.18             
 209              10.90              6.81              
 210              68.73              89.45             
 

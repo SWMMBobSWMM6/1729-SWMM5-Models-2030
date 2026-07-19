@@ -16,6 +16,18 @@ ALLOW_PONDING        NO
 SKIP_STEADY_STATE    NO
 INERTIAL_DAMPING     PARTIAL
 NORMAL_FLOW_LIMITED  BOTH
+START_DATE           01/01/2001
+START_TIME           00:00:00
+REPORT_START_DATE    01/01/2001
+REPORT_START_TIME    00:00:00
+END_DATE             01/02/2001
+END_TIME             00:00:00
+SWEEP_START          01/01
+SWEEP_END            12/31
+DRY_DAYS             0
+REPORT_STEP          00:15:00
+WET_STEP             00:05:00
+DRY_STEP             01:00:00
 
 [JUNCTIONS]
 ;;Name           Elev       MaxDepth   InitDepth  SurDepth   Aponded
@@ -81,7 +93,11 @@ NORMAL_FLOW_LIMITED  BOTH
 5550             0          0          0          0          0
 5560             0          0          0          0          0
 5570             0          0          0          0          0
-5580             0          0          0          0          0
+
+[OUTFALLS]
+;;Name           Elev       Type       Stage      Gated
+;;-------------- ---------- ---------- ---------- -----
+5580             0          FREE                  NO
 
 [CONDUITS]
 ;;Name           From             To               Length     Roughness  InOffset   OutOffset  InitFlow   MaxFlow
@@ -150,19 +166,19 @@ NORMAL_FLOW_LIMITED  BOTH
 [XSECTIONS]
 ;;Link           Shape        Geom1      Geom2      Geom3      Geom4      Barrels
 ;;-------------- ------------ ---------- ---------- ---------- ---------- ----------
-5055             TRAPEZOIDAL  2.00       10.00      0          0          1
-5075             TRAPEZOIDAL  1.50       2.00       0          0          1
-5085             TRAPEZOIDAL  1.50       2.00       0          0          1
-5095             TRAPEZOIDAL  1.50       2.00       0          0          1
+5055             TRAPEZOIDAL  2.00       10.00      1          1          1
+5075             TRAPEZOIDAL  1.50       2.00       1          1          1
+5085             TRAPEZOIDAL  1.50       2.00       1          1          1
+5095             TRAPEZOIDAL  1.50       2.00       1          1          1
 5105             CIRCULAR     3.00       0          0          0          1
-5115             TRAPEZOIDAL  1.50       2.00       0          0          1
+5115             TRAPEZOIDAL  1.50       2.00       1          1          1
 5125             CIRCULAR     2.00       0          0          0          1
 5135             CIRCULAR     1.00       0          0          0          1
 5145             CIRCULAR     1.00       0          0          0          1
 5155             CIRCULAR     1.00       0          0          0          1
 5165             CIRCULAR     1.00       0          0          0          1
 5175             CIRCULAR     2.00       0          0          0          1
-5185             TRAPEZOIDAL  1.50       2.00       0          0          1
+5185             TRAPEZOIDAL  1.50       2.00       1          1          1
 5195             CIRCULAR     2.00       0          0          0          1
 5205             CIRCULAR     2.00       0          0          0          1
 5206             CIRCULAR     2.00       0          0          0          1
@@ -191,11 +207,11 @@ NORMAL_FLOW_LIMITED  BOTH
 5396             CIRCULAR     2.00       0          0          0          1
 5404             CIRCULAR     0.67       0          0          0          1
 5405             RECT_CLOSED  3.00       6.00       0          0          1
-5415             TRAPEZOIDAL  2.00       10.00      0          0          1
-5425             TRAPEZOIDAL  2.00       10.00      0          0          1
+5415             TRAPEZOIDAL  2.00       10.00      1          1          1
+5425             TRAPEZOIDAL  2.00       10.00      1          1          1
 5426             RECT_CLOSED  5.00       6.00       0          0          1
-5435             TRAPEZOIDAL  3.00       10.00      0          0          1
-5445             TRAPEZOIDAL  3.00       10.00      0          0          1
+5435             TRAPEZOIDAL  3.00       10.00      1          1          1
+5445             TRAPEZOIDAL  3.00       10.00      1          1          1
 5455             CIRCULAR     1.00       0          0          0          1
 5465             CIRCULAR     1.50       0          0          0          1
 5466             CIRCULAR     1.50       0          0          0          1
@@ -207,9 +223,9 @@ NORMAL_FLOW_LIMITED  BOTH
 5505             CIRCULAR     1.00       0          0          0          1
 5515             CIRCULAR     1.50       0          0          0          1
 5545             RECT_CLOSED  3.00       6.00       0          0          1
-5555             TRAPEZOIDAL  3.00       10.00      0          0          1
-5565             TRAPEZOIDAL  3.00       10.00      0          0          1
-5575             TRAPEZOIDAL  3.00       10.00      0          0          1
+5555             TRAPEZOIDAL  3.00       10.00      1          1          1
+5565             TRAPEZOIDAL  3.00       10.00      1          1          1
+5575             TRAPEZOIDAL  3.00       10.00      1          1          1
 
 [LOSSES]
 ;;Link           Inlet      Outlet     Average    Flap Gate

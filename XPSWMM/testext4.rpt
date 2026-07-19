@@ -2,19 +2,200 @@
   EPA STORM WATER MANAGEMENT MODEL - VERSION 5.2 (Build 5.2.4)
   ------------------------------------------------------------
 
+  Inverted syphon example from Vanslambrouck et al. (1986) 
+  WARNING 04: minimum elevation drop used for Conduit 212.1
   
-  ERROR 209: undefined object 212.2 at line 44 of [CONDUIT] section:
-  212.1            212.2            212.3            100.00     0.0140     75.00      75.00      0          0
-
+  ****************
+  Analysis Options
+  ****************
+  Flow Units ............... CMS
+  Process Models:
+    Rainfall/Runoff ........ NO
+    RDII ................... NO
+    Snowmelt ............... NO
+    Groundwater ............ NO
+    Flow Routing ........... YES
+    Ponding Allowed ........ NO
+    Water Quality .......... NO
+  Flow Routing Method ...... DYNWAVE
+  Surcharge Method ......... EXTRAN
+  Starting Date ............ 01/01/2001 00:00:00
+  Ending Date .............. 01/02/2001 00:00:00
+  Antecedent Dry Days ...... 0.0
+  Report Time Step ......... 00:15:00
+  Routing Time Step ........ 10.00 sec
+  Variable Time Step ....... YES
+  Maximum Trials ........... 50
+  Number of Threads ........ 1
+  Head Tolerance ........... 0.001000 m
   
-  ERROR 209: undefined object ? at line 45 of [CONDUIT] section:
-  214              ?                ?                100.00     0.0140     90.00      75.00      0          0
-
   
-  ERROR 209: undefined object ? at line 46 of [CONDUIT] section:
-  CHME216          ?                ?                24.00      0.0140     75.00      85.00      0          0
+  **************************        Volume        Volume
+  Flow Routing Continuity        hectare-m      10^6 ltr
+  **************************     ---------     ---------
+  Dry Weather Inflow .......         0.000         0.000
+  Wet Weather Inflow .......         0.000         0.000
+  Groundwater Inflow .......         0.000         0.000
+  RDII Inflow ..............         0.000         0.000
+  External Inflow ..........         0.000         0.000
+  External Outflow .........         0.000         0.000
+  Flooding Loss ............         0.000         0.000
+  Evaporation Loss .........         0.000         0.000
+  Exfiltration Loss ........         0.000         0.000
+  Initial Stored Volume ....         0.000         0.000
+  Final Stored Volume ......         0.000         0.000
+  Continuity Error (%) .....         0.000
+  
+  
+  ***************************
+  Time-Step Critical Elements
+  ***************************
+  None
+  
+  
+  ********************************
+  Highest Flow Instability Indexes
+  ********************************
+  All links are stable.
+  
+  
+  *********************************
+  Most Frequent Nonconverging Nodes
+  *********************************
+  Convergence obtained at all time steps.
+  
+  
+  *************************
+  Routing Time Step Summary
+  *************************
+  Minimum Time Step           :     9.50 sec
+  Average Time Step           :    10.00 sec
+  Maximum Time Step           :    10.00 sec
+  % of Time in Steady State   :     0.00
+  Average Iterations per Step :     2.00
+  % of Steps Not Converging   :     0.00
+  Time Step Frequencies       :
+     10.000 -  5.493 sec      :   100.00 %
+      5.493 -  3.017 sec      :     0.00 %
+      3.017 -  1.657 sec      :     0.00 %
+      1.657 -  0.910 sec      :     0.00 %
+      0.910 -  0.500 sec      :     0.00 %
+  
+  
+  ******************
+  Node Depth Summary
+  ******************
+  
+  ---------------------------------------------------------------------------------
+                                 Average  Maximum  Maximum  Time of Max    Reported
+                                   Depth    Depth      HGL   Occurrence   Max Depth
+  Node                 Type       Meters   Meters   Meters  days hr:min      Meters
+  ---------------------------------------------------------------------------------
+  Inflow               JUNCTION     0.00     0.00   100.00     0  00:00        0.00
+  K4.2                 JUNCTION     0.00     0.00   100.00     0  00:00        0.00
+  Outfall              JUNCTION     0.00     0.00   100.00     0  00:00        0.00
+  213                  JUNCTION     0.00     0.00   100.00     0  00:00        0.00
+  215                  JUNCTION     0.00     0.00   100.00     0  00:00        0.00
+  NEWROUTE             JUNCTION     0.00     0.00     1.00     0  00:00        0.00
+  212.2                JUNCTION     0.00     0.00    75.00     0  00:00        0.00
+  212.3                JUNCTION     0.00     0.00    75.00     0  00:00        0.00
+  K4.3                 OUTFALL      0.00     0.00   100.00     0  00:00        0.00
+  
+  
+  *******************
+  Node Inflow Summary
+  *******************
+  
+  -------------------------------------------------------------------------------------------------
+                                  Maximum  Maximum                  Lateral       Total        Flow
+                                  Lateral    Total  Time of Max      Inflow      Inflow     Balance
+                                   Inflow   Inflow   Occurrence      Volume      Volume       Error
+  Node                 Type           CMS      CMS  days hr:min    10^6 ltr    10^6 ltr     Percent
+  -------------------------------------------------------------------------------------------------
+  Inflow               JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
+  K4.2                 JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
+  Outfall              JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
+  213                  JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
+  215                  JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
+  NEWROUTE             JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
+  212.2                JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
+  212.3                JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
+  K4.3                 OUTFALL      0.000    0.000     0  00:00           0           0       0.000 ltr
+  
+  
+  **********************
+  Node Surcharge Summary
+  **********************
+  
+  Surcharging occurs when water rises above the top of the highest conduit.
+  ---------------------------------------------------------------------
+                                               Max. Height   Min. Depth
+                                   Hours       Above Crown    Below Rim
+  Node                 Type      Surcharged         Meters       Meters
+  ---------------------------------------------------------------------
+  NEWROUTE             JUNCTION       24.00          0.000        0.000
+  
+  
+  *********************
+  Node Flooding Summary
+  *********************
+  
+  No nodes were flooded.
+  
+  
+  ***********************
+  Outfall Loading Summary
+  ***********************
+  
+  -----------------------------------------------------------
+                         Flow       Avg       Max       Total
+                         Freq      Flow      Flow      Volume
+  Outfall Node           Pcnt       CMS       CMS    10^6 ltr
+  -----------------------------------------------------------
+  K4.3                   0.00     0.000     0.000       0.000
+  -----------------------------------------------------------
+  System                 0.00     0.000     0.000       0.000
+  
+  
+  ********************
+  Link Flow Summary
+  ********************
+  
+  -----------------------------------------------------------------------------
+                                 Maximum  Time of Max   Maximum    Max/    Max/
+                                  |Flow|   Occurrence   |Veloc|    Full    Full
+  Link                 Type          CMS  days hr:min     m/sec    Flow   Depth
+  -----------------------------------------------------------------------------
+  pipe1                CONDUIT     0.000     0  00:00      0.00    0.00    0.00
+  pipe2                CONDUIT     0.000     0  00:00      0.00    0.00    0.00
+  212.1                CONDUIT     0.000     0  00:00      0.00    0.00    0.00
+  214                  CONDUIT     0.000     0  00:00      0.00    0.00    0.00
+  CHME216              CONDUIT     0.000     0  00:00      0.00    0.00    0.00
+  
+  
+  ***************************
+  Flow Classification Summary
+  ***************************
+  
+  -------------------------------------------------------------------------------------
+                      Adjusted    ---------- Fraction of Time in Flow Class ---------- 
+                       /Actual         Up    Down  Sub   Sup   Up    Down  Norm  Inlet 
+  Conduit               Length    Dry  Dry   Dry   Crit  Crit  Crit  Crit  Ltd   Ctrl  
+  -------------------------------------------------------------------------------------
+  pipe1                   1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  pipe2                   1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  212.1                   1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  214                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  CHME216                 1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  
+  
+  *************************
+  Conduit Surcharge Summary
+  *************************
+  
+  No conduits were surcharged.
+  
 
-
-  Analysis begun on:  Mon Jul 13 08:04:18 2026
-  Analysis ended on:  Mon Jul 13 08:04:18 2026
+  Analysis begun on:  Sun Jul 19 15:24:11 2026
+  Analysis ended on:  Sun Jul 19 15:24:11 2026
   Total elapsed time: < 1 sec

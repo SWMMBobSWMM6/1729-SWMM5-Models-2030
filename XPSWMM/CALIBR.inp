@@ -14,12 +14,24 @@ LINK_OFFSETS         DEPTH
 MIN_SLOPE            0.0
 ALLOW_PONDING        NO
 SKIP_STEADY_STATE    NO
-ROUTING_STEP         00:00:60
+ROUTING_STEP         00:01:00
 VARIABLE_STEP        0.75
 INERTIAL_DAMPING     PARTIAL
 NORMAL_FLOW_LIMITED  BOTH
 MAX_TRIALS           50
 HEAD_TOLERANCE       0.
+START_DATE           01/01/2001
+START_TIME           00:00:00
+REPORT_START_DATE    01/01/2001
+REPORT_START_TIME    00:00:00
+END_DATE             01/02/2001
+END_TIME             00:00:00
+SWEEP_START          01/01
+SWEEP_END            12/31
+DRY_DAYS             0
+REPORT_STEP          00:15:00
+WET_STEP             00:05:00
+DRY_STEP             01:00:00
 
 [JUNCTIONS]
 ;;Name           Elev       MaxDepth   InitDepth  SurDepth   Aponded
@@ -83,31 +95,40 @@ U35B-S           585.94     0          0          0          0
 V2-S             585.94     0          0          0          0
 CH1-S            582.95     0          0          0          0
 EXIT2            600.00     0          0          0          0
+lag1             0          0          0          0          0
+lag2             0          0          0          0          0
+P10H             0          0          0          0          0
+SIP2             566.54     0          0          0          0
+SIP3             566.36     0          0          0          0
+
+[OUTFALLS]
+;;Name           Elev       Type       Stage      Gated
+;;-------------- ---------- ---------- ---------- -----
+FORTPS1          583.00     FREE                  NO
 
 [STORAGE]
 ;;Name           Elev       MaxDepth   InitDepth  Shape      Curve/Params
 ;;-------------- ---------- ---------- ---------- ---------- ----------
-V2               578.72     0          0          FUNCTIONAL 100.00 0          0
-U35B             577.58     0          0          FUNCTIONAL 100.00 0          0
-VHPS             584.50     0          0          FUNCTIONAL 160.00 0          0
-AA1              581.08     0          0          FUNCTIONAL 0 0          0
-FORTPS1          583.00     0          0          FUNCTIONAL 200.00 0          0
-RETBAS           594.74     0          0          FUNCTIONAL 0 0          0
-GRIT1            582.95     0          0          FUNCTIONAL 640.00 0          0
-K10-G            1200.00    0          0          FUNCTIONAL 54.45 0          0
-GP2              1200.00    0          0          FUNCTIONAL 0 0          0
-GW-S2            1200.00    0          0          FUNCTIONAL 0 0          0
-GZ1              1200.00    0          0          FUNCTIONAL 0 0          0
-GAA15            1200.00    0          0          FUNCTIONAL 0 0          0
-GJ2              1200.00    0          0          FUNCTIONAL 0 0          0
-GV44             1200.00    0          0          FUNCTIONAL 0 0          0
-GV17             1200.00    0          0          FUNCTIONAL 0 0          0
-GAA1             1200.00    0          0          FUNCTIONAL 0 0          0
-GW2              1200.00    0          0          FUNCTIONAL 0 0          0
-GW8              1200.00    0          0          FUNCTIONAL 0 0          0
-GT16             1200.00    0          0          FUNCTIONAL 0 0          0
-GK2              1200.00    0          0          FUNCTIONAL 0 0          0
-GU4              1200.00    0          0          FUNCTIONAL 0 0          0
+V2               578.72     10.00      0          FUNCTIONAL 100.00 0          0
+U35B             577.58     10.00      0          FUNCTIONAL 100.00 0          0
+VHPS             584.50     10.00      0          FUNCTIONAL 160.00 0          0
+AA1              581.08     10.00      0          FUNCTIONAL 1000.00 0          0
+RETBAS           594.74     10.00      0          FUNCTIONAL 1000.00 0          0
+GRIT1            582.95     10.00      0          FUNCTIONAL 640.00 0          0
+K10-G            1200.00    10.00      0          FUNCTIONAL 54.45 0          0
+GP2              1200.00    10.00      0          FUNCTIONAL 1000.00 0          0
+GW-S2            1200.00    10.00      0          FUNCTIONAL 1000.00 0          0
+GZ1              1200.00    10.00      0          FUNCTIONAL 1000.00 0          0
+GAA15            1200.00    10.00      0          FUNCTIONAL 1000.00 0          0
+GJ2              1200.00    10.00      0          FUNCTIONAL 1000.00 0          0
+GV44             1200.00    10.00      0          FUNCTIONAL 1000.00 0          0
+GV17             1200.00    10.00      0          FUNCTIONAL 1000.00 0          0
+GAA1             1200.00    10.00      0          FUNCTIONAL 1000.00 0          0
+GW2              1200.00    10.00      0          FUNCTIONAL 1000.00 0          0
+GW8              1200.00    10.00      0          FUNCTIONAL 1000.00 0          0
+GT16             1200.00    10.00      0          FUNCTIONAL 1000.00 0          0
+GK2              1200.00    10.00      0          FUNCTIONAL 1000.00 0          0
+GU4              1200.00    10.00      0          FUNCTIONAL 1000.00 0          0
 
 [CONDUITS]
 ;;Name           From             To               Length     Roughness  InOffset   OutOffset  InitFlow   MaxFlow
@@ -160,7 +181,7 @@ LI1              I1-S             I1               200.00     0.0130     570.02 
 LW50             W50-S            W50              200.00     0.0130     570.44     569.77     0          0
 LW4              W4-S             W4               200.00     0.0170     565.68     565.36     0          0
 SIP1             SIP2             SIP3             150.00     0.0040     566.54     566.36     0          0
-440              ?                ?                150.00     0.0130     562.44     561.93     0          0
+440              AA14-S           AA14             150.00     0.0130     562.44     561.93     0          0
 LAA14-1          AA15             AA14-S           200.00     0.0130     562.84     562.44     0          0
 LV25A            V34              V25A             1624.00    0.0130     577.17     575.66     0          0
 48               CH1              bars             200.00     0.0090     561.14     561.04     0          0
@@ -205,14 +226,15 @@ VHPS-1           VHPS             AA8A             PC_VHPS-1  ON       561.07   
 [CURVES]
 ;;Name           Type       X-Value    Y-Value
 ;;-------------- ---------- ---------- ----------
-PC_lead1         Pump3      0          0
-;
-PC_P10L          Pump4      0          0
-;
-PC_p3            Pump4      0          0
-;
-PC_VHPS-1        Pump4      0          0
-;
+;; Synthesized generic pump curves — replace with actual pump data
+PC_lead1         Pump1      0          5
+PC_lead1                    10         10
+PC_P10L          Pump1      0          5
+PC_P10L                     10         10
+PC_p3            Pump1      0          5
+PC_p3                       10         10
+PC_VHPS-1        Pump1      0          5
+PC_VHPS-1                   10         10
 
 [XSECTIONS]
 ;;Link           Shape        Geom1      Geom2      Geom3      Geom4      Barrels
@@ -237,7 +259,7 @@ LW-S2            CIRCULAR     5.00       0          0          0          1
 LW43             CIRCULAR     5.00       0          0          0          1
 LW4-S            CIRCULAR     5.00       0          0          0          1
 LW2              CIRCULAR     5.00       0          0          0          1
-RWEIR2           CUSTOM       4.50       0          0          0          1
+RWEIR2           TRAPEZOIDAL  4.50       10.00      2          2          1
 LU34A            CIRCULAR     2.50       0          0          0          1
 LU33             CIRCULAR     2.50       0          0          0          1
 LAA3-S           CIRCULAR     4.00       0          0          0          1
@@ -272,7 +294,7 @@ LV25A            CIRCULAR     3.00       0          0          0          1
 LV14             CIRCULAR     3.00       0          0          0          1
 LV24             CIRCULAR     3.00       0          0          0          1
 LV17             CIRCULAR     3.00       0          0          0          1
-BARSCRN          TRAPEZOIDAL  8.00       14.00      0          0          1
+BARSCRN          TRAPEZOIDAL  8.00       14.00      1          1          1
 LU35B-S          CIRCULAR     3.50       0          0          0          1
 LV2              CIRCULAR     3.00       0          0          0          1
 LCH1             CIRCULAR     5.00       0          0          0          1
@@ -280,20 +302,20 @@ LVHPS1           CIRCULAR     2.00       0          0          0          1
 LVHPS2           CIRCULAR     3.00       0          0          0          1
 LBAR             CIRCULAR     4.00       0          0          0          1
 LEXIT            CIRCULAR     3.00       0          0          0          1
-GLK-10           RECT_CLOSED  2.00       0          0          0          
-GLK2             RECT_CLOSED  0          0          0          0          
-GLP2             RECT_CLOSED  0          0          0          0          
-GLW-S2           RECT_CLOSED  0          0          0          0          
-GLZ1             RECT_CLOSED  0          0          0          0          
-GLAA15           RECT_CLOSED  0          0          0          0          
-LGJ2             RECT_CLOSED  0          0          0          0          
-GLV44            RECT_CLOSED  0          0          0          0          
-GLV17            RECT_CLOSED  0          0          0          0          
-GLAA1            RECT_CLOSED  0          0          0          0          
-GLW2             RECT_CLOSED  0          0          0          0          
-GLW8             RECT_CLOSED  0          0          0          0          
-GLT16            RECT_CLOSED  0          0          0          0          
-GLU4             RECT_CLOSED  0          0          0          0          
+GLK-10           RECT_CLOSED  2.00       2.00       0          0
+GLK2             RECT_CLOSED  0.05       0.05       0          0
+GLP2             RECT_CLOSED  0.06       0.06       0          0
+GLW-S2           RECT_CLOSED  0.04       0.04       0          0
+GLZ1             RECT_CLOSED  0.04       0.04       0          0
+GLAA15           RECT_CLOSED  0.05       0.05       0          0
+LGJ2             RECT_CLOSED  0.02       0.02       0          0
+GLV44            RECT_CLOSED  0.06       0.06       0          0
+GLV17            RECT_CLOSED  0.04       0.04       0          0
+GLAA1            RECT_CLOSED  0.04       0.04       0          0
+GLW2             RECT_CLOSED  0.04       0.04       0          0
+GLW8             RECT_CLOSED  0.04       0.04       0          0
+GLT16            RECT_CLOSED  0.08       0.08       0          0
+GLU4             RECT_CLOSED  0.04       0.04       0          0
 
 [LOSSES]
 ;;Link           Inlet      Outlet     Average    Flap Gate

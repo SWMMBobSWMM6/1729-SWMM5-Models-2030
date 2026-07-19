@@ -20,33 +20,49 @@ INERTIAL_DAMPING     PARTIAL
 NORMAL_FLOW_LIMITED  BOTH
 MAX_TRIALS           500
 HEAD_TOLERANCE       .001
+START_DATE           01/01/2001
+START_TIME           00:00:00
+REPORT_START_DATE    01/01/2001
+REPORT_START_TIME    00:00:00
+END_DATE             01/02/2001
+END_TIME             00:00:00
+SWEEP_START          01/01
+SWEEP_END            12/31
+DRY_DAYS             0
+REPORT_STEP          00:15:00
+WET_STEP             00:05:00
+DRY_STEP             01:00:00
 
 [JUNCTIONS]
 ;;Name           Elev       MaxDepth   InitDepth  SurDepth   Aponded
 ;;-------------- ---------- ---------- ---------- ---------- ----------
-0                10.00      0          0          0          0
-0                20.00      0          0          0          0
-0                10.00      0          0          0          0
-0                10.00      0          0          0          0
-0                10.00      0          0          0          0
+node05           10.00      0          0          0          0
+node03           20.00      0          0          0          0
+node06           10.00      0          0          0          0
+node07           10.00      0          0          0          0
+
+[OUTFALLS]
+;;Name           Elev       Type       Stage      Gated
+;;-------------- ---------- ---------- ---------- -----
+out              10.00      FREE                  NO
 
 [STORAGE]
 ;;Name           Elev       MaxDepth   InitDepth  Shape      Curve/Params
 ;;-------------- ---------- ---------- ---------- ---------- ----------
-0                20.00      0          0          FUNCTIONAL 0.05 0          0
-0                10.00      0          0          FUNCTIONAL 0.00 0          0
-0                10.00      0          0          FUNCTIONAL 0.00 0          0
+node01           20.00      10.00      0          FUNCTIONAL 0.05 0          0
+node02           10.00      10.00      0          FUNCTIONAL 0.00 0          0
+node04           10.00      10.00      0          FUNCTIONAL 0.00 0          0
 
 [CONDUITS]
 ;;Name           From             To               Length     Roughness  InOffset   OutOffset  InitFlow   MaxFlow
 ;;-------------- ---------------- ---------------- ---------- ---------- ---------- ---------- ---------- ----------
-201              0                0                50.00      0.0130     0.40       0.28       0          0
-G-01/1           0                0                50.00      0.0130     0.28       0.15       0          0
-206              0                0                50.00      0.0130     0.40       0.28       0          0
-G-02/1           0                0                50.00      0.0130     0.28       0.15       0          0
-204              0                0                50.00      0.0130     0.15       0.03       0          0
-216              0                0                10.00      0.0140     0.03       0          0          0
-219              0                0                50.00      0.0130     0.15       0.03       0          0
+201              node01           node02           50.00      0.0130     0.40       0.28       0          0
+G-01/1           node02           node05           50.00      0.0130     0.28       0.15       0          0
+206              node03           node04           50.00      0.0130     0.40       0.28       0          0
+G-02/1           node04           node05           50.00      0.0130     0.28       0.15       0          0
+204              node05           node06           50.00      0.0130     0.15       0.03       0          0
+216              node06           out              10.00      0.0140     0.03       0          0          0
+219              node07           node06           50.00      0.0130     0.15       0.03       0          0
 
 [XSECTIONS]
 ;;Link           Shape        Geom1      Geom2      Geom3      Geom4      Barrels
@@ -73,20 +89,20 @@ G-02/1           0          0          0          NO
 [INFLOWS]
 ;;Node           Constituent  Time Series      Type     Mfactor  Sfactor  Baseline Pattern
 ;;-------------- ------------ ---------------- -------- -------- -------- -------- --------
-0                FLOW         ""               FLOW     1.0      1.0      0.60
-0                FLOW         ""               FLOW     1.0      1.0      0.10
+node03           FLOW         ""               FLOW     1.0      1.0      0.60
+node07           FLOW         ""               FLOW     1.0      1.0      0.10
 
 [COORDINATES]
 ;;Node           X-Coord            Y-Coord
 ;;-------------- ------------------ ------------------
-0                46.47              92.70             
-0                80.05              92.77             
-0                79.99              120.23            
-0                47.57              147.48            
-0                79.99              147.33            
-0                114.07             120.06            
-0                93.91              120.16            
-0                93.97              139.58            
+node01           46.47              92.70             
+node02           80.05              92.77             
+node05           79.99              120.23            
+node03           47.57              147.48            
+node04           79.99              147.33            
+out              114.07             120.06            
+node06           93.91              120.16            
+node07           93.97              139.58            
 
 [MAP]
 DIMENSIONS 46.47 92.70 114.07 147.48

@@ -20,57 +20,74 @@ INERTIAL_DAMPING     PARTIAL
 NORMAL_FLOW_LIMITED  BOTH
 MAX_TRIALS           50
 HEAD_TOLERANCE       0.001
+START_DATE           01/01/2001
+START_TIME           00:00:00
+REPORT_START_DATE    01/01/2001
+REPORT_START_TIME    00:00:00
+END_DATE             01/02/2001
+END_TIME             00:00:00
+SWEEP_START          01/01
+SWEEP_END            12/31
+DRY_DAYS             0
+REPORT_STEP          00:15:00
+WET_STEP             00:05:00
+DRY_STEP             01:00:00
 
 [JUNCTIONS]
 ;;Name           Elev       MaxDepth   InitDepth  SurDepth   Aponded
 ;;-------------- ---------- ---------- ---------- ---------- ----------
-0                300.00     0          200.00     0          0
-0                300.00     0          200.00     0          0
-0                5.00       0          0          0          0
-0                5.00       0          0          0          0
-0                5.00       0          0          0          0
-0                300.00     0          200.00     0          0
-0                300.00     0          200.00     0          0
-0                5.00       0          0          0          0
-0                300.00     0          200.00     0          0
-0                300.00     0          200.00     0          0
+202              300.00     0          0          0          0
+204              300.00     0          0          0          0
+208              5.00       0          0          0          0
+210              5.00       0          0          0          0
+Airport          300.00     0          0          0          0
+Westlake         300.00     0          0          0          0
+218              5.00       0          0          0          0
+222              300.00     0          0          0          0
+224              300.00     0          0          0          0
+
+[OUTFALLS]
+;;Name           Elev       Type       Stage      Gated
+;;-------------- ---------- ---------- ---------- -----
+OUTFALL          5.00       FREE                  NO
 
 [STORAGE]
 ;;Name           Elev       MaxDepth   InitDepth  Shape      Curve/Params
 ;;-------------- ---------- ---------- ---------- ---------- ----------
-0                300.00     0          200.00     FUNCTIONAL 1000.00 0          0
-0                5.00       0          0          FUNCTIONAL 1000.00 0          0
-0                300.00     0          200.00     FUNCTIONAL 1000.00 0          0
+Airpark          300.00     10.00      10.00      FUNCTIONAL 1000.00 0          0
+206              5.00       10.00      0          FUNCTIONAL 1000.00 0          0
+Uppark           300.00     10.00      10.00      FUNCTIONAL 1000.00 0          0
 
 [CONDUITS]
 ;;Name           From             To               Length     Roughness  InOffset   OutOffset  InitFlow   MaxFlow
 ;;-------------- ---------------- ---------------- ---------- ---------- ---------- ---------- ---------- ----------
-201              0                0                1714.00    0.0140     0          0          0          0
-202              0                0                4183.00    0.0140     0          0          0          0
-204              0                0                7603.00    0.0140     0          0          0          0
-206              0                0                6861.00    0.0140     0          0          0          0
-208              0                0                5167.00    0.0140     0          0          0          0
-210              0                0                1379.00    0.0140     0          0          0          0
-214              0                0                1080.00    0.0120     0          0          0          0
-216              0                0                200.00     0.0140     0          0          0          0
-218              0                0                2000.00    0.0140     0          0          0          0
+201              Airpark          202              1714.00    0.0140     0          0          0          0
+202              202              204              4183.00    0.0140     0          0          0          0
+204              204              206              7603.00    0.0140     0          0          0          0
+206              206              208              6861.00    0.0140     0          0          0          0
+208              208              210              5167.00    0.0140     0          0          0          0
+210              210              OUTFALL          1379.00    0.0140     0          0          0          0
+214              Airport          204              1080.00    0.0120     0          0          0          0
+216              Westlake         206              200.00     0.0140     0          0          0          0
+218              218              208              2000.00    0.0140     0          0          0          0
 
 [PUMPS]
 ;;Name           From             To               PumpCurve  Status   Startup    Shutoff
 ;;-------------- ---------------- ---------------- ---------- -------- ---------- ----------
-220              0                0                PC_220     ON       0          0         
-222              0                0                PC_222     ON       0          0         
-224              0                0                PC_224     ON       0          0         
+220              Uppark           Airpark          PC_220     ON       1.00       0         
+222              222              Airport          PC_222     ON       1.00       0         
+224              224              Westlake         PC_224     ON       1.00       0         
 
 [CURVES]
 ;;Name           Type       X-Value    Y-Value
 ;;-------------- ---------- ---------- ----------
-PC_220           Pump3      0          0
-;
-PC_222           Pump3      0          0
-;
-PC_224           Pump3      0          0
-;
+;; Synthesized generic pump curves — replace with actual pump data
+PC_220           Pump1      0          5
+PC_220                      10         10
+PC_222           Pump1      0          5
+PC_222                      10         10
+PC_224           Pump1      0          5
+PC_224                      10         10
 
 [XSECTIONS]
 ;;Link           Shape        Geom1      Geom2      Geom3      Geom4      Barrels
@@ -101,27 +118,27 @@ PC_224           Pump3      0          0
 [INFLOWS]
 ;;Node           Constituent  Time Series      Type     Mfactor  Sfactor  Baseline Pattern
 ;;-------------- ------------ ---------------- -------- -------- -------- -------- --------
-0                FLOW         ""               FLOW     1.0      1.0      1.00
-0                FLOW         ""               FLOW     1.0      1.0      1.00
-0                FLOW         ""               FLOW     1.0      1.0      1.00
-0                FLOW         ""               FLOW     1.0      1.0      1.00
+218              FLOW         ""               FLOW     1.0      1.0      1.00
+Uppark           FLOW         ""               FLOW     1.0      1.0      1.00
+222              FLOW         ""               FLOW     1.0      1.0      1.00
+224              FLOW         ""               FLOW     1.0      1.0      1.00
 
 [COORDINATES]
 ;;Node           X-Coord            Y-Coord
 ;;-------------- ------------------ ------------------
-0                57.64              17.64             
-0                17.64              17.64             
-0                17.64              77.64             
-0                17.64              117.64            
-0                17.64              157.64            
-0                57.64              157.64            
-0                57.64              197.64            
-0                57.64              77.64             
-0                -2.36              117.64            
-0                -22.36             157.64            
-0                77.64              17.64             
-0                77.64              77.64             
-0                -42.36             117.64            
+Airpark          57.64              17.64             
+202              17.64              17.64             
+204              17.64              77.64             
+206              17.64              117.64            
+208              17.64              157.64            
+210              57.64              157.64            
+OUTFALL          57.64              197.64            
+Airport          57.64              77.64             
+Westlake         -2.36              117.64            
+218              -22.36             157.64            
+Uppark           77.64              17.64             
+222              77.64              77.64             
+224              -42.36             117.64            
 
 [MAP]
 DIMENSIONS -42.36 17.64 77.64 197.64

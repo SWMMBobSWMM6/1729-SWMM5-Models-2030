@@ -16,6 +16,18 @@ ALLOW_PONDING        NO
 SKIP_STEADY_STATE    NO
 INERTIAL_DAMPING     PARTIAL
 NORMAL_FLOW_LIMITED  BOTH
+START_DATE           01/01/2001
+START_TIME           00:00:00
+REPORT_START_DATE    01/01/2001
+REPORT_START_TIME    00:00:00
+END_DATE             01/02/2001
+END_TIME             00:00:00
+SWEEP_START          01/01
+SWEEP_END            12/31
+DRY_DAYS             0
+REPORT_STEP          00:15:00
+WET_STEP             00:05:00
+DRY_STEP             01:00:00
 
 [JUNCTIONS]
 ;;Name           Elev       MaxDepth   InitDepth  SurDepth   Aponded
@@ -37,7 +49,6 @@ ODA4             0          0          0          0          0
 ODA3             0          0          0          0          0
 ODA2             0          0          0          0          0
 ODA1             0          0          0          0          0
-ODA              0          0          0          0          0
 new1             0          0          0          0          0
 new2             0          0          0          0          0
 park             0          0          0          0          0
@@ -46,89 +57,94 @@ Resnew           0          0          0          0          0
 Reserv           0          0          0          0          0
 Resex            0          0          0          0          0
 
+[OUTFALLS]
+;;Name           Elev       Type       Stage      Gated
+;;-------------- ---------- ---------- ---------- -----
+ODA              0          FREE                  NO
+
 [CONDUITS]
 ;;Name           From             To               Length     Roughness  InOffset   OutOffset  InitFlow   MaxFlow
 ;;-------------- ---------------- ---------------- ---------- ---------- ---------- ---------- ---------- ----------
-0                ACBA             CBA5             0          0          0          0          0          0
-0                CBA5             CBA4             0          0          0          0          0          0
-0                CBA4             CBA3             0          0          0          0          0          0
-0                CBA3             CBA2             0          0          0          0          0          0
-0                CBA2             CBA1             0          0          0          0          0          0
-0                CBA              CBA1             0          0          0          0          0          0
-0                CBA1             ODA10            0          0          0          0          0          0
-0                ODA10            ODA9             0          0          0          0          0          0
-0                ODA9             ODA8             0          0          0          0          0          0
-0                ODA8             ODA7             0          0          0          0          0          0
-0                ODA7             ODA6             0          0          0          0          0          0
-0                ODA6             ODA5             0          0          0          0          0          0
-0                ODA5             ODA4             0          0          0          0          0          0
-0                ODA4             ODA3             0          0          0          0          0          0
-0                ODA3             ODA2             0          0          0          0          0          0
-0                ODA2             ODA1             0          0          0          0          0          0
-0                ODA1             ODA              0          0          0          0          0          0
-0                new1             ODA2             0          0          0          0          0          0
-0                new2             ODA3             0          0          0          0          0          0
-0                Resex            ACBA             0          0          0          0          0          0
-0                Reserv           ACBA             0          0          0          0          0          0
-0                Resnew           ACBA             0          0          0          0          0          0
-0                comm             CBA1             0          0          0          0          0          0
-0                park             CBA1             0          0          0          0          0          0
+0                ACBA             CBA5             100.00     0.0130     0          0          0          0
+0_2              CBA5             CBA4             100.00     0.0130     0          0          0          0
+0_3              CBA4             CBA3             100.00     0.0130     0          0          0          0
+0_4              CBA3             CBA2             100.00     0.0130     0          0          0          0
+0_5              CBA2             CBA1             100.00     0.0130     0          0          0          0
+0_6              CBA              CBA1             100.00     0.0130     0          0          0          0
+0_7              CBA1             ODA10            100.00     0.0130     0          0          0          0
+0_8              ODA10            ODA9             100.00     0.0130     0          0          0          0
+0_9              ODA9             ODA8             100.00     0.0130     0          0          0          0
+0_10             ODA8             ODA7             100.00     0.0130     0          0          0          0
+0_11             ODA7             ODA6             100.00     0.0130     0          0          0          0
+0_12             ODA6             ODA5             100.00     0.0130     0          0          0          0
+0_13             ODA5             ODA4             100.00     0.0130     0          0          0          0
+0_14             ODA4             ODA3             100.00     0.0130     0          0          0          0
+0_15             ODA3             ODA2             100.00     0.0130     0          0          0          0
+0_16             ODA2             ODA1             100.00     0.0130     0          0          0          0
+0_17             ODA1             ODA              100.00     0.0130     0          0          0          0
+0_18             new1             ODA2             100.00     0.0130     0          0          0          0
+0_19             new2             ODA3             100.00     0.0130     0          0          0          0
+0_20             Resex            ACBA             100.00     0.0130     0          0          0          0
+0_21             Reserv           ACBA             100.00     0.0130     0          0          0          0
+0_22             Resnew           ACBA             100.00     0.0130     0          0          0          0
+0_23             comm             CBA1             100.00     0.0130     0          0          0          0
+0_24             park             CBA1             100.00     0.0130     0          0          0          0
 
 [XSECTIONS]
 ;;Link           Shape        Geom1      Geom2      Geom3      Geom4      Barrels
 ;;-------------- ------------ ---------- ---------- ---------- ---------- ----------
-0                CIRCULAR     0          0          0          0          1
-0                CIRCULAR     0          0          0          0          1
-0                CIRCULAR     0          0          0          0          1
-0                CIRCULAR     0          0          0          0          1
-0                CIRCULAR     0          0          0          0          1
-0                CIRCULAR     0          0          0          0          1
-0                CIRCULAR     0          0          0          0          1
-0                CIRCULAR     0          0          0          0          1
-0                CIRCULAR     0          0          0          0          1
-0                CIRCULAR     0          0          0          0          1
-0                CIRCULAR     0          0          0          0          1
-0                CIRCULAR     0          0          0          0          1
-0                CIRCULAR     0          0          0          0          1
-0                CIRCULAR     0          0          0          0          1
-0                CIRCULAR     0          0          0          0          1
-0                CIRCULAR     0          0          0          0          1
-0                CIRCULAR     0          0          0          0          1
-0                CIRCULAR     0          0          0          0          1
-0                CIRCULAR     0          0          0          0          1
-0                CIRCULAR     0          0          0          0          1
-0                CIRCULAR     0          0          0          0          1
-0                CIRCULAR     0          0          0          0          1
-0                CIRCULAR     0          0          0          0          1
-0                CIRCULAR     0          0          0          0          1
+0                CIRCULAR     1.00       0          0          0          1
+0_2              CIRCULAR     1.00       0          0          0          1
+0_3              CIRCULAR     1.00       0          0          0          1
+0_4              CIRCULAR     1.00       0          0          0          1
+0_5              CIRCULAR     1.00       0          0          0          1
+0_6              CIRCULAR     1.00       0          0          0          1
+0_7              CIRCULAR     1.00       0          0          0          1
+0_8              CIRCULAR     1.00       0          0          0          1
+0_9              CIRCULAR     1.00       0          0          0          1
+0_10             CIRCULAR     1.00       0          0          0          1
+0_11             CIRCULAR     1.00       0          0          0          1
+0_12             CIRCULAR     1.00       0          0          0          1
+0_13             CIRCULAR     1.00       0          0          0          1
+0_14             CIRCULAR     1.00       0          0          0          1
+0_15             CIRCULAR     1.00       0          0          0          1
+0_16             CIRCULAR     1.00       0          0          0          1
+0_17             CIRCULAR     1.00       0          0          0          1
+0_18             CIRCULAR     1.00       0          0          0          1
+0_19             CIRCULAR     1.00       0          0          0          1
+0_20             CIRCULAR     1.00       0          0          0          1
+0_21             CIRCULAR     1.00       0          0          0          1
+0_22             CIRCULAR     1.00       0          0          0          1
+0_23             CIRCULAR     1.00       0          0          0          1
+0_24             CIRCULAR     1.00       0          0          0          1
 
 [LOSSES]
 ;;Link           Inlet      Outlet     Average    Flap Gate
 ;;-------------- ---------- ---------- ---------- ----------
 0                0          0          0          NO
-0                0          0          0          NO
-0                0          0          0          NO
-0                0          0          0          NO
-0                0          0          0          NO
-0                0          0          0          NO
-0                0          0          0          NO
-0                0          0          0          NO
-0                0          0          0          NO
-0                0          0          0          NO
-0                0          0          0          NO
-0                0          0          0          NO
-0                0          0          0          NO
-0                0          0          0          NO
-0                0          0          0          NO
-0                0          0          0          NO
-0                0          0          0          NO
-0                0          0          0          NO
-0                0          0          0          NO
-0                0          0          0          NO
-0                0          0          0          NO
-0                0          0          0          NO
-0                0          0          0          NO
-0                0          0          0          NO
+0_2              0          0          0          NO
+0_3              0          0          0          NO
+0_4              0          0          0          NO
+0_5              0          0          0          NO
+0_6              0          0          0          NO
+0_7              0          0          0          NO
+0_8              0          0          0          NO
+0_9              0          0          0          NO
+0_10             0          0          0          NO
+0_11             0          0          0          NO
+0_12             0          0          0          NO
+0_13             0          0          0          NO
+0_14             0          0          0          NO
+0_15             0          0          0          NO
+0_16             0          0          0          NO
+0_17             0          0          0          NO
+0_18             0          0          0          NO
+0_19             0          0          0          NO
+0_20             0          0          0          NO
+0_21             0          0          0          NO
+0_22             0          0          0          NO
+0_23             0          0          0          NO
+0_24             0          0          0          NO
 
 [COORDINATES]
 ;;Node           X-Coord            Y-Coord

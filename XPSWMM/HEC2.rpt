@@ -2,55 +2,271 @@
   EPA STORM WATER MANAGEMENT MODEL - VERSION 5.2 (Build 5.2.4)
   ------------------------------------------------------------
 
+  Converted from XPSWMM .xp file 
   
-  ERROR 209: undefined object 0 at line 58 of [XSECT] section:
-  1.00             IRREGULAR    0          0          0          0          1
-
+  ****************
+  Analysis Options
+  ****************
+  Flow Units ............... CFS
+  Process Models:
+    Rainfall/Runoff ........ NO
+    RDII ................... NO
+    Snowmelt ............... NO
+    Groundwater ............ NO
+    Flow Routing ........... YES
+    Ponding Allowed ........ NO
+    Water Quality .......... NO
+  Flow Routing Method ...... DYNWAVE
+  Surcharge Method ......... EXTRAN
+  Starting Date ............ 01/01/2001 00:00:00
+  Ending Date .............. 01/02/2001 00:00:00
+  Antecedent Dry Days ...... 0.0
+  Report Time Step ......... 00:15:00
+  Routing Time Step ........ 30.00 sec
+  Variable Time Step ....... YES
+  Maximum Trials ........... 8
+  Number of Threads ........ 1
+  Head Tolerance ........... 0.005000 ft
   
-  ERROR 209: undefined object 0 at line 59 of [XSECT] section:
-  2.00             IRREGULAR    0          0          0          0          1
-
   
-  ERROR 209: undefined object 0 at line 60 of [XSECT] section:
-  3.00             IRREGULAR    0          0          0          0          1
-
+  **************************        Volume        Volume
+  Flow Routing Continuity        acre-feet      10^6 gal
+  **************************     ---------     ---------
+  Dry Weather Inflow .......         0.000         0.000
+  Wet Weather Inflow .......         0.000         0.000
+  Groundwater Inflow .......         0.000         0.000
+  RDII Inflow ..............         0.000         0.000
+  External Inflow ..........     33320.997     10858.145
+  External Outflow .........     15538.990      5063.612
+  Flooding Loss ............     17753.826      5785.349
+  Evaporation Loss .........         0.000         0.000
+  Exfiltration Loss ........         0.000         0.000
+  Initial Stored Volume ....         0.000         0.000
+  Final Stored Volume ......         1.187         0.387
+  Continuity Error (%) .....         0.081
   
-  ERROR 209: undefined object 0 at line 61 of [XSECT] section:
-  4.00             IRREGULAR    0          0          0          0          1
-
   
-  ERROR 209: undefined object 0 at line 62 of [XSECT] section:
-  5.00             IRREGULAR    0          0          0          0          1
-
+  *************************
+  Highest Continuity Errors
+  *************************
+  Node 204 (22.49%)
+  Node 206 (-1.53%)
   
-  ERROR 209: undefined object 0 at line 63 of [XSECT] section:
-  6.00             IRREGULAR    0          0          0          0          1
-
   
-  ERROR 209: undefined object 0 at line 64 of [XSECT] section:
-  7.00             IRREGULAR    0          0          0          0          1
-
+  ***************************
+  Time-Step Critical Elements
+  ***************************
+  Link 9.00 (99.74%)
   
-  ERROR 209: undefined object 0 at line 65 of [XSECT] section:
-  8.00             IRREGULAR    0          0          0          0          1
-
   
-  ERROR 209: undefined object 0 at line 66 of [XSECT] section:
-  9.00             IRREGULAR    0          0          0          0          1
-
+  ********************************
+  Highest Flow Instability Indexes
+  ********************************
+  Link 3.00 (146)
+  Link 4.00 (146)
+  Link 2.00 (146)
+  Link 1.00 (145)
   
-  ERROR 209: undefined object 0 at line 67 of [XSECT] section:
-  10.00            IRREGULAR    0          0          0          0          1
-
   
-  ERROR 209: undefined object 0 at line 68 of [XSECT] section:
-  11.00            IRREGULAR    0          0          0          0          1
-
+  *********************************
+  Most Frequent Nonconverging Nodes
+  *********************************
+  Node 201 (50.13%)
+  Node 206 (49.17%)
+  Node 204 (48.97%)
+  Node 210 (0.38%)
+  Node 202 (0.38%)
   
-  ERROR 209: undefined object 0 at line 69 of [XSECT] section:
-  12.00            IRREGULAR    0          0          0          0          1
+  
+  *************************
+  Routing Time Step Summary
+  *************************
+  Minimum Time Step           :     0.73 sec
+  Average Time Step           :    17.26 sec
+  Maximum Time Step           :    30.00 sec
+  % of Time in Steady State   :     0.00
+  Average Iterations per Step :     5.52
+  % of Steps Not Converging   :    50.13
+  Time Step Frequencies       :
+     30.000 - 13.228 sec      :    99.86 %
+     13.228 -  5.833 sec      :     0.00 %
+      5.833 -  2.572 sec      :     0.08 %
+      2.572 -  1.134 sec      :     0.02 %
+      1.134 -  0.500 sec      :     0.04 %
+  
+  
+  ******************
+  Node Depth Summary
+  ******************
+  
+  ---------------------------------------------------------------------------------
+                                 Average  Maximum  Maximum  Time of Max    Reported
+                                   Depth    Depth      HGL   Occurrence   Max Depth
+  Node                 Type         Feet     Feet     Feet  days hr:min        Feet
+  ---------------------------------------------------------------------------------
+  202                  JUNCTION  1700.38  1753.95  3528.05     0  00:48     1753.87
+  204                  JUNCTION  1714.35  1760.40  3540.40     0  00:40     1759.82
+  206                  JUNCTION  1726.65  1762.78  3560.58     0  01:18     1762.76
+  208                  JUNCTION  1744.51  1768.95  3572.25     0  00:32     1768.95
+  210                  JUNCTION  1760.75  1775.50  3573.60     0  00:15     1775.50
+  212                  JUNCTION  1768.57  1778.20  3579.00     0  00:10     1778.20
+  214                  JUNCTION  1778.43  1785.30  3591.70     0  00:06     1785.28
+  216                  JUNCTION  1785.51  1789.70  3603.20     0  00:03     1789.70
+  218                  JUNCTION  1793.73  1795.40  3616.50     0  00:02     1795.40
+  220                  JUNCTION  1783.62  1801.70  3631.70     0  00:17     1801.14
+  222                  JUNCTION  1797.56  1804.19  3637.09     0  00:12     1804.18
+  224                  JUNCTION  1806.56  1807.10  3638.40     0  00:00     1807.10
+  201                  OUTFALL      0.00     0.00  1767.00     0  00:00        0.00
+  
+  
+  *******************
+  Node Inflow Summary
+  *******************
+  
+  -------------------------------------------------------------------------------------------------
+                                  Maximum  Maximum                  Lateral       Total        Flow
+                                  Lateral    Total  Time of Max      Inflow      Inflow     Balance
+                                   Inflow   Inflow   Occurrence      Volume      Volume       Error
+  Node                 Type           CFS      CFS  days hr:min    10^6 gal    10^6 gal     Percent
+  -------------------------------------------------------------------------------------------------
+  202                  JUNCTION      0.00   138.92     0  00:41           0        22.5       0.697
+  204                  JUNCTION      0.00   172.56     0  00:40           0          29      29.015
+  206                  JUNCTION      0.00    66.19     0  00:24           0        28.6      -1.511
+  208                  JUNCTION      0.00    47.86     0  00:23           0        28.8       0.631
+  210                  JUNCTION      0.00   122.20     0  00:23           0        78.4       0.395
+  212                  JUNCTION      0.00   186.27     0  00:07           0         118       0.259
+  214                  JUNCTION      0.00   183.60     0  00:07           0         118       0.134
+  216                  JUNCTION      0.00   197.45     0  00:10           0         127       0.140
+  218                  JUNCTION   1200.00  1327.40     0  00:17         776         808       0.160
+  220                  JUNCTION      0.00    51.75     0  00:12           0        33.1       0.469
+  222                  JUNCTION      0.00    52.74     0  00:08           0        33.3       0.618
+  224                  JUNCTION   7800.00  7800.00     0  00:00    5.04e+03    5.04e+03       0.003
+  201                  OUTFALL    7800.00  7854.98     0  00:48    5.04e+03    5.06e+03       0.000
+  
+  
+  **********************
+  Node Surcharge Summary
+  **********************
+  
+  Surcharging occurs when water rises above the top of the highest conduit.
+  ---------------------------------------------------------------------
+                                               Max. Height   Min. Depth
+                                   Hours       Above Crown    Below Rim
+  Node                 Type      Surcharged           Feet         Feet
+  ---------------------------------------------------------------------
+  204                  JUNCTION        0.01          0.000        0.000
+  210                  JUNCTION       23.74          0.000        0.000
+  212                  JUNCTION       23.83          0.000        0.000
+  214                  JUNCTION        0.02          0.000        0.000
+  216                  JUNCTION       23.94          0.000        0.000
+  218                  JUNCTION       23.96          0.000        0.000
+  220                  JUNCTION        0.01          0.000        0.000
+  224                  JUNCTION       24.00          0.000        0.000
+  
+  
+  *********************
+  Node Flooding Summary
+  *********************
+  
+  Flooding refers to all water that overflows a node, whether it ponds or not.
+  --------------------------------------------------------------------------
+                                                             Total   Maximum
+                                 Maximum   Time of Max       Flood    Ponded
+                        Hours       Rate    Occurrence      Volume     Depth
+  Node                 Flooded       CFS   days hr:min    10^6 gal      Feet
+  --------------------------------------------------------------------------
+  204                     0.01     69.80      0  00:40       0.013     0.000
+  210                    23.74     86.79      0  00:15      49.370     0.000
+  212                    23.83    105.88      0  00:10      39.415     0.000
+  214                     0.02    130.65      0  00:06       0.027     0.000
+  216                    23.94    145.17      0  00:03       8.960     0.000
+  218                    23.96   1115.98      0  00:17     679.819     0.000
+  224                    24.00   7799.88      0  00:00    5007.460     0.000
+  
+  
+  ***********************
+  Outfall Loading Summary
+  ***********************
+  
+  -----------------------------------------------------------
+                         Flow       Avg       Max       Total
+                         Freq      Flow      Flow      Volume
+  Outfall Node           Pcnt       CFS       CFS    10^6 gal
+  -----------------------------------------------------------
+  201                  100.00   7834.53   7854.98    5063.236
+  -----------------------------------------------------------
+  System               100.00   7834.53   7854.98    5063.236
+  
+  
+  ********************
+  Link Flow Summary
+  ********************
+  
+  -----------------------------------------------------------------------------
+                                 Maximum  Time of Max   Maximum    Max/    Max/
+                                  |Flow|   Occurrence   |Veloc|    Full    Full
+  Link                 Type          CFS  days hr:min    ft/sec    Flow   Depth
+  -----------------------------------------------------------------------------
+  1.00                 CONDUIT     54.98     0  00:48     10.21    0.28    0.50
+  2.00                 CONDUIT    138.92     0  00:41     13.82    0.75    0.90
+  3.00                 CONDUIT    172.56     0  00:40     18.32    0.70    0.99
+  4.00                 CONDUIT     66.19     0  00:24     12.03    0.38    0.73
+  5.00                 CONDUIT     47.86     0  00:23      4.21    1.06    1.00
+  6.00                 CONDUIT    122.20     0  00:23     10.18    1.00    1.00
+  7.00                 CONDUIT    186.27     0  00:07     15.69    0.98    0.99
+  8.00                 CONDUIT    183.60     0  00:07     15.30    1.00    1.00
+  9.00                 CONDUIT    197.45     0  00:10     25.95    1.00    1.00
+  10.00                CONDUIT    127.40     0  00:17     12.26    0.61    1.00
+  11.00                CONDUIT     51.75     0  00:12      7.93    0.40    0.79
+  12.00                CONDUIT     52.74     0  00:08      4.61    1.03    1.00
+  
+  
+  ***************************
+  Flow Classification Summary
+  ***************************
+  
+  -------------------------------------------------------------------------------------
+                      Adjusted    ---------- Fraction of Time in Flow Class ---------- 
+                       /Actual         Up    Down  Sub   Sup   Up    Down  Norm  Inlet 
+  Conduit               Length    Dry  Dry   Dry   Crit  Crit  Crit  Crit  Ltd   Ctrl  
+  -------------------------------------------------------------------------------------
+  1.00                    1.00   0.03  0.00  0.00  0.00  0.00  0.00  0.97  0.00  0.00
+  2.00                    1.00   0.03  0.00  0.00  0.00  0.00  0.00  0.97  0.00  0.00
+  3.00                    1.00   0.02  0.49  0.00  0.49  0.00  0.00  0.00  0.00  0.00
+  4.00                    1.00   0.02  0.00  0.00  0.00  0.49  0.00  0.49  0.49  0.00
+  5.00                    1.00   0.01  0.00  0.00  0.00  0.00  0.00  0.99  0.00  0.00
+  6.00                    1.00   0.01  0.00  0.00  0.00  0.99  0.00  0.00  0.00  0.00
+  7.00                    1.00   0.00  0.00  0.00  0.00  0.99  0.00  0.00  0.99  0.00
+  8.00                    1.00   0.00  0.00  0.00  0.00  0.00  0.00  1.00  0.00  0.00
+  9.00                    1.00   0.00  0.00  0.00  0.00  1.00  0.00  0.00  0.00  0.00
+  10.00                   1.00   0.00  0.01  0.00  0.00  0.99  0.00  0.00  0.99  0.00
+  11.00                   1.00   0.01  0.00  0.00  0.00  0.00  0.00  0.99  0.00  0.00
+  12.00                   1.00   0.00  0.00  0.00  0.00  0.00  0.00  1.00  0.00  0.00
+  
+  
+  *************************
+  Conduit Surcharge Summary
+  *************************
+  
+  ----------------------------------------------------------------------------
+                                                           Hours        Hours 
+                         --------- Hours Full --------   Above Full   Capacity
+  Conduit                Both Ends  Upstream  Dnstream   Normal Flow   Limited
+  ----------------------------------------------------------------------------
+  1.00                        0.01      0.01      0.01      0.01         0.01
+  2.00                        0.01      0.01      0.01      0.01         0.01
+  3.00                        0.01     23.46      0.01      0.01         0.01
+  4.00                        0.01      0.02     11.75      0.01         0.01
+  5.00                        0.02     23.77      0.02      0.01         0.02
+  6.00                       23.77     23.86     23.77      0.01         0.03
+  7.00                        0.01      0.02     23.86      0.01         0.01
+  8.00                        0.01     23.94      0.01      0.01         0.01
+  9.00                       23.94     24.00     23.94      0.01         0.01
+  10.00                       0.01      0.01     23.72      0.01         0.01
+  11.00                       0.01      0.02      0.01      0.01         0.01
+  12.00                       0.02     24.00      0.02     23.91         0.02
+  
 
-
-  Analysis begun on:  Mon Jul 13 08:04:00 2026
-  Analysis ended on:  Mon Jul 13 08:04:00 2026
+  Analysis begun on:  Sun Jul 19 15:19:31 2026
+  Analysis ended on:  Sun Jul 19 15:19:31 2026
   Total elapsed time: < 1 sec

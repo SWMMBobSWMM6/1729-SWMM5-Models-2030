@@ -20,11 +20,22 @@ INERTIAL_DAMPING     PARTIAL
 NORMAL_FLOW_LIMITED  BOTH
 MAX_TRIALS           50
 HEAD_TOLERANCE       0.0033
+START_DATE           01/01/2001
+START_TIME           00:00:00
+REPORT_START_DATE    01/01/2001
+REPORT_START_TIME    00:00:00
+END_DATE             01/02/2001
+END_TIME             00:00:00
+SWEEP_START          01/01
+SWEEP_END            12/31
+DRY_DAYS             0
+REPORT_STEP          00:15:00
+WET_STEP             00:05:00
+DRY_STEP             01:00:00
 
 [JUNCTIONS]
 ;;Name           Elev       MaxDepth   InitDepth  SurDepth   Aponded
 ;;-------------- ---------- ---------- ---------- ---------- ----------
-1000             31.00      0          0          0          0
 1010             67.30      0          0          0          0
 1020             162.10     0          0          0          0
 1030             242.30     0          0          0          0
@@ -46,65 +57,71 @@ HEAD_TOLERANCE       0.0033
 1075             293.50     0          0          0          0
 1120             332.00     0          0          0          0
 1110             331.50     0          0          0          0
+81st-rd          282.80     0          0          0          0
+
+[OUTFALLS]
+;;Name           Elev       Type       Stage      Gated
+;;-------------- ---------- ---------- ---------- -----
+1000             31.00      FREE                  NO
 
 [STORAGE]
 ;;Name           Elev       MaxDepth   InitDepth  Shape      Curve/Params
 ;;-------------- ---------- ---------- ---------- ---------- ----------
-1064             258.00     -1.00      0          FUNCTIONAL 1320.00 0          0
+1064             258.00     10.00      0          FUNCTIONAL 1320.00 0          0
 
 [CONDUITS]
 ;;Name           From             To               Length     Roughness  InOffset   OutOffset  InitFlow   MaxFlow
 ;;-------------- ---------------- ---------------- ---------- ---------- ---------- ---------- ---------- ----------
 BU2-A            1020             1010             900.00     0.0140     116.80     22.00      0          0
-BU8-A            1090             1080             660.00     0          322.70     282.80     0          0
-BU7-A            1065             1060             740.00     0          260.00     207.60     0          0
+BU8-A            1090             1080             660.00     0.0130     322.70     282.80     0          0
+BU7-A            1065             1060             740.00     0.0130     260.00     207.60     0          0
 83rd             1100             1090             35.00      0.0130     322.90     322.70     0          0
 H204main         1060             1050             255.00     0.0130     206.60     182.90     0          0
 H204trib         1040             1030             90.00      0.0130     238.10     232.80     0          0
 Sunny            1010             1000             110.00     0.0130     22.00      19.00      0          0
-BU1-A            1005             1010             850.00     0          64.00      22.00      0          0
-BU2-C            1030             1025             150.00     0          231.60     216.00     0          0
-BU2-B            1025             1020             360.00     0          216.00     116.80     0          0
-BU2-E            1050             1045             110.00     0          181.90     134.00     0          0
-BU2-D            1045             1020             310.00     0          134.00     116.80     0          0
-BU5-A            1040             1060             360.00     0          238.40     206.60     0          0
-81stSD-BU4       1150             1140             610.00     0          291.70     263.50     0          0
+BU1-A            1005             1010             850.00     0.0130     64.00      22.00      0          0
+BU2-C            1030             1025             150.00     0.0130     231.60     216.00     0          0
+BU2-B            1025             1020             360.00     0.0130     216.00     116.80     0          0
+BU2-E            1050             1045             110.00     0.0130     181.90     134.00     0          0
+BU2-D            1045             1020             310.00     0.0130     134.00     116.80     0          0
+BU5-A            1040             1060             360.00     0.0130     238.40     206.60     0          0
+81stSD-BU4       1150             1140             610.00     0.0130     291.70     263.50     0          0
 81sttrib         1140             1130             68.00      0.0130     262.50     260.90     0          0
-BU4-A            1130             1040             446.00     0          260.90     238.10     0          0
+BU4-A            1130             1040             446.00     0.0130     260.90     238.10     0          0
 79thSD           1064             1062             780.00     0.0130     256.00     241.80     0          0
-BU6-A            1062             1060             274.00     0          241.80     214.00     0          0
-BU7-B            1070             1065             228.00     0          277.90     260.00     0          0
+BU6-A            1062             1060             274.00     0.0130     241.80     214.00     0          0
+BU7-B            1070             1065             228.00     0.0130     277.90     260.00     0          0
 81st             81st-rd          1070             25.00      0.0130     282.80     279.70     0          0
-81stSD           1075             1080             710.00     0          292.00     282.80     0          0
-83rdSDBU9B       1110             1100             396.00     0          330.00     322.90     0          0
-83rdSDBU9A       1120             1100             320.00     0          330.00     322.90     0          0
+81stSD           1075             1080             710.00     0.0130     292.00     282.80     0          0
+83rdSDBU9B       1110             1100             396.00     0.0130     330.00     322.90     0          0
+83rdSDBU9A       1120             1100             320.00     0.0130     330.00     322.90     0          0
 
 [XSECTIONS]
 ;;Link           Shape        Geom1      Geom2      Geom3      Geom4      Barrels
 ;;-------------- ------------ ---------- ---------- ---------- ---------- ----------
-BU2-A            IRREGULAR    0          0          0          0          1
-BU8-A            IRREGULAR    0          0          0          0          1
-BU7-A            IRREGULAR    0          0          0          0          1
+BU2-A            TRAPEZOIDAL  1.00       10.00      2          2          1
+BU8-A            TRAPEZOIDAL  1.00       10.00      2          2          1
+BU7-A            TRAPEZOIDAL  1.00       10.00      2          2          1
 83rd             CIRCULAR     2.00       0          0          0          1
 H204main         CIRCULAR     3.00       0          0          0          1
 H204trib         CIRCULAR     1.50       0          0          0          1
 Sunny            CIRCULAR     3.50       0          0          0          1
-BU1-A            IRREGULAR    0          0          0          0          1
-BU2-C            IRREGULAR    0          0          0          0          1
-BU2-B            IRREGULAR    0          0          0          0          1
-BU2-E            IRREGULAR    0          0          0          0          1
-BU2-D            IRREGULAR    0          0          0          0          1
-BU5-A            IRREGULAR    0          0          0          0          1
-81stSD-BU4       IRREGULAR    0          0          0          0          1
+BU1-A            TRAPEZOIDAL  1.00       10.00      2          2          1
+BU2-C            TRAPEZOIDAL  1.00       10.00      2          2          1
+BU2-B            TRAPEZOIDAL  1.00       10.00      2          2          1
+BU2-E            TRAPEZOIDAL  1.00       10.00      2          2          1
+BU2-D            TRAPEZOIDAL  1.00       10.00      2          2          1
+BU5-A            TRAPEZOIDAL  1.00       10.00      2          2          1
+81stSD-BU4       TRAPEZOIDAL  1.00       10.00      2          2          1
 81sttrib         CIRCULAR     2.00       0          0          0          1
-BU4-A            IRREGULAR    0          0          0          0          1
+BU4-A            TRAPEZOIDAL  1.00       10.00      2          2          1
 79thSD           CIRCULAR     1.00       0          0          0          1
-BU6-A            IRREGULAR    0          0          0          0          1
-BU7-B            IRREGULAR    0          0          0          0          1
+BU6-A            TRAPEZOIDAL  1.00       10.00      2          2          1
+BU7-B            TRAPEZOIDAL  1.00       10.00      2          2          1
 81st             CIRCULAR     1.00       0          0          0          1
-81stSD           IRREGULAR    0          0          0          0          1
-83rdSDBU9B       IRREGULAR    0          0          0          0          1
-83rdSDBU9A       IRREGULAR    0          0          0          0          1
+81stSD           TRAPEZOIDAL  1.00       10.00      2          2          1
+83rdSDBU9B       TRAPEZOIDAL  1.00       10.00      2          2          1
+83rdSDBU9A       TRAPEZOIDAL  1.00       10.00      2          2          1
 
 [LOSSES]
 ;;Link           Inlet      Outlet     Average    Flap Gate

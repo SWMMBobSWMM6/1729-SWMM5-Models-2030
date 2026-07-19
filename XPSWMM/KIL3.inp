@@ -19,11 +19,22 @@ VARIABLE_STEP        0.75
 INERTIAL_DAMPING     PARTIAL
 NORMAL_FLOW_LIMITED  BOTH
 MAX_TRIALS           50
+START_DATE           01/01/2001
+START_TIME           00:00:00
+REPORT_START_DATE    01/01/2001
+REPORT_START_TIME    00:00:00
+END_DATE             01/02/2001
+END_TIME             00:00:00
+SWEEP_START          01/01
+SWEEP_END            12/31
+DRY_DAYS             0
+REPORT_STEP          00:15:00
+WET_STEP             00:05:00
+DRY_STEP             01:00:00
 
 [JUNCTIONS]
 ;;Name           Elev       MaxDepth   InitDepth  SurDepth   Aponded
 ;;-------------- ---------- ---------- ---------- ---------- ----------
-2133             0          0          0          0          0
 163              0          0          0          0          0
 DUMMY2           0          0          0          0          0
 169              0          0          0          0          0
@@ -172,13 +183,21 @@ DUMMY68          0          0          0          0          0
 5113             49.40      0          0          0          0
 5112             51.20      0          0          0          0
 5111             52.27      0          0          0          0
+21223            41.30      0          0          0          0
+21232            41.17      0          0          0          0
+21342            37.59      0          0          0          0
+
+[OUTFALLS]
+;;Name           Elev       Type       Stage      Gated
+;;-------------- ---------- ---------- ---------- -----
+2133             0          FREE                  NO
 
 [STORAGE]
 ;;Name           Elev       MaxDepth   InitDepth  Shape      Curve/Params
 ;;-------------- ---------- ---------- ---------- ---------- ----------
-5146             48.00      0          0          FUNCTIONAL 0 0          0
-5037             50.00      0          0          FUNCTIONAL 100.00 0          0
-5148             48.00      0          0          FUNCTIONAL 0 0          0
+5146             48.00      10.00      0          FUNCTIONAL 1000.00 0          0
+5037             50.00      10.00      0          FUNCTIONAL 100.00 0          0
+5148             48.00      10.00      0          FUNCTIONAL 1000.00 0          0
 
 [CONDUITS]
 ;;Name           From             To               Length     Roughness  InOffset   OutOffset  InitFlow   MaxFlow
@@ -199,7 +218,7 @@ DUMMY68          0          0          0          0          0
 2004             113              DUMMY10          240.00     0.0150     0          0          0          0
 2005             DUMMY10          5007             600.00     0.0150     0          0          0          0
 2012             1202             5011             320.00     0.0250     0          0          0          0
-2965             ?                ?                110.00     0.0250     0          0          0          0
+2965             119              DUMMY11          110.00     0.0250     0          0          0          0
 2966             DUMMY11          5067             190.00     0.0250     0          0          0          0
 2932             DUMMY12          5902             90.00      0.0230     0          0          0          0
 2931             DUMMY13          DUMMY12          10.00      0.0560     0          0          0          0
@@ -345,16 +364,16 @@ MUL5             5952             5953             TRANSVERSE 51.74      1.840  
 ;;Link           Shape        Geom1      Geom2      Geom3      Geom4      Barrels
 ;;-------------- ------------ ---------- ---------- ---------- ---------- ----------
 2972             CIRCULAR     2.00       0          0          0          1
-2973             TRAPEZOIDAL  2.00       2.00       0          0          1
+2973             TRAPEZOIDAL  2.00       2.00       1          1          1
 2974             CIRCULAR     2.00       0          0          0          1
-2975             TRAPEZOIDAL  2.00       4.00       0          0          1
-2977             TRAPEZOIDAL  4.00       4.00       0          0          1
+2975             TRAPEZOIDAL  2.00       4.00       1          1          1
+2977             TRAPEZOIDAL  4.00       4.00       1          1          1
 2971             CIRCULAR     2.00       0          0          0          1
-2976             TRAPEZOIDAL  2.00       4.00       0          0          1
+2976             TRAPEZOIDAL  2.00       4.00       1          1          1
 2959             CIRCULAR     2.00       0          0          0          1
 2960             CIRCULAR     2.50       0          0          0          1
-2982             TRAPEZOIDAL  1.50       6.00       0          0          1
-2001             TRAPEZOIDAL  2.00       1.00       0          0          1
+2982             TRAPEZOIDAL  1.50       6.00       1          1          1
+2001             TRAPEZOIDAL  2.00       1.00       1          1          1
 2002             CIRCULAR     2.00       0          0          0          1
 2003             CIRCULAR     2.00       0          0          0          1
 2004             CIRCULAR     2.00       0          0          0          1
@@ -362,8 +381,8 @@ MUL5             5952             5953             TRANSVERSE 51.74      1.840  
 2012             CIRCULAR     2.00       0          0          0          1
 2965             CIRCULAR     2.00       0          0          0          1
 2966             CIRCULAR     2.00       0          0          0          1
-2932             TRAPEZOIDAL  2.50       6.00       0          0          1
-2931             TRAPEZOIDAL  2.50       6.00       0          0          1
+2932             TRAPEZOIDAL  2.50       6.00       1          1          1
+2931             TRAPEZOIDAL  2.50       6.00       1          1          1
 2930             CIRCULAR     2.50       0          0          0          1
 2045             CIRCULAR     2.25       0          0          0          1
 2044             CIRCULAR     1.75       0          0          0          1
@@ -377,7 +396,7 @@ MUL5             5952             5953             TRANSVERSE 51.74      1.840  
 2053             CIRCULAR     2.25       0          0          0          1
 2052             CIRCULAR     2.00       0          0          0          1
 2051             CIRCULAR     1.50       0          0          0          1
-2050             TRAPEZOIDAL  3.50       3.00       0          0          1
+2050             TRAPEZOIDAL  3.50       3.00       1          1          1
 2945             CIRCULAR     2.00       0          0          0          1
 2946             CIRCULAR     2.00       0          0          0          1
 2949             CIRCULAR     2.50       0          0          0          1
@@ -392,24 +411,24 @@ MUL5             5952             5953             TRANSVERSE 51.74      1.840  
 2933             CIRCULAR     1.50       0          0          0          1
 2934             CIRCULAR     1.50       0          0          0          1
 2935             CIRCULAR     1.50       0          0          0          1
-2082             TRAPEZOIDAL  3.00       4.00       0          0          1
-2081             TRAPEZOIDAL  4.30       7.00       0          0          1
-2987             TRAPEZOIDAL  4.00       5.00       0          0          1
+2082             TRAPEZOIDAL  3.00       4.00       1          1          1
+2081             TRAPEZOIDAL  4.30       7.00       1          1          1
+2987             TRAPEZOIDAL  4.00       5.00       1          1          1
 2080             CIRCULAR     2.37       0          0          0          1
-2079             TRAPEZOIDAL  4.00       5.00       0          0          1
+2079             TRAPEZOIDAL  4.00       5.00       1          1          1
 2078             CIRCULAR     2.37       0          0          0          1
-2077             TRAPEZOIDAL  4.00       5.00       0          0          1
+2077             TRAPEZOIDAL  4.00       5.00       1          1          1
 2076             CIRCULAR     2.37       0          0          0          1
-2075             TRAPEZOIDAL  4.00       5.00       0          0          1
+2075             TRAPEZOIDAL  4.00       5.00       1          1          1
 2074             CIRCULAR     4.00       0          0          0          1
-2073             TRAPEZOIDAL  2.00       6.00       0          0          1
-2072             TRAPEZOIDAL  2.00       2.00       0          0          1
-2071             TRAPEZOIDAL  2.00       6.00       0          0          1
-2070             TRAPEZOIDAL  3.00       3.00       0          0          1
-2939             TRAPEZOIDAL  2.00       6.00       0          0          1
+2073             TRAPEZOIDAL  2.00       6.00       1          1          1
+2072             TRAPEZOIDAL  2.00       2.00       1          1          1
+2071             TRAPEZOIDAL  2.00       6.00       1          1          1
+2070             TRAPEZOIDAL  3.00       3.00       1          1          1
+2939             TRAPEZOIDAL  2.00       6.00       1          1          1
 2063             CIRCULAR     2.25       0          0          0          1
 2062             CIRCULAR     2.00       0          0          0          1
-2061             TRAPEZOIDAL  3.00       3.00       0          0          1
+2061             TRAPEZOIDAL  3.00       3.00       1          1          1
 2906             CIRCULAR     2.00       0          0          0          1
 2060             CIRCULAR     2.00       0          0          0          1
 2907             CIRCULAR     2.00       0          0          0          1
@@ -432,16 +451,16 @@ MUL5             5952             5953             TRANSVERSE 51.74      1.840  
 21221            CIRCULAR     3.50       0          0          0          1
 21231            CIRCULAR     3.00       0          0          0          1
 2125             POWER        4.00       150.00     0          0          1
-2126             TRAPEZOIDAL  7.00       5.00       0          0          1
+2126             TRAPEZOIDAL  7.00       5.00       1          1          1
 2127             CIRCULAR     3.50       0          0          0          1
-2128             TRAPEZOIDAL  7.20       6.00       0          0          1
+2128             TRAPEZOIDAL  7.20       6.00       1          1          1
 2129             CIRCULAR     3.50       0          0          0          1
-2130             TRAPEZOIDAL  7.20       15.00      0          0          1
+2130             TRAPEZOIDAL  7.20       15.00      1          1          1
 2131             RECT_CLOSED  5.50       4.52       0          0          1
 21331            RECT_CLOSED  2.00       4.00       0          0          1
-2133             TRAPEZOIDAL  7.00       40.00      0          0          1
+2133             TRAPEZOIDAL  7.00       40.00      1          1          1
 21341            CIRCULAR     4.00       0          0          0          1
-2135             TRAPEZOIDAL  7.00       10.00      0          0          1
+2135             TRAPEZOIDAL  7.00       10.00      1          1          1
 2136             CIRCULAR     4.00       0          0          0          1
 2006             CIRCULAR     3.50       0          0          0          1
 2007             CIRCULAR     3.50       0          0          0          1
@@ -466,27 +485,27 @@ MUL5             5952             5953             TRANSVERSE 51.74      1.840  
 2056             CIRCULAR     4.50       0          0          0          1
 2055             CIRCULAR     4.50       0          0          0          1
 2988             CIRCULAR     4.00       0          0          0          1
-2989             TRAPEZOIDAL  4.00       6.00       0          0          1
-2054             TRAPEZOIDAL  1.50       6.00       0          0          1
+2989             TRAPEZOIDAL  4.00       6.00       1          1          1
+2054             TRAPEZOIDAL  1.50       6.00       1          1          1
 2100             CIRCULAR     4.50       0          0          0          1
 2992             CIRCULAR     6.00       0          0          0          1
 2993             CIRCULAR     5.00       0          0          0          1
 2990             RECT_CLOSED  3.00       8.00       0          0          1
 2099             CIRCULAR     4.17       0          0          0          1
 2095             CIRCULAR     3.50       0          0          0          1
-2094             TRAPEZOIDAL  4.00       10.00      0          0          1
+2094             TRAPEZOIDAL  4.00       10.00      1          1          1
 2093             CIRCULAR     3.50       0          0          0          1
 2092             CIRCULAR     3.50       0          0          0          1
 2091             RECT_CLOSED  2.00       10.00      0          0          1
-2090             TRAPEZOIDAL  3.00       5.00       0          0          1
-2937             TRAPEZOIDAL  2.00       10.00      0          0          1
-2023             TRAPEZOIDAL  3.00       5.00       0          0          1
+2090             TRAPEZOIDAL  3.00       5.00       1          1          1
+2937             TRAPEZOIDAL  2.00       10.00      1          1          1
+2023             TRAPEZOIDAL  3.00       5.00       1          1          1
 2903             CIRCULAR     3.00       0          0          0          1
 2904             CIRCULAR     3.00       0          0          0          1
 2022             CIRCULAR     3.00       0          0          0          1
 2938             CIRCULAR     4.50       0          0          0          1
-2991             TRAPEZOIDAL  4.30       8.00       0          0          1
-2083             TRAPEZOIDAL  4.30       9.00       0          0          1
+2991             TRAPEZOIDAL  4.30       8.00       1          1          1
+2083             TRAPEZOIDAL  4.30       9.00       1          1          1
 2112             CIRCULAR     4.00       0          0          0          1
 2111             CIRCULAR     4.00       0          0          0          1
 2110             CIRCULAR     2.50       0          0          0          1
@@ -494,9 +513,9 @@ MUL5             5952             5953             TRANSVERSE 51.74      1.840  
 2944             CIRCULAR     2.00       0          0          0          1
 2107             CIRCULAR     3.00       0          0          0          1
 2106             CIRCULAR     3.00       0          0          0          1
-2132             RECT_OPEN    0          0          0          0          
-MUL4             RECT_OPEN    0          7.00       0          0          
-MUL5             RECT_OPEN    0          8.50       0          0          
+2132             RECT_OPEN    1.00       1.00       0          0
+MUL4             TRIANGULAR   1.00       7.00       0          0
+MUL5             RECT_OPEN    1.00       8.50       0          0
 
 [LOSSES]
 ;;Link           Inlet      Outlet     Average    Flap Gate

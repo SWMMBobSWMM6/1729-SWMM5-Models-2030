@@ -14,12 +14,24 @@ LINK_OFFSETS         DEPTH
 MIN_SLOPE            0.0
 ALLOW_PONDING        NO
 SKIP_STEADY_STATE    NO
-ROUTING_STEP         00:00:60
+ROUTING_STEP         00:01:00
 VARIABLE_STEP        0.75
 INERTIAL_DAMPING     PARTIAL
 NORMAL_FLOW_LIMITED  BOTH
 MAX_TRIALS           50
 HEAD_TOLERANCE       0.0033
+START_DATE           01/01/2001
+START_TIME           00:00:00
+REPORT_START_DATE    01/01/2001
+REPORT_START_TIME    00:00:00
+END_DATE             01/02/2001
+END_TIME             00:00:00
+SWEEP_START          01/01
+SWEEP_END            12/31
+DRY_DAYS             0
+REPORT_STEP          00:15:00
+WET_STEP             00:05:00
+DRY_STEP             01:00:00
 
 [JUNCTIONS]
 ;;Name           Elev       MaxDepth   InitDepth  SurDepth   Aponded
@@ -31,7 +43,6 @@ W4-HW-100        150.90     0          0          0          0
 W4-EH-080        128.90     0          0          0          0
 W4-EH-100        162.90     0          0          0          0
 W5-OF            153.40     0          0          0          0
-015              10.00      0          0          0          0
 W5-PE-020        39.13      0          0          0          0
 SIPHON-PA        130.40     0          0          0          0
 W4-OF            33.60      0          0          0          0
@@ -98,7 +109,7 @@ H3-03-040        6.70       0          0          0          0
 H3-03-050        6.80       0          0          0          0
 H2-NE-010        10.64      0          0          0          0
 H1-OB-010        9.29       0          0          0          0
-0                3.92       0          0          0          0
+N553             3.92       0          0          0          0
 H1-OB-090        4.06       0          0          0          0
 H1-01-100        3.97       0          0          0          0
 H1-01-080        4.51       0          0          0          0
@@ -115,82 +126,95 @@ BPS-FM3          115.40     0          0          0          0
 BPS-FM2          134.80     0          0          0          0
 BPS-FM1          107.50     0          0          0          0
 BPS-FM4          131.40     0          0          0          0
+TS1B-W2          155.00     0          0          0          0
+12INCH           20.90      0          0          0          0
+
+[OUTFALLS]
+;;Name           Elev       Type       Stage      Gated
+;;-------------- ---------- ---------- ---------- -----
+015              10.00      FREE                  NO
 
 [STORAGE]
 ;;Name           Elev       MaxDepth   InitDepth  Shape      Curve/Params
 ;;-------------- ---------- ---------- ---------- ---------- ----------
-BPS              8.71       0          0          FUNCTIONAL 20.00 0          0
-W5               153.42     -0.02      0          FUNCTIONAL 26.00 0          0
-W5-IC            153.40     0          0          FUNCTIONAL 35.75 0          0
-W5-BE-010        152.47     -0.07      0          FUNCTIONAL 12.56 0          0
-W4               33.60      0          0          FUNCTIONAL 32.50 0          0
-W4-IC            33.60      0          0          FUNCTIONAL 35.75 0          0
-W1               67.67      -0.07      0          FUNCTIONAL 40.00 0          0
-W1-IC            67.67      -0.07      0          FUNCTIONAL 40.00 0          0
-W3               65.20      0          0          FUNCTIONAL 32.50 0          0
-W2&3-IC          61.89      -28.29     0          FUNCTIONAL 35.75 0          0
-W2               61.90      0          0          FUNCTIONAL 32.50 0          0
-W2-IC            61.90      0          0          FUNCTIONAL 0 0          0
-W3-IC            65.20      0          0          FUNCTIONAL 0 0          0
-18PS             5.95       0          0          FUNCTIONAL 560.00 0          0
+BPS              8.71       10.00      0          FUNCTIONAL 20.00 0          0
+W5               153.42     10.00      0          FUNCTIONAL 26.00 0          0
+W5-IC            153.40     10.00      0          FUNCTIONAL 35.75 0          0
+W5-BE-010        152.47     10.00      0          FUNCTIONAL 12.56 0          0
+W4               33.60      10.00      0          FUNCTIONAL 32.50 0          0
+W4-IC            33.60      10.00      0          FUNCTIONAL 35.75 0          0
+W1               67.67      10.00      0          FUNCTIONAL 40.00 0          0
+W1-IC            67.67      10.00      0          FUNCTIONAL 40.00 0          0
+W3               65.20      10.00      0          FUNCTIONAL 32.50 0          0
+W2&3-IC          61.89      10.00      0          FUNCTIONAL 35.75 0          0
+W2               61.90      10.00      0          FUNCTIONAL 32.50 0          0
+W2-IC            61.90      10.00      0          FUNCTIONAL 1000.00 0          0
+W3-IC            65.20      10.00      0          FUNCTIONAL 1000.00 0          0
+18PS             5.95       10.00      0          FUNCTIONAL 560.00 0          0
 H7-OF            7.02       0.08       0          FUNCTIONAL 97.50 0          0
-H7               7.02       -0.02      0          FUNCTIONAL 97.50 0          0
-H7-IC            7.02       -0.02      0          FUNCTIONAL 35.75 0          0
-H7-WW            7.02       -0.02      0          FUNCTIONAL 97.50 0          0
+H7               7.02       10.00      0          FUNCTIONAL 97.50 0          0
+H7-IC            7.02       10.00      0          FUNCTIONAL 35.75 0          0
+H7-WW            7.02       10.00      0          FUNCTIONAL 97.50 0          0
 H6-OF            7.49       0.01       0          FUNCTIONAL 24.50 0          0
-H6               7.49       -0.09      0          FUNCTIONAL 24.50 0          0
-H6-IC            7.49       -0.09      0          FUNCTIONAL 35.75 0          0
-H6-WW            7.49       -0.09      0          FUNCTIONAL 24.50 0          0
-H5-OF            19.60      0          0          FUNCTIONAL 115.38 0          0
-H5               19.62      -0.02      0          FUNCTIONAL 115.38 0          0
-H5-IC            19.62      -0.02      0          FUNCTIONAL 35.75 0          0
-H5-WW            19.62      -0.02      0          FUNCTIONAL 115.38 0          0
+H6               7.49       10.00      0          FUNCTIONAL 24.50 0          0
+H6-IC            7.49       10.00      0          FUNCTIONAL 35.75 0          0
+H6-WW            7.49       10.00      0          FUNCTIONAL 24.50 0          0
+H5-OF            19.60      10.00      0          FUNCTIONAL 115.38 0          0
+H5               19.62      10.00      0          FUNCTIONAL 115.38 0          0
+H5-IC            19.62      10.00      0          FUNCTIONAL 35.75 0          0
+H5-WW            19.62      10.00      0          FUNCTIONAL 115.38 0          0
 HSI              8.29       25.31      0          FUNCTIONAL 32.50 0          0
 P5-SH-010        9.18       24.42      0          FUNCTIONAL 35.75 0          0
 H4-OF            17.98      0.02       0          FUNCTIONAL 81.00 0          0
-H4               17.98      -0.08      0          FUNCTIONAL 81.00 0          0
-H4-IC            17.98      -0.08      0          FUNCTIONAL 35.75 0          0
-H4-WW            17.98      -0.08      0          FUNCTIONAL 81.00 0          0
+H4               17.98      10.00      0          FUNCTIONAL 81.00 0          0
+H4-IC            17.98      10.00      0          FUNCTIONAL 35.75 0          0
+H4-WW            17.98      10.00      0          FUNCTIONAL 81.00 0          0
 H3-OF            12.87      0.03       0          FUNCTIONAL 63.00 0          0
-H3               12.87      -0.07      0          FUNCTIONAL 63.00 0          0
-H3-IC            12.87      -0.07      0          FUNCTIONAL 35.75 0          0
-H3-WW            12.87      -0.07      0          FUNCTIONAL 63.00 0          0
+H3               12.87      10.00      0          FUNCTIONAL 63.00 0          0
+H3-IC            12.87      10.00      0          FUNCTIONAL 35.75 0          0
+H3-WW            12.87      10.00      0          FUNCTIONAL 63.00 0          0
 H2-OF            10.04      0.01       0          FUNCTIONAL 54.00 0          0
-H2               10.04      -0.04      0          FUNCTIONAL 54.00 0          0
-H2-IC            10.04      -0.04      0          FUNCTIONAL 35.75 0          0
-H2-WW            10.04      -0.04      0          FUNCTIONAL 54.00 0          0
+H2               10.04      10.00      0          FUNCTIONAL 54.00 0          0
+H2-IC            10.04      10.00      0          FUNCTIONAL 35.75 0          0
+H2-WW            10.04      10.00      0          FUNCTIONAL 54.00 0          0
 H1-OF            10.38      0.02       0          FUNCTIONAL 93.00 0          0
-H1               10.38      -0.08      0          FUNCTIONAL 93.00 0          0
-H1-IC            10.38      -0.08      0          FUNCTIONAL 35.75 0          0
-H1-WW            10.38      -0.08      0          FUNCTIONAL 93.00 0          0
-5PS              9.20       0          0          FUNCTIONAL 176.00 0          0
-11PS             20.92      -24.12     0          FUNCTIONAL 152.00 0          0
-H1-OB-050        4.67       -0.07      0          FUNCTIONAL 187.00 0          0
-18PS-WW          5.95       0          0          FUNCTIONAL 460.00 0          0
-H0-OF            4.15       -0.05      0          FUNCTIONAL 187.00 0          0
-18PS-DW          130.40     -124.45    0          FUNCTIONAL 560.00 0          0
+H1               10.38      10.00      0          FUNCTIONAL 93.00 0          0
+H1-IC            10.38      10.00      0          FUNCTIONAL 35.75 0          0
+H1-WW            10.38      10.00      0          FUNCTIONAL 93.00 0          0
+5PS              9.20       10.00      0          FUNCTIONAL 176.00 0          0
+11PS             20.92      10.00      0          FUNCTIONAL 152.00 0          0
+H1-OB-050        4.67       10.00      0          FUNCTIONAL 187.00 0          0
+18PS-WW          5.95       10.00      0          FUNCTIONAL 460.00 0          0
+H0-OF            4.15       10.00      0          FUNCTIONAL 187.00 0          0
+18PS-DW          130.40     10.00      0          FUNCTIONAL 560.00 0          0
 
 [CONDUITS]
 ;;Name           From             To               Length     Roughness  InOffset   OutOffset  InitFlow   MaxFlow
 ;;-------------- ---------------- ---------------- ---------- ---------- ---------- ---------- ---------- ----------
-IC5-W5           W5-PE-010        W5-BA-020        3290.00    0.0130     6.00       -0.54      0          0
+IC5-W5           W5-PE-010        W5-BA-020        3290.00    0.0130     6.00       0          0          0
 TS6-W4           W4-HW-100        W4-EH-080        350.00     0.0130     118.40     115.20     0          0
 TS1-W4           W4-EH-020        W4               326.00     0.0130     38.90      23.90      0          0
 TS5-W4           W4-EH-100        W4-EH-080        440.00     0.0130     154.40     115.20     0          0
-OF2-W5           W5-OF            015              780.00     0.0130     137.02     -4.33      0          0
+OF2-W5           W5-OF            015              780.00     0.0130     137.02     0          0          0
+IC1-W5           W5               W5-IC            1.00       0.0130     138.57     138.56     0          0
 TS1-W5           W5-BE-010        W5               100.00     0.0130     140.02     139.32     0          0
 IC3-W5           W5-PE-100        W5-PE-020        1881.00    0.0130     137.27     35.05      0          0
-IC6-W5           W5-BA-020        BPS              441.00     0.0130     -0.97      -1.04      0          0
+IC6-W5           W5-BA-020        BPS              441.00     0.0130     0          0          0          0
+IC2-W5           W5-IC            W5-PE-100        129.00     0.0130     138.06     137.27     0          0
 IC4-W5           W5-PE-020        W5-PE-010        176.00     0.0130     35.05      32.41      0          0
+IC1-W4           W4               W4-IC            1.00       0.0130     23.38      23.37      0          0
 TS4-W4           W4-EH-080        W4-EH-060        830.00     0.0130     115.20     90.10      0          0
 TS2-W4           W4-EH-040        W4-EH-020        670.00     0.0130     69.72      38.90      0          0
 TS3-W4           W4-EH-060        W4-EH-040        650.00     0.0130     90.10      69.72      0          0
+IC1-W1           W1               W1-IC            1.00       0.0130     55.07      55.06      0          0
+IC1-W3           W3               W3-IC            1.00       0.0130     58.34      58.33      0          0
+IC1-W2           W2               W2-IC            1.00       0.0130     54.82      54.81      0          0
 OF2-W1           W1-OF            W123-OF          264.00     0.0130     55.17      39.65      0          0
 OF2-W2           W2               W123-OF          250.00     0.0130     56.69      39.65      0          0
 OF3-W2           W2-OF            W123-OF          264.00     0.0140     55.85      42.65      0          0
 OF-W12&3         W123-OF          W1234-OF         341.00     0.0130     21.85      3.53       0          0
 OF3-W4           W4-OF            W1234-OF         543.00     0.0130     23.89      6.53       0          0
-OF-W123&4        W1234-OF         013              1250.00    0.0140     3.53       -5.40      0          0
+OF-W123&4        W1234-OF         013              1250.00    0.0140     3.53       0          0          0
 TS1-W1           W1-PA-030        W1               1550.00    0.0130     107.80     55.07      0          0
 TS2-W1           W1-PA-050        W1-PA-030        730.00     0.0130     144.15     107.80     0          0
 TS3-W1           U1-39-110        W1-PA-050        1050.00    0.0130     153.00     144.15     0          0
@@ -211,61 +235,79 @@ TS6-W2           U2-MO-100        W2S-WA-090       200.00     0.0130     184.30 
 TS7-W2           U2-PA-100        W2S-WA-090       50.00      0.0130     185.00     184.05     0          0
 IC1-W2&3         W2&3-IC          W12&3-IC1        162.00     0.0130     53.50      49.66      0          0
 IC1-W12&3        W12&3-IC1        W12&3-IC2        410.00     0.0130     49.66      35.73      0          0
-24INCH           12INCH           HOB.             2400.00    0          20.90      -4.06      0          0
+24INCH           12INCH           HOB.             2400.00    0.0130     20.90      0          0          0
+IC2-W2           W2-IC            W2&3-IC          12.00      0.0130     54.05      53.50      0          0
+IC2-W3           W3-IC            W2&3-IC          123.00     0.0130     57.76      53.50      0          0
+IC2-W1           W1-IC            W12&3-IC1        294.00     0.0130     54.47      49.66      0          0
 OF2-W3           W3-OF            W123-OF          380.00     0.0130     58.65      39.65      0          0
-TS2-18PS         18-18-050        18-18-030        390.00     0.0130     -4.20      -5.50      0          0
-TS1-18PS         18-18-030        18PS             163.00     0.0130     -5.50      -6.05      0          0
-TS3-18PS         18-18-060        18-18-050        50.00      0.0130     -3.90      -4.20      0          0
-TS4-18S          18-18-070        18-18-060        250.00     0.0130     -4.15      -3.90      0          0
-TS5-18PS         18-18-100        18-18-070        480.00     0.0130     -1.00      -4.15      0          0
-FM-18PS-D        18PS-DW          SIPHON-PA        1375.00    0.0130     -0.70      20.90      0          0
-OF3-H7           H7-OF            008              263.00     0.0130     -2.61      -5.04      0          0
-TS1-H7           H7-15-010        H7               247.00     0.0130     -2.30      -2.28      0          0
-TS2-H7           H7-15-100        H7-15-010        850.00     0.0130     -1.80      -2.00      0          0
-TS3-H7           H7-15-110        H7-15-100        220.00     0.0130     -1.45      -1.80      0          0
-TS4-H7           H7-15-150        H7-15-110        830.00     0.0130     -1.30      -1.45      0          0
-OF3-H6           H6-OF            007              530.00     0.0140     -1.79      -4.44      0          0
-OF3-H5           H5-OF            006              660.00     0.0130     -2.55      -5.89      0          0
-IC3-H7           H7-IC            H6-IC            458.00     0.0130     -4.59      -5.30      0          0
-IC1-H6&7         H6-IC            H65-IC           1212.00    0.0130     -5.80      -7.34      0          0
-OF3-H4           H4-OF            005              250.00     0.0140     -2.65      -2.90      0          0
-OF3-H3           H3-OF            004              350.00     0.0140     -3.13      -3.48      0          0
-OF3-H2           H2-OF            003              400.00     0.0130     -3.05      -3.45      0          0
-OF3-H1           H1-OF            002              830.00     0.0130     -3.78      -9.01      0          0
-IC3-H1           H1-IC            H2-IC            903.00     0.0130     -5.11      -5.35      0          0
-IC1-H1&2         H2-IC            H3-IC            1220.00    0.0130     -6.21      -7.88      0          0
-IC1-H12&3        H3-IC            H4-IC            444.00     0.0130     -7.88      -7.85      0          0
-IC1-H123&4       H4-IC            P5-SH-010        367.00     0.0130     -8.05      -8.44      0          0
-IC1-H1-SI        P5-SH-010        5PS              37.00      0.0130     -8.42      -8.63      0          0
+TS2-18PS         18-18-050        18-18-030        390.00     0.0130     0          0          0          0
+TS1-18PS         18-18-030        18PS             163.00     0.0130     0          0          0          0
+TS3-18PS         18-18-060        18-18-050        50.00      0.0130     0          0          0          0
+TS4-18S          18-18-070        18-18-060        250.00     0.0130     0          0          0          0
+TS5-18PS         18-18-100        18-18-070        480.00     0.0130     0          0          0          0
+FM-18PS-D        18PS-DW          SIPHON-PA        1375.00    0.0130     0          20.90      0          0
+IC1-H7           H7               H7-IC            1.00       0.0130     0          0          0          0
+IC2-H7           H7-WW            H7-IC            1.00       0.0130     0          0          0          0
+OF3-H7           H7-OF            008              263.00     0.0130     0          0          0          0
+TS1-H7           H7-15-010        H7               247.00     0.0130     0          0          0          0
+TS2-H7           H7-15-100        H7-15-010        850.00     0.0130     0          0          0          0
+TS3-H7           H7-15-110        H7-15-100        220.00     0.0130     0          0          0          0
+TS4-H7           H7-15-150        H7-15-110        830.00     0.0130     0          0          0          0
+IC1-H6           H6               H6-IC            1.00       0.0130     0          0          0          0
+IC2-H6           H6-WW            H6-IC            1.00       0.0130     0          0          0          0
+OF3-H6           H6-OF            007              530.00     0.0140     0          0          0          0
+IC1-H5           H5               H5-IC            1.00       0.0130     0          0          0          0
+IC2-H5           H5-WW            H5-IC            1.00       0.0130     0          0          0          0
+OF3-H5           H5-OF            006              660.00     0.0130     0          0          0          0
+IC3-H7           H7-IC            H6-IC            458.00     0.0130     0          0          0          0
+IC1-H6&7         H6-IC            H65-IC           1212.00    0.0130     0          0          0          0
+IC1-HSI          HSI              P5-SH-010        80.00      0.0130     3.79       2.99       0          0
+IC1-H4           H4               H4-IC            1.00       0.0130     0          0          0          0
+IC2-H4           H4-WW            H4-IC            1.00       0.0130     0          0          0          0
+OF3-H4           H4-OF            005              250.00     0.0140     0          0          0          0
+IC1-H3           H3               H3-IC            1.00       0.0130     0          0          0          0
+IC2-H3           H3-WW            H3-IC            1.00       0.0130     0          0          0          0
+OF3-H3           H3-OF            004              350.00     0.0140     0          0          0          0
+IC1-H2           H2               H2-IC            1.00       0.0130     0          0          0          0
+IC2-H2           H2-WW            H2-IC            1.00       0.0130     0          0          0          0
+OF3-H2           H2-OF            003              400.00     0.0130     0          0          0          0
+IC1-H1           H1               H1-IC            1.00       0.0130     0          0          0          0
+IC2-H1           H1-WW            H1-IC            1.00       0.0130     0          0          0          0
+OF3-H1           H1-OF            002              830.00     0.0130     0          0          0          0
+IC3-H1           H1-IC            H2-IC            903.00     0.0130     0          0          0          0
+IC1-H1&2         H2-IC            H3-IC            1220.00    0.0130     0          0          0          0
+IC1-H12&3        H3-IC            H4-IC            444.00     0.0130     0          0          0          0
+IC1-H123&4       H4-IC            P5-SH-010        367.00     0.0130     0          0          0          0
+IC1-H1-SI        P5-SH-010        5PS              37.00      0.0130     0          0          0          0
 FM2-5PS          P5-HU-100        SIPHON-HO        2400.00    0.0140     26.58      10.72      0          0
-IC1-H56&7        H5-IC            11PS             26.00      0.0130     -5.86      -6.58      0          0
+IC1-H56&7        H5-IC            11PS             26.00      0.0130     0          0          0          0
 SI-HO            SIPHON-HO        HOB.             4150.00    0.0130     10.72      1.96       0          0
-TS1-H6           H6-14-010        H6               31.00      0.0130     -1.65      -1.62      0          0
-TS1-H5           H5-11-020        H5               26.00      0.0130     -0.18      -1.32      0          0
-TS2-H5           H5-11-090        H5               510.00     0.0130     -1.91      -2.57      0          0
-TS3-H5           H5-11-200        H5-11-090        1050.00    0.0130     -1.35      -1.90      0          0
-TS4-H5           H5-11-220        H5-11-200        500.00     0.0130     -1.60      -1.35      0          0
-TS1-HSI          HSI-05-010       HSI              33.00      0          0          0          0          0
-TS1-H4           H4-04-010        H4               104.00     0.0130     -1.08      -2.65      0          0
-TS2-H4           H4-07-080        H4-04-010        2100.00    0.0130     -0.95      -0.96      0          0
-TS4-H4           H4-07-150        H4-07-140        270.00     0.0130     -1.50      -1.30      0          0
-TS3-H4           H4-07-140        H4-07-080        760.00     0.0130     -1.30      -0.95      0          0
-TS1-H3           H3-03-010        H3               45.00      0.0130     -2.08      -3.13      0          0
-TS2-H3           H3-03-040        H3-03-010        1050.00    0.0130     -1.00      -2.08      0          0
-TS3-H3           H3-03-050        H3-03-040        250.00     0.0130     -0.80      -1.00      0          0
-TS1-H2           H2-NE-010        H2               40.00      0.0130     -2.85      -2.26      0          0
-TS1-H1           H1-OB-010        H1               142.00     0.0130     -4.26      -3.83      0          0
-TS2-H1           H1-OB-050        H1-OB-010        768.00     0.0130     -3.53      -4.26      0          0
-TS3-H1           H1-OB-090        H1-OB-050        1240.00    0.0130     -2.84      -3.53      0          0
-TS4-H1           H1-01-080        H1-OB-090        720.00     0.0130     -2.79      -2.84      0          0
-TS5-H1           H1-01-100        H1-01-080        800.00     0.0130     -2.93      -2.79      0          0
-TS6-H1           H1-03-100        H1-01-080        920.00     0.0130     -3.29      -2.79      0          0
-TS7-H1           H1-03-090        H1-03-100        250.00     0.0130     -4.16      -3.29      0          0
-IC2-H6&7         H65-IC           H5-IC            103.00     0.0130     -7.34      -5.86      0          0
-TS8-H1           H1-01-110        H1-01-100        250.00     0.0130     -2.33      -2.93      0          0
-OF2-H0           H0-OF            0                685.00     0.0140     -1.92      -8.16      0          0
+TS1-H6           H6-14-010        H6               31.00      0.0130     0          0          0          0
+TS1-H5           H5-11-020        H5               26.00      0.0130     0          0          0          0
+TS2-H5           H5-11-090        H5               510.00     0.0130     0          0          0          0
+TS3-H5           H5-11-200        H5-11-090        1050.00    0.0130     0          0          0          0
+TS4-H5           H5-11-220        H5-11-200        500.00     0.0130     0          0          0          0
+TS1-HSI          HSI-05-010       HSI              33.00      0.0130     0          0          0          0
+TS1-H4           H4-04-010        H4               104.00     0.0130     0          0          0          0
+TS2-H4           H4-07-080        H4-04-010        2100.00    0.0130     0          0          0          0
+TS4-H4           H4-07-150        H4-07-140        270.00     0.0130     0          0          0          0
+TS3-H4           H4-07-140        H4-07-080        760.00     0.0130     0          0          0          0
+TS1-H3           H3-03-010        H3               45.00      0.0130     0          0          0          0
+TS2-H3           H3-03-040        H3-03-010        1050.00    0.0130     0          0          0          0
+TS3-H3           H3-03-050        H3-03-040        250.00     0.0130     0          0          0          0
+TS1-H2           H2-NE-010        H2               40.00      0.0130     0          0          0          0
+TS1-H1           H1-OB-010        H1               142.00     0.0130     0          0          0          0
+TS2-H1           H1-OB-050        H1-OB-010        768.00     0.0130     0          0          0          0
+TS3-H1           H1-OB-090        H1-OB-050        1240.00    0.0130     0          0          0          0
+TS4-H1           H1-01-080        H1-OB-090        720.00     0.0130     0          0          0          0
+TS5-H1           H1-01-100        H1-01-080        800.00     0.0130     0          0          0          0
+TS6-H1           H1-03-100        H1-01-080        920.00     0.0130     0          0          0          0
+TS7-H1           H1-03-090        H1-03-100        250.00     0.0130     0          0          0          0
+IC2-H6&7         H65-IC           H5-IC            103.00     0.0130     0          0          0          0
+TS8-H1           H1-01-110        H1-01-100        250.00     0.0130     0          0          0          0
+OF2-H0           H0-OF            N553             685.00     0.0140     0          0          0          0
 WWTP             HOB.             WWTP-BC          100.00     0.0140     10.44      10.44      0          0
-OF3-18PS         O12-D            012              100.00     0.0140     -5.40      -5.80      0          0
+OF3-18PS         O12-D            012              100.00     0.0140     0          0          0          0
 IC3-W12&3        W12&3-IC3        SIPHON-PA        210.00     0.0130     31.24      24.10      0          0
 IC2-W12&3        W12&3-IC2        W12&3-IC3        132.00     0.0130     35.73      31.24      0          0
 IC2-W4           W4-IC            BPS              671.00     0.0130     22.90      2.88       0          0
@@ -277,31 +319,7 @@ FM4-BPS          BPS-FM3          BPS-FM4          400.00     0.0130     9.40   
 [ORIFICES]
 ;;Name           From             To               Type       Offset     Qcoeff     Gated    CloseTime
 ;;-------------- ---------------- ---------------- ---------- ---------- ---------- -------- ----------
-IC1-W5           W5               W5-IC            SIDE       138.57     0.650      NO       0
-IC2-W5           W5-IC            W5-PE-100        SIDE       138.06     0.650      NO       0
-IC1-W4           W4               W4-IC            SIDE       23.38      0.650      NO       0
-IC1-W1           W1               W1-IC            SIDE       55.07      0.650      NO       0
-IC1-W3           W3               W3-IC            SIDE       58.34      0.650      NO       0
 OF1-W2           W2               W2-OF            SIDE       55.86      0.650      NO       0
-IC1-W2           W2               W2-IC            SIDE       54.82      0.650      NO       0
-IC2-W2           W2-IC            W2&3-IC          SIDE       54.05      0.650      NO       0
-IC2-W3           W3-IC            W2&3-IC          SIDE       57.76      0.650      NO       0
-IC2-W1           W1-IC            W12&3-IC1        SIDE       54.47      0.650      NO       0
-IC1-H7           H7               H7-IC            SIDE       -2.28      0.650      NO       0
-IC2-H7           H7-WW            H7-IC            SIDE       -2.61      0.650      NO       0
-IC1-H6           H6               H6-IC            SIDE       -1.62      0.650      NO       0
-IC2-H6           H6-WW            H6-IC            SIDE       -1.79      0.650      NO       0
-IC1-H5           H5               H5-IC            SIDE       -2.57      0.650      NO       0
-IC2-H5           H5-WW            H5-IC            SIDE       -2.55      0.650      NO       0
-IC1-HSI          HSI              P5-SH-010        SIDE       3.79       0.650      NO       0
-IC1-H4           H4               H4-IC            SIDE       -2.65      0.650      NO       0
-IC2-H4           H4-WW            H4-IC            SIDE       -2.65      0.650      NO       0
-IC1-H3           H3               H3-IC            SIDE       -3.13      0.650      NO       0
-IC2-H3           H3-WW            H3-IC            SIDE       -3.10      0.650      NO       0
-IC1-H2           H2               H2-IC            SIDE       -2.26      0.650      NO       0
-IC2-H2           H2-WW            H2-IC            SIDE       -2.26      0.650      NO       0
-IC1-H1           H1               H1-IC            SIDE       -3.83      0.650      NO       0
-IC2-H1           H1-WW            H1-IC            SIDE       -3.78      0.650      NO       0
 
 [WEIRS]
 ;;Name           From             To               Type       CrestHt    Qcoeff     Gated    EndCon   EndCoeff   Surcharge
@@ -331,11 +349,26 @@ OF1-18PS         18PS             18PS-WW          TRANSVERSE -4.05      1.840  
 [PUMPS]
 ;;Name           From             To               PumpCurve  Status   Startup    Shutoff
 ;;-------------- ---------------- ---------------- ---------- -------- ---------- ----------
-FM1-BPS          BPS              BPS-FM1          *          ON       0          0         
-OF2-18PS         18PS-WW          O12-D            *          ON       0          0         
-FM-11PS          11PS             SIPHON-HO        *          ON       0          0         
-FM1-5PS          5PS              P5-HU-100        *          ON       0          0         
-FM-18PS          18PS             18PS-DW          *          ON       0          0         
+FM1-BPS          BPS              BPS-FM1          PC_FM1-BPS ON       1.00       0         
+OF2-18PS         18PS-WW          O12-D            PC_OF2-18PS ON       1.00       0         
+FM-11PS          11PS             SIPHON-HO        PC_FM-11PS ON       1.00       0         
+FM1-5PS          5PS              P5-HU-100        PC_FM1-5PS ON       1.00       0         
+FM-18PS          18PS             18PS-DW          PC_FM-18PS ON       1.00       0         
+
+[CURVES]
+;;Name           Type       X-Value    Y-Value
+;;-------------- ---------- ---------- ----------
+;; Synthesized generic pump curves — replace with actual pump data
+PC_FM1-BPS       Pump1      0          5
+PC_FM1-BPS                  10         10
+PC_OF2-18PS      Pump1      0          5
+PC_OF2-18PS                 10         10
+PC_FM-11PS       Pump1      0          5
+PC_FM-11PS                  10         10
+PC_FM1-5PS       Pump1      0          5
+PC_FM1-5PS                  10         10
+PC_FM-18PS       Pump1      0          5
+PC_FM-18PS                  10         10
 
 [XSECTIONS]
 ;;Link           Shape        Geom1      Geom2      Geom3      Geom4      Barrels
@@ -345,13 +378,19 @@ TS6-W4           CIRCULAR     2.00       0          0          0          1
 TS1-W4           CIRCULAR     3.00       0          0          0          1
 TS5-W4           CIRCULAR     1.50       0          0          0          1
 OF2-W5           CIRCULAR     2.00       0          0          0          1
+IC1-W5           RECT_CLOSED  0.42       0.50       0          0          1
 TS1-W5           CIRCULAR     2.00       0          0          0          1
 IC3-W5           CIRCULAR     1.00       0          0          0          1
 IC6-W5           CIRCULAR     1.50       0          0          0          1
+IC2-W5           CIRCULAR     1.00       0          0          0          1
 IC4-W5           CIRCULAR     1.00       0          0          0          1
+IC1-W4           RECT_CLOSED  0.63       0.65       0          0          1
 TS4-W4           CIRCULAR     2.00       0          0          0          1
 TS2-W4           CIRCULAR     3.00       0          0          0          1
 TS3-W4           CIRCULAR     2.00       0          0          0          1
+IC1-W1           RECT_CLOSED  0.63       1.28       0          0          1
+IC1-W3           RECT_CLOSED  0.63       1.28       0          0          1
+IC1-W2           RECT_CLOSED  1.00       1.75       0          0          1
 OF2-W1           CIRCULAR     3.75       0          0          0          1
 OF2-W2           CIRCULAR     2.50       0          0          0          1
 OF3-W2           CIRCULAR     3.75       0          0          0          1
@@ -378,7 +417,10 @@ TS6-W2           RECT_CLOSED  2.00       3.00       0          0          1
 TS7-W2           RECT_CLOSED  2.50       3.75       0          0          1
 IC1-W2&3         CIRCULAR     2.50       0          0          0          1
 IC1-W12&3        CIRCULAR     3.00       0          0          0          1
-24INCH           CIRCULAR     0          0          0          0          1
+24INCH           CIRCULAR     1.00       0          0          0          1
+IC2-W2           CIRCULAR     2.50       0          0          0          1
+IC2-W3           CIRCULAR     2.50       0          0          0          1
+IC2-W1           CIRCULAR     2.50       0          0          0          1
 OF2-W3           CIRCULAR     3.00       0          0          0          1
 TS2-18PS         CIRCULAR     4.50       0          0          0          1
 TS1-18PS         CIRCULAR     4.50       0          0          0          1
@@ -386,18 +428,33 @@ TS3-18PS         CIRCULAR     3.50       0          0          0          1
 TS4-18S          CIRCULAR     3.00       0          0          0          1
 TS5-18PS         CIRCULAR     2.00       0          0          0          1
 FM-18PS-D        CIRCULAR     1.50       0          0          0          1
+IC1-H7           RECT_CLOSED  1.33       2.05       0          0          1
+IC2-H7           RECT_CLOSED  0.63       1.28       0          0          1
 OF3-H7           HORSESHOE    4.75       7.00       0          0          1
 TS1-H7           HORSESHOE    4.75       7.00       0          0          1
 TS2-H7           HORSESHOE    4.75       7.00       0          0          1
 TS3-H7           HORSESHOE    4.75       7.00       0          0          1
 TS4-H7           HORSESHOE    4.75       6.00       0          0          1
+IC1-H6           RECT_CLOSED  0.54       0.54       0          0          1
+IC2-H6           RECT_CLOSED  0.54       0.54       0          0          1
 OF3-H6           HORSESHOE    2.50       3.50       0          0          1
+IC1-H5           RECT_CLOSED  1.00       1.00       0          0          1
+IC2-H5           RECT_CLOSED  0.63       1.28       0          0          1
 OF3-H5           HORSESHOE    4.75       7.00       0          0          1
 IC3-H7           CIRCULAR     2.50       0          0          0          1
 IC1-H6&7         CIRCULAR     3.00       0          0          0          1
+IC1-HSI          CIRCULAR     1.33       0.65       0          0          1
+IC1-H4           RECT_CLOSED  0.63       1.03       0          0          1
+IC2-H4           RECT_CLOSED  0.63       1.03       0          0          1
 OF3-H4           CIRCULAR     4.00       0          0          0          1
+IC1-H3           RECT_CLOSED  0.63       1.28       0          0          1
+IC2-H3           RECT_CLOSED  1.00       1.00       0          0          1
 OF3-H3           CIRCULAR     4.00       0          0          0          1
+IC1-H2           RECT_CLOSED  0.63       0.81       0          0          1
+IC2-H2           RECT_CLOSED  0.63       0.81       0          0          1
 OF3-H2           CIRCULAR     3.50       0          0          0          1
+IC1-H1           RECT_CLOSED  1.00       2.19       0          0          1
+IC2-H1           RECT_CLOSED  1.33       2.05       0          0          1
 OF3-H1           HORSESHOE    4.00       8.00       0          0          1
 IC3-H1           CIRCULAR     3.50       0          0          0          1
 IC1-H1&2         CIRCULAR     3.75       0          0          0          1
@@ -412,7 +469,7 @@ TS1-H5           CIRCULAR     3.50       0          0          0          1
 TS2-H5           HORSESHOE    4.75       7.00       0          0          1
 TS3-H5           HORSESHOE    4.75       7.00       0          0          1
 TS4-H5           HORSESHOE    4.75       5.00       0          0          1
-TS1-HSI          CIRCULAR     0          0          0          0          1
+TS1-HSI          CIRCULAR     1.00       0          0          0          1
 TS1-H4           RECT_CLOSED  4.75       7.00       0          0          1
 TS2-H4           RECT_CLOSED  4.75       7.00       0          0          1
 TS4-H4           RECT_CLOSED  4.75       5.00       0          0          1
@@ -440,52 +497,28 @@ FM5-BPS          CIRCULAR     1.00       0          0          0          1
 FM3-BPS          CIRCULAR     1.00       0          0          0          1
 FM2-BPS          CIRCULAR     1.00       0          0          0          1
 FM4-BPS          CIRCULAR     1.00       0          0          0          1
-IC1-W5           RECT_CLOSED  0.42       0          0          0          
-IC2-W5           RECT_CLOSED  0.33       0          0          0          
-IC1-W4           RECT_CLOSED  0.63       0          0          0          
-IC1-W1           RECT_CLOSED  0.63       0          0          0          
-IC1-W3           RECT_CLOSED  0.63       0          0          0          
-OF1-W2           RECT_CLOSED  2.50       0          0          0          
-IC1-W2           RECT_CLOSED  1.00       0          0          0          
-IC2-W2           RECT_CLOSED  0.51       0          0          0          
-IC2-W3           RECT_CLOSED  0.58       0          0          0          
-IC2-W1           RECT_CLOSED  0.54       0          0          0          
-IC1-H7           RECT_CLOSED  1.33       0          0          0          
-IC2-H7           RECT_CLOSED  0.63       0          0          0          
-IC1-H6           RECT_CLOSED  0.54       0          0          0          
-IC2-H6           RECT_CLOSED  0.54       0          0          0          
-IC1-H5           RECT_CLOSED  1.00       0          0          0          
-IC2-H5           RECT_CLOSED  0.63       0          0          0          
-IC1-HSI          RECT_CLOSED  0.42       0          0          0          
-IC1-H4           RECT_CLOSED  0.63       0          0          0          
-IC2-H4           RECT_CLOSED  0.63       0          0          0          
-IC1-H3           RECT_CLOSED  0.63       0          0          0          
-IC2-H3           RECT_CLOSED  1.00       0          0          0          
-IC1-H2           RECT_CLOSED  0.63       0          0          0          
-IC2-H2           RECT_CLOSED  0.63       0          0          0          
-IC1-H1           RECT_CLOSED  1.00       0          0          0          
-IC2-H1           RECT_CLOSED  1.33       0          0          0          
-OF1-W5           RECT_OPEN    0          2.00       0          0          
-OF1-W4           RECT_OPEN    0          3.00       0          0          
-OF1-W1           RECT_OPEN    0          3.75       0          0          
-OF1-W3           RECT_OPEN    0          3.00       0          0          
-OF1-H7           RECT_OPEN    0          13.00      0          0          
-OF2-H7           RECT_OPEN    0          8.00       0          0          
-OF1-H6           RECT_OPEN    0          7.00       0          0          
-OF2-H6           RECT_OPEN    0          3.75       0          0          
-OF1-H5           RECT_OPEN    0          27.00      0          0          
-OF2-H5           RECT_OPEN    0          9.00       0          0          
-OF1-HSI          RECT_OPEN    0          1.33       0          0          
-OF1-H4           RECT_OPEN    0          19.00      0          0          
-OF2-H4           RECT_OPEN    0          9.00       0          0          
-OF1-H3           RECT_OPEN    0          9.00       0          0          
-OF2-H3           RECT_OPEN    0          6.00       0          0          
-OF1-H2           RECT_OPEN    0          17.00      0          0          
-OF2-H2           RECT_OPEN    0          4.50       0          0          
-OF1-H1           RECT_OPEN    0          16.50      0          0          
-OF2-H1           RECT_OPEN    0          6.00       0          0          
-OF1-H0           RECT_OPEN    0          6.00       0          0          
-OF1-18PS         RECT_OPEN    0          4.00       0          0          
+OF1-W2           RECT_CLOSED  2.50       2.50       0          0
+OF1-W5           RECT_OPEN    1.00       2.00       0          0
+OF1-W4           RECT_OPEN    1.00       3.00       0          0
+OF1-W1           RECT_OPEN    1.00       3.75       0          0
+OF1-W3           RECT_OPEN    1.00       3.00       0          0
+OF1-H7           RECT_OPEN    1.00       13.00      0          0
+OF2-H7           RECT_OPEN    1.00       8.00       0          0
+OF1-H6           RECT_OPEN    1.00       7.00       0          0
+OF2-H6           RECT_OPEN    1.00       3.75       0          0
+OF1-H5           RECT_OPEN    1.00       27.00      0          0
+OF2-H5           RECT_OPEN    1.00       9.00       0          0
+OF1-HSI          RECT_OPEN    1.00       1.33       0          0
+OF1-H4           RECT_OPEN    1.00       19.00      0          0
+OF2-H4           RECT_OPEN    1.00       9.00       0          0
+OF1-H3           RECT_OPEN    1.00       9.00       0          0
+OF2-H3           RECT_OPEN    1.00       6.00       0          0
+OF1-H2           RECT_OPEN    1.00       17.00      0          0
+OF2-H2           RECT_OPEN    1.00       4.50       0          0
+OF1-H1           RECT_OPEN    1.00       16.50      0          0
+OF2-H1           RECT_OPEN    1.00       6.00       0          0
+OF1-H0           RECT_OPEN    1.00       6.00       0          0
+OF1-18PS         RECT_OPEN    1.00       4.00       0          0
 
 [LOSSES]
 ;;Link           Inlet      Outlet     Average    Flap Gate
@@ -495,13 +528,19 @@ TS6-W4           0          0          0          NO
 TS1-W4           0          0          0          NO
 TS5-W4           0          0          0          NO
 OF2-W5           0          0          0          NO
+IC1-W5           0          0          0          NO
 TS1-W5           0          0          0          NO
 IC3-W5           0          0          0          NO
 IC6-W5           0          0          0          NO
+IC2-W5           0          0          0          NO
 IC4-W5           0          0          0          NO
+IC1-W4           0          0          0          NO
 TS4-W4           0          0          0          NO
 TS2-W4           0          0          0          NO
 TS3-W4           0          0          0          NO
+IC1-W1           0          0          0          NO
+IC1-W3           0          0          0          NO
+IC1-W2           0          0          0          NO
 OF2-W1           0          0          0          NO
 OF2-W2           0          0          0          NO
 OF3-W2           0          0          0          NO
@@ -529,6 +568,9 @@ TS7-W2           0          0          0          NO
 IC1-W2&3         0          0          0          NO
 IC1-W12&3        0          0          0          NO
 24INCH           0          0          0          NO
+IC2-W2           0          0          0          NO
+IC2-W3           0          0          0          NO
+IC2-W1           0          0          0          NO
 OF2-W3           0          0          0          NO
 TS2-18PS         0          0          0          NO
 TS1-18PS         0          0          0          NO
@@ -536,18 +578,33 @@ TS3-18PS         0          0          0          NO
 TS4-18S          0          0          0          NO
 TS5-18PS         0          0          0          NO
 FM-18PS-D        0          0          0          NO
+IC1-H7           0          0          0          NO
+IC2-H7           0          0          0          NO
 OF3-H7           0          0          0          NO
 TS1-H7           0          0          0          NO
 TS2-H7           0          0          0          NO
 TS3-H7           0          0          0          NO
 TS4-H7           0          0          0          NO
+IC1-H6           0          0          0          NO
+IC2-H6           0          0          0          NO
 OF3-H6           0          0          0          NO
+IC1-H5           0          0          0          NO
+IC2-H5           0          0          0          NO
 OF3-H5           0          0          0          NO
 IC3-H7           0          0          0          NO
 IC1-H6&7         0          0          0          NO
+IC1-HSI          0          0          0          NO
+IC1-H4           0          0          0          NO
+IC2-H4           0          0          0          NO
 OF3-H4           0          0          0          NO
+IC1-H3           0          0          0          NO
+IC2-H3           0          0          0          NO
 OF3-H3           0          0          0          NO
+IC1-H2           0          0          0          NO
+IC2-H2           0          0          0          NO
 OF3-H2           0          0          0          NO
+IC1-H1           0          0          0          NO
+IC2-H1           0          0          0          NO
 OF3-H1           0          0          0          NO
 IC3-H1           0          0          0          NO
 IC1-H1&2         0          0          0          NO
@@ -721,7 +778,7 @@ H3-03-050        -694440.13         621546.93
 H2-NE-010        -693037.01         622600.40         
 H1-OB-010        -692695.23         621921.57         
 H1-OB-050        -692853.67         621183.24         
-0                -692324.23         621109.22         
+N553             -692324.23         621109.22         
 H1-OB-090        -693123.21         619954.65         
 H1-01-100        -693979.91         619241.68         
 H1-01-080        -693813.87         620027.58         

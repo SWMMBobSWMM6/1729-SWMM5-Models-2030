@@ -14,17 +14,28 @@ LINK_OFFSETS         DEPTH
 MIN_SLOPE            0.0
 ALLOW_PONDING        NO
 SKIP_STEADY_STATE    NO
-ROUTING_STEP         00:00:60
+ROUTING_STEP         00:01:00
 VARIABLE_STEP        0.75
 INERTIAL_DAMPING     PARTIAL
 NORMAL_FLOW_LIMITED  BOTH
 MAX_TRIALS           50
+START_DATE           01/01/2001
+START_TIME           00:00:00
+REPORT_START_DATE    01/01/2001
+REPORT_START_TIME    00:00:00
+END_DATE             01/02/2001
+END_TIME             00:00:00
+SWEEP_START          01/01
+SWEEP_END            12/31
+DRY_DAYS             0
+REPORT_STEP          00:15:00
+WET_STEP             00:05:00
+DRY_STEP             01:00:00
 
 [JUNCTIONS]
 ;;Name           Elev       MaxDepth   InitDepth  SurDepth   Aponded
 ;;-------------- ---------- ---------- ---------- ---------- ----------
 10010            1067.20    0          0          0          0
-10000            1066.95    0          0          0          0
 10011            1067.20    0          0          0          0
 10001            1066.95    0          0          0          0
 10020            1070.23    0          0          0          0
@@ -171,10 +182,15 @@ MAX_TRIALS           50
 15120            1246.43    0          0          0          0
 15130            1248.19    0          0          0          0
 
+[OUTFALLS]
+;;Name           Elev       Type       Stage      Gated
+;;-------------- ---------- ---------- ---------- -----
+10000            1066.95    FREE                  NO
+
 [STORAGE]
 ;;Name           Elev       MaxDepth   InitDepth  Shape      Curve/Params
 ;;-------------- ---------- ---------- ---------- ---------- ----------
-11700            1119.13    -0.26      0          FUNCTIONAL 5.00 0          0
+11700            1119.13    10.00      0          FUNCTIONAL 5.00 0          0
 
 [CONDUITS]
 ;;Name           From             To               Length     Roughness  InOffset   OutOffset  InitFlow   MaxFlow
@@ -330,34 +346,34 @@ W15130           15130            15120            205.39     0.0130     1243.14
 [XSECTIONS]
 ;;Link           Shape        Geom1      Geom2      Geom3      Geom4      Barrels
 ;;-------------- ------------ ---------- ---------- ---------- ---------- ----------
-W10010           TRAPEZOIDAL  2.13       1.83       0          0          1
-W10011           TRAPEZOIDAL  2.13       1.83       0          0          1
-W10020           TRAPEZOIDAL  2.13       1.83       0          0          1
-W10021           TRAPEZOIDAL  2.13       1.83       0          0          1
-W10030           TRAPEZOIDAL  2.13       1.83       0          0          1
-W10031           TRAPEZOIDAL  2.13       1.83       0          0          1
-W10040           TRAPEZOIDAL  2.13       1.83       0          0          1
-W10041           TRAPEZOIDAL  2.13       1.83       0          0          1
-W10050           TRAPEZOIDAL  2.13       1.52       0          0          1
-W10060           TRAPEZOIDAL  2.13       1.52       0          0          1
-W10070           TRAPEZOIDAL  2.13       1.52       0          0          1
-W10080           TRAPEZOIDAL  2.13       1.52       0          0          1
-W10085           TRAPEZOIDAL  2.13       1.52       0          0          1
-W10090           TRAPEZOIDAL  2.13       1.52       0          0          1
-W10095           TRAPEZOIDAL  2.13       1.52       0          0          1
-W10100           TRAPEZOIDAL  2.13       1.52       0          0          1
-W10110           TRAPEZOIDAL  2.13       1.52       0          0          1
-W10120           TRAPEZOIDAL  2.13       1.52       0          0          1
-W10130           TRAPEZOIDAL  2.13       1.52       0          0          1
-W10150           TRAPEZOIDAL  2.13       1.52       0          0          1
-W10160           TRAPEZOIDAL  1.83       1.52       0          0          1
-W10170           TRAPEZOIDAL  1.83       1.52       0          0          1
-W10180           TRAPEZOIDAL  1.83       1.52       0          0          1
-W10185           TRAPEZOIDAL  1.83       1.52       0          0          1
-W10190           TRAPEZOIDAL  1.83       1.52       0          0          1
-W10195           TRAPEZOIDAL  1.83       1.52       0          0          1
-W10200           TRAPEZOIDAL  1.83       1.22       0          0          1
-W10210           TRAPEZOIDAL  1.83       1.22       0          0          1
+W10010           TRAPEZOIDAL  2.13       1.83       1          1          1
+W10011           TRAPEZOIDAL  2.13       1.83       1          1          1
+W10020           TRAPEZOIDAL  2.13       1.83       1          1          1
+W10021           TRAPEZOIDAL  2.13       1.83       1          1          1
+W10030           TRAPEZOIDAL  2.13       1.83       1          1          1
+W10031           TRAPEZOIDAL  2.13       1.83       1          1          1
+W10040           TRAPEZOIDAL  2.13       1.83       1          1          1
+W10041           TRAPEZOIDAL  2.13       1.83       1          1          1
+W10050           TRAPEZOIDAL  2.13       1.52       1          1          1
+W10060           TRAPEZOIDAL  2.13       1.52       1          1          1
+W10070           TRAPEZOIDAL  2.13       1.52       1          1          1
+W10080           TRAPEZOIDAL  2.13       1.52       1          1          1
+W10085           TRAPEZOIDAL  2.13       1.52       1          1          1
+W10090           TRAPEZOIDAL  2.13       1.52       1          1          1
+W10095           TRAPEZOIDAL  2.13       1.52       1          1          1
+W10100           TRAPEZOIDAL  2.13       1.52       1          1          1
+W10110           TRAPEZOIDAL  2.13       1.52       1          1          1
+W10120           TRAPEZOIDAL  2.13       1.52       1          1          1
+W10130           TRAPEZOIDAL  2.13       1.52       1          1          1
+W10150           TRAPEZOIDAL  2.13       1.52       1          1          1
+W10160           TRAPEZOIDAL  1.83       1.52       1          1          1
+W10170           TRAPEZOIDAL  1.83       1.52       1          1          1
+W10180           TRAPEZOIDAL  1.83       1.52       1          1          1
+W10185           TRAPEZOIDAL  1.83       1.52       1          1          1
+W10190           TRAPEZOIDAL  1.83       1.52       1          1          1
+W10195           TRAPEZOIDAL  1.83       1.52       1          1          1
+W10200           TRAPEZOIDAL  1.83       1.22       1          1          1
+W10210           TRAPEZOIDAL  1.83       1.22       1          1          1
 W10220           CIRCULAR     1.83       0          0          0          1
 W10230           CIRCULAR     1.37       0          0          0          1
 W10240           CIRCULAR     1.37       0          0          0          1
@@ -380,18 +396,18 @@ W10400           CIRCULAR     1.22       0          0          0          1
 W10410           CIRCULAR     1.22       0          0          0          1
 W10420           CIRCULAR     1.22       0          0          0          1
 W10430           CIRCULAR     1.07       0          0          0          1
-W11000           TRAPEZOIDAL  2.13       1.83       0          0          1
-W11010           TRAPEZOIDAL  2.13       1.83       0          0          1
-W11020           TRAPEZOIDAL  2.13       1.83       0          0          1
-W11030           TRAPEZOIDAL  2.13       1.83       0          0          1
-W11040           TRAPEZOIDAL  2.21       1.60       0          0          1
-W11050           TRAPEZOIDAL  2.13       1.83       0          0          1
-W11060           TRAPEZOIDAL  2.13       1.83       0          0          1
-W11070           TRAPEZOIDAL  2.13       1.83       0          0          1
-W11080           TRAPEZOIDAL  2.13       1.83       0          0          1
-W11090           TRAPEZOIDAL  2.13       1.83       0          0          1
-W11095           TRAPEZOIDAL  1.83       1.37       0          0          1
-W11100           TRAPEZOIDAL  1.83       1.37       0          0          1
+W11000           TRAPEZOIDAL  2.13       1.83       1          1          1
+W11010           TRAPEZOIDAL  2.13       1.83       1          1          1
+W11020           TRAPEZOIDAL  2.13       1.83       1          1          1
+W11030           TRAPEZOIDAL  2.13       1.83       1          1          1
+W11040           TRAPEZOIDAL  2.21       1.60       1          1          1
+W11050           TRAPEZOIDAL  2.13       1.83       1          1          1
+W11060           TRAPEZOIDAL  2.13       1.83       1          1          1
+W11070           TRAPEZOIDAL  2.13       1.83       1          1          1
+W11080           TRAPEZOIDAL  2.13       1.83       1          1          1
+W11090           TRAPEZOIDAL  2.13       1.83       1          1          1
+W11095           TRAPEZOIDAL  1.83       1.37       1          1          1
+W11100           TRAPEZOIDAL  1.83       1.37       1          1          1
 W11110           CIRCULAR     1.83       0          0          0          1
 W11120           CIRCULAR     1.83       0          0          0          1
 W11130           CIRCULAR     1.83       0          0          0          1

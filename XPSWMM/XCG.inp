@@ -16,11 +16,22 @@ ALLOW_PONDING        NO
 SKIP_STEADY_STATE    NO
 INERTIAL_DAMPING     PARTIAL
 NORMAL_FLOW_LIMITED  BOTH
+START_DATE           01/01/2001
+START_TIME           00:00:00
+REPORT_START_DATE    01/01/2001
+REPORT_START_TIME    00:00:00
+END_DATE             01/02/2001
+END_TIME             00:00:00
+SWEEP_START          01/01
+SWEEP_END            12/31
+DRY_DAYS             0
+REPORT_STEP          00:15:00
+WET_STEP             00:05:00
+DRY_STEP             01:00:00
 
 [JUNCTIONS]
 ;;Name           Elev       MaxDepth   InitDepth  SurDepth   Aponded
 ;;-------------- ---------- ---------- ---------- ---------- ----------
-KAMNODE1         187.88     0          0          0          0
 KAMNODE2         187.20     0          0          0          0
 RRK8             187.20     0          0          0          0
 RK8              188.20     0          0          0          0
@@ -55,6 +66,11 @@ N111             188.33     0          0          0          0
 N131             188.39     0          0          0          0
 N121             188.34     0          0          0          0
 N141             188.82     0          0          0          0
+
+[OUTFALLS]
+;;Name           Elev       Type       Stage      Gated
+;;-------------- ---------- ---------- ---------- -----
+KAMNODE1         187.88     FREE                  NO
 
 [CONDUITS]
 ;;Name           From             To               Length     Roughness  InOffset   OutOffset  InitFlow   MaxFlow
@@ -133,8 +149,8 @@ KAM18            CIRCULAR     1.68       0          0          0          1
 1514             CIRCULAR     0.31       0          0          0          1
 1515             CIRCULAR     0.31       0          0          0          1
 1517             CIRCULAR     0.31       0          0          0          1
-RK9-OR           RECT_CLOSED  0.13       0          0          0          
-RK8-OR           RECT_CLOSED  0.13       0          0          0          
+RK9-OR           RECT_CLOSED  0.13       0.13       0          0
+RK8-OR           RECT_CLOSED  0.13       0.13       0          0
 
 [LOSSES]
 ;;Link           Inlet      Outlet     Average    Flap Gate

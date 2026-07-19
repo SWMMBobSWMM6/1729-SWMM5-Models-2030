@@ -19,20 +19,36 @@ VARIABLE_STEP        0.75
 INERTIAL_DAMPING     NONE
 NORMAL_FLOW_LIMITED  BOTH
 MAX_TRIALS           30
+START_DATE           01/01/2001
+START_TIME           00:00:00
+REPORT_START_DATE    01/01/2001
+REPORT_START_TIME    00:00:00
+END_DATE             01/02/2001
+END_TIME             00:00:00
+SWEEP_START          01/01
+SWEEP_END            12/31
+DRY_DAYS             0
+REPORT_STEP          00:15:00
+WET_STEP             00:05:00
+DRY_STEP             01:00:00
 
 [JUNCTIONS]
 ;;Name           Elev       MaxDepth   InitDepth  SurDepth   Aponded
 ;;-------------- ---------- ---------- ---------- ---------- ----------
 mh               200.00     0          0          0          0
-mh               200.00     0          0          0          0
-mh               155.00     0          0          0          0
-mh               125.00     0          0          0          0
-mh               120.00     0          0          0          0
-mh               111.00     0          0          0          0
-outlet           100.00     0          0          0          0
-mh               137.00     0          0          0          0
-mh               130.00     0          0          0          0
-mh               125.00     0          0          0          0
+mh_2             200.00     0          0          0          0
+mh_3             155.00     0          0          0          0
+mh_4             125.00     0          0          0          0
+mh_5             120.00     0          0          0          0
+mh_6             111.00     0          0          0          0
+mh_7             137.00     0          0          0          0
+mh_8             130.00     0          0          0          0
+mh_9             125.00     0          0          0          0
+
+[OUTFALLS]
+;;Name           Elev       Type       Stage      Gated
+;;-------------- ---------- ---------- ---------- -----
+outlet           100.00     FREE                  NO
 
 [CONDUITS]
 ;;Name           From             To               Length     Roughness  InOffset   OutOffset  InitFlow   MaxFlow
@@ -54,8 +70,8 @@ LA1              CIRCULAR     4.00       0          0          0          1
 LA2              CIRCULAR     4.50       0          0          0          1
 LA3              CIRCULAR     5.00       0          0          0          1
 nacond           CIRCULAR     6.00       0          0          0          1
-LA5              TRAPEZOIDAL  9.00       0          0          0          1
-LA6              TRAPEZOIDAL  9.00       0          0          0          1
+LA5              TRAPEZOIDAL  9.00       1.00       1          1          1
+LA6              TRAPEZOIDAL  9.00       1.00       1          1          1
 LB1              CIRCULAR     4.50       0          0          0          1
 LB2              CIRCULAR     4.50       0          0          0          1
 LB3              CIRCULAR     5.50       0          0          0          1
@@ -77,15 +93,15 @@ LB3              0          0          0          NO
 ;;Node           X-Coord            Y-Coord
 ;;-------------- ------------------ ------------------
 mh               297.64             -2.36             
-mh               297.64             97.64             
-mh               397.64             97.64             
-mh               497.64             97.64             
-mh               497.64             197.64            
-mh               497.64             297.64            
+mh_2             297.64             97.64             
+mh_3             397.64             97.64             
+mh_4             497.64             97.64             
+mh_5             497.64             197.64            
+mh_6             497.64             297.64            
 outlet           497.64             397.64            
-mh               397.64             397.64            
-mh               397.64             297.64            
-mh               397.64             197.64            
+mh_7             397.64             397.64            
+mh_8             397.64             297.64            
+mh_9             397.64             197.64            
 
 [MAP]
 DIMENSIONS 297.64 -2.36 497.64 397.64

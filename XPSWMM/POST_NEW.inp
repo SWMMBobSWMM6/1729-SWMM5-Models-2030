@@ -14,27 +14,43 @@ LINK_OFFSETS         DEPTH
 MIN_SLOPE            0.0
 ALLOW_PONDING        NO
 SKIP_STEADY_STATE    NO
-ROUTING_STEP         00:00:60
+ROUTING_STEP         00:01:00
 VARIABLE_STEP        0.75
 INERTIAL_DAMPING     PARTIAL
 NORMAL_FLOW_LIMITED  BOTH
 MAX_TRIALS           50
+START_DATE           01/01/2001
+START_TIME           00:00:00
+REPORT_START_DATE    01/01/2001
+REPORT_START_TIME    00:00:00
+END_DATE             01/02/2001
+END_TIME             00:00:00
+SWEEP_START          01/01
+SWEEP_END            12/31
+DRY_DAYS             0
+REPORT_STEP          00:15:00
+WET_STEP             00:05:00
+DRY_STEP             01:00:00
 
 [JUNCTIONS]
 ;;Name           Elev       MaxDepth   InitDepth  SurDepth   Aponded
 ;;-------------- ---------- ---------- ---------- ---------- ----------
-DD6              0          0          3.00       0          0
-gate             -0.40      0          18.50      0          0
-DD13             0          0          6.30       0          0
-12hp             1.80       0          16.80      0          0
-gate             -1.40      0          23.00      0          0
-7hp              1.80       0          16.20      0          0
+DD6              0          0          0          0          0
+gate             -0.40      0          0          0          0
+DD13             0          0          0          0          0
+gate_2           -1.40      0          0          0          0
+7hp              1.80       0          0          0          0
+
+[OUTFALLS]
+;;Name           Elev       Type       Stage      Gated
+;;-------------- ---------- ---------- ---------- -----
+12hp             1.80       FREE                  NO
 
 [CONDUITS]
 ;;Name           From             To               Length     Roughness  InOffset   OutOffset  InitFlow   MaxFlow
 ;;-------------- ---------------- ---------------- ---------- ---------- ---------- ---------- ---------- ----------
-3                DD6              gate             100.00     0.0240     -3.00      -3.50      0          0
-6                DD13             gate             120.00     0.0240     -6.30      -7.50      0          0
+3                DD6              gate             100.00     0.0240     0          0          0          0
+6                DD13             gate             120.00     0.0240     0          0          0          0
 
 [WEIRS]
 ;;Name           From             To               Type       CrestHt    Qcoeff     Gated    EndCon   EndCoeff   Surcharge
@@ -44,23 +60,24 @@ road             DD13             DD6              TRANSVERSE 6.50       1.840  
 [PUMPS]
 ;;Name           From             To               PumpCurve  Status   Startup    Shutoff
 ;;-------------- ---------------- ---------------- ---------- -------- ---------- ----------
-12hp pump        DD13             12hp             PC_12hp pump ON       14.00      1.00      
+12hp_pump        DD13             12hp             PC_12hp_pump ON       14.00      1.00      
 7hp              DD13             7hp              PC_7hp     ON       14.00      1.00      
 
 [CURVES]
 ;;Name           Type       X-Value    Y-Value
 ;;-------------- ---------- ---------- ----------
-PC_12hp pump     Pump3      0          0
-;
-PC_7hp           Pump3      0          0
-;
+;; Synthesized generic pump curves — replace with actual pump data
+PC_12hp_pump     Pump1      0          5
+PC_12hp_pump                10         10
+PC_7hp           Pump1      0          5
+PC_7hp                      10         10
 
 [XSECTIONS]
 ;;Link           Shape        Geom1      Geom2      Geom3      Geom4      Barrels
 ;;-------------- ------------ ---------- ---------- ---------- ---------- ----------
 3                CIRCULAR     3.00       0          0          0          1
 6                CIRCULAR     6.00       0          0          0          1
-road             RECT_OPEN    0          330.00     0          0          
+road             RECT_OPEN    1.00       330.00     0          0
 
 [LOSSES]
 ;;Link           Inlet      Outlet     Average    Flap Gate
@@ -75,7 +92,7 @@ DD6              118.13             22.42
 gate             117.66             131.76            
 DD13             24.68              24.39             
 12hp             53.85              116.81            
-gate             27.20              121.53            
+gate_2           27.20              121.53            
 7hp              81.76              96.36             
 
 [MAP]

@@ -14,20 +14,36 @@ LINK_OFFSETS         DEPTH
 MIN_SLOPE            0.0
 ALLOW_PONDING        NO
 SKIP_STEADY_STATE    NO
-ROUTING_STEP         00:00:60
+ROUTING_STEP         00:01:00
 VARIABLE_STEP        0.75
 INERTIAL_DAMPING     PARTIAL
 NORMAL_FLOW_LIMITED  BOTH
 MAX_TRIALS           50
+START_DATE           01/01/2001
+START_TIME           00:00:00
+REPORT_START_DATE    01/01/2001
+REPORT_START_TIME    00:00:00
+END_DATE             01/02/2001
+END_TIME             00:00:00
+SWEEP_START          01/01
+SWEEP_END            12/31
+DRY_DAYS             0
+REPORT_STEP          00:15:00
+WET_STEP             00:05:00
+DRY_STEP             01:00:00
 
 [JUNCTIONS]
 ;;Name           Elev       MaxDepth   InitDepth  SurDepth   Aponded
 ;;-------------- ---------- ---------- ---------- ---------- ----------
 Basin            0          0          0          0          0
-Basin            0          0          0          0          0
-Basin            0          0          0          0          0
-Basin            0          0          0          0          0
-InflowBn         0          0          0          0          0
+Basin_2          0          0          0          0          0
+Basin_3          0          0          0          0          0
+Basin_4          0          0          0          0          0
+
+[OUTFALLS]
+;;Name           Elev       Type       Stage      Gated
+;;-------------- ---------- ---------- ---------- -----
+InflowBn         0          FREE                  NO
 
 [WEIRS]
 ;;Name           From             To               Type       CrestHt    Qcoeff     Gated    EndCon   EndCoeff   Surcharge
@@ -44,22 +60,22 @@ WEIR2            Basin            Basin            TRANSVERSE -5.00      1.840  
 [XSECTIONS]
 ;;Link           Shape        Geom1      Geom2      Geom3      Geom4      Barrels
 ;;-------------- ------------ ---------- ---------- ---------- ---------- ----------
-WEIR4            RECT_OPEN    0          4.00       0          0          
-WEIR6            RECT_OPEN    0          4.00       0          0          
-WEIR5            RECT_OPEN    0          4.00       0          0          
-WEIR3            RECT_OPEN    0          4.00       0          0          
-WEIR1            RECT_OPEN    0          4.00       0          0          
-WEIR8            RECT_OPEN    0          4.00       0          0          
-WEIR7            RECT_OPEN    0          4.00       0          0          
-WEIR2            RECT_OPEN    0          4.00       0          0          
+WEIR4            RECT_OPEN    1.00       4.00       0          0
+WEIR6            RECT_OPEN    1.00       4.00       0          0
+WEIR5            RECT_OPEN    1.00       4.00       0          0
+WEIR3            RECT_OPEN    1.00       4.00       0          0
+WEIR1            RECT_OPEN    1.00       4.00       0          0
+WEIR8            RECT_OPEN    1.00       4.00       0          0
+WEIR7            RECT_OPEN    1.00       4.00       0          0
+WEIR2            RECT_OPEN    1.00       4.00       0          0
 
 [COORDINATES]
 ;;Node           X-Coord            Y-Coord
 ;;-------------- ------------------ ------------------
 Basin            17.64              37.64             
-Basin            17.64              117.64            
-Basin            57.64              117.64            
-Basin            57.64              37.64             
+Basin_2          17.64              117.64            
+Basin_3          57.64              117.64            
+Basin_4          57.64              37.64             
 InflowBn         37.64              77.64             
 
 [MAP]

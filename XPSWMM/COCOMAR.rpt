@@ -2,119 +2,316 @@
   EPA STORM WATER MANAGEMENT MODEL - VERSION 5.2 (Build 5.2.4)
   ------------------------------------------------------------
 
+  Broward County NADA Study Model 
+  WARNING 10: crest elevation raised to downstream invert for regulator Link CS12-WEIR
+  WARNING 10: crest elevation raised to downstream invert for regulator Link CM7-C14_GW
   
-  ERROR 209: undefined object CS12-WEIR at line 79 of [WEIR] section:
-  CS12-WEIR        CS12-WEIR        C14-8            TRANSVERSE 9.00       1.840      NO       0        0          YES
-
+  ****************
+  Analysis Options
+  ****************
+  Flow Units ............... CFS
+  Process Models:
+    Rainfall/Runoff ........ NO
+    RDII ................... NO
+    Snowmelt ............... NO
+    Groundwater ............ NO
+    Flow Routing ........... YES
+    Ponding Allowed ........ NO
+    Water Quality .......... NO
+  Flow Routing Method ...... DYNWAVE
+  Surcharge Method ......... EXTRAN
+  Starting Date ............ 01/01/2001 00:00:00
+  Ending Date .............. 01/02/2001 00:00:00
+  Antecedent Dry Days ...... 0.0
+  Report Time Step ......... 01:00:00
+  Routing Time Step ........ 3600.00 sec
+  Variable Time Step ....... YES
+  Maximum Trials ........... 50
+  Number of Threads ........ 1
+  Head Tolerance ........... 0.005000 ft
   
-  ERROR 209: undefined object CM7-C14_GW at line 81 of [WEIR] section:
-  CM7-C14_GW       CM7-C14_GW       C14-6            TRANSVERSE 9.00       1.840      NO       0        0          YES
-
   
-  ERROR 209: undefined object CS49-WEIR at line 83 of [WEIR] section:
-  CS49-W           CM7              CS49-WEIR        TRANSVERSE 9.00       1.840      NO       0        0          YES
-
+  **************************        Volume        Volume
+  Flow Routing Continuity        acre-feet      10^6 gal
+  **************************     ---------     ---------
+  Dry Weather Inflow .......         0.000         0.000
+  Wet Weather Inflow .......         0.000         0.000
+  Groundwater Inflow .......         0.000         0.000
+  RDII Inflow ..............         0.000         0.000
+  External Inflow ..........         0.000         0.000
+  External Outflow .........         0.035         0.011
+  Flooding Loss ............         0.371         0.121
+  Evaporation Loss .........         0.000         0.000
+  Exfiltration Loss ........         0.000         0.000
+  Initial Stored Volume ....         1.836         0.598
+  Final Stored Volume ......         1.541         0.502
+  Continuity Error (%) .....        -5.993
   
-  ERROR 209: undefined object CS34-BLEED at line 88 of [PUMP] section:
-  CS-34            CS34-BLEED       CS34-WEIR        PC_CS-34   ON       11.50      9.50      
-
   
-  ERROR 209: undefined object PT-TR_GW at line 89 of [PUMP] section:
-  CS-50            PT-TR_GW         CS50-BLEED       PC_CS-50   ON       11.00      10.00     
-
+  ***************************
+  Time-Step Critical Elements
+  ***************************
+  Node CM8 (6.90%)
+  Node CM7 (6.90%)
   
-  ERROR 211: invalid number  at line 108 of [XSECT] section:
-  CM24_GW          CIRCULAR     0          0          0          0          1
-
   
-  ERROR 211: invalid number  at line 109 of [XSECT] section:
-  CM4-5_GW         CIRCULAR     0          0          0          0          1
-
+  ********************************
+  Highest Flow Instability Indexes
+  ********************************
+  Link CM8-12_GW (6)
+  Link CS49-W (6)
+  Link CS-7 (6)
+  Link TR-C14_GW (6)
+  Link CS-PT (6)
   
-  ERROR 211: invalid number  at line 110 of [XSECT] section:
-  CM5-6_GW         CIRCULAR     0          0          0          0          1
-
   
-  ERROR 211: invalid number  at line 111 of [XSECT] section:
-  CM-TR_CLV        CIRCULAR     0          0          0          0          1
-
+  *********************************
+  Most Frequent Nonconverging Nodes
+  *********************************
+  Convergence obtained at all time steps.
   
-  ERROR 211: invalid number  at line 112 of [XSECT] section:
-  CM5-7_GW         CIRCULAR     0          0          0          0          1
-
   
-  ERROR 211: invalid number  at line 113 of [XSECT] section:
-  TR-C7_GW         CIRCULAR     0          0          0          0          1
-
+  *************************
+  Routing Time Step Summary
+  *************************
+  Minimum Time Step           :    88.43 sec
+  Average Time Step           :  2979.31 sec
+  Maximum Time Step           :  3600.00 sec
+  % of Time in Steady State   :     0.00
+  Average Iterations per Step :     2.38
+  % of Steps Not Converging   :     0.00
+  Time Step Frequencies       :
+     3600.000 - 609.307 sec      :    85.71 %
+     609.307 - 103.126 sec      :    10.71 %
+     103.126 - 17.454 sec      :     3.57 %
+     17.454 -  2.954 sec      :     0.00 %
+      2.954 -  0.500 sec      :     0.00 %
   
-  ERROR 211: invalid number  at line 114 of [XSECT] section:
-  CM-Lyons1        CIRCULAR     0          0          0          0          1
-
   
-  ERROR 211: invalid number  at line 115 of [XSECT] section:
-  CM-Lyons2        CIRCULAR     0          0          0          0          1
-
+  ******************
+  Node Depth Summary
+  ******************
   
-  ERROR 211: invalid number  at line 116 of [XSECT] section:
-  CM4-PT_GW        CIRCULAR     0          0          0          0          1
-
+  ---------------------------------------------------------------------------------
+                                 Average  Maximum  Maximum  Time of Max    Reported
+                                   Depth    Depth      HGL   Occurrence   Max Depth
+  Node                 Type         Feet     Feet     Feet  days hr:min        Feet
+  ---------------------------------------------------------------------------------
+  C14-3                JUNCTION     0.00     0.00    14.00     0  00:00        0.00
+  C14-1                JUNCTION     0.00     0.00    14.00     0  00:00        0.00
+  G56H-1               JUNCTION     0.00     0.00    16.00     0  00:00        0.00
+  G56H-2               JUNCTION     0.00     0.00    16.00     0  00:00        0.00
+  G56H-3               JUNCTION     0.00     0.00    16.00     0  00:00        0.00
+  G56H-4               JUNCTION     0.00     0.00    16.00     0  00:00        0.00
+  G56-H                JUNCTION     0.00     0.00    16.00     0  00:00        0.00
+  C14-7                JUNCTION     0.00     0.00    14.00     0  00:00        0.00
+  C14-8                JUNCTION     0.00     0.00    14.00     0  00:00        0.00
+  C14-9                JUNCTION     0.00     0.00    14.00     0  00:00        0.00
+  C14-4                JUNCTION     0.00     0.00    14.00     0  00:00        0.00
+  C14-5                JUNCTION     0.00     0.00    14.00     0  00:00        0.00
+  C14-6                JUNCTION     0.00     0.00    14.00     0  00:00        0.00
+  G56H-6               JUNCTION     0.00     0.00    16.00     0  00:00        0.00
+  CS34-BLEED           JUNCTION     0.00     0.00     0.00     0  00:00        0.00
+  CS34-WEIR            JUNCTION     0.00     0.00     0.00     0  00:00        0.00
+  PT-TR_GW             JUNCTION     0.00     0.00     0.00     0  00:00        0.00
+  CS50-BLEED           JUNCTION     0.00     0.00     0.00     0  00:00        0.00
+  CS12-WEIR            JUNCTION     0.00     0.00     0.00     0  00:00        0.00
+  CM7-C14_GW           JUNCTION     0.00     0.00     0.00     0  00:00        0.00
+  CS49-WEIR            JUNCTION     0.00     0.00     0.00     0  00:00        0.00
+  C14-2                OUTFALL      0.00     0.00    14.00     0  00:00        0.00
+  PT                   STORAGE      8.55    10.00    27.00     0  00:00        8.48
+  TRCB                 STORAGE      7.10     9.99    26.99     0  00:00        6.97
+  CM8                  STORAGE      5.45     9.99    23.99     0  00:00        5.17
+  CM6                  STORAGE     10.00    10.00    26.00     0  00:00       10.00
+  CM7                  STORAGE      6.65     9.99    25.99     0  00:00        6.52
+  CM2                  STORAGE     10.00    10.00    26.00     0  00:00       10.00
+  CM4                  STORAGE     10.00    10.00    26.00     0  00:00       10.00
+  CM5                  STORAGE     10.00    10.00    26.00     0  00:00       10.00
   
-  ERROR 211: invalid number  at line 117 of [XSECT] section:
-  CM2-PT_GW        CIRCULAR     0          0          0          0          1
-
   
-  ERROR 211: invalid number  at line 118 of [XSECT] section:
-  CM7C14_GW        CIRCULAR     0          0          0          0          1
-
+  *******************
+  Node Inflow Summary
+  *******************
   
-  ERROR 211: invalid number  at line 119 of [XSECT] section:
-  PT-HC_GW         CIRCULAR     0          0          0          0          1
-
+  -------------------------------------------------------------------------------------------------
+                                  Maximum  Maximum                  Lateral       Total        Flow
+                                  Lateral    Total  Time of Max      Inflow      Inflow     Balance
+                                   Inflow   Inflow   Occurrence      Volume      Volume       Error
+  Node                 Type           CFS      CFS  days hr:min    10^6 gal    10^6 gal     Percent
+  -------------------------------------------------------------------------------------------------
+  C14-3                JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  C14-1                JUNCTION      0.00    10.00     0  00:00           0      0.0113       0.000
+  G56H-1               JUNCTION      0.00    10.00     0  00:00           0      0.0113       0.000
+  G56H-2               JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  G56H-3               JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  G56H-4               JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  G56-H                JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  C14-7                JUNCTION      0.00    10.00     0  00:00           0       0.024       0.000
+  C14-8                JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  C14-9                JUNCTION      0.00    30.13     0  00:00           0      0.0121       0.000
+  C14-4                JUNCTION      0.00    10.00     0  00:00           0      0.0113       0.000
+  C14-5                JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  C14-6                JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  G56H-6               JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  CS34-BLEED           JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  CS34-WEIR            JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  PT-TR_GW             JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  CS50-BLEED           JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  CS12-WEIR            JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  CM7-C14_GW           JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  CS49-WEIR            JUNCTION      0.00    36.48     0  00:00           0      0.0147       0.000
+  C14-2                OUTFALL       0.00    10.00     0  00:00           0      0.0113       0.000
+  PT                   STORAGE       0.00     0.00     0  00:00           0      0.0748      -0.000
+  TRCB                 STORAGE       0.00     0.00     0  00:00           0      0.0748       0.000
+  CM8                  STORAGE       0.00     0.00     0  00:00           0      0.0748       0.022
+  CM6                  STORAGE       0.00     0.00     0  00:00           0      0.0748       0.000
+  CM7                  STORAGE       0.00     0.00     0  00:00           0      0.0748       0.029
+  CM2                  STORAGE       0.00     0.00     0  00:00           0      0.0748       0.000
+  CM4                  STORAGE       0.00     0.00     0  00:00           0      0.0748       0.000
+  CM5                  STORAGE       0.00     0.00     0  00:00           0      0.0748       0.000
   
-  ERROR 211: invalid number  at line 120 of [XSECT] section:
-  CS-PT            RECT_OPEN    0          4.00       0          0          
-
   
-  ERROR 211: invalid number  at line 121 of [XSECT] section:
-  CS46-P           RECT_OPEN    0          3.00       0          0          
-
+  **********************
+  Node Surcharge Summary
+  **********************
   
-  ERROR 211: invalid number  at line 122 of [XSECT] section:
-  CS46-WEIR        RECT_OPEN    0          3.00       0          0          
-
+  Surcharging occurs when water rises above the top of the highest conduit.
+  ---------------------------------------------------------------------
+                                               Max. Height   Min. Depth
+                                   Hours       Above Crown    Below Rim
+  Node                 Type      Surcharged           Feet         Feet
+  ---------------------------------------------------------------------
+  C14-3                JUNCTION       24.00          0.000        0.000
+  C14-1                JUNCTION       24.00          0.000        0.000
+  G56H-1               JUNCTION       24.00          0.000        0.000
+  G56H-2               JUNCTION       24.00          0.000        0.000
+  G56-H                JUNCTION       24.00          0.000        0.000
+  C14-7                JUNCTION       24.00          0.000        0.000
+  C14-4                JUNCTION       24.00          0.000        0.000
+  C14-5                JUNCTION       24.00          0.000        0.000
+  G56H-6               JUNCTION       24.00          0.000        0.000
+  CS34-BLEED           JUNCTION       24.00          0.000        0.000
+  CS34-WEIR            JUNCTION       24.00          0.000        0.000
+  PT-TR_GW             JUNCTION       24.00          0.000        0.000
+  CS50-BLEED           JUNCTION       24.00          0.000        0.000
   
-  ERROR 211: invalid number  at line 123 of [XSECT] section:
-  CS45-W           RECT_OPEN    0          3.00       0          0          
-
   
-  ERROR 211: invalid number  at line 124 of [XSECT] section:
-  CS45-PUMP        RECT_OPEN    0          3.00       0          0          
-
+  *********************
+  Node Flooding Summary
+  *********************
   
-  ERROR 211: invalid number  at line 125 of [XSECT] section:
-  CS-12PUMP        RECT_OPEN    0          16.50      0          0          
-
+  Flooding refers to all water that overflows a node, whether it ponds or not.
+  --------------------------------------------------------------------------
+                                                             Total   Maximum
+                                 Maximum   Time of Max       Flood    Ponded
+                        Hours       Rate    Occurrence      Volume     Depth
+  Node                 Flooded       CFS   days hr:min    10^6 gal      Feet
+  --------------------------------------------------------------------------
+  C14-1                   0.05     10.00      0  00:01       0.011     0.000
+  G56H-1                  0.05     10.00      0  00:01       0.011     0.000
+  C14-7                   0.12     10.00      0  00:01       0.024     0.000
+  C14-9                   0.05     15.07      0  00:01       0.012     0.000
+  C14-4                   0.05     10.00      0  00:01       0.011     0.000
+  CS49-WEIR               0.05     18.24      0  00:01       0.015     0.000
   
-  ERROR 211: invalid number  at line 126 of [XSECT] section:
-  CS12-WEIR        RECT_OPEN    0          16.50      0          0          
-
   
-  ERROR 211: invalid number  at line 127 of [XSECT] section:
-  CM8-12_GW        RECT_OPEN    0          16.50      0          0          
-
+  **********************
+  Storage Volume Summary
+  **********************
   
-  ERROR 211: invalid number  at line 128 of [XSECT] section:
-  CM7-C14_GW       RECT_OPEN    0          20.00      0          0          
-
+  ------------------------------------------------------------------------------------------------
+                         Average    Avg   Evap  Exfil     Maximum    Max    Time of Max    Maximum
+                          Volume   Pcnt   Pcnt   Pcnt      Volume   Pcnt     Occurrence    Outflow
+  Storage Unit          1000 ft³   Full   Loss   Loss    1000 ft³   Full    days hr:min        CFS
+  ------------------------------------------------------------------------------------------------
+  PT                       8.551   85.5    0.0    0.0       9.998  100.0       0  00:00      10.00
+  TRCB                     7.101   71.0    0.0    0.0       9.995  100.0       0  00:00      20.00
+  CM8                      5.449   54.5    0.0    0.0       9.990   99.9       0  00:00      40.13
+  CM6                     10.000  100.0    0.0    0.0      10.000  100.0       0  00:00       0.00
+  CM7                      6.650   66.5    0.0    0.0       9.988   99.9       0  00:00      46.48
+  CM2                     10.000  100.0    0.0    0.0      10.000  100.0       0  00:00       0.00
+  CM4                     10.000  100.0    0.0    0.0      10.000  100.0       0  00:00       0.00
+  CM5                     10.000  100.0    0.0    0.0      10.000  100.0       0  00:00       0.00
   
-  ERROR 211: invalid number  at line 129 of [XSECT] section:
-  CS49-P           RECT_OPEN    0          20.00      0          0          
-
   
-  ERROR 211: invalid number  at line 130 of [XSECT] section:
-  CS49-W           RECT_OPEN    0          20.00      0          0          
+  ***********************
+  Outfall Loading Summary
+  ***********************
+  
+  -----------------------------------------------------------
+                         Flow       Avg       Max       Total
+                         Freq      Flow      Flow      Volume
+  Outfall Node           Pcnt       CFS       CFS    10^6 gal
+  -----------------------------------------------------------
+  C14-2                  6.90     10.00     10.00       0.011
+  -----------------------------------------------------------
+  System                 6.90     10.00     10.00       0.011
+  
+  
+  ********************
+  Link Flow Summary
+  ********************
+  
+  -----------------------------------------------------------------------------
+                                 Maximum  Time of Max   Maximum    Max/    Max/
+                                  |Flow|   Occurrence   |Veloc|    Full    Full
+  Link                 Type          CFS  days hr:min    ft/sec    Flow   Depth
+  -----------------------------------------------------------------------------
+  CS46-WEIR            WEIR         0.00     0  00:00                      0.00
+  CS45-W               WEIR         0.00     0  00:00                      0.00
+  CS12-WEIR            WEIR         0.00     0  00:00                      0.00
+  CM8-12_GW            WEIR        30.13     0  00:00                      0.99
+  CM7-C14_GW           WEIR         0.00     0  00:00                      0.00
+  CS49-W               WEIR        36.48     0  00:00                      0.99
+  CS-34                PUMP         0.00     0  00:00              0.00
+  CS-50                PUMP         0.00     0  00:00              0.00
+  CS-7                 PUMP        10.00     0  00:00              1.00
+  TR-C14_GW            PUMP        10.00     0  00:00              1.00
+  CS-PT                PUMP        10.00     0  00:00              1.00
+  CS46-P               PUMP         0.00     0  00:00              0.00
+  CS45-PUMP            PUMP         0.00     0  00:00              0.00
+  CS-12PUMP            PUMP        10.00     0  00:00              1.00
+  CS49-P               PUMP        10.00     0  00:00              1.00
+  
+  
+  ***************************
+  Flow Classification Summary
+  ***************************
+  
+  -------------------------------------------------------------------------------------
+                      Adjusted    ---------- Fraction of Time in Flow Class ---------- 
+                       /Actual         Up    Down  Sub   Sup   Up    Down  Norm  Inlet 
+  Conduit               Length    Dry  Dry   Dry   Crit  Crit  Crit  Crit  Ltd   Ctrl  
+  -------------------------------------------------------------------------------------
+  
+  
+  *************************
+  Conduit Surcharge Summary
+  *************************
+  
+  No conduits were surcharged.
+  
+  
+  ***************
+  Pumping Summary
+  ***************
+  
+  ---------------------------------------------------------------------------------------------------------
+                                                  Min       Avg       Max     Total     Power    % Time Off
+                        Percent   Number of      Flow      Flow      Flow    Volume     Usage    Pump Curve
+  Pump                 Utilized   Start-Ups       CFS       CFS       CFS  10^6 gal     Kw-hr    Low   High
+  ---------------------------------------------------------------------------------------------------------
+  CS-34                    0.00           0      0.00      0.00      0.00     0.000      0.00    0.0    0.0
+  CS-50                    0.00           0      0.00      0.00      0.00     0.000      0.00    0.0    0.0
+  CS-7                     0.12           1      0.00     10.00     10.00     0.008      0.27    0.0  100.0
+  TR-C14_GW                0.12           1      0.00     10.00     10.00     0.008      0.27    0.0  100.0
+  CS-PT                    0.12           1      0.00     10.00     10.00     0.008      0.25    0.0  100.0
+  CS46-P                   0.00           0      0.00      0.00      0.00     0.000      0.00    0.0    0.0
+  CS45-PUMP                0.00           0      0.00      0.00      0.00     0.000      0.00    0.0    0.0
+  CS-12PUMP                0.23           1      0.00     10.00     10.00     0.015      0.32    0.0  100.0
+  CS49-P                   0.12           1      0.00     10.00     10.00     0.008      0.23    0.0  100.0
+  
 
-
-  Analysis begun on:  Mon Jul 13 08:03:51 2026
-  Analysis ended on:  Mon Jul 13 08:03:51 2026
+  Analysis begun on:  Sun Jul 19 15:16:24 2026
+  Analysis ended on:  Sun Jul 19 15:16:24 2026
   Total elapsed time: < 1 sec

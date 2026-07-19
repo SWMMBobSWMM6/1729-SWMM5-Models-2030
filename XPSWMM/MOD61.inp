@@ -20,40 +20,56 @@ INERTIAL_DAMPING     PARTIAL
 NORMAL_FLOW_LIMITED  BOTH
 MAX_TRIALS           100
 HEAD_TOLERANCE       .001
+START_DATE           01/01/2001
+START_TIME           00:00:00
+REPORT_START_DATE    01/01/2001
+REPORT_START_TIME    00:00:00
+END_DATE             01/02/2001
+END_TIME             00:00:00
+SWEEP_START          01/01
+SWEEP_END            12/31
+DRY_DAYS             0
+REPORT_STEP          00:15:00
+WET_STEP             00:05:00
+DRY_STEP             01:00:00
 
 [JUNCTIONS]
 ;;Name           Elev       MaxDepth   InitDepth  SurDepth   Aponded
 ;;-------------- ---------- ---------- ---------- ---------- ----------
-0                101.00     0          0          0          0
-0                101.00     0          0          0          0
-0                101.00     0          0          0          0
-0                101.00     0          0          0          0
-0                100.00     0          0          0          0
-0                100.00     0          0          0          0
-0                100.00     0          0          0          0
-0                100.00     0          0          0          0
-0                101.00     0          0          0          0
-0                100.00     0          0          0          0
+1                101.00     0          0          0          0
+2                101.00     0          0          0          0
+3                101.00     0          0          0          0
+4                101.00     0          0          0          0
+inflo1           100.00     0          0          0          0
+inflo2           100.00     0          0          0          0
+inflo3           100.00     0          0          0          0
+roadjunc         100.00     0          0          0          0
+outletrd         100.00     0          0          0          0
+
+[OUTFALLS]
+;;Name           Elev       Type       Stage      Gated
+;;-------------- ---------- ---------- ---------- -----
+outletp          101.00     FREE                  NO
 
 [CONDUITS]
 ;;Name           From             To               Length     Roughness  InOffset   OutOffset  InitFlow   MaxFlow
 ;;-------------- ---------------- ---------------- ---------- ---------- ---------- ---------- ---------- ----------
-pipe1            0                0                35.98      0.0120     97.00      96.70      0          0
-pipe2            0                0                10.00      0.0120     96.70      96.30      0          0
-pipe3            0                0                55.00      0.0120     95.00      96.50      0          0
-310              0                0                10.00      0.0140     99.40      99.30      0          0
-311              0                0                10.00      0.0140     99.30      99.25      0          0
-313              0                0                55.00      0.0140     99.25      99.10      0          0
-user1            0                0                110.00     0.0150     96.40      96.00      0          0
-315              0                0                103.00     0.0140     99.10      99.00      0          0
+pipe1            1                2                35.98      0.0120     97.00      96.70      0          0
+pipe2            2                3                10.00      0.0120     96.70      96.30      0          0
+pipe3            3                4                55.00      0.0120     95.00      96.50      0          0
+310              inflo1           inflo2           10.00      0.0140     99.40      99.30      0          0
+311              inflo2           inflo3           10.00      0.0140     99.30      99.25      0          0
+313              inflo3           roadjunc         55.00      0.0140     99.25      99.10      0          0
+user1            4                outletp          110.00     0.0150     96.40      96.00      0          0
+315_2            roadjunc         outletrd         103.00     0.0140     99.10      99.00      0          0
 
 [ORIFICES]
 ;;Name           From             To               Type       Offset     Qcoeff     Gated    CloseTime
 ;;-------------- ---------------- ---------------- ---------- ---------- ---------- -------- ----------
-311              0                0                SIDE       0          0.650      NO       0
-310              0                0                SIDE       0          0.650      NO       0
-313              0                0                SIDE       0          0.650      NO       0
-315              0                0                SIDE       0          0.650      NO       0
+311_2            inflo2           2                SIDE       0          0.650      NO       0
+310_2            inflo1           1                SIDE       0          0.650      NO       0
+313_2            inflo3           3                SIDE       0          0.650      NO       0
+315              roadjunc         4                SIDE       0          0.650      NO       0
 
 [XSECTIONS]
 ;;Link           Shape        Geom1      Geom2      Geom3      Geom4      Barrels
@@ -61,15 +77,15 @@ user1            0                0                110.00     0.0150     96.40  
 pipe1            CIRCULAR     0.60       0.00       0          0          1
 pipe2            CIRCULAR     0.60       0.00       0          0          1
 pipe3            CIRCULAR     0.60       0          0          0          1
-310              IRREGULAR    0.60       0.00       0          0          1
-311              IRREGULAR    0.60       0.00       0          0          1
-313              IRREGULAR    0.60       0.00       0          0          1
+310              TRAPEZOIDAL  0.60       0.00       2          2          1
+311              TRAPEZOIDAL  0.60       0.00       2          2          1
+313              TRAPEZOIDAL  0.60       0.00       2          2          1
 user1            CIRCULAR     0.60       0          0          0          1
-315              IRREGULAR    0.60       0.00       0          0          1
-311              RECT_CLOSED  0.15       0          0          0          
-310              RECT_CLOSED  0.15       0          0          0          
-313              RECT_CLOSED  0.15       0          0          0          
-315              RECT_CLOSED  0.15       0          0          0          
+315_2            TRAPEZOIDAL  0.60       0.00       2          2          1
+311_2            RECT_CLOSED  0.15       0.15       0          0
+310_2            RECT_CLOSED  0.15       0.15       0          0
+313_2            RECT_CLOSED  0.15       0.15       0          0
+315              RECT_CLOSED  0.15       0.15       0          0
 
 [LOSSES]
 ;;Link           Inlet      Outlet     Average    Flap Gate
@@ -81,21 +97,21 @@ pipe3            0          0          0          NO
 311              0          0          0          NO
 313              0          0          0          NO
 user1            0          0          0          NO
-315              0          0          0          NO
+315_2            0          0          0          NO
 
 [COORDINATES]
 ;;Node           X-Coord            Y-Coord
 ;;-------------- ------------------ ------------------
-0                38.61              38.00             
-0                40.28              72.99             
-0                58.80              98.00             
-0                79.17              112.50            
-0                19.92              38.27             
-0                20.65              79.01             
-0                45.17              113.03            
-0                65.82              129.06            
-0                99.00              118.00            
-0                99.00              138.00            
+1                38.61              38.00             
+2                40.28              72.99             
+3                58.80              98.00             
+4                79.17              112.50            
+inflo1           19.92              38.27             
+inflo2           20.65              79.01             
+inflo3           45.17              113.03            
+roadjunc         65.82              129.06            
+outletp          99.00              118.00            
+outletrd         99.00              138.00            
 
 [MAP]
 DIMENSIONS 19.92 38.00 99.00 138.00

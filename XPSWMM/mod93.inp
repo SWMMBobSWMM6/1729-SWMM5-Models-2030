@@ -19,6 +19,18 @@ VARIABLE_STEP        0.75
 INERTIAL_DAMPING     PARTIAL
 NORMAL_FLOW_LIMITED  BOTH
 MAX_TRIALS           100
+START_DATE           01/01/2001
+START_TIME           00:00:00
+REPORT_START_DATE    01/01/2001
+REPORT_START_TIME    00:00:00
+END_DATE             01/02/2001
+END_TIME             00:00:00
+SWEEP_START          01/01
+SWEEP_END            12/31
+DRY_DAYS             0
+REPORT_STEP          00:15:00
+WET_STEP             00:05:00
+DRY_STEP             01:00:00
 
 [JUNCTIONS]
 ;;Name           Elev       MaxDepth   InitDepth  SurDepth   Aponded
@@ -26,12 +38,16 @@ MAX_TRIALS           100
 Inlet            105.00     0          0          0          0
 Rec              115.00     0          0          0          0
 
+[OUTFALLS]
+;;Name           Elev       Type       Stage      Gated
+;;-------------- ---------- ---------- ---------- -----
+Outfall          125.00     FREE                  NO
+
 [STORAGE]
 ;;Name           Elev       MaxDepth   InitDepth  Shape      Curve/Params
 ;;-------------- ---------- ---------- ---------- ---------- ----------
-Well             105.00     0          2.00       FUNCTIONAL 5.00 0          0
-Well             112.00     -2.00      4.00       FUNCTIONAL 5.00 0          0
-Outfall          125.00     0          0          FUNCTIONAL 10000.00 0          0
+Well             105.00     10.00      2.00       FUNCTIONAL 5.00 0          0
+Well_2           112.00     10.00      4.00       FUNCTIONAL 5.00 0          0
 
 [CONDUITS]
 ;;Name           From             To               Length     Roughness  InOffset   OutOffset  InitFlow   MaxFlow
@@ -48,10 +64,11 @@ DSPUMP           Well             Outfall          PC_DSPUMP  ON       102.00   
 [CURVES]
 ;;Name           Type       X-Value    Y-Value
 ;;-------------- ---------- ---------- ----------
-PC_pumpit        Pump3      0          0
-;
-PC_DSPUMP        Pump3      0          0
-;
+;; Synthesized generic pump curves — replace with actual pump data
+PC_pumpit        Pump1      0          5
+PC_pumpit                   10         10
+PC_DSPUMP        Pump1      0          5
+PC_DSPUMP                   10         10
 
 [XSECTIONS]
 ;;Link           Shape        Geom1      Geom2      Geom3      Geom4      Barrels
@@ -76,7 +93,7 @@ Inlet            FLOW         ""               FLOW     1.0      1.0      0.20
 Inlet            36.83              25.12             
 Well             70.37              81.01             
 Rec              33.80              119.60            
-Well             70.14              150.33            
+Well_2           70.14              150.33            
 Outfall          37.08              176.68            
 
 [MAP]

@@ -14,12 +14,24 @@ LINK_OFFSETS         DEPTH
 MIN_SLOPE            0.0
 ALLOW_PONDING        NO
 SKIP_STEADY_STATE    NO
-ROUTING_STEP         00:00:60
+ROUTING_STEP         00:01:00
 VARIABLE_STEP        0.75
 INERTIAL_DAMPING     PARTIAL
 NORMAL_FLOW_LIMITED  BOTH
 MAX_TRIALS           50
 HEAD_TOLERANCE       0.0033
+START_DATE           01/01/2001
+START_TIME           00:00:00
+REPORT_START_DATE    01/01/2001
+REPORT_START_TIME    00:00:00
+END_DATE             01/02/2001
+END_TIME             00:00:00
+SWEEP_START          01/01
+SWEEP_END            12/31
+DRY_DAYS             0
+REPORT_STEP          00:15:00
+WET_STEP             00:05:00
+DRY_STEP             01:00:00
 
 [JUNCTIONS]
 ;;Name           Elev       MaxDepth   InitDepth  SurDepth   Aponded
@@ -48,14 +60,18 @@ HEAD_TOLERANCE       0.0033
 3-05             15.80      0          0          0          0
 3-00             16.00      0          0          0          0
 28-00            16.00      0          0          0          0
-101              16.00      0          0          0          0
 103              16.00      0          0          0          0
+
+[OUTFALLS]
+;;Name           Elev       Type       Stage      Gated
+;;-------------- ---------- ---------- ---------- -----
+101              16.00      FREE                  NO
 
 [STORAGE]
 ;;Name           Elev       MaxDepth   InitDepth  Shape      Curve/Params
 ;;-------------- ---------- ---------- ---------- ---------- ----------
-001              15.20      0          0          FUNCTIONAL 143.00 0          0
-3-01             15.20      0          0          FUNCTIONAL 132.00 0          0
+001              15.20      10.00      0          FUNCTIONAL 143.00 0          0
+3-01             15.20      10.00      0          FUNCTIONAL 132.00 0          0
 
 [CONDUITS]
 ;;Name           From             To               Length     Roughness  InOffset   OutOffset  InitFlow   MaxFlow
@@ -81,15 +97,11 @@ HEAD_TOLERANCE       0.0033
 89               3-08             3-08D            220.00     0.0140     10.20      9.82       0          0
 91               3-08D            3-05             260.00     0.0140     9.82       7.08       0          0
 92               3-05             3-03             150.00     0.0140     7.08       6.02       0          0
-94               022              3-04             0          0          0          0          0          0
+94               022              3-04             100.00     0.0130     0          0          0          0
+rcp30            3-01             3-00             50.00      0.0140     3.79       3.00       0          0
+rcp28            001              28-00            50.00      0.0140     3.00       3.00       0          0
 102              3-00             101              50.00      0.0140     3.00       3.00       0          0
 104              28-00            103              50.00      0.0140     3.00       3.00       0          0
-
-[WEIRS]
-;;Name           From             To               Type       CrestHt    Qcoeff     Gated    EndCon   EndCoeff   Surcharge
-;;-------------- ---------------- ---------------- ---------- ---------- ---------- -------- -------- ---------- ----------
-rcp30            3-01             3-00             TRANSVERSE 0          1.840      NO       0        0          YES
-rcp28            001              28-00            TRANSVERSE 0          1.840      NO       0        0          YES
 
 [PUMPS]
 ;;Name           From             To               PumpCurve  Status   Startup    Shutoff
@@ -100,10 +112,11 @@ pump1            3-01             68               PC_pump1   ON       8.00     
 [CURVES]
 ;;Name           Type       X-Value    Y-Value
 ;;-------------- ---------- ---------- ----------
-PC_pump2         Pump3      0          0
-;
-PC_pump1         Pump3      0          0
-;
+;; Synthesized generic pump curves — replace with actual pump data
+PC_pump2         Pump1      0          5
+PC_pump2                    10         10
+PC_pump1         Pump1      0          5
+PC_pump1                    10         10
 
 [XSECTIONS]
 ;;Link           Shape        Geom1      Geom2      Geom3      Geom4      Barrels
@@ -129,11 +142,11 @@ PC_pump1         Pump3      0          0
 89               CIRCULAR     2.00       0          0          0          1
 91               CIRCULAR     2.00       0          0          0          1
 92               CIRCULAR     2.00       0          0          0          1
-94               CIRCULAR     0          0          0          0          1
+94               CIRCULAR     1.00       0          0          0          1
+rcp30            CIRCULAR     4.00       0          0          0          1
+rcp28            CIRCULAR     4.00       0          0          0          1
 102              CIRCULAR     4.00       0          0          0          1
 104              CIRCULAR     4.00       0          0          0          1
-rcp30            RECT_OPEN    0          4.00       0          0          
-rcp28            RECT_OPEN    0          6.00       0          0          
 
 [LOSSES]
 ;;Link           Inlet      Outlet     Average    Flap Gate
@@ -160,6 +173,8 @@ rcp28            RECT_OPEN    0          6.00       0          0
 91               0          0          0          NO
 92               0          0          0          NO
 94               0          0          0          NO
+rcp30            0          0          0          NO
+rcp28            0          0          0          NO
 102              0          0          0          NO
 104              0          0          0          NO
 

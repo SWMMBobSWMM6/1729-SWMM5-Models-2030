@@ -20,15 +20,31 @@ INERTIAL_DAMPING     PARTIAL
 NORMAL_FLOW_LIMITED  BOTH
 MAX_TRIALS           100
 HEAD_TOLERANCE       .001
+START_DATE           01/01/2001
+START_TIME           00:00:00
+REPORT_START_DATE    01/01/2001
+REPORT_START_TIME    00:00:00
+END_DATE             01/02/2001
+END_TIME             00:00:00
+SWEEP_START          01/01
+SWEEP_END            12/31
+DRY_DAYS             0
+REPORT_STEP          00:15:00
+WET_STEP             00:05:00
+DRY_STEP             01:00:00
+
+[OUTFALLS]
+;;Name           Elev       Type       Stage      Gated
+;;-------------- ---------- ---------- ---------- -----
+Outlet           10.00      FREE                  NO
 
 [STORAGE]
 ;;Name           Elev       MaxDepth   InitDepth  Shape      Curve/Params
 ;;-------------- ---------- ---------- ---------- ---------- ----------
-A                10.50      0          0          FUNCTIONAL 10.00 0          0
-B                10.50      0          0          FUNCTIONAL 10.00 0          0
-Outlet           10.00      0          0          FUNCTIONAL 10.00 0          0
-Tank             10.50      0          0          FUNCTIONAL 100.00 0          0
-Inlet            10.72      0          0          FUNCTIONAL 10.00 0          0
+A                10.50      10.00      0          FUNCTIONAL 10.00 0          0
+B                10.50      10.00      0          FUNCTIONAL 10.00 0          0
+Tank             10.50      10.00      0          FUNCTIONAL 100.00 0          0
+Inlet            10.72      10.00      0          FUNCTIONAL 10.00 0          0
 
 [CONDUITS]
 ;;Name           From             To               Length     Roughness  InOffset   OutOffset  InitFlow   MaxFlow
@@ -47,8 +63,8 @@ JK2_1            B                A                TRANSVERSE 9.25       1.840  
 ;;-------------- ------------ ---------- ---------- ---------- ---------- ----------
 JK8_1            CIRCULAR     0.45       0          0          0          1
 OS8_1            CIRCULAR     0.90       5.00       0          0          1
-OS9_1            TRAPEZOIDAL  2.71       5.00       0          0          1
-JK2_1            RECT_OPEN    0          1.00       0          0          
+OS9_1            TRAPEZOIDAL  2.71       5.00       1          1          1
+JK2_1            RECT_OPEN    1.00       1.00       0          0
 
 [LOSSES]
 ;;Link           Inlet      Outlet     Average    Flap Gate

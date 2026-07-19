@@ -2,47 +2,290 @@
   EPA STORM WATER MANAGEMENT MODEL - VERSION 5.2 (Build 5.2.4)
   ------------------------------------------------------------
 
+  DERM C-8 100 YEAR STORM 4/24/96 117302.A5.F0 RUN_E10 
+  WARNING 04: minimum elevation drop used for Conduit C821400
+  WARNING 04: minimum elevation drop used for Conduit C819100
+  WARNING 04: minimum elevation drop used for Conduit C810000
+  WARNING 04: minimum elevation drop used for Conduit SPC01200
+  WARNING 04: minimum elevation drop used for Conduit 217
+  WARNING 04: minimum elevation drop used for Conduit 219
   
-  ERROR 209: undefined object 0 at line 66 of [XSECT] section:
-  C821400          IRREGULAR    0          0          0          0          1
-
+  ****************
+  Analysis Options
+  ****************
+  Flow Units ............... CFS
+  Process Models:
+    Rainfall/Runoff ........ NO
+    RDII ................... NO
+    Snowmelt ............... NO
+    Groundwater ............ NO
+    Flow Routing ........... YES
+    Ponding Allowed ........ NO
+    Water Quality .......... NO
+  Flow Routing Method ...... DYNWAVE
+  Surcharge Method ......... EXTRAN
+  Starting Date ............ 01/01/2001 00:00:00
+  Ending Date .............. 01/02/2001 00:00:00
+  Antecedent Dry Days ...... 0.0
+  Report Time Step ......... 00:15:00
+  Routing Time Step ........ 4.00 sec
+  Variable Time Step ....... YES
+  Maximum Trials ........... 50
+  Number of Threads ........ 1
+  Head Tolerance ........... 0.000100 ft
   
-  ERROR 209: undefined object 0 at line 67 of [XSECT] section:
-  C819100          IRREGULAR    0          0          0          0          1
-
   
-  ERROR 209: undefined object 0 at line 68 of [XSECT] section:
-  C815600          IRREGULAR    0          0          0          0          1
-
+  **************************        Volume        Volume
+  Flow Routing Continuity        acre-feet      10^6 gal
+  **************************     ---------     ---------
+  Dry Weather Inflow .......         0.000         0.000
+  Wet Weather Inflow .......         0.000         0.000
+  Groundwater Inflow .......         0.000         0.000
+  RDII Inflow ..............         0.000         0.000
+  External Inflow ..........         0.000         0.000
+  External Outflow .........        22.384         7.294
+  Flooding Loss ............        30.107         9.811
+  Evaporation Loss .........         0.000         0.000
+  Exfiltration Loss ........         0.000         0.000
+  Initial Stored Volume ....         6.771         2.206
+  Final Stored Volume ......         3.140         1.023
+  Continuity Error (%) .....      -721.615
   
-  ERROR 209: undefined object 0 at line 69 of [XSECT] section:
-  C810000          IRREGULAR    0          0          0          0          1
-
   
-  ERROR 209: undefined object 0 at line 70 of [XSECT] section:
-  SPC01200         IRREGULAR    0          0          0          0          1
-
+  *************************
+  Highest Continuity Errors
+  *************************
+  Node N-C8-025 (-172.43%)
+  Node N-C8-020 (-83.22%)
+  Node N-C8-015 (-60.48%)
   
-  ERROR 211: invalid number  at line 71 of [XSECT] section:
-  213              CIRCULAR     0          0          0          0          1
-
   
-  ERROR 211: invalid number  at line 72 of [XSECT] section:
-  215              CIRCULAR     0          0          0          0          1
-
+  ***************************
+  Time-Step Critical Elements
+  ***************************
+  None
   
-  ERROR 211: invalid number  at line 73 of [XSECT] section:
-  217              CIRCULAR     0          0          0          0          1
-
   
-  ERROR 211: invalid number  at line 74 of [XSECT] section:
-  219              CIRCULAR     0          0          0          0          1
-
+  ********************************
+  Highest Flow Instability Indexes
+  ********************************
+  All links are stable.
   
-  ERROR 211: invalid number  at line 75 of [XSECT] section:
-  296              CIRCULAR     0          0          0          0          1
+  
+  *********************************
+  Most Frequent Nonconverging Nodes
+  *********************************
+  Convergence obtained at all time steps.
+  
+  
+  *************************
+  Routing Time Step Summary
+  *************************
+  Minimum Time Step           :     0.71 sec
+  Average Time Step           :     3.99 sec
+  Maximum Time Step           :     4.00 sec
+  % of Time in Steady State   :     0.00
+  Average Iterations per Step :     2.00
+  % of Steps Not Converging   :     0.00
+  Time Step Frequencies       :
+      4.000 -  2.639 sec      :    99.69 %
+      2.639 -  1.741 sec      :     0.15 %
+      1.741 -  1.149 sec      :     0.09 %
+      1.149 -  0.758 sec      :     0.06 %
+      0.758 -  0.500 sec      :     0.01 %
+  
+  
+  ******************
+  Node Depth Summary
+  ******************
+  
+  ---------------------------------------------------------------------------------
+                                 Average  Maximum  Maximum  Time of Max    Reported
+                                   Depth    Depth      HGL   Occurrence   Max Depth
+  Node                 Type         Feet     Feet     Feet  days hr:min        Feet
+  ---------------------------------------------------------------------------------
+  CN-C8-005            JUNCTION     0.94     1.00    13.00     0  00:00        1.00
+  CN-C8-010a           JUNCTION     0.94     1.00    13.00     0  00:00        1.00
+  CN-C8-020            JUNCTION     0.95     1.00    13.00     0  00:00        1.00
+  CN-C8-025a           JUNCTION     0.95     1.00    13.00     0  00:00        1.00
+  CN-C8-010b           JUNCTION     0.94     1.00    13.00     0  00:00        1.00
+  S-28                 OUTFALL      0.29     1.00    13.30     0  00:02        0.95
+  N-C8-025             STORAGE      3.26    10.00    22.00     0  00:00        9.89
+  N-SP-050             STORAGE      3.32    10.00    22.00     0  00:00        9.96
+  N-C8-020             STORAGE      3.09    10.00    22.00     0  00:00        9.96
+  N-C8-015             STORAGE      2.80    10.00    22.00     0  00:00        9.86
+  N-C8-010             STORAGE      1.70    10.00    22.30     0  00:00        8.44
+  N-SEABOARD           STORAGE      0.03     1.00    13.00     0  00:00        0.79
+  
+  
+  *******************
+  Node Inflow Summary
+  *******************
+  
+  -------------------------------------------------------------------------------------------------
+                                  Maximum  Maximum                  Lateral       Total        Flow
+                                  Lateral    Total  Time of Max      Inflow      Inflow     Balance
+                                   Inflow   Inflow   Occurrence      Volume      Volume       Error
+  Node                 Type           CFS      CFS  days hr:min    10^6 gal    10^6 gal     Percent
+  -------------------------------------------------------------------------------------------------
+  CN-C8-005            JUNCTION      0.00    10.85     0  00:00           0        1.63       0.001
+  CN-C8-010a           JUNCTION      0.00    10.85     0  00:00           0        1.63       0.001
+  CN-C8-020            JUNCTION      0.00    10.69     0  00:00           0        2.41       0.000
+  CN-C8-025a           JUNCTION      0.00    10.69     0  00:00           0        2.51       0.000
+  CN-C8-010b           JUNCTION      0.00    10.85     0  00:00           0        1.63       0.001
+  S-28                 OUTFALL       0.00    62.86     0  00:03           0        7.29       0.000
+  N-C8-025             STORAGE       0.00     8.32     0  03:33           0        2.36     -63.294
+  N-SP-050             STORAGE       0.00     0.00     0  00:00           0      0.0748     -96.680
+  N-C8-020             STORAGE       0.00    16.22     0  01:12           0        4.31     -45.421
+  N-C8-015             STORAGE       0.00    20.00     0  03:11           0        5.52     -37.686
+  N-C8-010             STORAGE       0.00    36.55     0  01:41           0        8.92     -26.773
+  N-SEABOARD           STORAGE       0.00     0.00     0  00:00           0       0.326      -0.046
+  
+  
+  **********************
+  Node Surcharge Summary
+  **********************
+  
+  Surcharging occurs when water rises above the top of the highest conduit.
+  ---------------------------------------------------------------------
+                                               Max. Height   Min. Depth
+                                   Hours       Above Crown    Below Rim
+  Node                 Type      Surcharged           Feet         Feet
+  ---------------------------------------------------------------------
+  CN-C8-005            JUNCTION       15.13          0.000        0.000
+  CN-C8-010a           JUNCTION       15.13          0.000        0.000
+  CN-C8-020            JUNCTION       15.97          0.000        0.000
+  CN-C8-025a           JUNCTION       16.00          0.000        0.000
+  CN-C8-010b           JUNCTION       15.13          0.000        0.000
+  
+  
+  *********************
+  Node Flooding Summary
+  *********************
+  
+  Flooding refers to all water that overflows a node, whether it ponds or not.
+  --------------------------------------------------------------------------
+                                                             Total   Maximum
+                                 Maximum   Time of Max       Flood    Ponded
+                        Hours       Rate    Occurrence      Volume     Depth
+  Node                 Flooded       CFS   days hr:min    10^6 gal      Feet
+  --------------------------------------------------------------------------
+  CN-C8-005              15.13     10.85      0  00:00       1.628     0.000
+  CN-C8-010a             15.13     10.85      0  00:00       1.628     0.000
+  CN-C8-020              15.97     10.69      0  00:00       2.406     0.000
+  CN-C8-025a             16.00     10.69      0  00:00       2.515     0.000
+  CN-C8-010b             15.13     10.85      0  00:00       1.628     0.000
+  N-C8-020                0.01      7.32      0  00:00       0.000     0.000
+  N-C8-015                0.09      3.15      0  00:02       0.005     0.000
+  
+  
+  **********************
+  Storage Volume Summary
+  **********************
+  
+  ------------------------------------------------------------------------------------------------
+                         Average    Avg   Evap  Exfil     Maximum    Max    Time of Max    Maximum
+                          Volume   Pcnt   Pcnt   Pcnt      Volume   Pcnt     Occurrence    Outflow
+  Storage Unit          1000 ft³   Full   Loss   Loss    1000 ft³   Full    days hr:min        CFS
+  ------------------------------------------------------------------------------------------------
+  N-C8-025                 3.257   32.6    0.0    0.0      10.000  100.0       0  00:00      23.66
+  N-SP-050                 3.322   33.2    0.0    0.0      10.000  100.0       0  00:00       8.32
+  N-C8-020                 3.085   30.9    0.0    0.0      10.000  100.0       0  00:00      28.96
+  N-C8-015                 2.796   28.0    0.0    0.0      10.000  100.0       0  00:00      36.55
+  N-C8-010                 1.703   17.0    0.0    0.0      10.000  100.0       0  00:00      97.92
+  N-SEABOARD               1.097    0.3    0.0    0.0      43.557   10.0       0  00:00      10.00
+  
+  
+  ***********************
+  Outfall Loading Summary
+  ***********************
+  
+  -----------------------------------------------------------
+                         Flow       Avg       Max       Total
+                         Freq      Flow      Flow      Volume
+  Outfall Node           Pcnt       CFS       CFS    10^6 gal
+  -----------------------------------------------------------
+  S-28                 100.00     11.28     62.86       7.294
+  -----------------------------------------------------------
+  System               100.00     11.28     62.86       7.294
+  
+  
+  ********************
+  Link Flow Summary
+  ********************
+  
+  -----------------------------------------------------------------------------
+                                 Maximum  Time of Max   Maximum    Max/    Max/
+                                  |Flow|   Occurrence   |Veloc|    Full    Full
+  Link                 Type          CFS  days hr:min    ft/sec    Flow   Depth
+  -----------------------------------------------------------------------------
+  C821400              CONDUIT     14.69     0  03:52      1.22   23.97    1.00
+  C819100              CONDUIT     20.00     0  03:11      1.67   30.90    1.00
+  C815600              CONDUIT     36.55     0  01:41      3.05    3.21    1.00
+  C810000              CONDUIT     62.86     0  00:03      5.24   92.88    1.00
+  SPC01200             CONDUIT      8.32     0  03:33      0.69   14.57    1.00
+  213                  CONDUIT     10.85     0  00:00     13.81    5.56    1.00
+  215                  CONDUIT     10.85     0  00:00     13.81    5.56    1.00
+  217                  CONDUIT     10.69     0  00:00     13.61   94.87    1.00
+  219                  CONDUIT     10.69     0  00:00     13.60   94.84    1.00
+  296                  CONDUIT     10.85     0  00:00     13.81    5.56    1.00
+  PUMP                 PUMP        10.00     0  00:00              1.00
+  
+  
+  ***************************
+  Flow Classification Summary
+  ***************************
+  
+  -------------------------------------------------------------------------------------
+                      Adjusted    ---------- Fraction of Time in Flow Class ---------- 
+                       /Actual         Up    Down  Sub   Sup   Up    Down  Norm  Inlet 
+  Conduit               Length    Dry  Dry   Dry   Crit  Crit  Crit  Crit  Ltd   Ctrl  
+  -------------------------------------------------------------------------------------
+  C821400                 1.00   0.00  0.00  0.00  1.00  0.00  0.00  0.00  0.00  0.00
+  C819100                 1.00   0.00  0.00  0.00  1.00  0.00  0.00  0.00  0.00  0.00
+  C815600                 1.00   0.00  0.00  0.00  1.00  0.00  0.00  0.00  0.00  0.00
+  C810000                 1.00   0.00  0.00  0.00  1.00  0.00  0.00  0.00  0.00  0.00
+  SPC01200                1.00   0.00  0.00  0.00  1.00  0.00  0.00  0.00  0.00  0.00
+  213                     1.00   0.00  0.00  0.00  1.00  0.00  0.00  0.00  0.00  0.00
+  215                     1.00   0.00  0.00  0.00  1.00  0.00  0.00  0.00  0.00  0.00
+  217                     1.00   0.00  0.00  0.00  1.00  0.00  0.00  0.00  0.00  0.00
+  219                     1.00   0.00  0.00  0.00  1.00  0.00  0.00  0.00  0.00  0.00
+  296                     1.00   0.00  0.00  0.00  1.00  0.00  0.00  0.00  0.00  0.00
+  
+  
+  *************************
+  Conduit Surcharge Summary
+  *************************
+  
+  ----------------------------------------------------------------------------
+                                                           Hours        Hours 
+                         --------- Hours Full --------   Above Full   Capacity
+  Conduit                Both Ends  Upstream  Dnstream   Normal Flow   Limited
+  ----------------------------------------------------------------------------
+  C821400                    15.90     15.93     15.90     21.48        15.50
+  C819100                    15.78     15.90     15.78     23.79        15.65
+  C815600                    11.67     11.67     15.78     11.67         0.01
+  C810000                     0.01     11.67      0.01     24.00         0.01
+  SPC01200                   15.90     15.90     15.93     15.68        15.13
+  213                        11.67     11.67     15.13     11.68        11.67
+  215                        11.67     11.67     15.13     11.68        11.67
+  217                        15.90     15.97     15.90     15.92         0.01
+  219                        15.93     16.00     15.93     15.95         0.01
+  296                        11.67     11.67     15.13     11.68        11.67
+  
+  
+  ***************
+  Pumping Summary
+  ***************
+  
+  ---------------------------------------------------------------------------------------------------------
+                                                  Min       Avg       Max     Total     Power    % Time Off
+                        Percent   Number of      Flow      Flow      Flow    Volume     Usage    Pump Curve
+  Pump                 Utilized   Start-Ups       CFS       CFS       CFS  10^6 gal     Kw-hr    Low   High
+  ---------------------------------------------------------------------------------------------------------
+  PUMP                     5.05           1      0.00      9.99     10.00     0.326      9.42    0.0   99.8
+  
 
-
-  Analysis begun on:  Mon Jul 13 08:03:49 2026
-  Analysis ended on:  Mon Jul 13 08:03:49 2026
+  Analysis begun on:  Sun Jul 19 15:15:42 2026
+  Analysis ended on:  Sun Jul 19 15:15:42 2026
   Total elapsed time: < 1 sec

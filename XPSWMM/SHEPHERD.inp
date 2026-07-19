@@ -20,13 +20,24 @@ INERTIAL_DAMPING     PARTIAL
 NORMAL_FLOW_LIMITED  BOTH
 MAX_TRIALS           50
 HEAD_TOLERANCE       0.0033
+START_DATE           01/01/2001
+START_TIME           00:00:00
+REPORT_START_DATE    01/01/2001
+REPORT_START_TIME    00:00:00
+END_DATE             01/02/2001
+END_TIME             00:00:00
+SWEEP_START          01/01
+SWEEP_END            12/31
+DRY_DAYS             0
+REPORT_STEP          00:15:00
+WET_STEP             00:05:00
+DRY_STEP             01:00:00
 
 [JUNCTIONS]
 ;;Name           Elev       MaxDepth   InitDepth  SurDepth   Aponded
 ;;-------------- ---------- ---------- ---------- ---------- ----------
 FL010            54.20      0          0          0          0
 SB050            50.10      0          0          0          0
-SB040A           48.00      0          0          0          0
 SB020A           43.60      0          0          0          0
 SB010C           40.20      0          0          0          0
 SB010A           40.00      0          0          0          0
@@ -57,69 +68,79 @@ SB1GW            150.00     0          0          0          0
 SB1GWout         3.00       0          0          0          0
 SB2GW            150.00     0          0          0          0
 SB2GWout         3.00       0          0          0          0
+4010Bsouth       31.79      0          0          0          0
+4010Broad        32.29      0          0          0          0
+4040Apipe2       36.15      0          0          0          0
+4040Achan        37.57      0          0          0          0
+FLBOX2           33.15      0          0          0          0
+
+[OUTFALLS]
+;;Name           Elev       Type       Stage      Gated
+;;-------------- ---------- ---------- ---------- -----
+SB040A           48.00      FREE                  NO
 
 [STORAGE]
 ;;Name           Elev       MaxDepth   InitDepth  Shape      Curve/Params
 ;;-------------- ---------- ---------- ---------- ---------- ----------
-SB010            38.20      0          3.25       FUNCTIONAL 0 0          0
-SB020            42.00      0          0          FUNCTIONAL 0 0          0
-SB030            45.00      0          0          FUNCTIONAL 0 0          0
-SB113            48.00      0          0          FUNCTIONAL 0 0          0
-SB112            50.00      0          0          FUNCTIONAL 0 0          0
-SB111            36.00      0          0          FUNCTIONAL 0 0          0
-SB110            40.00      0          0          FUNCTIONAL 0 0          0
-SB115            43.00      0          0          FUNCTIONAL 0 0          0
-SB120            44.00      0          0          FUNCTIONAL 0 0          0
-SB122            42.00      0          0          FUNCTIONAL 0 0          0
-SB121            36.00      0          0          FUNCTIONAL 0 0          0
-SB123            38.00      0          0          FUNCTIONAL 0 0          0
-SB125            48.00      0          0          FUNCTIONAL 0 0          0
-SB126            52.00      0          0          FUNCTIONAL 0 0          0
-SB127            54.00      0          0          FUNCTIONAL 0 0          0
-SB128            54.00      0          0          FUNCTIONAL 0 0          0
-SB124            44.00      0          0          FUNCTIONAL 0 0          0
-SB230            48.00      0          0          FUNCTIONAL 0 0          0
-SB220            42.00      0          0          FUNCTIONAL 0 0          0
-SB231            52.00      0          0          FUNCTIONAL 0 0          0
-SB241            60.00      0          0          FUNCTIONAL 0 0          0
-SB240            57.90      0          0          FUNCTIONAL 0 0          0
-SB242            60.00      0          0          FUNCTIONAL 0 0          0
-SB250            64.00      0          0          FUNCTIONAL 0 0          0
-SB140            48.00      0          0          FUNCTIONAL 0 0          0
-SB141            58.00      0          0          FUNCTIONAL 0 0          0
-SB132            68.00      0          0          FUNCTIONAL 0 0          0
-SB131            42.00      0          0          FUNCTIONAL 0 0          0
-SB130            54.00      0          0          FUNCTIONAL 0 0          0
-SB020B           48.00      0          0          FUNCTIONAL 0 0          0
-SB010B           40.20      -0.20      0          FUNCTIONAL 0 0          0
-SB210            48.00      0          0          FUNCTIONAL 0 0          0
-SB114            45.50      0          0          FUNCTIONAL 0 0          0
-SB060            51.00      0          0          FUNCTIONAL 0 0          0
-SB162            69.30      0          0          FUNCTIONAL 0 0          0
-SB160            50.50      0          0          FUNCTIONAL 0 0          0
-SB163            112.30     0          0          FUNCTIONAL 0 0          0
-SB164            118.50     0          0          FUNCTIONAL 0 0          0
-SB165            80.00      0          0          FUNCTIONAL 0 0          0
-SB166            117.60     0          0          FUNCTIONAL 0 0          0
-SB161            70.70      0          0          FUNCTIONAL 0 0          0
+SB010            38.20      10.00      3.25       FUNCTIONAL 1000.00 0          0
+SB020            42.00      10.00      0          FUNCTIONAL 1000.00 0          0
+SB030            45.00      10.00      0          FUNCTIONAL 1000.00 0          0
+SB113            48.00      10.00      0          FUNCTIONAL 1000.00 0          0
+SB112            50.00      10.00      0          FUNCTIONAL 1000.00 0          0
+SB111            36.00      10.00      0          FUNCTIONAL 1000.00 0          0
+SB110            40.00      10.00      0          FUNCTIONAL 1000.00 0          0
+SB115            43.00      10.00      0          FUNCTIONAL 1000.00 0          0
+SB120            44.00      10.00      0          FUNCTIONAL 1000.00 0          0
+SB122            42.00      10.00      0          FUNCTIONAL 1000.00 0          0
+SB121            36.00      10.00      0          FUNCTIONAL 1000.00 0          0
+SB123            38.00      10.00      0          FUNCTIONAL 1000.00 0          0
+SB125            48.00      10.00      0          FUNCTIONAL 1000.00 0          0
+SB126            52.00      10.00      0          FUNCTIONAL 1000.00 0          0
+SB127            54.00      10.00      0          FUNCTIONAL 1000.00 0          0
+SB128            54.00      10.00      0          FUNCTIONAL 1000.00 0          0
+SB124            44.00      10.00      0          FUNCTIONAL 1000.00 0          0
+SB230            48.00      10.00      0          FUNCTIONAL 1000.00 0          0
+SB220            42.00      10.00      0          FUNCTIONAL 1000.00 0          0
+SB231            52.00      10.00      0          FUNCTIONAL 1000.00 0          0
+SB241            60.00      10.00      0          FUNCTIONAL 1000.00 0          0
+SB240            57.90      10.00      0          FUNCTIONAL 1000.00 0          0
+SB242            60.00      10.00      0          FUNCTIONAL 1000.00 0          0
+SB250            64.00      10.00      0          FUNCTIONAL 1000.00 0          0
+SB140            48.00      10.00      0          FUNCTIONAL 1000.00 0          0
+SB141            58.00      10.00      0          FUNCTIONAL 1000.00 0          0
+SB132            68.00      10.00      0          FUNCTIONAL 1000.00 0          0
+SB131            42.00      10.00      0          FUNCTIONAL 1000.00 0          0
+SB130            54.00      10.00      0          FUNCTIONAL 1000.00 0          0
+SB020B           48.00      10.00      0          FUNCTIONAL 1000.00 0          0
+SB010B           40.20      10.00      0          FUNCTIONAL 1000.00 0          0
+SB210            48.00      10.00      0          FUNCTIONAL 1000.00 0          0
+SB114            45.50      10.00      0          FUNCTIONAL 1000.00 0          0
+SB060            51.00      10.00      0          FUNCTIONAL 1000.00 0          0
+SB162            69.30      10.00      0          FUNCTIONAL 1000.00 0          0
+SB160            50.50      10.00      0          FUNCTIONAL 1000.00 0          0
+SB163            112.30     10.00      0          FUNCTIONAL 1000.00 0          0
+SB164            118.50     10.00      0          FUNCTIONAL 1000.00 0          0
+SB165            80.00      10.00      0          FUNCTIONAL 1000.00 0          0
+SB166            117.60     10.00      0          FUNCTIONAL 1000.00 0          0
+SB161            70.70      10.00      0          FUNCTIONAL 1000.00 0          0
 
 [CONDUITS]
 ;;Name           From             To               Length     Roughness  InOffset   OutOffset  InitFlow   MaxFlow
 ;;-------------- ---------------- ---------------- ---------- ---------- ---------- ---------- ---------- ----------
 1010             FL010            SB020B           600.00     0.0350     43.30      39.30      0          0
 4020B            SB020B           SB020A           500.00     0.0350     39.30      35.40      0          0
-4020             SB020            SB010C           250.00     0          32.40      32.00      0          0
-4050             SB050            SB040D           200.00     0          42.50      42.20      0          0
+4020             SB020            SB010C           250.00     0.0130     32.40      32.00      0          0
+4050             SB050            SB040D           200.00     0.0130     42.50      42.20      0          0
 4140             SB140            SB040C           150.00     0.0350     47.50      42.00      0          0
 4250             SB250            SB040D           650.00     0.0350     62.50      42.20      0          0
-4040D            SB040D           SB040C           150.00     0          42.20      42.00      0          0
+4040D            SB040D           SB040C           150.00     0.0130     42.20      42.00      0          0
 4141             SB141            SB040C           650.00     0.0350     57.50      42.00      0          0
-4040C            SB040C           SB040B           300.00     0          42.00      40.90      0          0
-4040B            SB040B           SB040A           250.00     0          40.90      36.15      0          0
+4040C            SB040C           SB040B           300.00     0.0130     42.00      40.90      0          0
+4040B            SB040B           SB040A           250.00     0.0130     40.90      36.15      0          0
 4240             SB240            SB040B           550.00     0.0350     51.90      40.90      0          0
 4242             SB242            SB240            450.00     0.0350     58.70      48.00      0          0
-4241             ?                ?                300.00     0.0350     54.30      46.00      0          0
-4030             SB030            SB020            350.00     0          36.00      33.00      0          0
+4241             SB241            SB242            300.00     0.0350     54.30      46.00      0          0
+4030             SB030            SB020            350.00     0.0130     36.00      33.00      0          0
 4220             SB220            SB020            300.00     0.0350     41.00      34.00      0          0
 4210             SB210            SB010C           500.00     0.0350     47.80      32.00      0          0
 4230             SB230            SB030            300.00     0.0350     45.60      38.00      0          0
@@ -176,10 +197,10 @@ SB230pipe        SB230            SB4GW            33.00      0.0140     45.60  
 SB220pipe        SB220            SB4GW            33.00      0.0140     39.80      10.00      0          0
 SB141pipe        SB141            SB8GW            33.00      0.0140     56.50      10.00      0          0
 SB140pipe        SB140            SB8GW            33.00      0.0140     45.50      10.00      0          0
-4010C            SB010C           SB010B           200.00     0          32.00      31.64      0          0
-4010A            SB010A           SB010            300.00     0          30.85      30.00      0          0
+4010C            SB010C           SB010B           200.00     0.0130     32.00      31.64      0          0
+4010A            SB010A           SB010            300.00     0.0130     30.85      30.00      0          0
 4010Bnorth       4010Bsouth       4010Broad        32.60      0.0140     31.79      32.29      0          0
-4040             SB040            SB030            950.00     0          37.54      36.00      0          0
+4040             SB040            SB030            950.00     0.0130     37.54      36.00      0          0
 4040Apipe1       4040Apipe2       4040Achan        31.00      0.0140     36.15      37.57      0          0
 4112A            SB112A           SB112            200.00     0.0350     43.52      42.00      0          0
 4114flume        SB114            SB112A           45.00      0.0140     43.97      43.52      0          0
@@ -201,58 +222,58 @@ SB163pipe        SB163            SB1GW            33.00      0.0140     105.40 
 SB161pipe        SB161            SB8GW            33.00      0.0140     64.60      10.00      0          0
 SB162pipe        SB162            SB2GW            33.00      0.0140     59.90      10.00      0          0
 SB160pipe        SB160            SB2GW            33.00      0.0140     39.50      10.00      0          0
-4060             SB060            SB050            850.00     0          43.80      42.50      0          0
+4060             SB060            SB050            850.00     0.0130     43.80      42.50      0          0
 4060A            SB060A           SB060            600.00     0.0350     44.50      43.80      0          0
 4115A            SB115            SB020            200.00     0.0350     38.00      34.00      0          0
 4120B            SB120            SB115            200.00     0.0350     37.50      32.00      0          0
+4020Achan        SB020A           SB020            400.00     0.0350     35.40      33.50      0          0
+41051weir        SB160A           SB160            150.00     0.0350     47.00      42.00      0          0
 
 [WEIRS]
 ;;Name           From             To               Type       CrestHt    Qcoeff     Gated    EndCon   EndCoeff   Surcharge
 ;;-------------- ---------------- ---------------- ---------- ---------- ---------- -------- -------- ---------- ----------
 4115             SB115            SB010            TRANSVERSE 33.50      1.840      NO       0        0          YES
-4020Achan        SB020A           SB020            TRANSVERSE 35.40      1.840      NO       0        0          YES
 4105weir         SB160            SB060A           TRANSVERSE 45.50      1.840      NO       0        0          YES
-41051weir        SB160A           SB160            TRANSVERSE 47.00      1.840      NO       0        0          YES
 4120Achan        SB120            SB110            TRANSVERSE 33.60      1.840      NO       0        0          YES
 
 [XSECTIONS]
 ;;Link           Shape        Geom1      Geom2      Geom3      Geom4      Barrels
 ;;-------------- ------------ ---------- ---------- ---------- ---------- ----------
-1010             IRREGULAR    3.80       2.00       0          0          1
-4020B            IRREGULAR    8.20       2.00       0          0          1
-4020             IRREGULAR    8.19       0          0          0          1
-4050             IRREGULAR    7.55       0          0          0          1
-4140             TRAPEZOIDAL  0.50       2.00       0          0          1
-4250             TRAPEZOIDAL  1.50       2.00       0          0          1
-4040D            IRREGULAR    7.55       0          0          0          1
-4141             TRAPEZOIDAL  0.50       2.00       0          0          1
-4040C            IRREGULAR    7.55       0          0          0          1
-4040B            IRREGULAR    7.55       0          0          0          1
-4240             TRAPEZOIDAL  6.00       2.00       0          0          1
-4242             TRAPEZOIDAL  1.30       2.00       0          0          1
-4241             TRAPEZOIDAL  1.70       2.00       0          0          1
-4030             IRREGULAR    9.00       0          0          0          1
-4220             TRAPEZOIDAL  1.00       2.00       0          0          1
-4210             TRAPEZOIDAL  0.20       2.00       0          0          1
-4230             TRAPEZOIDAL  2.00       2.00       0          0          1
-4231             TRAPEZOIDAL  0.30       2.00       0          0          1
-4130             TRAPEZOIDAL  1.90       2.00       0          0          1
-4131             TRAPEZOIDAL  1.20       2.00       0          0          1
-4132             TRAPEZOIDAL  1.60       2.00       0          0          1
-4128             TRAPEZOIDAL  1.20       2.00       0          0          1
-4127             TRAPEZOIDAL  1.60       2.00       0          0          1
-4124             TRAPEZOIDAL  1.90       2.00       0          0          1
-438.1            TRAPEZOIDAL  0.10       2.00       0          0          1
-4120             TRAPEZOIDAL  6.10       2.00       0          0          1
-4122             TRAPEZOIDAL  2.50       2.00       0          0          1
-4125             TRAPEZOIDAL  0.10       2.00       0          0          1
-4113             TRAPEZOIDAL  1.80       2.00       0          0          1
-4112             TRAPEZOIDAL  2.00       2.00       0          0          1
-4111             TRAPEZOIDAL  0.30       2.00       0          0          1
-4110             TRAPEZOIDAL  1.10       2.00       0          0          1
+1010             TRAPEZOIDAL  3.80       2.00       2          2          1
+4020B            TRAPEZOIDAL  8.20       2.00       2          2          1
+4020             TRAPEZOIDAL  8.19       10.00      2          2          1
+4050             TRAPEZOIDAL  7.55       10.00      2          2          1
+4140             TRAPEZOIDAL  0.50       2.00       1          1          1
+4250             TRAPEZOIDAL  1.50       2.00       1          1          1
+4040D            TRAPEZOIDAL  7.55       10.00      2          2          1
+4141             TRAPEZOIDAL  0.50       2.00       1          1          1
+4040C            TRAPEZOIDAL  7.55       10.00      2          2          1
+4040B            TRAPEZOIDAL  7.55       10.00      2          2          1
+4240             TRAPEZOIDAL  6.00       2.00       1          1          1
+4242             TRAPEZOIDAL  1.30       2.00       1          1          1
+4241             TRAPEZOIDAL  1.70       2.00       1          1          1
+4030             TRAPEZOIDAL  9.00       10.00      2          2          1
+4220             TRAPEZOIDAL  1.00       2.00       1          1          1
+4210             TRAPEZOIDAL  0.20       2.00       1          1          1
+4230             TRAPEZOIDAL  2.00       2.00       1          1          1
+4231             TRAPEZOIDAL  0.30       2.00       1          1          1
+4130             TRAPEZOIDAL  1.90       2.00       1          1          1
+4131             TRAPEZOIDAL  1.20       2.00       1          1          1
+4132             TRAPEZOIDAL  1.60       2.00       1          1          1
+4128             TRAPEZOIDAL  1.20       2.00       1          1          1
+4127             TRAPEZOIDAL  1.60       2.00       1          1          1
+4124             TRAPEZOIDAL  1.90       2.00       1          1          1
+438.1            TRAPEZOIDAL  0.10       2.00       1          1          1
+4120             TRAPEZOIDAL  6.10       2.00       1          1          1
+4122             TRAPEZOIDAL  2.50       2.00       1          1          1
+4125             TRAPEZOIDAL  0.10       2.00       1          1          1
+4113             TRAPEZOIDAL  1.80       2.00       1          1          1
+4112             TRAPEZOIDAL  2.00       2.00       1          1          1
+4111             TRAPEZOIDAL  0.30       2.00       1          1          1
+4110             TRAPEZOIDAL  1.10       2.00       1          1          1
 4126             CIRCULAR     4.00       0          0          0          1
 4125A            CIRCULAR     3.50       0          0          0          1
-4123             TRAPEZOIDAL  1.80       2.00       0          0          1
+4123             TRAPEZOIDAL  1.80       2.00       1          1          1
 48GW             CIRCULAR     3.00       0          0          0          1
 SB130pipe        CIRCULAR     2.00       0          0          0          1
 SB131pipe        CIRCULAR     2.00       0          0          0          1
@@ -288,22 +309,22 @@ SB230pipe        CIRCULAR     2.00       0          0          0          1
 SB220pipe        CIRCULAR     2.00       0          0          0          1
 SB141pipe        CIRCULAR     1.50       0          0          0          1
 SB140pipe        CIRCULAR     2.00       0          0          0          1
-4010C            IRREGULAR    8.19       0          0          0          1
-4010A            IRREGULAR    8.19       0          0          0          1
+4010C            TRAPEZOIDAL  8.19       10.00      2          2          1
+4010A            TRAPEZOIDAL  8.19       10.00      2          2          1
 4010Bnorth       CIRCULAR     3.00       0          0          0          1
-4040             IRREGULAR    6.53       0          0          0          1
+4040             TRAPEZOIDAL  6.53       10.00      2          2          1
 4040Apipe1       CIRCULAR     3.00       0          0          0          1
-4112A            TRAPEZOIDAL  5.00       2.00       0          0          1
-4114flume        TRAPEZOIDAL  1.50       20.00      0          0          1
-4BOX             TRAPEZOIDAL  5.00       10.00      0          0          1
+4112A            TRAPEZOIDAL  5.00       2.00       1          1          1
+4114flume        TRAPEZOIDAL  1.50       20.00      1          1          1
+4BOX             TRAPEZOIDAL  5.00       10.00      1          1          1
 SBboxculv        RECT_CLOSED  5.00       10.00      0          0          2
-4162             TRAPEZOIDAL  5.00       2.00       0          0          1
-4163             TRAPEZOIDAL  5.00       2.00       0          0          1
-4160B            TRAPEZOIDAL  5.00       2.00       0          0          1
-4161             TRAPEZOIDAL  5.00       2.00       0          0          1
-4164             TRAPEZOIDAL  5.00       2.00       0          0          1
-4166             TRAPEZOIDAL  5.00       2.00       0          0          1
-4165             TRAPEZOIDAL  7.00       3.00       0          0          1
+4162             TRAPEZOIDAL  5.00       2.00       1          1          1
+4163             TRAPEZOIDAL  5.00       2.00       1          1          1
+4160B            TRAPEZOIDAL  5.00       2.00       1          1          1
+4161             TRAPEZOIDAL  5.00       2.00       1          1          1
+4164             TRAPEZOIDAL  5.00       2.00       1          1          1
+4166             TRAPEZOIDAL  5.00       2.00       1          1          1
+4165             TRAPEZOIDAL  7.00       3.00       1          1          1
 41GW             CIRCULAR     3.00       0          0          0          1
 SB166pipe        CIRCULAR     2.00       0          0          0          1
 SB165pipe        CIRCULAR     2.00       0          0          0          1
@@ -313,15 +334,15 @@ SB163pipe        CIRCULAR     2.00       0          0          0          1
 SB161pipe        CIRCULAR     2.00       0          0          0          1
 SB162pipe        CIRCULAR     2.00       0          0          0          1
 SB160pipe        CIRCULAR     2.00       0          0          0          1
-4060             IRREGULAR    6.45       0          0          0          1
-4060A            TRAPEZOIDAL  7.00       3.00       0          0          1
-4115A            TRAPEZOIDAL  5.00       5.00       0          0          1
-4120B            TRAPEZOIDAL  5.00       5.00       0          0          1
-4115             RECT_OPEN    0          50.00      0          0          
-4020Achan        RECT_OPEN    0          100.00     0          0          
-4105weir         RECT_OPEN    0          50.00      0          0          
-41051weir        RECT_OPEN    0          50.00      0          0          
-4120Achan        RECT_OPEN    0          5.00       0          0          
+4060             TRAPEZOIDAL  6.45       10.00      2          2          1
+4060A            TRAPEZOIDAL  7.00       3.00       1          1          1
+4115A            TRAPEZOIDAL  5.00       5.00       1          1          1
+4120B            TRAPEZOIDAL  5.00       5.00       1          1          1
+4020Achan        TRAPEZOIDAL  8.20       2.00       2          2          1
+41051weir        TRAPEZOIDAL  5.00       2.00       1          1          1
+4115             RECT_OPEN    1.00       50.00      0          0
+4105weir         RECT_OPEN    1.00       50.00      0          0
+4120Achan        RECT_OPEN    1.00       5.00       0          0
 
 [LOSSES]
 ;;Link           Inlet      Outlet     Average    Flap Gate
@@ -425,6 +446,8 @@ SB160pipe        0          0          0          NO
 4060A            0          0          0          NO
 4115A            0          0          0          NO
 4120B            0          0          0          NO
+4020Achan        0          0          0          NO
+41051weir        0          0          0          NO
 
 [COORDINATES]
 ;;Node           X-Coord            Y-Coord

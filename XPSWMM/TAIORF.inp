@@ -20,19 +20,35 @@ INERTIAL_DAMPING     PARTIAL
 NORMAL_FLOW_LIMITED  BOTH
 MAX_TRIALS           50
 HEAD_TOLERANCE       0.0033
+START_DATE           01/01/2001
+START_TIME           00:00:00
+REPORT_START_DATE    01/01/2001
+REPORT_START_TIME    00:00:00
+END_DATE             01/02/2001
+END_TIME             00:00:00
+SWEEP_START          01/01
+SWEEP_END            12/31
+DRY_DAYS             0
+REPORT_STEP          00:15:00
+WET_STEP             00:05:00
+DRY_STEP             01:00:00
 
 [JUNCTIONS]
 ;;Name           Elev       MaxDepth   InitDepth  SurDepth   Aponded
 ;;-------------- ---------- ---------- ---------- ---------- ----------
 101              500.00     0          0          0          0
 351              500.00     0          0          0          0
-401              500.00     0          0          0          0
+
+[OUTFALLS]
+;;Name           Elev       Type       Stage      Gated
+;;-------------- ---------- ---------- ---------- -----
+401              500.00     FREE                  NO
 
 [STORAGE]
 ;;Name           Elev       MaxDepth   InitDepth  Shape      Curve/Params
 ;;-------------- ---------- ---------- ---------- ---------- ----------
-201              500.00     0          0          FUNCTIONAL 12.57 0          0
-301              500.00     0          0          FUNCTIONAL 12.56 0          0
+201              500.00     10.00      0          FUNCTIONAL 12.57 0          0
+301              500.00     10.00      0          FUNCTIONAL 12.56 0          0
 
 [CONDUITS]
 ;;Name           From             To               Length     Roughness  InOffset   OutOffset  InitFlow   MaxFlow
@@ -44,7 +60,7 @@ HEAD_TOLERANCE       0.0033
 [ORIFICES]
 ;;Name           From             To               Type       Offset     Qcoeff     Gated    CloseTime
 ;;-------------- ---------------- ---------------- ---------- ---------- ---------- -------- ----------
-Orif             ?                ?                SIDE       0          0.650      NO       0
+Orif             301              351              SIDE       0          0.650      NO       0
 
 [XSECTIONS]
 ;;Link           Shape        Geom1      Geom2      Geom3      Geom4      Barrels
@@ -52,7 +68,7 @@ Orif             ?                ?                SIDE       0          0.650  
 100              CIRCULAR     2.00       0          0          0          1
 200              CIRCULAR     4.00       0          0          0          1
 300              CIRCULAR     2.00       0          0          0          1
-Orif             RECT_CLOSED  0          0          0          0          
+Orif             RECT_CLOSED  0.15       0.15       0          0
 
 [LOSSES]
 ;;Link           Inlet      Outlet     Average    Flap Gate

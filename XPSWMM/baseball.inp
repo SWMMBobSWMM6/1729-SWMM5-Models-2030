@@ -16,24 +16,40 @@ ALLOW_PONDING        NO
 SKIP_STEADY_STATE    NO
 INERTIAL_DAMPING     PARTIAL
 NORMAL_FLOW_LIMITED  BOTH
+START_DATE           01/01/2001
+START_TIME           00:00:00
+REPORT_START_DATE    01/01/2001
+REPORT_START_TIME    00:00:00
+END_DATE             01/02/2001
+END_TIME             00:00:00
+SWEEP_START          01/01
+SWEEP_END            12/31
+DRY_DAYS             0
+REPORT_STEP          00:15:00
+WET_STEP             00:05:00
+DRY_STEP             01:00:00
 
 [JUNCTIONS]
 ;;Name           Elev       MaxDepth   InitDepth  SurDepth   Aponded
 ;;-------------- ---------- ---------- ---------- ---------- ----------
 8                0          0          0          0          0
 9                0          0          0          0          0
-11               0          0          0          0          0
 13               0          0          0          0          0
 14               0          0          0          0          0
 16               0          0          0          0          0
 
+[OUTFALLS]
+;;Name           Elev       Type       Stage      Gated
+;;-------------- ---------- ---------- ---------- -----
+11               0          FREE                  NO
+
 [CONDUITS]
 ;;Name           From             To               Length     Roughness  InOffset   OutOffset  InitFlow   MaxFlow
 ;;-------------- ---------------- ---------------- ---------- ---------- ---------- ---------- ---------- ----------
-10               8                9                0          0          0          0          0          0
-12               9                11               0          0          0          0          0          0
-15               13               14               0          0          0          0          0          0
-17               14               16               0          0          0          0          0          0
+10               8                9                100.00     0.0130     0          0          0          0
+12               9                11               100.00     0.0130     0          0          0          0
+15               13               14               100.00     0.0130     0          0          0          0
+17               14               16               100.00     0.0130     0          0          0          0
 
 [WEIRS]
 ;;Name           From             To               Type       CrestHt    Qcoeff     Gated    EndCon   EndCoeff   Surcharge
@@ -43,11 +59,11 @@ NORMAL_FLOW_LIMITED  BOTH
 [XSECTIONS]
 ;;Link           Shape        Geom1      Geom2      Geom3      Geom4      Barrels
 ;;-------------- ------------ ---------- ---------- ---------- ---------- ----------
-10               CIRCULAR     0          0          0          0          1
-12               CIRCULAR     0          0          0          0          1
-15               CIRCULAR     0          0          0          0          1
-17               CIRCULAR     0          0          0          0          1
-18               RECT_OPEN    0          3.00       0          0          
+10               CIRCULAR     1.00       0          0          0          1
+12               CIRCULAR     1.00       0          0          0          1
+15               CIRCULAR     1.00       0          0          0          1
+17               CIRCULAR     1.00       0          0          0          1
+18               RECT_OPEN    1.00       3.00       0          0
 
 [LOSSES]
 ;;Link           Inlet      Outlet     Average    Flap Gate

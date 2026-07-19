@@ -20,6 +20,18 @@ INERTIAL_DAMPING     PARTIAL
 NORMAL_FLOW_LIMITED  BOTH
 MAX_TRIALS           50
 HEAD_TOLERANCE       .001
+START_DATE           01/01/2001
+START_TIME           00:00:00
+REPORT_START_DATE    01/01/2001
+REPORT_START_TIME    00:00:00
+END_DATE             01/02/2001
+END_TIME             00:00:00
+SWEEP_START          01/01
+SWEEP_END            12/31
+DRY_DAYS             0
+REPORT_STEP          00:15:00
+WET_STEP             00:05:00
+DRY_STEP             01:00:00
 
 [JUNCTIONS]
 ;;Name           Elev       MaxDepth   InitDepth  SurDepth   Aponded
@@ -237,15 +249,20 @@ HEAD_TOLERANCE       .001
 10T03            19.45      0          0          0          0
 10T04            19.45      0          0          0          0
 AC1C1            12.10      0          0          0          0
-C1B1             12.00      0          0          0          0
 OUTFALL          12.00      0          0          0          0
+P0201b           0          0          0          0          0
+
+[OUTFALLS]
+;;Name           Elev       Type       Stage      Gated
+;;-------------- ---------- ---------- ---------- -----
+C1B1             12.00      FREE                  NO
 
 [STORAGE]
 ;;Name           Elev       MaxDepth   InitDepth  Shape      Curve/Params
 ;;-------------- ---------- ---------- ---------- ---------- ----------
-9801             12.25      0          0          FUNCTIONAL 0 0          0
-9802             12.25      0          0          FUNCTIONAL 515.95 0          0
-9801b            12.25      0          0          FUNCTIONAL 8.00 0          0
+9801             12.25      10.00      0          FUNCTIONAL 1000.00 0          0
+9802             12.25      10.00      0          FUNCTIONAL 515.95 0          0
+9801b            12.25      10.00      0          FUNCTIONAL 8.00 0          0
 
 [CONDUITS]
 ;;Name           From             To               Length     Roughness  InOffset   OutOffset  InitFlow   MaxFlow
@@ -464,7 +481,7 @@ N8-9             10N08            10N09            4.15       0.0150     17.51  
 T4-N13           10T04            10N13            19.00      0.0150     18.45      18.41      0          0
 TORETP           9802             C1B1             4.00       0.0150     8.52       8.51       0          0
 01b-02           9801b            9802             20.25      0.0050     7.25       7.24       0          0
-867              ?                ?                100.00     0.0140     6.84       6.00       0          0
+867              AC1C1            OUTFALL          100.00     0.0140     6.84       6.00       0          0
 
 [WEIRS]
 ;;Name           From             To               Type       CrestHt    Qcoeff     Gated    EndCon   EndCoeff   Surcharge
@@ -475,7 +492,14 @@ W9802            9801             9801b            TRANSVERSE 8.52       1.840  
 [PUMPS]
 ;;Name           From             To               PumpCurve  Status   Startup    Shutoff
 ;;-------------- ---------------- ---------------- ---------- -------- ---------- ----------
-P0201a           P0201b           9801             *          ON       0          0         
+P0201a           P0201b           9801             PC_P0201a  ON       1.00       0         
+
+[CURVES]
+;;Name           Type       X-Value    Y-Value
+;;-------------- ---------- ---------- ----------
+;; Synthesized generic pump curves — replace with actual pump data
+PC_P0201a        Pump1      0          5
+PC_P0201a                   10         10
 
 [XSECTIONS]
 ;;Link           Shape        Geom1      Geom2      Geom3      Geom4      Barrels
@@ -695,8 +719,8 @@ T4-N13           CIRCULAR     0.41       0          0          0          1
 TORETP           CIRCULAR     1.07       0          0          0          1
 01b-02           CIRCULAR     1.07       0          0          0          1
 867              CIRCULAR     4.00       0          0          0          1
-cpi1             RECT_OPEN    0          4.00       0          0          
-W9802            RECT_OPEN    0          4.00       0          0          
+cpi1             RECT_OPEN    1.00       4.00       0          0
+W9802            RECT_OPEN    1.00       4.00       0          0
 
 [LOSSES]
 ;;Link           Inlet      Outlet     Average    Flap Gate

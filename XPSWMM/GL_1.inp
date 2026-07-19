@@ -19,11 +19,22 @@ VARIABLE_STEP        0.75
 INERTIAL_DAMPING     PARTIAL
 NORMAL_FLOW_LIMITED  BOTH
 MAX_TRIALS           50
+START_DATE           01/01/2001
+START_TIME           00:00:00
+REPORT_START_DATE    01/01/2001
+REPORT_START_TIME    00:00:00
+END_DATE             01/02/2001
+END_TIME             00:00:00
+SWEEP_START          01/01
+SWEEP_END            12/31
+DRY_DAYS             0
+REPORT_STEP          00:15:00
+WET_STEP             00:05:00
+DRY_STEP             01:00:00
 
 [JUNCTIONS]
 ;;Name           Elev       MaxDepth   InitDepth  SurDepth   Aponded
 ;;-------------- ---------- ---------- ---------- ---------- ----------
-MH-1             799.50     0          0          0          0
 MH-2             799.00     0          0          0          0
 MH-3             798.50     0          0          0          0
 MH-3A            801.20     0          0          0          0
@@ -59,6 +70,11 @@ MH-213           809.00     0          0          0          0
 MH-214           811.50     0          0          0          0
 MH-222           809.00     0          0          0          0
 Clinton          815.00     0          0          0          0
+
+[OUTFALLS]
+;;Name           Elev       Type       Stage      Gated
+;;-------------- ---------- ---------- ---------- -----
+MH-1             799.50     FREE                  NO
 
 [CONDUITS]
 ;;Name           From             To               Length     Roughness  InOffset   OutOffset  InitFlow   MaxFlow
@@ -101,7 +117,7 @@ Clinton          815.00     0          0          0          0
 [ORIFICES]
 ;;Name           From             To               Type       Offset     Qcoeff     Gated    CloseTime
 ;;-------------- ---------------- ---------------- ---------- ---------- ---------- -------- ----------
-low flow         MH-95            MH-94            SIDE       798.37     0.650      NO       0
+low_flow         MH-95            MH-94            SIDE       798.37     0.650      NO       0
 
 [XSECTIONS]
 ;;Link           Shape        Geom1      Geom2      Geom3      Geom4      Barrels
@@ -140,7 +156,7 @@ low flow         MH-95            MH-94            SIDE       798.37     0.650  
 71               CIRCULAR     1.25       0          0          0          1
 72               CIRCULAR     1.25       0          0          0          1
 74               CIRCULAR     1.25       0          0          0          1
-low flow         RECT_CLOSED  2.00       0          0          0          
+low_flow         RECT_CLOSED  2.00       2.00       0          0
 
 [LOSSES]
 ;;Link           Inlet      Outlet     Average    Flap Gate

@@ -14,17 +14,29 @@ LINK_OFFSETS         DEPTH
 MIN_SLOPE            0.0
 ALLOW_PONDING        NO
 SKIP_STEADY_STATE    NO
-ROUTING_STEP         00:00:60
+ROUTING_STEP         00:01:00
 VARIABLE_STEP        0.75
 INERTIAL_DAMPING     PARTIAL
 NORMAL_FLOW_LIMITED  BOTH
 MAX_TRIALS           100
 HEAD_TOLERANCE       0.00033
+START_DATE           01/01/2001
+START_TIME           00:00:00
+REPORT_START_DATE    01/01/2001
+REPORT_START_TIME    00:00:00
+END_DATE             01/02/2001
+END_TIME             00:00:00
+SWEEP_START          01/01
+SWEEP_END            12/31
+DRY_DAYS             0
+REPORT_STEP          00:15:00
+WET_STEP             00:05:00
+DRY_STEP             01:00:00
 
 [JUNCTIONS]
 ;;Name           Elev       MaxDepth   InitDepth  SurDepth   Aponded
 ;;-------------- ---------- ---------- ---------- ---------- ----------
-296              860.00     0          0.05       0          0
+296              860.00     0          0          0          0
 295              860.00     0          0          0          0
 294              860.00     0          0          0          0
 293              860.00     0          0          0          0
@@ -33,10 +45,10 @@ HEAD_TOLERANCE       0.00033
 286              860.00     0          0          0          0
 283              860.00     0          0          0          0
 281              860.00     0          0          0          0
-204              858.35     0          0.05       0          0
-300              860.00     0          0.05       0          0
-299              860.00     0          0.05       0          0
-298              860.00     0          0.05       0          0
+204              858.35     0          0          0          0
+300              860.00     0          0          0          0
+299              860.00     0          0          0          0
+298              860.00     0          0          0          0
 285              860.00     0          0          0          0
 277              860.00     0          0          0          0
 7                860.00     0          0          0          0
@@ -53,8 +65,8 @@ HEAD_TOLERANCE       0.00033
 17               860.00     0          0          0          0
 3                856.48     0          0          0          0
 171              856.02     0          0          0          0
-206              858.45     0          0.05       0          0
-297              860.00     0          0.05       0          0
+206              858.45     0          0          0          0
+297              860.00     0          0          0          0
 19               860.00     0          0          0          0
 208c             856.99     0          0          0          0
 208d             855.62     0          0          0          0
@@ -66,7 +78,7 @@ HEAD_TOLERANCE       0.00033
 278              860.00     0          0          0          0
 279              860.00     0          0          0          0
 280              860.00     0          0          0          0
-210              855.08     0          0.05       0          0
+210              855.08     0          0          0          0
 8                860.00     0          0          0          0
 6                860.00     0          0          0          0
 4                860.00     0          0          0          0
@@ -91,16 +103,20 @@ east1            865.00     0          0          0          0
 203              860.00     0          0          0          0
 264              860.00     0          0          0          0
 265              860.00     0          0          0          0
-266              860.00     0          0.10       0          0
+266              860.00     0          0          0          0
 267              860.00     0          0          0          0
-216              860.00     0          0.10       0          0
-217              860.00     0          0.10       0          0
+216              860.00     0          0          0          0
 219              860.00     0          0          0          0
+
+[OUTFALLS]
+;;Name           Elev       Type       Stage      Gated
+;;-------------- ---------- ---------- ---------- -----
+217              860.00     FREE                  NO
 
 [STORAGE]
 ;;Name           Elev       MaxDepth   InitDepth  Shape      Curve/Params
 ;;-------------- ---------- ---------- ---------- ---------- ----------
-208a             860.00     -4.85      0          FUNCTIONAL 0 0          0
+208a             860.00     10.00      0          FUNCTIONAL 1000.00 0          0
 
 [CONDUITS]
 ;;Name           From             To               Length     Roughness  InOffset   OutOffset  InitFlow   MaxFlow
@@ -280,43 +296,43 @@ east1            865.00     0          0          0          0
 210A             CIRCULAR     5.00       0          0          0          1
 212              CIRCULAR     5.00       0          0          0          1
 213              CIRCULAR     4.50       0          0          0          1
-218              IRREGULAR    12.00      0          0          0          1
-220              IRREGULAR    11.00      0          0          0          1
-137              RECT_CLOSED  0          0          0          0          
-138              RECT_CLOSED  0          0          0          0          
-139              RECT_CLOSED  0          0          0          0          
-140              RECT_CLOSED  0          0          0          0          
-141              RECT_CLOSED  0          0          0          0          
-142              RECT_CLOSED  0          0          0          0          
-144              RECT_CLOSED  0          0          0          0          
-145              RECT_CLOSED  0          0          0          0          
-146              RECT_CLOSED  0          0          0          0          
-148              RECT_CLOSED  0          0          0          0          
-149              RECT_CLOSED  0          0          0          0          
-152              RECT_CLOSED  0          0          0          0          
-154              RECT_CLOSED  0          0          0          0          
-156              RECT_CLOSED  0          0          0          0          
-157              RECT_CLOSED  0          0          0          0          
-159              RECT_CLOSED  0          0          0          0          
-161              RECT_CLOSED  0          0          0          0          
-162              RECT_CLOSED  0          0          0          0          
-163              RECT_CLOSED  0          0          0          0          
-165              RECT_CLOSED  0          0          0          0          
-168              RECT_CLOSED  0          0          0          0          
-169              RECT_CLOSED  0          0          0          0          
-170              RECT_CLOSED  0          0          0          0          
-171              RECT_CLOSED  0          0          0          0          
-172              RECT_CLOSED  0          0          0          0          
-173              RECT_CLOSED  0          0          0          0          
-174              RECT_CLOSED  0          0          0          0          
-176              RECT_CLOSED  0          0          0          0          
-178              RECT_CLOSED  0          0          0          0          
-179              RECT_CLOSED  0          0          0          0          
-184              RECT_CLOSED  0          0          0          0          
-186              RECT_CLOSED  0          0          0          0          
-187              RECT_CLOSED  0          0          0          0          
-188              RECT_CLOSED  0          0          0          0          
-189              RECT_CLOSED  0          0          0          0          
+218              TRAPEZOIDAL  12.00      10.00      2          2          1
+220              TRAPEZOIDAL  11.00      10.00      2          2          1
+137              RECT_CLOSED  1.16       1.16       0          0
+138              RECT_CLOSED  1.00       1.00       0          0
+139              RECT_CLOSED  1.18       1.18       0          0
+140              RECT_CLOSED  1.16       1.16       0          0
+141              RECT_CLOSED  1.18       1.18       0          0
+142              RECT_CLOSED  1.16       1.16       0          0
+144              RECT_CLOSED  1.18       1.18       0          0
+145              RECT_CLOSED  1.18       1.18       0          0
+146              RECT_CLOSED  1.18       1.18       0          0
+148              RECT_CLOSED  1.18       1.18       0          0
+149              RECT_CLOSED  1.18       1.18       0          0
+152              RECT_CLOSED  1.16       1.16       0          0
+154              RECT_CLOSED  1.05       1.05       0          0
+156              RECT_CLOSED  1.05       1.05       0          0
+157              RECT_CLOSED  1.34       1.34       0          0
+159              RECT_CLOSED  1.20       1.20       0          0
+161              RECT_CLOSED  1.34       1.34       0          0
+162              RECT_CLOSED  1.05       1.05       0          0
+163              RECT_CLOSED  1.18       1.18       0          0
+165              RECT_CLOSED  1.00       1.00       0          0
+168              RECT_CLOSED  1.12       1.12       0          0
+169              RECT_CLOSED  1.12       1.12       0          0
+170              RECT_CLOSED  1.00       1.00       0          0
+171              RECT_CLOSED  1.05       1.05       0          0
+172              RECT_CLOSED  1.00       1.00       0          0
+173              RECT_CLOSED  1.05       1.05       0          0
+174              RECT_CLOSED  1.00       1.00       0          0
+176              RECT_CLOSED  1.16       1.16       0          0
+178              RECT_CLOSED  1.00       1.00       0          0
+179              RECT_CLOSED  1.00       1.00       0          0
+184              RECT_CLOSED  1.00       1.00       0          0
+186              RECT_CLOSED  1.16       1.16       0          0
+187              RECT_CLOSED  1.16       1.16       0          0
+188              RECT_CLOSED  1.16       1.16       0          0
+189              RECT_CLOSED  1.16       1.16       0          0
 
 [LOSSES]
 ;;Link           Inlet      Outlet     Average    Flap Gate

@@ -14,11 +14,23 @@ LINK_OFFSETS         DEPTH
 MIN_SLOPE            0.0
 ALLOW_PONDING        NO
 SKIP_STEADY_STATE    NO
-ROUTING_STEP         00:00:60
+ROUTING_STEP         00:01:00
 VARIABLE_STEP        0.75
 INERTIAL_DAMPING     PARTIAL
 NORMAL_FLOW_LIMITED  BOTH
 HEAD_TOLERANCE       0.0033
+START_DATE           01/01/2001
+START_TIME           00:00:00
+REPORT_START_DATE    01/01/2001
+REPORT_START_TIME    00:00:00
+END_DATE             01/02/2001
+END_TIME             00:00:00
+SWEEP_START          01/01
+SWEEP_END            12/31
+DRY_DAYS             0
+REPORT_STEP          00:15:00
+WET_STEP             00:05:00
+DRY_STEP             01:00:00
 
 [JUNCTIONS]
 ;;Name           Elev       MaxDepth   InitDepth  SurDepth   Aponded
@@ -261,12 +273,19 @@ WS516OF          113.00     0          0          0          0
 690              110.00     0          0          0          0
 WS599OF          106.00     0          0          0          0
 WS002OF          118.71     0          0          0          0
+WS_PS_2          0          0          0          0          0
+WS_PS_3          0          0          0          0          0
+NLANDPS2         0          0          0          0          0
+
+[OUTFALLS]
+;;Name           Elev       Type       Stage      Gated
+;;-------------- ---------- ---------- ---------- -----
+WS001            119.53     FREE                  NO
 
 [STORAGE]
 ;;Name           Elev       MaxDepth   InitDepth  Shape      Curve/Params
 ;;-------------- ---------- ---------- ---------- ---------- ----------
-WS001            119.53     0          0          FUNCTIONAL 126.00 0          0
-WS320            113.81     0          0          FUNCTIONAL 12.56 0          0
+WS320            113.81     10.00      0          FUNCTIONAL 12.56 0          0
 
 [CONDUITS]
 ;;Name           From             To               Length     Roughness  InOffset   OutOffset  InitFlow   MaxFlow
@@ -499,7 +518,7 @@ WS911WS910       WS911            WS910            453.00     0.0140     113.44 
 WS912WS911       WS912            WS911            193.00     0.0140     114.57     113.56     0          0
 WS915WS522       WS915            WS522            275.00     0.0140     109.58     108.48     0          0
 WS618WS351       WS618            WS351            75.00      0.0140     95.82      95.59      0          0
-662              ?                ?                10.00      0.0140     126.00     125.00     0          0
+662              BO               Outfall          10.00      0.0140     126.00     125.00     0          0
 WS004WS001       WS004            WS001            15.00      0.0140     107.45     107.00     0          0
 OFWS351          WS351            WS351OF          98.00      0.0140     105.76     105.53     0          0
 OFWS471          WS471            WS471OF          33.00      0.0140     104.77     104.00     0          0
@@ -515,16 +534,17 @@ OFWS002          WS002            WS002OF          5.50       0.0140     113.75 
 [PUMPS]
 ;;Name           From             To               PumpCurve  Status   Startup    Shutoff
 ;;-------------- ---------------- ---------------- ---------- -------- ---------- ----------
-WS PS 1          WS PS 2          WS PS 3          PC_WS PS 1 ON       105.45     104.20    
-NLANDPS1         NLANDPS2         ?                PC_NLANDPS1 ON       0          0         
+WS_PS_1          WS_PS_2          WS_PS_3          PC_WS_PS_1 ON       105.45     104.20    
+NLANDPS1         NLANDPS2         WS320            PC_NLANDPS1 ON       1.00       0         
 
 [CURVES]
 ;;Name           Type       X-Value    Y-Value
 ;;-------------- ---------- ---------- ----------
-PC_WS PS 1       Pump3      0          0
-;
-PC_NLANDPS1      Pump1      0          0
-;
+;; Synthesized generic pump curves — replace with actual pump data
+PC_WS_PS_1       Pump1      0          5
+PC_WS_PS_1                  10         10
+PC_NLANDPS1      Pump1      0          5
+PC_NLANDPS1                 10         10
 
 [XSECTIONS]
 ;;Link           Shape        Geom1      Geom2      Geom3      Geom4      Barrels

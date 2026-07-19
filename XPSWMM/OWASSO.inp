@@ -16,6 +16,18 @@ ALLOW_PONDING        NO
 SKIP_STEADY_STATE    NO
 INERTIAL_DAMPING     PARTIAL
 NORMAL_FLOW_LIMITED  BOTH
+START_DATE           01/01/2001
+START_TIME           00:00:00
+REPORT_START_DATE    01/01/2001
+REPORT_START_TIME    00:00:00
+END_DATE             01/02/2001
+END_TIME             00:00:00
+SWEEP_START          01/01
+SWEEP_END            12/31
+DRY_DAYS             0
+REPORT_STEP          00:15:00
+WET_STEP             00:05:00
+DRY_STEP             01:00:00
 
 [JUNCTIONS]
 ;;Name           Elev       MaxDepth   InitDepth  SurDepth   Aponded
@@ -111,8 +123,12 @@ BL-6A            0          0          0          0          0
 10-4             0          0          0          0          0
 10-5             0          0          0          0          0
 5-1              0          0          0          0          0
-LK               0          0          0          0          0
-GRASS            0          0          0          0          0
+LK_2             0          0          0          0          0
+
+[OUTFALLS]
+;;Name           Elev       Type       Stage      Gated
+;;-------------- ---------- ---------- ---------- -----
+GRASS            0          FREE                  NO
 
 [CONDUITS]
 ;;Name           From             To               Length     Roughness  InOffset   OutOffset  InitFlow   MaxFlow
@@ -291,7 +307,7 @@ BL-3/WP-4        CIRCULAR     2.00       0          0          0          1
 BL-2/WP-4        CIRCULAR     1.00       0          0          0          1
 BL-PUMP          CIRCULAR     4.00       0          0          0          1
 DITCH1           CIRCULAR     7.00       15.00      0          0          1
-DITCH2           TRAPEZOIDAL  7.00       15.00      0          0          1
+DITCH2           TRAPEZOIDAL  7.00       15.00      1          1          1
 PUMP/LO-9        CIRCULAR     4.00       0          0          0          1
 6A5/WP3          CIRCULAR     3.00       0          0          0          1
 6A-4/6A-5        CIRCULAR     3.00       0          0          0          1
@@ -308,7 +324,7 @@ BL-5/5-1         CIRCULAR     1.50       0          0          0          1
 5-1/BL           CIRCULAR     1.50       0          0          0          1
 LO/LW            HORSESHOE    2.25       0          0          0          1
 LW/GL            CIRCULAR     2.50       0          0          0          1
-WEIR             RECT_OPEN    0          2.00       0          0          
+WEIR             RECT_OPEN    1.00       2.00       0          0
 
 [LOSSES]
 ;;Link           Inlet      Outlet     Average    Flap Gate
@@ -499,7 +515,7 @@ BL-6A            798.02             -4907.38
 10-4             -2946.21           2120.43           
 10-5             -2378.13           2532.76           
 5-1              474.76             -1104.76          
-LK               -8585.72           7502.68           
+LK_2             -8585.72           7502.68           
 GRASS            -10277.61          7494.58           
 
 [MAP]

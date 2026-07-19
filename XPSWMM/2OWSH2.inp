@@ -14,11 +14,23 @@ LINK_OFFSETS         DEPTH
 MIN_SLOPE            0.0
 ALLOW_PONDING        NO
 SKIP_STEADY_STATE    NO
-ROUTING_STEP         00:00:60
+ROUTING_STEP         00:01:00
 VARIABLE_STEP        0.75
 INERTIAL_DAMPING     PARTIAL
 NORMAL_FLOW_LIMITED  BOTH
 MAX_TRIALS           50
+START_DATE           01/01/2001
+START_TIME           00:00:00
+REPORT_START_DATE    01/01/2001
+REPORT_START_TIME    00:00:00
+END_DATE             01/02/2001
+END_TIME             00:00:00
+SWEEP_START          01/01
+SWEEP_END            12/31
+DRY_DAYS             0
+REPORT_STEP          00:15:00
+WET_STEP             00:05:00
+DRY_STEP             01:00:00
 
 [JUNCTIONS]
 ;;Name           Elev       MaxDepth   InitDepth  SurDepth   Aponded
@@ -67,7 +79,6 @@ B                635.00     0          0          0          0
 116              592.00     0          0          0          0
 A                592.00     0          0          0          0
 121              592.00     0          0          0          0
-124              420.00     0          0          0          0
 126              465.70     0          0          0          0
 128              465.70     0          0          0          0
 F                491.00     0          0          0          0
@@ -79,20 +90,25 @@ F                491.00     0          0          0          0
 143              468.00     0          0          0          0
 152              595.00     0          0          0          0
 
+[OUTFALLS]
+;;Name           Elev       Type       Stage      Gated
+;;-------------- ---------- ---------- ---------- -----
+124              420.00     FREE                  NO
+
 [STORAGE]
 ;;Name           Elev       MaxDepth   InitDepth  Shape      Curve/Params
 ;;-------------- ---------- ---------- ---------- ---------- ----------
-IC14             590.00     -52.55     0          FUNCTIONAL 64.60 0          0
-IC13             590.00     -52.85     0          FUNCTIONAL 30.40 0          0
-IC12             595.00     -8.56      0          FUNCTIONAL 144.00 0          0
-IC10             600.00     -67.65     0          FUNCTIONAL 4.75 0          0
-IC9              592.00     -63.31     0          FUNCTIONAL 26.60 0          0
-IC8              590.00     -62.71     0          FUNCTIONAL 57.00 0          0
-IC6              590.00     -64.42     0          FUNCTIONAL 62.70 0          0
-SHAFT2           595.00     -8.78      0          FUNCTIONAL 144.00 0          0
-SHAFT1           600.00     -111.92    0          FUNCTIONAL 144.00 0          0
-SHAFT3           594.00     -6.01      0          FUNCTIONAL 144.00 0          0
-IC11             592.00     -57.92     0          FUNCTIONAL 21.85 0          0
+IC14             590.00     10.00      0          FUNCTIONAL 64.60 0          0
+IC13             590.00     10.00      0          FUNCTIONAL 30.40 0          0
+IC12             595.00     10.00      0          FUNCTIONAL 144.00 0          0
+IC10             600.00     10.00      0          FUNCTIONAL 4.75 0          0
+IC9              592.00     10.00      0          FUNCTIONAL 26.60 0          0
+IC8              590.00     10.00      0          FUNCTIONAL 57.00 0          0
+IC6              590.00     10.00      0          FUNCTIONAL 62.70 0          0
+SHAFT2           595.00     10.00      0          FUNCTIONAL 144.00 0          0
+SHAFT1           600.00     10.00      0          FUNCTIONAL 144.00 0          0
+SHAFT3           594.00     10.00      0          FUNCTIONAL 144.00 0          0
+IC11             592.00     10.00      0          FUNCTIONAL 21.85 0          0
 
 [CONDUITS]
 ;;Name           From             To               Length     Roughness  InOffset   OutOffset  InitFlow   MaxFlow
@@ -240,9 +256,9 @@ prtun            HORSESHOE    5.00       4.00       0          0          1
 142              CIRCULAR     2.50       0          0          0          1
 144              CIRCULAR     2.50       0          0          0          1
 145              CIRCULAR     2.50       0          0          0          1
-120              RECT_CLOSED  0          0          0          0          
-153              RECT_CLOSED  0          0          0          0          
-127              RECT_OPEN    0          6.00       0          0          
+120              RECT_CLOSED  0.89       0.89       0          0
+153              RECT_CLOSED  1.11       1.11       0          0
+127              RECT_OPEN    1.00       6.00       0          0
 
 [LOSSES]
 ;;Link           Inlet      Outlet     Average    Flap Gate

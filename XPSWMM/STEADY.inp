@@ -20,21 +20,37 @@ INERTIAL_DAMPING     PARTIAL
 NORMAL_FLOW_LIMITED  BOTH
 MAX_TRIALS           100
 HEAD_TOLERANCE       0.00033
+START_DATE           01/01/2001
+START_TIME           00:00:00
+REPORT_START_DATE    01/01/2001
+REPORT_START_TIME    00:00:00
+END_DATE             01/02/2001
+END_TIME             00:00:00
+SWEEP_START          01/01
+SWEEP_END            12/31
+DRY_DAYS             0
+REPORT_STEP          00:15:00
+WET_STEP             00:05:00
+DRY_STEP             01:00:00
 
 [JUNCTIONS]
 ;;Name           Elev       MaxDepth   InitDepth  SurDepth   Aponded
 ;;-------------- ---------- ---------- ---------- ---------- ----------
-I2Main           29.00      0          7.98       0          0
-O-1              31.00      0          8.45       0          0
-GR1              28.20      0          5.95       0          0
-MH1              30.00      0          6.40       0          0
-MH2              33.95      0          7.50       0          0
-2ndst_inlet      31.27      0          2.78       0          0
-JC-1             31.40      0          8.25       0          0
-In-ToeD          31.40      0          8.25       0          0
-In-Bridge        29.00      0          8.09       0          0
-In-Stc#1         28.50      0          7.35       0          0
-I1Main           29.00      0          5.45       0          0
+I2Main           29.00      0          0          0          0
+GR1              28.20      0          0          0          0
+MH1              30.00      0          0          0          0
+MH2              33.95      0          0          0          0
+2ndst_inlet      31.27      0          0          0          0
+JC-1             31.40      0          0          0          0
+In-ToeD          31.40      0          0          0          0
+In-Bridge        29.00      0          0          0          0
+In-Stc#1         28.50      0          0          0          0
+I1Main           29.00      0          0          0          0
+
+[OUTFALLS]
+;;Name           Elev       Type       Stage      Gated
+;;-------------- ---------- ---------- ---------- -----
+O-1              31.00      FREE                  NO
 
 [CONDUITS]
 ;;Name           From             To               Length     Roughness  InOffset   OutOffset  InitFlow   MaxFlow

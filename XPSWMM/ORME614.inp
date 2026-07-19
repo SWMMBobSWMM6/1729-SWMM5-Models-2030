@@ -20,11 +20,22 @@ INERTIAL_DAMPING     PARTIAL
 NORMAL_FLOW_LIMITED  BOTH
 MAX_TRIALS           50
 HEAD_TOLERANCE       0.0033
+START_DATE           01/01/2001
+START_TIME           00:00:00
+REPORT_START_DATE    01/01/2001
+REPORT_START_TIME    00:00:00
+END_DATE             01/02/2001
+END_TIME             00:00:00
+SWEEP_START          01/01
+SWEEP_END            12/31
+DRY_DAYS             0
+REPORT_STEP          00:15:00
+WET_STEP             00:05:00
+DRY_STEP             01:00:00
 
 [JUNCTIONS]
 ;;Name           Elev       MaxDepth   InitDepth  SurDepth   Aponded
 ;;-------------- ---------- ---------- ---------- ---------- ----------
-N405             830.00     0          0          0          0
 N400             830.00     0          0          0          0
 N53001           842.00     0          0          0          0
 N53000           842.00     0          0          0          0
@@ -109,12 +120,18 @@ N52080           928.29     0          0          0          0
 N54000           916.31     0          0          0          0
 N54005           918.00     0          0          0          0
 N54010           926.67     0          0          0          0
+Upper            0          0          0          0          0
+
+[OUTFALLS]
+;;Name           Elev       Type       Stage      Gated
+;;-------------- ---------- ---------- ---------- -----
+N405             830.00     FREE                  NO
 
 [STORAGE]
 ;;Name           Elev       MaxDepth   InitDepth  Shape      Curve/Params
 ;;-------------- ---------- ---------- ---------- ---------- ----------
-N53135           854.07     -2.11      0          FUNCTIONAL 625.00 0          0
-N53200           900.00     -22.00     0          FUNCTIONAL 343.00 0          0
+N53135           854.07     10.00      0          FUNCTIONAL 625.00 0          0
+N53200           900.00     10.00      0          FUNCTIONAL 343.00 0          0
 
 [CONDUITS]
 ;;Name           From             To               Length     Roughness  InOffset   OutOffset  InitFlow   MaxFlow
@@ -156,7 +173,7 @@ C53280           N53275           N53270           168.00     0.0130     905.78 
 C53275           N53270           N53265           196.00     0.0130     903.46     901.58     0          0
 C53270           N53265           N53260           200.00     0.0130     901.58     899.66     0          0
 C53265           N53260           N53255           331.00     0.0130     899.66     896.50     0          0
-C53260           ?                ?                69.00      0.0130     896.50     896.13     0          0
+C53260           N53255           N53250           69.00      0.0130     896.50     896.13     0          0
 C53250           N53250           N53240           155.00     0.0130     893.76     890.11     0          0
 C53245           N53240           N53235           255.00     0.0130     890.11     888.42     0          0
 C53240           N53235           N53230           315.00     0.0130     888.42     886.34     0          0
@@ -202,7 +219,7 @@ C52085           N52085           N52080           412.00     0.0130     915.44 
 C52080           N52080           N52075           736.00     0.0130     914.45     910.80     0          0
 C52075           N52075           N52070           646.00     0.0130     910.33     906.71     0          0
 C52070           N52070           N52065           42.00      0.0130     905.35     905.13     0          0
-C54005           ?                ?                173.00     0.0180     902.00     896.45     0          0
+C54005           N54005           N54000           173.00     0.0180     902.00     896.45     0          0
 C54000           N54000           N53250           171.00     0.0180     896.31     893.76     0          0
 C54015           N52085           N54010           120.00     0.0180     915.44     914.45     0          0
 C54010           N54010           N54005           1488.00    0.0180     914.45     902.13     0          0
@@ -311,16 +328,16 @@ C54005           CIRCULAR     3.00       0          0          0          1
 C54000           CIRCULAR     3.00       0          0          0          1
 C54015           CIRCULAR     3.00       0          0          0          1
 C54010           CIRCULAR     3.00       0          0          0          1
-Lower            RECT_OPEN    0          7.20       0          0          
-CSOMID           RECT_OPEN    0          6.00       0          0          
-CSOEAST          RECT_OPEN    0          10.00      0          0          
-HE2455           RECT_OPEN    0          6.00       0          0          
-HE2315           RECT_OPEN    0          6.00       0          0          
-HE1935           RECT_OPEN    0          6.00       0          0          
-HE900            RECT_OPEN    0          6.00       0          0          
-HE700            RECT_OPEN    0          6.00       0          0          
-HE500            RECT_OPEN    0          6.00       0          0          
-HE300            RECT_OPEN    0          6.00       0          0          
+Lower            RECT_OPEN    1.00       7.20       0          0
+CSOMID           RECT_OPEN    1.00       6.00       0          0
+CSOEAST          RECT_OPEN    1.00       10.00      0          0
+HE2455           TRIANGULAR   1.00       6.00       0          0
+HE2315           TRIANGULAR   1.00       6.00       0          0
+HE1935           TRIANGULAR   1.00       6.00       0          0
+HE900            TRIANGULAR   1.00       6.00       0          0
+HE700            TRIANGULAR   1.00       6.00       0          0
+HE500            TRIANGULAR   1.00       6.00       0          0
+HE300            TRIANGULAR   1.00       6.00       0          0
 
 [LOSSES]
 ;;Link           Inlet      Outlet     Average    Flap Gate

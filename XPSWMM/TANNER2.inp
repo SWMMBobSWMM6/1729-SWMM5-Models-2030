@@ -14,12 +14,24 @@ LINK_OFFSETS         DEPTH
 MIN_SLOPE            0.0
 ALLOW_PONDING        NO
 SKIP_STEADY_STATE    NO
-ROUTING_STEP         00:00:300
+ROUTING_STEP         00:05:00
 VARIABLE_STEP        0.75
 INERTIAL_DAMPING     PARTIAL
 NORMAL_FLOW_LIMITED  BOTH
 MAX_TRIALS           50
 HEAD_TOLERANCE       0.0033
+START_DATE           01/01/2001
+START_TIME           00:00:00
+REPORT_START_DATE    01/01/2001
+REPORT_START_TIME    00:00:00
+END_DATE             01/02/2001
+END_TIME             00:00:00
+SWEEP_START          01/01
+SWEEP_END            12/31
+DRY_DAYS             0
+REPORT_STEP          00:15:00
+WET_STEP             00:05:00
+DRY_STEP             01:00:00
 
 [JUNCTIONS]
 ;;Name           Elev       MaxDepth   InitDepth  SurDepth   Aponded
@@ -57,50 +69,56 @@ T-34             1100.00    0          0          0          0
 352              1100.00    0          0          0          0
 354              1100.00    0          0          0          0
 357              1100.00    0          0          0          0
-359              1100.00    0          0          0          0
-BCL              1100.00    0          0.50       0          0
+BCL              1100.00    0          0          0          0
 365              1100.00    0          0          0          0
+RD_OF            959.00     0          0          0          0
+
+[OUTFALLS]
+;;Name           Elev       Type       Stage      Gated
+;;-------------- ---------- ---------- ---------- -----
+359              1100.00    FREE                  NO
 
 [STORAGE]
 ;;Name           Elev       MaxDepth   InitDepth  Shape      Curve/Params
 ;;-------------- ---------- ---------- ---------- ---------- ----------
-T-14             1100.00    0          0          FUNCTIONAL 1.00 0          0
-T-12             1100.00    0          0          FUNCTIONAL 3.40 0          0
-T-11             1100.00    0          0          FUNCTIONAL 0 0          0
-T-02             1100.00    0          0          FUNCTIONAL 0 0          0
-T-04             1100.00    0          0          FUNCTIONAL 0 0          0
-T-03             1100.00    0          0          FUNCTIONAL 4.00 0          0
-T-01             1100.00    0          0          FUNCTIONAL 2.50 0          0
-T-05             1100.00    0          0          FUNCTIONAL 0 0          0
-T-08             1100.00    0          0          FUNCTIONAL 0 0          0
-T-35             1100.00    0          0          FUNCTIONAL 0 0          0
-T-09             1100.00    0          0          FUNCTIONAL 0 0          0
-T-15             1100.00    0          0          FUNCTIONAL 0 0          0
-T-17             1100.00    0          0          FUNCTIONAL 0 0          0
-T-06             1100.00    0          0          FUNCTIONAL 0 0          0
-T-10             1100.00    0          0          FUNCTIONAL 0 0          0
-T-29             1100.00    0          0          FUNCTIONAL 0 0          0
-T-16             1100.00    0          0          FUNCTIONAL 1.00 0          0
-T-18             1100.00    0          0          FUNCTIONAL 0 0          0
-T-19             1100.00    0          0          FUNCTIONAL 0 0          0
-TL               1100.00    0          0          FUNCTIONAL 0 0          0
-T-21             1100.00    0          0          FUNCTIONAL 0.01 0          0
-T-24             1100.00    0          0          FUNCTIONAL 0 0          0
-T-25             1100.00    0          0          FUNCTIONAL 0 0          0
-T-13             1100.00    0          0          FUNCTIONAL 0 0          0
+T-14             1100.00    10.00      0          FUNCTIONAL 1.00 0          0
+T-12             1100.00    10.00      0          FUNCTIONAL 3.40 0          0
+T-11             1100.00    10.00      0          FUNCTIONAL 1000.00 0          0
+T-02             1100.00    10.00      0          FUNCTIONAL 1000.00 0          0
+T-04             1100.00    10.00      0          FUNCTIONAL 1000.00 0          0
+T-03             1100.00    10.00      0          FUNCTIONAL 4.00 0          0
+T-01             1100.00    10.00      0          FUNCTIONAL 2.50 0          0
+T-05             1100.00    10.00      0          FUNCTIONAL 1000.00 0          0
+T-08             1100.00    10.00      0          FUNCTIONAL 1000.00 0          0
+T-35             1100.00    10.00      0          FUNCTIONAL 1000.00 0          0
+T-09             1100.00    10.00      0          FUNCTIONAL 1000.00 0          0
+T-15             1100.00    10.00      0          FUNCTIONAL 1000.00 0          0
+T-17             1100.00    10.00      0          FUNCTIONAL 1000.00 0          0
+T-06             1100.00    10.00      0          FUNCTIONAL 1000.00 0          0
+T-10             1100.00    10.00      0          FUNCTIONAL 1000.00 0          0
+T-29             1100.00    10.00      0          FUNCTIONAL 1000.00 0          0
+T-16             1100.00    10.00      0          FUNCTIONAL 1.00 0          0
+T-18             1100.00    10.00      0          FUNCTIONAL 1000.00 0          0
+T-19             1100.00    10.00      0          FUNCTIONAL 1000.00 0          0
+TL               1100.00    10.00      0          FUNCTIONAL 1000.00 0          0
+T-21             1100.00    10.00      0          FUNCTIONAL 0.01 0          0
+T-24             1100.00    10.00      0          FUNCTIONAL 1000.00 0          0
+T-25             1100.00    10.00      0          FUNCTIONAL 1000.00 0          0
+T-13             1100.00    10.00      0          FUNCTIONAL 1000.00 0          0
 
 [CONDUITS]
 ;;Name           From             To               Length     Roughness  InOffset   OutOffset  InitFlow   MaxFlow
 ;;-------------- ---------------- ---------------- ---------- ---------- ---------- ---------- ---------- ----------
-NR 1             T-20             TL               100.00     0.0300     970.00     963.10     0          0
-NR 2             T-22             T-24             1000.00    0.0300     1040.00    1000.00    0          0
-NR  5            T-27             TL               100.00     0.0300     970.00     963.10     0          0
-NR 3             T-23             T-24             400.00     0.0300     1020.00    1000.00    0          0
-NR 4             T-26             TL               100.00     0.0300     970.00     963.10     0          0
-NR  6            T-28             TL               100.00     0.0300     970.00     963.10     0          0
-NR 7             T-30             TL               100.00     0.0300     970.00     963.10     0          0
-NR 8             T-31/32          TL               100.00     0.0300     970.00     963.10     0          0
-NR 9             T-34             TL               100.00     0.0300     970.00     963.10     0          0
+15"_OUT          T-04             314              100.00     0.0140     1041.00    1040.00    0          0
+NR_1             T-20             TL               100.00     0.0300     970.00     963.10     0          0
+NR_2             T-22             T-24             1000.00    0.0300     1040.00    1000.00    0          0
+NR_5             T-27             TL               100.00     0.0300     970.00     963.10     0          0
+NR_3             T-23             T-24             400.00     0.0300     1020.00    1000.00    0          0
+NR_4             T-26             TL               100.00     0.0300     970.00     963.10     0          0
+NR_6             T-28             TL               100.00     0.0300     970.00     963.10     0          0
+NR_7             T-30             TL               100.00     0.0300     970.00     963.10     0          0
+NR_8             T-31/32          TL               100.00     0.0300     970.00     963.10     0          0
+NR_9             T-34             TL               100.00     0.0300     970.00     963.10     0          0
 T-11             310              T-02             5000.00    0.0300     1051.00    1017.20    0          0
 T-13             312              T-02             3000.00    0.0300     1052.50    1017.20    0          0
 T-01             311              T-05             1500.00    0.0300     1017.20    1015.00    0          0
@@ -124,7 +142,7 @@ T-12             309              T-11             500.00     0.0300     1058.00
 T-14             352              T-12             400.00     0.0300     1060.00    1058.00    0          0
 T-07             354              T-08             1500.00    0.0300     1043.00    1001.00    0          0
 T-08             357              T-15             1400.00    0.0300     1001.00    990.50     0          0
-24" pep          RD OF            365              1020.00    0.0100     959.00     953.00     0          0
+24"_pep          RD_OF            365              1020.00    0.0100     959.00     953.00     0          0
 42"              365              BCL              300.00     0.0200     953.00     953.50     0          0
 
 [ORIFICES]
@@ -132,25 +150,24 @@ T-08             357              T-15             1400.00    0.0300     1001.00
 ;;-------------- ---------------- ---------------- ---------- ---------- ---------- -------- ----------
 12"OUT3          T-12             309              SIDE       1058.00    0.650      NO       0
 18"OUT           T-11             310              SIDE       1051.00    0.650      NO       0
-15" OUT          T-04             314              SIDE       1041.00    0.650      NO       0
 27"              T-03             313              SIDE       1035.00    0.650      NO       0
 12"              T-01             311              SIDE       0          0.650      NO       0
 2x24"+12"        T-05             316              SIDE       1015.00    0.650      NO       0
 12"OUT           T-35             318              SIDE       1013.00    0.650      NO       0
 42"OUT           T-09             317              SIDE       1011.00    0.650      NO       0
 2X24"            T-02             315              SIDE       1017.20    0.650      NO       0
-12"              T-07             354              SIDE       1043.00    0.650      NO       0
+12"_2            T-07             354              SIDE       1043.00    0.650      NO       0
 OUT<12"          T-08             357              SIDE       1001.00    0.650      NO       0
 36"              T-15             321              SIDE       990.50     0.650      NO       0
 21"              T-06             319              SIDE       1013.10    0.650      NO       0
-OUT<12"          T-10             320              SIDE       986.00     0.650      NO       0
+OUT<12"_2        T-10             320              SIDE       986.00     0.650      NO       0
 <12"OUT          T-29             243              SIDE       990.00     0.650      NO       0
 <12"+OF          T-16             322              SIDE       975.00     0.650      NO       0
-12"              T-18             324              SIDE       1010.10    0.650      NO       0
+12"_3            T-18             324              SIDE       1010.10    0.650      NO       0
 15"+OF           T-19             325              SIDE       1024.00    0.650      NO       0
 <12"             T-17             TL               SIDE       966.00     0.650      NO       0
-<12"             T-21             326              SIDE       1040.00    0.650      NO       0
-12"              T-24             345              SIDE       1000.00    0.650      NO       0
+<12"_2           T-21             326              SIDE       1040.00    0.650      NO       0
+12"_4            T-24             345              SIDE       1000.00    0.650      NO       0
 18"              T-25             344              SIDE       970.00     0.650      NO       0
 15"              T-13             312              SIDE       1052.50    0.650      NO       0
 
@@ -164,15 +181,16 @@ OF               T-21             T-22             TRANSVERSE 1042.00    1.840  
 [XSECTIONS]
 ;;Link           Shape        Geom1      Geom2      Geom3      Geom4      Barrels
 ;;-------------- ------------ ---------- ---------- ---------- ---------- ----------
-NR 1             POWER        10.00      20.00      0          0          1
-NR 2             POWER        10.00      20.00      0          0          1
-NR  5            POWER        10.00      20.00      0          0          1
-NR 3             POWER        10.00      20.00      0          0          1
-NR 4             POWER        10.00      20.00      0          0          1
-NR  6            POWER        10.00      20.00      0          0          1
-NR 7             POWER        10.00      20.00      0          0          1
-NR 8             POWER        10.00      20.00      0          0          1
-NR 9             POWER        10.00      20.00      0          0          1
+15"_OUT          CIRCULAR     1.25       0          0          0          1
+NR_1             POWER        10.00      20.00      0          0          1
+NR_2             POWER        10.00      20.00      0          0          1
+NR_5             POWER        10.00      20.00      0          0          1
+NR_3             POWER        10.00      20.00      0          0          1
+NR_4             POWER        10.00      20.00      0          0          1
+NR_6             POWER        10.00      20.00      0          0          1
+NR_7             POWER        10.00      20.00      0          0          1
+NR_8             POWER        10.00      20.00      0          0          1
+NR_9             POWER        10.00      20.00      0          0          1
 T-11             POWER        10.00      20.00      0          0          1
 T-13             POWER        10.00      20.00      0          0          1
 T-01             POWER        10.00      20.00      0          0          1
@@ -196,47 +214,47 @@ T-12             POWER        10.00      20.00      0          0          1
 T-14             POWER        10.00      20.00      0          0          1
 T-07             POWER        10.00      20.00      0          0          1
 T-08             POWER        10.00      20.00      0          0          1
-24" pep          CIRCULAR     2.00       0          0          0          1
+24"_pep          CIRCULAR     2.00       0          0          0          1
 42"              CIRCULAR     3.50       0          0          0          1
-12"OUT3          RECT_CLOSED  10.00      0          0          0          
-18"OUT           RECT_CLOSED  10.00      0          0          0          
-15" OUT          RECT_CLOSED  1.25       0          0          0          
-27"              RECT_CLOSED  10.00      0          0          0          
-12"              RECT_CLOSED  0          0          0          0          
-2x24"+12"        RECT_CLOSED  10.00      0          0          0          
-12"OUT           RECT_CLOSED  10.00      0          0          0          
-42"OUT           RECT_CLOSED  10.00      0          0          0          
-2X24"            RECT_CLOSED  10.00      0          0          0          
-12"              RECT_CLOSED  10.00      0          0          0          
-OUT<12"          RECT_CLOSED  10.00      0          0          0          
-36"              RECT_CLOSED  10.00      0          0          0          
-21"              RECT_CLOSED  10.00      0          0          0          
-OUT<12"          RECT_CLOSED  10.00      0          0          0          
-<12"OUT          RECT_CLOSED  10.00      0          0          0          
-<12"+OF          RECT_CLOSED  10.00      0          0          0          
-12"              RECT_CLOSED  10.00      0          0          0          
-15"+OF           RECT_CLOSED  10.00      0          0          0          
-<12"             RECT_CLOSED  10.00      0          0          0          
-<12"             RECT_CLOSED  10.00      0          0          0          
-12"              RECT_CLOSED  10.00      0          0          0          
-18"              RECT_CLOSED  10.00      0          0          0          
-15"              RECT_CLOSED  10.00      0          0          0          
-5                RECT_OPEN    0          5.00       0          0          
-OF               RECT_OPEN    0          10.00      0          0          
-15               RECT_OPEN    0          15.00      0          0          
+12"OUT3          RECT_CLOSED  10.00      20.00      0          0
+18"OUT           RECT_CLOSED  10.00      20.00      0          0
+27"              RECT_CLOSED  10.00      20.00      0          0
+12"              RECT_CLOSED  0.89       0.89       0          0
+2x24"+12"        RECT_CLOSED  10.00      20.00      0          0
+12"OUT           RECT_CLOSED  10.00      20.00      0          0
+42"OUT           RECT_CLOSED  10.00      20.00      0          0
+2X24"            RECT_CLOSED  10.00      20.00      0          0
+12"_2            RECT_CLOSED  10.00      20.00      0          0
+OUT<12"          RECT_CLOSED  10.00      20.00      0          0
+36"              RECT_CLOSED  10.00      20.00      0          0
+21"              RECT_CLOSED  10.00      20.00      0          0
+OUT<12"_2        RECT_CLOSED  10.00      20.00      0          0
+<12"OUT          RECT_CLOSED  10.00      20.00      0          0
+<12"+OF          RECT_CLOSED  10.00      20.00      0          0
+12"_3            RECT_CLOSED  10.00      20.00      0          0
+15"+OF           RECT_CLOSED  10.00      20.00      0          0
+<12"             RECT_CLOSED  10.00      20.00      0          0
+<12"_2           RECT_CLOSED  10.00      20.00      0          0
+12"_4            RECT_CLOSED  10.00      20.00      0          0
+18"              RECT_CLOSED  10.00      20.00      0          0
+15"              RECT_CLOSED  10.00      20.00      0          0
+5                RECT_OPEN    1.00       5.00       0          0
+OF               RECT_OPEN    1.00       10.00      0          0
+15               RECT_OPEN    1.00       15.00      0          0
 
 [LOSSES]
 ;;Link           Inlet      Outlet     Average    Flap Gate
 ;;-------------- ---------- ---------- ---------- ----------
-NR 1             0          0          0          NO
-NR 2             0          0          0          NO
-NR  5            0          0          0          NO
-NR 3             0          0          0          NO
-NR 4             0          0          0          NO
-NR  6            0          0          0          NO
-NR 7             0          0          0          NO
-NR 8             0          0          0          NO
-NR 9             0          0          0          NO
+15"_OUT          0          0          0          NO
+NR_1             0          0          0          NO
+NR_2             0          0          0          NO
+NR_5             0          0          0          NO
+NR_3             0          0          0          NO
+NR_4             0          0          0          NO
+NR_6             0          0          0          NO
+NR_7             0          0          0          NO
+NR_8             0          0          0          NO
+NR_9             0          0          0          NO
 T-11             0          0          0          NO
 T-13             0          0          0          NO
 T-01             0          0          0          NO
@@ -260,7 +278,7 @@ T-12             0          0          0          NO
 T-14             0          0          0          NO
 T-07             0          0          0          NO
 T-08             0          0          0          NO
-24" pep          0          0          0          NO
+24"_pep          0          0          0          NO
 42"              0          0          0          NO
 
 [COORDINATES]

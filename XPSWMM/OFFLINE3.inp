@@ -20,13 +20,24 @@ INERTIAL_DAMPING     PARTIAL
 NORMAL_FLOW_LIMITED  BOTH
 MAX_TRIALS           50
 HEAD_TOLERANCE       .001
+START_DATE           01/01/2001
+START_TIME           00:00:00
+REPORT_START_DATE    01/01/2001
+REPORT_START_TIME    00:00:00
+END_DATE             01/02/2001
+END_TIME             00:00:00
+SWEEP_START          01/01
+SWEEP_END            12/31
+DRY_DAYS             0
+REPORT_STEP          00:15:00
+WET_STEP             00:05:00
+DRY_STEP             01:00:00
 
 [JUNCTIONS]
 ;;Name           Elev       MaxDepth   InitDepth  SurDepth   Aponded
 ;;-------------- ---------- ---------- ---------- ---------- ----------
 261              10.00      0          0          0          0
 262              10.00      0          0          0          0
-264              10.00      0          0          0          0
 266              10.00      0          0          0          0
 261a             10.00      0          0          0          0
 262a             10.00      0          0          0          0
@@ -37,11 +48,16 @@ HEAD_TOLERANCE       .001
 264b             10.00      0          0          0          0
 266b             10.00      0          0          0          0
 
+[OUTFALLS]
+;;Name           Elev       Type       Stage      Gated
+;;-------------- ---------- ---------- ---------- -----
+264              10.00      FREE                  NO
+
 [CONDUITS]
 ;;Name           From             To               Length     Roughness  InOffset   OutOffset  InitFlow   MaxFlow
 ;;-------------- ---------------- ---------------- ---------- ---------- ---------- ---------- ---------- ----------
-263              ?                ?                100.00     0.0140     0          0          0          0
-265              ?                ?                100.00     0.0140     0          0          0          0
+263              261              262              100.00     0.0140     0          0          0          0
+265              262              264              100.00     0.0140     0          0          0          0
 standard         262              266              100.00     0.0140     0          0          0          0
 263a             261a             262a             100.00     0.0140     0          0          0          0
 265a             262a             264a             100.00     0.0140     0          0          0          0
@@ -53,15 +69,15 @@ always           262b             266b             100.00     0.0140     0      
 [XSECTIONS]
 ;;Link           Shape        Geom1      Geom2      Geom3      Geom4      Barrels
 ;;-------------- ------------ ---------- ---------- ---------- ---------- ----------
-263              TRAPEZOIDAL  2.40       1.00       0          0          1
-265              TRAPEZOIDAL  4.00       1.00       0          0          1
-standard         TRAPEZOIDAL  4.00       1.00       0          0          1
-263a             TRAPEZOIDAL  2.40       1.00       0          0          1
-265a             TRAPEZOIDAL  4.00       1.00       0          0          1
-never            TRAPEZOIDAL  4.00       1.00       0          0          1
-263b             TRAPEZOIDAL  2.40       1.00       0          0          1
-265b             TRAPEZOIDAL  4.00       1.00       0          0          1
-always           TRAPEZOIDAL  4.00       1.00       0          0          1
+263              TRAPEZOIDAL  2.40       1.00       1          1          1
+265              TRAPEZOIDAL  4.00       1.00       1          1          1
+standard         TRAPEZOIDAL  4.00       1.00       1          1          1
+263a             TRAPEZOIDAL  2.40       1.00       1          1          1
+265a             TRAPEZOIDAL  4.00       1.00       1          1          1
+never            TRAPEZOIDAL  4.00       1.00       1          1          1
+263b             TRAPEZOIDAL  2.40       1.00       1          1          1
+265b             TRAPEZOIDAL  4.00       1.00       1          1          1
+always           TRAPEZOIDAL  4.00       1.00       1          1          1
 
 [LOSSES]
 ;;Link           Inlet      Outlet     Average    Flap Gate

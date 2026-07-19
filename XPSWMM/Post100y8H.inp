@@ -20,6 +20,18 @@ INERTIAL_DAMPING     PARTIAL
 NORMAL_FLOW_LIMITED  BOTH
 MAX_TRIALS           100
 HEAD_TOLERANCE       0.0033
+START_DATE           01/01/2001
+START_TIME           00:00:00
+REPORT_START_DATE    01/01/2001
+REPORT_START_TIME    00:00:00
+END_DATE             01/02/2001
+END_TIME             00:00:00
+SWEEP_START          01/01
+SWEEP_END            12/31
+DRY_DAYS             0
+REPORT_STEP          00:15:00
+WET_STEP             00:05:00
+DRY_STEP             01:00:00
 
 [JUNCTIONS]
 ;;Name           Elev       MaxDepth   InitDepth  SurDepth   Aponded
@@ -29,31 +41,52 @@ N50              120.00     0          0          0          0
 N90              120.00     0          0          0          0
 N116             157.00     0          0          0          0
 OUTFALL-100y8h   90.00      0          0          0          0
+8070-W           102.00     0          0          0          0
+6050RD           100.50     0          0          0          0
+4030-W2          83.60      0          0          0          0
+4030-W3          81.40      0          0          0          0
+2520RD           80.80      0          0          0          0
+4241RD           96.90      0          0          0          0
+4140RD           90.20      0          0          0          0
+115110RD         147.35     0          0          0          0
+110100RD         100.00     0          0          0          0
+3025RD           81.40      0          0          0          0
+116115RD         147.35     0          0          0          0
+2014DR           78.90      0          0          0          0
+1413DR           78.50      0          0          0          0
+1312DR           76.60      0          0          0          0
+1211DR           76.20      0          0          0          0
+1110DR           75.80      0          0          0          0
+120116W          149.00     0          0          0          0
+
+[OUTFALLS]
+;;Name           Elev       Type       Stage      Gated
+;;-------------- ---------- ---------- ---------- -----
+N82              120.00     FREE                  NO
 
 [STORAGE]
 ;;Name           Elev       MaxDepth   InitDepth  Shape      Curve/Params
 ;;-------------- ---------- ---------- ---------- ---------- ----------
-N80              120.00     0          0          FUNCTIONAL 0 0          0
-N81              120.00     0          0          FUNCTIONAL 0 0          0
-N83              120.00     0          0          FUNCTIONAL 0 0          0
-N70              120.00     0          0          FUNCTIONAL 0 0          0
-N82              120.00     0          0          FUNCTIONAL 0 0          0
-N84              120.00     0          0          FUNCTIONAL 0 0          0
-N40              98.00      0          0          FUNCTIONAL 0 0          0
-N30              95.00      0          0          FUNCTIONAL 0 0          0
-N20              95.00      0          0          FUNCTIONAL 1000.00 0          0
-N10              90.00      0          0          FUNCTIONAL 1000.00 0          0
-N41              102.00     0          0          FUNCTIONAL 0 0          0
-N42              106.00     0          0          FUNCTIONAL 0 0          0
-N120             158.00     -2.00      0          FUNCTIONAL 0 0          0
-N110             160.00     -6.00      0          FUNCTIONAL 0 0          0
-N100             153.00     -3.00      0          FUNCTIONAL 0 0          0
-N25              95.00      0          0          FUNCTIONAL 0 0          0
-N115             157.00     0          0          FUNCTIONAL 100.00 0          0
-N11              90.00      0          0          FUNCTIONAL 1000.00 0          0
-N12              90.00      0          0          FUNCTIONAL 1000.00 0          0
-N13              95.00      0          0          FUNCTIONAL 1000.00 0          0
-N14              95.00      0          0          FUNCTIONAL 1000.00 0          0
+N80              120.00     10.00      0          FUNCTIONAL 1000.00 0          0
+N81              120.00     10.00      0          FUNCTIONAL 1000.00 0          0
+N83              120.00     10.00      0          FUNCTIONAL 1000.00 0          0
+N70              120.00     10.00      0          FUNCTIONAL 1000.00 0          0
+N84              120.00     10.00      0          FUNCTIONAL 1000.00 0          0
+N40              98.00      10.00      0          FUNCTIONAL 1000.00 0          0
+N30              95.00      10.00      0          FUNCTIONAL 1000.00 0          0
+N20              95.00      10.00      0          FUNCTIONAL 1000.00 0          0
+N10              90.00      10.00      0          FUNCTIONAL 1000.00 0          0
+N41              102.00     10.00      0          FUNCTIONAL 1000.00 0          0
+N42              106.00     10.00      0          FUNCTIONAL 1000.00 0          0
+N120             158.00     10.00      0          FUNCTIONAL 1000.00 0          0
+N110             160.00     10.00      0          FUNCTIONAL 1000.00 0          0
+N100             153.00     10.00      0          FUNCTIONAL 1000.00 0          0
+N25              95.00      10.00      0          FUNCTIONAL 1000.00 0          0
+N115             157.00     10.00      0          FUNCTIONAL 100.00 0          0
+N11              90.00      10.00      0          FUNCTIONAL 1000.00 0          0
+N12              90.00      10.00      0          FUNCTIONAL 1000.00 0          0
+N13              95.00      10.00      0          FUNCTIONAL 1000.00 0          0
+N14              95.00      10.00      0          FUNCTIONAL 1000.00 0          0
 
 [CONDUITS]
 ;;Name           From             To               Length     Roughness  InOffset   OutOffset  InitFlow   MaxFlow
@@ -63,63 +96,59 @@ N14              95.00      0          0          FUNCTIONAL 1000.00 0          
 8380             N83              N80              25.00      0.0130     116.00     115.90     0          0
 8483             N83              N84              110.00     0.0130     111.55     110.00     0          0
 7060             N70              N60              100.00     0.0400     101.50     100.50     0          0
+8070             8070-W           N70              120.00     0.0140     102.00     101.87     0          0
+6050             6050RD           N50              140.00     0.0250     100.50     98.60      0          0
 5040             N50              N40              700.00     0.0300     96.00      88.00      0          0
+2520             2520RD           N20              55.00      0.0240     80.80      80.45      0          0
 10OUT            N10              OUTFALL-100y8h   640.00     0.0200     75.50      69.00      0          0
+4241             4241RD           N41              41.00      0.0240     96.90      96.35      0          0
+4140             4140RD           N40              41.00      0.0240     90.20      89.60      0          0
 115110           115110RD         N110             155.00     0.0200     147.35     145.45     0          0
-110100           110100RD         N100             300.00     0          100.00     90.00      0          0
+110100           110100RD         N100             300.00     0.0130     100.00     90.00      0          0
 10090            N100             N90              1280.00    0.0140     140.84     114.00     0          0
 9080             N90              N80              130.00     0.0160     114.00     110.00     0          0
+3025             3025RD           N25              10.00      0.0200     81.40      81.37      0          0
 116115           116115RD         N115             155.00     0.0200     147.35     145.45     0          0
-
-[ORIFICES]
-;;Name           From             To               Type       Offset     Qcoeff     Gated    CloseTime
-;;-------------- ---------------- ---------------- ---------- ---------- ---------- -------- ----------
-8070             8070-W           N70              SIDE       102.00     0.650      NO       0
+2014             2014DR           N14              20.00      0.0240     78.90      78.50      0          0
+1413             1413DR           N13              20.00      0.0240     78.50      78.30      0          0
+1312             1312DR           N12              20.00      0.0240     76.60      76.20      0          0
+1211             1211DR           N11              20.00      0.0240     76.20      75.80      0          0
+1110             1110DR           N10              40.00      0.0240     75.80      75.50      0          0
+120116P          120116W          N116             16.00      0.0130     149.00     148.42     0          0
 
 [WEIRS]
 ;;Name           From             To               Type       CrestHt    Qcoeff     Gated    EndCon   EndCoeff   Surcharge
 ;;-------------- ---------------- ---------------- ---------- ---------- ---------- -------- -------- ---------- ----------
-6050             6050RD           N50              TRANSVERSE 106.87     1.840      NO       0        0          YES
 4030-W1          4030-W2          4030-W3          TRANSVERSE 86.53      1.840      NO       0        0          YES
-2520             2520RD           N20              TRANSVERSE 84.80      1.840      NO       0        0          YES
-4241             4241RD           N41              TRANSVERSE 102.00     1.840      NO       0        0          YES
-4140             4140RD           N40              TRANSVERSE 95.50      1.840      NO       0        0          YES
-3025             3025RD           N25              TRANSVERSE 84.40      1.840      NO       0        0          YES
-2014             2014DR           N14              TRANSVERSE 84.80      1.840      NO       0        0          YES
-1413             1413DR           N13              TRANSVERSE 84.80      1.840      NO       0        0          YES
-1312             1312DR           N12              TRANSVERSE 84.80      1.840      NO       0        0          YES
-1211             1211DR           N11              TRANSVERSE 84.80      1.840      NO       0        0          YES
-1110             1110DR           N10              TRANSVERSE 84.80      1.840      NO       0        0          YES
-120116P          120116W          N116             TRANSVERSE 157.00     1.840      NO       0        0          YES
 
 [XSECTIONS]
 ;;Link           Shape        Geom1      Geom2      Geom3      Geom4      Barrels
 ;;-------------- ------------ ---------- ---------- ---------- ---------- ----------
 8182             CIRCULAR     2.00       0          0          0          1
-8180             TRAPEZOIDAL  4.00       52.00      0          0          1
-8380             TRAPEZOIDAL  4.00       33.00      0          0          1
+8180             TRAPEZOIDAL  4.00       52.00      1          1          1
+8380             TRAPEZOIDAL  4.00       33.00      1          1          1
 8483             CIRCULAR     1.50       0          0          0          1
-7060             TRAPEZOIDAL  7.50       3.00       0          0          1
-5040             IRREGULAR    9.60       1.00       0          0          1
-10OUT            IRREGULAR    7.50       6.00       0          0          1
+7060             TRAPEZOIDAL  7.50       3.00       1          1          1
+8070             CIRCULAR     3.00       0          0          0          1
+6050             CIRCULAR     3.83       0          0          0          2
+5040             TRAPEZOIDAL  9.60       1.00       2          2          1
+2520             HORSESHOE    4.50       0          0          0          2
+10OUT            TRAPEZOIDAL  7.50       6.00       2          2          1
+4241             HORSESHOE    4.00       0          0          0          2
+4140             HORSESHOE    3.90       0          0          0          2
 115110           HORSESHOE    3.16       0          0          0          1
-110100           IRREGULAR    0.16       0          0          0          2
-10090            IRREGULAR    6.00       0          0          0          1
-9080             TRAPEZOIDAL  6.00       30.00      0          0          1
+110100           TRAPEZOIDAL  0.16       10.00      2          2          2
+10090            TRAPEZOIDAL  6.00       10.00      2          2          1
+9080             TRAPEZOIDAL  6.00       30.00      1          1          1
+3025             CIRCULAR     3.00       0          0          0          1
 116115           HORSESHOE    3.16       0          0          0          1
-8070             RECT_CLOSED  3.00       0          0          0          
-6050             RECT_OPEN    0          100.00     0          0          
-4030-W1          RECT_OPEN    0          1.70       0          0          
-2520             RECT_OPEN    0          30.00      0          0          
-4241             RECT_OPEN    0          100.00     0          0          
-4140             RECT_OPEN    0          100.00     0          0          
-3025             RECT_OPEN    0          13.00      0          0          
-2014             RECT_OPEN    0          30.00      0          0          
-1413             RECT_OPEN    0          30.00      0          0          
-1312             RECT_OPEN    0          30.00      0          0          
-1211             RECT_OPEN    0          30.00      0          0          
-1110             RECT_OPEN    0          30.00      0          0          
-120116P          RECT_OPEN    0          20.00      0          0          
+2014             HORSESHOE    5.00       0          0          0          1
+1413             HORSESHOE    5.00       0          0          0          1
+1312             HORSESHOE    5.00       0          0          0          1
+1211             HORSESHOE    5.00       0          0          0          1
+1110             HORSESHOE    5.00       0          0          0          1
+120116P          CIRCULAR     3.00       0          0          0          1
+4030-W1          RECT_OPEN    1.00       1.70       0          0
 
 [LOSSES]
 ;;Link           Inlet      Outlet     Average    Flap Gate
@@ -129,13 +158,25 @@ N14              95.00      0          0          FUNCTIONAL 1000.00 0          
 8380             0          0          0          NO
 8483             0          0          0          NO
 7060             0          0          0          NO
+8070             0          0          0          NO
+6050             0          0          0          NO
 5040             0          0          0          NO
+2520             0          0          0          NO
 10OUT            0          0          0          NO
+4241             0          0          0          NO
+4140             0          0          0          NO
 115110           0          0          0          NO
 110100           0          0          0          NO
 10090            0          0          0          NO
 9080             0          0          0          NO
+3025             0          0          0          NO
 116115           0          0          0          NO
+2014             0          0          0          NO
+1413             0          0          0          NO
+1312             0          0          0          NO
+1211             0          0          0          NO
+1110             0          0          0          NO
+120116P          0          0          0          NO
 
 [COORDINATES]
 ;;Node           X-Coord            Y-Coord

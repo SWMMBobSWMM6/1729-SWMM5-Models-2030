@@ -20,22 +20,42 @@ INERTIAL_DAMPING     PARTIAL
 NORMAL_FLOW_LIMITED  BOTH
 MAX_TRIALS           500
 HEAD_TOLERANCE       .00001
+START_DATE           01/01/2001
+START_TIME           00:00:00
+REPORT_START_DATE    01/01/2001
+REPORT_START_TIME    00:00:00
+END_DATE             01/02/2001
+END_TIME             00:00:00
+SWEEP_START          01/01
+SWEEP_END            12/31
+DRY_DAYS             0
+REPORT_STEP          00:15:00
+WET_STEP             00:05:00
+DRY_STEP             01:00:00
 
 [JUNCTIONS]
 ;;Name           Elev       MaxDepth   InitDepth  SurDepth   Aponded
 ;;-------------- ---------- ---------- ---------- ---------- ----------
-C1               15.65      0          0          0          0
 C3LA1            19.00      0          0          0          0
+XJ2_2            13.02      0          0          0          0
+XJ4_2            15.09      0          0          0          0
+XJ3_2            14.41      0          0          0          0
+XJ5_2            0          0          0          0          0
+
+[OUTFALLS]
+;;Name           Elev       Type       Stage      Gated
+;;-------------- ---------- ---------- ---------- -----
+C1               15.65      FREE                  NO
 
 [STORAGE]
 ;;Name           Elev       MaxDepth   InitDepth  Shape      Curve/Params
 ;;-------------- ---------- ---------- ---------- ---------- ----------
-C2               17.20      0          0          FUNCTIONAL 0 0          0
-C3               17.32      0          0          FUNCTIONAL 10.00 0          0
-C4               17.33      -0.01      0          FUNCTIONAL 0 0          0
-C5               18.04      0          0          FUNCTIONAL 0 0          0
-C6               21.00      0          0          FUNCTIONAL 10.00 0          0
-bypass           17.26      0          0          FUNCTIONAL 10.00 0          0
+C2               17.20      10.00      0          FUNCTIONAL 1000.00 0          0
+C3               17.32      10.00      0          FUNCTIONAL 10.00 0          0
+C4               17.33      10.00      0          FUNCTIONAL 1000.00 0          0
+C5               18.04      10.00      0          FUNCTIONAL 1000.00 0          0
+C6               21.00      10.00      0          FUNCTIONAL 10.00 0          0
+bypass           17.26      10.00      0          FUNCTIONAL 10.00 0          0
 
 [CONDUITS]
 ;;Name           From             To               Length     Roughness  InOffset   OutOffset  InitFlow   MaxFlow
@@ -46,8 +66,8 @@ XJ3_1            XJ3_2            C2               20.00      0.0120     14.41  
 XJ6_1            C6               C5               81.90      0.0120     17.25      15.84      0          0
 XJ5_1            XJ5_2            C4               91.60      0.1000     0          0          0          0
 C3L1_1           C3LA1            C3               73.00      0.0120     15.61      14.96      0          0
-XJ3_1            C3               bypass           10.00      0.0150     17.02      16.96      0          0
-XJ3_1            bypass           C2               10.00      0.0150     16.96      16.90      0          0
+XJ3_1_2          C3               bypass           10.00      0.0150     17.02      16.96      0          0
+XJ3_1_3          bypass           C2               10.00      0.0150     16.96      16.90      0          0
 
 [XSECTIONS]
 ;;Link           Shape        Geom1      Geom2      Geom3      Geom4      Barrels
@@ -58,8 +78,8 @@ XJ3_1            CIRCULAR     1.07       0          0          0          1
 XJ6_1            CIRCULAR     0.91       0          0          0          1
 XJ5_1            CIRCULAR     0.09       0          0          0          1
 C3L1_1           CIRCULAR     0.76       0          0          0          1
-XJ3_1            TRAPEZOIDAL  0.30       0.10       0          0          1
-XJ3_1            TRAPEZOIDAL  0.30       0.10       0          0          1
+XJ3_1_2          TRAPEZOIDAL  0.30       0.10       1          1          1
+XJ3_1_3          TRAPEZOIDAL  0.30       0.10       1          1          1
 
 [LOSSES]
 ;;Link           Inlet      Outlet     Average    Flap Gate
@@ -70,8 +90,8 @@ XJ3_1            0          0          0          NO
 XJ6_1            0          0          0          NO
 XJ5_1            0          0          0          NO
 C3L1_1           0          0          0          NO
-XJ3_1            0          0          0          NO
-XJ3_1            0          0          0          NO
+XJ3_1_2          0          0          0          NO
+XJ3_1_3          0          0          0          NO
 
 [COORDINATES]
 ;;Node           X-Coord            Y-Coord

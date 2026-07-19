@@ -20,6 +20,18 @@ INERTIAL_DAMPING     PARTIAL
 NORMAL_FLOW_LIMITED  BOTH
 MAX_TRIALS           30
 HEAD_TOLERANCE       0.0033
+START_DATE           01/01/2001
+START_TIME           00:00:00
+REPORT_START_DATE    01/01/2001
+REPORT_START_TIME    00:00:00
+END_DATE             01/02/2001
+END_TIME             00:00:00
+SWEEP_START          01/01
+SWEEP_END            12/31
+DRY_DAYS             0
+REPORT_STEP          00:15:00
+WET_STEP             00:05:00
+DRY_STEP             01:00:00
 
 [JUNCTIONS]
 ;;Name           Elev       MaxDepth   InitDepth  SurDepth   Aponded
@@ -62,8 +74,12 @@ HEAD_TOLERANCE       0.0033
 529              594.50     0          0          0          0
 511              593.00     0          0          0          0
 512              595.50     0          0          0          0
-051              589.00     0          0          0          0
 052              589.00     0          0          0          0
+
+[OUTFALLS]
+;;Name           Elev       Type       Stage      Gated
+;;-------------- ---------- ---------- ---------- -----
+051              589.00     FREE                  NO
 
 [CONDUITS]
 ;;Name           From             To               Length     Roughness  InOffset   OutOffset  InitFlow   MaxFlow
@@ -105,16 +121,12 @@ HEAD_TOLERANCE       0.0033
 1510             511              510              90.00      0.0130     577.11     577.02     0          0
 1511             512              511              319.00     0.0130     578.43     577.98     0          0
 1500             501              500              328.00     0.0130     571.05     570.70     0          0
+weir_15          500              051              2.00       0.0130     575.63     573.63     0          0
 
 [ORIFICES]
 ;;Name           From             To               Type       Offset     Qcoeff     Gated    CloseTime
 ;;-------------- ---------------- ---------------- ---------- ---------- ---------- -------- ----------
 orifice15        500              052              SIDE       570.70     0.650      NO       0
-
-[WEIRS]
-;;Name           From             To               Type       CrestHt    Qcoeff     Gated    EndCon   EndCoeff   Surcharge
-;;-------------- ---------------- ---------------- ---------- ---------- ---------- -------- -------- ---------- ----------
-weir 15          500              051              TRANSVERSE 575.63     1.840      NO       0        0          YES
 
 [XSECTIONS]
 ;;Link           Shape        Geom1      Geom2      Geom3      Geom4      Barrels
@@ -156,8 +168,8 @@ weir 15          500              051              TRANSVERSE 575.63     1.840  
 1510             CIRCULAR     4.50       0          0          0          1
 1511             CIRCULAR     3.50       0          0          0          1
 1500             CIRCULAR     8.00       0          0          0          1
-orifice15        RECT_CLOSED  0.50       0          0          0          
-weir 15          RECT_OPEN    0          25.00      0          0          
+weir_15          RECT_CLOSED  3.00       25.00      0          0          1
+orifice15        RECT_CLOSED  0.50       1.00       0          0
 
 [LOSSES]
 ;;Link           Inlet      Outlet     Average    Flap Gate
@@ -199,6 +211,7 @@ weir 15          RECT_OPEN    0          25.00      0          0
 1510             0          0          0          NO
 1511             0          0          0          NO
 1500             0          0          0          NO
+weir_15          0          0          0          NO
 
 [COORDINATES]
 ;;Node           X-Coord            Y-Coord

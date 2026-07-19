@@ -14,12 +14,24 @@ LINK_OFFSETS         DEPTH
 MIN_SLOPE            0.0
 ALLOW_PONDING        NO
 SKIP_STEADY_STATE    NO
-ROUTING_STEP         00:00:60
+ROUTING_STEP         00:01:00
 VARIABLE_STEP        0.75
 INERTIAL_DAMPING     PARTIAL
 NORMAL_FLOW_LIMITED  BOTH
 MAX_TRIALS           50
 HEAD_TOLERANCE       0.0033
+START_DATE           01/01/2001
+START_TIME           00:00:00
+REPORT_START_DATE    01/01/2001
+REPORT_START_TIME    00:00:00
+END_DATE             01/02/2001
+END_TIME             00:00:00
+SWEEP_START          01/01
+SWEEP_END            12/31
+DRY_DAYS             0
+REPORT_STEP          00:15:00
+WET_STEP             00:05:00
+DRY_STEP             01:00:00
 
 [JUNCTIONS]
 ;;Name           Elev       MaxDepth   InitDepth  SurDepth   Aponded
@@ -29,31 +41,59 @@ YI57902          671.50     0          0          0          0
 MH57918          668.00     0          0          0          0
 EW57894          660.00     0          0          0          0
 OUTFALL          660.00     0          0          0          0
+OF34639          672.50     0          0          0          0
+OF34641          672.00     0          0          0          0
+OF34649          670.00     0          0          0          0
+OF34651          665.50     0          0          0          0
+OF34653          665.00     0          0          0          0
+OF34657          662.00     0          0          0          0
+OF34667          658.00     0          0          0          0
+OF34789          653.00     0          0          0          0
+OF34611          650.00     0          0          0          0
+OF34615          649.00     0          0          0          0
+OF21214          647.40     0          0          0          0
+OF21216          647.30     0          0          0          0
+OF21218          646.30     0          0          0          0
+OF57715          639.80     0          0          0          0
+OF57717          639.20     0          0          0          0
+OF57719          639.10     0          0          0          0
+OF57721          639.00     0          0          0          0
+OF57725          638.30     0          0          0          0
+OF57731          635.50     0          0          0          0
+OF21220          642.30     0          0          0          0
+OF21224          642.20     0          0          0          0
+OF57723          638.80     0          0          0          0
+OF57727          637.00     0          0          0          0
+OF57729          636.60     0          0          0          0
+
+[OUTFALLS]
+;;Name           Elev       Type       Stage      Gated
+;;-------------- ---------- ---------- ---------- -----
+YI34594          696.00     FREE                  NO
 
 [STORAGE]
 ;;Name           Elev       MaxDepth   InitDepth  Shape      Curve/Params
 ;;-------------- ---------- ---------- ---------- ---------- ----------
-MH34592          696.50     -1.50      0          FUNCTIONAL 12.60 0          0
-YI34594          696.00     0          0          FUNCTIONAL 12.60 0          0
-YI34602          694.40     -3.40      0          FUNCTIONAL 12.60 0          0
-DI34604          693.00     -3.00      0          FUNCTIONAL 12.60 0          0
-CI34606          692.00     0          0          FUNCTIONAL 12.60 0          0
-CI34608          687.00     0          0          FUNCTIONAL 12.60 0          0
-CI34612          683.00     0          0          FUNCTIONAL 12.60 0          0
-YI34622          678.00     0          0          FUNCTIONAL 12.60 0          0
-YI34564          675.00     0          0          FUNCTIONAL 12.60 0          0
-YI34566          674.50     0          0          FUNCTIONAL 0 0          0
-CI20921          674.00     0          0          FUNCTIONAL 12.60 0          0
-CI20923          674.00     0          0          FUNCTIONAL 12.60 0          0
-CI20927          672.30     -4.30      0          FUNCTIONAL 12.60 0          0
-CI20929          672.20     -4.20      0          FUNCTIONAL 12.60 0          0
-YI57904          671.30     -7.30      0          FUNCTIONAL 12.60 0          0
-YI57906          670.80     -6.80      0          FUNCTIONAL 12.60 0          0
-YI57908          670.50     -6.50      0          FUNCTIONAL 12.60 0          0
-YI57910          670.00     -6.00      0          FUNCTIONAL 12.60 0          0
-YI57912          669.50     -5.50      0          FUNCTIONAL 12.60 0          0
-YI57914          669.00     -5.00      0          FUNCTIONAL 12.60 0          0
-MH57916          668.00     0          0          FUNCTIONAL 12.60 0          0
+MH34592          696.50     10.00      0          FUNCTIONAL 12.60 0          0
+YI34602          694.40     10.00      0          FUNCTIONAL 12.60 0          0
+DI34604          693.00     10.00      0          FUNCTIONAL 12.60 0          0
+CI34606          692.00     10.00      0          FUNCTIONAL 12.60 0          0
+CI34608          687.00     10.00      0          FUNCTIONAL 12.60 0          0
+CI34612          683.00     10.00      0          FUNCTIONAL 12.60 0          0
+YI34622          678.00     10.00      0          FUNCTIONAL 12.60 0          0
+YI34564          675.00     10.00      0          FUNCTIONAL 12.60 0          0
+YI34566          674.50     10.00      0          FUNCTIONAL 1000.00 0          0
+CI20921          674.00     10.00      0          FUNCTIONAL 12.60 0          0
+CI20923          674.00     10.00      0          FUNCTIONAL 12.60 0          0
+CI20927          672.30     10.00      0          FUNCTIONAL 12.60 0          0
+CI20929          672.20     10.00      0          FUNCTIONAL 12.60 0          0
+YI57904          671.30     10.00      0          FUNCTIONAL 12.60 0          0
+YI57906          670.80     10.00      0          FUNCTIONAL 12.60 0          0
+YI57908          670.50     10.00      0          FUNCTIONAL 12.60 0          0
+YI57910          670.00     10.00      0          FUNCTIONAL 12.60 0          0
+YI57912          669.50     10.00      0          FUNCTIONAL 12.60 0          0
+YI57914          669.00     10.00      0          FUNCTIONAL 12.60 0          0
+MH57916          668.00     10.00      0          FUNCTIONAL 12.60 0          0
 
 [CONDUITS]
 ;;Name           From             To               Length     Roughness  InOffset   OutOffset  InitFlow   MaxFlow
@@ -115,7 +155,7 @@ PI21224          CIRCULAR     3.50       0          0          0          1
 PI57723          CIRCULAR     3.50       0          0          0          1
 PI57727          CIRCULAR     3.50       0          0          0          1
 PI57729          CIRCULAR     3.50       0          0          0          1
-DUMMYORF         RECT_CLOSED  10.00      0          0          0          
+DUMMYORF         RECT_CLOSED  10.00      10.00      0          0
 
 [LOSSES]
 ;;Link           Inlet      Outlet     Average    Flap Gate

@@ -2,11 +2,264 @@
   EPA STORM WATER MANAGEMENT MODEL - VERSION 5.2 (Build 5.2.4)
   ------------------------------------------------------------
 
+  Converted from XPSWMM .xp file 
+  WARNING 04: minimum elevation drop used for Conduit 5317
+  WARNING 04: minimum elevation drop used for Conduit 301
   
-  ERROR 211: invalid number -9.19 at line 57 of [PUMP] section:
-  8301             S301             J301             PC_8301    ON       -9.19      -14.19    
+  ****************
+  Analysis Options
+  ****************
+  Flow Units ............... CFS
+  Process Models:
+    Rainfall/Runoff ........ NO
+    RDII ................... NO
+    Snowmelt ............... NO
+    Groundwater ............ NO
+    Flow Routing ........... YES
+    Ponding Allowed ........ NO
+    Water Quality .......... NO
+  Flow Routing Method ...... DYNWAVE
+  Surcharge Method ......... EXTRAN
+  Starting Date ............ 01/01/2001 00:00:00
+  Ending Date .............. 01/02/2001 00:00:00
+  Antecedent Dry Days ...... 0.0
+  Report Time Step ......... 00:15:00
+  Routing Time Step ........ 5.00 sec
+  Variable Time Step ....... YES
+  Maximum Trials ........... 50
+  Number of Threads ........ 1
+  Head Tolerance ........... 0.000100 ft
+  
+  
+  **************************        Volume        Volume
+  Flow Routing Continuity        acre-feet      10^6 gal
+  **************************     ---------     ---------
+  Dry Weather Inflow .......         0.000         0.000
+  Wet Weather Inflow .......         0.000         0.000
+  Groundwater Inflow .......         0.000         0.000
+  RDII Inflow ..............         0.000         0.000
+  External Inflow ..........        39.668        12.926
+  External Outflow .........        19.830         6.462
+  Flooding Loss ............        19.065         6.213
+  Evaporation Loss .........         0.000         0.000
+  Exfiltration Loss ........         0.000         0.000
+  Initial Stored Volume ....         0.000         0.000
+  Final Stored Volume ......         0.443         0.144
+  Continuity Error (%) .....         0.833
+  
+  
+  *************************
+  Highest Continuity Errors
+  *************************
+  Node J4317 (52.08%)
+  Node J3317 (47.26%)
+  Node J5316 (36.18%)
+  Node J5317 (34.82%)
+  Node J2317 (31.41%)
+  
+  
+  ***************************
+  Time-Step Critical Elements
+  ***************************
+  None
+  
+  
+  ********************************
+  Highest Flow Instability Indexes
+  ********************************
+  All links are stable.
+  
+  
+  *********************************
+  Most Frequent Nonconverging Nodes
+  *********************************
+  Node 2133 (0.05%)
+  Node J4317 (0.03%)
+  Node J5317 (0.03%)
+  Node J3317 (0.02%)
+  
+  
+  *************************
+  Routing Time Step Summary
+  *************************
+  Minimum Time Step           :     1.62 sec
+  Average Time Step           :     5.00 sec
+  Maximum Time Step           :     5.00 sec
+  % of Time in Steady State   :     0.00
+  Average Iterations per Step :     2.06
+  % of Steps Not Converging   :     0.05
+  Time Step Frequencies       :
+      5.000 -  3.155 sec      :    99.98 %
+      3.155 -  1.991 sec      :     0.01 %
+      1.991 -  1.256 sec      :     0.01 %
+      1.256 -  0.792 sec      :     0.00 %
+      0.792 -  0.500 sec      :     0.00 %
+  
+  
+  ******************
+  Node Depth Summary
+  ******************
+  
+  ---------------------------------------------------------------------------------
+                                 Average  Maximum  Maximum  Time of Max    Reported
+                                   Depth    Depth      HGL   Occurrence   Max Depth
+  Node                 Type         Feet     Feet     Feet  days hr:min        Feet
+  ---------------------------------------------------------------------------------
+  J317                 JUNCTION     0.29     0.37    15.37     0  01:19        0.31
+  J301                 JUNCTION     0.86     0.90    15.90     0  00:00        0.87
+  2133                 OUTFALL      0.65     0.66    15.66     0  00:01        0.65
+  S317                 STORAGE      0.00     0.00    10.00     0  00:00        0.00
+  J2317                STORAGE      5.07     5.36    15.36     0  01:18        5.31
+  J3317                STORAGE      5.13     5.39    15.39     0  01:01        5.38
+  J4317                STORAGE      5.16     5.39    15.39     0  01:02        5.35
+  J5317                STORAGE      5.17     5.35    15.35     0  01:01        5.32
+  J5316                STORAGE      5.17     5.39    15.39     0  00:55        5.32
+  S301                 STORAGE      9.86    10.00    15.30     0  00:52       10.00
+  
+  
+  *******************
+  Node Inflow Summary
+  *******************
+  
+  -------------------------------------------------------------------------------------------------
+                                  Maximum  Maximum                  Lateral       Total        Flow
+                                  Lateral    Total  Time of Max      Inflow      Inflow     Balance
+                                   Inflow   Inflow   Occurrence      Volume      Volume       Error
+  Node                 Type           CFS      CFS  days hr:min    10^6 gal    10^6 gal     Percent
+  -------------------------------------------------------------------------------------------------
+  J317                 JUNCTION      0.00     0.36     0  01:07           0    0.000887      17.405
+  J301                 JUNCTION      0.00    10.00     0  00:00           0        6.46       0.022
+  2133                 OUTFALL       0.00    10.35     0  00:01           0        6.46       0.000
+  S317                 STORAGE       0.00     0.00     0  00:00           0           0       0.000 gal
+  J2317                STORAGE       0.00     0.68     0  01:01           0     0.00744      45.797
+  J3317                STORAGE       0.00     2.61     0  00:52           0       0.025      89.605
+  J4317                STORAGE       0.00     4.42     0  00:53           0      0.0632     108.703
+  J5317                STORAGE       0.00     5.66     0  00:53           0       0.103      53.421
+  J5316                STORAGE       0.00     8.83     0  00:25           0       0.165      56.696
+  S301                 STORAGE      20.00    20.57     0  01:24        12.9        12.9       0.804
+  
+  
+  **********************
+  Node Surcharge Summary
+  **********************
+  
+  No nodes were surcharged.
+  
+  
+  *********************
+  Node Flooding Summary
+  *********************
+  
+  Flooding refers to all water that overflows a node, whether it ponds or not.
+  --------------------------------------------------------------------------
+                                                             Total   Maximum
+                                 Maximum   Time of Max       Flood    Ponded
+                        Hours       Rate    Occurrence      Volume     Depth
+  Node                 Flooded       CFS   days hr:min    10^6 gal      Feet
+  --------------------------------------------------------------------------
+  S301                   23.12     10.57      0  01:24       6.212     0.000
+  
+  
+  **********************
+  Storage Volume Summary
+  **********************
+  
+  ------------------------------------------------------------------------------------------------
+                         Average    Avg   Evap  Exfil     Maximum    Max    Time of Max    Maximum
+                          Volume   Pcnt   Pcnt   Pcnt      Volume   Pcnt     Occurrence    Outflow
+  Storage Unit          1000 ft³   Full   Loss   Loss    1000 ft³   Full    days hr:min        CFS
+  ------------------------------------------------------------------------------------------------
+  S317                     0.000    0.0    0.0    0.0       0.000    0.0       0  00:00       0.00
+  J2317                    0.064   50.7    0.0    0.0       0.067   53.6       0  01:18       0.36
+  J3317                    0.064   51.3    0.0    0.0       0.068   53.9       0  01:01       0.68
+  J4317                    0.065   51.6    0.0    0.0       0.068   53.9       0  01:02       2.61
+  J5317                    0.065   51.7    0.0    0.0       0.067   53.5       0  01:01       4.42
+  J5316                    0.065   51.7    0.0    0.0       0.068   53.9       0  00:55       5.66
+  S301                     0.276   98.6    0.0    0.0       0.280  100.0       0  00:52      18.83
+  
+  
+  ***********************
+  Outfall Loading Summary
+  ***********************
+  
+  -----------------------------------------------------------
+                         Flow       Avg       Max       Total
+                         Freq      Flow      Flow      Volume
+  Outfall Node           Pcnt       CFS       CFS    10^6 gal
+  -----------------------------------------------------------
+  2133                 100.00     10.00     10.35       6.461
+  -----------------------------------------------------------
+  System               100.00     10.00     10.35       6.461
+  
+  
+  ********************
+  Link Flow Summary
+  ********************
+  
+  -----------------------------------------------------------------------------
+                                 Maximum  Time of Max   Maximum    Max/    Max/
+                                  |Flow|   Occurrence   |Veloc|    Full    Full
+  Link                 Type          CFS  days hr:min    ft/sec    Flow   Depth
+  -----------------------------------------------------------------------------
+  317                  CONDUIT      0.36     0  01:07      0.37    0.02    0.62
+  2317                 CONDUIT      0.68     0  01:01      0.61    0.13    0.62
+  3317                 CONDUIT      2.61     0  00:52      1.28    0.32    1.00
+  4317                 CONDUIT      4.42     0  00:53      1.41    0.68    1.00
+  5317                 CONDUIT      5.66     0  00:53      2.87   11.69    1.00
+  5316                 CONDUIT      8.83     0  00:25      1.43    0.15    1.00
+  301                  CONDUIT     10.35     0  00:01      3.36    0.12    0.06
+  8317                 PUMP         0.00     0  00:00              0.00
+  8301                 PUMP        10.00     0  00:00              1.00
+  
+  
+  ***************************
+  Flow Classification Summary
+  ***************************
+  
+  -------------------------------------------------------------------------------------
+                      Adjusted    ---------- Fraction of Time in Flow Class ---------- 
+                       /Actual         Up    Down  Sub   Sup   Up    Down  Norm  Inlet 
+  Conduit               Length    Dry  Dry   Dry   Crit  Crit  Crit  Crit  Ltd   Ctrl  
+  -------------------------------------------------------------------------------------
+  317                     1.00   0.04  0.01  0.00  0.95  0.00  0.00  0.00  0.00  0.00
+  2317                    1.00   0.03  0.01  0.00  0.95  0.00  0.01  0.00  0.00  0.00
+  3317                    1.00   0.02  0.01  0.00  0.97  0.00  0.00  0.00  0.00  0.00
+  4317                    1.00   0.01  0.01  0.00  0.98  0.00  0.00  0.00  0.00  0.00
+  5317                    1.00   0.01  0.00  0.00  0.99  0.00  0.00  0.00  0.00  0.00
+  5316                    1.00   0.00  0.01  0.00  0.99  0.00  0.00  0.00  0.00  0.00
+  301                     1.00   0.00  0.00  0.00  1.00  0.00  0.00  0.00  0.00  0.00
+  
+  
+  *************************
+  Conduit Surcharge Summary
+  *************************
+  
+  ----------------------------------------------------------------------------
+                                                           Hours        Hours 
+                         --------- Hours Full --------   Above Full   Capacity
+  Conduit                Both Ends  Upstream  Dnstream   Normal Flow   Limited
+  ----------------------------------------------------------------------------
+  317                         0.01      0.01     22.88      0.01         0.01
+  2317                        0.01      0.01     23.07      0.01         0.01
+  3317                       23.08     23.08     23.31      0.01         0.01
+  4317                       23.31     23.31     23.49      0.01         0.01
+  5317                       23.49     23.49     23.50      0.78         0.62
+  5316                       23.30     23.30     23.78      0.01         0.01
+  
+  
+  ***************
+  Pumping Summary
+  ***************
+  
+  ---------------------------------------------------------------------------------------------------------
+                                                  Min       Avg       Max     Total     Power    % Time Off
+                        Percent   Number of      Flow      Flow      Flow    Volume     Usage    Pump Curve
+  Pump                 Utilized   Start-Ups       CFS       CFS       CFS  10^6 gal     Kw-hr    Low   High
+  ---------------------------------------------------------------------------------------------------------
+  8317                     0.00           0      0.00      0.00      0.00     0.000      0.00    0.0    0.0
+  8301                   100.00           1      0.00     10.00     10.00     6.463     14.39    0.0  100.0
+  
 
-
-  Analysis begun on:  Mon Jul 13 08:04:21 2026
-  Analysis ended on:  Mon Jul 13 08:04:21 2026
+  Analysis begun on:  Sun Jul 19 15:24:39 2026
+  Analysis ended on:  Sun Jul 19 15:24:39 2026
   Total elapsed time: < 1 sec
