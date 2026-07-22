@@ -42,14 +42,20 @@
   Wet Weather Inflow .......         0.000         0.000
   Groundwater Inflow .......         0.000         0.000
   RDII Inflow ..............         0.000         0.000
-  External Inflow ..........         0.000         0.000
+  External Inflow ..........         3.967         1.293
   External Outflow .........         0.000         0.000
-  Flooding Loss ............         0.000         0.000
+  Flooding Loss ............         3.786         1.234
   Evaporation Loss .........         0.000         0.000
   Exfiltration Loss ........         0.000         0.000
   Initial Stored Volume ....         0.000         0.000
-  Final Stored Volume ......         0.000         0.000
-  Continuity Error (%) .....         0.000
+  Final Stored Volume ......         0.003         0.001
+  Continuity Error (%) .....         4.474
+  
+  
+  *************************
+  Highest Continuity Errors
+  *************************
+  Node street (9.05%)
   
   
   ***************************
@@ -67,22 +73,23 @@
   *********************************
   Most Frequent Nonconverging Nodes
   *********************************
-  Convergence obtained at all time steps.
+  Node street (0.07%)
+  Node 18 (0.07%)
   
   
   *************************
   Routing Time Step Summary
   *************************
-  Minimum Time Step           :    59.50 sec
-  Average Time Step           :    59.96 sec
+  Minimum Time Step           :     6.28 sec
+  Average Time Step           :    59.75 sec
   Maximum Time Step           :    60.00 sec
   % of Time in Steady State   :     0.00
-  Average Iterations per Step :     2.00
-  % of Steps Not Converging   :     0.00
+  Average Iterations per Step :     2.07
+  % of Steps Not Converging   :     0.07
   Time Step Frequencies       :
-     60.000 - 23.031 sec      :   100.00 %
-     23.031 -  8.841 sec      :     0.00 %
-      8.841 -  3.393 sec      :     0.00 %
+     60.000 - 23.031 sec      :    99.58 %
+     23.031 -  8.841 sec      :     0.21 %
+      8.841 -  3.393 sec      :     0.21 %
       3.393 -  1.303 sec      :     0.00 %
       1.303 -  0.500 sec      :     0.00 %
   
@@ -103,8 +110,8 @@
   8                    JUNCTION     0.00     0.00   625.00     0  00:00        0.00
   12                   JUNCTION     0.00     0.00   625.00     0  00:00        0.00
   15                   JUNCTION     0.00     0.00   625.00     0  00:00        0.00
-  _area                JUNCTION     0.00     0.00     0.00     0  00:00        0.00
-  street               JUNCTION     0.00     0.00   612.00     0  00:00        0.00
+  _area                JUNCTION     1.00     1.00     1.00     0  00:00        1.00
+  street               JUNCTION   584.24   613.50  1225.50     0  02:10      613.50
   18                   OUTFALL      0.00     0.00   625.00     0  00:00        0.00
   10                   STORAGE      0.00     0.00   625.00     0  00:00        0.00
   
@@ -126,8 +133,8 @@
   8                    JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
   12                   JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
   15                   JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
-  _area                JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
-  street               JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  _area                JUNCTION      1.00     1.00     0  00:00       0.646       0.646       0.049
+  street               JUNCTION      1.00     1.00     0  00:00       0.646       0.646       9.947
   18                   OUTFALL       0.00     0.00     0  00:00           0           0       0.000 gal
   10                   STORAGE       0.00     0.00     0  00:00           0           0       0.000 gal
   
@@ -144,13 +151,23 @@
   ---------------------------------------------------------------------
   area_2               JUNCTION       24.00          0.000        0.000
   area_3               JUNCTION       24.00          0.000        0.000
+  _area                JUNCTION       23.99          0.000        0.000
+  street               JUNCTION       21.84          0.000        0.000
   
   
   *********************
   Node Flooding Summary
   *********************
   
-  No nodes were flooded.
+  Flooding refers to all water that overflows a node, whether it ponds or not.
+  --------------------------------------------------------------------------
+                                                             Total   Maximum
+                                 Maximum   Time of Max       Flood    Ponded
+                        Hours       Rate    Occurrence      Volume     Depth
+  Node                 Flooded       CFS   days hr:min    10^6 gal      Feet
+  --------------------------------------------------------------------------
+  _area                  23.99      1.00      0  00:00       0.646     0.000
+  street                 21.84      1.00      0  02:10       0.588     0.000
   
   
   **********************
@@ -193,9 +210,9 @@
   link11               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
   link13               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
   link14               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
-  link1                CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  link1                CONDUIT      0.00     0  00:00      0.00    0.00    0.50
   link17               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
-  21                   CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  21                   CONDUIT      0.00     0  00:00      0.00    0.00    0.50
   link19               PUMP         0.00     0  00:00              0.00
   
   
@@ -213,9 +230,9 @@
   link11                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
   link13                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
   link14                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
-  link1                   1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  link1                   1.00   0.09  0.91  0.00  0.00  0.00  0.00  0.00  0.00  0.00
   link17                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
-  21                      1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  21                      1.00   0.00  1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
   
   
   *************************
@@ -237,6 +254,6 @@
   link19                   0.00           0      0.00      0.00      0.00     0.000      0.00    0.0    0.0
   
 
-  Analysis begun on:  Sun Jul 19 15:19:26 2026
-  Analysis ended on:  Sun Jul 19 15:19:26 2026
+  Analysis begun on:  Wed Jul 22 13:49:52 2026
+  Analysis ended on:  Wed Jul 22 13:49:52 2026
   Total elapsed time: < 1 sec

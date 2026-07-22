@@ -36,14 +36,24 @@
   Wet Weather Inflow .......         0.000         0.000
   Groundwater Inflow .......         0.000         0.000
   RDII Inflow ..............         0.000         0.000
-  External Inflow ..........         0.000         0.000
-  External Outflow .........         0.000         0.000
-  Flooding Loss ............         0.000         0.000
+  External Inflow ..........         3.967         1.293
+  External Outflow .........         0.958         0.312
+  Flooding Loss ............         1.808         0.589
   Evaporation Loss .........         0.000         0.000
   Exfiltration Loss ........         0.000         0.000
   Initial Stored Volume ....         0.000         0.000
-  Final Stored Volume ......         0.000         0.000
-  Continuity Error (%) .....         0.000
+  Final Stored Volume ......         0.010         0.003
+  Continuity Error (%) .....        30.011
+  
+  
+  *************************
+  Highest Continuity Errors
+  *************************
+  Node MH12A (14.73%)
+  Node JB16 (13.22%)
+  Node JB15 (11.67%)
+  Node CB14 (10.50%)
+  Node JB (9.51%)
   
   
   ***************************
@@ -90,13 +100,13 @@
                                    Depth    Depth      HGL   Occurrence   Max Depth
   Node                 Type         Feet     Feet     Feet  days hr:min        Feet
   ---------------------------------------------------------------------------------
-  MH12A                JUNCTION     0.00     0.00   581.00     0  00:00        0.00
-  JB16                 JUNCTION     0.00     0.00   587.00     0  00:00        0.00
-  JB15                 JUNCTION     0.00     0.00   595.70     0  00:00        0.00
-  CB14                 JUNCTION     0.00     0.00   610.74     0  00:00        0.00
-  JB                   JUNCTION     0.00     0.00   614.50     0  00:00        0.00
-  Conduit              JUNCTION     0.00     0.00   700.00     0  00:00        0.00
-  Stage2               JUNCTION     0.00     0.00     0.00     0  00:00        0.00
+  MH12A                JUNCTION   300.38   572.11  1153.11     0  12:29      572.11
+  JB16                 JUNCTION   354.17   579.85  1166.85     0  11:09      579.85
+  JB15                 JUNCTION   408.47   586.39  1182.09     0  08:44      586.39
+  CB14                 JUNCTION   462.71   590.94  1201.68     0  06:35      590.94
+  JB                   JUNCTION   517.19   594.82  1209.32     0  04:16      594.82
+  Conduit              JUNCTION   572.99   599.09  1299.09     0  02:08      599.09
+  Stage2               JUNCTION   581.22   608.12   608.12     0  02:07      608.11
   Stage3               JUNCTION     0.00     0.00     0.00     0  00:00        0.00
   Outfall              OUTFALL      0.00     0.00   580.00     0  00:00        0.00
   Lake-Riser           STORAGE      0.00     0.00   700.00     0  00:00        0.00
@@ -112,15 +122,15 @@
                                    Inflow   Inflow   Occurrence      Volume      Volume       Error
   Node                 Type           CFS      CFS  days hr:min    10^6 gal    10^6 gal     Percent
   -------------------------------------------------------------------------------------------------
-  MH12A                JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
-  JB16                 JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
-  JB15                 JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
-  CB14                 JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
-  JB                   JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
-  Conduit              JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
-  Stage2               JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
-  Stage3               JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
-  Outfall              OUTFALL       0.00     0.00     0  00:00           0           0       0.000 gal
+  MH12A                JUNCTION      0.00     1.00     0  11:10           0       0.366      17.274
+  JB16                 JUNCTION      0.00     1.00     1  00:00           0       0.422      15.236
+  JB15                 JUNCTION      0.00     1.00     1  00:00           0       0.478      13.211
+  CB14                 JUNCTION      0.00     1.00     1  00:00           0       0.534      11.736
+  JB                   JUNCTION      0.00     1.00     0  02:08           0        0.59      10.506
+  Conduit              JUNCTION      1.00     1.00     0  00:00       0.646       0.646       9.558
+  Stage2               JUNCTION      1.00     1.00     0  00:00       0.646       0.646       9.702
+  Stage3               JUNCTION      0.00     1.02     0  02:07           0       0.589       0.000
+  Outfall              OUTFALL       0.00     1.00     0  12:30           0       0.312       0.000
   Lake-Riser           STORAGE       0.00     0.00     0  00:00           0           0       0.000 gal
   
   
@@ -135,7 +145,14 @@
   Node Flooding Summary
   *********************
   
-  No nodes were flooded.
+  Flooding refers to all water that overflows a node, whether it ponds or not.
+  --------------------------------------------------------------------------
+                                                             Total   Maximum
+                                 Maximum   Time of Max       Flood    Ponded
+                        Hours       Rate    Occurrence      Volume     Depth
+  Node                 Flooded       CFS   days hr:min    10^6 gal      Feet
+  --------------------------------------------------------------------------
+  Stage3                 21.88      1.01      0  02:07       0.589     0.000
   
   
   **********************
@@ -159,9 +176,9 @@
                          Freq      Flow      Flow      Volume
   Outfall Node           Pcnt       CFS       CFS    10^6 gal
   -----------------------------------------------------------
-  Outfall                0.00      0.00      0.00       0.000
+  Outfall               48.35      1.00      1.00       0.312
   -----------------------------------------------------------
-  System                 0.00      0.00      0.00       0.000
+  System                48.35      1.00      1.00       0.312
   
   
   ********************
@@ -173,13 +190,13 @@
                                   |Flow|   Occurrence   |Veloc|    Full    Full
   Link                 Type          CFS  days hr:min    ft/sec    Flow   Depth
   -----------------------------------------------------------------------------
-  6                    CONDUIT      0.00     0  00:00      0.00    0.00    0.00
-  7                    CONDUIT      0.00     0  00:00      0.00    0.00    0.00
-  8                    CONDUIT      0.00     0  00:00      0.00    0.00    0.00
-  9                    CONDUIT      0.00     0  00:00      0.00    0.00    0.00
-  11                   CONDUIT      0.00     0  00:00      0.00    0.00    0.00
-  13                   CONDUIT      0.00     0  00:00      0.00    0.00    0.00
-  Stage1               WEIR         0.00     0  00:00                      0.00
+  6                    CONDUIT      1.00     0  12:30      3.84    0.00    0.04
+  7                    CONDUIT      1.00     0  11:10      3.67    0.00    0.04
+  8                    CONDUIT      1.00     1  00:00      4.83    0.00    0.04
+  9                    CONDUIT      1.00     1  00:00      5.45    0.00    0.04
+  11                   CONDUIT      1.00     1  00:00      5.46    0.00    0.04
+  13                   CONDUIT      1.00     0  02:08     13.56    0.00    0.02
+  Stage1               WEIR         1.02     0  02:07                      0.12
   
   
   ***************************
@@ -191,12 +208,12 @@
                        /Actual         Up    Down  Sub   Sup   Up    Down  Norm  Inlet 
   Conduit               Length    Dry  Dry   Dry   Crit  Crit  Crit  Crit  Ltd   Ctrl  
   -------------------------------------------------------------------------------------
-  6                       1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
-  7                       1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
-  8                       1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
-  9                       1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
-  11                      1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
-  13                      1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  6                       1.00   0.52  0.00  0.00  0.00  0.00  0.00  0.48  0.00  0.00
+  7                       1.00   0.43  0.00  0.00  0.00  0.00  0.00  0.57  0.00  0.00
+  8                       1.00   0.35  0.00  0.00  0.00  0.00  0.00  0.65  0.00  0.00
+  9                       1.00   0.26  0.00  0.00  0.00  0.00  0.00  0.74  0.00  0.00
+  11                      1.00   0.17  0.00  0.00  0.00  0.00  0.00  0.83  0.00  0.00
+  13                      1.00   0.09  0.00  0.00  0.00  0.00  0.00  0.91  0.00  0.00
   
   
   *************************
@@ -206,6 +223,6 @@
   No conduits were surcharged.
   
 
-  Analysis begun on:  Sun Jul 19 15:11:23 2026
-  Analysis ended on:  Sun Jul 19 15:11:23 2026
+  Analysis begun on:  Wed Jul 22 11:37:15 2026
+  Analysis ended on:  Wed Jul 22 11:37:15 2026
   Total elapsed time: < 1 sec

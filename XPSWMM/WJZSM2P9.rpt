@@ -44,14 +44,21 @@
   Wet Weather Inflow .......         0.000         0.000
   Groundwater Inflow .......         0.000         0.000
   RDII Inflow ..............         0.000         0.000
-  External Inflow ..........         0.000         0.000
+  External Inflow ..........         1.555        15.550
   External Outflow .........         0.000         0.000
-  Flooding Loss ............         0.000         0.000
+  Flooding Loss ............         1.296        12.959
   Evaporation Loss .........         0.000         0.000
   Exfiltration Loss ........         0.000         0.000
   Initial Stored Volume ....         0.000         0.003
-  Final Stored Volume ......         0.000         0.003
-  Continuity Error (%) .....         0.000
+  Final Stored Volume ......         0.001         0.008
+  Continuity Error (%) .....        16.632
+  
+  
+  *************************
+  Highest Continuity Errors
+  *************************
+  Node 3 (100.00%)
+  Node 2 (74.80%)
   
   
   ***************************
@@ -98,9 +105,9 @@
                                    Depth    Depth      HGL   Occurrence   Max Depth
   Node                 Type       Meters   Meters   Meters  days hr:min      Meters
   ---------------------------------------------------------------------------------
-  1                    JUNCTION     0.00     0.00  1020.00     0  00:00        0.00
-  2                    JUNCTION     0.00     0.00  1020.00     0  00:00        0.00
-  3                    JUNCTION     0.00     0.00  1020.00     0  00:00        0.00
+  1                    JUNCTION   745.83   948.42  1968.42     0  10:37      948.42
+  2                    JUNCTION   339.87   947.83  1967.83     0  21:04      947.83
+  3                    JUNCTION    23.09   320.13  1340.13     1  00:00      320.13
   4                    JUNCTION     0.00     0.00  1025.00     0  00:00        0.00
   5                    JUNCTION     0.00     0.00  1025.00     0  00:00        0.00
   6                    JUNCTION     0.00     0.00  1025.00     0  00:00        0.00
@@ -284,9 +291,9 @@
                                    Inflow   Inflow   Occurrence      Volume      Volume       Error
   Node                 Type           CMS      CMS  days hr:min    10^6 ltr    10^6 ltr     Percent
   -------------------------------------------------------------------------------------------------
-  1                    JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
-  2                    JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
-  3                    JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
+  1                    JUNCTION     0.030    0.030     0  00:00        2.59        2.59      74.789
+  2                    JUNCTION     0.000    0.032     0  20:32           0        1.48     296.751
+  3                    JUNCTION     0.000    0.030     0  21:05           0       0.374  373728.523 ltr
   4                    JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
   5                    JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
   6                    JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
@@ -442,11 +449,11 @@
   68                   JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
   66                   JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
   69                   JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
-  gm1p2                JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
-  gm2p2                JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
-  gm3p2                JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
-  sm1p2                JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
-  sm2p2                JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
+  gm1p2                JUNCTION     0.030    0.030     0  00:00        2.59        2.59       0.001
+  gm2p2                JUNCTION     0.030    0.030     0  00:00        2.59        2.59       0.001
+  gm3p2                JUNCTION     0.030    0.030     0  00:00        2.59        2.59       0.001
+  sm1p2                JUNCTION     0.030    0.030     0  00:00        2.59        2.59       0.001
+  sm2p2                JUNCTION     0.030    0.030     0  00:00        2.59        2.59       0.001
   13                   OUTFALL      0.000    0.000     0  00:00           0           0       0.000 ltr
   14                   STORAGE      0.000    0.000     0  00:00           0           0       0.000 ltr
   23                   STORAGE      0.000    0.000     0  00:00           0           0       0.000 ltr
@@ -481,7 +488,18 @@
   Node Flooding Summary
   *********************
   
-  No nodes were flooded.
+  Flooding refers to all water that overflows a node, whether it ponds or not.
+  --------------------------------------------------------------------------
+                                                             Total   Maximum
+                                 Maximum   Time of Max       Flood    Ponded
+                        Hours       Rate    Occurrence      Volume     Depth
+  Node                 Flooded       CMS   days hr:min    10^6 ltr    Meters
+  --------------------------------------------------------------------------
+  gm1p2                  24.00     0.030      0  00:00       2.592     0.000
+  gm2p2                  24.00     0.030      0  00:00       2.592     0.000
+  gm3p2                  24.00     0.030      0  00:00       2.592     0.000
+  sm1p2                  24.00     0.030      0  00:00       2.592     0.000
+  sm2p2                  24.00     0.030      0  00:00       2.592     0.000
   
   
   **********************
@@ -528,8 +546,8 @@
                                   |Flow|   Occurrence   |Veloc|    Full    Full
   Link                 Type          CMS  days hr:min     m/sec    Flow   Depth
   -----------------------------------------------------------------------------
-  24                   CONDUIT     0.000     0  00:00      0.00    0.00    0.00
-  25                   CONDUIT     0.000     0  00:00      0.00    0.00    0.00
+  24                   CONDUIT     0.032     0  20:32      1.06    0.00    0.02
+  25                   CONDUIT     0.030     0  21:05      1.06    0.00    0.01
   26                   CONDUIT     0.000     0  00:00      0.00    0.00    0.00
   27                   CONDUIT     0.000     0  00:00      0.00    0.00    0.00
   28                   CONDUIT     0.000     0  00:00      0.00    0.00    0.00
@@ -707,8 +725,8 @@
                        /Actual         Up    Down  Sub   Sup   Up    Down  Norm  Inlet 
   Conduit               Length    Dry  Dry   Dry   Crit  Crit  Crit  Crit  Ltd   Ctrl  
   -------------------------------------------------------------------------------------
-  24                      1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
-  25                      1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  24                      1.00   0.43  0.00  0.00  0.00  0.14  0.00  0.43  0.14  0.00
+  25                      1.00   0.85  0.00  0.00  0.00  0.00  0.00  0.15  0.00  0.00
   26                      1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
   27                      1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
   28                      1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
@@ -894,6 +912,6 @@
   sm2p1                    0.00           0      0.00      0.00      0.00     0.000      0.00    0.0    0.0
   
 
-  Analysis begun on:  Sun Jul 19 15:25:07 2026
-  Analysis ended on:  Sun Jul 19 15:25:08 2026
+  Analysis begun on:  Wed Jul 22 14:27:47 2026
+  Analysis ended on:  Wed Jul 22 14:27:48 2026
   Total elapsed time: 00:00:01

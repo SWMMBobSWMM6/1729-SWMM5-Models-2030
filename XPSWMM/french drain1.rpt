@@ -37,51 +37,51 @@
   Groundwater Inflow .......         0.000         0.000
   RDII Inflow ..............         0.000         0.000
   External Inflow ..........        39.668        12.926
-  External Outflow .........         0.000         0.000
-  Flooding Loss ............        39.539        12.884
+  External Outflow .........        22.918         7.468
+  Flooding Loss ............        16.629         5.419
   Evaporation Loss .........         0.000         0.000
   Exfiltration Loss ........         0.000         0.000
   Initial Stored Volume ....         0.000         0.000
-  Final Stored Volume ......         0.115         0.038
-  Continuity Error (%) .....         0.034
+  Final Stored Volume ......         0.107         0.035
+  Continuity Error (%) .....         0.032
   
   
   ***************************
   Time-Step Critical Elements
   ***************************
-  Link frdrain1 (3.26%)
+  Link frdrain1 (99.84%)
   
   
   ********************************
   Highest Flow Instability Indexes
   ********************************
-  Link frdrain4 (1)
+  All links are stable.
   
   
   *********************************
   Most Frequent Nonconverging Nodes
   *********************************
-  Node frdrnout1 (2.59%)
-  Node mh8 (0.60%)
-  Node mh9 (0.60%)
-  Node mh5 (0.60%)
-  Node mh6 (0.47%)
+  Node mh9 (0.30%)
+  Node mh5 (0.08%)
+  Node mh8 (0.07%)
+  Node mh7 (0.06%)
+  Node mh4 (0.06%)
   
   
   *************************
   Routing Time Step Summary
   *************************
-  Minimum Time Step           :     1.44 sec
-  Average Time Step           :    57.49 sec
-  Maximum Time Step           :    60.00 sec
+  Minimum Time Step           :     1.88 sec
+  Average Time Step           :     7.98 sec
+  Maximum Time Step           :    10.99 sec
   % of Time in Steady State   :     0.00
-  Average Iterations per Step :     2.18
-  % of Steps Not Converging   :     2.59
+  Average Iterations per Step :     2.02
+  % of Steps Not Converging   :     0.30
   Time Step Frequencies       :
-     60.000 - 23.031 sec      :    95.27 %
-     23.031 -  8.841 sec      :     1.86 %
-      8.841 -  3.393 sec      :     2.40 %
-      3.393 -  1.303 sec      :     0.47 %
+     60.000 - 23.031 sec      :     0.00 %
+     23.031 -  8.841 sec      :     0.26 %
+      8.841 -  3.393 sec      :    99.71 %
+      3.393 -  1.303 sec      :     0.03 %
       1.303 -  0.500 sec      :     0.00 %
   
   
@@ -94,15 +94,15 @@
                                    Depth    Depth      HGL   Occurrence   Max Depth
   Node                 Type         Feet     Feet     Feet  days hr:min        Feet
   ---------------------------------------------------------------------------------
-  mh1                  JUNCTION    11.99    12.00    32.00     0  00:00       12.00
-  mh2                  JUNCTION    11.70    11.75    31.50     0  00:10       11.75
-  mh3                  JUNCTION    11.43    11.50    31.00     0  00:10       11.50
-  mh4                  JUNCTION    11.14    11.25    30.50     0  00:08       11.25
-  mh5                  JUNCTION    10.86    11.00    30.00     0  00:08       11.00
-  mh6                  JUNCTION    10.56    10.75    29.50     0  00:08       10.75
-  mh7                  JUNCTION    10.29    10.50    29.00     0  00:07       10.50
-  mh8                  JUNCTION    10.00    10.25    28.50     0  00:07       10.25
-  mh9                  JUNCTION     9.72    10.00    28.00     0  00:06       10.00
+  mh1                  JUNCTION    12.00    12.00    32.00     0  00:00       12.00
+  mh2                  JUNCTION    11.68    11.69    31.44     0  00:33       11.69
+  mh3                  JUNCTION    11.39    11.40    30.90     0  00:33       11.40
+  mh4                  JUNCTION    11.11    11.12    30.37     0  00:32       11.12
+  mh5                  JUNCTION    10.82    10.83    29.83     0  00:33       10.83
+  mh6                  JUNCTION    10.52    10.54    29.29     0  00:32       10.54
+  mh7                  JUNCTION    10.20    10.23    28.73     0  00:32       10.23
+  mh8                  JUNCTION     9.82     9.85    28.10     0  00:32        9.85
+  frdrnout1            JUNCTION     0.00     0.00    20.00     0  00:00        0.00
   frdrnout2            JUNCTION     0.00     0.00    20.00     0  00:00        0.00
   frdrnout3            JUNCTION     0.00     0.00    20.00     0  00:00        0.00
   frdrnout4            JUNCTION     0.00     0.00    20.00     0  00:00        0.00
@@ -110,7 +110,7 @@
   frdrnout6            JUNCTION     0.00     0.00    20.00     0  00:00        0.00
   frdrnout7            JUNCTION     0.00     0.00    20.00     0  00:00        0.00
   frdrnout8            JUNCTION     0.00     0.00    20.00     0  00:00        0.00
-  frdrnout1            OUTFALL      0.00     0.00    20.00     0  00:00        0.00
+  mh9                  OUTFALL      0.00     0.00    18.00     0  00:00        0.00
   
   
   *******************
@@ -123,15 +123,15 @@
                                    Inflow   Inflow   Occurrence      Volume      Volume       Error
   Node                 Type           CFS      CFS  days hr:min    10^6 gal    10^6 gal     Percent
   -------------------------------------------------------------------------------------------------
-  mh1                  JUNCTION     20.00    20.00     0  00:00        12.9        12.9       0.026
-  mh2                  JUNCTION      0.00    14.73     0  00:01           0         6.8       0.050
-  mh3                  JUNCTION      0.00    13.80     0  00:01           0        6.79       0.071
-  mh4                  JUNCTION      0.00    12.58     0  00:02           0        6.79       0.100
-  mh5                  JUNCTION      0.00    12.11     0  00:03           0        6.78       0.086
-  mh6                  JUNCTION      0.00    11.70     0  00:06           0        6.77       0.059
-  mh7                  JUNCTION      0.00    11.53     0  00:07           0        6.77       0.084
-  mh8                  JUNCTION      0.00    11.20     0  00:06           0        6.76       0.080
-  mh9                  JUNCTION      0.00    10.50     0  00:26           0        6.76       0.000
+  mh1                  JUNCTION     20.00    20.00     0  00:00        12.9        12.9       0.025
+  mh2                  JUNCTION      0.00    14.73     0  00:01           0         7.5       0.045
+  mh3                  JUNCTION      0.00    13.80     0  00:01           0         7.5       0.064
+  mh4                  JUNCTION      0.00    12.58     0  00:02           0         7.5       0.090
+  mh5                  JUNCTION      0.00    12.11     0  00:03           0        7.49       0.076
+  mh6                  JUNCTION      0.00    11.70     0  00:06           0        7.48       0.052
+  mh7                  JUNCTION      0.00    11.61     0  00:31           0        7.48       0.074
+  mh8                  JUNCTION      0.00    11.61     0  00:32           0        7.47       0.078
+  frdrnout1            JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
   frdrnout2            JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
   frdrnout3            JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
   frdrnout4            JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
@@ -139,7 +139,7 @@
   frdrnout6            JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
   frdrnout7            JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
   frdrnout8            JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
-  frdrnout1            OUTFALL       0.00     0.00     0  00:00           0           0       0.000 gal
+  mh9                  OUTFALL       0.00    11.61     0  00:33           0        7.47       0.000
   
   
   **********************
@@ -153,14 +153,7 @@
   Node                 Type      Surcharged           Feet         Feet
   ---------------------------------------------------------------------
   mh1                  JUNCTION       23.99          0.000        0.000
-  mh2                  JUNCTION       23.85          0.000        0.000
-  mh3                  JUNCTION       23.85          0.000        0.000
-  mh4                  JUNCTION       23.85          0.000        0.000
-  mh5                  JUNCTION       23.86          0.000        0.000
-  mh6                  JUNCTION       23.86          0.000        0.000
-  mh7                  JUNCTION       23.87          0.000        0.000
-  mh8                  JUNCTION       23.88          0.000        0.000
-  mh9                  JUNCTION       23.89          0.000        0.000
+  frdrnout1            JUNCTION       24.00          0.000        0.000
   frdrnout2            JUNCTION       24.00          0.000        0.000
   frdrnout3            JUNCTION       24.00          0.000        0.000
   frdrnout4            JUNCTION       24.00          0.000        0.000
@@ -181,15 +174,7 @@
                         Hours       Rate    Occurrence      Volume     Depth
   Node                 Flooded       CFS   days hr:min    10^6 gal      Feet
   --------------------------------------------------------------------------
-  mh1                    23.99      9.50      0  00:30       6.127     0.000
-  mh2                     0.08      0.19      0  00:10       0.000     0.000
-  mh3                     0.07      0.09      0  00:10       0.000     0.000
-  mh4                     0.07      0.49      0  00:08       0.000     0.000
-  mh5                     0.06      0.38      0  00:08       0.000     0.000
-  mh6                     0.07      0.66      0  00:08       0.000     0.000
-  mh7                     0.07      0.62      0  00:07       0.000     0.000
-  mh8                     0.08      1.55      0  00:07       0.000     0.000
-  mh9                    23.89     10.50      0  00:27       6.756     0.000
+  mh1                    23.99      8.39      0  00:33       5.419     0.000
   
   
   ***********************
@@ -201,9 +186,9 @@
                          Freq      Flow      Flow      Volume
   Outfall Node           Pcnt       CFS       CFS    10^6 gal
   -----------------------------------------------------------
-  frdrnout1              0.00      0.00      0.00       0.000
+  mh9                   99.66     11.60     11.61       7.468
   -----------------------------------------------------------
-  System                 0.00      0.00      0.00       0.000
+  System                99.66     11.60     11.61       7.468
   
   
   ********************
@@ -215,14 +200,14 @@
                                   |Flow|   Occurrence   |Veloc|    Full    Full
   Link                 Type          CFS  days hr:min    ft/sec    Flow   Depth
   -----------------------------------------------------------------------------
-  frdrain1             CONDUIT     14.73     0  00:01      5.12    1.40    1.00
-  frdrain2             CONDUIT     13.80     0  00:01      5.02    1.31    1.00
-  frdrain3             CONDUIT     12.58     0  00:02      4.92    1.20    1.00
-  frdrain4             CONDUIT     12.11     0  00:03      4.81    1.15    1.00
-  frdrain5             CONDUIT     11.70     0  00:06      4.53    1.11    1.00
-  frdrain6             CONDUIT     11.53     0  00:07      4.62    1.10    1.00
-  frdrain7             CONDUIT     11.20     0  00:06      4.59    1.07    1.00
-  frdrain8             CONDUIT     10.50     0  00:26      3.77    1.00    1.00
+  frdrain1             CONDUIT     14.73     0  00:01      5.12    1.40    0.98
+  frdrain2             CONDUIT     13.80     0  00:01      5.02    1.31    0.96
+  frdrain3             CONDUIT     12.58     0  00:02      4.92    1.20    0.94
+  frdrain4             CONDUIT     12.11     0  00:03      4.81    1.15    0.93
+  frdrain5             CONDUIT     11.70     0  00:06      4.53    1.11    0.91
+  frdrain6             CONDUIT     11.61     0  00:31      4.62    1.11    0.88
+  frdrain7             CONDUIT     11.61     0  00:32      4.58    1.11    0.83
+  frdrain8             CONDUIT     11.61     0  00:33      4.89    1.11    0.71
   
   
   ***************************
@@ -241,7 +226,7 @@
   frdrain5                1.00   0.00  0.00  0.00  1.00  0.00  0.00  0.00  0.00  0.00
   frdrain6                1.00   0.00  0.00  0.00  1.00  0.00  0.00  0.00  0.00  0.00
   frdrain7                1.00   0.00  0.00  0.00  1.00  0.00  0.00  0.00  0.00  0.00
-  frdrain8                1.00   0.00  0.00  0.00  1.00  0.00  0.00  0.00  0.00  0.00
+  frdrain8                1.00   0.00  0.00  0.00  0.00  0.00  0.00  1.00  0.00  0.00
   
   
   *************************
@@ -253,16 +238,16 @@
                          --------- Hours Full --------   Above Full   Capacity
   Conduit                Both Ends  Upstream  Dnstream   Normal Flow   Limited
   ----------------------------------------------------------------------------
-  frdrain1                   23.85     23.99     23.85      0.25         0.01
-  frdrain2                   23.85     23.85     23.85      0.24         0.01
-  frdrain3                   23.85     23.85     23.85      0.21         0.01
-  frdrain4                   23.85     23.85     23.86      0.18         0.01
-  frdrain5                   23.86     23.86     23.86      0.15         0.01
-  frdrain6                   23.86     23.86     23.87      0.10         0.01
-  frdrain7                   23.87     23.87     23.88      0.01         0.01
-  frdrain8                   23.88     23.88     23.89      0.01         0.01
+  frdrain1                    0.01     23.99      0.01     24.00         0.01
+  frdrain2                    0.01      0.01      0.01     23.99         0.01
+  frdrain3                    0.01      0.01      0.01     23.97         0.01
+  frdrain4                    0.01      0.01      0.01     23.95         0.01
+  frdrain5                    0.01      0.01      0.01     23.93         0.01
+  frdrain6                    0.01      0.01      0.01     23.91         0.01
+  frdrain7                    0.01      0.01      0.01     23.89         0.01
+  frdrain8                    0.01      0.01      0.01     23.88         0.01
   
 
-  Analysis begun on:  Sun Jul 19 15:18:46 2026
-  Analysis ended on:  Sun Jul 19 15:18:46 2026
+  Analysis begun on:  Wed Jul 22 12:55:35 2026
+  Analysis ended on:  Wed Jul 22 12:55:35 2026
   Total elapsed time: < 1 sec

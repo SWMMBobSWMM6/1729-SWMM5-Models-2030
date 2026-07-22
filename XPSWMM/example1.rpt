@@ -36,20 +36,26 @@
   Wet Weather Inflow .......         0.000         0.000
   Groundwater Inflow .......         0.000         0.000
   RDII Inflow ..............         0.000         0.000
-  External Inflow ..........         0.000         0.000
-  External Outflow .........         0.000         0.000
+  External Inflow ..........         0.259         2.592
+  External Outflow .........         0.213         2.134
   Flooding Loss ............         0.000         0.000
   Evaporation Loss .........         0.000         0.000
   Exfiltration Loss ........         0.000         0.000
   Initial Stored Volume ....         0.000         0.000
-  Final Stored Volume ......         0.000         0.000
-  Continuity Error (%) .....         0.000
+  Final Stored Volume ......         0.000         0.001
+  Continuity Error (%) .....        17.609
+  
+  
+  *************************
+  Highest Continuity Errors
+  *************************
+  Node MH (18.04%)
   
   
   ***************************
   Time-Step Critical Elements
   ***************************
-  None
+  Link 214.1 (96.27%)
   
   
   ********************************
@@ -61,24 +67,26 @@
   *********************************
   Most Frequent Nonconverging Nodes
   *********************************
-  Convergence obtained at all time steps.
+  Node outfall (0.03%)
+  Node detention (0.01%)
+  Node MH (0.01%)
   
   
   *************************
   Routing Time Step Summary
   *************************
-  Minimum Time Step           :    59.50 sec
-  Average Time Step           :    59.96 sec
+  Minimum Time Step           :     0.76 sec
+  Average Time Step           :    12.19 sec
   Maximum Time Step           :    60.00 sec
   % of Time in Steady State   :     0.00
   Average Iterations per Step :     2.00
-  % of Steps Not Converging   :     0.00
+  % of Steps Not Converging   :     0.03
   Time Step Frequencies       :
-     60.000 - 23.031 sec      :   100.00 %
-     23.031 -  8.841 sec      :     0.00 %
-      8.841 -  3.393 sec      :     0.00 %
+     60.000 - 23.031 sec      :     3.71 %
+     23.031 -  8.841 sec      :    96.23 %
+      8.841 -  3.393 sec      :     0.04 %
       3.393 -  1.303 sec      :     0.00 %
-      1.303 -  0.500 sec      :     0.00 %
+      1.303 -  0.500 sec      :     0.01 %
   
   
   ******************
@@ -90,13 +98,13 @@
                                    Depth    Depth      HGL   Occurrence   Max Depth
   Node                 Type       Meters   Meters   Meters  days hr:min      Meters
   ---------------------------------------------------------------------------------
-  MH                   JUNCTION     0.00     0.00   410.50     0  00:00        0.00
+  MH                   JUNCTION   396.07   403.65   814.15     0  04:22      403.55
   MH_2                 JUNCTION     0.00     0.00   409.00     0  00:00        0.00
   MH_3                 JUNCTION     0.00     0.00   409.00     0  00:00        0.00
   MH_4                 JUNCTION     0.00     0.00   413.00     0  00:00        0.00
   MH_5                 JUNCTION     0.00     0.00   411.00     0  00:00        0.00
   MH_6                 JUNCTION     0.00     0.00   406.00     0  00:00        0.00
-  detention            JUNCTION     0.00     0.00   400.00     0  00:00        0.00
+  detention            JUNCTION     0.07     0.08   400.08     0  06:05        0.08
   outfall              OUTFALL      0.00     0.00   400.00     0  00:00        0.00
   
   
@@ -110,14 +118,14 @@
                                    Inflow   Inflow   Occurrence      Volume      Volume       Error
   Node                 Type           CMS      CMS  days hr:min    10^6 ltr    10^6 ltr     Percent
   -------------------------------------------------------------------------------------------------
-  MH                   JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
+  MH                   JUNCTION     0.030    0.030     0  00:00        2.59        2.59      22.013
   MH_2                 JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
   MH_3                 JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
   MH_4                 JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
   MH_5                 JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
   MH_6                 JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
-  detention            JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
-  outfall              OUTFALL      0.000    0.000     0  00:00           0           0       0.000 ltr
+  detention            JUNCTION     0.000    0.134     0  04:23           0        2.12      -0.475
+  outfall              OUTFALL      0.000    0.361     0  04:23           0        2.13       0.000
   
   
   **********************
@@ -153,9 +161,9 @@
                          Freq      Flow      Flow      Volume
   Outfall Node           Pcnt       CMS       CMS    10^6 ltr
   -----------------------------------------------------------
-  outfall                0.00     0.000     0.000       0.000
+  outfall               96.29     0.030     0.361       2.134
   -----------------------------------------------------------
-  System                 0.00     0.000     0.000       0.000
+  System                96.29     0.030     0.361       2.134
   
   
   ********************
@@ -171,9 +179,9 @@
   Pipe_2               CONDUIT     0.000     0  00:00      0.00    0.00    0.00
   Pipe_3               CONDUIT     0.000     0  00:00      0.00    0.00    0.00
   Pipe_4               CONDUIT     0.000     0  00:00      0.00    0.00    0.00
-  Pipe_5               CONDUIT     0.000     0  00:00      0.00    0.00    0.00
-  214.1                CONDUIT     0.000     0  00:00      0.00    0.00    0.00
-  control              ORIFICE     0.000     0  00:00                      0.00
+  Pipe_5               CONDUIT     0.000     0  00:00      0.00    0.00    0.13
+  214.1                CONDUIT     0.134     0  04:23      5.61    0.13    0.24
+  control              ORIFICE     0.361     0  04:23                      0.11
   
   
   ***************************
@@ -189,8 +197,8 @@
   Pipe_2                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
   Pipe_3                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
   Pipe_4                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
-  Pipe_5                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
-  214.1                   1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  Pipe_5                  1.00   0.18  0.82  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  214.1                   1.00   0.18  0.00  0.00  0.00  0.00  0.00  0.82  0.00  0.00
   
   
   *************************
@@ -200,6 +208,6 @@
   No conduits were surcharged.
   
 
-  Analysis begun on:  Sun Jul 19 15:18:32 2026
-  Analysis ended on:  Sun Jul 19 15:18:32 2026
+  Analysis begun on:  Wed Jul 22 12:07:34 2026
+  Analysis ended on:  Wed Jul 22 12:07:34 2026
   Total elapsed time: < 1 sec

@@ -36,20 +36,29 @@
   Wet Weather Inflow .......         0.000         0.000
   Groundwater Inflow .......         0.000         0.000
   RDII Inflow ..............         0.000         0.000
-  External Inflow ..........         0.000         0.000
+  External Inflow ..........         1.983         0.646
   External Outflow .........         0.000         0.000
-  Flooding Loss ............         0.000         0.000
+  Flooding Loss ............       109.023        35.527
   Evaporation Loss .........         0.000         0.000
   Exfiltration Loss ........         0.000         0.000
   Initial Stored Volume ....         0.000         0.000
-  Final Stored Volume ......         0.000         0.000
-  Continuity Error (%) .....         0.000
+  Final Stored Volume ......         0.038         0.012
+  Continuity Error (%) .....     -5398.730
+  
+  
+  *************************
+  Highest Continuity Errors
+  *************************
+  Node DD6 (15.07%)
   
   
   ***************************
   Time-Step Critical Elements
   ***************************
-  None
+  Link 3 (61.81%)
+  Link 6 (20.47%)
+  Node gate (2.69%)
+  Node DD6 (1.35%)
   
   
   ********************************
@@ -61,23 +70,26 @@
   *********************************
   Most Frequent Nonconverging Nodes
   *********************************
-  Convergence obtained at all time steps.
+  Node 12hp (14.33%)
+  Node gate (12.99%)
+  Node DD13 (12.27%)
+  Node DD6 (6.83%)
   
   
   *************************
   Routing Time Step Summary
   *************************
-  Minimum Time Step           :    59.50 sec
-  Average Time Step           :    59.96 sec
+  Minimum Time Step           :     1.87 sec
+  Average Time Step           :    17.11 sec
   Maximum Time Step           :    60.00 sec
   % of Time in Steady State   :     0.00
-  Average Iterations per Step :     2.00
-  % of Steps Not Converging   :     0.00
+  Average Iterations per Step :    11.99
+  % of Steps Not Converging   :    14.33
   Time Step Frequencies       :
-     60.000 - 23.031 sec      :   100.00 %
-     23.031 -  8.841 sec      :     0.00 %
-      8.841 -  3.393 sec      :     0.00 %
-      3.393 -  1.303 sec      :     0.00 %
+     60.000 - 23.031 sec      :    16.42 %
+     23.031 -  8.841 sec      :    49.96 %
+      8.841 -  3.393 sec      :    31.58 %
+      3.393 -  1.303 sec      :     2.04 %
       1.303 -  0.500 sec      :     0.00 %
   
   
@@ -90,9 +102,9 @@
                                    Depth    Depth      HGL   Occurrence   Max Depth
   Node                 Type         Feet     Feet     Feet  days hr:min        Feet
   ---------------------------------------------------------------------------------
-  DD6                  JUNCTION     0.00     0.00     0.00     0  00:00        0.00
-  gate                 JUNCTION     0.00     0.00    -0.40     0  00:00        0.00
-  DD13                 JUNCTION     0.00     0.00     0.00     0  00:00        0.00
+  DD6                  JUNCTION     1.90     3.00     3.00     0  00:29        3.00
+  gate                 JUNCTION     2.17     6.00     5.60     0  00:39        6.00
+  DD13                 JUNCTION     1.88     7.50     7.50     0  01:16        7.50
   gate_2               JUNCTION     0.00     0.00    -1.40     0  00:00        0.00
   7hp                  JUNCTION     0.00     0.00     1.80     0  00:00        0.00
   12hp                 OUTFALL      0.00     0.00     1.80     0  00:00        0.00
@@ -108,9 +120,9 @@
                                    Inflow   Inflow   Occurrence      Volume      Volume       Error
   Node                 Type           CFS      CFS  days hr:min    10^6 gal    10^6 gal     Percent
   -------------------------------------------------------------------------------------------------
-  DD6                  JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
-  gate                 JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
-  DD13                 JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  DD6                  JUNCTION      0.00   404.80     0  00:51           0        37.1      17.740
+  gate                 JUNCTION      0.00   216.78     0  01:17           0        7.69       0.000
+  DD13                 JUNCTION      1.00   624.10     0  01:16       0.646        20.5     -54.928
   gate_2               JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
   7hp                  JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
   12hp                 OUTFALL       0.00     0.00     0  00:00           0           0       0.000 gal
@@ -126,6 +138,8 @@
                                    Hours       Above Crown    Below Rim
   Node                 Type      Surcharged           Feet         Feet
   ---------------------------------------------------------------------
+  gate                 JUNCTION        1.17          0.000        0.000
+  DD13                 JUNCTION        2.08          0.000        0.000
   gate_2               JUNCTION       24.00          0.000        0.000
   7hp                  JUNCTION       24.00          0.000        0.000
   
@@ -134,7 +148,16 @@
   Node Flooding Summary
   *********************
   
-  No nodes were flooded.
+  Flooding refers to all water that overflows a node, whether it ponds or not.
+  --------------------------------------------------------------------------
+                                                             Total   Maximum
+                                 Maximum   Time of Max       Flood    Ponded
+                        Hours       Rate    Occurrence      Volume     Depth
+  Node                 Flooded       CFS   days hr:min    10^6 gal      Feet
+  --------------------------------------------------------------------------
+  DD6                     8.57    301.83      0  00:40      33.193     0.000
+  gate                    1.17     57.74      0  00:39       1.716     0.000
+  DD13                    2.08    197.13      0  01:16       7.258     0.000
   
   
   ***********************
@@ -160,9 +183,9 @@
                                   |Flow|   Occurrence   |Veloc|    Full    Full
   Link                 Type          CFS  days hr:min    ft/sec    Flow   Depth
   -----------------------------------------------------------------------------
-  3                    CONDUIT      0.00     0  00:00      0.00    0.00    0.00
-  6                    CONDUIT      0.00     0  00:00      0.00    0.00    0.00
-  road                 WEIR         0.00     0  00:00                      0.00
+  3                    CONDUIT    114.98     0  00:39     32.53    5.03    1.00
+  6                    CONDUIT    623.10     0  01:16     44.07    4.70    0.57
+  road                 WEIR       404.80     0  00:40                      1.00
   12hp_pump            PUMP         0.00     0  00:00              0.00
   7hp                  PUMP         0.00     0  00:00              0.00
   
@@ -176,15 +199,21 @@
                        /Actual         Up    Down  Sub   Sup   Up    Down  Norm  Inlet 
   Conduit               Length    Dry  Dry   Dry   Crit  Crit  Crit  Crit  Ltd   Ctrl  
   -------------------------------------------------------------------------------------
-  3                       1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
-  6                       1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  3                       1.00   0.00  0.00  0.00  0.93  0.07  0.00  0.00  0.12  0.00
+  6                       1.00   0.04  0.00  0.00  0.78  0.18  0.00  0.00  0.08  0.00
   
   
   *************************
   Conduit Surcharge Summary
   *************************
   
-  No conduits were surcharged.
+  ----------------------------------------------------------------------------
+                                                           Hours        Hours 
+                         --------- Hours Full --------   Above Full   Capacity
+  Conduit                Both Ends  Upstream  Dnstream   Normal Flow   Limited
+  ----------------------------------------------------------------------------
+  3                           3.34      7.45      4.64      2.92         2.64
+  6                           0.01      2.24      2.16      1.07         0.01
   
   
   ***************
@@ -200,6 +229,6 @@
   7hp                      0.00           0      0.00      0.00      0.00     0.000      0.00    0.0    0.0
   
 
-  Analysis begun on:  Sun Jul 19 15:21:49 2026
-  Analysis ended on:  Sun Jul 19 15:21:49 2026
+  Analysis begun on:  Wed Jul 22 14:14:38 2026
+  Analysis ended on:  Wed Jul 22 14:14:38 2026
   Total elapsed time: < 1 sec

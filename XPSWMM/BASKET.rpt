@@ -36,14 +36,20 @@
   Wet Weather Inflow .......         0.000         0.000
   Groundwater Inflow .......         0.000         0.000
   RDII Inflow ..............         0.000         0.000
-  External Inflow ..........         0.000         0.000
+  External Inflow ..........         1.983         0.646
   External Outflow .........         0.000         0.000
   Flooding Loss ............         0.000         0.000
   Evaporation Loss .........         0.000         0.000
   Exfiltration Loss ........         0.000         0.000
   Initial Stored Volume ....         0.000         0.000
-  Final Stored Volume ......         0.000         0.000
-  Continuity Error (%) .....         0.000
+  Final Stored Volume ......         1.848         0.602
+  Continuity Error (%) .....         6.822
+  
+  
+  *************************
+  Highest Continuity Errors
+  *************************
+  Node 920360 (100.00%)
   
   
   ***************************
@@ -61,7 +67,9 @@
   *********************************
   Most Frequent Nonconverging Nodes
   *********************************
-  Convergence obtained at all time steps.
+  Node 920360 (0.03%)
+  Node 920340 (0.03%)
+  Node 920370 (0.02%)
   
   
   *************************
@@ -71,8 +79,8 @@
   Average Time Step           :    15.00 sec
   Maximum Time Step           :    15.00 sec
   % of Time in Steady State   :     0.00
-  Average Iterations per Step :     2.00
-  % of Steps Not Converging   :     0.00
+  Average Iterations per Step :     2.04
+  % of Steps Not Converging   :     0.03
   Time Step Frequencies       :
      15.000 -  7.597 sec      :   100.00 %
       7.597 -  3.848 sec      :     0.00 %
@@ -90,8 +98,8 @@
                                    Depth    Depth      HGL   Occurrence   Max Depth
   Node                 Type         Feet     Feet     Feet  days hr:min        Feet
   ---------------------------------------------------------------------------------
-  920370               JUNCTION     0.00     0.00   800.00     0  00:00        0.00
-  920360               JUNCTION     0.00     0.00   800.00     0  00:00        0.00
+  920370               JUNCTION   747.42   793.57  1593.57     1  00:00      793.57
+  920360               JUNCTION   680.85   793.57  1593.57     1  00:00      793.57
   920350               JUNCTION     0.00     0.00   825.90     0  00:00        0.00
   920340               OUTFALL      0.00     0.00   820.70     0  00:00        0.00
   
@@ -106,8 +114,8 @@
                                    Inflow   Inflow   Occurrence      Volume      Volume       Error
   Node                 Type           CFS      CFS  days hr:min    10^6 gal    10^6 gal     Percent
   -------------------------------------------------------------------------------------------------
-  920370               JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
-  920360               JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  920370               JUNCTION      1.00     1.00     0  00:00       0.646       0.646      13.673
+  920360               JUNCTION      0.00     6.57     0  02:46           0       0.569  568532.492 gal
   920350               JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
   920340               OUTFALL       0.00     0.00     0  00:00           0           0       0.000 gal
   
@@ -149,8 +157,8 @@
                                   |Flow|   Occurrence   |Veloc|    Full    Full
   Link                 Type          CFS  days hr:min    ft/sec    Flow   Depth
   -----------------------------------------------------------------------------
-  upstream             CONDUIT      0.00     0  00:00      0.00    0.00    0.00
-  basket               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  upstream             CONDUIT      6.57     0  02:46      2.22    0.01    0.51
+  basket               CONDUIT      0.00     0  00:00      0.00    0.00    0.18
   dnstream             CONDUIT      0.00     0  00:00      0.00    0.00    0.00
   
   
@@ -163,8 +171,8 @@
                        /Actual         Up    Down  Sub   Sup   Up    Down  Norm  Inlet 
   Conduit               Length    Dry  Dry   Dry   Crit  Crit  Crit  Crit  Ltd   Ctrl  
   -------------------------------------------------------------------------------------
-  upstream                1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
-  basket                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  upstream                1.00   0.12  0.00  0.00  0.81  0.00  0.00  0.07  0.65  0.00
+  basket                  1.00   0.19  0.81  0.00  0.00  0.00  0.00  0.00  0.00  0.00
   dnstream                1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
   
   
@@ -175,6 +183,6 @@
   No conduits were surcharged.
   
 
-  Analysis begun on:  Sun Jul 19 15:11:56 2026
-  Analysis ended on:  Sun Jul 19 15:11:56 2026
+  Analysis begun on:  Wed Jul 22 11:40:17 2026
+  Analysis ended on:  Wed Jul 22 11:40:17 2026
   Total elapsed time: < 1 sec

@@ -37,14 +37,14 @@
   Wet Weather Inflow .......         0.000         0.000
   Groundwater Inflow .......         0.000         0.000
   RDII Inflow ..............         0.000         0.000
-  External Inflow ..........         0.000         0.000
-  External Outflow .........         0.000         0.000
+  External Inflow ..........         1.983         0.646
+  External Outflow .........         1.979         0.645
   Flooding Loss ............         0.000         0.000
   Evaporation Loss .........         0.000         0.000
   Exfiltration Loss ........         0.000         0.000
   Initial Stored Volume ....         0.000         0.000
-  Final Stored Volume ......         0.000         0.000
-  Continuity Error (%) .....         0.000
+  Final Stored Volume ......         0.002         0.001
+  Continuity Error (%) .....         0.117
   
   
   ***************************
@@ -72,8 +72,8 @@
   Average Time Step           :    10.00 sec
   Maximum Time Step           :    10.00 sec
   % of Time in Steady State   :     0.00
-  Average Iterations per Step :     2.00
-  % of Steps Not Converging   :     0.00
+  Average Iterations per Step :     2.02
+  % of Steps Not Converging   :     0.01
   Time Step Frequencies       :
      10.000 -  5.493 sec      :   100.00 %
       5.493 -  3.017 sec      :     0.00 %
@@ -91,7 +91,7 @@
                                    Depth    Depth      HGL   Occurrence   Max Depth
   Node                 Type         Feet     Feet     Feet  days hr:min        Feet
   ---------------------------------------------------------------------------------
-  J487                 JUNCTION     0.00     0.00   150.00     0  00:00        0.00
+  J487                 JUNCTION     5.79     5.80   155.80     0  00:36        5.80
   J2487                OUTFALL      0.00     0.00   150.00     0  00:00        0.00
   S487                 STORAGE      0.00     0.00    10.00     0  00:00        0.00
   
@@ -106,9 +106,9 @@
                                    Inflow   Inflow   Occurrence      Volume      Volume       Error
   Node                 Type           CFS      CFS  days hr:min    10^6 gal    10^6 gal     Percent
   -------------------------------------------------------------------------------------------------
-  J487                 JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
-  J2487                OUTFALL       0.00     0.00     0  00:00           0           0       0.000 gal
-  S487                 STORAGE       0.00     0.00     0  00:00           0           0       0.000 gal
+  J487                 JUNCTION      0.00     1.00     0  00:00           0       0.646       0.231
+  J2487                OUTFALL       0.00     1.00     0  00:36           0       0.645       0.000
+  S487                 STORAGE       1.00     1.00     0  00:00       0.646       0.646       0.000
   
   
   **********************
@@ -134,7 +134,7 @@
                           Volume   Pcnt   Pcnt   Pcnt      Volume   Pcnt     Occurrence    Outflow
   Storage Unit          1000 ft³   Full   Loss   Loss    1000 ft³   Full    days hr:min        CFS
   ------------------------------------------------------------------------------------------------
-  S487                     0.000    0.0    0.0    0.0       0.000    0.0       0  00:00       0.00
+  S487                     0.000    0.0    0.0    0.0       0.000    0.0       0  00:00       1.00
   
   
   ***********************
@@ -146,9 +146,9 @@
                          Freq      Flow      Flow      Volume
   Outfall Node           Pcnt       CFS       CFS    10^6 gal
   -----------------------------------------------------------
-  J2487                  0.00      0.00      0.00       0.000
+  J2487                 99.92      1.00      1.00       0.645
   -----------------------------------------------------------
-  System                 0.00      0.00      0.00       0.000
+  System                99.92      1.00      1.00       0.645
   
   
   ********************
@@ -160,8 +160,8 @@
                                   |Flow|   Occurrence   |Veloc|    Full    Full
   Link                 Type          CFS  days hr:min    ft/sec    Flow   Depth
   -----------------------------------------------------------------------------
-  487                  CONDUIT      0.00     0  00:00      0.00    0.00    0.00
-  8487                 PUMP         0.00     0  00:00              0.00
+  487                  CONDUIT      1.00     0  00:36      2.00   11.59    0.61
+  8487                 PUMP         1.00     0  00:00              0.10
   
   
   ***************************
@@ -173,14 +173,19 @@
                        /Actual         Up    Down  Sub   Sup   Up    Down  Norm  Inlet 
   Conduit               Length    Dry  Dry   Dry   Crit  Crit  Crit  Crit  Ltd   Ctrl  
   -------------------------------------------------------------------------------------
-  487                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  487                     1.00   0.00  0.00  0.00  0.00  0.00  0.00  1.00  0.00  0.00
   
   
   *************************
   Conduit Surcharge Summary
   *************************
   
-  No conduits were surcharged.
+  ----------------------------------------------------------------------------
+                                                           Hours        Hours 
+                         --------- Hours Full --------   Above Full   Capacity
+  Conduit                Both Ends  Upstream  Dnstream   Normal Flow   Limited
+  ----------------------------------------------------------------------------
+  487                         0.01      0.01      0.01     23.97         0.01
   
   
   ***************
@@ -192,9 +197,9 @@
                         Percent   Number of      Flow      Flow      Flow    Volume     Usage    Pump Curve
   Pump                 Utilized   Start-Ups       CFS       CFS       CFS  10^6 gal     Kw-hr    Low   High
   ---------------------------------------------------------------------------------------------------------
-  8487                     0.00           0      0.00      0.00      0.00     0.000      0.00    0.0    0.0
+  8487                   100.00           1      0.00      1.00      1.00     0.646    296.03    0.0    0.0
   
 
-  Analysis begun on:  Sun Jul 19 15:10:57 2026
-  Analysis ended on:  Sun Jul 19 15:10:57 2026
+  Analysis begun on:  Wed Jul 22 11:34:46 2026
+  Analysis ended on:  Wed Jul 22 11:34:46 2026
   Total elapsed time: < 1 sec

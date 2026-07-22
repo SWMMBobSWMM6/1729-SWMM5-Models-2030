@@ -36,14 +36,20 @@
   Wet Weather Inflow .......         0.000         0.000
   Groundwater Inflow .......         0.000         0.000
   RDII Inflow ..............         0.000         0.000
-  External Inflow ..........         0.000         0.000
+  External Inflow ..........         0.518         5.183
   External Outflow .........         0.000         0.000
-  Flooding Loss ............         0.000         0.000
+  Flooding Loss ............         0.505         5.053
   Evaporation Loss .........         0.000         0.000
   Exfiltration Loss ........         0.000         0.000
   Initial Stored Volume ....         0.000         0.000
-  Final Stored Volume ......         0.000         0.000
-  Continuity Error (%) .....         0.000
+  Final Stored Volume ......         0.000         0.002
+  Continuity Error (%) .....         2.493
+  
+  
+  *************************
+  Highest Continuity Errors
+  *************************
+  Node p1 (2.35%)
   
   
   ***************************
@@ -71,8 +77,8 @@
   Average Time Step           :    15.00 sec
   Maximum Time Step           :    15.00 sec
   % of Time in Steady State   :     0.00
-  Average Iterations per Step :     2.00
-  % of Steps Not Converging   :     0.00
+  Average Iterations per Step :     2.01
+  % of Steps Not Converging   :     0.02
   Time Step Frequencies       :
      15.000 -  7.597 sec      :   100.00 %
       7.597 -  3.848 sec      :     0.00 %
@@ -90,11 +96,11 @@
                                    Depth    Depth      HGL   Occurrence   Max Depth
   Node                 Type       Meters   Meters   Meters  days hr:min      Meters
   ---------------------------------------------------------------------------------
-  p1                   JUNCTION     0.00     0.00    51.95     0  00:00        0.00
+  p1                   JUNCTION    49.04    50.80   102.75     0  01:06       50.80
   p2                   JUNCTION     0.00     0.00    60.00     0  00:00        0.00
-  sep                  JUNCTION     0.00     0.00    51.80     0  00:00        0.00
+  sep                  JUNCTION    51.23    51.85   103.65     0  00:34       51.84
   out                  OUTFALL      0.00     0.00    60.00     0  00:00        0.00
-  inflow               STORAGE      0.00     0.00    60.00     0  00:00        0.00
+  inflow               STORAGE      9.98    10.00    70.00     0  00:06       10.00
   drain                STORAGE      0.00     0.00    60.00     0  00:00        0.00
   
   
@@ -108,11 +114,11 @@
                                    Inflow   Inflow   Occurrence      Volume      Volume       Error
   Node                 Type           CMS      CMS  days hr:min    10^6 ltr    10^6 ltr     Percent
   -------------------------------------------------------------------------------------------------
-  p1                   JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
+  p1                   JUNCTION     0.000    0.044     0  00:34           0        2.53       2.406
   p2                   JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
-  sep                  JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
+  sep                  JUNCTION     0.030    0.030     0  00:00        2.59        2.59       2.370
   out                  OUTFALL      0.000    0.000     0  00:00           0           0       0.000 ltr
-  inflow               STORAGE      0.000    0.000     0  00:00           0           0       0.000 ltr
+  inflow               STORAGE      0.030    0.030     0  00:00        2.59        2.59       0.406
   drain                STORAGE      0.000    0.000     0  00:00           0           0       0.000 ltr
   
   
@@ -127,7 +133,15 @@
   Node Flooding Summary
   *********************
   
-  No nodes were flooded.
+  Flooding refers to all water that overflows a node, whether it ponds or not.
+  --------------------------------------------------------------------------
+                                                             Total   Maximum
+                                 Maximum   Time of Max       Flood    Ponded
+                        Hours       Rate    Occurrence      Volume     Depth
+  Node                 Flooded       CMS   days hr:min    10^6 ltr    Meters
+  --------------------------------------------------------------------------
+  p1                     22.90     0.030      0  01:06       2.472     0.000
+  inflow                 23.90     0.030      0  00:06       2.580     0.000
   
   
   **********************
@@ -139,7 +153,7 @@
                           Volume   Pcnt   Pcnt   Pcnt      Volume   Pcnt     Occurrence    Outflow
   Storage Unit           1000 m³   Full   Loss   Loss     1000 m³   Full    days hr:min        CMS
   ------------------------------------------------------------------------------------------------
-  inflow                   0.000    0.0    0.0    0.0       0.000    0.0       0  00:00      0.000
+  inflow                   0.001   99.8    0.0    0.0       0.001  100.0       0  00:06      0.000
   drain                    0.000    0.0    0.0    0.0       0.000    0.0       0  00:00      0.000
   
   
@@ -167,9 +181,9 @@
   Link                 Type          CMS  days hr:min     m/sec    Flow   Depth
   -----------------------------------------------------------------------------
   path2                CONDUIT     0.000     0  00:00      0.00    0.00    0.00
-  pipe                 CONDUIT     0.000     0  00:00      0.00    0.00    0.00
+  pipe                 CONDUIT     0.000     0  00:00      0.00    0.00    0.50
   path1                CONDUIT     0.000     0  00:00      0.00    0.00    0.00
-  pit                  ORIFICE     0.000     0  00:00                      0.00
+  pit                  ORIFICE     0.044     0  00:34                      0.16
   
   
   ***************************
@@ -182,7 +196,7 @@
   Conduit               Length    Dry  Dry   Dry   Crit  Crit  Crit  Crit  Ltd   Ctrl  
   -------------------------------------------------------------------------------------
   path2                   1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
-  pipe                    1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  pipe                    1.00   0.05  0.95  0.00  0.00  0.00  0.00  0.00  0.00  0.00
   path1                   1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
   
   
@@ -193,6 +207,6 @@
   No conduits were surcharged.
   
 
-  Analysis begun on:  Sun Jul 19 15:16:27 2026
-  Analysis ended on:  Sun Jul 19 15:16:27 2026
+  Analysis begun on:  Wed Jul 22 11:57:39 2026
+  Analysis ended on:  Wed Jul 22 11:57:39 2026
   Total elapsed time: < 1 sec

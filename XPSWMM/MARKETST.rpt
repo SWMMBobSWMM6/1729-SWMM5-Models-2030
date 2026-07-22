@@ -2,11 +2,1533 @@
   EPA STORM WATER MANAGEMENT MODEL - VERSION 5.2 (Build 5.2.4)
   ------------------------------------------------------------
 
+  Converted from XPSWMM .xp file 
+  WARNING 10: crest elevation raised to downstream invert for regulator Link Weir_2
   
-  ERROR 207: duplicate ID name overflow1 at line 278 of [JUNC] section:
-  overflow1        932.59     0          0          0          0
+  ****************
+  Analysis Options
+  ****************
+  Flow Units ............... CFS
+  Process Models:
+    Rainfall/Runoff ........ NO
+    RDII ................... NO
+    Snowmelt ............... NO
+    Groundwater ............ NO
+    Flow Routing ........... YES
+    Ponding Allowed ........ NO
+    Water Quality .......... NO
+  Flow Routing Method ...... DYNWAVE
+  Surcharge Method ......... EXTRAN
+  Starting Date ............ 01/01/2001 00:00:00
+  Ending Date .............. 01/02/2001 00:00:00
+  Antecedent Dry Days ...... 0.0
+  Report Time Step ......... 00:15:00
+  Routing Time Step ........ 5.00 sec
+  Variable Time Step ....... YES
+  Maximum Trials ........... 200
+  Number of Threads ........ 1
+  Head Tolerance ........... 0.005000 ft
+  
+  
+  **************************        Volume        Volume
+  Flow Routing Continuity        acre-feet      10^6 gal
+  **************************     ---------     ---------
+  Dry Weather Inflow .......         0.000         0.000
+  Wet Weather Inflow .......         0.000         0.000
+  Groundwater Inflow .......         0.000         0.000
+  RDII Inflow ..............         0.000         0.000
+  External Inflow ..........       241.974        78.851
+  External Outflow .........         0.000         0.000
+  Flooding Loss ............       181.331        59.090
+  Evaporation Loss .........         0.000         0.000
+  Exfiltration Loss ........         0.000         0.000
+  Initial Stored Volume ....         0.001         0.000
+  Final Stored Volume ......        16.102         5.247
+  Continuity Error (%) .....        18.408
+  
+  
+  *************************
+  Highest Continuity Errors
+  *************************
+  Node 165 (-476.97%)
+  Node 711 (100.00%)
+  Node 704 (60.89%)
+  Node ndBU315 (25.74%)
+  Node ndE9 (20.88%)
+  
+  
+  ***************************
+  Time-Step Critical Elements
+  ***************************
+  Link bu575p (76.96%)
+  
+  
+  ********************************
+  Highest Flow Instability Indexes
+  ********************************
+  Link 66nn (134)
+  Link lkN27p (11)
+  Link Link_350 (4)
+  Link 155p (4)
+  Link bu266p (4)
+  
+  
+  *********************************
+  Most Frequent Nonconverging Nodes
+  *********************************
+  Node ndBF9 (0.54%)
+  Node Overflow1 (0.02%)
+  Node ndS2 (0.01%)
+  Node ndW140 (0.01%)
+  Node outlet1 (0.01%)
+  
+  
+  *************************
+  Routing Time Step Summary
+  *************************
+  Minimum Time Step           :     1.72 sec
+  Average Time Step           :     3.97 sec
+  Maximum Time Step           :     5.00 sec
+  % of Time in Steady State   :     0.00
+  Average Iterations per Step :     4.86
+  % of Steps Not Converging   :     0.54
+  Time Step Frequencies       :
+      5.000 -  3.155 sec      :   100.00 %
+      3.155 -  1.991 sec      :     0.00 %
+      1.991 -  1.256 sec      :     0.00 %
+      1.256 -  0.792 sec      :     0.00 %
+      0.792 -  0.500 sec      :     0.00 %
+  
+  
+  ******************
+  Node Depth Summary
+  ******************
+  
+  ---------------------------------------------------------------------------------
+                                 Average  Maximum  Maximum  Time of Max    Reported
+                                   Depth    Depth      HGL   Occurrence   Max Depth
+  Node                 Type         Feet     Feet     Feet  days hr:min        Feet
+  ---------------------------------------------------------------------------------
+  ndBF8                JUNCTION     0.00     0.00   950.00     0  00:00        0.00
+  ndBF18               JUNCTION     0.00     0.00   950.00     0  00:00        0.00
+  ndBF22               JUNCTION     0.00     0.00   950.00     0  00:00        0.00
+  ndBF29               JUNCTION     0.00     0.00   950.00     0  00:00        0.00
+  ndBF30               JUNCTION   875.90   925.39  1867.39     0  03:32      925.39
+  ndBF33               JUNCTION     0.00     0.00   955.00     0  00:00        0.00
+  ndBF42               JUNCTION     0.00     0.00   950.00     0  00:00        0.00
+  ndBF45               JUNCTION     0.00     0.00   950.00     0  00:00        0.00
+  ndBF14               JUNCTION     0.00     0.00   950.00     0  00:00        0.00
+  ndBF19               JUNCTION     0.00     0.00   950.00     0  00:00        0.00
+  ndBF46               JUNCTION   256.77   924.06  1874.06     0  20:39      924.06
+  ndW143               JUNCTION     0.00     0.00   950.00     0  00:00        0.00
+  ndW152               JUNCTION     0.00     0.00   950.00     0  00:00        0.00
+  ndW179               JUNCTION     0.00     0.00   950.00     0  00:00        0.00
+  ndW211               JUNCTION     0.00     0.00   960.00     0  00:00        0.00
+  ndW217               JUNCTION     0.00     0.00   955.00     0  00:00        0.00
+  ndW242               JUNCTION     0.00     0.00   960.00     0  00:00        0.00
+  ndW254               JUNCTION     0.00     0.00   960.00     0  00:00        0.00
+  ndW280               JUNCTION     0.00     0.00   972.20     0  00:00        0.00
+  ndW291               JUNCTION     0.00     0.00   984.00     0  00:00        0.00
+  ndW338               JUNCTION     0.00     0.00  1000.00     0  00:00        0.00
+  ndW339               JUNCTION     0.00     0.00  1000.00     0  00:00        0.00
+  ndW412               JUNCTION     0.00     0.00  1050.00     0  00:00        0.00
+  ndW140               JUNCTION   780.31   933.21  1893.21     0  07:18      933.20
+  ndW149               JUNCTION     0.00     0.00   951.00     0  00:00        0.00
+  ndW252               JUNCTION     0.00     0.00   960.00     0  00:00        0.00
+  ndW281               JUNCTION     0.00     0.00   972.00     0  00:00        0.00
+  ndW297               JUNCTION     0.00     0.00   990.00     0  00:00        0.00
+  ndW396               JUNCTION     0.00     0.00  1050.00     0  00:00        0.00
+  ndW0                 JUNCTION     0.00     0.00   950.00     0  00:00        0.00
+  140                  JUNCTION     0.00     0.00  1000.00     0  00:00        0.00
+  149                  JUNCTION     0.00     0.00   990.00     0  00:00        0.00
+  151                  JUNCTION   912.54   966.69  1956.69     0  03:22      966.58
+  157                  JUNCTION     0.00     0.00   952.00     0  00:00        0.00
+  165                  JUNCTION     0.89     1.01   976.01     0  03:40        1.01
+  174                  JUNCTION     0.00     0.00   960.00     0  00:00        0.00
+  177                  JUNCTION     0.00     0.00   963.00     0  00:00        0.00
+  ndNW6                JUNCTION     0.00     0.00   960.00     0  00:00        0.00
+  ndNW8                JUNCTION   782.74   938.54  1888.54     0  06:39      938.49
+  ndNW17               JUNCTION   894.46   946.19  1906.19     0  06:39      946.19
+  33                   JUNCTION     0.00     0.00   955.00     0  00:00        0.00
+  ndNW3                JUNCTION     0.00     0.00   960.00     0  00:00        0.00
+  ndNW13               JUNCTION     0.00     0.00   951.00     0  00:00        0.00
+  ndNW18               JUNCTION     0.00     0.00   955.00     0  00:00        0.00
+  Nd_FL8               JUNCTION     0.00     0.00   950.00     0  00:00        0.00
+  Nd_FL3               JUNCTION     0.00     0.00   950.00     0  00:00        0.00
+  Nd_FL9               JUNCTION     0.00     0.00   950.00     0  00:00        0.00
+  N20                  JUNCTION     0.00     0.00   950.00     0  00:00        0.00
+  N24                  JUNCTION     0.00     0.00   950.00     0  00:00        0.00
+  N29                  JUNCTION   878.47   929.07  1874.07     0  18:11      929.07
+  N26                  JUNCTION     0.00     0.00   950.00     0  00:00        0.00
+  N27                  JUNCTION     0.00     0.00   945.00     0  00:00        0.00
+  N28                  JUNCTION     0.00     0.00   945.00     0  00:00        0.00
+  154                  JUNCTION     0.00     0.00   945.00     0  00:00        0.00
+  156                  JUNCTION     0.00     0.00   945.00     0  00:00        0.00
+  274                  JUNCTION     0.00     0.00   930.00     0  00:00        0.00
+  276                  JUNCTION     0.00     0.00   930.00     0  00:00        0.00
+  ndE7                 JUNCTION     0.00     0.00   950.00     0  00:00        0.00
+  ndE8                 JUNCTION     0.00     0.00   950.00     0  00:00        0.00
+  ndE9                 JUNCTION   880.97   931.10  1876.10     0  05:00      931.10
+  ndE10                JUNCTION     0.00     0.00   945.00     0  00:00        0.00
+  ndE11                JUNCTION   784.65   933.00  1883.00     0  07:19      933.00
+  ndE12                JUNCTION     0.00     0.00   945.00     0  00:00        0.00
+  ndE13                JUNCTION   883.23   933.69  1883.69     0  03:15      933.66
+  ndE14                JUNCTION     0.00     0.00   950.00     0  00:00        0.00
+  ndE15                JUNCTION     0.00     0.00   950.00     0  00:00        0.00
+  ndE17                JUNCTION     0.00     0.00   950.00     0  00:00        0.00
+  ndE19                JUNCTION     0.00     0.00   960.00     0  00:00        0.00
+  ndE22                JUNCTION     0.00     0.00   960.00     0  00:00        0.00
+  ndE43                JUNCTION     0.00     0.00   950.00     0  00:00        0.00
+  ndE58                JUNCTION   891.06   942.39  1888.56     0  03:26      942.39
+  ndE60                JUNCTION     0.00     0.00   950.00     0  00:00        0.00
+  ndE67                JUNCTION     0.00     0.00   950.00     0  00:00        0.00
+  ndBU18               JUNCTION   875.84   925.47  1865.47     0  06:51      925.47
+  ndBU45               JUNCTION   783.74   938.08  1888.08     0  08:38      938.08
+  ndBU69               JUNCTION     0.00     0.00   985.00     0  00:00        0.00
+  ndBU98               JUNCTION   760.87   935.06  1915.06     0  08:38      935.06
+  ndBU102              JUNCTION     0.00     0.00   985.00     0  00:00        0.00
+  ndBU109              JUNCTION     0.00     0.00   960.00     0  00:00        0.00
+  ndBU114              JUNCTION     0.00     0.00  1001.00     0  00:00        0.00
+  ndBU120              JUNCTION   907.88   961.28  1941.28     0  13:06      961.28
+  ndBU133              JUNCTION     0.00     0.00  1040.00     0  00:00        0.00
+  ndBU313              JUNCTION     0.00     0.00   940.00     0  00:00        0.00
+  ndBU41               JUNCTION     0.00     0.00   978.00     0  00:00        0.00
+  ndBU43               JUNCTION     0.00     0.00   980.00     0  00:00        0.00
+  ndBU57               JUNCTION     0.00     0.00   980.00     0  00:00        0.00
+  ndBU65               JUNCTION   796.42   958.62  1928.62     0  06:58      958.60
+  ndBU66               JUNCTION     0.00     0.00   980.00     0  00:00        0.00
+  ndBU72               JUNCTION     0.00     0.00   985.00     0  00:00        0.00
+  ndBU73               JUNCTION     0.00     0.00   985.00     0  00:00        0.00
+  ndBU75               JUNCTION     0.00     0.00   985.00     0  00:00        0.00
+  ndBU77               JUNCTION   795.02   963.18  1938.18     0  06:57      963.17
+  ndBU78               JUNCTION     0.00     0.00   985.00     0  00:00        0.00
+  ndBU79               JUNCTION   790.81   950.95  1915.95     0  07:02      950.90
+  ndBU80               JUNCTION     0.00     0.00   982.00     0  00:00        0.00
+  ndBU84               JUNCTION   684.97   935.89  1885.89     0  13:14      935.89
+  ndBU92               JUNCTION     0.00     0.00   960.00     0  00:00        0.00
+  ndBU96               JUNCTION     0.00     0.00   945.00     0  00:00        0.00
+  ndBU97               JUNCTION     0.00     0.00   945.00     0  00:00        0.00
+  ndBU117              JUNCTION     0.00     0.00  1018.00     0  00:00        0.00
+  ndBU310              JUNCTION     0.00     0.00   940.00     0  00:00        0.00
+  ndBU311              JUNCTION     0.00     0.00   940.00     0  00:00        0.00
+  ndBU315              JUNCTION   764.90   924.91  1864.91     0  08:47      924.91
+  ndBU319              JUNCTION     0.00     0.00   940.00     0  00:00        0.00
+  ndBU325              JUNCTION     0.00     0.00   945.00     0  00:00        0.00
+  ndS7                 JUNCTION     0.00     0.00  1020.00     0  00:00        0.00
+  ndS13                JUNCTION   922.99   978.30  1975.30     0  03:26      978.30
+  ndS19                JUNCTION   923.93   979.36  1963.06     0  03:38      979.36
+  ndS2                 JUNCTION   543.77   957.20  1927.20     0  12:21      957.20
+  ndS6                 JUNCTION   815.74   986.10  1986.10     0  08:41      986.10
+  ndS16                JUNCTION   812.11   978.63  1960.63     0  08:51      978.63
+  ndS29                JUNCTION   805.86   969.99  1947.99     0  09:09      969.99
+  ndS30                JUNCTION   666.30   967.79  1947.79     0  10:28      967.79
+  ndS116               JUNCTION   665.26   964.81  1939.81     0  12:15      964.81
+  463                  JUNCTION     0.00     0.00   980.00     0  00:00        0.00
+  499                  JUNCTION   898.09   950.27  1905.27     0  05:10      950.27
+  504                  JUNCTION   887.21   938.10  1888.10     0  03:16      938.06
+  615                  JUNCTION   924.53   980.19  1980.19     0  03:25      980.05
+  665                  JUNCTION   886.19   936.92  1936.92     0  03:52      936.92
+  667                  JUNCTION     0.00     0.00  1000.00     0  00:00        0.00
+  670                  JUNCTION     0.00     0.00   995.00     0  00:00        0.00
+  671                  JUNCTION     0.00     0.00   995.00     0  00:00        0.00
+  681                  JUNCTION   882.78   933.20  1893.20     0  07:18      933.20
+  693                  JUNCTION   883.75   934.19  1889.19     0  03:33      934.19
+  704                  JUNCTION   775.96   929.07  1874.07     0  19:30      929.07
+  711                  JUNCTION     7.54    76.50  1026.50     1  00:00       76.50
+  714                  JUNCTION     0.00     0.00   950.00     0  00:00        0.00
+  723                  JUNCTION     0.00     0.00   955.00     0  00:00        0.00
+  742                  JUNCTION     0.00     0.00   950.00     0  00:00        0.00
+  743                  JUNCTION     0.00     0.00   950.00     0  00:00        0.00
+  745                  JUNCTION     0.00     0.00   950.00     0  00:00        0.00
+  749                  JUNCTION     0.00     0.00   950.00     0  00:00        0.00
+  768                  JUNCTION     0.00     0.00   997.00     0  00:00        0.00
+  769                  JUNCTION     0.00     0.00   973.30     0  00:00        0.00
+  770                  JUNCTION     0.00     0.00   962.30     0  00:00        0.00
+  771                  JUNCTION     0.00     0.00   952.80     0  00:00        0.00
+  788                  JUNCTION     0.00     0.00   950.00     0  00:00        0.00
+  801                  JUNCTION     0.00     0.00   950.00     0  00:00        0.00
+  805                  JUNCTION     0.00     0.00   950.00     0  00:00        0.00
+  812                  JUNCTION     0.00     0.00   950.00     0  00:00        0.00
+  813                  JUNCTION     0.00     0.00   950.00     0  00:00        0.00
+  814                  JUNCTION     0.00     0.00   950.00     0  00:00        0.00
+  815                  JUNCTION     0.00     0.00   950.00     0  00:00        0.00
+  828                  JUNCTION     0.00     0.00   950.00     0  00:00        0.00
+  831                  JUNCTION     0.00     0.00   950.00     0  00:00        0.00
+  834                  JUNCTION     0.00     0.00   950.00     0  00:00        0.00
+  WMARKET              JUNCTION     0.00     0.00   945.00     0  00:00        0.00
+  EMARKET              JUNCTION     0.00     0.00   950.00     0  00:00        0.00
+  MONROEST             JUNCTION     0.00     0.00   955.00     0  00:00        0.00
+  851                  JUNCTION     0.00     0.00   950.00     0  00:00        0.00
+  89str                JUNCTION   884.12   934.60  1868.20     0  03:17      934.60
+  HW_Link_350          JUNCTION   880.26   930.64  1857.78     0  07:02      930.64
+  TW_Link_350          JUNCTION   778.57   930.54  1857.83     0  07:02      930.52
+  BO_ovflow            JUNCTION   885.21   935.83  1867.16     0  03:24      935.83
+  ovflW241             JUNCTION   912.00   965.92  1929.84     0  03:24      965.92
+  W337str              JUNCTION   943.47  1001.47  1999.69     0  04:18     1001.47
+  139ch                JUNCTION   937.14   994.28  1985.56     0  03:41      994.28
+  ovflow141            JUNCTION   927.89   983.83  1972.33     0  03:26      983.83
+  Eastculv             JUNCTION   915.27   969.81  1938.01     0  07:08      969.80
+  ovflow               JUNCTION   808.06   971.50  1938.00     0  07:08      971.50
+  Overflow1            JUNCTION   783.92   935.99  1863.28     0  07:43      935.99
+  Hypo_pipe            JUNCTION     0.00     0.00   927.23     0  00:00        0.00
+  159over              JUNCTION   887.71   939.01  1874.71     0  06:41      939.00
+  159free              JUNCTION   786.66   939.35  1874.70     0  06:41      939.35
+  161road              JUNCTION   888.81   939.91  1874.32     0  03:48      939.91
+  162_pndout           JUNCTION   884.82   935.39  1869.78     0  03:38      935.39
+  Ovflow166            JUNCTION   920.95   976.00   976.00     0  03:24      976.00
+  170str               JUNCTION   896.95   949.00  1896.00     0  03:29      949.00
+  162str               JUNCTION   887.59   938.50  1874.50     0  03:35      938.50
+  20str                JUNCTION   890.00   941.20  1878.40     0  03:22      941.20
+  31str                JUNCTION   891.03   942.35  1882.70     0  03:24      942.35
+  16ch                 JUNCTION   886.51   937.29  1871.08     0  03:34      937.29
+  future24r            JUNCTION   890.26   941.48  1881.46     0  03:18      941.48
+  253ch                JUNCTION   887.77   938.69  1875.38     0  03:23      938.69
+  lkN21str             JUNCTION   879.49   929.58  1858.07     0  06:48      929.55
+  lkN21prop            JUNCTION   779.82   930.37  1857.99     0  06:47      930.37
+  lkN26ch              JUNCTION   879.63   929.91  1857.14     0  07:16      929.87
+  lkN25prop            JUNCTION   777.49   930.04  1857.08     0  07:15      930.04
+  lkN27ch              JUNCTION   879.45   929.73  1856.77     0  06:57      929.72
+  lkN27prop            JUNCTION   779.64   929.84  1856.68     0  06:45      929.84
+  lkN32st              JUNCTION   879.03   929.09  1856.71     0  06:42      929.03
+  lkN32prop            JUNCTION   779.73   929.70  1856.65     0  06:42      929.70
+  155ch                JUNCTION   879.72   929.95  1856.90     0  06:55      929.95
+  155prop              JUNCTION   777.75   929.78  1856.92     0  06:56      929.78
+  lkN157ch             JUNCTION   880.57   930.64  1857.78     0  03:31      930.64
+  272ch                JUNCTION   880.72   930.79  1858.08     0  03:23      930.79
+  273ch                JUNCTION   880.25   930.34  1857.18     0  04:30      930.34
+  E28str               JUNCTION   889.13   940.22  1878.44     0  03:19      940.22
+  E32str               JUNCTION   888.52   939.54  1876.33     0  03:21      939.54
+  e40str               JUNCTION   882.26   932.55  1859.10     0  03:36      932.55
+  e61str               JUNCTION   879.94   929.92  1857.84     0  03:20      929.92
+  South                JUNCTION   882.32   932.89  1863.24     0  06:39      932.85
+  Overflow             JUNCTION   782.05   933.10  1863.20     0  06:39      933.10
+  Perry2c              JUNCTION   884.73   935.44  1869.54     0  06:36      935.40
+  PerryStr             JUNCTION   784.14   936.00  1869.50     0  06:35      936.00
+  HS2                  JUNCTION   886.17   937.00  1869.00     0  04:28      937.00
+  RichE                JUNCTION   892.55   944.27  1886.51     0  06:41      944.26
+  RichOver             JUNCTION   789.86   944.50  1886.50     0  06:40      944.50
+  bu567ch              JUNCTION   911.49   965.54  1928.58     0  06:57      965.54
+  bu576ch              JUNCTION   918.74   973.51  1945.77     0  03:25      973.51
+  bu563st              JUNCTION   919.12   973.94  1945.38     0  03:35      973.94
+  bu575ch              JUNCTION   914.34   968.55  1935.60     0  03:23      968.55
+  bu372str             JUNCTION   894.45   946.19  1890.38     0  03:30      946.19
+  bu292st              JUNCTION   918.43   973.17  1943.84     0  03:36      973.17
+  bu291st              JUNCTION   917.99   972.67  1942.84     0  03:35      972.67
+  bu290st              JUNCTION   917.53   972.15  1941.80     0  03:33      972.15
+  bu570st              JUNCTION   915.86   970.27  1938.37     0  04:15      970.27
+  bu269st              JUNCTION   912.40   966.37  1931.24     0  03:25      966.37
+  bu280st              JUNCTION   918.41   973.14  1943.78     0  03:36      973.14
+  bu295ch              JUNCTION   936.35   993.38  1986.38     0  05:31      993.38
+  Janes2               JUNCTION   885.88   936.64  1867.28     0  03:54      936.64
+  Box2                 JUNCTION   885.86   936.56  1868.12     0  03:26      936.56
+  bu330st              JUNCTION   918.38   973.10  1944.95     0  03:25      973.10
+  CntyMM2              JUNCTION   888.36   939.36  1874.22     0  03:25      939.36
+  s1ch                 JUNCTION   940.64   998.22  1996.22     0  03:41      998.22
+  MS42inchS            JUNCTION   905.72   959.22  1915.42     0  06:51      959.20
+  MS18inchN            JUNCTION   800.01   959.45  1915.40     0  06:51      959.45
+  W154str              JUNCTION   895.07   946.89  1891.78     0  03:23      946.89
+  57ch                 JUNCTION   890.00   941.20  1880.40     0  03:26      941.20
+  bu308ch              JUNCTION   891.18   942.52  1883.04     0  03:25      942.52
+  bu540ch              JUNCTION   912.77   966.78  1932.06     0  03:25      966.78
+  bu556st              JUNCTION   911.98   965.89  1930.28     0  03:26      965.89
+  bu270st              JUNCTION   916.51   971.00  1940.00     0  03:29      971.00
+  bu453ch              JUNCTION   961.59  1021.95  2041.40     0  03:41     1021.95
+  bu266ch              JUNCTION   905.81   959.18  1915.86     0  07:02      959.18
+  bu268st              JUNCTION   896.78   948.80  1897.38     0  03:38      948.80
+  Spillway             JUNCTION   905.32   958.40  1915.80     0  03:20      958.40
+  Spillway2            JUNCTION   903.36   956.20  1911.40     0  03:20      956.20
+  508str               JUNCTION   920.79   975.82  1949.64     0  03:38      975.82
+  510str               JUNCTION   926.78   982.58  1963.16     0  03:37      982.58
+  512str               JUNCTION   893.74   945.40  1887.97     0  03:31      945.40
+  513ch                JUNCTION   889.07   940.17  1877.84     0  03:48      940.17
+  516str               JUNCTION   887.10   937.96  1873.17     0  03:44      937.96
+  183str               JUNCTION   893.05   944.63  1887.26     0  03:39      944.63
+  519ch                JUNCTION   956.60  1016.29  2031.33     0  03:38     1016.29
+  bu333ch              JUNCTION   913.42   967.52  1933.54     0  03:26      967.52
+  601ch                JUNCTION   930.67   987.00  1970.50     0  04:04      987.00
+  607tstr              JUNCTION   879.39   929.30  1858.38     0  04:40      929.30
+  607tconcp            JUNCTION   778.63   932.15  1858.30     0  10:57      932.15
+  614str               JUNCTION   884.34   934.85  1867.70     0  03:34      934.85
+  outlet1              JUNCTION   882.76   933.08  1866.08     0  03:31      933.08
+  688_pndin            JUNCTION   883.76   934.21  1867.42     0  04:21      934.21
+  689_outlet           JUNCTION   883.66   934.10  1867.20     0  04:22      934.10
+  725p2                JUNCTION   885.21   936.12  1869.24     0  06:43      936.12
+  725over              JUNCTION   783.44   935.98  1869.27     0  06:43      935.96
+  606tstr              JUNCTION   884.41   935.50  1865.45     0  07:20      935.50
+  606tconcp            JUNCTION   780.05   934.91  1865.46     0  07:20      934.91
+  606ttstr             JUNCTION   882.78   933.61  1864.16     0  08:40      933.61
+  606ttconcp           JUNCTION   782.57   935.08  1864.16     0  08:40      935.08
+  67tstr               JUNCTION   881.45   932.30  1860.40     0  08:42      932.30
+  67tconcp             JUNCTION   781.03   933.20  1860.40     0  08:42      933.20
+  67ttstr              JUNCTION   881.45   932.30  1860.40     0  08:42      932.30
+  67ttconcp            JUNCTION   781.03   933.20  1860.40     0  08:42      933.20
+  68tstr               JUNCTION   880.44   931.31  1858.01     0  09:24      931.30
+  68tconcp             JUNCTION   778.75   932.00  1858.00     0  09:23      932.00
+  68ttstr              JUNCTION   880.44   931.31  1858.01     0  09:24      931.30
+  68ttconcp            JUNCTION   778.75   932.00  1858.00     0  09:23      932.00
+  688e_pndin           JUNCTION   883.20   933.66  1866.41     0  07:06      933.65
+  Node_10151014        JUNCTION   778.22   933.70  1866.40     0  07:05      933.70
+  688c_pndin           JUNCTION   884.04   934.51  1868.02     0  03:39      934.51
+  688b_pndin           JUNCTION   882.69   933.00  1865.00     0  03:28      933.00
+  Node_10121013        JUNCTION     0.00     0.00   932.80     0  00:00        0.00
+  688d_pndin           JUNCTION   883.24   933.71  1866.51     0  07:03      933.70
+  Node_10131015        JUNCTION   779.17   933.75  1866.50     0  07:02      933.75
+  689g_utlet           JUNCTION   883.24   933.70  1866.40     0  07:11      933.70
+  Node_10141028        JUNCTION   776.90   933.61  1866.41     0  07:11      933.61
+  689t_outle           JUNCTION   882.65   933.01  1865.81     0  06:41      933.01
+  Node_1028439         JUNCTION   775.26   933.30  1865.60     0  07:13      933.30
+  splway               JUNCTION     0.59     0.59     0.59     0  00:01        0.59
+  Node_10141031        JUNCTION     0.00     0.00     0.00     0  00:00        0.00
+  6869g_utle           JUNCTION   883.24   933.70  1866.40     0  07:11      933.70
+  Node_10311028        JUNCTION   776.90   933.61  1866.41     0  07:11      933.61
+  68p                  JUNCTION   883.24   933.70  1866.40     0  07:11      933.70
+  Node_10311034        JUNCTION   776.90   933.61  1866.41     0  07:11      933.61
+  6869p                JUNCTION   883.17   933.60  1866.20     0  06:53      933.60
+  Node_10341028        JUNCTION   778.29   933.41  1866.21     0  06:54      933.40
+  68pp                 JUNCTION   885.45   936.11  1872.11     0  06:51      936.09
+  Node_10141034        JUNCTION     0.00     0.00   932.60     0  00:00        0.00
+  dble12p              JUNCTION   889.20   940.30  1880.28     0  03:30      940.30
+  ftre15p              JUNCTION     0.00     0.00   939.90     0  00:00        0.00
+  futre18r             JUNCTION   889.20   940.30  1880.28     0  03:30      940.30
+  overlnd3             JUNCTION     0.00     0.00   939.90     0  00:00        0.00
+  Street1              JUNCTION   890.02   941.39  1881.37     0  06:36      941.33
+  Node_10421040        JUNCTION   787.60   941.40  1881.30     0  06:36      941.40
+  516stra              JUNCTION   887.10   937.96  1873.17     0  03:44      937.96
+  516strb              JUNCTION   884.95   935.53  1870.74     0  04:16      935.53
+  Node_1051438         JUNCTION   782.75   936.54  1870.33     0  07:03      936.54
+  ndBF9                OUTFALL      0.00     0.00   950.00     0  00:00        0.00
+  ndW156               STORAGE      8.86    10.00   970.00     0  03:38       10.00
+  ndW327               STORAGE      1.99     4.25   979.45     1  00:00        4.25
+  ndW328               STORAGE      0.00     0.00  1000.00     0  00:00        0.00
+  ndW374               STORAGE      0.00     0.00  1020.00     0  00:00        0.00
+  ndW326               STORAGE      0.00     0.00   972.00     0  00:00        0.00
+  160                  STORAGE      0.00     0.00   950.00     0  00:00        0.00
+  172                  STORAGE      0.00     0.00   963.00     0  00:00        0.00
+  179                  STORAGE      0.00     0.00   961.00     0  00:00        0.00
+  ndNW1                STORAGE      8.41    10.00   965.00     0  06:11       10.00
+  ndNW11               STORAGE      7.25    10.00   960.00     0  09:20       10.00
+  ndNW14               STORAGE      0.00     0.00   950.00     0  00:00        0.00
+  ndNW12               STORAGE      0.00     0.00   951.00     0  00:00        0.00
+  Nd_FL1               STORAGE      0.00     0.00   950.00     0  00:00        0.00
+  Nd_FL2               STORAGE      0.00     0.00   955.00     0  00:00        0.00
+  Nd_FL11              STORAGE      0.00     0.00   960.00     0  00:00        0.00
+  ndE16                STORAGE      0.00     0.00   950.00     0  00:00        0.00
+  ndE20                STORAGE      0.00     0.00   960.00     0  00:00        0.00
+  ndE23                STORAGE      9.54    10.00   970.00     0  02:46       10.00
+  ndBU40               STORAGE      0.00     0.00   980.00     0  00:00        0.00
+  ndBU83               STORAGE      8.36    10.00  1001.00     0  06:20       10.00
+  ndBU125              STORAGE      0.00     0.00  1040.00     0  00:00        0.00
+  ndBU307              STORAGE      1.53     2.88   942.88     1  00:00        2.88
+  ndBU82               STORAGE      0.00     0.00   985.00     0  00:00        0.00
+  ndS3                 STORAGE      5.32    10.00   980.00     0  23:53       10.00
+  ndS15                STORAGE      7.07    10.00   990.00     0  09:44       10.00
+  669                  STORAGE      9.54    10.00  1007.00     0  02:46       10.00
+  687                  STORAGE      0.00     0.00   950.00     0  00:00        0.00
+  727                  STORAGE      0.16     0.35   950.35     1  00:00        0.35
+  
+  
+  *******************
+  Node Inflow Summary
+  *******************
+  
+  -------------------------------------------------------------------------------------------------
+                                  Maximum  Maximum                  Lateral       Total        Flow
+                                  Lateral    Total  Time of Max      Inflow      Inflow     Balance
+                                   Inflow   Inflow   Occurrence      Volume      Volume       Error
+  Node                 Type           CFS      CFS  days hr:min    10^6 gal    10^6 gal     Percent
+  -------------------------------------------------------------------------------------------------
+  ndBF8                JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  ndBF18               JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  ndBF22               JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  ndBF29               JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  ndBF30               JUNCTION      1.00     2.02     0  19:28       0.646       0.757      14.408
+  ndBF33               JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  ndBF42               JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  ndBF45               JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  ndBF14               JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  ndBF19               JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  ndBF46               JUNCTION      0.00     1.00     0  19:35           0       0.209      77.339
+  ndW143               JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  ndW152               JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  ndW179               JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  ndW211               JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  ndW217               JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  ndW242               JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  ndW254               JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  ndW280               JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  ndW291               JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  ndW338               JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  ndW339               JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  ndW412               JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  ndW140               JUNCTION      0.00     1.75     0  06:34           0       0.107       0.000
+  ndW149               JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  ndW252               JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  ndW281               JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  ndW297               JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  ndW396               JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  ndW0                 JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  140                  JUNCTION      0.00     1.00     0  03:26           0       0.554       0.000
+  149                  JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  151                  JUNCTION      1.00     1.00     0  00:00       0.646       0.646       1.734
+  157                  JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  165                  JUNCTION      0.00     0.67     0  03:24           0    9.61e-05     -82.668
+  174                  JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  177                  JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  ndNW6                JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  ndNW8                JUNCTION      0.00     1.00     0  06:43           0       0.555      18.236
+  ndNW17               JUNCTION      1.00     1.00     0  00:00       0.646       0.646      16.372
+  33                   JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  ndNW3                JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  ndNW13               JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  ndNW18               JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  Nd_FL8               JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  Nd_FL3               JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  Nd_FL9               JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  N20                  JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  N24                  JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  N29                  JUNCTION      1.00     1.00     0  00:00       0.646       0.646      21.186
+  N26                  JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  N27                  JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  N28                  JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  154                  JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  156                  JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  274                  JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  276                  JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  ndE7                 JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  ndE8                 JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  ndE9                 JUNCTION      1.00     1.00     0  00:00       0.646       0.646      26.395
+  ndE10                JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  ndE11                JUNCTION      0.00     2.93     0  03:15           0       0.562       0.000
+  ndE12                JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  ndE13                JUNCTION      1.00     1.00     0  00:00       0.646       0.646      14.932
+  ndE14                JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  ndE15                JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  ndE17                JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  ndE19                JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  ndE22                JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  ndE43                JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  ndE58                JUNCTION      1.00     1.00     0  00:00       0.646       0.646      16.690
+  ndE60                JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  ndE67                JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  ndBU18               JUNCTION      1.00     1.00     0  00:00       0.646       0.646      17.246
+  ndBU45               JUNCTION      0.00     1.00     0  06:34           0       0.557      19.188
+  ndBU69               JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  ndBU98               JUNCTION      0.00     1.00     0  13:06           0       0.538       0.000
+  ndBU102              JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  ndBU109              JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  ndBU114              JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  ndBU120              JUNCTION      1.00     1.00     0  00:00       0.646       0.646      20.149
+  ndBU133              JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  ndBU313              JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  ndBU41               JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  ndBU43               JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  ndBU57               JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  ndBU65               JUNCTION      0.00     1.32     0  06:57           0       0.103       0.000
+  ndBU66               JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  ndBU72               JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  ndBU73               JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  ndBU75               JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  ndBU77               JUNCTION      0.00     1.00     0  06:42           0        0.55       0.000
+  ndBU78               JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  ndBU79               JUNCTION      0.00     1.48     0  06:44           0       0.107       0.000
+  ndBU80               JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  ndBU84               JUNCTION      0.00     3.84     0  07:17           0       0.916      11.870
+  ndBU92               JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  ndBU96               JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  ndBU97               JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  ndBU117              JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  ndBU310              JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  ndBU311              JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  ndBU315              JUNCTION      0.00     1.25     0  07:13           0       0.551      34.655
+  ndBU319              JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  ndBU325              JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  ndS7                 JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  ndS13                JUNCTION      1.00     1.00     0  00:00       0.646       0.646      16.610
+  ndS19                JUNCTION      1.00     1.00     0  00:00       0.646       0.646      16.685
+  ndS2                 JUNCTION      0.00     2.35     0  12:15           0       0.723       0.000
+  ndS6                 JUNCTION      0.00     1.00     0  06:36           0       0.552      20.938
+  ndS16                JUNCTION      0.00     1.00     0  06:54           0       0.554      20.733
+  ndS29                JUNCTION      0.00     1.00     0  03:26           0       0.554      21.543
+  ndS30                JUNCTION      0.00     1.00     0  09:15           0       0.456      24.951
+  ndS116               JUNCTION      0.00     2.06     0  10:29           0       0.821      13.602
+  463                  JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  499                  JUNCTION      1.00     1.00     0  00:00       0.646       0.646      16.566
+  504                  JUNCTION      1.00     1.00     0  00:00       0.646       0.646      15.625
+  615                  JUNCTION      1.00     1.00     0  00:00       0.646       0.646      14.828
+  665                  JUNCTION      1.00     1.00     0  00:00       0.646       0.646      15.875
+  667                  JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  670                  JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  671                  JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  681                  JUNCTION      1.00     1.47     0  07:19       0.646       0.653      17.213
+  693                  JUNCTION      1.00     1.00     0  00:00       0.646       0.646      17.388
+  704                  JUNCTION      0.00     1.10     0  06:58           0       0.533     155.717
+  711                  JUNCTION      0.00     0.06     0  20:39           0     0.00719    7190.579 gal
+  714                  JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  723                  JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  742                  JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  743                  JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  745                  JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  749                  JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  768                  JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  769                  JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  770                  JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  771                  JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  788                  JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  801                  JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  805                  JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  812                  JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  813                  JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  814                  JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  815                  JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  828                  JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  831                  JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  834                  JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  WMARKET              JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  EMARKET              JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  MONROEST             JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  851                  JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  89str                JUNCTION      1.00     1.00     0  00:00       0.646       0.646      15.907
+  HW_Link_350          JUNCTION      1.00     1.74     0  07:02       0.646       0.655      17.094
+  TW_Link_350          JUNCTION      0.00     1.45     0  07:01           0       0.103       0.000
+  BO_ovflow            JUNCTION      1.00     1.00     0  00:00       0.646       0.646      16.556
+  ovflW241             JUNCTION      1.00     1.00     0  00:00       0.646       0.646      16.525
+  W337str              JUNCTION      1.00     1.00     0  00:00       0.646       0.646      21.858
+  139ch                JUNCTION      1.00     1.00     0  00:00       0.646       0.646      18.191
+  ovflow141            JUNCTION      1.00     1.00     0  00:00       0.646       0.646      16.698
+  Eastculv             JUNCTION      1.00     1.17     0  07:05       0.646       0.646      16.934
+  ovflow               JUNCTION      0.00     1.21     0  07:08           0       0.553       0.000
+  Overflow1            JUNCTION      0.00     1.67     0  03:15           0       0.558      21.989
+  Hypo_pipe            JUNCTION      0.00     1.00     0  07:43           0       0.458       0.000
+  159over              JUNCTION      1.00     1.17     0  06:33       0.646       0.646      16.192
+  159free              JUNCTION      0.00     1.33     0  06:33           0       0.556       0.000
+  161road              JUNCTION      1.00     1.00     0  00:00       0.646       0.646      18.882
+  162_pndout           JUNCTION      1.00     1.00     0  00:00       0.646       0.646      17.892
+  Ovflow166            JUNCTION      1.00     1.00     0  03:24       0.646       0.647      16.530
+  170str               JUNCTION      1.00     1.00     0  00:00       0.646       0.646      17.022
+  162str               JUNCTION      1.00     1.00     0  00:00       0.646       0.646      17.587
+  20str                JUNCTION      1.00     1.00     0  00:00       0.646       0.646      16.376
+  31str                JUNCTION      1.00     1.00     0  00:00       0.646       0.646      16.588
+  16ch                 JUNCTION      1.00     1.00     0  00:00       0.646       0.646      17.468
+  future24r            JUNCTION      1.00     1.00     0  00:00       0.646       0.646      15.946
+  253ch                JUNCTION      1.00     1.00     0  00:00       0.646       0.646      16.415
+  lkN21str             JUNCTION      1.00     1.32     0  06:47       0.646       0.646      16.129
+  lkN21prop            JUNCTION      0.00     1.98     0  06:48           0       0.557       0.000
+  lkN26ch              JUNCTION      1.00     1.00     0  00:00       0.646       0.646      17.966
+  lkN25prop            JUNCTION      0.00     1.74     0  07:17           0       0.548       0.000
+  lkN27ch              JUNCTION      1.00     1.53     0  06:41       0.646       0.647      15.815
+  lkN27prop            JUNCTION      0.00     2.12     0  06:57           0       0.558       0.000
+  lkN32st              JUNCTION      1.00     1.59     0  06:42       0.646       0.647      16.065
+  lkN32prop            JUNCTION      0.00     1.89     0  06:43           0       0.557       0.000
+  155ch                JUNCTION      1.00     1.26     0  06:55       0.646       0.654      16.830
+  155prop              JUNCTION      0.00     1.33     0  06:33           0      0.0997       0.000
+  lkN157ch             JUNCTION      1.00     1.00     0  00:00       0.646       0.646      17.213
+  272ch                JUNCTION      1.00     1.00     0  00:00       0.646       0.646      16.415
+  273ch                JUNCTION      1.00     1.00     0  00:00       0.646       0.646      23.126
+  E28str               JUNCTION      1.00     1.00     0  00:00       0.646       0.646      16.102
+  E32str               JUNCTION      1.00     1.00     0  00:00       0.646       0.646      16.235
+  e40str               JUNCTION      1.00     1.00     0  00:00       0.646       0.646      17.676
+  e61str               JUNCTION      1.00     1.00     0  00:00       0.646       0.646      16.157
+  South                JUNCTION      1.00     1.16     0  06:33       0.646       0.646      16.111
+  Overflow             JUNCTION      0.00     1.44     0  06:39           0       0.557       0.000
+  Perry2c              JUNCTION      1.00     1.20     0  06:34       0.646       0.646      15.894
+  PerryStr             JUNCTION      0.00     1.42     0  06:36           0       0.558       0.000
+  HS2                  JUNCTION      1.00     1.00     0  00:00       0.646       0.646      22.933
+  RichE                JUNCTION      1.00     1.50     0  06:38       0.646       0.646      16.165
+  RichOver             JUNCTION      0.00     1.47     0  06:38           0       0.556       0.000
+  bu567ch              JUNCTION      1.00     1.44     0  06:59       0.646       0.657      16.923
+  bu576ch              JUNCTION      1.00     1.00     0  00:00       0.646       0.646      16.667
+  bu563st              JUNCTION      1.00     1.00     0  00:00       0.646       0.646      17.563
+  bu575ch              JUNCTION      1.00     1.64     0  06:57       0.646       0.911      11.109
+  bu372str             JUNCTION      1.00     1.00     0  00:00       0.646       0.646      17.086
+  bu292st              JUNCTION      1.00     1.00     0  00:00       0.646       0.646      17.716
+  bu291st              JUNCTION      1.00     1.00     0  00:00       0.646       0.646      17.611
+  bu290st              JUNCTION      1.00     1.00     0  00:00       0.646       0.646      17.412
+  bu570st              JUNCTION      1.00     1.00     0  00:00       0.646       0.646      17.606
+  bu269st              JUNCTION      1.00     1.00     0  00:00       0.646       0.646      16.651
+  bu280st              JUNCTION      1.00     1.00     0  00:00       0.646       0.646      17.676
+  bu295ch              JUNCTION      1.00     1.00     0  00:00       0.646       0.646      17.394
+  Janes2               JUNCTION      1.00     1.00     0  00:00       0.646       0.646      19.399
+  Box2                 JUNCTION      1.00     1.00     0  00:00       0.646       0.646      16.730
+  bu330st              JUNCTION      1.00     1.00     0  00:00       0.646       0.646      16.659
+  CntyMM2              JUNCTION      1.00     1.00     0  00:00       0.646       0.646      16.611
+  s1ch                 JUNCTION      1.00     1.00     0  00:00       0.646       0.646      17.059
+  MS42inchS            JUNCTION      1.00     1.57     0  06:44       0.646       0.646      16.653
+  MS18inchN            JUNCTION      0.00     1.59     0  06:44           0       0.554       0.000
+  W154str              JUNCTION      1.00     1.00     0  00:00       0.646       0.646      16.454
+  57ch                 JUNCTION      1.00     1.00     0  00:00       0.646       0.646      16.730
+  bu308ch              JUNCTION      1.00     3.00     0  13:14       0.646        1.47       6.732
+  bu540ch              JUNCTION      1.00     1.00     0  00:00       0.646       0.646      16.635
+  bu556st              JUNCTION      1.00     1.47     0  06:57       0.646        0.84      12.382
+  bu270st              JUNCTION      1.00     1.00     0  00:00       0.646       0.646      16.982
+  bu453ch              JUNCTION      1.00     1.00     0  00:00       0.646       0.646      18.207
+  bu266ch              JUNCTION      1.00     1.78     0  07:03       0.646        0.66      17.034
+  bu268st              JUNCTION      1.00     1.00     0  00:00       0.646       0.646      16.118
+  Spillway             JUNCTION      1.00     1.00     0  00:00       0.646       0.646      16.196
+  Spillway2            JUNCTION      1.00     1.00     0  00:00       0.646       0.646      16.157
+  508str               JUNCTION      1.00     1.00     0  00:00       0.646       0.646      17.908
+  510str               JUNCTION      1.00     1.00     0  00:00       0.646       0.646      17.764
+  512str               JUNCTION      1.00     1.00     0  00:00       0.646       0.646      17.205
+  513ch                JUNCTION      1.00     1.00     0  00:00       0.646       0.646      18.841
+  516str               JUNCTION      1.00     1.00     0  00:00       0.646       0.646      18.442
+  183str               JUNCTION      1.00     1.00     0  00:00       0.646       0.646      17.965
+  519ch                JUNCTION      1.00     1.00     0  00:00       0.646       0.646      17.900
+  bu333ch              JUNCTION      1.00     1.00     0  00:00       0.646       0.646      16.737
+  601ch                JUNCTION      1.00     1.00     0  00:00       0.646       0.646      20.456
+  607tstr              JUNCTION      1.00     1.00     0  00:00       0.646       0.646      16.091
+  607tconcp            JUNCTION      0.00     1.16     0  06:34           0       0.557       0.000
+  614str               JUNCTION      1.00     1.00     0  00:00       0.646       0.646      17.452
+  outlet1              JUNCTION      1.00     1.00     0  00:00       0.646       0.646      15.788
+  688_pndin            JUNCTION      1.00     1.00     0  00:00       0.646       0.646      22.229
+  689_outlet           JUNCTION      1.00     1.00     0  00:00       0.646       0.646      22.332
+  725p2                JUNCTION      1.00     1.33     0  06:43       0.646       0.647      16.350
+  725over              JUNCTION      0.00     1.32     0  06:40           0      0.0907       0.000
+  606tstr              JUNCTION      1.00     1.54     0  07:20       0.646       0.647      18.319
+  606tconcp            JUNCTION      0.00     1.00     0  06:35           0      0.0983       0.000
+  606ttstr             JUNCTION      1.00     1.18     0  08:37       0.646       0.647      20.159
+  606ttconcp           JUNCTION      0.00     1.15     0  06:32           0       0.538       0.000
+  67tstr               JUNCTION      1.00     1.09     0  08:37       0.646       0.646      21.323
+  67tconcp             JUNCTION      0.00     1.25     0  06:31           0       0.533       0.000
+  67ttstr              JUNCTION      1.00     1.09     0  08:37       0.646       0.646      21.323
+  67ttconcp            JUNCTION      0.00     1.25     0  06:31           0       0.533       0.000
+  68tstr               JUNCTION      1.00     1.00     0  00:00       0.646       0.646      23.656
+  68tconcp             JUNCTION      0.00     1.61     0  09:24           0       0.523       0.000
+  68ttstr              JUNCTION      1.00     1.00     0  00:00       0.646       0.646      23.656
+  68ttconcp            JUNCTION      0.00     1.61     0  09:24           0       0.523       0.000
+  688e_pndin           JUNCTION      1.00     1.06     0  06:41       0.646       0.646      17.676
+  Node_10151014        JUNCTION      0.00     1.50     0  06:39           0       0.549       0.000
+  688c_pndin           JUNCTION      1.00     1.00     0  00:00       0.646       0.646      17.981
+  688b_pndin           JUNCTION      1.00     1.00     0  00:00       0.646       0.646      16.903
+  Node_10121013        JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  688d_pndin           JUNCTION      1.00     1.00     0  00:00       0.646       0.646      17.362
+  Node_10131015        JUNCTION      0.00     1.43     0  07:03           0       0.551       0.000
+  689g_utlet           JUNCTION      1.00     1.48     0  07:12       0.646       0.656      17.741
+  Node_10141028        JUNCTION      0.00     1.23     0  06:42           0       0.104       0.000
+  689t_outle           JUNCTION      1.00     1.00     0  00:00       0.646       0.646      16.787
+  Node_1028439         JUNCTION      0.00     1.88     0  06:44           0       0.553       0.000
+  splway               JUNCTION      1.00     1.00     0  00:00       0.646       0.646       0.039
+  Node_10141031        JUNCTION      0.00     0.99     0  00:01           0       0.637       0.000
+  6869g_utle           JUNCTION      1.00     1.48     0  07:12       0.646       0.656      17.741
+  Node_10311028        JUNCTION      0.00     1.23     0  06:42           0       0.104       0.000
+  68p                  JUNCTION      1.00     1.48     0  07:12       0.646       0.656      17.741
+  Node_10311034        JUNCTION      0.00     1.23     0  06:42           0       0.104       0.000
+  6869p                JUNCTION      1.00     1.45     0  06:54       0.646       0.653      16.942
+  Node_10341028        JUNCTION      0.00     1.00     0  06:38           0      0.0982       0.000
+  68pp                 JUNCTION      1.00     1.00     0  00:00       0.646       0.646      15.751
+  Node_10141034        JUNCTION      0.00     1.39     0  06:49           0       0.558       0.000
+  dble12p              JUNCTION      1.00     1.00     0  00:00       0.646       0.646      15.913
+  ftre15p              JUNCTION      0.00     1.00     0  03:30           0       0.558       0.000
+  futre18r             JUNCTION      1.00     1.00     0  00:00       0.646       0.646      15.913
+  overlnd3             JUNCTION      0.00     1.00     0  03:30           0       0.558       0.000
+  Street1              JUNCTION      1.00     1.10     0  06:35       0.646       0.646      15.966
+  Node_10421040        JUNCTION      0.00     1.22     0  06:36           0       0.557       0.000
+  516stra              JUNCTION      1.00     1.00     0  00:00       0.646       0.646      18.442
+  516strb              JUNCTION      1.00     1.00     0  00:00       0.646       0.646      16.086
+  Node_1051438         JUNCTION      0.00     1.01     0  06:35           0       0.557       0.000
+  ndBF9                OUTFALL       0.00     0.00     0  00:00           0           0       0.000 gal
+  ndW156               STORAGE       0.00    32.05     0  03:22           0       0.635      -0.030
+  ndW327               STORAGE       0.00    14.80     0  03:25           0       0.563      -0.005
+  ndW328               STORAGE       0.00     0.00     0  00:00           0           0       0.000 gal
+  ndW374               STORAGE       0.00     0.00     0  00:00           0           0       0.000 gal
+  ndW326               STORAGE       0.00     0.00     0  00:00           0           0       0.000 gal
+  160                  STORAGE       0.00     0.00     0  00:00           0           0       0.000 gal
+  172                  STORAGE       0.00     0.00     0  00:00           0           0       0.000 gal
+  179                  STORAGE       0.00     0.00     0  00:00           0           0       0.000 gal
+  ndNW1                STORAGE       0.00     1.00     0  06:41           0       0.554      -0.002
+  ndNW11               STORAGE       0.00     2.81     0  06:39           0        0.47      -0.001
+  ndNW14               STORAGE       0.00     0.00     0  00:00           0           0       0.000 gal
+  ndNW12               STORAGE       0.00     0.00     0  00:00           0           0       0.000 gal
+  Nd_FL1               STORAGE       0.00     0.00     0  00:00           0           0       0.000 gal
+  Nd_FL2               STORAGE       0.00     0.00     0  00:00           0           0       0.000 gal
+  Nd_FL11              STORAGE       0.00     0.00     0  00:00           0           0       0.000 gal
+  ndE16                STORAGE       0.00     0.00     0  00:00           0           0       0.000 gal
+  ndE20                STORAGE       0.00     0.00     0  00:00           0           0       0.000 gal
+  ndE23                STORAGE       1.00     1.00     0  00:00       0.646       0.646       0.003
+  ndBU40               STORAGE       0.00     0.00     0  00:00           0           0       0.000 gal
+  ndBU83               STORAGE       0.00     1.00     0  06:40           0       0.551       0.001
+  ndBU125              STORAGE       0.00     0.00     0  00:00           0           0       0.000 gal
+  ndBU307              STORAGE       1.00     1.00     0  00:00       0.646       0.646       0.000
+  ndBU82               STORAGE       0.00     0.00     0  00:00           0           0       0.000 gal
+  ndS3                 STORAGE       1.00     1.00     0  00:00       0.646       0.646       0.000
+  ndS15                STORAGE       0.00     1.00     0  08:51           0       0.459       0.003
+  669                  STORAGE       1.00     1.00     0  00:00       0.646       0.646      -0.003
+  687                  STORAGE       0.00     0.00     0  00:00           0           0       0.000 gal
+  727                  STORAGE       0.00     5.46     0  03:16           0        1.12       0.004
+  
+  
+  **********************
+  Node Surcharge Summary
+  **********************
+  
+  Surcharging occurs when water rises above the top of the highest conduit.
+  ---------------------------------------------------------------------
+                                               Max. Height   Min. Depth
+                                   Hours       Above Crown    Below Rim
+  Node                 Type      Surcharged           Feet         Feet
+  ---------------------------------------------------------------------
+  ndBF18               JUNCTION       24.00          0.000        0.000
+  ndBF29               JUNCTION       24.00          0.000        0.000
+  ndBF30               JUNCTION       20.46          0.000        0.000
+  ndBF33               JUNCTION       24.00          0.000        0.000
+  ndW179               JUNCTION       24.00          0.000        0.000
+  ndW217               JUNCTION       24.00          0.000        0.000
+  ndW254               JUNCTION       24.00          0.000        0.000
+  ndW291               JUNCTION       24.00          0.000        0.000
+  ndW339               JUNCTION       24.00          0.000        0.000
+  ndW412               JUNCTION       24.00          0.000        0.000
+  157                  JUNCTION       24.00          0.000        0.000
+  N20                  JUNCTION       24.00          0.000        0.000
+  N24                  JUNCTION       24.00          0.000        0.000
+  N26                  JUNCTION       24.00          0.000        0.000
+  N28                  JUNCTION       24.00          0.000        0.000
+  154                  JUNCTION       24.00          0.000        0.000
+  ndE9                 JUNCTION       18.99          0.000        0.000
+  ndE11                JUNCTION       16.68          0.000        0.000
+  ndE22                JUNCTION       24.00          0.000        0.000
+  ndE58                JUNCTION       20.57          0.000        0.000
+  ndE60                JUNCTION       24.00          0.000        0.000
+  ndBU102              JUNCTION       24.00          0.000        0.000
+  ndBU109              JUNCTION       24.00          0.000        0.000
+  ndBU133              JUNCTION       24.00          0.000        0.000
+  ndBU72               JUNCTION       24.00          0.000        0.000
+  ndBU315              JUNCTION       15.20          0.000        0.000
+  ndS7                 JUNCTION       24.00          0.000        0.000
+  ndS2                 JUNCTION       11.65          0.000        0.000
+  681                  JUNCTION       16.70          0.000        0.000
+  693                  JUNCTION       20.45          0.000        0.000
+  788                  JUNCTION       24.00          0.000        0.000
+  801                  JUNCTION       24.00          0.000        0.000
+  805                  JUNCTION       24.00          0.000        0.000
+  813                  JUNCTION       24.00          0.000        0.000
+  814                  JUNCTION       24.00          0.000        0.000
+  815                  JUNCTION       24.00          0.000        0.000
+  828                  JUNCTION       24.00          0.000        0.000
+  831                  JUNCTION       24.00          0.000        0.000
+  834                  JUNCTION       24.00          0.000        0.000
+  WMARKET              JUNCTION       24.00          0.000        0.000
+  EMARKET              JUNCTION       24.00          0.000        0.000
+  MONROEST             JUNCTION       24.00          0.000        0.000
+  89str                JUNCTION       20.71          0.000        0.000
+  HW_Link_350          JUNCTION       16.96          0.000        0.000
+  BO_ovflow            JUNCTION       20.59          0.000        0.000
+  ovflW241             JUNCTION       20.60          0.000        0.000
+  W337str              JUNCTION       19.70          0.000        0.000
+  139ch                JUNCTION       20.31          0.000        0.000
+  ovflow               JUNCTION       16.87          0.000        0.000
+  159free              JUNCTION       17.31          0.000        0.000
+  161road              JUNCTION       20.19          0.000        0.000
+  162_pndout           JUNCTION       20.36          0.000        0.000
+  Ovflow166            JUNCTION       20.59          0.000        0.000
+  170str               JUNCTION       20.51          0.000        0.000
+  162str               JUNCTION       20.41          0.000        0.000
+  20str                JUNCTION       20.62          0.000        0.000
+  31str                JUNCTION       20.59          0.000        0.000
+  16ch                 JUNCTION       20.43          0.000        0.000
+  future24r            JUNCTION       20.70          0.000        0.000
+  253ch                JUNCTION       20.62          0.000        0.000
+  lkN21prop            JUNCTION       17.20          0.000        0.000
+  lkN25prop            JUNCTION       16.74          0.000        0.000
+  lkN27prop            JUNCTION       16.90          0.000        0.000
+  lkN32prop            JUNCTION       17.29          0.000        0.000
+  155ch                JUNCTION       17.08          0.000        0.000
+  lkN157ch             JUNCTION       20.48          0.000        0.000
+  272ch                JUNCTION       20.62          0.000        0.000
+  273ch                JUNCTION       19.49          0.000        0.000
+  E28str               JUNCTION       20.67          0.000        0.000
+  E32str               JUNCTION       20.65          0.000        0.000
+  e40str               JUNCTION       20.40          0.000        0.000
+  e61str               JUNCTION       20.66          0.000        0.000
+  Overflow             JUNCTION       17.34          0.000        0.000
+  PerryStr             JUNCTION       17.40          0.000        0.000
+  HS2                  JUNCTION       19.52          0.000        0.000
+  RichOver             JUNCTION       17.32          0.000        0.000
+  bu567ch              JUNCTION       17.04          0.000        0.000
+  bu576ch              JUNCTION       20.57          0.000        0.000
+  bu563st              JUNCTION       20.42          0.000        0.000
+  bu575ch              JUNCTION       20.62          0.000        0.000
+  bu372str             JUNCTION       20.50          0.000        0.000
+  bu292st              JUNCTION       20.39          0.000        0.000
+  bu291st              JUNCTION       20.41          0.000        0.000
+  bu290st              JUNCTION       20.44          0.000        0.000
+  bu269st              JUNCTION       20.57          0.000        0.000
+  bu280st              JUNCTION       20.40          0.000        0.000
+  Janes2               JUNCTION       20.10          0.000        0.000
+  Box2                 JUNCTION       20.56          0.000        0.000
+  bu330st              JUNCTION       20.57          0.000        0.000
+  CntyMM2              JUNCTION       20.58          0.000        0.000
+  MS18inchN            JUNCTION       17.14          0.000        0.000
+  W154str              JUNCTION       20.61          0.000        0.000
+  57ch                 JUNCTION       20.56          0.000        0.000
+  bu308ch              JUNCTION       20.57          0.000        0.000
+  bu540ch              JUNCTION       20.58          0.000        0.000
+  bu556st              JUNCTION       20.56          0.000        0.000
+  bu270st              JUNCTION       20.52          0.000        0.000
+  bu453ch              JUNCTION       20.30          0.000        0.000
+  bu266ch              JUNCTION       16.97          0.000        0.000
+  Spillway             JUNCTION       20.66          0.000        0.000
+  Spillway2            JUNCTION       20.66          0.000        0.000
+  508str               JUNCTION       20.36          0.000        0.000
+  510str               JUNCTION       20.38          0.000        0.000
+  512str               JUNCTION       20.48          0.000        0.000
+  513ch                JUNCTION       20.20          0.000        0.000
+  516str               JUNCTION       20.26          0.000        0.000
+  183str               JUNCTION       20.35          0.000        0.000
+  519ch                JUNCTION       20.36          0.000        0.000
+  bu333ch              JUNCTION       20.56          0.000        0.000
+  601ch                JUNCTION       19.92          0.000        0.000
+  607tconcp            JUNCTION       13.04          0.000        0.000
+  614str               JUNCTION       20.43          0.000        0.000
+  688_pndin            JUNCTION       19.64          0.000        0.000
+  689_outlet           JUNCTION       19.62          0.000        0.000
+  725p2                JUNCTION       17.28          0.000        0.000
+  606tstr              JUNCTION       16.66          0.000        0.000
+  606ttconcp           JUNCTION       15.32          0.000        0.000
+  67tconcp             JUNCTION       15.29          0.000        0.000
+  67ttconcp            JUNCTION       15.29          0.000        0.000
+  68tconcp             JUNCTION       14.61          0.000        0.000
+  68ttconcp            JUNCTION       14.61          0.000        0.000
+  Node_10151014        JUNCTION       16.91          0.000        0.000
+  688c_pndin           JUNCTION       20.34          0.000        0.000
+  688b_pndin           JUNCTION       20.53          0.000        0.000
+  Node_10131015        JUNCTION       16.96          0.000        0.000
+  689g_utlet           JUNCTION       16.82          0.000        0.000
+  Node_1028439         JUNCTION       16.77          0.000        0.000
+  splway               JUNCTION       23.97          0.000        0.000
+  6869g_utle           JUNCTION       16.82          0.000        0.000
+  68p                  JUNCTION       16.82          0.000        0.000
+  6869p                JUNCTION       17.10          0.000        0.000
+  Node_10421040        JUNCTION       17.40          0.000        0.000
+  516stra              JUNCTION       20.26          0.000        0.000
+  Node_1051438         JUNCTION       16.95          0.000        0.000
+  
+  
+  *********************
+  Node Flooding Summary
+  *********************
+  
+  Flooding refers to all water that overflows a node, whether it ponds or not.
+  --------------------------------------------------------------------------
+                                                             Total   Maximum
+                                 Maximum   Time of Max       Flood    Ponded
+                        Hours       Rate    Occurrence      Volume     Depth
+  Node                 Flooded       CFS   days hr:min    10^6 gal      Feet
+  --------------------------------------------------------------------------
+  ndBF30                 20.46      1.94      0  20:39       0.661     0.000
+  140                    20.57      1.00      0  03:26       0.554     0.000
+  ndE9                   18.99      1.00      0  05:00       0.511     0.000
+  ndE11                  16.68      1.00      0  07:19       0.449     0.000
+  ndE58                  20.57      1.00      0  03:26       0.554     0.000
+  ndBU315                15.20      1.00      0  08:47       0.409     0.000
+  ndS2                   11.65      2.14      0  12:21       0.628     0.000
+  681                    16.70      1.47      0  07:19       0.450     0.000
+  693                    20.45      1.00      0  03:33       0.551     0.000
+  89str                  20.71      1.00      0  03:17       0.558     0.000
+  HW_Link_350            16.96      1.73      0  07:03       0.457     0.000
+  BO_ovflow              20.59      1.00      0  03:24       0.554     0.000
+  ovflW241               20.60      1.00      0  03:24       0.555     0.000
+  W337str                19.70      1.00      0  04:18       0.530     0.000
+  139ch                  20.31      1.00      0  03:41       0.547     0.000
+  ovflow                 16.87      1.20      0  07:08       0.454     0.000
+  Hypo_pipe              17.04      1.00      0  07:43       0.458     0.000
+  159free                17.31      1.08      0  06:41       0.466     0.000
+  161road                20.19      1.00      0  03:48       0.544     0.000
+  162_pndout             20.36      1.00      0  03:38       0.548     0.000
+  Ovflow166              20.59      1.00      0  03:24       0.555     0.000
+  170str                 20.51      1.00      0  03:29       0.552     0.000
+  162str                 20.41      1.00      0  03:35       0.550     0.000
+  20str                  20.62      1.00      0  03:22       0.555     0.000
+  31str                  20.59      1.00      0  03:24       0.554     0.000
+  16ch                   20.43      1.00      0  03:34       0.550     0.000
+  future24r              20.70      1.00      0  03:18       0.557     0.000
+  253ch                  20.62      1.00      0  03:23       0.555     0.000
+  lkN21prop              17.20      1.98      0  06:48       0.463     0.000
+  lkN25prop              16.74      1.74      0  07:17       0.451     0.000
+  lkN27prop              16.70      2.08      0  06:57       0.467     0.000
+  lkN32prop              17.29      1.89      0  06:43       0.466     0.000
+  155ch                  17.08      1.26      0  06:55       0.460     0.000
+  lkN157ch               20.48      1.00      0  03:31       0.551     0.000
+  272ch                  20.62      1.00      0  03:23       0.555     0.000
+  273ch                  19.49      1.00      0  04:30       0.525     0.000
+  E28str                 20.67      1.00      0  03:19       0.557     0.000
+  E32str                 20.65      1.00      0  03:21       0.556     0.000
+  e40str                 20.40      1.00      0  03:36       0.549     0.000
+  e61str                 20.66      1.00      0  03:20       0.556     0.000
+  Overflow               17.34      1.43      0  06:39       0.467     0.000
+  PerryStr               17.40      1.39      0  06:36       0.469     0.000
+  HS2                    19.52      1.00      0  04:28       0.526     0.000
+  RichOver               17.32      1.11      0  06:41       0.466     0.000
+  bu567ch                17.04      1.44      0  06:59       0.459     0.000
+  bu576ch                20.57      1.00      0  03:25       0.554     0.000
+  bu563st                20.42      1.00      0  03:35       0.550     0.000
+  bu575ch                20.62      1.64      0  06:57       0.820     0.000
+  bu372str               20.50      1.00      0  03:30       0.552     0.000
+  bu292st                20.39      1.00      0  03:36       0.549     0.000
+  bu291st                20.41      1.00      0  03:35       0.550     0.000
+  bu290st                20.44      1.00      0  03:33       0.550     0.000
+  bu269st                20.57      1.00      0  03:25       0.554     0.000
+  bu280st                20.40      1.00      0  03:36       0.549     0.000
+  Janes2                 20.10      1.00      0  03:54       0.541     0.000
+  Box2                   20.56      1.00      0  03:26       0.554     0.000
+  bu330st                20.57      1.00      0  03:25       0.554     0.000
+  CntyMM2                20.58      1.00      0  03:25       0.554     0.000
+  MS18inchN              17.14      1.28      0  06:51       0.462     0.000
+  W154str                20.61      1.00      0  03:23       0.555     0.000
+  57ch                   20.56      1.00      0  03:26       0.554     0.000
+  bu308ch                20.57      3.00      0  13:14       1.373     0.000
+  bu540ch                20.58      1.00      0  03:25       0.554     0.000
+  bu556st                20.56      1.47      0  06:57       0.748     0.000
+  bu270st                20.52      1.00      0  03:29       0.552     0.000
+  bu453ch                20.30      1.00      0  03:41       0.547     0.000
+  bu266ch                16.97      1.78      0  07:03       0.457     0.000
+  Spillway               20.66      1.00      0  03:20       0.556     0.000
+  Spillway2              20.66      1.00      0  03:20       0.556     0.000
+  508str                 20.36      1.00      0  03:38       0.548     0.000
+  510str                 20.38      1.00      0  03:37       0.549     0.000
+  512str                 20.48      1.00      0  03:31       0.551     0.000
+  513ch                  20.20      1.00      0  03:48       0.544     0.000
+  516str                 20.26      1.00      0  03:44       0.546     0.000
+  183str                 20.35      1.00      0  03:39       0.548     0.000
+  519ch                  20.36      1.00      0  03:38       0.548     0.000
+  bu333ch                20.56      1.00      0  03:26       0.554     0.000
+  601ch                  19.92      1.00      0  04:04       0.537     0.000
+  607tconcp              13.04      1.00      0  10:57       0.351     0.000
+  614str                 20.43      1.00      0  03:34       0.550     0.000
+  688_pndin              19.64      1.00      0  04:21       0.529     0.000
+  689_outlet             19.62      1.00      0  04:22       0.528     0.000
+  725p2                  17.28      1.32      0  06:43       0.465     0.000
+  606tstr                16.66      1.51      0  07:20       0.449     0.000
+  606ttconcp             15.32      1.11      0  08:41       0.413     0.000
+  67tconcp               15.29      1.11      0  08:43       0.412     0.000
+  67ttconcp              15.29      1.11      0  08:43       0.412     0.000
+  68tconcp               14.61      1.61      0  09:24       0.393     0.000
+  68ttconcp              14.61      1.61      0  09:24       0.393     0.000
+  Node_10151014          16.91      1.41      0  07:06       0.455     0.000
+  688c_pndin             20.34      1.00      0  03:39       0.548     0.000
+  688b_pndin             20.53      1.00      0  03:28       0.553     0.000
+  Node_10131015          16.96      1.43      0  07:03       0.457     0.000
+  689g_utlet             16.82      1.47      0  07:12       0.453     0.000
+  Node_1028439           16.77      1.00      0  07:13       0.452     0.000
+  splway                 23.97      0.02      0  00:01       0.009     0.000
+  Node_10141031          24.00      0.99      0  06:35       0.637     0.000
+  6869g_utle             16.82      1.47      0  07:12       0.453     0.000
+  68p                    16.82      1.47      0  07:12       0.453     0.000
+  6869p                  17.10      1.45      0  06:54       0.461     0.000
+  Node_10141034          20.73      1.06      0  06:51       0.558     0.000
+  ftre15p                20.72      1.00      0  03:30       0.558     0.000
+  overlnd3               20.72      1.00      0  03:30       0.558     0.000
+  Node_10421040          17.40      1.21      0  06:36       0.469     0.000
+  516stra                20.26      1.00      0  03:44       0.546     0.000
+  Node_1051438           16.95      1.00      0  07:03       0.456     0.000
+  ndW156                 20.37      3.48      0  03:38       0.561     0.000
+  ndNW1                  17.81      1.00      0  06:41       0.480     0.000
+  ndNW11                 14.67      1.00      0  09:20       0.395     0.000
+  ndE23                  21.22      1.00      0  02:46       0.571     0.000
+  ndBU83                 17.67      1.00      0  06:37       0.476     0.000
+  ndS3                    0.11      1.00      0  23:53       0.003     0.000
+  ndS15                  14.26      1.00      0  09:44       0.384     0.000
+  669                    21.22      1.00      0  02:46       0.572     0.000
+  
+  
+  **********************
+  Storage Volume Summary
+  **********************
+  
+  ------------------------------------------------------------------------------------------------
+                         Average    Avg   Evap  Exfil     Maximum    Max    Time of Max    Maximum
+                          Volume   Pcnt   Pcnt   Pcnt      Volume   Pcnt     Occurrence    Outflow
+  Storage Unit          1000 ft³   Full   Loss   Loss    1000 ft³   Full    days hr:min        CFS
+  ------------------------------------------------------------------------------------------------
+  ndW156                   8.855   88.6    0.0    0.0      10.000  100.0       0  03:38       0.00
+  ndW327                  35.184   19.9    0.0    0.0      75.246   42.5       1  00:00       0.00
+  ndW328                   0.000    0.0    0.0    0.0       0.000    0.0       0  00:00       0.00
+  ndW374                   0.000    0.0    0.0    0.0       0.000    0.0       0  00:00       0.00
+  ndW326                   0.000    0.0    0.0    0.0       0.000    0.0       0  00:00       0.00
+  160                      0.000    0.0    0.0    0.0       0.000    0.0       0  00:00       0.00
+  172                      0.000    0.0    0.0    0.0       0.000    0.0       0  00:00       0.00
+  179                      0.000    0.0    0.0    0.0       0.000    0.0       0  00:00       0.00
+  ndNW1                    8.412   84.1    0.0    0.0      10.000  100.0       0  06:11       0.00
+  ndNW11                   7.245   72.5    0.0    0.0      10.000  100.0       0  09:20       0.00
+  ndNW14                   0.000    0.0    0.0    0.0       0.000    0.0       0  00:00       0.00
+  ndNW12                   0.000    0.0    0.0    0.0       0.000    0.0       0  00:00       0.00
+  Nd_FL1                   0.000    0.0    0.0    0.0       0.000    0.0       0  00:00       0.00
+  Nd_FL2                   0.000    0.0    0.0    0.0       0.000    0.0       0  00:00       0.00
+  Nd_FL11                  0.000    0.0    0.0    0.0       0.000    0.0       0  00:00       0.00
+  ndE16                    0.000    0.0    0.0    0.0       0.000    0.0       0  00:00       0.00
+  ndE20                    0.000    0.0    0.0    0.0       0.000    0.0       0  00:00       0.00
+  ndE23                    9.540   95.4    0.0    0.0      10.000  100.0       0  02:46       0.00
+  ndBU40                   0.000    0.0    0.0    0.0       0.000    0.0       0  00:00       0.00
+  ndBU83                   8.364   83.6    0.0    0.0      10.000  100.0       0  06:20       0.00
+  ndBU125                  0.000    0.0    0.0    0.0       0.000    0.0       0  00:00       0.00
+  ndBU307                 45.773   15.3    0.0    0.0      86.400   28.8       1  00:00       0.00
+  ndBU82                   0.000    0.0    0.0    0.0       0.000    0.0       0  00:00       0.00
+  ndS3                    45.771   53.2    0.0    0.0      86.000  100.0       0  23:53       0.00
+  ndS15                    7.067   70.7    0.0    0.0      10.000  100.0       0  09:44       0.00
+  669                      9.540   95.4    0.0    0.0      10.000  100.0       0  02:46       0.00
+  687                      0.000    0.0    0.0    0.0       0.000    0.0       0  00:00       0.00
+  727                     69.298    1.6    0.0    0.0     149.280    3.5       1  00:00       0.00
+  
+  
+  ***********************
+  Outfall Loading Summary
+  ***********************
+  
+  -----------------------------------------------------------
+                         Flow       Avg       Max       Total
+                         Freq      Flow      Flow      Volume
+  Outfall Node           Pcnt       CFS       CFS    10^6 gal
+  -----------------------------------------------------------
+  ndBF9                  0.00      0.00      0.00       0.000
+  -----------------------------------------------------------
+  System                 0.00      0.00      0.00       0.000
+  
+  
+  ********************
+  Link Flow Summary
+  ********************
+  
+  -----------------------------------------------------------------------------
+                                 Maximum  Time of Max   Maximum    Max/    Max/
+                                  |Flow|   Occurrence   |Veloc|    Full    Full
+  Link                 Type          CFS  days hr:min    ft/sec    Flow   Depth
+  -----------------------------------------------------------------------------
+  69                   CONDUIT      1.02     0  19:28      0.17    0.01    0.55
+  86                   CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  89p                  CONDUIT      0.00     0  00:00      0.00    0.00    0.50
+  Link_350             CONDUIT      1.45     0  07:01      1.19    0.04    0.96
+  BO_culv              CONDUIT      0.00     0  00:00      0.00    0.00    0.50
+  pipeW241             CONDUIT      0.00     0  00:00      0.00    0.00    0.50
+  W337p                CONDUIT      0.00     0  00:00      0.00    0.00    0.50
+  139p                 CONDUIT      0.00     0  00:00      0.00    0.00    0.50
+  150                  CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  Westculv             CONDUIT      1.21     0  07:08      4.99    0.00    0.66
+  153                  CONDUIT     32.05     0  03:22      3.37    0.06    0.19
+  159p                 CONDUIT      1.33     0  06:33      3.56    0.01    0.91
+  161box               CONDUIT      0.00     0  00:00      0.00    0.00    0.50
+  162_exist            CONDUIT      0.00     0  00:00      0.00    0.00    0.50
+  167                  CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  168                  CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  169                  CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  170p                 CONDUIT      0.00     0  00:00      0.00    0.00    0.50
+  173                  CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  176                  CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  180                  CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  162p                 CONDUIT      0.00     0  00:00      0.00    0.00    0.50
+  19                   CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  20c                  CONDUIT      0.00     0  00:00      0.00    0.00    0.50
+  21                   CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  lkNW23               CONDUIT      1.00     0  06:43      1.77    0.05    0.17
+  431.1                CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  31p                  CONDUIT      0.00     0  00:00      0.00    0.00    0.50
+  32                   CONDUIT      0.00     0  00:00      0.00    0.00    0.07
+  34                   CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  35                   CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  16p                  CONDUIT      0.00     0  00:00      0.00    0.00    0.50
+  exist18rr            CONDUIT      0.00     0  00:00      0.00    0.00    0.50
+  253p                 CONDUIT      0.00     0  00:00      0.00    0.00    0.50
+  lkN21pipe            CONDUIT      1.98     0  06:48      2.77    0.05    0.70
+  lkN25p               CONDUIT      1.74     0  07:17      1.73    0.09    0.95
+  lkN27p               CONDUIT      2.12     0  06:57      2.30    0.07    0.95
+  lkN32p               CONDUIT      1.89     0  06:43      2.94    0.05    0.77
+  155p                 CONDUIT      1.33     0  06:33      1.19    0.05    0.94
+  lkN157p              CONDUIT      0.00     0  00:00      0.00    0.00    0.50
+  272p                 CONDUIT      0.00     0  00:00      0.00    0.00    0.50
+  273p                 CONDUIT      0.00     0  00:00      0.00    0.00    0.50
+  275                  CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  277                  CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  E28p                 CONDUIT      0.00     0  00:00      0.00    0.00    0.50
+  lkE29                CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  E32p                 CONDUIT      0.00     0  00:00      0.00    0.00    0.50
+  lkE33                CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  lkE35                CONDUIT      2.93     0  03:15      1.03    0.06    0.55
+  lkE37                CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  lkE39                CONDUIT      0.00     0  00:00      0.00    0.00    0.50
+  e40p                 CONDUIT      0.00     0  00:00      0.00    0.00    0.50
+  lkE59                CONDUIT      0.00     0  00:00      0.00    0.00    0.50
+  e61p                 CONDUIT      0.00     0  00:00      0.00    0.00    0.50
+  North                CONDUIT      1.44     0  06:39      2.03    0.04    0.92
+  Perry1c              CONDUIT      1.42     0  06:36      2.87    0.05    0.77
+  lkE68                CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  HS1                  CONDUIT      0.00     0  00:00      0.00    0.00    0.50
+  RichW                CONDUIT      1.47     0  06:38      2.80    0.05    0.91
+  bu567p               CONDUIT      1.32     0  06:57      0.99    0.06    0.89
+  bu576p               CONDUIT      0.00     0  00:00      0.00    0.00    0.50
+  bu563p               CONDUIT      0.00     0  00:00      0.00    0.00    0.50
+  bu575p               CONDUIT      0.64     0  06:57      0.65    0.02    0.55
+  bu372p               CONDUIT      0.00     0  00:00      0.00    0.00    0.50
+  bu292p               CONDUIT      0.00     0  00:00      0.00    0.00    0.50
+  bu291p               CONDUIT      0.00     0  00:00      0.00    0.00    0.50
+  bu290p               CONDUIT      0.00     0  00:00      0.00    0.00    0.50
+  bu570p               CONDUIT      1.00     0  06:42      0.41    0.03    0.50
+  bu269p               CONDUIT      0.00     0  00:00      0.00    0.00    0.50
+  bu280p               CONDUIT      0.00     0  00:00      0.00    0.00    0.50
+  lkBU293              CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  bu295p               CONDUIT      1.00     0  06:40      3.22    0.20    0.30
+  lkBU299              CONDUIT      1.00     0  13:06      1.12    0.06    0.20
+  lkBU306              CONDUIT      1.98     0  08:38      1.11    0.08    0.27
+  lkBU305              CONDUIT      2.84     0  07:17      8.12    0.02    0.22
+  lkBU103              CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  Janes1               CONDUIT      0.00     0  00:00      0.00    0.00    0.50
+  lkBU301              CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  lkBU300              CONDUIT      0.00     0  00:00      0.00    0.00    0.50
+  lkBU318              CONDUIT      1.25     0  07:13      0.62    0.18    0.67
+  Box1                 CONDUIT      0.00     0  00:00      0.00    0.00    0.50
+  lkBU101              CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  lkBU104              CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  bu330p               CONDUIT      0.00     0  00:00      0.00    0.00    0.50
+  CntyMM1              CONDUIT      0.00     0  00:00      0.00    0.00    0.50
+  lkBU200              CONDUIT      0.00     0  00:00      0.00    0.00    0.50
+  s1p                  CONDUIT      1.00     0  06:36      5.37    0.03    0.11
+  lkS109               CONDUIT      1.00     0  09:15      0.60    0.01    0.19
+  lkS113               CONDUIT      1.00     0  06:54      3.33    0.01    0.07
+  lkS115               CONDUIT      1.00     0  08:51      1.24    0.03    0.12
+  lkS117               CONDUIT      1.02     0  10:27      1.69    0.02    0.20
+  lkS118               CONDUIT      2.35     0  12:15      2.14    0.12    0.65
+  lkS119               CONDUIT      1.04     0  10:29      1.50    0.03    0.21
+  MS42inchN            CONDUIT      1.59     0  06:44      2.85    0.02    0.93
+  lkS123               CONDUIT      1.00     0  03:26     10.07    0.04    0.14
+  lkS120               CONDUIT      0.00     0  00:00      0.00    0.00    0.19
+  lkS122               CONDUIT      0.00     0  00:00      0.00    0.00    0.21
+  W154p                CONDUIT      0.00     0  00:00      0.00    0.00    0.50
+  lkW123               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  57p                  CONDUIT      0.00     0  00:00      0.00    0.00    0.50
+  53                   CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  bu308p               CONDUIT      2.00     0  13:14      1.02    0.08    0.60
+  bu540p               CONDUIT      0.00     0  00:00      0.00    0.00    0.50
+  bu556p               CONDUIT      0.47     0  06:57      0.48    0.02    0.55
+  bu270p               CONDUIT      0.00     0  00:00      0.00    0.00    0.50
+  bu453p               CONDUIT      0.00     0  00:00      0.00    0.00    0.50
+  bu266p               CONDUIT      1.48     0  06:44      1.48    0.14    0.97
+  bu268p               CONDUIT      1.00     0  06:34      4.69    0.02    0.09
+  Pipe                 CONDUIT      0.00     0  00:00      0.00    0.00    0.50
+  Pipe2                CONDUIT      0.00     0  00:00      0.00    0.00    0.50
+  500                  CONDUIT      1.00     0  06:41      0.98    0.06    0.19
+  22                   CONDUIT      2.81     0  06:39      2.03    0.03    0.14
+  508p                 CONDUIT      0.00     0  00:00      0.00    0.00    0.50
+  510p                 CONDUIT      0.00     0  00:00      0.00    0.00    0.50
+  511                  CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  512p                 CONDUIT      0.00     0  00:00      0.00    0.00    0.50
+  513p                 CONDUIT      0.00     0  00:00      0.00    0.00    0.50
+  515                  CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  516p                 CONDUIT      0.00     0  00:00      0.00    0.00    0.50
+  183p                 CONDUIT      0.00     0  00:00      0.00    0.00    0.50
+  519p                 CONDUIT      0.00     0  00:00      0.00    0.00    0.50
+  bu333p               CONDUIT      0.00     0  00:00      0.00    0.00    0.50
+  549                  CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  571                  CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  572                  CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  585                  CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  601p                 CONDUIT      0.00     0  00:00      0.00    0.00    0.50
+  607tp                CONDUIT      1.16     0  06:34      1.99    0.00    0.52
+  614p                 CONDUIT      0.00     0  00:00      0.00    0.00    0.50
+  616                  CONDUIT     14.80     0  03:25      7.97    0.05    0.18
+  668                  CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  673                  CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  674                  CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  675                  CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  Ash_diver            CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  677                  CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  682_exist            CONDUIT      1.67     0  03:15      7.53    0.02    0.54
+  252                  CONDUIT      1.75     0  06:34      0.85    0.09    1.00
+  688_exist            CONDUIT      0.00     0  00:00      0.00    0.00    0.50
+  689_exist            CONDUIT      0.00     0  00:00      0.00    0.00    0.50
+  695                  CONDUIT      0.00     0  00:00      0.00    0.00    0.50
+  705                  CONDUIT      0.00     0  00:00      0.00    0.00    0.26
+  lkE41                CONDUIT      1.00     0  19:35      0.05    0.00    0.27
+  707p                 CONDUIT      1.10     0  06:58      1.66    0.01    0.43
+  712                  CONDUIT      0.06     0  20:39      0.17    0.00    0.05
+  713                  CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  715                  CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  716                  CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  724                  CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  725p1                CONDUIT      1.32     0  06:40      1.17    0.02    0.95
+  728                  CONDUIT      5.46     0  03:16      8.31    0.02    0.06
+  newpdout             CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  732                  CONDUIT      2.03     0  03:16      2.05    0.02    0.10
+  746                  CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  747                  CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  748                  CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  751                  CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  752                  CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  773                  CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  774                  CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  775                  CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  776                  CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  777                  CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  606tp                CONDUIT      1.00     0  06:35      0.32    0.01    0.89
+  606ttp               CONDUIT      1.15     0  06:32      1.97    0.01    0.76
+  67tp                 CONDUIT      1.25     0  06:31      1.91    0.01    0.85
+  67ttp                CONDUIT      1.25     0  06:31      1.91    0.01    0.85
+  68tp                 CONDUIT      1.61     0  09:24      1.64    0.01    0.88
+  68ttp                CONDUIT      1.61     0  09:24      1.64    0.01    0.88
+  1009.1               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  10                   CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  11                   CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  688e_exist           CONDUIT      1.50     0  06:39      0.58    0.12    0.95
+  688c_exist           CONDUIT      0.00     0  00:00      0.00    0.00    0.50
+  688b_exist           CONDUIT      0.00     0  00:00      0.00    0.00    0.50
+  688d_exist           CONDUIT      1.43     0  07:03      0.62    0.11    0.95
+  689g_exist           CONDUIT      1.23     0  06:42      0.47    0.08    0.91
+  689t_exist           CONDUIT      1.88     0  06:44      0.83    0.07    0.57
+  6689g_exst           CONDUIT      1.23     0  06:42      0.47    0.08    0.91
+  66n                  CONDUIT      1.23     0  06:42      0.47    0.08    0.91
+  6689n                CONDUIT      1.00     0  06:38      0.33    0.04    0.81
+  behiverun            CONDUIT      1.22     0  06:36      2.47    0.27    0.97
+  516pa                CONDUIT      0.00     0  00:00      0.00    0.00    0.50
+  516pb                CONDUIT      1.01     0  06:35      2.61    0.03    0.56
+  lowflow2             ORIFICE      0.99     0  00:01                      1.00
+  inletpipe            ORIFICE      1.00     0  03:30                      0.21
+  12inch               ORIFICE      1.00     0  03:30                      0.21
+  Weir                 WEIR         1.00     0  03:26                      0.33
+  Weir1                WEIR         1.00     0  07:43                      0.29
+  Weir_2               WEIR         0.67     0  03:24                      1.00
+  464                  WEIR         0.00     0  00:00                      0.00
+  66nn                 WEIR         1.39     0  06:49                      0.11
+  
+  
+  ***************************
+  Flow Classification Summary
+  ***************************
+  
+  -------------------------------------------------------------------------------------
+                      Adjusted    ---------- Fraction of Time in Flow Class ---------- 
+                       /Actual         Up    Down  Sub   Sup   Up    Down  Norm  Inlet 
+  Conduit               Length    Dry  Dry   Dry   Crit  Crit  Crit  Crit  Ltd   Ctrl  
+  -------------------------------------------------------------------------------------
+  69                      1.00   0.13  0.68  0.00  0.19  0.00  0.00  0.00  0.19  0.00
+  86                      1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  89p                     1.00   0.14  0.86  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  Link_350                1.00   0.13  0.00  0.00  0.73  0.00  0.14  0.00  0.00  0.00
+  BO_culv                 1.00   0.14  0.86  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  pipeW241                1.00   0.14  0.86  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  W337p                   1.00   0.15  0.85  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  139p                    1.00   0.14  0.86  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  150                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  Westculv                1.00   0.14  0.00  0.00  0.72  0.00  0.00  0.14  0.01  0.00
+  153                     1.00   0.14  0.00  0.00  0.00  0.00  0.00  0.86  0.00  0.00
+  159p                    1.00   0.14  0.00  0.00  0.73  0.00  0.00  0.14  0.00  0.00
+  161box                  1.00   0.14  0.86  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  162_exist               1.00   0.14  0.86  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  167                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  168                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  169                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  170p                    1.00   0.14  0.86  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  173                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  176                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  180                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  162p                    1.00   0.14  0.86  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  19                      1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  20c                     1.00   0.14  0.86  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  21                      1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  lkNW23                  1.00   0.14  0.00  0.00  0.00  0.00  0.00  0.86  0.00  0.00
+  431.1                   1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  31p                     1.00   0.14  0.86  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  32                      1.00   0.28  0.72  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  34                      1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  35                      1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  16p                     1.00   0.14  0.86  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  exist18rr               1.00   0.14  0.86  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  253p                    1.00   0.14  0.86  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  lkN21pipe               1.00   0.14  0.00  0.00  0.73  0.00  0.00  0.14  0.01  0.00
+  lkN25p                  1.00   0.13  0.00  0.00  0.73  0.00  0.00  0.14  0.00  0.00
+  lkN27p                  1.00   0.13  0.00  0.00  0.73  0.00  0.00  0.14  0.00  0.00
+  lkN32p                  1.00   0.13  0.00  0.00  0.73  0.00  0.00  0.14  0.00  0.00
+  155p                    1.00   0.13  0.00  0.00  0.73  0.00  0.14  0.00  0.00  0.00
+  lkN157p                 1.00   0.13  0.87  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  272p                    1.00   0.13  0.87  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  273p                    1.00   0.13  0.87  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  275                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  277                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  E28p                    1.00   0.14  0.86  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  lkE29                   1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  E32p                    1.00   0.14  0.86  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  lkE33                   1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  lkE35                   1.00   0.14  0.00  0.00  0.73  0.00  0.00  0.13  0.73  0.00
+  lkE37                   1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  lkE39                   1.00   0.14  0.86  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  e40p                    1.00   0.13  0.87  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  lkE59                   1.00   0.14  0.86  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  e61p                    1.00   0.13  0.87  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  North                   1.00   0.14  0.00  0.00  0.73  0.00  0.00  0.14  0.00  0.00
+  Perry1c                 1.00   0.14  0.00  0.00  0.73  0.00  0.00  0.14  0.00  0.00
+  lkE68                   1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  HS1                     1.00   0.14  0.86  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  RichW                   1.00   0.14  0.00  0.00  0.73  0.00  0.00  0.14  0.00  0.00
+  bu567p                  1.00   0.14  0.00  0.00  0.72  0.00  0.14  0.00  0.00  0.00
+  bu576p                  1.00   0.14  0.86  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  bu563p                  1.00   0.14  0.86  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  bu575p                  1.00   0.14  0.15  0.00  0.71  0.00  0.00  0.00  0.71  0.00
+  bu372p                  1.00   0.14  0.86  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  bu292p                  1.00   0.14  0.86  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  bu291p                  1.00   0.14  0.86  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  bu290p                  1.00   0.14  0.86  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  bu570p                  1.00   0.14  0.01  0.00  0.00  0.00  0.85  0.00  0.00  0.00
+  bu269p                  1.00   0.14  0.86  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  bu280p                  1.00   0.14  0.86  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  lkBU293                 1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  bu295p                  1.00   0.14  0.00  0.00  0.00  0.00  0.00  0.86  0.00  0.00
+  lkBU299                 1.00   0.14  0.00  0.00  0.00  0.00  0.00  0.86  0.00  0.00
+  lkBU306                 1.00   0.28  0.00  0.00  0.64  0.00  0.00  0.08  0.64  0.00
+  lkBU305                 1.00   0.30  0.00  0.00  0.64  0.00  0.00  0.06  0.64  0.00
+  lkBU103                 1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  Janes1                  1.00   0.14  0.86  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  lkBU301                 1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  lkBU300                 1.00   0.29  0.71  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  lkBU318                 1.00   0.13  0.00  0.00  0.71  0.00  0.00  0.15  0.70  0.00
+  Box1                    1.00   0.14  0.86  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  lkBU101                 1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  lkBU104                 1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  bu330p                  1.00   0.14  0.86  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  CntyMM1                 1.00   0.14  0.86  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  lkBU200                 1.00   0.29  0.71  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  s1p                     1.00   0.15  0.00  0.00  0.00  0.00  0.00  0.85  0.00  0.00
+  lkS109                  1.00   0.28  0.01  0.00  0.00  0.00  0.71  0.00  0.00  0.00
+  lkS113                  1.00   0.14  0.00  0.00  0.71  0.01  0.00  0.15  0.71  0.00
+  lkS115                  1.00   0.29  0.00  0.00  0.00  0.00  0.00  0.71  0.00  0.00
+  lkS117                  1.00   0.29  0.00  0.00  0.56  0.00  0.00  0.15  0.56  0.00
+  lkS118                  1.00   0.43  0.00  0.00  0.49  0.00  0.00  0.08  0.49  0.00
+  lkS119                  1.00   0.43  0.00  0.00  0.56  0.00  0.00  0.00  0.56  0.00
+  MS42inchN               1.00   0.14  0.00  0.00  0.72  0.00  0.00  0.14  0.00  0.00
+  lkS123                  1.00   0.14  0.00  0.00  0.00  0.00  0.00  0.86  0.00  0.00
+  lkS120                  1.00   0.36  0.64  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  lkS122                  1.00   0.28  0.72  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  W154p                   1.00   0.14  0.86  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  lkW123                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  57p                     1.00   0.14  0.86  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  53                      1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  bu308p                  1.00   0.14  0.22  0.00  0.64  0.00  0.00  0.00  0.64  0.00
+  bu540p                  1.00   0.14  0.86  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  bu556p                  1.00   0.14  0.15  0.00  0.71  0.00  0.00  0.00  0.71  0.00
+  bu270p                  1.00   0.14  0.86  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  bu453p                  1.00   0.15  0.85  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  bu266p                  1.00   0.14  0.00  0.00  0.72  0.00  0.14  0.00  0.00  0.00
+  bu268p                  1.00   0.14  0.00  0.00  0.00  0.00  0.00  0.86  0.00  0.00
+  Pipe                    1.00   0.14  0.86  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  Pipe2                   1.00   0.14  0.86  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  500                     1.00   0.14  0.00  0.00  0.00  0.00  0.00  0.86  0.00  0.00
+  22                      1.00   0.28  0.00  0.00  0.00  0.00  0.00  0.72  0.00  0.00
+  508p                    1.00   0.14  0.86  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  510p                    1.00   0.14  0.86  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  511                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  512p                    1.00   0.14  0.86  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  513p                    1.00   0.14  0.86  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  515                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  516p                    1.00   0.14  0.86  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  183p                    1.00   0.14  0.86  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  519p                    1.00   0.15  0.85  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  bu333p                  1.00   0.14  0.86  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  549                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  571                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  572                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  585                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  601p                    1.00   0.14  0.86  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  607tp                   1.00   0.14  0.00  0.00  0.73  0.00  0.00  0.14  0.73  0.00
+  614p                    1.00   0.14  0.86  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  616                     1.00   0.14  0.00  0.00  0.00  0.00  0.00  0.86  0.00  0.00
+  668                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  673                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  674                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  675                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  Ash_diver               1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  677                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  682_exist               1.00   0.14  0.00  0.00  0.73  0.00  0.00  0.14  0.73  0.00
+  252                     1.00   0.14  0.00  0.00  0.73  0.00  0.00  0.14  0.01  0.00
+  688_exist               1.00   0.14  0.86  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  689_exist               1.00   0.14  0.86  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  695                     1.00   0.14  0.86  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  705                     1.00   0.27  0.73  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  lkE41                   1.00   0.27  0.38  0.00  0.00  0.00  0.34  0.00  0.00  0.00
+  707p                    1.00   0.13  0.00  0.00  0.72  0.00  0.00  0.15  0.09  0.00
+  712                     1.00   0.81  0.00  0.00  0.00  0.00  0.00  0.19  0.00  0.00
+  713                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  715                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  716                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  724                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  725p1                   1.00   0.14  0.00  0.00  0.73  0.00  0.14  0.00  0.00  0.00
+  728                     1.00   0.14  0.00  0.00  0.00  0.00  0.00  0.86  0.00  0.00
+  newpdout                1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  732                     1.00   0.14  0.00  0.00  0.00  0.00  0.00  0.86  0.00  0.00
+  746                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  747                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  748                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  751                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  752                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  773                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  774                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  775                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  776                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  777                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  606tp                   1.00   0.14  0.00  0.00  0.72  0.00  0.14  0.00  0.00  0.00
+  606ttp                  1.00   0.14  0.00  0.00  0.73  0.00  0.00  0.14  0.03  0.00
+  67tp                    1.00   0.14  0.00  0.00  0.73  0.00  0.00  0.14  0.01  0.00
+  67ttp                   1.00   0.14  0.00  0.00  0.73  0.00  0.00  0.14  0.01  0.00
+  68tp                    1.00   0.13  0.00  0.00  0.73  0.00  0.00  0.14  0.01  0.00
+  68ttp                   1.00   0.13  0.00  0.00  0.73  0.00  0.00  0.14  0.01  0.00
+  1009.1                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  10                      1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  11                      1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  688e_exist              1.00   0.14  0.00  0.00  0.72  0.00  0.00  0.14  0.00  0.00
+  688c_exist              1.00   0.14  0.86  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  688b_exist              1.00   0.14  0.86  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  688d_exist              1.00   0.14  0.00  0.00  0.72  0.00  0.00  0.14  0.00  0.00
+  689g_exist              1.00   0.14  0.00  0.00  0.72  0.00  0.14  0.00  0.00  0.00
+  689t_exist              1.00   0.14  0.00  0.00  0.72  0.00  0.00  0.15  0.72  0.00
+  6689g_exst              1.00   0.14  0.00  0.00  0.72  0.00  0.14  0.00  0.00  0.00
+  66n                     1.00   0.14  0.00  0.00  0.72  0.00  0.14  0.00  0.00  0.00
+  6689n                   1.00   0.14  0.00  0.00  0.72  0.00  0.14  0.00  0.00  0.00
+  behiverun               1.00   0.14  0.00  0.00  0.73  0.00  0.00  0.14  0.00  0.00
+  516pa                   1.00   0.14  0.86  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  516pb                   1.00   0.14  0.00  0.00  0.73  0.00  0.00  0.14  0.73  0.00
+  
+  
+  *************************
+  Conduit Surcharge Summary
+  *************************
+  
+  ----------------------------------------------------------------------------
+                                                           Hours        Hours 
+                         --------- Hours Full --------   Above Full   Capacity
+  Conduit                Both Ends  Upstream  Dnstream   Normal Flow   Limited
+  ----------------------------------------------------------------------------
+  69                          0.01      0.01      4.52      0.01         0.01
+  Link_350                    0.01      0.01     16.96      0.01         0.01
+  Westculv                    0.01      0.01     16.87      0.01         0.01
+  159p                        0.01      0.01     17.31      0.01         0.01
+  lkN21pipe                   0.01      0.01     17.20      0.01         0.01
+  lkN25p                      0.01      0.01     16.74      0.01         0.01
+  lkN27p                      0.01      0.01     16.63      0.01         0.01
+  lkN32p                      0.01      0.01     17.29      0.01         0.01
+  155p                        0.01      0.01     17.08      0.01         0.01
+  lkE35                       0.01      0.01     16.68      0.01         0.01
+  North                       0.01      0.01     17.34      0.01         0.01
+  Perry1c                     0.01      0.01     17.40      0.01         0.01
+  RichW                       0.01      0.01     17.32      0.01         0.01
+  bu567p                      0.01      0.01     17.04      0.01         0.01
+  bu575p                      0.01      0.01     17.05      0.01         0.01
+  lkBU318                     0.01      0.01     15.20      0.01         0.01
+  lkS118                      0.01      0.01     11.65      0.01         0.01
+  MS42inchN                   0.01      0.01     17.14      0.01         0.01
+  bu308p                      0.01      0.01     15.36      0.01         0.01
+  bu556p                      0.01      0.01     17.05      0.01         0.01
+  bu266p                      0.01      0.01     16.97      0.01         0.01
+  607tp                       0.01      0.01     13.04      0.01         0.01
+  682_exist                   0.01      0.01     17.36      0.01         0.01
+  252                        16.70     16.70     17.22      0.01         0.01
+  725p1                       0.01      0.01     17.28      0.01         0.01
+  606ttp                      0.01      0.01     15.32      0.01         0.01
+  67tp                        0.01      0.01     15.29      0.01         0.01
+  67ttp                       0.01      0.01     15.29      0.01         0.01
+  68tp                        0.01      0.01     14.61      0.01         0.01
+  68ttp                       0.01      0.01     14.61      0.01         0.01
+  688e_exist                  0.01      0.01     16.91      0.01         0.01
+  688d_exist                  0.01      0.01     16.96      0.01         0.01
+  689g_exist                  0.01      0.01     16.82      0.01         0.01
+  689t_exist                  0.01      0.01     16.77      0.01         0.01
+  6689g_exst                  0.01      0.01     16.82      0.01         0.01
+  66n                         0.01      0.01     16.82      0.01         0.01
+  6689n                       0.01      0.01     17.10      0.01         0.01
+  behiverun                   0.01      0.01     17.40      0.01         0.01
+  516pb                       0.01      0.01     16.95      0.01         0.01
+  
 
-
-  Analysis begun on:  Sun Jul 19 15:20:31 2026
-  Analysis ended on:  Sun Jul 19 15:20:31 2026
-  Total elapsed time: < 1 sec
+  Analysis begun on:  Wed Jul 22 14:09:56 2026
+  Analysis ended on:  Wed Jul 22 14:09:58 2026
+  Total elapsed time: 00:00:02

@@ -36,20 +36,28 @@
   Wet Weather Inflow .......         0.000         0.000
   Groundwater Inflow .......         0.000         0.000
   RDII Inflow ..............         0.000         0.000
-  External Inflow ..........         0.000         0.000
+  External Inflow ..........         1.983         0.646
   External Outflow .........         0.000         0.000
-  Flooding Loss ............         0.000         0.000
+  Flooding Loss ............         3.566         1.162
   Evaporation Loss .........         0.000         0.000
   Exfiltration Loss ........         0.000         0.000
   Initial Stored Volume ....         0.000         0.000
-  Final Stored Volume ......         0.000         0.000
-  Continuity Error (%) .....         0.000
+  Final Stored Volume ......         0.235         0.077
+  Continuity Error (%) .....       -91.645
+  
+  
+  *************************
+  Highest Continuity Errors
+  *************************
+  Node 202 (-42.55%)
+  Node 204 (-21.31%)
+  Node flood (-10.49%)
   
   
   ***************************
   Time-Step Critical Elements
   ***************************
-  None
+  Link 207 (98.35%)
   
   
   ********************************
@@ -61,23 +69,27 @@
   *********************************
   Most Frequent Nonconverging Nodes
   *********************************
-  Convergence obtained at all time steps.
+  Node 208 (0.24%)
+  Node 204 (0.22%)
+  Node 202 (0.18%)
+  Node 201 (0.07%)
+  Node flood (0.07%)
   
   
   *************************
   Routing Time Step Summary
   *************************
-  Minimum Time Step           :    59.50 sec
-  Average Time Step           :    59.96 sec
+  Minimum Time Step           :     1.39 sec
+  Average Time Step           :     8.10 sec
   Maximum Time Step           :    60.00 sec
   % of Time in Steady State   :     0.00
-  Average Iterations per Step :     2.00
-  % of Steps Not Converging   :     0.00
+  Average Iterations per Step :     2.25
+  % of Steps Not Converging   :     0.24
   Time Step Frequencies       :
-     60.000 - 23.031 sec      :   100.00 %
-     23.031 -  8.841 sec      :     0.00 %
-      8.841 -  3.393 sec      :     0.00 %
-      3.393 -  1.303 sec      :     0.00 %
+     60.000 - 23.031 sec      :     1.49 %
+     23.031 -  8.841 sec      :     0.05 %
+      8.841 -  3.393 sec      :    98.34 %
+      3.393 -  1.303 sec      :     0.12 %
       1.303 -  0.500 sec      :     0.00 %
   
   
@@ -90,11 +102,11 @@
                                    Depth    Depth      HGL   Occurrence   Max Depth
   Node                 Type         Feet     Feet     Feet  days hr:min        Feet
   ---------------------------------------------------------------------------------
-  201                  JUNCTION     0.00     0.00   168.90     0  00:00        0.00
-  202                  JUNCTION     0.00     0.00   168.50     0  00:00        0.00
-  204                  JUNCTION     0.00     0.00   167.50     0  00:00        0.00
+  201                  JUNCTION   160.88   163.24   332.14     0  00:35      161.15
+  202                  JUNCTION   156.23   159.72   328.22     0  01:29      157.45
+  204                  JUNCTION   152.06   158.68   326.18     0  00:38      153.62
   208                  OUTFALL      0.00     0.00   167.52     0  00:00        0.00
-  flood                STORAGE      0.00     0.00   167.52     0  00:00        0.00
+  flood                STORAGE      9.96    10.00   177.52     0  00:41       10.00
   
   
   *******************
@@ -107,25 +119,39 @@
                                    Inflow   Inflow   Occurrence      Volume      Volume       Error
   Node                 Type           CFS      CFS  days hr:min    10^6 gal    10^6 gal     Percent
   -------------------------------------------------------------------------------------------------
-  201                  JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
-  202                  JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
-  204                  JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  201                  JUNCTION      1.00     1.00     0  00:00       0.646       0.646      -2.948
+  202                  JUNCTION      0.00    45.51     0  00:36           0       0.667     -29.850
+  204                  JUNCTION      0.00   512.35     0  00:38           0       0.951     -17.563
   208                  OUTFALL       0.00     0.00     0  00:00           0           0       0.000 gal
-  flood                STORAGE       0.00     0.00     0  00:00           0           0       0.000 gal
+  flood                STORAGE       0.00   713.91     0  01:13           0       0.804      -9.498
   
   
   **********************
   Node Surcharge Summary
   **********************
   
-  No nodes were surcharged.
+  Surcharging occurs when water rises above the top of the highest conduit.
+  ---------------------------------------------------------------------
+                                               Max. Height   Min. Depth
+                                   Hours       Above Crown    Below Rim
+  Node                 Type      Surcharged           Feet         Feet
+  ---------------------------------------------------------------------
+  204                  JUNCTION        0.08          0.000        0.000
   
   
   *********************
   Node Flooding Summary
   *********************
   
-  No nodes were flooded.
+  Flooding refers to all water that overflows a node, whether it ponds or not.
+  --------------------------------------------------------------------------
+                                                             Total   Maximum
+                                 Maximum   Time of Max       Flood    Ponded
+                        Hours       Rate    Occurrence      Volume     Depth
+  Node                 Flooded       CFS   days hr:min    10^6 gal      Feet
+  --------------------------------------------------------------------------
+  204                     0.08    256.18      0  00:38       0.337     0.000
+  flood                  21.43    356.95      0  01:13       0.793     0.000
   
   
   **********************
@@ -137,7 +163,7 @@
                           Volume   Pcnt   Pcnt   Pcnt      Volume   Pcnt     Occurrence    Outflow
   Storage Unit          1000 ft³   Full   Loss   Loss    1000 ft³   Full    days hr:min        CFS
   ------------------------------------------------------------------------------------------------
-  flood                    0.000    0.0    0.0    0.0       0.000    0.0       0  00:00       0.00
+  flood                    9.962   99.6    0.0    0.0      10.000  100.0       0  00:41       0.00
   
   
   ***********************
@@ -163,9 +189,9 @@
                                   |Flow|   Occurrence   |Veloc|    Full    Full
   Link                 Type          CFS  days hr:min    ft/sec    Flow   Depth
   -----------------------------------------------------------------------------
-  203                  CONDUIT      0.00     0  00:00      0.00    0.00    0.00
-  205                  CONDUIT      0.00     0  00:00      0.00    0.00    0.00
-  207                  CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  203                  CONDUIT     45.51     0  00:36      8.67    0.21    0.41
+  205                  CONDUIT    512.35     0  00:38    >50.00    0.80    0.50
+  207                  CONDUIT    713.91     0  01:13    >50.00    4.44    0.85
   209                  CONDUIT      0.00     0  00:00      0.00    0.00    0.00
   
   
@@ -178,9 +204,9 @@
                        /Actual         Up    Down  Sub   Sup   Up    Down  Norm  Inlet 
   Conduit               Length    Dry  Dry   Dry   Crit  Crit  Crit  Crit  Ltd   Ctrl  
   -------------------------------------------------------------------------------------
-  203                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
-  205                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
-  207                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  203                     1.00   0.02  0.00  0.00  0.00  0.00  0.00  0.97  0.00  0.00
+  205                     1.00   0.10  0.00  0.00  0.00  0.00  0.00  0.89  0.00  0.00
+  207                     1.00   0.11  0.00  0.00  0.00  0.00  0.00  0.89  0.00  0.00
   209                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
   
   
@@ -188,9 +214,15 @@
   Conduit Surcharge Summary
   *************************
   
-  No conduits were surcharged.
+  ----------------------------------------------------------------------------
+                                                           Hours        Hours 
+                         --------- Hours Full --------   Above Full   Capacity
+  Conduit                Both Ends  Upstream  Dnstream   Normal Flow   Limited
+  ----------------------------------------------------------------------------
+  205                         0.04      1.08      0.85      0.01         0.01
+  207                         0.01      0.80      0.01      0.01         0.01
   
 
-  Analysis begun on:  Sun Jul 19 15:23:53 2026
-  Analysis ended on:  Sun Jul 19 15:23:53 2026
+  Analysis begun on:  Wed Jul 22 14:20:08 2026
+  Analysis ended on:  Wed Jul 22 14:20:08 2026
   Total elapsed time: < 1 sec

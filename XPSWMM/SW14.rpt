@@ -2,27 +2,244 @@
   EPA STORM WATER MANAGEMENT MODEL - VERSION 5.2 (Build 5.2.4)
   ------------------------------------------------------------
 
+  EXTRAN EXAMPLE PROBLEM 
   
-  ERROR 211: invalid number  at line 75 of [XSECT] section:
-  Chan2            POWER        10.00      20.00      0          0          1
-
+  ****************
+  Analysis Options
+  ****************
+  Flow Units ............... CMS
+  Process Models:
+    Rainfall/Runoff ........ NO
+    RDII ................... NO
+    Snowmelt ............... NO
+    Groundwater ............ NO
+    Flow Routing ........... YES
+    Ponding Allowed ........ NO
+    Water Quality .......... NO
+  Flow Routing Method ...... DYNWAVE
+  Surcharge Method ......... EXTRAN
+  Starting Date ............ 01/01/2001 00:00:00
+  Ending Date .............. 01/02/2001 00:00:00
+  Antecedent Dry Days ...... 0.0
+  Report Time Step ......... 00:15:00
+  Routing Time Step ........ 300.00 sec
+  Variable Time Step ....... YES
+  Maximum Trials ........... 30
+  Number of Threads ........ 1
+  Head Tolerance ........... 0.001524 m
   
-  ERROR 211: invalid number  at line 76 of [XSECT] section:
-  Chan3            POWER        10.00      20.00      0          0          1
-
   
-  ERROR 211: invalid number  at line 77 of [XSECT] section:
-  Chan4            POWER        10.00      20.00      0          0          1
-
+  **************************        Volume        Volume
+  Flow Routing Continuity        hectare-m      10^6 ltr
+  **************************     ---------     ---------
+  Dry Weather Inflow .......         0.000         0.000
+  Wet Weather Inflow .......         0.000         0.000
+  Groundwater Inflow .......         0.000         0.000
+  RDII Inflow ..............         0.000         0.000
+  External Inflow ..........         1.037        10.367
+  External Outflow .........         0.000         0.000
+  Flooding Loss ............        11.253       112.534
+  Evaporation Loss .........         0.000         0.000
+  Exfiltration Loss ........         0.000         0.000
+  Initial Stored Volume ....         0.000         0.000
+  Final Stored Volume ......         4.118        41.184
+  Continuity Error (%) .....     -1382.724
   
-  ERROR 211: invalid number  at line 78 of [XSECT] section:
-  Chan5            POWER        10.00      20.00      0          0          1
-
   
-  ERROR 211: invalid number  at line 79 of [XSECT] section:
-  Chan6            POWER        10.00      20.00      0          0          1
+  *************************
+  Highest Continuity Errors
+  *************************
+  Node Wat2 (-424092.90%)
+  Node Wat4 (100.00%)
+  
+  
+  ***************************
+  Time-Step Critical Elements
+  ***************************
+  Node Wat3 (2.02%)
+  Link Link7 (2.02%)
+  
+  
+  ********************************
+  Highest Flow Instability Indexes
+  ********************************
+  Link Link1 (108)
+  Link Link7 (86)
+  Link Chan1 (12)
+  Link Chan6 (2)
+  
+  
+  *********************************
+  Most Frequent Nonconverging Nodes
+  *********************************
+  Node Node6 (5.39%)
+  Node Link3 (4.04%)
+  Node Link2 (4.04%)
+  Node Wat3 (1.01%)
+  Node Wat4 (0.67%)
+  
+  
+  *************************
+  Routing Time Step Summary
+  *************************
+  Minimum Time Step           :    19.61 sec
+  Average Time Step           :   290.91 sec
+  Maximum Time Step           :   300.00 sec
+  % of Time in Steady State   :     0.00
+  Average Iterations per Step :    15.71
+  % of Steps Not Converging   :     5.39
+  Time Step Frequencies       :
+     300.000 - 83.462 sec      :    99.32 %
+     83.462 - 23.220 sec      :     0.34 %
+     23.220 -  6.460 sec      :     0.34 %
+      6.460 -  1.797 sec      :     0.00 %
+      1.797 -  0.500 sec      :     0.00 %
+  
+  
+  ******************
+  Node Depth Summary
+  ******************
+  
+  ---------------------------------------------------------------------------------
+                                 Average  Maximum  Maximum  Time of Max    Reported
+                                   Depth    Depth      HGL   Occurrence   Max Depth
+  Node                 Type       Meters   Meters   Meters  days hr:min      Meters
+  ---------------------------------------------------------------------------------
+  Wat2                 JUNCTION     0.01     2.53     2.53     0  00:00        0.00
+  DUMMY2               JUNCTION     0.15     0.31     0.31     1  00:00        0.31
+  DUMMY3               JUNCTION     0.00     0.00     0.00     0  00:00        0.00
+  Node7                JUNCTION     0.00     0.00   200.00     0  00:00        0.00
+  Wat4                 JUNCTION     3.15     3.44     3.44     1  00:00        3.44
+  Wat1                 JUNCTION     0.99     1.00     1.00     0  00:01        1.00
+  Wat3                 JUNCTION    19.70    22.38    22.38     0  00:50       20.90
+  Node5                JUNCTION   173.63   183.70   383.70     0  01:58      183.70
+  Outfall              JUNCTION   165.55   182.50   382.50     0  02:04      182.50
+  Link2                JUNCTION   172.41   181.43   361.23     0  23:53      181.43
+  Link3                JUNCTION   164.03   181.53   361.23     1  00:00      181.53
+  Node6                OUTFALL      0.00     0.00   200.00     0  00:00        0.00
+  
+  
+  *******************
+  Node Inflow Summary
+  *******************
+  
+  -------------------------------------------------------------------------------------------------
+                                  Maximum  Maximum                  Lateral       Total        Flow
+                                  Lateral    Total  Time of Max      Inflow      Inflow     Balance
+                                   Inflow   Inflow   Occurrence      Volume      Volume       Error
+  Node                 Type           CMS      CMS  days hr:min    10^6 ltr    10^6 ltr     Percent
+  -------------------------------------------------------------------------------------------------
+  Wat2                 JUNCTION     0.000    0.601     0  00:00           0      0.0234     -99.976
+  DUMMY2               JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
+  DUMMY3               JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
+  Node7                JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
+  Wat4                 JUNCTION     0.000   28.982     0  00:55           0        19.719690017.845 ltr
+  Wat1                 JUNCTION     0.030    1.500     1  00:00        2.59         102       0.123
+  Wat3                 JUNCTION     0.030    0.030     0  00:00        2.59        2.59     -86.837
+  Node5                JUNCTION     0.030   33.009     0  01:58        2.59        11.2      -8.805
+  Outfall              JUNCTION     0.000   16.591     0  02:04           0        5.93       0.000
+  Link2                JUNCTION     0.030    0.518     0  02:39        2.59           3     116.121
+  Link3                JUNCTION     0.000    0.169     0  02:48           0        1.39       0.000
+  Node6                OUTFALL      0.000    0.000     0  00:00           0           0       0.000 ltr
+  
+  
+  **********************
+  Node Surcharge Summary
+  **********************
+  
+  Surcharging occurs when water rises above the top of the highest conduit.
+  ---------------------------------------------------------------------
+                                               Max. Height   Min. Depth
+                                   Hours       Above Crown    Below Rim
+  Node                 Type      Surcharged         Meters       Meters
+  ---------------------------------------------------------------------
+  Wat1                 JUNCTION       23.99          0.000        0.000
+  Node5                JUNCTION        0.13          0.000        0.000
+  Outfall              JUNCTION       11.61          0.000        0.000
+  
+  
+  *********************
+  Node Flooding Summary
+  *********************
+  
+  Flooding refers to all water that overflows a node, whether it ponds or not.
+  --------------------------------------------------------------------------
+                                                             Total   Maximum
+                                 Maximum   Time of Max       Flood    Ponded
+                        Hours       Rate    Occurrence      Volume     Depth
+  Node                 Flooded       CMS   days hr:min    10^6 ltr    Meters
+  --------------------------------------------------------------------------
+  Wat1                   23.99     1.436      0  02:04     101.810     0.000
+  Node5                   0.13    16.520      0  01:58       7.450     0.000
+  Outfall                10.11    13.388      0  02:05       4.656     0.000
+  
+  
+  ***********************
+  Outfall Loading Summary
+  ***********************
+  
+  -----------------------------------------------------------
+                         Flow       Avg       Max       Total
+                         Freq      Flow      Flow      Volume
+  Outfall Node           Pcnt       CMS       CMS    10^6 ltr
+  -----------------------------------------------------------
+  Node6                  0.00     0.000     0.000       0.000
+  -----------------------------------------------------------
+  System                 0.00     0.000     0.000       0.000
+  
+  
+  ********************
+  Link Flow Summary
+  ********************
+  
+  -----------------------------------------------------------------------------
+                                 Maximum  Time of Max   Maximum    Max/    Max/
+                                  |Flow|   Occurrence   |Veloc|    Full    Full
+  Link                 Type          CMS  days hr:min     m/sec    Flow   Depth
+  -----------------------------------------------------------------------------
+  Chan2                CONDUIT     0.000     0  00:00      0.00    0.00    0.02
+  Chan3                CONDUIT     0.000     0  00:00      0.00    0.00    0.00
+  Chan4                CONDUIT     0.000     0  00:00      0.00    0.00    0.00
+  Chan5                CONDUIT     0.000     0  00:00      0.00    0.00    0.00
+  Chan6                CONDUIT    28.982     0  00:55      6.13    0.02    0.19
+  Link                 CONDUIT     0.000     0  00:00      0.00    0.00    0.00
+  Link1                CONDUIT     0.488     0  02:39      0.11    0.04    0.63
+  Link7                CONDUIT    32.979     0  01:58      4.12    1.19    0.91
+  Chan1                WEIR        1.470     1  00:00                      1.00
+  
+  
+  ***************************
+  Flow Classification Summary
+  ***************************
+  
+  -------------------------------------------------------------------------------------
+                      Adjusted    ---------- Fraction of Time in Flow Class ---------- 
+                       /Actual         Up    Down  Sub   Sup   Up    Down  Norm  Inlet 
+  Conduit               Length    Dry  Dry   Dry   Crit  Crit  Crit  Crit  Ltd   Ctrl  
+  -------------------------------------------------------------------------------------
+  Chan2                   1.00   0.00  1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  Chan3                   1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  Chan4                   1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  Chan5                   1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  Chan6                   1.00   0.01  0.02  0.00  0.97  0.00  0.00  0.00  0.99  0.00
+  Link                    1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  Link1                   1.00   0.08  0.00  0.00  0.90  0.00  0.00  0.02  0.00  0.00
+  Link7                   1.00   0.08  0.00  0.00  0.92  0.00  0.00  0.00  0.00  0.00
+  
+  
+  *************************
+  Conduit Surcharge Summary
+  *************************
+  
+  ----------------------------------------------------------------------------
+                                                           Hours        Hours 
+                         --------- Hours Full --------   Above Full   Capacity
+  Conduit                Both Ends  Upstream  Dnstream   Normal Flow   Limited
+  ----------------------------------------------------------------------------
+  Chan2                       0.01     23.83      0.01      0.01         0.01
+  Link7                       0.01      0.04      9.94      0.08         0.01
+  
 
-
-  Analysis begun on:  Sun Jul 19 15:22:57 2026
-  Analysis ended on:  Sun Jul 19 15:22:57 2026
+  Analysis begun on:  Wed Jul 22 14:19:06 2026
+  Analysis ended on:  Wed Jul 22 14:19:06 2026
   Total elapsed time: < 1 sec

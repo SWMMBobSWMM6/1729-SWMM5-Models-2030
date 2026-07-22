@@ -36,20 +36,26 @@
   Wet Weather Inflow .......         0.000         0.000
   Groundwater Inflow .......         0.000         0.000
   RDII Inflow ..............         0.000         0.000
-  External Inflow ..........         0.000         0.000
-  External Outflow .........         0.000         0.000
+  External Inflow ..........         1.983         0.646
+  External Outflow .........         1.911         0.623
   Flooding Loss ............         0.000         0.000
   Evaporation Loss .........         0.000         0.000
   Exfiltration Loss ........         0.000         0.000
   Initial Stored Volume ....         0.000         0.000
   Final Stored Volume ......         0.000         0.000
-  Continuity Error (%) .....         0.000
+  Continuity Error (%) .....         3.638
+  
+  
+  *************************
+  Highest Continuity Errors
+  *************************
+  Node SAN8 (1.75%)
   
   
   ***************************
   Time-Step Critical Elements
   ***************************
-  None
+  Link SAN8 (99.14%)
   
   
   ********************************
@@ -67,16 +73,16 @@
   *************************
   Routing Time Step Summary
   *************************
-  Minimum Time Step           :    14.50 sec
-  Average Time Step           :    15.00 sec
+  Minimum Time Step           :     2.68 sec
+  Average Time Step           :     3.51 sec
   Maximum Time Step           :    15.00 sec
   % of Time in Steady State   :     0.00
-  Average Iterations per Step :     2.00
-  % of Steps Not Converging   :     0.00
+  Average Iterations per Step :     2.27
+  % of Steps Not Converging   :     0.41
   Time Step Frequencies       :
-     15.000 -  7.597 sec      :   100.00 %
-      7.597 -  3.848 sec      :     0.00 %
-      3.848 -  1.949 sec      :     0.00 %
+     15.000 -  7.597 sec      :     0.85 %
+      7.597 -  3.848 sec      :     0.01 %
+      3.848 -  1.949 sec      :    99.14 %
       1.949 -  0.987 sec      :     0.00 %
       0.987 -  0.500 sec      :     0.00 %
   
@@ -90,8 +96,8 @@
                                    Depth    Depth      HGL   Occurrence   Max Depth
   Node                 Type         Feet     Feet     Feet  days hr:min        Feet
   ---------------------------------------------------------------------------------
-  CSO                  JUNCTION     0.00     0.00   128.00     0  00:00        0.00
-  SAN8                 JUNCTION     0.00     0.00   128.00     0  00:00        0.00
+  CSO                  JUNCTION   119.48   120.03   248.03     0  00:52      120.02
+  SAN8                 JUNCTION   119.42   119.97   247.97     0  00:52      119.96
   CSO8                 JUNCTION     0.00     0.00   128.00     0  00:00        0.00
   OUTFALL              JUNCTION     0.00     0.00   128.00     0  00:00        0.00
   A200                 OUTFALL      0.00     0.00   128.00     0  00:00        0.00
@@ -107,11 +113,11 @@
                                    Inflow   Inflow   Occurrence      Volume      Volume       Error
   Node                 Type           CFS      CFS  days hr:min    10^6 gal    10^6 gal     Percent
   -------------------------------------------------------------------------------------------------
-  CSO                  JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
-  SAN8                 JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  CSO                  JUNCTION      1.00     2.67     0  00:08       0.646       0.649       1.950
+  SAN8                 JUNCTION      0.00     2.54     0  00:09           0       0.637       1.784
   CSO8                 JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
   OUTFALL              JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
-  A200                 OUTFALL       0.00     0.00     0  00:00           0           0       0.000 gal
+  A200                 OUTFALL       0.00     1.03     0  00:53           0       0.623       0.000
   
   
   **********************
@@ -137,9 +143,9 @@
                          Freq      Flow      Flow      Volume
   Outfall Node           Pcnt       CFS       CFS    10^6 gal
   -----------------------------------------------------------
-  A200                   0.00      0.00      0.00       0.000
+  A200                  99.15      1.00      1.03       0.623
   -----------------------------------------------------------
-  System                 0.00      0.00      0.00       0.000
+  System                99.15      1.00      1.03       0.623
   
   
   ********************
@@ -151,9 +157,9 @@
                                   |Flow|   Occurrence   |Veloc|    Full    Full
   Link                 Type          CFS  days hr:min    ft/sec    Flow   Depth
   -----------------------------------------------------------------------------
-  SAN8                 CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  SAN8                 CONDUIT      1.03     0  00:53      3.59    0.33    0.40
   CSO8                 CONDUIT      0.00     0  00:00      0.00    0.00    0.00
-  ORIFICE              ORIFICE      0.00     0  00:00                      0.00
+  ORIFICE              ORIFICE      2.54     0  00:09                      1.00
   WEIR                 WEIR         0.00     0  00:00                      0.00
   
   
@@ -166,7 +172,7 @@
                        /Actual         Up    Down  Sub   Sup   Up    Down  Norm  Inlet 
   Conduit               Length    Dry  Dry   Dry   Crit  Crit  Crit  Crit  Ltd   Ctrl  
   -------------------------------------------------------------------------------------
-  SAN8                    1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  SAN8                    1.00   0.04  0.00  0.00  0.00  0.00  0.00  0.96  0.00  0.00
   CSO8                    1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
   
   
@@ -177,6 +183,6 @@
   No conduits were surcharged.
   
 
-  Analysis begun on:  Sun Jul 19 15:22:44 2026
-  Analysis ended on:  Sun Jul 19 15:22:44 2026
+  Analysis begun on:  Wed Jul 22 14:18:44 2026
+  Analysis ended on:  Wed Jul 22 14:18:44 2026
   Total elapsed time: < 1 sec

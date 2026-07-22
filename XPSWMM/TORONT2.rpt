@@ -37,14 +37,22 @@
   Wet Weather Inflow .......         0.000         0.000
   Groundwater Inflow .......         0.000         0.000
   RDII Inflow ..............         0.000         0.000
-  External Inflow ..........         0.000         0.000
-  External Outflow .........         0.000         0.000
-  Flooding Loss ............         0.000         0.000
+  External Inflow ..........         1.037        10.367
+  External Outflow .........         0.259         2.586
+  Flooding Loss ............         0.730         7.301
   Evaporation Loss .........         0.000         0.000
   Exfiltration Loss ........         0.000         0.000
   Initial Stored Volume ....         0.000         0.000
-  Final Stored Volume ......         0.000         0.000
+  Final Stored Volume ......         0.048         0.480
   Continuity Error (%) .....         0.000
+  
+  
+  *************************
+  Highest Continuity Errors
+  *************************
+  Node HW_204 (6.09%)
+  Node HW_207 (6.09%)
+  Node HW_210 (6.09%)
   
   
   ***************************
@@ -73,7 +81,7 @@
   Maximum Time Step           :    30.00 sec
   % of Time in Steady State   :     0.00
   Average Iterations per Step :     2.00
-  % of Steps Not Converging   :     0.00
+  % of Steps Not Converging   :     0.03
   Time Step Frequencies       :
      30.000 - 13.228 sec      :   100.00 %
      13.228 -  5.833 sec      :     0.00 %
@@ -91,14 +99,17 @@
                                    Depth    Depth      HGL   Occurrence   Max Depth
   Node                 Type       Meters   Meters   Meters  days hr:min      Meters
   ---------------------------------------------------------------------------------
-  1203                 JUNCTION     0.00     0.00    10.00     0  00:00        0.00
+  1203                 JUNCTION     0.17     0.17    10.17     0  00:52        0.17
   1103                 JUNCTION     0.00     0.00    10.00     0  00:00        0.00
   205                  JUNCTION     0.00     0.00    10.00     0  00:00        0.00
   1003                 JUNCTION     0.00     0.00    10.00     0  00:00        0.00
   208                  JUNCTION     0.00     0.00    10.00     0  00:00        0.00
   903                  JUNCTION     0.00     0.00    10.00     0  00:00        0.00
   211                  JUNCTION     0.00     0.00    10.00     0  00:00        0.00
-  1204                 OUTFALL      0.00     0.00    10.00     0  00:00        0.00
+  HW_204               JUNCTION     1.94     2.00     2.00     0  01:28        2.00
+  HW_207               JUNCTION     1.94     2.00     2.00     0  01:28        2.00
+  HW_210               JUNCTION     1.94     2.00     2.00     0  01:28        2.00
+  1204                 OUTFALL      0.08     0.08    10.08     0  00:53        0.08
   
   
   *******************
@@ -111,14 +122,17 @@
                                    Inflow   Inflow   Occurrence      Volume      Volume       Error
   Node                 Type           CMS      CMS  days hr:min    10^6 ltr    10^6 ltr     Percent
   -------------------------------------------------------------------------------------------------
-  1203                 JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
+  1203                 JUNCTION     0.030    0.030     0  00:00        2.59        2.59       0.229
   1103                 JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
   205                  JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
   1003                 JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
   208                  JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
   903                  JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
   211                  JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
-  1204                 OUTFALL      0.000    0.000     0  00:00           0           0       0.000 ltr
+  HW_204               JUNCTION     0.030    0.030     0  00:00        2.59        2.59       6.490
+  HW_207               JUNCTION     0.030    0.030     0  00:00        2.59        2.59       6.490
+  HW_210               JUNCTION     0.030    0.030     0  00:00        2.59        2.59       6.490
+  1204                 OUTFALL      0.000    0.030     0  00:53           0        2.59       0.000
   
   
   **********************
@@ -131,19 +145,28 @@
                                    Hours       Above Crown    Below Rim
   Node                 Type      Surcharged         Meters       Meters
   ---------------------------------------------------------------------
-  1103                 JUNCTION       24.00          0.000        0.000
   205                  JUNCTION       24.00          0.000        0.000
-  1003                 JUNCTION       24.00          0.000        0.000
   208                  JUNCTION       24.00          0.000        0.000
-  903                  JUNCTION       24.00          0.000        0.000
   211                  JUNCTION       24.00          0.000        0.000
+  HW_204               JUNCTION       22.54          0.000        0.000
+  HW_207               JUNCTION       22.54          0.000        0.000
+  HW_210               JUNCTION       22.54          0.000        0.000
   
   
   *********************
   Node Flooding Summary
   *********************
   
-  No nodes were flooded.
+  Flooding refers to all water that overflows a node, whether it ponds or not.
+  --------------------------------------------------------------------------
+                                                             Total   Maximum
+                                 Maximum   Time of Max       Flood    Ponded
+                        Hours       Rate    Occurrence      Volume     Depth
+  Node                 Flooded       CMS   days hr:min    10^6 ltr    Meters
+  --------------------------------------------------------------------------
+  HW_204                 22.54     0.030      0  01:28       2.434     0.000
+  HW_207                 22.54     0.030      0  01:28       2.434     0.000
+  HW_210                 22.54     0.030      0  01:28       2.434     0.000
   
   
   ***********************
@@ -155,9 +178,9 @@
                          Freq      Flow      Flow      Volume
   Outfall Node           Pcnt       CMS       CMS    10^6 ltr
   -----------------------------------------------------------
-  1204                   0.00     0.000     0.000       0.000
+  1204                  99.97     0.030     0.030       2.586
   -----------------------------------------------------------
-  System                 0.00     0.000     0.000       0.000
+  System                99.97     0.030     0.030       2.586
   
   
   ********************
@@ -169,7 +192,10 @@
                                   |Flow|   Occurrence   |Veloc|    Full    Full
   Link                 Type          CMS  days hr:min     m/sec    Flow   Depth
   -----------------------------------------------------------------------------
-  201                  CONDUIT     0.000     0  00:00      0.00    0.00    0.00
+  201                  CONDUIT     0.030     0  00:53      0.37    0.12    0.06
+  204                  CONDUIT     0.000     0  00:00      0.00    0.00    0.50
+  207                  CONDUIT     0.000     0  00:00      0.00    0.00    0.50
+  210                  CONDUIT     0.000     0  00:00      0.00    0.00    0.50
   
   
   ***************************
@@ -181,7 +207,10 @@
                        /Actual         Up    Down  Sub   Sup   Up    Down  Norm  Inlet 
   Conduit               Length    Dry  Dry   Dry   Crit  Crit  Crit  Crit  Ltd   Ctrl  
   -------------------------------------------------------------------------------------
-  201                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  201                     1.00   0.00  0.00  0.00  1.00  0.00  0.00  0.00  0.00  0.00
+  204                     1.00   0.00  1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  207                     1.00   0.00  1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  210                     1.00   0.00  1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
   
   
   *************************
@@ -191,6 +220,6 @@
   No conduits were surcharged.
   
 
-  Analysis begun on:  Sun Jul 19 15:24:16 2026
-  Analysis ended on:  Sun Jul 19 15:24:16 2026
+  Analysis begun on:  Wed Jul 22 14:24:37 2026
+  Analysis ended on:  Wed Jul 22 14:24:37 2026
   Total elapsed time: < 1 sec

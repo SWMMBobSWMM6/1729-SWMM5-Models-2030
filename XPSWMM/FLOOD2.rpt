@@ -37,14 +37,20 @@
   Wet Weather Inflow .......         0.000         0.000
   Groundwater Inflow .......         0.000         0.000
   RDII Inflow ..............         0.000         0.000
-  External Inflow ..........         0.000         0.000
+  External Inflow ..........         0.518         5.183
   External Outflow .........         0.000         0.000
   Flooding Loss ............         0.000         0.000
   Evaporation Loss .........         0.000         0.000
   Exfiltration Loss ........         0.000         0.000
   Initial Stored Volume ....         0.000         0.000
-  Final Stored Volume ......         0.000         0.000
-  Continuity Error (%) .....         0.000
+  Final Stored Volume ......         0.016         0.157
+  Continuity Error (%) .....        96.969
+  
+  
+  *************************
+  Highest Continuity Errors
+  *************************
+  Node 1a (100.00%)
   
   
   ***************************
@@ -56,7 +62,8 @@
   ********************************
   Highest Flow Instability Indexes
   ********************************
-  All links are stable.
+  Link 12 (135)
+  Link 21 (133)
   
   
   *********************************
@@ -72,7 +79,7 @@
   Average Time Step           :    29.99 sec
   Maximum Time Step           :    30.00 sec
   % of Time in Steady State   :     0.00
-  Average Iterations per Step :     2.00
+  Average Iterations per Step :     3.27
   % of Steps Not Converging   :     0.00
   Time Step Frequencies       :
      30.000 - 13.228 sec      :   100.00 %
@@ -91,12 +98,12 @@
                                    Depth    Depth      HGL   Occurrence   Max Depth
   Node                 Type       Meters   Meters   Meters  days hr:min      Meters
   ---------------------------------------------------------------------------------
-  1                    JUNCTION     0.00     0.00   110.00     0  00:00        0.00
+  1                    JUNCTION    32.18    65.22   175.22     1  00:00       65.22
   2                    JUNCTION     0.00     0.00   110.00     0  00:00        0.00
-  1a                   JUNCTION     0.00     0.00   110.00     0  00:00        0.00
+  1a                   JUNCTION    32.18    65.22   175.22     1  00:00       65.22
   2a                   JUNCTION     0.00     0.00   110.00     0  00:00        0.00
   4a                   JUNCTION     0.00     0.00   110.00     0  00:00        0.00
-  1b                   JUNCTION     0.00     0.00   111.00     0  00:00        0.00
+  1b                   JUNCTION    31.19    64.22   175.22     1  00:00       64.22
   2b                   JUNCTION     0.00     0.00   110.00     0  00:00        0.00
   4b                   JUNCTION     0.00     0.00   110.00     0  00:00        0.00
   4                    OUTFALL      0.00     0.00   110.00     0  00:00        0.00
@@ -112,12 +119,12 @@
                                    Inflow   Inflow   Occurrence      Volume      Volume       Error
   Node                 Type           CMS      CMS  days hr:min    10^6 ltr    10^6 ltr     Percent
   -------------------------------------------------------------------------------------------------
-  1                    JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
+  1                    JUNCTION     0.030    0.030     0  00:00        2.59        2.59     100.403
   2                    JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
-  1a                   JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
+  1a                   JUNCTION     0.000    0.072     0  04:24           0        2.61 2607029.673 ltr
   2a                   JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
   4a                   JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
-  1b                   JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
+  1b                   JUNCTION     0.030    0.030     0  00:00        2.59        2.59      97.273
   2b                   JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
   4b                   JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
   4                    OUTFALL      0.000    0.000     0  00:00           0           0       0.000 ltr
@@ -164,10 +171,10 @@
   5                    CONDUIT     0.000     0  00:00      0.00    0.00    0.00
   3a                   CONDUIT     0.000     0  00:00      0.00    0.00    0.00
   5a                   CONDUIT     0.000     0  00:00      0.00    0.00    0.00
-  12                   CONDUIT     0.000     0  00:00      0.00    0.00    0.00
+  12                   CONDUIT     0.036     0  04:24      0.35    0.85    1.00
   3b                   CONDUIT     0.000     0  00:00      0.00    0.00    0.00
   5b                   CONDUIT     0.000     0  00:00      0.00    0.00    0.00
-  21                   CONDUIT     0.000     0  00:00      0.00    0.00    0.00
+  21                   CONDUIT     0.036     0  04:24      1.35    0.01    1.00
   
   
   ***************************
@@ -183,19 +190,25 @@
   5                       1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
   3a                      1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
   5a                      1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
-  12                      1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  12                      1.00   0.00  0.00  0.00  1.00  0.00  0.00  0.00  0.00  0.00
   3b                      1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
   5b                      1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
-  21                      1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  21                      1.00   0.00  0.00  0.00  1.00  0.00  0.00  0.00  0.02  0.00
   
   
   *************************
   Conduit Surcharge Summary
   *************************
   
-  No conduits were surcharged.
+  ----------------------------------------------------------------------------
+                                                           Hours        Hours 
+                         --------- Hours Full --------   Above Full   Capacity
+  Conduit                Both Ends  Upstream  Dnstream   Normal Flow   Limited
+  ----------------------------------------------------------------------------
+  12                         23.44     23.44     23.44      0.01         7.39
+  21                         22.95     22.95     23.44      0.01         0.01
   
 
-  Analysis begun on:  Sun Jul 19 15:18:44 2026
-  Analysis ended on:  Sun Jul 19 15:18:44 2026
-  Total elapsed time: < 1 sec
+  Analysis begun on:  Wed Jul 22 12:55:17 2026
+  Analysis ended on:  Wed Jul 22 12:55:18 2026
+  Total elapsed time: 00:00:01

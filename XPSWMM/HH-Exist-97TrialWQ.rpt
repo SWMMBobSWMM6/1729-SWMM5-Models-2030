@@ -37,27 +37,27 @@
   Wet Weather Inflow .......         0.000         0.000
   Groundwater Inflow .......         0.000         0.000
   RDII Inflow ..............         0.000         0.000
-  External Inflow ..........         0.000         0.000
+  External Inflow ..........         5.950         1.939
   External Outflow .........         0.000         0.000
-  Flooding Loss ............         0.251         0.082
+  Flooding Loss ............         5.445         1.774
   Evaporation Loss .........         0.000         0.000
   Exfiltration Loss ........         0.000         0.000
   Initial Stored Volume ....         0.343         0.112
-  Final Stored Volume ......         0.159         0.052
-  Continuity Error (%) .....       -19.541
+  Final Stored Volume ......         0.418         0.136
+  Continuity Error (%) .....         6.828
   
   
   *************************
   Highest Continuity Errors
   *************************
-  Node LL-A4 (-25.68%)
+  Node Hxw5C2 (13.99%)
+  Node LL-A4 (13.71%)
   
   
   ***************************
   Time-Step Critical Elements
   ***************************
-  Link 692 (78.95%)
-  Node LL-A1 (2.56%)
+  Link 692 (76.58%)
   
   
   ********************************
@@ -69,26 +69,27 @@
   *********************************
   Most Frequent Nonconverging Nodes
   *********************************
-  Node LL-A5 (14.92%)
-  Node LL-A1 (14.37%)
-  Node LL-A4 (11.02%)
+  Node LL-A5 (10.41%)
+  Node LL-A4 (10.15%)
+  Node LL-A1 (0.61%)
+  Node Hxw5C2 (0.26%)
   
   
   *************************
   Routing Time Step Summary
   *************************
-  Minimum Time Step           :     1.04 sec
-  Average Time Step           :    96.21 sec
+  Minimum Time Step           :     1.01 sec
+  Average Time Step           :    74.93 sec
   Maximum Time Step           :   300.00 sec
   % of Time in Steady State   :     0.00
-  Average Iterations per Step :    11.17
-  % of Steps Not Converging   :    14.92
+  Average Iterations per Step :     9.52
+  % of Steps Not Converging   :    10.41
   Time Step Frequencies       :
-     300.000 - 83.462 sec      :    29.77 %
-     83.462 - 23.220 sec      :    52.17 %
-     23.220 -  6.460 sec      :    17.28 %
-      6.460 -  1.797 sec      :     0.67 %
-      1.797 -  0.500 sec      :     0.11 %
+     300.000 - 83.462 sec      :    23.18 %
+     83.462 - 23.220 sec      :     0.09 %
+     23.220 -  6.460 sec      :    43.32 %
+      6.460 -  1.797 sec      :    29.34 %
+      1.797 -  0.500 sec      :     4.08 %
   
   
   ******************
@@ -100,12 +101,12 @@
                                    Depth    Depth      HGL   Occurrence   Max Depth
   Node                 Type         Feet     Feet     Feet  days hr:min        Feet
   ---------------------------------------------------------------------------------
-  LL-A1                JUNCTION     0.26     1.00  1001.00     0  00:00        1.00
+  LL-A1                JUNCTION     0.98     1.00  1001.00     0  00:00        1.00
   Culv@12              JUNCTION     0.00     0.00  1000.00     0  00:00        0.00
-  Hxw5C2               JUNCTION     0.00     0.00   906.90     0  00:00        0.00
+  Hxw5C2               JUNCTION   842.69   909.90  1816.80     0  03:23      909.90
   LL-A5                OUTFALL      0.00     0.00  1000.00     0  00:00        0.00
-  LL-A4                STORAGE      0.27     8.20  1008.20     0  00:00        2.37
-  LL-A2                STORAGE      0.00     0.00  1000.00     0  00:00        0.00
+  LL-A4                STORAGE      0.97     8.20  1008.20     0  00:00        2.39
+  LL-A2                STORAGE      9.36    10.00  1010.00     0  02:49       10.00
   LL-A3                STORAGE      6.70     6.70  1006.70     0  00:00        6.70
   
   
@@ -119,12 +120,12 @@
                                    Inflow   Inflow   Occurrence      Volume      Volume       Error
   Node                 Type           CFS      CFS  days hr:min    10^6 gal    10^6 gal     Percent
   -------------------------------------------------------------------------------------------------
-  LL-A1                JUNCTION      0.00     8.11     0  00:00           0      0.0895      -3.675
+  LL-A1                JUNCTION      1.00     8.87     0  00:05       0.646       0.816       3.206
   Culv@12              JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
-  Hxw5C2               JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  Hxw5C2               JUNCTION      1.00     1.00     0  00:00       0.646       0.646      16.264
   LL-A5                OUTFALL       0.00     0.00     0  00:00           0           0       0.000 gal
-  LL-A4                STORAGE       0.00     1.28     0  00:31           0      0.0725     -20.430
-  LL-A2                STORAGE       0.00     0.00     0  00:00           0           0       0.000 gal
+  LL-A4                STORAGE       0.00     2.70     0  04:48           0       0.205      15.894
+  LL-A2                STORAGE       1.00     1.00     0  00:00       0.646       0.646       0.005
   LL-A3                STORAGE       0.00     0.00     0  00:00           0      0.0501       0.000
   
   
@@ -138,7 +139,8 @@
                                    Hours       Above Crown    Below Rim
   Node                 Type      Surcharged           Feet         Feet
   ---------------------------------------------------------------------
-  LL-A1                JUNCTION        1.68          0.000        0.000
+  LL-A1                JUNCTION       22.93          0.000        0.000
+  Hxw5C2               JUNCTION       20.68          0.000        0.000
   
   
   *********************
@@ -152,7 +154,9 @@
                         Hours       Rate    Occurrence      Volume     Depth
   Node                 Flooded       CFS   days hr:min    10^6 gal      Feet
   --------------------------------------------------------------------------
-  LL-A1                   1.68      7.95      0  00:05       0.082     0.000
+  LL-A1                  22.93      8.72      0  00:05       0.676     0.000
+  Hxw5C2                 20.68      1.00      0  03:23       0.557     0.000
+  LL-A2                  21.26      1.00      0  02:49       0.573     0.000
   
   
   **********************
@@ -164,8 +168,8 @@
                           Volume   Pcnt   Pcnt   Pcnt      Volume   Pcnt     Occurrence    Outflow
   Storage Unit          1000 ft³   Full   Loss   Loss    1000 ft³   Full    days hr:min        CFS
   ------------------------------------------------------------------------------------------------
-  LL-A4                    0.273    2.7    0.0    0.0       8.200   82.0       0  00:00       8.11
-  LL-A2                    0.000    0.0    0.0    0.0       0.000    0.0       0  00:00       0.00
+  LL-A4                    0.973    9.7    0.0    0.0       8.200   82.0       0  00:00       7.87
+  LL-A2                    9.356   93.6    0.0    0.0      10.000  100.0       0  02:49       0.00
   LL-A3                    6.700   67.0    0.0    0.0       6.700   67.0       0  00:00       0.00
   
   
@@ -192,9 +196,9 @@
                                   |Flow|   Occurrence   |Veloc|    Full    Full
   Link                 Type          CFS  days hr:min    ft/sec    Flow   Depth
   -----------------------------------------------------------------------------
-  692                  CONDUIT      8.11     0  00:00     12.54   71.94    1.00
+  692                  CONDUIT      7.87     0  00:05     10.02   69.87    1.00
   LL-A2C               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
-  Hwy5C1               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  Hwy5C1               CONDUIT      0.00     0  00:00      0.00    0.00    0.50
   CSAH12c              CONDUIT      0.00     0  00:00      0.00    0.00    0.00
   CSAH12w1             WEIR         0.00     0  00:00                      0.00
   
@@ -208,9 +212,9 @@
                        /Actual         Up    Down  Sub   Sup   Up    Down  Norm  Inlet 
   Conduit               Length    Dry  Dry   Dry   Crit  Crit  Crit  Crit  Ltd   Ctrl  
   -------------------------------------------------------------------------------------
-  692                     1.00   0.00  0.00  0.00  0.87  0.13  0.00  0.00  0.13  0.00
+  692                     1.00   0.00  0.00  0.00  0.99  0.01  0.00  0.00  0.00  0.00
   LL-A2C                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
-  Hwy5C1                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  Hwy5C1                  1.00   0.13  0.87  0.00  0.00  0.00  0.00  0.00  0.00  0.00
   CSAH12c                 1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
   
   
@@ -223,9 +227,9 @@
                          --------- Hours Full --------   Above Full   Capacity
   Conduit                Both Ends  Upstream  Dnstream   Normal Flow   Limited
   ----------------------------------------------------------------------------
-  692                         0.34      1.62      0.75      2.80         0.01
+  692                         9.00     23.17      9.17     11.88         0.83
   
 
-  Analysis begun on:  Sun Jul 19 15:19:31 2026
-  Analysis ended on:  Sun Jul 19 15:19:32 2026
-  Total elapsed time: 00:00:01
+  Analysis begun on:  Wed Jul 22 13:51:03 2026
+  Analysis ended on:  Wed Jul 22 13:51:03 2026
+  Total elapsed time: < 1 sec

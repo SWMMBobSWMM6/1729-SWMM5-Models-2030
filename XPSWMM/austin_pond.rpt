@@ -36,14 +36,20 @@
   Wet Weather Inflow .......         0.000         0.000
   Groundwater Inflow .......         0.000         0.000
   RDII Inflow ..............         0.000         0.000
-  External Inflow ..........         0.000         0.000
-  External Outflow .........         0.000         0.000
+  External Inflow ..........         1.983         0.646
+  External Outflow .........         1.698         0.553
   Flooding Loss ............         0.000         0.000
   Evaporation Loss .........         0.000         0.000
   Exfiltration Loss ........         0.000         0.000
   Initial Stored Volume ....         0.000         0.000
-  Final Stored Volume ......         0.000         0.000
-  Continuity Error (%) .....         0.000
+  Final Stored Volume ......         0.001         0.000
+  Continuity Error (%) .....        14.377
+  
+  
+  *************************
+  Highest Continuity Errors
+  *************************
+  Node N2 (7.69%)
   
   
   ***************************
@@ -90,8 +96,8 @@
                                    Depth    Depth      HGL   Occurrence   Max Depth
   Node                 Type         Feet     Feet     Feet  days hr:min        Feet
   ---------------------------------------------------------------------------------
-  Pond                 JUNCTION     0.00     0.00   520.00     0  00:00        0.00
-  N2                   JUNCTION     0.00     0.00   520.00     0  00:00        0.00
+  Pond                 JUNCTION   481.95   500.15  1020.15     0  01:48      500.14
+  N2                   JUNCTION   435.69   488.67  1008.67     0  03:32      488.67
   N3                   OUTFALL      0.00     0.00   450.00     0  00:00        0.00
   
   
@@ -105,9 +111,9 @@
                                    Inflow   Inflow   Occurrence      Volume      Volume       Error
   Node                 Type           CFS      CFS  days hr:min    10^6 gal    10^6 gal     Percent
   -------------------------------------------------------------------------------------------------
-  Pond                 JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
-  N2                   JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
-  N3                   OUTFALL       0.00     0.00     0  00:00           0           0       0.000 gal
+  Pond                 JUNCTION      1.00     1.00     0  00:00       0.646       0.646       7.860
+  N2                   JUNCTION      0.00     1.00     1  00:00           0       0.599       8.326
+  N3                   OUTFALL       0.00     1.00     0  03:32           0       0.553       0.000
   
   
   **********************
@@ -133,9 +139,9 @@
                          Freq      Flow      Flow      Volume
   Outfall Node           Pcnt       CFS       CFS    10^6 gal
   -----------------------------------------------------------
-  N3                     0.00      0.00      0.00       0.000
+  N3                    85.61      1.00      1.00       0.553
   -----------------------------------------------------------
-  System                 0.00      0.00      0.00       0.000
+  System                85.61      1.00      1.00       0.553
   
   
   ********************
@@ -147,8 +153,8 @@
                                   |Flow|   Occurrence   |Veloc|    Full    Full
   Link                 Type          CFS  days hr:min    ft/sec    Flow   Depth
   -----------------------------------------------------------------------------
-  L1                   CONDUIT      0.00     0  00:00      0.00    0.00    0.00
-  L2                   CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  L1                   CONDUIT      1.00     1  00:00      7.32    0.00    0.04
+  L2                   CONDUIT      1.00     0  03:32     13.66    0.00    0.04
   
   
   ***************************
@@ -160,8 +166,8 @@
                        /Actual         Up    Down  Sub   Sup   Up    Down  Norm  Inlet 
   Conduit               Length    Dry  Dry   Dry   Crit  Crit  Crit  Crit  Ltd   Ctrl  
   -------------------------------------------------------------------------------------
-  L1                      1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
-  L2                      1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  L1                      1.00   0.07  0.00  0.00  0.00  0.00  0.00  0.93  0.00  0.00
+  L2                      1.00   0.14  0.00  0.00  0.00  0.00  0.00  0.86  0.00  0.00
   
   
   *************************
@@ -171,6 +177,6 @@
   No conduits were surcharged.
   
 
-  Analysis begun on:  Sun Jul 19 15:11:40 2026
-  Analysis ended on:  Sun Jul 19 15:11:40 2026
-  Total elapsed time: < 1 sec
+  Analysis begun on:  Wed Jul 22 11:39:53 2026
+  Analysis ended on:  Wed Jul 22 11:39:54 2026
+  Total elapsed time: 00:00:01

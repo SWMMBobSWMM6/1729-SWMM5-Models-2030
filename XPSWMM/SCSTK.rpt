@@ -37,14 +37,14 @@
   Wet Weather Inflow .......         0.000         0.000
   Groundwater Inflow .......         0.000         0.000
   RDII Inflow ..............         0.000         0.000
-  External Inflow ..........         0.000         0.000
-  External Outflow .........         0.000         0.000
+  External Inflow ..........         1.983         0.646
+  External Outflow .........         1.981         0.645
   Flooding Loss ............         0.000         0.000
   Evaporation Loss .........         0.000         0.000
   Exfiltration Loss ........         0.000         0.000
   Initial Stored Volume ....         0.000         0.000
-  Final Stored Volume ......         0.000         0.000
-  Continuity Error (%) .....         0.000
+  Final Stored Volume ......         0.004         0.001
+  Continuity Error (%) .....        -0.068
   
   
   ***************************
@@ -91,10 +91,10 @@
                                    Depth    Depth      HGL   Occurrence   Max Depth
   Node                 Type         Feet     Feet     Feet  days hr:min        Feet
   ---------------------------------------------------------------------------------
-  Inlet                JUNCTION     0.00     0.00    25.00     0  00:00        0.00
+  Inlet                JUNCTION     0.24     0.24    25.24     0  00:50        0.24
   Inlet_2              JUNCTION     0.00     0.00     0.00     0  00:00        0.00
   Inlet_3              JUNCTION     0.00     0.00     0.00     0  00:00        0.00
-  Outlet               OUTFALL      0.00     0.00     0.00     0  00:00        0.00
+  Outlet               OUTFALL      0.24     0.24     0.24     0  00:50        0.24
   
   
   *******************
@@ -107,10 +107,10 @@
                                    Inflow   Inflow   Occurrence      Volume      Volume       Error
   Node                 Type           CFS      CFS  days hr:min    10^6 gal    10^6 gal     Percent
   -------------------------------------------------------------------------------------------------
-  Inlet                JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  Inlet                JUNCTION      1.00     1.00     0  00:00       0.646       0.646       0.145
   Inlet_2              JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
   Inlet_3              JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
-  Outlet               OUTFALL       0.00     0.00     0  00:00           0           0       0.000 gal
+  Outlet               OUTFALL       0.00     1.00     0  00:50           0       0.645       0.000
   
   
   **********************
@@ -143,9 +143,9 @@
                          Freq      Flow      Flow      Volume
   Outfall Node           Pcnt       CFS       CFS    10^6 gal
   -----------------------------------------------------------
-  Outlet                 0.00      0.00      0.00       0.000
+  Outlet               100.00      1.00      1.00       0.645
   -----------------------------------------------------------
-  System                 0.00      0.00      0.00       0.000
+  System               100.00      1.00      1.00       0.645
   
   
   ********************
@@ -158,8 +158,8 @@
   Link                 Type          CFS  days hr:min    ft/sec    Flow   Depth
   -----------------------------------------------------------------------------
   Pipe                 CONDUIT      0.00     0  00:00      0.00    0.00    0.00
-  Channel              CONDUIT      0.00     0  00:00      0.00    0.00    0.00
-  Pipe_2               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  Channel              CONDUIT      1.00     0  00:50      3.41    0.01    0.08
+  Pipe_2               CONDUIT      0.00     0  00:00      0.00    0.00    0.08
   
   
   ***************************
@@ -172,8 +172,8 @@
   Conduit               Length    Dry  Dry   Dry   Crit  Crit  Crit  Crit  Ltd   Ctrl  
   -------------------------------------------------------------------------------------
   Pipe                    1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
-  Channel                 1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
-  Pipe_2                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  Channel                 1.00   0.00  0.00  0.00  0.00  1.00  0.00  0.00  0.00  0.00
+  Pipe_2                  1.00   0.00  0.00  0.00  1.00  0.00  0.00  0.00  0.00  0.00
   
   
   *************************
@@ -183,6 +183,6 @@
   No conduits were surcharged.
   
 
-  Analysis begun on:  Sun Jul 19 15:22:18 2026
-  Analysis ended on:  Sun Jul 19 15:22:18 2026
+  Analysis begun on:  Wed Jul 22 14:16:43 2026
+  Analysis ended on:  Wed Jul 22 14:16:43 2026
   Total elapsed time: < 1 sec

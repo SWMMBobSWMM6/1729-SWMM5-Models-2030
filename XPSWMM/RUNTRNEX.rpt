@@ -41,26 +41,37 @@
   Wet Weather Inflow .......         0.000         0.000
   Groundwater Inflow .......         0.000         0.000
   RDII Inflow ..............         0.000         0.000
-  External Inflow ..........         0.000         0.000
+  External Inflow ..........         5.950         1.939
   External Outflow .........         0.000         0.000
-  Flooding Loss ............         0.000         0.000
+  Flooding Loss ............         5.800         1.890
   Evaporation Loss .........         0.000         0.000
   Exfiltration Loss ........         0.000         0.000
   Initial Stored Volume ....         0.000         0.000
-  Final Stored Volume ......         0.000         0.000
-  Continuity Error (%) .....         0.000
+  Final Stored Volume ......         0.151         0.049
+  Continuity Error (%) .....        -0.012
+  
+  
+  *************************
+  Highest Continuity Errors
+  *************************
+  Node Tjunc3 (2.24%)
+  Node Tjunc2 (1.52%)
   
   
   ***************************
   Time-Step Critical Elements
   ***************************
-  None
+  Link Tpipe5 (98.04%)
   
   
   ********************************
   Highest Flow Instability Indexes
   ********************************
-  All links are stable.
+  Link Tpipe5 (83)
+  Link Tpipe1 (42)
+  Link Tpipe4 (42)
+  Link Tpipe2 (42)
+  Link Tpipe3 (42)
   
   
   *********************************
@@ -72,16 +83,16 @@
   *************************
   Routing Time Step Summary
   *************************
-  Minimum Time Step           :    29.50 sec
-  Average Time Step           :    29.99 sec
+  Minimum Time Step           :     4.75 sec
+  Average Time Step           :    22.90 sec
   Maximum Time Step           :    30.00 sec
   % of Time in Steady State   :     0.00
-  Average Iterations per Step :     2.00
+  Average Iterations per Step :     2.15
   % of Steps Not Converging   :     0.00
   Time Step Frequencies       :
-     30.000 - 13.228 sec      :   100.00 %
-     13.228 -  5.833 sec      :     0.00 %
-      5.833 -  2.572 sec      :     0.00 %
+     30.000 - 13.228 sec      :    99.87 %
+     13.228 -  5.833 sec      :     0.08 %
+      5.833 -  2.572 sec      :     0.05 %
       2.572 -  1.134 sec      :     0.00 %
       1.134 -  0.500 sec      :     0.00 %
   
@@ -95,12 +106,13 @@
                                    Depth    Depth      HGL   Occurrence   Max Depth
   Node                 Type         Feet     Feet     Feet  days hr:min        Feet
   ---------------------------------------------------------------------------------
-  Catch1               JUNCTION     0.00     0.00     0.00     0  00:00        0.00
-  TJunc1               JUNCTION     0.00     0.00     0.00     0  00:00        0.00
-  Tjunc2               JUNCTION     0.00     0.00     0.00     0  00:00        0.00
-  Catch2               JUNCTION     0.00     0.00     0.00     0  00:00        0.00
-  Tjunc3               JUNCTION     0.00     0.00     0.00     0  00:00        0.00
-  Catch3               OUTFALL      0.00     0.00     0.00     0  00:00        0.00
+  Catch1               JUNCTION     1.63     1.66     1.66     0  02:48        1.66
+  TJunc1               JUNCTION     1.61     1.64     1.64     0  01:07        1.63
+  Tjunc2               JUNCTION     1.61     1.64     1.64     0  01:53        1.64
+  Catch2               JUNCTION     1.64     1.67     1.67     0  01:16        1.66
+  Tjunc3               JUNCTION     1.63     1.66     1.66     0  01:23        1.65
+  Catch3               JUNCTION     1.49     1.50     1.50     0  00:32        1.50
+  OUT_SYNTH            OUTFALL      0.00     0.00    17.00     0  00:00        0.00
   JuncT/E              STORAGE      0.00     0.00    23.00     0  00:00        0.00
   LFJUNC1              STORAGE      0.00     0.00    22.00     0  00:00        0.00
   LFJUNC2              STORAGE      0.00     0.00    22.00     0  00:00        0.00
@@ -121,12 +133,13 @@
                                    Inflow   Inflow   Occurrence      Volume      Volume       Error
   Node                 Type           CFS      CFS  days hr:min    10^6 gal    10^6 gal     Percent
   -------------------------------------------------------------------------------------------------
-  Catch1               JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
-  TJunc1               JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
-  Tjunc2               JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
-  Catch2               JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
-  Tjunc3               JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
-  Catch3               OUTFALL       0.00     0.00     0  00:00           0           0       0.000 gal
+  Catch1               JUNCTION      1.00     1.00     0  00:00       0.646       0.646       2.332
+  TJunc1               JUNCTION      0.00     2.40     0  01:45           0        1.27       0.419
+  Tjunc2               JUNCTION      0.00     2.22     0  00:12           0       0.639       1.548
+  Catch2               JUNCTION      1.00     1.00     0  00:00       0.646       0.646       0.385
+  Tjunc3               JUNCTION      0.00     1.11     0  01:21           0       0.644       2.291
+  Catch3               JUNCTION      1.00     3.05     0  02:31       0.646        1.91       0.119
+  OUT_SYNTH            OUTFALL       0.00     0.00     0  00:00           0           0       0.000 gal
   JuncT/E              STORAGE       0.00     0.00     0  00:00           0           0       0.000 gal
   LFJUNC1              STORAGE       0.00     0.00     0  00:00           0           0       0.000 gal
   LFJUNC2              STORAGE       0.00     0.00     0  00:00           0           0       0.000 gal
@@ -141,14 +154,27 @@
   Node Surcharge Summary
   **********************
   
-  No nodes were surcharged.
+  Surcharging occurs when water rises above the top of the highest conduit.
+  ---------------------------------------------------------------------
+                                               Max. Height   Min. Depth
+                                   Hours       Above Crown    Below Rim
+  Node                 Type      Surcharged           Feet         Feet
+  ---------------------------------------------------------------------
+  Catch3               JUNCTION       23.46          0.000        0.000
   
   
   *********************
   Node Flooding Summary
   *********************
   
-  No nodes were flooded.
+  Flooding refers to all water that overflows a node, whether it ponds or not.
+  --------------------------------------------------------------------------
+                                                             Total   Maximum
+                                 Maximum   Time of Max       Flood    Ponded
+                        Hours       Rate    Occurrence      Volume     Depth
+  Node                 Flooded       CFS   days hr:min    10^6 gal      Feet
+  --------------------------------------------------------------------------
+  Catch3                 23.46      3.05      0  02:31       1.890     0.000
   
   
   **********************
@@ -179,7 +205,7 @@
                          Freq      Flow      Flow      Volume
   Outfall Node           Pcnt       CFS       CFS    10^6 gal
   -----------------------------------------------------------
-  Catch3                 0.00      0.00      0.00       0.000
+  OUT_SYNTH              0.00      0.00      0.00       0.000
   -----------------------------------------------------------
   System                 0.00      0.00      0.00       0.000
   
@@ -193,11 +219,11 @@
                                   |Flow|   Occurrence   |Veloc|    Full    Full
   Link                 Type          CFS  days hr:min    ft/sec    Flow   Depth
   -----------------------------------------------------------------------------
-  Tpipe1               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
-  Tpipe3               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
-  Tchannel1            CONDUIT      0.00     0  00:00      0.00    0.00    0.00
-  Tpipe5               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
-  Tpipe4               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  Tpipe1               CONDUIT      1.31     0  01:10      1.04    2.44    0.66
+  Tpipe3               CONDUIT      1.27     0  00:12      1.32    2.11    0.65
+  Tchannel1            CONDUIT      0.00     0  00:00      0.00    0.00    0.27
+  Tpipe5               CONDUIT      1.11     0  01:21      1.68    2.63    0.83
+  Tpipe4               CONDUIT      1.28     0  01:24      1.36    1.98    0.66
   LowFlow              CONDUIT      0.00     0  00:00      0.00    0.00    0.00
   LFB                  CONDUIT      0.00     0  00:00      0.00    0.00    0.00
   LFC                  CONDUIT      0.00     0  00:00      0.00    0.00    0.00
@@ -205,7 +231,8 @@
   UpperPipe            CONDUIT      0.00     0  00:00      0.00    0.00    0.00
   PumpOut              CONDUIT      0.00     0  00:00      0.00    0.00    0.00
   Pipe_2               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
-  Tpipe2               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  Tpipe2               CONDUIT      2.05     0  02:31      1.75   11.50    1.00
+  C_OUT_SYNTH          CONDUIT      0.00     0  00:00      0.00    0.00    0.00
   222.1                PUMP         0.00     0  00:00              0.00
   
   
@@ -218,11 +245,11 @@
                        /Actual         Up    Down  Sub   Sup   Up    Down  Norm  Inlet 
   Conduit               Length    Dry  Dry   Dry   Crit  Crit  Crit  Crit  Ltd   Ctrl  
   -------------------------------------------------------------------------------------
-  Tpipe1                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
-  Tpipe3                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
-  Tchannel1               1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
-  Tpipe5                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
-  Tpipe4                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  Tpipe1                  1.00   0.00  0.00  0.00  1.00  0.00  0.00  0.00  0.15  0.00
+  Tpipe3                  1.00   0.00  0.00  0.00  1.00  0.00  0.00  0.00  0.00  0.00
+  Tchannel1               1.00   0.00  1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  Tpipe5                  1.00   0.00  0.00  0.00  1.00  0.00  0.00  0.00  0.00  0.00
+  Tpipe4                  1.00   0.00  0.00  0.00  1.00  0.00  0.00  0.00  0.14  0.00
   LowFlow                 1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
   LFB                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
   LFC                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
@@ -230,14 +257,24 @@
   UpperPipe               1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
   PumpOut                 1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
   Pipe_2                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
-  Tpipe2                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  Tpipe2                  1.00   0.00  0.00  0.00  1.00  0.00  0.00  0.00  0.00  0.00
+  C_OUT_SYNTH             1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
   
   
   *************************
   Conduit Surcharge Summary
   *************************
   
-  No conduits were surcharged.
+  ----------------------------------------------------------------------------
+                                                           Hours        Hours 
+                         --------- Hours Full --------   Above Full   Capacity
+  Conduit                Both Ends  Upstream  Dnstream   Normal Flow   Limited
+  ----------------------------------------------------------------------------
+  Tpipe1                      0.01      0.01      0.01     23.83         0.01
+  Tpipe3                      0.01      0.01      0.01     23.70         0.01
+  Tpipe5                      0.01      0.01      0.01     23.98         0.01
+  Tpipe4                      0.01      0.01      0.01     23.50         0.01
+  Tpipe2                     23.45     23.46     23.45     23.97         0.01
   
   
   ***************
@@ -252,6 +289,6 @@
   222.1                    0.00           0      0.00      0.00      0.00     0.000      0.00    0.0    0.0
   
 
-  Analysis begun on:  Sun Jul 19 15:22:13 2026
-  Analysis ended on:  Sun Jul 19 15:22:13 2026
+  Analysis begun on:  Wed Jul 22 14:16:25 2026
+  Analysis ended on:  Wed Jul 22 14:16:25 2026
   Total elapsed time: < 1 sec

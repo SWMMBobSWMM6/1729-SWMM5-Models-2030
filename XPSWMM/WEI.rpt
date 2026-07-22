@@ -36,14 +36,20 @@
   Wet Weather Inflow .......         0.000         0.000
   Groundwater Inflow .......         0.000         0.000
   RDII Inflow ..............         0.000         0.000
-  External Inflow ..........         0.000         0.000
-  External Outflow .........         0.000         0.000
+  External Inflow ..........         1.983         0.646
+  External Outflow .........         1.896         0.618
   Flooding Loss ............         0.000         0.000
   Evaporation Loss .........         0.000         0.000
   Exfiltration Loss ........         0.000         0.000
   Initial Stored Volume ....         0.000         0.000
-  Final Stored Volume ......         0.000         0.000
-  Continuity Error (%) .....         0.000
+  Final Stored Volume ......         0.004         0.001
+  Continuity Error (%) .....         4.232
+  
+  
+  *************************
+  Highest Continuity Errors
+  *************************
+  Node 4 (2.97%)
   
   
   ***************************
@@ -61,21 +67,23 @@
   *********************************
   Most Frequent Nonconverging Nodes
   *********************************
-  Convergence obtained at all time steps.
+  Node 4 (0.07%)
+  Node 6 (0.07%)
+  Node 1 (0.05%)
   
   
   *************************
   Routing Time Step Summary
   *************************
-  Minimum Time Step           :    19.50 sec
-  Average Time Step           :    20.00 sec
+  Minimum Time Step           :     8.55 sec
+  Average Time Step           :    19.99 sec
   Maximum Time Step           :    20.00 sec
   % of Time in Steady State   :     0.00
-  Average Iterations per Step :     2.00
-  % of Steps Not Converging   :     0.00
+  Average Iterations per Step :     2.01
+  % of Steps Not Converging   :     0.07
   Time Step Frequencies       :
-     20.000 -  9.564 sec      :   100.00 %
-      9.564 -  4.573 sec      :     0.00 %
+     20.000 -  9.564 sec      :    99.98 %
+      9.564 -  4.573 sec      :     0.02 %
       4.573 -  2.187 sec      :     0.00 %
       2.187 -  1.046 sec      :     0.00 %
       1.046 -  0.500 sec      :     0.00 %
@@ -90,9 +98,9 @@
                                    Depth    Depth      HGL   Occurrence   Max Depth
   Node                 Type         Feet     Feet     Feet  days hr:min        Feet
   ---------------------------------------------------------------------------------
-  1                    JUNCTION     0.00     0.00   110.00     0  00:00        0.00
+  1                    JUNCTION    94.61    95.28   205.28     0  00:47       95.28
   2                    JUNCTION     0.00     0.00   100.00     0  00:00        0.00
-  4                    JUNCTION     0.00     0.00   205.00     0  00:00        0.00
+  4                    JUNCTION   189.53   195.30   400.30     0  01:25      195.30
   6                    OUTFALL      0.00     0.00   200.00     0  00:00        0.00
   
   
@@ -106,10 +114,10 @@
                                    Inflow   Inflow   Occurrence      Volume      Volume       Error
   Node                 Type           CFS      CFS  days hr:min    10^6 gal    10^6 gal     Percent
   -------------------------------------------------------------------------------------------------
-  1                    JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
-  2                    JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
-  4                    JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
-  6                    OUTFALL       0.00     0.00     0  00:00           0           0       0.000 gal
+  1                    JUNCTION      1.00     1.00     0  00:00       0.646       0.646       1.526
+  2                    JUNCTION      0.00     1.39     0  00:20           0       0.637       0.000
+  4                    JUNCTION      0.00     1.39     0  00:20           0       0.637       3.060
+  6                    OUTFALL       0.00     1.32     0  01:02           0       0.618       0.000
   
   
   **********************
@@ -135,9 +143,9 @@
                          Freq      Flow      Flow      Volume
   Outfall Node           Pcnt       CFS       CFS    10^6 gal
   -----------------------------------------------------------
-  6                      0.00      0.00      0.00       0.000
+  6                     95.63      1.00      1.32       0.618
   -----------------------------------------------------------
-  System                 0.00      0.00      0.00       0.000
+  System                95.63      1.00      1.32       0.618
   
   
   ********************
@@ -149,9 +157,9 @@
                                   |Flow|   Occurrence   |Veloc|    Full    Full
   Link                 Type          CFS  days hr:min    ft/sec    Flow   Depth
   -----------------------------------------------------------------------------
-  3                    CONDUIT      0.00     0  00:00      0.00    0.00    0.00
-  7                    CONDUIT      0.00     0  00:00      0.00    0.00    0.00
-  5                    PUMP         0.00     0  00:00              0.00
+  3                    CONDUIT      1.39     0  00:20     21.21    0.24    0.28
+  7                    CONDUIT      1.32     0  01:02      9.91    0.25    0.30
+  5                    PUMP         1.39     0  00:20              0.14
   
   
   ***************************
@@ -163,8 +171,8 @@
                        /Actual         Up    Down  Sub   Sup   Up    Down  Norm  Inlet 
   Conduit               Length    Dry  Dry   Dry   Crit  Crit  Crit  Crit  Ltd   Ctrl  
   -------------------------------------------------------------------------------------
-  3                       1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
-  7                       1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  3                       1.00   0.01  0.00  0.00  0.00  0.00  0.00  0.99  0.00  0.00
+  7                       1.00   0.04  0.00  0.00  0.00  0.00  0.00  0.96  0.00  0.00
   
   
   *************************
@@ -183,9 +191,9 @@
                         Percent   Number of      Flow      Flow      Flow    Volume     Usage    Pump Curve
   Pump                 Utilized   Start-Ups       CFS       CFS       CFS  10^6 gal     Kw-hr    Low   High
   ---------------------------------------------------------------------------------------------------------
-  5                        0.00           0      0.00      0.00      0.00     0.000      0.00    0.0    0.0
+  5                       98.63           1      0.00      1.00      1.39     0.637    595.00    0.0    0.0
   
 
-  Analysis begun on:  Sun Jul 19 15:25:00 2026
-  Analysis ended on:  Sun Jul 19 15:25:00 2026
+  Analysis begun on:  Wed Jul 22 14:27:28 2026
+  Analysis ended on:  Wed Jul 22 14:27:28 2026
   Total elapsed time: < 1 sec

@@ -38,14 +38,14 @@
   Wet Weather Inflow .......         0.000         0.000
   Groundwater Inflow .......         0.000         0.000
   RDII Inflow ..............         0.000         0.000
-  External Inflow ..........         0.000         0.000
+  External Inflow ..........         1.983         0.646
   External Outflow .........         0.000         0.000
-  Flooding Loss ............         0.000         0.000
+  Flooding Loss ............         1.982         0.646
   Evaporation Loss .........         0.000         0.000
   Exfiltration Loss ........         0.000         0.000
   Initial Stored Volume ....         0.000         0.000
-  Final Stored Volume ......         0.000         0.000
-  Continuity Error (%) .....         0.000
+  Final Stored Volume ......         0.001         0.000
+  Continuity Error (%) .....         0.004
   
   
   ***************************
@@ -69,16 +69,16 @@
   *************************
   Routing Time Step Summary
   *************************
-  Minimum Time Step           :    59.50 sec
-  Average Time Step           :    59.96 sec
+  Minimum Time Step           :     6.28 sec
+  Average Time Step           :    59.75 sec
   Maximum Time Step           :    60.00 sec
   % of Time in Steady State   :     0.00
-  Average Iterations per Step :     2.00
+  Average Iterations per Step :     2.01
   % of Steps Not Converging   :     0.00
   Time Step Frequencies       :
-     60.000 - 23.031 sec      :   100.00 %
-     23.031 -  8.841 sec      :     0.00 %
-      8.841 -  3.393 sec      :     0.00 %
+     60.000 - 23.031 sec      :    99.58 %
+     23.031 -  8.841 sec      :     0.21 %
+      8.841 -  3.393 sec      :     0.21 %
       3.393 -  1.303 sec      :     0.00 %
       1.303 -  0.500 sec      :     0.00 %
   
@@ -95,7 +95,7 @@
   Inflow               JUNCTION     0.00     0.00    20.00     0  00:00        0.00
   node202              JUNCTION     0.00     0.00    20.00     0  00:00        0.00
   node204              JUNCTION     0.00     0.00    10.00     0  00:00        0.00
-  fuzzyq               JUNCTION     0.00     0.00     1.00     0  00:00        0.00
+  fuzzyq               JUNCTION     1.00     1.00     2.00     0  00:00        1.00
   Outlet               OUTFALL      0.00     0.00    10.00     0  00:00        0.00
   
   
@@ -112,7 +112,7 @@
   Inflow               JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
   node202              JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
   node204              JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
-  fuzzyq               JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  fuzzyq               JUNCTION      1.00     1.00     0  00:00       0.646       0.646       0.049
   Outlet               OUTFALL       0.00     0.00     0  00:00           0           0       0.000 gal
   
   
@@ -120,14 +120,27 @@
   Node Surcharge Summary
   **********************
   
-  No nodes were surcharged.
+  Surcharging occurs when water rises above the top of the highest conduit.
+  ---------------------------------------------------------------------
+                                               Max. Height   Min. Depth
+                                   Hours       Above Crown    Below Rim
+  Node                 Type      Surcharged           Feet         Feet
+  ---------------------------------------------------------------------
+  fuzzyq               JUNCTION       23.99          0.000        0.000
   
   
   *********************
   Node Flooding Summary
   *********************
   
-  No nodes were flooded.
+  Flooding refers to all water that overflows a node, whether it ponds or not.
+  --------------------------------------------------------------------------
+                                                             Total   Maximum
+                                 Maximum   Time of Max       Flood    Ponded
+                        Hours       Rate    Occurrence      Volume     Depth
+  Node                 Flooded       CFS   days hr:min    10^6 gal      Feet
+  --------------------------------------------------------------------------
+  fuzzyq                 23.99      1.00      0  00:00       0.646     0.000
   
   
   ***********************
@@ -156,7 +169,7 @@
   Trapin               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
   culvert              CONDUIT      0.00     0  00:00      0.00    0.00    0.00
   Trapout              CONDUIT      0.00     0  00:00      0.00    0.00    0.00
-  211                  CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  211                  CONDUIT      0.00     0  00:00      0.00    0.00    0.50
   
   
   ***************************
@@ -171,7 +184,7 @@
   Trapin                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
   culvert                 1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
   Trapout                 1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
-  211                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  211                     1.00   0.00  1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
   
   
   *************************
@@ -181,6 +194,6 @@
   No conduits were surcharged.
   
 
-  Analysis begun on:  Sun Jul 19 15:16:14 2026
-  Analysis ended on:  Sun Jul 19 15:16:14 2026
+  Analysis begun on:  Wed Jul 22 11:54:08 2026
+  Analysis ended on:  Wed Jul 22 11:54:08 2026
   Total elapsed time: < 1 sec

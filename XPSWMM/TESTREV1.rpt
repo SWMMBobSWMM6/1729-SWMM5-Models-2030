@@ -36,20 +36,26 @@
   Wet Weather Inflow .......         0.000         0.000
   Groundwater Inflow .......         0.000         0.000
   RDII Inflow ..............         0.000         0.000
-  External Inflow ..........         0.000         0.000
-  External Outflow .........         0.000         0.000
+  External Inflow ..........         0.518         5.183
+  External Outflow .........         0.498         4.981
   Flooding Loss ............         0.000         0.000
   Evaporation Loss .........         0.000         0.000
   Exfiltration Loss ........         0.000         0.000
   Initial Stored Volume ....         0.000         0.000
-  Final Stored Volume ......         0.000         0.000
-  Continuity Error (%) .....         0.000
+  Final Stored Volume ......         0.004         0.039
+  Continuity Error (%) .....         3.145
+  
+  
+  *************************
+  Highest Continuity Errors
+  *************************
+  Node input2 (1.67%)
   
   
   ***************************
   Time-Step Critical Elements
   ***************************
-  None
+  Link 181 (97.24%)
   
   
   ********************************
@@ -61,21 +67,25 @@
   *********************************
   Most Frequent Nonconverging Nodes
   *********************************
-  Convergence obtained at all time steps.
+  Node input3 (0.09%)
+  Node input1 (0.08%)
+  Node input2 (0.04%)
+  Node 182 (0.02%)
+  Node 177 (0.02%)
   
   
   *************************
   Routing Time Step Summary
   *************************
-  Minimum Time Step           :     9.50 sec
-  Average Time Step           :    10.00 sec
+  Minimum Time Step           :     3.56 sec
+  Average Time Step           :     9.47 sec
   Maximum Time Step           :    10.00 sec
   % of Time in Steady State   :     0.00
-  Average Iterations per Step :     2.00
-  % of Steps Not Converging   :     0.00
+  Average Iterations per Step :     2.02
+  % of Steps Not Converging   :     0.09
   Time Step Frequencies       :
-     10.000 -  5.493 sec      :   100.00 %
-      5.493 -  3.017 sec      :     0.00 %
+     10.000 -  5.493 sec      :    99.78 %
+      5.493 -  3.017 sec      :     0.22 %
       3.017 -  1.657 sec      :     0.00 %
       1.657 -  0.910 sec      :     0.00 %
       0.910 -  0.500 sec      :     0.00 %
@@ -90,10 +100,10 @@
                                    Depth    Depth      HGL   Occurrence   Max Depth
   Node                 Type       Meters   Meters   Meters  days hr:min      Meters
   ---------------------------------------------------------------------------------
-  177                  JUNCTION     0.00     0.00    50.00     0  00:00        0.00
-  input1               JUNCTION     0.00     0.00    50.00     0  00:00        0.00
-  input2               JUNCTION     0.00     0.00    50.00     0  00:00        0.00
-  182                  JUNCTION     0.00     0.00    50.00     0  00:00        0.00
+  177                  JUNCTION    47.53    48.06    98.06     0  00:31       48.02
+  input1               JUNCTION    46.42    47.61    97.61     0  00:41       47.53
+  input2               JUNCTION    45.86    47.27    97.27     0  02:46       47.27
+  182                  JUNCTION    47.53    48.06    98.06     0  00:31       48.02
   input3               OUTFALL      0.00     0.00    50.00     0  00:00        0.00
   
   
@@ -107,11 +117,11 @@
                                    Inflow   Inflow   Occurrence      Volume      Volume       Error
   Node                 Type           CMS      CMS  days hr:min    10^6 ltr    10^6 ltr     Percent
   -------------------------------------------------------------------------------------------------
-  177                  JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
-  input1               JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
-  input2               JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
-  182                  JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
-  input3               OUTFALL      0.000    0.000     0  00:00           0           0       0.000 ltr
+  177                  JUNCTION     0.030    0.030     0  00:00        2.59        2.59       1.813
+  input1               JUNCTION     0.000    0.220     0  00:31           0        5.09       0.507
+  input2               JUNCTION     0.000    0.540     0  00:42           0        5.07       1.696
+  182                  JUNCTION     0.030    0.030     0  00:00        2.59        2.59       1.813
+  input3               OUTFALL      0.000    0.060     0  02:49           0        4.98       0.000
   
   
   **********************
@@ -137,9 +147,9 @@
                          Freq      Flow      Flow      Volume
   Outfall Node           Pcnt       CMS       CMS    10^6 ltr
   -----------------------------------------------------------
-  input3                 0.00     0.000     0.000       0.000
+  input3                96.59     0.060     0.060       4.981
   -----------------------------------------------------------
-  System                 0.00     0.000     0.000       0.000
+  System                96.59     0.060     0.060       4.981
   
   
   ********************
@@ -151,10 +161,10 @@
                                   |Flow|   Occurrence   |Veloc|    Full    Full
   Link                 Type          CMS  days hr:min     m/sec    Flow   Depth
   -----------------------------------------------------------------------------
-  179                  CONDUIT     0.000     0  00:00      0.00    0.00    0.00
-  181                  CONDUIT     0.000     0  00:00      0.00    0.00    0.00
-  183                  CONDUIT     0.000     0  00:00      0.00    0.00    0.00
-  185                  CONDUIT     0.000     0  00:00      0.00    0.00    0.00
+  179                  CONDUIT     0.110     0  00:31      0.70    0.01    0.06
+  181                  CONDUIT     0.540     0  00:42      2.01    0.02    0.06
+  183                  CONDUIT     0.110     0  00:31      0.70    0.01    0.06
+  185                  CONDUIT     0.060     0  02:49      0.39    0.01    0.03
   
   
   ***************************
@@ -166,10 +176,10 @@
                        /Actual         Up    Down  Sub   Sup   Up    Down  Norm  Inlet 
   Conduit               Length    Dry  Dry   Dry   Crit  Crit  Crit  Crit  Ltd   Ctrl  
   -------------------------------------------------------------------------------------
-  179                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
-  181                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
-  183                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
-  185                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  179                     1.00   0.02  0.00  0.00  0.97  0.00  0.00  0.01  0.00  0.00
+  181                     1.00   0.03  0.00  0.00  0.96  0.00  0.00  0.01  0.96  0.00
+  183                     1.00   0.02  0.00  0.00  0.97  0.00  0.00  0.01  0.00  0.00
+  185                     1.00   0.03  0.00  0.00  0.00  0.00  0.00  0.97  0.00  0.00
   
   
   *************************
@@ -179,6 +189,6 @@
   No conduits were surcharged.
   
 
-  Analysis begun on:  Sun Jul 19 15:24:11 2026
-  Analysis ended on:  Sun Jul 19 15:24:11 2026
+  Analysis begun on:  Wed Jul 22 14:24:01 2026
+  Analysis ended on:  Wed Jul 22 14:24:01 2026
   Total elapsed time: < 1 sec

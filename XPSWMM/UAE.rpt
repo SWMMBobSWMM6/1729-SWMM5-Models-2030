@@ -36,14 +36,20 @@
   Wet Weather Inflow .......         0.000         0.000
   Groundwater Inflow .......         0.000         0.000
   RDII Inflow ..............         0.000         0.000
-  External Inflow ..........         0.000         0.000
+  External Inflow ..........         0.259         2.592
   External Outflow .........         0.000         0.000
   Flooding Loss ............         0.000         0.000
   Evaporation Loss .........         0.000         0.000
   Exfiltration Loss ........         0.000         0.000
   Initial Stored Volume ....         0.000         0.000
-  Final Stored Volume ......         0.000         0.000
-  Continuity Error (%) .....         0.000
+  Final Stored Volume ......         0.353         3.527
+  Continuity Error (%) .....       -36.066
+  
+  
+  *************************
+  Highest Continuity Errors
+  *************************
+  Node Infil (-3.15%)
   
   
   ***************************
@@ -61,7 +67,9 @@
   *********************************
   Most Frequent Nonconverging Nodes
   *********************************
-  Convergence obtained at all time steps.
+  Node Overflow (0.35%)
+  Node Infil (0.35%)
+  Node Watershed (0.28%)
   
   
   *************************
@@ -71,8 +79,8 @@
   Average Time Step           :    59.96 sec
   Maximum Time Step           :    60.00 sec
   % of Time in Steady State   :     0.00
-  Average Iterations per Step :     2.00
-  % of Steps Not Converging   :     0.00
+  Average Iterations per Step :     2.01
+  % of Steps Not Converging   :     0.35
   Time Step Frequencies       :
      60.000 - 23.031 sec      :   100.00 %
      23.031 -  8.841 sec      :     0.00 %
@@ -90,9 +98,9 @@
                                    Depth    Depth      HGL   Occurrence   Max Depth
   Node                 Type       Meters   Meters   Meters  days hr:min      Meters
   ---------------------------------------------------------------------------------
-  Watershed            JUNCTION     0.00     0.00   100.00     0  00:00        0.00
+  Watershed            JUNCTION    88.16    90.36   190.36     0  00:59       90.32
   Overflow             OUTFALL      0.00     0.00   100.00     0  00:00        0.00
-  Infil                STORAGE      0.00     0.00   100.00     0  00:00        0.00
+  Infil                STORAGE      2.15     3.49   103.49     1  00:00        3.49
   
   
   *******************
@@ -105,9 +113,9 @@
                                    Inflow   Inflow   Occurrence      Volume      Volume       Error
   Node                 Type           CMS      CMS  days hr:min    10^6 ltr    10^6 ltr     Percent
   -------------------------------------------------------------------------------------------------
-  Watershed            JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
+  Watershed            JUNCTION     0.030    0.030     0  00:00        2.59        2.59     -23.413
   Overflow             OUTFALL      0.000    0.000     0  00:00           0           0       0.000 ltr
-  Infil                STORAGE      0.000    0.000     0  00:00           0           0       0.000 ltr
+  Infil                STORAGE      0.000    3.913     0  01:00           0        3.38      -3.058
   
   
   **********************
@@ -133,7 +141,7 @@
                           Volume   Pcnt   Pcnt   Pcnt      Volume   Pcnt     Occurrence    Outflow
   Storage Unit           1000 m³   Full   Loss   Loss     1000 m³   Full    days hr:min        CMS
   ------------------------------------------------------------------------------------------------
-  Infil                    0.000    0.0    0.0    0.0       0.000    0.0       0  00:00      0.000
+  Infil                    2.153   21.5    0.0    0.0       3.491   34.9       1  00:00      0.000
   
   
   ***********************
@@ -159,7 +167,7 @@
                                   |Flow|   Occurrence   |Veloc|    Full    Full
   Link                 Type          CMS  days hr:min     m/sec    Flow   Depth
   -----------------------------------------------------------------------------
-  Drainage             CONDUIT     0.000     0  00:00      0.00    0.00    0.00
+  Drainage             CONDUIT     3.913     0  01:00      2.65    0.01    0.07
   Spillway             CONDUIT     0.000     0  00:00      0.00    0.00    0.00
   
   
@@ -172,7 +180,7 @@
                        /Actual         Up    Down  Sub   Sup   Up    Down  Norm  Inlet 
   Conduit               Length    Dry  Dry   Dry   Crit  Crit  Crit  Crit  Ltd   Ctrl  
   -------------------------------------------------------------------------------------
-  Drainage                1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  Drainage                1.00   0.04  0.00  0.00  0.00  0.00  0.00  0.96  0.00  0.00
   Spillway                1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
   
   
@@ -183,6 +191,6 @@
   No conduits were surcharged.
   
 
-  Analysis begun on:  Sun Jul 19 15:24:36 2026
-  Analysis ended on:  Sun Jul 19 15:24:36 2026
+  Analysis begun on:  Wed Jul 22 14:25:14 2026
+  Analysis ended on:  Wed Jul 22 14:25:14 2026
   Total elapsed time: < 1 sec

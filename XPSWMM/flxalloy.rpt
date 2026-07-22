@@ -36,48 +36,51 @@
   Wet Weather Inflow .......         0.000         0.000
   Groundwater Inflow .......         0.000         0.000
   RDII Inflow ..............         0.000         0.000
-  External Inflow ..........         0.000         0.000
-  External Outflow .........         0.000         0.000
+  External Inflow ..........         1.983         0.646
+  External Outflow .........         1.991         0.649
   Flooding Loss ............         0.000         0.000
   Evaporation Loss .........         0.000         0.000
   Exfiltration Loss ........         0.000         0.000
   Initial Stored Volume ....         0.000         0.000
   Final Stored Volume ......         0.000         0.000
-  Continuity Error (%) .....         0.000
+  Continuity Error (%) .....        -0.379
   
   
   ***************************
   Time-Step Critical Elements
   ***************************
-  None
+  Link C_OUT_SYNTH (99.98%)
   
   
   ********************************
   Highest Flow Instability Indexes
   ********************************
-  All links are stable.
+  Link weir (150)
+  Link C_OUT_SYNTH (150)
   
   
   *********************************
   Most Frequent Nonconverging Nodes
   *********************************
-  Convergence obtained at all time steps.
+  Node node (0.03%)
+  Node OUT_SYNTH (0.03%)
+  Node DET (0.02%)
   
   
   *************************
   Routing Time Step Summary
   *************************
-  Minimum Time Step           :    19.50 sec
-  Average Time Step           :    20.00 sec
+  Minimum Time Step           :     1.92 sec
+  Average Time Step           :     5.73 sec
   Maximum Time Step           :    20.00 sec
   % of Time in Steady State   :     0.00
-  Average Iterations per Step :     2.00
-  % of Steps Not Converging   :     0.00
+  Average Iterations per Step :     3.18
+  % of Steps Not Converging   :     0.03
   Time Step Frequencies       :
-     20.000 -  9.564 sec      :   100.00 %
-      9.564 -  4.573 sec      :     0.00 %
-      4.573 -  2.187 sec      :     0.00 %
-      2.187 -  1.046 sec      :     0.00 %
+     20.000 -  9.564 sec      :     0.01 %
+      9.564 -  4.573 sec      :    99.96 %
+      4.573 -  2.187 sec      :     0.02 %
+      2.187 -  1.046 sec      :     0.01 %
       1.046 -  0.500 sec      :     0.00 %
   
   
@@ -90,9 +93,10 @@
                                    Depth    Depth      HGL   Occurrence   Max Depth
   Node                 Type         Feet     Feet     Feet  days hr:min        Feet
   ---------------------------------------------------------------------------------
-  DET                  JUNCTION     0.00     0.00    44.00     0  00:00        0.00
-  node                 JUNCTION     0.00     0.00    42.00     0  00:00        0.00
-  node_2               OUTFALL      0.00     0.00    44.00     0  00:00        0.00
+  DET                  JUNCTION     0.14     0.44    44.44     0  00:00        0.15
+  node                 JUNCTION     0.22     4.32    46.32     0  00:00        0.22
+  node_2               JUNCTION     0.00     0.00    44.00     0  00:00        0.00
+  OUT_SYNTH            OUTFALL      0.22     1.42    42.42     0  00:00        0.22
   
   
   *******************
@@ -105,16 +109,23 @@
                                    Inflow   Inflow   Occurrence      Volume      Volume       Error
   Node                 Type           CFS      CFS  days hr:min    10^6 gal    10^6 gal     Percent
   -------------------------------------------------------------------------------------------------
-  DET                  JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
-  node                 JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
-  node_2               OUTFALL       0.00     0.00     0  00:00           0           0       0.000 gal
+  DET                  JUNCTION      1.00     8.96     0  00:00       0.646       0.646       0.030
+  node                 JUNCTION      0.00    10.83     0  00:00           0       0.646      -0.394
+  node_2               JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  OUT_SYNTH            OUTFALL       0.00    43.10     0  00:00           0       0.649       0.000
   
   
   **********************
   Node Surcharge Summary
   **********************
   
-  No nodes were surcharged.
+  Surcharging occurs when water rises above the top of the highest conduit.
+  ---------------------------------------------------------------------
+                                               Max. Height   Min. Depth
+                                   Hours       Above Crown    Below Rim
+  Node                 Type      Surcharged           Feet         Feet
+  ---------------------------------------------------------------------
+  node_2               JUNCTION       24.00          0.000        0.000
   
   
   *********************
@@ -133,9 +144,9 @@
                          Freq      Flow      Flow      Volume
   Outfall Node           Pcnt       CFS       CFS    10^6 gal
   -----------------------------------------------------------
-  node_2                 0.00      0.00      0.00       0.000
+  OUT_SYNTH             99.98      1.01     43.10       0.649
   -----------------------------------------------------------
-  System                 0.00      0.00      0.00       0.000
+  System                99.98      1.01     43.10       0.649
   
   
   ********************
@@ -148,7 +159,8 @@
   Link                 Type          CFS  days hr:min    ft/sec    Flow   Depth
   -----------------------------------------------------------------------------
   PIPE_e               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
-  weir                 WEIR         0.00     0  00:00                      0.00
+  C_OUT_SYNTH          CONDUIT     43.10     0  00:00     13.44    0.46    0.67
+  weir                 WEIR        10.83     0  00:00                      1.00
   
   
   ***************************
@@ -161,6 +173,7 @@
   Conduit               Length    Dry  Dry   Dry   Crit  Crit  Crit  Crit  Ltd   Ctrl  
   -------------------------------------------------------------------------------------
   PIPE_e                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  C_OUT_SYNTH             1.00   0.00  0.00  0.00  0.00  1.00  0.00  0.00  0.00  0.00
   
   
   *************************
@@ -170,6 +183,6 @@
   No conduits were surcharged.
   
 
-  Analysis begun on:  Sun Jul 19 15:18:44 2026
-  Analysis ended on:  Sun Jul 19 15:18:44 2026
+  Analysis begun on:  Wed Jul 22 12:55:18 2026
+  Analysis ended on:  Wed Jul 22 12:55:18 2026
   Total elapsed time: < 1 sec

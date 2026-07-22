@@ -36,14 +36,20 @@
   Wet Weather Inflow .......         0.000         0.000
   Groundwater Inflow .......         0.000         0.000
   RDII Inflow ..............         0.000         0.000
-  External Inflow ..........         0.000         0.000
+  External Inflow ..........         1.983         0.646
   External Outflow .........         0.000         0.000
-  Flooding Loss ............         0.000         0.000
+  Flooding Loss ............         1.753         0.571
   Evaporation Loss .........         0.000         0.000
   Exfiltration Loss ........         0.000         0.000
   Initial Stored Volume ....         0.000         0.000
-  Final Stored Volume ......         0.000         0.000
-  Continuity Error (%) .....         0.000
+  Final Stored Volume ......         0.230         0.075
+  Continuity Error (%) .....         0.066
+  
+  
+  *************************
+  Highest Continuity Errors
+  *************************
+  Node Dummy (49.76%)
   
   
   ***************************
@@ -55,7 +61,7 @@
   ********************************
   Highest Flow Instability Indexes
   ********************************
-  All links are stable.
+  Link Orf-Weir (6)
   
   
   *********************************
@@ -71,8 +77,8 @@
   Average Time Step           :    15.00 sec
   Maximum Time Step           :    15.00 sec
   % of Time in Steady State   :     0.00
-  Average Iterations per Step :     2.00
-  % of Steps Not Converging   :     0.00
+  Average Iterations per Step :     4.14
+  % of Steps Not Converging   :     3.73
   Time Step Frequencies       :
      15.000 -  7.597 sec      :   100.00 %
       7.597 -  3.848 sec      :     0.00 %
@@ -90,9 +96,9 @@
                                    Depth    Depth      HGL   Occurrence   Max Depth
   Node                 Type         Feet     Feet     Feet  days hr:min        Feet
   ---------------------------------------------------------------------------------
-  Dummy                JUNCTION     0.00     0.00   987.50     0  00:00        0.00
+  Dummy                JUNCTION     9.43    10.02   997.52     0  03:15       10.02
   Outlet               OUTFALL      0.00     0.00   986.60     0  00:00        0.00
-  Ponding              STORAGE      0.00     0.00   987.50     0  00:00        0.00
+  Ponding              STORAGE      9.41    10.00   997.50     0  02:49       10.00
   
   
   *******************
@@ -105,9 +111,9 @@
                                    Inflow   Inflow   Occurrence      Volume      Volume       Error
   Node                 Type           CFS      CFS  days hr:min    10^6 gal    10^6 gal     Percent
   -------------------------------------------------------------------------------------------------
-  Dummy                JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  Dummy                JUNCTION      0.00     0.07     0  00:08           0     0.00123      99.054
   Outlet               OUTFALL       0.00     0.00     0  00:00           0           0       0.000 gal
-  Ponding              STORAGE       0.00     0.00     0  00:00           0           0       0.000 gal
+  Ponding              STORAGE       1.00     1.01     0  00:08       0.646       0.647      -0.029
   
   
   **********************
@@ -121,7 +127,14 @@
   Node Flooding Summary
   *********************
   
-  No nodes were flooded.
+  Flooding refers to all water that overflows a node, whether it ponds or not.
+  --------------------------------------------------------------------------
+                                                             Total   Maximum
+                                 Maximum   Time of Max       Flood    Ponded
+                        Hours       Rate    Occurrence      Volume     Depth
+  Node                 Flooded       CFS   days hr:min    10^6 gal      Feet
+  --------------------------------------------------------------------------
+  Ponding                21.19      1.00      0  02:49       0.571     0.000
   
   
   **********************
@@ -133,7 +146,7 @@
                           Volume   Pcnt   Pcnt   Pcnt      Volume   Pcnt     Occurrence    Outflow
   Storage Unit          1000 ft³   Full   Loss   Loss    1000 ft³   Full    days hr:min        CFS
   ------------------------------------------------------------------------------------------------
-  Ponding                  0.000    0.0    0.0    0.0       0.000    0.0       0  00:00       0.00
+  Ponding                  9.412   94.1    0.0    0.0      10.000  100.0       0  02:49       0.07
   
   
   ***********************
@@ -160,7 +173,7 @@
   Link                 Type          CFS  days hr:min    ft/sec    Flow   Depth
   -----------------------------------------------------------------------------
   DUMMY                CONDUIT      0.00     0  00:00      0.00    0.00    0.00
-  Orf-Weir             ORIFICE      0.00     0  00:00                      0.00
+  Orf-Weir             ORIFICE      0.07     0  00:08                      1.00
   
   
   ***************************
@@ -182,6 +195,6 @@
   No conduits were surcharged.
   
 
-  Analysis begun on:  Sun Jul 19 15:17:48 2026
-  Analysis ended on:  Sun Jul 19 15:17:48 2026
+  Analysis begun on:  Wed Jul 22 11:59:35 2026
+  Analysis ended on:  Wed Jul 22 11:59:35 2026
   Total elapsed time: < 1 sec

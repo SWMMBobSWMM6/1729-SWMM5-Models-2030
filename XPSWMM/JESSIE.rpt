@@ -36,14 +36,21 @@
   Wet Weather Inflow .......         0.000         0.000
   Groundwater Inflow .......         0.000         0.000
   RDII Inflow ..............         0.000         0.000
-  External Inflow ..........         0.000         0.000
+  External Inflow ..........         0.259         2.592
   External Outflow .........         0.000         0.000
-  Flooding Loss ............         0.000         0.000
+  Flooding Loss ............         0.148         1.476
   Evaporation Loss .........         0.000         0.000
   Exfiltration Loss ........         0.000         0.000
   Initial Stored Volume ....         0.000         0.000
-  Final Stored Volume ......         0.000         0.000
-  Continuity Error (%) .....         0.000
+  Final Stored Volume ......         0.009         0.087
+  Continuity Error (%) .....        39.694
+  
+  
+  *************************
+  Highest Continuity Errors
+  *************************
+  Node 8 (13.19%)
+  Node jes1 (12.10%)
   
   
   ***************************
@@ -61,7 +68,11 @@
   *********************************
   Most Frequent Nonconverging Nodes
   *********************************
-  Convergence obtained at all time steps.
+  Node jes_out (0.14%)
+  Node 8 (0.09%)
+  Node 10 (0.05%)
+  Node jes3 (0.05%)
+  Node jes1 (0.02%)
   
   
   *************************
@@ -71,8 +82,8 @@
   Average Time Step           :    15.00 sec
   Maximum Time Step           :    15.00 sec
   % of Time in Steady State   :     0.00
-  Average Iterations per Step :     2.00
-  % of Steps Not Converging   :     0.00
+  Average Iterations per Step :     2.02
+  % of Steps Not Converging   :     0.14
   Time Step Frequencies       :
      15.000 -  7.597 sec      :   100.00 %
       7.597 -  3.848 sec      :     0.00 %
@@ -90,10 +101,10 @@
                                    Depth    Depth      HGL   Occurrence   Max Depth
   Node                 Type       Meters   Meters   Meters  days hr:min      Meters
   ---------------------------------------------------------------------------------
-  jes1                 JUNCTION     0.00     0.00   231.00     0  00:00        0.00
-  jes3                 JUNCTION     0.00     0.00   231.50     0  00:00        0.00
-  8                    JUNCTION     0.00     0.00   230.00     0  00:00        0.00
-  10                   JUNCTION     0.00     0.00   230.00     0  00:00        0.00
+  jes1                 JUNCTION   212.02   223.29   454.29     0  05:18      223.27
+  jes3                 JUNCTION   185.30   222.80   454.30     0  05:15      222.79
+  8                    JUNCTION   167.08   229.06   459.06     0  07:44      229.05
+  10                   JUNCTION   143.48   229.04   459.04     0  10:19      229.04
   jes_out              OUTFALL      0.00     0.00   228.00     0  00:00        0.00
   jes_ps               STORAGE      0.00     0.00   231.00     0  00:00        0.00
   
@@ -108,26 +119,39 @@
                                    Inflow   Inflow   Occurrence      Volume      Volume       Error
   Node                 Type           CMS      CMS  days hr:min    10^6 ltr    10^6 ltr     Percent
   -------------------------------------------------------------------------------------------------
-  jes1                 JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
-  jes3                 JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
-  8                    JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
-  10                   JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
+  jes1                 JUNCTION     0.030    0.081     0  05:16        2.59         2.6      13.771
+  jes3                 JUNCTION     0.000    0.060     0  05:19           0        2.28      12.474
+  8                    JUNCTION     0.000    0.049     0  05:15           0        2.02      15.198
+  10                   JUNCTION     0.000    0.038     0  07:44           0        1.76       0.000
   jes_out              OUTFALL      0.000    0.000     0  00:00           0           0       0.000 ltr
-  jes_ps               STORAGE      0.000    0.000     0  00:00           0           0       0.000 ltr
+  jes_ps               STORAGE      0.000    0.049     0  05:15           0        2.02       0.000
   
   
   **********************
   Node Surcharge Summary
   **********************
   
-  No nodes were surcharged.
+  Surcharging occurs when water rises above the top of the highest conduit.
+  ---------------------------------------------------------------------
+                                               Max. Height   Min. Depth
+                                   Hours       Above Crown    Below Rim
+  Node                 Type      Surcharged         Meters       Meters
+  ---------------------------------------------------------------------
+  10                   JUNCTION       13.67          0.000        0.000
   
   
   *********************
   Node Flooding Summary
   *********************
   
-  No nodes were flooded.
+  Flooding refers to all water that overflows a node, whether it ponds or not.
+  --------------------------------------------------------------------------
+                                                             Total   Maximum
+                                 Maximum   Time of Max       Flood    Ponded
+                        Hours       Rate    Occurrence      Volume     Depth
+  Node                 Flooded       CMS   days hr:min    10^6 ltr    Meters
+  --------------------------------------------------------------------------
+  10                     13.67     0.031      0  10:23       1.477     0.000
   
   
   **********************
@@ -139,7 +163,7 @@
                           Volume   Pcnt   Pcnt   Pcnt      Volume   Pcnt     Occurrence    Outflow
   Storage Unit           1000 m³   Full   Loss   Loss     1000 m³   Full    days hr:min        CMS
   ------------------------------------------------------------------------------------------------
-  jes_ps                   0.000    0.0    0.0    0.0       0.000    0.0       0  00:00      0.000
+  jes_ps                   0.000    0.0    0.0    0.0       0.000    0.0       0  00:00      0.049
   
   
   ***********************
@@ -165,11 +189,11 @@
                                   |Flow|   Occurrence   |Veloc|    Full    Full
   Link                 Type          CMS  days hr:min     m/sec    Flow   Depth
   -----------------------------------------------------------------------------
-  jes2                 CONDUIT     0.000     0  00:00      0.00    0.00    0.00
+  jes2                 CONDUIT     0.060     0  05:19      0.16    0.01    0.10
   jes_of               CONDUIT     0.000     0  00:00      0.00    0.00    0.00
-  jes_div              CONDUIT     0.000     0  00:00      0.00    0.00    0.00
-  11                   CONDUIT     0.000     0  00:00      0.00    0.00    0.00
-  jes_pump             PUMP        0.000     0  00:00              0.00
+  jes_div              CONDUIT     0.049     0  05:15      1.29    0.08    0.20
+  11                   CONDUIT     0.038     0  07:44      0.90    0.09    0.59
+  jes_pump             PUMP        0.049     0  05:15              0.00
   
   
   ***************************
@@ -181,17 +205,22 @@
                        /Actual         Up    Down  Sub   Sup   Up    Down  Norm  Inlet 
   Conduit               Length    Dry  Dry   Dry   Crit  Crit  Crit  Crit  Ltd   Ctrl  
   -------------------------------------------------------------------------------------
-  jes2                    1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  jes2                    1.00   0.10  0.01  0.00  0.78  0.00  0.11  0.00  0.00  0.00
   jes_of                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
-  jes_div                 1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
-  11                      1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  jes_div                 1.00   0.22  0.00  0.00  0.00  0.00  0.00  0.78  0.00  0.00
+  11                      1.00   0.32  0.00  0.00  0.58  0.00  0.00  0.10  0.01  0.00
   
   
   *************************
   Conduit Surcharge Summary
   *************************
   
-  No conduits were surcharged.
+  ----------------------------------------------------------------------------
+                                                           Hours        Hours 
+                         --------- Hours Full --------   Above Full   Capacity
+  Conduit                Both Ends  Upstream  Dnstream   Normal Flow   Limited
+  ----------------------------------------------------------------------------
+  11                          0.01      0.01     13.67      0.01         0.01
   
   
   ***************
@@ -203,9 +232,9 @@
                         Percent   Number of      Flow      Flow      Flow    Volume     Usage    Pump Curve
   Pump                 Utilized   Start-Ups       CMS       CMS       CMS  10^6 ltr     Kw-hr    Low   High
   ---------------------------------------------------------------------------------------------------------
-  jes_pump                 0.00           0      0.00      0.00      0.00     0.000      0.00    0.0    0.0
+  jes_pump                78.14           2      0.00      0.03      0.05     2.025   1173.75    0.0    0.0
   
 
-  Analysis begun on:  Sun Jul 19 15:19:57 2026
-  Analysis ended on:  Sun Jul 19 15:19:57 2026
+  Analysis begun on:  Wed Jul 22 13:58:55 2026
+  Analysis ended on:  Wed Jul 22 13:58:55 2026
   Total elapsed time: < 1 sec

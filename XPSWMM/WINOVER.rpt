@@ -43,48 +43,63 @@
   Wet Weather Inflow .......         0.000         0.000
   Groundwater Inflow .......         0.000         0.000
   RDII Inflow ..............         0.000         0.000
-  External Inflow ..........         0.000         0.000
+  External Inflow ..........         0.518         5.183
   External Outflow .........         0.000         0.000
-  Flooding Loss ............         0.000         0.000
+  Flooding Loss ............         0.493         4.925
   Evaporation Loss .........         0.000         0.000
   Exfiltration Loss ........         0.000         0.000
   Initial Stored Volume ....         0.000         0.000
-  Final Stored Volume ......         0.000         0.000
-  Continuity Error (%) .....         0.000
+  Final Stored Volume ......         0.029         0.294
+  Continuity Error (%) .....        -0.686
+  
+  
+  *************************
+  Highest Continuity Errors
+  *************************
+  Node cso (-26.78%)
+  Node hole (21.36%)
+  Node 6 (18.66%)
+  Node 23 (1.55%)
   
   
   ***************************
   Time-Step Critical Elements
   ***************************
-  None
+  Link regulator (4.62%)
   
   
   ********************************
   Highest Flow Instability Indexes
   ********************************
-  All links are stable.
+  Link regulator (50)
+  Link channel (48)
+  Link 218.1 (24)
+  Link pumps (24)
+  Link 19 (1)
   
   
   *********************************
   Most Frequent Nonconverging Nodes
   *********************************
-  Convergence obtained at all time steps.
+  Node hole (62.57%)
+  Node outfall (62.57%)
+  Node cso (62.57%)
   
   
   *************************
   Routing Time Step Summary
   *************************
-  Minimum Time Step           :    19.50 sec
-  Average Time Step           :    20.00 sec
+  Minimum Time Step           :     1.47 sec
+  Average Time Step           :    19.36 sec
   Maximum Time Step           :    20.00 sec
   % of Time in Steady State   :     0.00
-  Average Iterations per Step :     2.00
-  % of Steps Not Converging   :     0.00
+  Average Iterations per Step :     6.72
+  % of Steps Not Converging   :    62.57
   Time Step Frequencies       :
-     20.000 -  9.564 sec      :   100.00 %
-      9.564 -  4.573 sec      :     0.00 %
-      4.573 -  2.187 sec      :     0.00 %
-      2.187 -  1.046 sec      :     0.00 %
+     20.000 -  9.564 sec      :    95.61 %
+      9.564 -  4.573 sec      :     4.28 %
+      4.573 -  2.187 sec      :     0.04 %
+      2.187 -  1.046 sec      :     0.07 %
       1.046 -  0.500 sec      :     0.00 %
   
   
@@ -97,15 +112,15 @@
                                    Depth    Depth      HGL   Occurrence   Max Depth
   Node                 Type       Meters   Meters   Meters  days hr:min      Meters
   ---------------------------------------------------------------------------------
-  baltimore            JUNCTION     0.00     0.00   300.00     0  00:00        0.00
-  6                    JUNCTION     0.00     0.00     0.00     0  00:00        0.00
-  8                    JUNCTION     0.00     0.00     0.00     0  00:00        0.00
-  10                   JUNCTION     0.00     0.00     0.00     0  00:00        0.00
-  23                   JUNCTION     0.00     0.00     0.00     0  00:00        0.00
-  hole                 JUNCTION     0.00     0.00     0.00     0  00:00        0.00
-  16                   JUNCTION     0.00     0.00     0.00     0  00:00        0.00
+  baltimore            JUNCTION     0.02     0.02   300.02     0  00:00        0.02
+  6                    JUNCTION     0.94     1.00     1.00     0  01:21        1.00
+  8                    JUNCTION     0.95     1.00     1.00     0  01:21        1.00
+  10                   JUNCTION     0.94     1.00     1.00     0  01:21        1.00
+  23                   JUNCTION     0.94     1.00     1.00     0  01:21        1.00
+  hole                 JUNCTION     0.19     0.20     0.20     1  00:00        0.20
+  16                   JUNCTION     0.15     0.16     0.16     0  00:32        0.16
   outfall              OUTFALL      0.00     0.00     0.00     0  00:00        0.00
-  cso                  STORAGE      0.00     0.00     0.00     0  00:00        0.00
+  cso                  STORAGE      0.19     0.20     0.20     0  01:11        0.20
   wetwell              STORAGE      0.00     0.00     0.00     0  00:00        0.00
   
   
@@ -119,30 +134,49 @@
                                    Inflow   Inflow   Occurrence      Volume      Volume       Error
   Node                 Type           CMS      CMS  days hr:min    10^6 ltr    10^6 ltr     Percent
   -------------------------------------------------------------------------------------------------
-  baltimore            JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
-  6                    JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
-  8                    JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
-  10                   JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
-  23                   JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
-  hole                 JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
-  16                   JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
+  baltimore            JUNCTION     0.030    0.030     0  00:00        2.59        2.59       0.007
+  6                    JUNCTION     0.000    0.049     0  00:34           0       0.632      22.946
+  8                    JUNCTION     0.030    0.030     0  00:00        2.59        2.59       1.527
+  10                   JUNCTION     0.000    0.014     0  00:35           0       0.226       0.000
+  23                   JUNCTION     0.000    0.031     0  07:02           0        2.58       1.579
+  hole                 JUNCTION     0.000    0.299     0  01:11           0        3.63      27.167
+  16                   JUNCTION     0.000    0.034     0  01:12           0        2.57      -0.089
   outfall              OUTFALL      0.000    0.000     0  00:00           0           0       0.000 ltr
-  cso                  STORAGE      0.000    0.000     0  00:00           0           0       0.000 ltr
-  wetwell              STORAGE      0.000    0.000     0  00:00           0           0       0.000 ltr
+  cso                  STORAGE      0.000    0.112     0  00:33           0        2.88     -21.123
+  wetwell              STORAGE      0.000    0.031     0  07:02           0        2.57       0.000
   
   
   **********************
   Node Surcharge Summary
   **********************
   
-  No nodes were surcharged.
+  Surcharging occurs when water rises above the top of the highest conduit.
+  ---------------------------------------------------------------------
+                                               Max. Height   Min. Depth
+                                   Hours       Above Crown    Below Rim
+  Node                 Type      Surcharged         Meters       Meters
+  ---------------------------------------------------------------------
+  6                    JUNCTION       22.65          0.000        0.000
+  8                    JUNCTION       22.65          0.000        0.000
+  10                   JUNCTION       22.65          0.000        0.000
+  23                   JUNCTION       22.65          0.000        0.000
   
   
   *********************
   Node Flooding Summary
   *********************
   
-  No nodes were flooded.
+  Flooding refers to all water that overflows a node, whether it ponds or not.
+  --------------------------------------------------------------------------
+                                                             Total   Maximum
+                                 Maximum   Time of Max       Flood    Ponded
+                        Hours       Rate    Occurrence      Volume     Depth
+  Node                 Flooded       CMS   days hr:min    10^6 ltr    Meters
+  --------------------------------------------------------------------------
+  6                      22.65     0.030      0  01:21       0.282     0.000
+  8                      22.65     0.029      1  00:00       2.213     0.000
+  10                     22.65     0.010      0  01:21       0.187     0.000
+  23                     22.65     0.030      0  23:59       2.244     0.000
   
   
   **********************
@@ -154,8 +188,8 @@
                           Volume   Pcnt   Pcnt   Pcnt      Volume   Pcnt     Occurrence    Outflow
   Storage Unit           1000 m³   Full   Loss   Loss     1000 m³   Full    days hr:min        CMS
   ------------------------------------------------------------------------------------------------
-  cso                      0.000    0.0    0.0    0.0       0.000    0.0       0  00:00      0.000
-  wetwell                  0.000    0.0    0.0    0.0       0.000    0.0       0  00:00      0.000
+  cso                      0.019    1.9    0.0    0.0       0.020    2.0       0  01:11      0.299
+  wetwell                  0.000    0.0    0.0    0.0       0.000    0.0       0  00:00      0.031
   
   
   ***********************
@@ -181,15 +215,15 @@
                                   |Flow|   Occurrence   |Veloc|    Full    Full
   Link                 Type          CMS  days hr:min     m/sec    Flow   Depth
   -----------------------------------------------------------------------------
-  3                    CONDUIT     0.000     0  00:00      0.00    0.00    0.00
-  inter1               CONDUIT     0.000     0  00:00      0.00    0.00    0.00
-  inter2               CONDUIT     0.000     0  00:00      0.00    0.00    0.00
-  regulator            CONDUIT     0.000     0  00:00      0.00    0.00    0.00
-  channel              CONDUIT     0.000     0  00:00      0.00    0.00    0.00
-  218.1                CONDUIT     0.000     0  00:00      0.00    0.00    0.00
-  19                   CONDUIT     0.000     0  00:00      0.00    0.00    0.00
+  3                    CONDUIT     0.032     0  00:00     14.74    0.00    0.11
+  inter1               CONDUIT     0.032     0  00:06      0.46    0.77    1.00
+  inter2               CONDUIT     0.014     0  00:35      0.27    0.34    1.00
+  regulator            CONDUIT     0.299     0  01:11      0.16    0.24    0.39
+  channel              CONDUIT     0.034     0  01:12      0.37    0.80    0.18
+  218.1                CONDUIT     0.031     0  07:02      1.07    0.73    0.08
+  19                   CONDUIT     0.028     0  00:34      0.27    0.68    1.00
   205.1                WEIR        0.000     0  00:00                      0.00
-  pumps                PUMP        0.000     0  00:00              0.00
+  pumps                PUMP        0.031     0  07:02              0.00
   
   
   ***************************
@@ -201,20 +235,27 @@
                        /Actual         Up    Down  Sub   Sup   Up    Down  Norm  Inlet 
   Conduit               Length    Dry  Dry   Dry   Crit  Crit  Crit  Crit  Ltd   Ctrl  
   -------------------------------------------------------------------------------------
-  3                       1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
-  inter1                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
-  inter2                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
-  regulator               1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
-  channel                 1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
-  218.1                   1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
-  19                      1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  3                       1.00   0.00  0.00  0.00  0.98  0.02  0.00  0.00  1.00  0.00
+  inter1                  1.00   0.00  0.00  0.00  1.00  0.00  0.00  0.00  0.00  0.00
+  inter2                  1.00   0.00  0.00  0.00  1.00  0.00  0.00  0.00  0.00  0.00
+  regulator               1.00   0.00  0.00  0.00  1.00  0.00  0.00  0.00  0.00  0.00
+  channel                 1.00   0.00  0.00  0.00  1.00  0.00  0.00  0.00  0.00  0.00
+  218.1                   1.00   0.00  0.00  0.00  0.02  0.98  0.00  0.00  0.00  0.00
+  19                      1.00   0.00  0.00  0.00  1.00  0.00  0.00  0.00  0.00  0.00
   
   
   *************************
   Conduit Surcharge Summary
   *************************
   
-  No conduits were surcharged.
+  ----------------------------------------------------------------------------
+                                                           Hours        Hours 
+                         --------- Hours Full --------   Above Full   Capacity
+  Conduit                Both Ends  Upstream  Dnstream   Normal Flow   Limited
+  ----------------------------------------------------------------------------
+  inter1                     22.65     22.65     22.65      0.01         0.01
+  inter2                     22.65     22.65     22.65      0.01         0.01
+  19                         22.65     22.65     22.65      0.01         0.01
   
   
   ***************
@@ -226,9 +267,9 @@
                         Percent   Number of      Flow      Flow      Flow    Volume     Usage    Pump Curve
   Pump                 Utilized   Start-Ups       CMS       CMS       CMS  10^6 ltr     Kw-hr    Low   High
   ---------------------------------------------------------------------------------------------------------
-  pumps                    0.00           0      0.00      0.00      0.00     0.000      0.00    0.0    0.0
+  pumps                   99.39           1      0.00      0.03      0.03     2.570      6.90    0.0    0.0
   
 
-  Analysis begun on:  Sun Jul 19 15:25:03 2026
-  Analysis ended on:  Sun Jul 19 15:25:03 2026
+  Analysis begun on:  Wed Jul 22 14:27:43 2026
+  Analysis ended on:  Wed Jul 22 14:27:43 2026
   Total elapsed time: < 1 sec

@@ -36,14 +36,20 @@
   Wet Weather Inflow .......         0.000         0.000
   Groundwater Inflow .......         0.000         0.000
   RDII Inflow ..............         0.000         0.000
-  External Inflow ..........         0.000         0.000
+  External Inflow ..........         1.983         0.646
   External Outflow .........         0.000         0.000
-  Flooding Loss ............         0.000         0.000
+  Flooding Loss ............         1.643         0.536
   Evaporation Loss .........         0.000         0.000
   Exfiltration Loss ........         0.000         0.000
   Initial Stored Volume ....         0.000         0.000
-  Final Stored Volume ......         0.000         0.000
-  Continuity Error (%) .....         0.000
+  Final Stored Volume ......         0.293         0.095
+  Continuity Error (%) .....         2.368
+  
+  
+  *************************
+  Highest Continuity Errors
+  *************************
+  Node INLET (10.24%)
   
   
   ***************************
@@ -61,7 +67,9 @@
   *********************************
   Most Frequent Nonconverging Nodes
   *********************************
-  Convergence obtained at all time steps.
+  Node outlet (0.09%)
+  Node INLET (0.05%)
+  Node 2 (0.03%)
   
   
   *************************
@@ -71,8 +79,8 @@
   Average Time Step           :    15.00 sec
   Maximum Time Step           :    15.00 sec
   % of Time in Steady State   :     0.00
-  Average Iterations per Step :     2.00
-  % of Steps Not Converging   :     0.00
+  Average Iterations per Step :     2.01
+  % of Steps Not Converging   :     0.09
   Time Step Frequencies       :
      15.000 -  7.597 sec      :   100.00 %
       7.597 -  3.848 sec      :     0.00 %
@@ -90,8 +98,8 @@
                                    Depth    Depth      HGL   Occurrence   Max Depth
   Node                 Type         Feet     Feet     Feet  days hr:min        Feet
   ---------------------------------------------------------------------------------
-  INLET                JUNCTION     0.00     0.00   104.00     0  00:00        0.00
-  2                    JUNCTION     0.00     0.00   105.00     0  00:00        0.00
+  INLET                JUNCTION   102.02   103.00   207.00     0  04:07      103.00
+  2                    JUNCTION    96.34   102.04   207.04     0  04:10      102.02
   3                    JUNCTION     0.00     0.00   105.00     0  00:00        0.00
   outlet               OUTFALL      0.00     0.00   104.00     0  00:00        0.00
   
@@ -106,8 +114,8 @@
                                    Inflow   Inflow   Occurrence      Volume      Volume       Error
   Node                 Type           CFS      CFS  days hr:min    10^6 gal    10^6 gal     Percent
   -------------------------------------------------------------------------------------------------
-  INLET                JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
-  2                    JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  INLET                JUNCTION      1.00     2.74     0  01:42       0.646       0.685      11.406
+  2                    JUNCTION      0.00     1.69     0  01:53           0      0.0798     103.521
   3                    JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
   outlet               OUTFALL       0.00     0.00     0  00:00           0           0       0.000 gal
   
@@ -116,14 +124,27 @@
   Node Surcharge Summary
   **********************
   
-  No nodes were surcharged.
+  Surcharging occurs when water rises above the top of the highest conduit.
+  ---------------------------------------------------------------------
+                                               Max. Height   Min. Depth
+                                   Hours       Above Crown    Below Rim
+  Node                 Type      Surcharged           Feet         Feet
+  ---------------------------------------------------------------------
+  INLET                JUNCTION       19.88          0.000        0.000
   
   
   *********************
   Node Flooding Summary
   *********************
   
-  No nodes were flooded.
+  Flooding refers to all water that overflows a node, whether it ponds or not.
+  --------------------------------------------------------------------------
+                                                             Total   Maximum
+                                 Maximum   Time of Max       Flood    Ponded
+                        Hours       Rate    Occurrence      Volume     Depth
+  Node                 Flooded       CFS   days hr:min    10^6 gal      Feet
+  --------------------------------------------------------------------------
+  INLET                  19.88      1.57      0  04:14       0.536     0.000
   
   
   ***********************
@@ -149,7 +170,7 @@
                                   |Flow|   Occurrence   |Veloc|    Full    Full
   Link                 Type          CFS  days hr:min    ft/sec    Flow   Depth
   -----------------------------------------------------------------------------
-  Pipe1                CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  Pipe1                CONDUIT      1.74     0  01:42      0.81    0.11    0.88
   Pipe3                CONDUIT      0.00     0  00:00      0.00    0.00    0.00
   valve                WEIR         0.00     0  00:00                      0.00
   
@@ -163,7 +184,7 @@
                        /Actual         Up    Down  Sub   Sup   Up    Down  Norm  Inlet 
   Conduit               Length    Dry  Dry   Dry   Crit  Crit  Crit  Crit  Ltd   Ctrl  
   -------------------------------------------------------------------------------------
-  Pipe1                   1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  Pipe1                   1.00   0.01  0.01  0.00  0.93  0.00  0.04  0.00  0.00  0.00
   Pipe3                   1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
   
   
@@ -171,9 +192,14 @@
   Conduit Surcharge Summary
   *************************
   
-  No conduits were surcharged.
+  ----------------------------------------------------------------------------
+                                                           Hours        Hours 
+                         --------- Hours Full --------   Above Full   Capacity
+  Conduit                Both Ends  Upstream  Dnstream   Normal Flow   Limited
+  ----------------------------------------------------------------------------
+  Pipe1                       0.01      0.01     19.88      0.01         0.01
   
 
-  Analysis begun on:  Sun Jul 19 15:24:39 2026
-  Analysis ended on:  Sun Jul 19 15:24:39 2026
+  Analysis begun on:  Wed Jul 22 14:25:35 2026
+  Analysis ended on:  Wed Jul 22 14:25:35 2026
   Total elapsed time: < 1 sec

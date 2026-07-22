@@ -2,27 +2,220 @@
   EPA STORM WATER MANAGEMENT MODEL - VERSION 5.2 (Build 5.2.4)
   ------------------------------------------------------------
 
+  RUNOFF EXAMPLE 1, PARABOLIC CHANNELS, GROUNDWATER 
+  WARNING 04: minimum elevation drop used for Conduit 2
+  WARNING 04: minimum elevation drop used for Conduit 3
+  WARNING 04: minimum elevation drop used for Conduit 4
+  WARNING 04: minimum elevation drop used for Conduit 5
+  WARNING 04: minimum elevation drop used for Conduit 6
   
-  ERROR 211: invalid number  at line 64 of [XSECT] section:
-  2                POWER        10.00      20.00      0          0          1
-
+  ****************
+  Analysis Options
+  ****************
+  Flow Units ............... CFS
+  Process Models:
+    Rainfall/Runoff ........ NO
+    RDII ................... NO
+    Snowmelt ............... NO
+    Groundwater ............ NO
+    Flow Routing ........... YES
+    Ponding Allowed ........ NO
+    Water Quality .......... NO
+  Flow Routing Method ...... DYNWAVE
+  Surcharge Method ......... EXTRAN
+  Starting Date ............ 01/01/2001 00:00:00
+  Ending Date .............. 01/02/2001 00:00:00
+  Antecedent Dry Days ...... 0.0
+  Report Time Step ......... 00:15:00
+  Routing Time Step ........ 20.00 sec
+  Variable Time Step ....... YES
+  Maximum Trials ........... 8
+  Number of Threads ........ 1
+  Head Tolerance ........... 0.005000 ft
   
-  ERROR 211: invalid number  at line 65 of [XSECT] section:
-  3                POWER        10.00      20.00      0          0          1
-
   
-  ERROR 211: invalid number  at line 66 of [XSECT] section:
-  4                POWER        10.00      20.00      0          0          1
-
+  **************************        Volume        Volume
+  Flow Routing Continuity        acre-feet      10^6 gal
+  **************************     ---------     ---------
+  Dry Weather Inflow .......         0.000         0.000
+  Wet Weather Inflow .......         0.000         0.000
+  Groundwater Inflow .......         0.000         0.000
+  RDII Inflow ..............         0.000         0.000
+  External Inflow ..........         5.950         1.939
+  External Outflow .........         4.976         1.621
+  Flooding Loss ............         0.507         0.165
+  Evaporation Loss .........         0.000         0.000
+  Exfiltration Loss ........         0.000         0.000
+  Initial Stored Volume ....         0.000         0.000
+  Final Stored Volume ......         0.479         0.156
+  Continuity Error (%) .....        -0.194
   
-  ERROR 211: invalid number  at line 67 of [XSECT] section:
-  5                POWER        10.00      20.00      0          0          1
-
   
-  ERROR 211: invalid number  at line 68 of [XSECT] section:
-  6                POWER        10.00      20.00      0          0          1
+  *************************
+  Highest Continuity Errors
+  *************************
+  Node DUMMY2 (6.70%)
+  Node DUMMY3 (6.70%)
+  Node DUMMY1 (2.89%)
+  
+  
+  ***************************
+  Time-Step Critical Elements
+  ***************************
+  Link C_OUT_SYNTH (99.88%)
+  
+  
+  ********************************
+  Highest Flow Instability Indexes
+  ********************************
+  All links are stable.
+  
+  
+  *********************************
+  Most Frequent Nonconverging Nodes
+  *********************************
+  Convergence obtained at all time steps.
+  
+  
+  *************************
+  Routing Time Step Summary
+  *************************
+  Minimum Time Step           :     2.03 sec
+  Average Time Step           :     4.49 sec
+  Maximum Time Step           :    20.00 sec
+  % of Time in Steady State   :     0.00
+  Average Iterations per Step :     2.00
+  % of Steps Not Converging   :     0.00
+  Time Step Frequencies       :
+     20.000 -  9.564 sec      :     0.66 %
+      9.564 -  4.573 sec      :     8.57 %
+      4.573 -  2.187 sec      :    90.76 %
+      2.187 -  1.046 sec      :     0.01 %
+      1.046 -  0.500 sec      :     0.00 %
+  
+  
+  ******************
+  Node Depth Summary
+  ******************
+  
+  ---------------------------------------------------------------------------------
+                                 Average  Maximum  Maximum  Time of Max    Reported
+                                   Depth    Depth      HGL   Occurrence   Max Depth
+  Node                 Type         Feet     Feet     Feet  days hr:min        Feet
+  ---------------------------------------------------------------------------------
+  DUMMY1               JUNCTION     0.92     0.94     0.94     0  01:05        0.94
+  7                    JUNCTION     0.34     0.35     0.35     1  00:00        0.35
+  DUMMY2               JUNCTION     1.00     1.04     1.04     1  00:00        1.04
+  DUMMY3               JUNCTION     1.00     1.04     1.04     1  00:00        1.04
+  DUMMY4               JUNCTION     1.00     1.00     1.00     0  00:34        1.00
+  DUMMY5               JUNCTION     1.11     1.12     1.12     1  00:00        1.12
+  DUMMY6               JUNCTION     1.11     1.12     1.12     1  00:00        1.12
+  OUT_SYNTH            OUTFALL      0.34     0.35    -0.65     1  00:00        0.35
+  
+  
+  *******************
+  Node Inflow Summary
+  *******************
+  
+  -------------------------------------------------------------------------------------------------
+                                  Maximum  Maximum                  Lateral       Total        Flow
+                                  Lateral    Total  Time of Max      Inflow      Inflow     Balance
+                                   Inflow   Inflow   Occurrence      Volume      Volume       Error
+  Node                 Type           CFS      CFS  days hr:min    10^6 gal    10^6 gal     Percent
+  -------------------------------------------------------------------------------------------------
+  DUMMY1               JUNCTION      0.00     1.01     0  00:00           0       0.481       2.977
+  7                    JUNCTION      0.00     2.74     1  00:00           0        1.63       0.846
+  DUMMY2               JUNCTION      0.00     1.02     0  01:22           0       0.626       7.180
+  DUMMY3               JUNCTION      0.00     1.02     0  01:22           0       0.626       7.180
+  DUMMY4               JUNCTION      1.00     1.00     0  00:00       0.646       0.646       0.016
+  DUMMY5               JUNCTION      1.00     1.00     0  00:00       0.646       0.646       3.261
+  DUMMY6               JUNCTION      1.00     1.00     0  00:00       0.646       0.646       3.261
+  OUT_SYNTH            OUTFALL       0.00     2.74     1  00:00           0        1.62       0.000
+  
+  
+  **********************
+  Node Surcharge Summary
+  **********************
+  
+  Surcharging occurs when water rises above the top of the highest conduit.
+  ---------------------------------------------------------------------
+                                               Max. Height   Min. Depth
+                                   Hours       Above Crown    Below Rim
+  Node                 Type      Surcharged           Feet         Feet
+  ---------------------------------------------------------------------
+  DUMMY4               JUNCTION       23.43          0.000        0.000
+  
+  
+  *********************
+  Node Flooding Summary
+  *********************
+  
+  Flooding refers to all water that overflows a node, whether it ponds or not.
+  --------------------------------------------------------------------------
+                                                             Total   Maximum
+                                 Maximum   Time of Max       Flood    Ponded
+                        Hours       Rate    Occurrence      Volume     Depth
+  Node                 Flooded       CFS   days hr:min    10^6 gal      Feet
+  --------------------------------------------------------------------------
+  DUMMY4                 23.43      0.35      0  01:05       0.165     0.000
+  
+  
+  ***********************
+  Outfall Loading Summary
+  ***********************
+  
+  -----------------------------------------------------------
+                         Flow       Avg       Max       Total
+                         Freq      Flow      Flow      Volume
+  Outfall Node           Pcnt       CFS       CFS    10^6 gal
+  -----------------------------------------------------------
+  OUT_SYNTH             99.88      2.59      2.74       1.621
+  -----------------------------------------------------------
+  System                99.88      2.59      2.74       1.621
+  
+  
+  ********************
+  Link Flow Summary
+  ********************
+  
+  -----------------------------------------------------------------------------
+                                 Maximum  Time of Max   Maximum    Max/    Max/
+                                  |Flow|   Occurrence   |Veloc|    Full    Full
+  Link                 Type          CFS  days hr:min    ft/sec    Flow   Depth
+  -----------------------------------------------------------------------------
+  2                    CONDUIT      0.74     1  00:00      0.65    0.05    0.06
+  3                    CONDUIT      1.02     0  01:22      0.65    0.06    0.11
+  4                    CONDUIT      1.00     1  00:00      0.71    0.06    0.07
+  5                    CONDUIT      1.00     1  00:00      0.71    0.06    0.07
+  6                    CONDUIT      1.02     0  01:22      0.65    0.06    0.11
+  C_OUT_SYNTH          CONDUIT      2.74     1  00:00      5.92    0.03    0.12
+  1                    WEIR         1.01     0  00:00                      1.00
+  
+  
+  ***************************
+  Flow Classification Summary
+  ***************************
+  
+  -------------------------------------------------------------------------------------
+                      Adjusted    ---------- Fraction of Time in Flow Class ---------- 
+                       /Actual         Up    Down  Sub   Sup   Up    Down  Norm  Inlet 
+  Conduit               Length    Dry  Dry   Dry   Crit  Crit  Crit  Crit  Ltd   Ctrl  
+  -------------------------------------------------------------------------------------
+  2                       1.00   0.00  0.00  0.00  1.00  0.00  0.00  0.00  0.00  0.00
+  3                       1.00   0.00  0.00  0.00  1.00  0.00  0.00  0.00  0.00  0.00
+  4                       1.00   0.00  0.00  0.00  1.00  0.00  0.00  0.00  0.00  0.00
+  5                       1.00   0.00  0.00  0.00  1.00  0.00  0.00  0.00  0.00  0.00
+  6                       1.00   0.00  0.00  0.00  1.00  0.00  0.00  0.00  0.00  0.00
+  C_OUT_SYNTH             1.00   0.00  0.00  0.00  0.00  1.00  0.00  0.00  0.02  0.00
+  
+  
+  *************************
+  Conduit Surcharge Summary
+  *************************
+  
+  No conduits were surcharged.
+  
 
-
-  Analysis begun on:  Sun Jul 19 15:22:09 2026
-  Analysis ended on:  Sun Jul 19 15:22:09 2026
+  Analysis begun on:  Wed Jul 22 14:16:06 2026
+  Analysis ended on:  Wed Jul 22 14:16:06 2026
   Total elapsed time: < 1 sec

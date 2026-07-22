@@ -41,14 +41,21 @@
   Wet Weather Inflow .......         0.000         0.000
   Groundwater Inflow .......         0.000         0.000
   RDII Inflow ..............         0.000         0.000
-  External Inflow ..........         0.000         0.000
-  External Outflow .........         0.000         0.000
+  External Inflow ..........         0.518         5.183
+  External Outflow .........         0.505         5.049
   Flooding Loss ............         0.000         0.000
   Evaporation Loss .........         0.000         0.000
   Exfiltration Loss ........         0.000         0.000
   Initial Stored Volume ....         0.000         0.000
-  Final Stored Volume ......         0.000         0.000
-  Continuity Error (%) .....         0.000
+  Final Stored Volume ......         0.014         0.140
+  Continuity Error (%) .....        -0.107
+  
+  
+  *************************
+  Highest Continuity Errors
+  *************************
+  Node BMPb (1.17%)
+  Node BMPc (1.17%)
   
   
   ***************************
@@ -95,12 +102,12 @@
                                    Depth    Depth      HGL   Occurrence   Max Depth
   Node                 Type       Meters   Meters   Meters  days hr:min      Meters
   ---------------------------------------------------------------------------------
-  BMPb                 JUNCTION     0.00     0.00     0.00     0  00:00        0.00
-  BMPe                 JUNCTION     0.00     0.00     0.00     0  00:00        0.00
-  BMPc                 JUNCTION     0.00     0.00     0.00     0  00:00        0.00
-  BMPd                 JUNCTION     0.00     0.00     0.00     0  00:00        0.00
-  BMPa                 JUNCTION     0.00     0.00     0.00     0  00:00        0.00
-  Outlet               OUTFALL      0.00     0.00     0.00     0  00:00        0.00
+  BMPb                 JUNCTION     0.10     0.10     0.10     0  09:21        0.10
+  BMPe                 JUNCTION     0.09     0.10     0.10     0  09:22        0.10
+  BMPc                 JUNCTION     0.10     0.10     0.10     0  09:21        0.10
+  BMPd                 JUNCTION     0.10     0.10     0.10     0  09:20        0.10
+  BMPa                 JUNCTION     0.10     0.10     0.10     0  09:20        0.10
+  Outlet               OUTFALL      0.03     0.03     0.03     0  09:23        0.03
   
   
   *******************
@@ -113,12 +120,12 @@
                                    Inflow   Inflow   Occurrence      Volume      Volume       Error
   Node                 Type           CMS      CMS  days hr:min    10^6 ltr    10^6 ltr     Percent
   -------------------------------------------------------------------------------------------------
-  BMPb                 JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
-  BMPe                 JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
-  BMPc                 JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
-  BMPd                 JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
-  BMPa                 JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
-  Outlet               OUTFALL      0.000    0.000     0  00:00           0           0       0.000 ltr
+  BMPb                 JUNCTION     0.000    0.031     0  00:12           0        2.58       1.185
+  BMPe                 JUNCTION     0.000    0.060     1  00:00           0        5.09       0.867
+  BMPc                 JUNCTION     0.000    0.031     0  00:12           0        2.58       1.185
+  BMPd                 JUNCTION     0.030    0.030     0  00:00        2.59        2.59       0.591
+  BMPa                 JUNCTION     0.030    0.030     0  00:00        2.59        2.59       0.591
+  Outlet               OUTFALL      0.000    0.060     0  09:23           0        5.05       0.000
   
   
   **********************
@@ -144,9 +151,9 @@
                          Freq      Flow      Flow      Volume
   Outfall Node           Pcnt       CMS       CMS    10^6 ltr
   -----------------------------------------------------------
-  Outlet                 0.00     0.000     0.000       0.000
+  Outlet                99.17     0.059     0.060       5.049
   -----------------------------------------------------------
-  System                 0.00     0.000     0.000       0.000
+  System                99.17     0.059     0.060       5.049
   
   
   ********************
@@ -158,11 +165,11 @@
                                   |Flow|   Occurrence   |Veloc|    Full    Full
   Link                 Type          CMS  days hr:min     m/sec    Flow   Depth
   -----------------------------------------------------------------------------
-  be                   CONDUIT     0.000     0  00:00      0.00    0.00    0.00
-  ce                   CONDUIT     0.000     0  00:00      0.00    0.00    0.00
-  GoOut                CONDUIT     0.000     0  00:00      0.00    0.00    0.00
-  dc                   CONDUIT     0.000     0  00:00      0.00    0.00    0.00
-  ab                   CONDUIT     0.000     0  00:00      0.00    0.00    0.00
+  be                   CONDUIT     0.030     1  00:00      0.17    0.03    0.03
+  ce                   CONDUIT     0.030     1  00:00      0.17    0.03    0.03
+  GoOut                CONDUIT     0.060     0  09:23      0.30    0.06    0.02
+  dc                   CONDUIT     0.031     0  00:12      0.21    0.03    0.03
+  ab                   CONDUIT     0.031     0  00:12      0.21    0.03    0.03
   
   
   ***************************
@@ -174,11 +181,11 @@
                        /Actual         Up    Down  Sub   Sup   Up    Down  Norm  Inlet 
   Conduit               Length    Dry  Dry   Dry   Crit  Crit  Crit  Crit  Ltd   Ctrl  
   -------------------------------------------------------------------------------------
-  be                      1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
-  ce                      1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
-  GoOut                   1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
-  dc                      1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
-  ab                      1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  be                      1.00   0.00  0.00  0.00  1.00  0.00  0.00  0.00  0.00  0.00
+  ce                      1.00   0.00  0.00  0.00  1.00  0.00  0.00  0.00  0.00  0.00
+  GoOut                   1.00   0.00  0.00  0.00  1.00  0.00  0.00  0.00  0.00  0.00
+  dc                      1.00   0.00  0.00  0.00  1.00  0.00  0.00  0.00  0.00  0.00
+  ab                      1.00   0.00  0.00  0.00  1.00  0.00  0.00  0.00  0.00  0.00
   
   
   *************************
@@ -188,6 +195,6 @@
   No conduits were surcharged.
   
 
-  Analysis begun on:  Sun Jul 19 15:22:56 2026
-  Analysis ended on:  Sun Jul 19 15:22:56 2026
+  Analysis begun on:  Wed Jul 22 14:19:05 2026
+  Analysis ended on:  Wed Jul 22 14:19:05 2026
   Total elapsed time: < 1 sec

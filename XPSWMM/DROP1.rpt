@@ -36,14 +36,22 @@
   Wet Weather Inflow .......         0.000         0.000
   Groundwater Inflow .......         0.000         0.000
   RDII Inflow ..............         0.000         0.000
-  External Inflow ..........         0.000         0.000
-  External Outflow .........         0.000         0.000
+  External Inflow ..........         1.983         0.646
+  External Outflow .........         1.704         0.555
   Flooding Loss ............         0.000         0.000
   Evaporation Loss .........         0.000         0.000
   Exfiltration Loss ........         0.000         0.000
   Initial Stored Volume ....         0.000         0.000
-  Final Stored Volume ......         0.000         0.000
-  Continuity Error (%) .....         0.000
+  Final Stored Volume ......         0.015         0.005
+  Continuity Error (%) .....        13.305
+  
+  
+  *************************
+  Highest Continuity Errors
+  *************************
+  Node 8 (3.35%)
+  Node 6 (3.23%)
+  Node downmh (3.15%)
   
   
   ***************************
@@ -61,7 +69,10 @@
   *********************************
   Most Frequent Nonconverging Nodes
   *********************************
-  Convergence obtained at all time steps.
+  Node theend (0.02%)
+  Node 6 (0.01%)
+  Node 8 (0.01%)
+  Node start (0.01%)
   
   
   *************************
@@ -71,8 +82,8 @@
   Average Time Step           :     5.00 sec
   Maximum Time Step           :     5.00 sec
   % of Time in Steady State   :     0.00
-  Average Iterations per Step :     2.00
-  % of Steps Not Converging   :     0.00
+  Average Iterations per Step :     2.01
+  % of Steps Not Converging   :     0.02
   Time Step Frequencies       :
       5.000 -  3.155 sec      :   100.00 %
       3.155 -  1.991 sec      :     0.00 %
@@ -90,10 +101,10 @@
                                    Depth    Depth      HGL   Occurrence   Max Depth
   Node                 Type         Feet     Feet     Feet  days hr:min        Feet
   ---------------------------------------------------------------------------------
-  start                JUNCTION     0.00     0.00   310.00     0  00:00        0.00
-  downmh               JUNCTION     0.00     0.00   310.00     0  00:00        0.00
-  6                    JUNCTION     0.00     0.00   310.00     0  00:00        0.00
-  8                    JUNCTION     0.00     0.00   310.00     0  00:00        0.00
+  start                JUNCTION   294.91   301.53   611.53     0  03:51      301.53
+  downmh               JUNCTION   189.02   202.29   512.29     0  02:40      202.29
+  6                    JUNCTION   182.42   201.79   511.79     0  03:22      201.79
+  8                    JUNCTION   175.99   201.29   511.29     0  03:52      201.29
   theend               OUTFALL      0.00     0.00   310.00     0  00:00        0.00
   
   
@@ -107,11 +118,11 @@
                                    Inflow   Inflow   Occurrence      Volume      Volume       Error
   Node                 Type           CFS      CFS  days hr:min    10^6 gal    10^6 gal     Percent
   -------------------------------------------------------------------------------------------------
-  start                JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
-  downmh               JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
-  6                    JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
-  8                    JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
-  theend               OUTFALL       0.00     0.00     0  00:00           0           0       0.000 gal
+  start                JUNCTION      1.00     1.00     0  00:00       0.646       0.646       5.421
+  downmh               JUNCTION      0.00     1.00     0  03:54           0       0.613       3.252
+  6                    JUNCTION      0.00     1.01     0  02:40           0       0.594       3.342
+  8                    JUNCTION      0.00     1.01     0  03:23           0       0.575       3.465
+  theend               OUTFALL       0.00     1.00     0  03:52           0       0.555       0.000
   
   
   **********************
@@ -137,9 +148,9 @@
                          Freq      Flow      Flow      Volume
   Outfall Node           Pcnt       CFS       CFS    10^6 gal
   -----------------------------------------------------------
-  theend                 0.00      0.00      0.00       0.000
+  theend                85.97      1.00      1.00       0.555
   -----------------------------------------------------------
-  System                 0.00      0.00      0.00       0.000
+  System                85.97      1.00      1.00       0.555
   
   
   ********************
@@ -151,10 +162,10 @@
                                   |Flow|   Occurrence   |Veloc|    Full    Full
   Link                 Type          CFS  days hr:min    ft/sec    Flow   Depth
   -----------------------------------------------------------------------------
-  highpipe             CONDUIT      0.00     0  00:00      0.00    0.00    0.00
-  lowpipe              CONDUIT      0.00     0  00:00      0.00    0.00    0.00
-  lowpipe1             CONDUIT      0.00     0  00:00      0.00    0.00    0.00
-  lowpipe2             CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  highpipe             CONDUIT      1.00     0  03:54      1.51    0.02    0.10
+  lowpipe              CONDUIT      1.01     0  02:40      2.51    0.01    0.07
+  lowpipe1             CONDUIT      1.01     0  03:23      3.13    0.01    0.07
+  lowpipe2             CONDUIT      1.00     0  03:52      2.52    0.01    0.07
   
   
   ***************************
@@ -166,10 +177,10 @@
                        /Actual         Up    Down  Sub   Sup   Up    Down  Norm  Inlet 
   Conduit               Length    Dry  Dry   Dry   Crit  Crit  Crit  Crit  Ltd   Ctrl  
   -------------------------------------------------------------------------------------
-  highpipe                1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
-  lowpipe                 1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
-  lowpipe1                1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
-  lowpipe2                1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  highpipe                1.00   0.04  0.00  0.00  0.00  0.00  0.00  0.96  0.00  0.00
+  lowpipe                 1.00   0.08  0.00  0.00  0.89  0.00  0.00  0.03  0.03  0.00
+  lowpipe1                1.00   0.11  0.00  0.00  0.86  0.00  0.00  0.03  0.86  0.00
+  lowpipe2                1.00   0.14  0.00  0.00  0.00  0.00  0.00  0.86  0.00  0.00
   
   
   *************************
@@ -179,6 +190,6 @@
   No conduits were surcharged.
   
 
-  Analysis begun on:  Sun Jul 19 15:17:51 2026
-  Analysis ended on:  Sun Jul 19 15:17:51 2026
+  Analysis begun on:  Wed Jul 22 12:01:15 2026
+  Analysis ended on:  Wed Jul 22 12:01:15 2026
   Total elapsed time: < 1 sec

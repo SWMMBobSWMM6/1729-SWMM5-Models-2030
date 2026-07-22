@@ -37,14 +37,20 @@
   Wet Weather Inflow .......         0.000         0.000
   Groundwater Inflow .......         0.000         0.000
   RDII Inflow ..............         0.000         0.000
-  External Inflow ..........         0.000         0.000
-  External Outflow .........         0.000         0.000
+  External Inflow ..........         1.983         0.646
+  External Outflow .........         1.765         0.575
   Flooding Loss ............         0.000         0.000
   Evaporation Loss .........         0.000         0.000
   Exfiltration Loss ........         0.000         0.000
   Initial Stored Volume ....         0.000         0.000
-  Final Stored Volume ......         0.000         0.000
-  Continuity Error (%) .....         0.000
+  Final Stored Volume ......         0.242         0.079
+  Continuity Error (%) .....        -1.212
+  
+  
+  *************************
+  Highest Continuity Errors
+  *************************
+  Node Basin (10.99%)
   
   
   ***************************
@@ -68,15 +74,15 @@
   *************************
   Routing Time Step Summary
   *************************
-  Minimum Time Step           :    59.50 sec
-  Average Time Step           :    59.96 sec
+  Minimum Time Step           :    18.77 sec
+  Average Time Step           :    59.92 sec
   Maximum Time Step           :    60.00 sec
   % of Time in Steady State   :     0.00
-  Average Iterations per Step :     2.00
-  % of Steps Not Converging   :     0.00
+  Average Iterations per Step :     2.01
+  % of Steps Not Converging   :     0.14
   Time Step Frequencies       :
-     60.000 - 23.031 sec      :   100.00 %
-     23.031 -  8.841 sec      :     0.00 %
+     60.000 - 23.031 sec      :    99.93 %
+     23.031 -  8.841 sec      :     0.07 %
       8.841 -  3.393 sec      :     0.00 %
       3.393 -  1.303 sec      :     0.00 %
       1.303 -  0.500 sec      :     0.00 %
@@ -91,12 +97,12 @@
                                    Depth    Depth      HGL   Occurrence   Max Depth
   Node                 Type         Feet     Feet     Feet  days hr:min        Feet
   ---------------------------------------------------------------------------------
-  Basin                JUNCTION     0.00     0.00    25.00     0  00:00        0.00
+  Basin                JUNCTION     0.27     0.29    25.29     1  00:00        0.29
   Basin_2              JUNCTION     0.00     0.00    25.00     0  00:00        0.00
   Basin_3              JUNCTION     0.00     0.00    25.00     0  00:00        0.00
   Basin_4              JUNCTION     0.00     0.00    25.00     0  00:00        0.00
   Basin_5              JUNCTION     0.00     0.00    25.00     0  00:00        0.00
-  Outfall              OUTFALL      0.00     0.00    25.00     0  00:00        0.00
+  Outfall              OUTFALL      0.06     0.16    25.16     0  00:01        0.07
   
   
   *******************
@@ -109,12 +115,12 @@
                                    Inflow   Inflow   Occurrence      Volume      Volume       Error
   Node                 Type           CFS      CFS  days hr:min    10^6 gal    10^6 gal     Percent
   -------------------------------------------------------------------------------------------------
-  Basin                JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  Basin                JUNCTION      1.00     1.00     0  00:00       0.646       0.646      12.343
   Basin_2              JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
   Basin_3              JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
   Basin_4              JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
   Basin_5              JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
-  Outfall              OUTFALL       0.00     0.00     0  00:00           0           0       0.000 gal
+  Outfall              OUTFALL       0.00     3.63     0  00:01           0       0.575       0.000
   
   
   **********************
@@ -149,9 +155,9 @@
                          Freq      Flow      Flow      Volume
   Outfall Node           Pcnt       CFS       CFS    10^6 gal
   -----------------------------------------------------------
-  Outfall                0.00      0.00      0.00       0.000
+  Outfall               99.93      0.89      3.63       0.575
   -----------------------------------------------------------
-  System                 0.00      0.00      0.00       0.000
+  System                99.93      0.89      3.63       0.575
   
   
   ********************
@@ -163,11 +169,11 @@
                                   |Flow|   Occurrence   |Veloc|    Full    Full
   Link                 Type          CFS  days hr:min    ft/sec    Flow   Depth
   -----------------------------------------------------------------------------
-  PUDR01               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
-  EMR02                CONDUIT      0.00     0  00:00      0.00    0.00    0.00
-  EMR01                CONDUIT      0.00     0  00:00      0.00    0.00    0.00
-  OFR01                CONDUIT      0.00     0  00:00      0.00    0.00    0.00
-  EMR03                CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  PUDR01               CONDUIT      0.00     0  00:00      0.00    0.00    0.02
+  EMR02                CONDUIT      0.00     0  00:00      0.00    0.00    0.02
+  EMR01                CONDUIT      3.63     0  00:01      2.77    0.00    0.01
+  OFR01                CONDUIT      0.00     0  00:00      0.00    0.00    0.02
+  EMR03                CONDUIT      0.00     0  00:00      0.00    0.00    0.02
   
   
   ***************************
@@ -179,11 +185,11 @@
                        /Actual         Up    Down  Sub   Sup   Up    Down  Norm  Inlet 
   Conduit               Length    Dry  Dry   Dry   Crit  Crit  Crit  Crit  Ltd   Ctrl  
   -------------------------------------------------------------------------------------
-  PUDR01                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
-  EMR02                   1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
-  EMR01                   1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
-  OFR01                   1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
-  EMR03                   1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  PUDR01                  1.00   0.00  0.00  0.00  1.00  0.00  0.00  0.00  0.00  0.00
+  EMR02                   1.00   0.00  0.00  0.00  1.00  0.00  0.00  0.00  0.00  0.00
+  EMR01                   1.00   0.00  0.00  0.00  1.00  0.00  0.00  0.00  0.00  0.00
+  OFR01                   1.00   0.00  0.00  0.00  1.00  0.00  0.00  0.00  0.00  0.00
+  EMR03                   1.00   0.00  0.00  0.00  1.00  0.00  0.00  0.00  0.00  0.00
   
   
   *************************
@@ -193,6 +199,6 @@
   No conduits were surcharged.
   
 
-  Analysis begun on:  Sun Jul 19 15:18:26 2026
-  Analysis ended on:  Sun Jul 19 15:18:26 2026
+  Analysis begun on:  Wed Jul 22 12:06:32 2026
+  Analysis ended on:  Wed Jul 22 12:06:32 2026
   Total elapsed time: < 1 sec

@@ -41,14 +41,24 @@
   Wet Weather Inflow .......         0.000         0.000
   Groundwater Inflow .......         0.000         0.000
   RDII Inflow ..............         0.000         0.000
-  External Inflow ..........         0.000         0.000
+  External Inflow ..........         1.983         0.646
   External Outflow .........         0.000         0.000
-  Flooding Loss ............         0.000         0.000
+  Flooding Loss ............         1.835         0.598
   Evaporation Loss .........         0.000         0.000
   Exfiltration Loss ........         0.000         0.000
   Initial Stored Volume ....         0.000         0.000
-  Final Stored Volume ......         0.000         0.000
-  Continuity Error (%) .....         0.000
+  Final Stored Volume ......         0.148         0.048
+  Continuity Error (%) .....         0.002
+  
+  
+  *************************
+  Highest Continuity Errors
+  *************************
+  Node PL274+00 (100.00%)
+  Node PL265+25 (66.62%)
+  Node PL256+50 (39.98%)
+  Node PL247+75 (28.57%)
+  Node PL239+00 (1.08%)
   
   
   ***************************
@@ -95,17 +105,17 @@
                                    Depth    Depth      HGL   Occurrence   Max Depth
   Node                 Type         Feet     Feet     Feet  days hr:min        Feet
   ---------------------------------------------------------------------------------
-  PL237+00             JUNCTION     0.00     0.00    22.00     0  00:00        0.00
-  PL239+00             JUNCTION     0.00     0.00    22.00     0  00:00        0.00
-  PL247+75             JUNCTION     0.00     0.00    22.00     0  00:00        0.00
-  PL256+50             JUNCTION     0.00     0.00    22.00     0  00:00        0.00
-  PL265+25             JUNCTION     0.00     0.00    22.00     0  00:00        0.00
-  PL274+00             JUNCTION     0.00     0.00    22.00     0  00:00        0.00
+  PL237+00             JUNCTION     0.21     0.21    22.21     0  00:07        0.21
+  PL239+00             JUNCTION     0.16     0.17    22.17     0  23:00        0.17
+  PL247+75             JUNCTION     0.15     0.17    22.17     0  22:11        0.17
+  PL256+50             JUNCTION     0.14     0.17    22.17     0  22:02        0.17
+  PL265+25             JUNCTION     0.13     0.17    22.17     0  21:52        0.17
+  PL274+00             JUNCTION     0.13     0.17    22.17     0  21:41        0.17
   G329B                JUNCTION     0.00     0.00    20.00     0  00:00        0.00
   G329C                JUNCTION     0.00     0.00    20.00     0  00:00        0.00
   G329D                JUNCTION     0.00     0.00    20.00     0  00:00        0.00
   G329E                JUNCTION     0.00     0.00    20.00     0  00:00        0.00
-  ZREF=13.8            JUNCTION     0.00     0.00     1.00     0  00:00        0.00
+  ZREF=13.8            JUNCTION     0.99     1.00     2.00     0  00:12        1.00
   G329A                OUTFALL      0.00     0.00    20.00     0  00:00        0.00
   
   
@@ -119,17 +129,17 @@
                                    Inflow   Inflow   Occurrence      Volume      Volume       Error
   Node                 Type           CFS      CFS  days hr:min    10^6 gal    10^6 gal     Percent
   -------------------------------------------------------------------------------------------------
-  PL237+00             JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
-  PL239+00             JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
-  PL247+75             JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
-  PL256+50             JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
-  PL265+25             JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
-  PL274+00             JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  PL237+00             JUNCTION      1.00     1.00     0  00:00       0.646       0.646       0.241
+  PL239+00             JUNCTION      0.00     1.05     0  00:10           0       0.645       1.090
+  PL247+75             JUNCTION      0.00     0.26     0  01:09           0      0.0395      39.996
+  PL256+50             JUNCTION      0.00     0.19     0  02:35           0      0.0282      66.601
+  PL265+25             JUNCTION      0.00     0.16     0  04:12           0      0.0169     199.614
+  PL274+00             JUNCTION      0.00     0.10     0  04:52           0     0.00566    5655.555 gal
   G329B                JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
   G329C                JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
   G329D                JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
   G329E                JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
-  ZREF=13.8            JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  ZREF=13.8            JUNCTION      0.00     1.00     0  23:00           0       0.598       0.000
   G329A                OUTFALL       0.00     0.00     0  00:00           0           0       0.000 gal
   
   
@@ -137,14 +147,27 @@
   Node Surcharge Summary
   **********************
   
-  No nodes were surcharged.
+  Surcharging occurs when water rises above the top of the highest conduit.
+  ---------------------------------------------------------------------
+                                               Max. Height   Min. Depth
+                                   Hours       Above Crown    Below Rim
+  Node                 Type      Surcharged           Feet         Feet
+  ---------------------------------------------------------------------
+  ZREF=13.8            JUNCTION       23.80          0.000        0.000
   
   
   *********************
   Node Flooding Summary
   *********************
   
-  No nodes were flooded.
+  Flooding refers to all water that overflows a node, whether it ponds or not.
+  --------------------------------------------------------------------------
+                                                             Total   Maximum
+                                 Maximum   Time of Max       Flood    Ponded
+                        Hours       Rate    Occurrence      Volume     Depth
+  Node                 Flooded       CFS   days hr:min    10^6 gal      Feet
+  --------------------------------------------------------------------------
+  ZREF=13.8              23.80      1.00      0  23:00       0.598     0.000
   
   
   ***********************
@@ -170,17 +193,17 @@
                                   |Flow|   Occurrence   |Veloc|    Full    Full
   Link                 Type          CFS  days hr:min    ft/sec    Flow   Depth
   -----------------------------------------------------------------------------
-  IC-10                CONDUIT      0.00     0  00:00      0.00    0.00    0.00
-  IC-20                CONDUIT      0.00     0  00:00      0.00    0.00    0.00
-  IC-30                CONDUIT      0.00     0  00:00      0.00    0.00    0.00
-  IC-40                CONDUIT      0.00     0  00:00      0.00    0.00    0.00
-  IC-50                CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  IC-10                CONDUIT      1.05     0  00:10      0.77    0.39    0.19
+  IC-20                CONDUIT      0.26     0  01:09      0.25    0.20    0.17
+  IC-30                CONDUIT      0.19     0  02:35      0.20    0.15    0.17
+  IC-40                CONDUIT      0.16     0  04:12      0.18    0.12    0.17
+  IC-50                CONDUIT      0.10     0  04:52      0.13    0.08    0.17
   IC-G329A             CONDUIT      0.00     0  00:00      0.00    0.00    0.00
   IC-G329B             CONDUIT      0.00     0  00:00      0.00    0.00    0.00
   IC-G329C             CONDUIT      0.00     0  00:00      0.00    0.00    0.00
   IC-G329D             CONDUIT      0.00     0  00:00      0.00    0.00    0.00
   IC-G329E             CONDUIT      0.00     0  00:00      0.00    0.00    0.00
-  168                  CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  168                  CONDUIT      1.00     0  23:00      2.10    0.06    0.58
   
   
   ***************************
@@ -192,26 +215,31 @@
                        /Actual         Up    Down  Sub   Sup   Up    Down  Norm  Inlet 
   Conduit               Length    Dry  Dry   Dry   Crit  Crit  Crit  Crit  Ltd   Ctrl  
   -------------------------------------------------------------------------------------
-  IC-10                   1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
-  IC-20                   1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
-  IC-30                   1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
-  IC-40                   1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
-  IC-50                   1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  IC-10                   1.00   0.00  0.00  0.00  1.00  0.00  0.00  0.00  0.00  0.00
+  IC-20                   1.00   0.00  0.00  0.00  1.00  0.00  0.00  0.00  0.00  0.00
+  IC-30                   1.00   0.00  0.00  0.00  1.00  0.00  0.00  0.00  0.00  0.00
+  IC-40                   1.00   0.02  0.00  0.00  0.98  0.00  0.00  0.00  0.00  0.00
+  IC-50                   1.00   0.06  0.00  0.00  0.94  0.00  0.00  0.00  0.00  0.00
   IC-G329A                1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
   IC-G329B                1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
   IC-G329C                1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
   IC-G329D                1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
   IC-G329E                1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
-  168                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  168                     1.00   0.00  0.00  0.00  1.00  0.00  0.00  0.00  1.00  0.00
   
   
   *************************
   Conduit Surcharge Summary
   *************************
   
-  No conduits were surcharged.
+  ----------------------------------------------------------------------------
+                                                           Hours        Hours 
+                         --------- Hours Full --------   Above Full   Capacity
+  Conduit                Both Ends  Upstream  Dnstream   Normal Flow   Limited
+  ----------------------------------------------------------------------------
+  168                         0.01      0.01     23.80      0.01         0.01
   
 
-  Analysis begun on:  Sun Jul 19 15:11:58 2026
-  Analysis ended on:  Sun Jul 19 15:11:58 2026
+  Analysis begun on:  Wed Jul 22 11:40:23 2026
+  Analysis ended on:  Wed Jul 22 11:40:23 2026
   Total elapsed time: < 1 sec

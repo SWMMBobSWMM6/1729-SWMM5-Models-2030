@@ -39,13 +39,13 @@
   Wet Weather Inflow .......         0.000         0.000
   Groundwater Inflow .......         0.000         0.000
   RDII Inflow ..............         0.000         0.000
-  External Inflow ..........         0.000         0.000
+  External Inflow ..........         1.983         0.646
   External Outflow .........         0.000         0.000
-  Flooding Loss ............         0.000         0.000
+  Flooding Loss ............         1.979         0.645
   Evaporation Loss .........         0.000         0.000
   Exfiltration Loss ........         0.000         0.000
   Initial Stored Volume ....         0.000         0.000
-  Final Stored Volume ......         0.000         0.000
+  Final Stored Volume ......         0.004         0.001
   Continuity Error (%) .....         0.000
   
   
@@ -93,7 +93,7 @@
                                    Depth    Depth      HGL   Occurrence   Max Depth
   Node                 Type         Feet     Feet     Feet  days hr:min        Feet
   ---------------------------------------------------------------------------------
-  n1                   JUNCTION     0.00     0.00     0.00     0  00:00        0.00
+  n1                   JUNCTION     4.00     4.00     4.00     0  00:03        4.00
   n2                   JUNCTION     0.00     0.00    15.00     0  00:00        0.00
   n3                   JUNCTION     0.00     0.00    15.00     0  00:00        0.00
   n4                   JUNCTION     0.00     0.00    12.00     0  00:00        0.00
@@ -113,7 +113,7 @@
                                    Inflow   Inflow   Occurrence      Volume      Volume       Error
   Node                 Type           CFS      CFS  days hr:min    10^6 gal    10^6 gal     Percent
   -------------------------------------------------------------------------------------------------
-  n1                   JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  n1                   JUNCTION      1.00     1.00     0  00:00       0.646       0.646       0.218
   n2                   JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
   n3                   JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
   n4                   JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
@@ -127,14 +127,27 @@
   Node Surcharge Summary
   **********************
   
-  No nodes were surcharged.
+  Surcharging occurs when water rises above the top of the highest conduit.
+  ---------------------------------------------------------------------
+                                               Max. Height   Min. Depth
+                                   Hours       Above Crown    Below Rim
+  Node                 Type      Surcharged           Feet         Feet
+  ---------------------------------------------------------------------
+  n1                   JUNCTION       23.95          0.000        0.000
   
   
   *********************
   Node Flooding Summary
   *********************
   
-  No nodes were flooded.
+  Flooding refers to all water that overflows a node, whether it ponds or not.
+  --------------------------------------------------------------------------
+                                                             Total   Maximum
+                                 Maximum   Time of Max       Flood    Ponded
+                        Hours       Rate    Occurrence      Volume     Depth
+  Node                 Flooded       CFS   days hr:min    10^6 gal      Feet
+  --------------------------------------------------------------------------
+  n1                     23.95      1.00      0  00:03       0.645     0.000
   
   
   ***********************
@@ -164,7 +177,7 @@
   c2                   CONDUIT      0.00     0  00:00      0.00    0.00    0.00
   c3                   CONDUIT      0.00     0  00:00      0.00    0.00    0.00
   c4                   CONDUIT      0.00     0  00:00      0.00    0.00    0.00
-  culvert2             CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  culvert2             CONDUIT      0.00     0  00:00      0.00    0.00    0.50
   Culvert1             CONDUIT      0.00     0  00:00      0.00    0.00    0.00
   18                   CONDUIT      0.00     0  00:00      0.00    0.00    0.00
   
@@ -182,7 +195,7 @@
   c2                      1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
   c3                      1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
   c4                      1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
-  culvert2                1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  culvert2                1.00   0.00  1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
   Culvert1                1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
   18                      1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
   
@@ -194,6 +207,6 @@
   No conduits were surcharged.
   
 
-  Analysis begun on:  Sun Jul 19 15:24:20 2026
-  Analysis ended on:  Sun Jul 19 15:24:20 2026
+  Analysis begun on:  Wed Jul 22 14:24:53 2026
+  Analysis ended on:  Wed Jul 22 14:24:53 2026
   Total elapsed time: < 1 sec

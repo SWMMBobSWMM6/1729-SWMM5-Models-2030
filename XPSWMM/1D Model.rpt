@@ -36,20 +36,28 @@
   Wet Weather Inflow .......         0.000         0.000
   Groundwater Inflow .......         0.000         0.000
   RDII Inflow ..............         0.000         0.000
-  External Inflow ..........         0.000         0.000
-  External Outflow .........         0.000         0.000
-  Flooding Loss ............         0.000         0.000
+  External Inflow ..........         0.778         7.775
+  External Outflow .........         0.910         9.099
+  Flooding Loss ............         0.001         0.015
   Evaporation Loss .........         0.000         0.000
   Exfiltration Loss ........         0.000         0.000
   Initial Stored Volume ....         0.000         0.000
-  Final Stored Volume ......         0.000         0.000
-  Continuity Error (%) .....         0.000
+  Final Stored Volume ......         0.004         0.041
+  Continuity Error (%) .....       -17.743
+  
+  
+  *************************
+  Highest Continuity Errors
+  *************************
+  Node MH-01 (-13.41%)
+  Node MH-03 (-2.47%)
+  Node MH-02 (-2.18%)
   
   
   ***************************
   Time-Step Critical Elements
   ***************************
-  None
+  Link 205 (99.50%)
   
   
   ********************************
@@ -61,24 +69,28 @@
   *********************************
   Most Frequent Nonconverging Nodes
   *********************************
-  Convergence obtained at all time steps.
+  Node 96 (0.19%)
+  Node MH-01 (0.10%)
+  Node MH-02 (0.09%)
+  Node MH-04 (0.09%)
+  Node MH-03 (0.09%)
   
   
   *************************
   Routing Time Step Summary
   *************************
-  Minimum Time Step           :    59.50 sec
-  Average Time Step           :    59.96 sec
+  Minimum Time Step           :     1.16 sec
+  Average Time Step           :     9.20 sec
   Maximum Time Step           :    60.00 sec
   % of Time in Steady State   :     0.00
-  Average Iterations per Step :     2.00
-  % of Steps Not Converging   :     0.00
+  Average Iterations per Step :     2.01
+  % of Steps Not Converging   :     0.19
   Time Step Frequencies       :
-     60.000 - 23.031 sec      :   100.00 %
-     23.031 -  8.841 sec      :     0.00 %
-      8.841 -  3.393 sec      :     0.00 %
+     60.000 - 23.031 sec      :     0.39 %
+     23.031 -  8.841 sec      :    98.89 %
+      8.841 -  3.393 sec      :     0.70 %
       3.393 -  1.303 sec      :     0.00 %
-      1.303 -  0.500 sec      :     0.00 %
+      1.303 -  0.500 sec      :     0.01 %
   
   
   ******************
@@ -90,12 +102,12 @@
                                    Depth    Depth      HGL   Occurrence   Max Depth
   Node                 Type       Meters   Meters   Meters  days hr:min      Meters
   ---------------------------------------------------------------------------------
-  MH-06                JUNCTION     0.00     0.00    48.06     0  00:00        0.00
-  MH-02                JUNCTION     0.00     0.00    42.30     0  00:00        0.00
-  MH-03                JUNCTION     0.00     0.00    43.11     0  00:00        0.00
-  MH-01                JUNCTION     0.00     0.00    42.08     0  00:00        0.00
-  MH-04                JUNCTION     0.00     0.00    43.80     0  00:00        0.00
-  MH-05                JUNCTION     0.00     0.00    48.85     0  00:00        0.00
+  MH-06                JUNCTION    43.95    44.06    92.12     0  00:41       44.05
+  MH-02                JUNCTION    39.68    40.91    83.21     0  00:36       39.82
+  MH-03                JUNCTION    39.96    41.00    84.11     0  00:35       40.11
+  MH-01                JUNCTION    39.64    40.33    82.41     0  00:37       39.81
+  MH-04                JUNCTION    40.48    40.59    84.39     0  00:44       40.59
+  MH-05                JUNCTION    44.92    45.19    94.04     0  00:29       45.05
   96                   OUTFALL      0.00     0.00    42.20     0  00:00        0.00
   
   
@@ -109,27 +121,40 @@
                                    Inflow   Inflow   Occurrence      Volume      Volume       Error
   Node                 Type           CMS      CMS  days hr:min    10^6 ltr    10^6 ltr     Percent
   -------------------------------------------------------------------------------------------------
-  MH-06                JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
-  MH-02                JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
-  MH-03                JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
-  MH-01                JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
-  MH-04                JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
-  MH-05                JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
-  96                   OUTFALL      0.000    0.000     0  00:00           0           0       0.000 ltr
+  MH-06                JUNCTION     0.030    0.030     0  00:00        2.59        2.59      -0.612
+  MH-02                JUNCTION     0.000    4.115     0  00:30           0        7.85      -2.131
+  MH-03                JUNCTION     0.000    0.843     0  00:32           0        5.13      -2.407
+  MH-01                JUNCTION     0.000    2.886     0  00:30           0        8.02     -11.821
+  MH-04                JUNCTION     0.030    0.030     0  00:00        2.59        2.59       0.620
+  MH-05                JUNCTION     0.030    0.030     0  00:00        2.59        2.59       1.353
+  96                   OUTFALL      0.000   17.614     0  00:30           0         9.1       0.000
   
   
   **********************
   Node Surcharge Summary
   **********************
   
-  No nodes were surcharged.
+  Surcharging occurs when water rises above the top of the highest conduit.
+  ---------------------------------------------------------------------
+                                               Max. Height   Min. Depth
+                                   Hours       Above Crown    Below Rim
+  Node                 Type      Surcharged         Meters       Meters
+  ---------------------------------------------------------------------
+  MH-03                JUNCTION        0.02          0.000        0.000
   
   
   *********************
   Node Flooding Summary
   *********************
   
-  No nodes were flooded.
+  Flooding refers to all water that overflows a node, whether it ponds or not.
+  --------------------------------------------------------------------------
+                                                             Total   Maximum
+                                 Maximum   Time of Max       Flood    Ponded
+                        Hours       Rate    Occurrence      Volume     Depth
+  Node                 Flooded       CMS   days hr:min    10^6 ltr    Meters
+  --------------------------------------------------------------------------
+  MH-03                   0.02     0.248      0  00:35       0.015     0.000
   
   
   ***********************
@@ -141,9 +166,9 @@
                          Freq      Flow      Flow      Volume
   Outfall Node           Pcnt       CMS       CMS    10^6 ltr
   -----------------------------------------------------------
-  96                     0.00     0.000     0.000       0.000
+  96                    99.55     0.098    17.614       9.099
   -----------------------------------------------------------
-  System                 0.00     0.000     0.000       0.000
+  System                99.55     0.098    17.614       9.099
   
   
   ********************
@@ -155,12 +180,12 @@
                                   |Flow|   Occurrence   |Veloc|    Full    Full
   Link                 Type          CMS  days hr:min     m/sec    Flow   Depth
   -----------------------------------------------------------------------------
-  202                  CONDUIT     0.000     0  00:00      0.00    0.00    0.00
-  203                  CONDUIT     0.000     0  00:00      0.00    0.00    0.00
-  204                  CONDUIT     0.000     0  00:00      0.00    0.00    0.00
-  205                  CONDUIT     0.000     0  00:00      0.00    0.00    0.00
-  206                  CONDUIT     0.000     0  00:00      0.00    0.00    0.00
-  207                  CONDUIT     0.000     0  00:00      0.00    0.00    0.00
+  202                  CONDUIT     2.302     0  00:30     19.61    0.37    0.82
+  203                  CONDUIT     2.886     0  00:30      2.72    1.07    1.00
+  204                  CONDUIT     1.812     0  00:30      3.34    0.74    0.89
+  205                  CONDUIT    17.614     0  00:30     19.93    3.58    0.50
+  206                  CONDUIT     0.496     0  00:35      3.42    0.50    0.47
+  207                  CONDUIT     0.843     0  00:32     20.83    0.29    0.47
   
   
   ***************************
@@ -172,21 +197,31 @@
                        /Actual         Up    Down  Sub   Sup   Up    Down  Norm  Inlet 
   Conduit               Length    Dry  Dry   Dry   Crit  Crit  Crit  Crit  Ltd   Ctrl  
   -------------------------------------------------------------------------------------
-  202                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
-  203                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
-  204                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
-  205                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
-  206                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
-  207                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  202                     1.00   0.02  0.00  0.00  0.97  0.00  0.00  0.00  0.98  0.00
+  203                     1.00   0.02  0.00  0.00  0.98  0.00  0.00  0.00  0.98  0.00
+  204                     1.00   0.02  0.00  0.00  0.01  0.97  0.00  0.00  0.97  0.00
+  205                     1.00   0.02  0.00  0.00  0.00  0.00  0.98  0.00  0.00  0.00
+  206                     1.00   0.02  0.01  0.00  0.00  0.97  0.00  0.00  0.97  0.00
+  207                     1.00   0.02  0.01  0.00  0.00  0.97  0.00  0.00  0.97  0.00
   
   
   *************************
   Conduit Surcharge Summary
   *************************
   
-  No conduits were surcharged.
+  ----------------------------------------------------------------------------
+                                                           Hours        Hours 
+                         --------- Hours Full --------   Above Full   Capacity
+  Conduit                Both Ends  Upstream  Dnstream   Normal Flow   Limited
+  ----------------------------------------------------------------------------
+  202                         0.01      0.01      0.19      0.01         0.01
+  203                         0.01      0.01      0.10      0.03         0.01
+  204                         0.01      0.01      0.14      0.01         0.01
+  205                         0.01      0.01      0.11      0.03         0.01
+  206                         0.01      0.01      0.14      0.01         0.01
+  207                         0.02      0.02      0.02      0.01         0.01
   
 
-  Analysis begun on:  Sun Jul 19 15:09:45 2026
-  Analysis ended on:  Sun Jul 19 15:09:45 2026
+  Analysis begun on:  Wed Jul 22 11:28:12 2026
+  Analysis ended on:  Wed Jul 22 11:28:12 2026
   Total elapsed time: < 1 sec

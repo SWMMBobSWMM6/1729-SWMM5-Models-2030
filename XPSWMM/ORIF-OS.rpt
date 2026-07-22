@@ -36,14 +36,20 @@
   Wet Weather Inflow .......         0.000         0.000
   Groundwater Inflow .......         0.000         0.000
   RDII Inflow ..............         0.000         0.000
-  External Inflow ..........         0.000         0.000
-  External Outflow .........         0.000         0.000
+  External Inflow ..........         0.518         5.183
+  External Outflow .........         0.477         4.773
   Flooding Loss ............         0.000         0.000
   Evaporation Loss .........         0.000         0.000
   Exfiltration Loss ........         0.000         0.000
   Initial Stored Volume ....         0.000         0.000
-  Final Stored Volume ......         0.000         0.000
-  Continuity Error (%) .....         0.000
+  Final Stored Volume ......         0.041         0.408
+  Continuity Error (%) .....         0.052
+  
+  
+  *************************
+  Highest Continuity Errors
+  *************************
+  Node A (1.06%)
   
   
   ***************************
@@ -71,8 +77,8 @@
   Average Time Step           :     5.00 sec
   Maximum Time Step           :     5.00 sec
   % of Time in Steady State   :     0.00
-  Average Iterations per Step :     2.00
-  % of Steps Not Converging   :     0.00
+  Average Iterations per Step :     2.01
+  % of Steps Not Converging   :     0.01
   Time Step Frequencies       :
       5.000 -  3.155 sec      :   100.00 %
       3.155 -  1.991 sec      :     0.00 %
@@ -91,10 +97,10 @@
   Node                 Type       Meters   Meters   Meters  days hr:min      Meters
   ---------------------------------------------------------------------------------
   Outlet               OUTFALL      0.00     0.00    10.00     0  00:00        0.00
-  A                    STORAGE      0.00     0.00    10.50     0  00:00        0.00
-  B                    STORAGE      0.00     0.00    10.50     0  00:00        0.00
-  Tank                 STORAGE      0.00     0.00    10.50     0  00:00        0.00
-  Inlet                STORAGE      0.00     0.00    10.72     0  00:00        0.00
+  A                    STORAGE      7.45     7.91    18.41     0  06:17        7.91
+  B                    STORAGE      7.53     7.91    18.41     0  06:17        7.91
+  Tank                 STORAGE      7.93     8.05    18.55     0  01:49        8.05
+  Inlet                STORAGE      7.92     8.06    18.78     0  01:41        8.05
   
   
   *******************
@@ -107,11 +113,11 @@
                                    Inflow   Inflow   Occurrence      Volume      Volume       Error
   Node                 Type           CMS      CMS  days hr:min    10^6 ltr    10^6 ltr     Percent
   -------------------------------------------------------------------------------------------------
-  Outlet               OUTFALL      0.000    0.000     0  00:00           0           0       0.000 ltr
-  A                    STORAGE      0.000    0.000     0  00:00           0           0       0.000 ltr
-  B                    STORAGE      0.000    0.000     0  00:00           0           0       0.000 ltr
-  Tank                 STORAGE      0.000    0.000     0  00:00           0           0       0.000 ltr
-  Inlet                STORAGE      0.000    0.000     0  00:00           0           0       0.000 ltr
+  Outlet               OUTFALL      0.000    0.060     0  06:18           0        4.77       0.000
+  A                    STORAGE      0.000    0.088     0  01:43           0         4.9       1.074
+  B                    STORAGE      0.000    0.030     0  02:00           0        2.51       0.013
+  Tank                 STORAGE      0.030    0.030     0  00:00        2.59        2.59       0.224
+  Inlet                STORAGE      0.030    0.030     0  00:00        2.59        2.59       1.291
   
   
   **********************
@@ -137,10 +143,10 @@
                           Volume   Pcnt   Pcnt   Pcnt      Volume   Pcnt     Occurrence    Outflow
   Storage Unit           1000 m³   Full   Loss   Loss     1000 m³   Full    days hr:min        CMS
   ------------------------------------------------------------------------------------------------
-  A                        0.000    0.0    0.0    0.0       0.000    0.0       0  00:00      0.000
-  B                        0.000    0.0    0.0    0.0       0.000    0.0       0  00:00      0.000
-  Tank                     0.000    0.0    0.0    0.0       0.000    0.0       0  00:00      0.000
-  Inlet                    0.000    0.0    0.0    0.0       0.000    0.0       0  00:00      0.000
+  A                        0.075   74.5    0.0    0.0       0.079   79.1       0  06:17      0.060
+  B                        0.075   75.3    0.0    0.0       0.079   79.1       0  06:17      0.037
+  Tank                     0.079   79.3    0.0    0.0       0.081   80.5       0  01:49      0.030
+  Inlet                    0.079   79.2    0.0    0.0       0.081   80.6       0  01:41      0.052
   
   
   ***********************
@@ -152,9 +158,9 @@
                          Freq      Flow      Flow      Volume
   Outfall Node           Pcnt       CMS       CMS    10^6 ltr
   -----------------------------------------------------------
-  Outlet                 0.00     0.000     0.000       0.000
+  Outlet                93.00     0.059     0.060       4.773
   -----------------------------------------------------------
-  System                 0.00     0.000     0.000       0.000
+  System                93.00     0.059     0.060       4.773
   
   
   ********************
@@ -166,10 +172,10 @@
                                   |Flow|   Occurrence   |Veloc|    Full    Full
   Link                 Type          CMS  days hr:min     m/sec    Flow   Depth
   -----------------------------------------------------------------------------
-  JK8_1                CONDUIT     0.000     0  00:00      0.00    0.00    0.00
-  OS8_1                CONDUIT     0.000     0  00:00      0.00    0.00    0.00
-  OS9_1                CONDUIT     0.000     0  00:00      0.00    0.00    0.00
-  JK2_1                ORIFICE     0.000     0  00:00                      0.00
+  JK8_1                CONDUIT     0.030     0  02:00      0.63    0.14    0.24
+  OS8_1                CONDUIT     0.060     0  06:18      1.17    0.04    0.14
+  OS9_1                CONDUIT     0.052     0  01:43      0.23    0.00    0.03
+  JK2_1                ORIFICE     0.037     0  01:43                      0.85
   
   
   ***************************
@@ -181,9 +187,9 @@
                        /Actual         Up    Down  Sub   Sup   Up    Down  Norm  Inlet 
   Conduit               Length    Dry  Dry   Dry   Crit  Crit  Crit  Crit  Ltd   Ctrl  
   -------------------------------------------------------------------------------------
-  JK8_1                   1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
-  OS8_1                   1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
-  OS9_1                   1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  JK8_1                   1.00   0.03  0.00  0.00  0.92  0.00  0.00  0.05  0.00  0.00
+  OS8_1                   1.00   0.07  0.00  0.00  0.00  0.00  0.00  0.93  0.00  0.00
+  OS9_1                   1.00   0.03  0.00  0.00  0.93  0.00  0.00  0.04  0.93  0.00
   
   
   *************************
@@ -193,6 +199,6 @@
   No conduits were surcharged.
   
 
-  Analysis begun on:  Sun Jul 19 15:21:41 2026
-  Analysis ended on:  Sun Jul 19 15:21:41 2026
+  Analysis begun on:  Wed Jul 22 14:13:53 2026
+  Analysis ended on:  Wed Jul 22 14:13:53 2026
   Total elapsed time: < 1 sec

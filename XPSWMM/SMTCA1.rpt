@@ -36,14 +36,21 @@
   Wet Weather Inflow .......         0.000         0.000
   Groundwater Inflow .......         0.000         0.000
   RDII Inflow ..............         0.000         0.000
-  External Inflow ..........         0.000         0.000
+  External Inflow ..........         0.518         5.183
   External Outflow .........         0.000         0.000
-  Flooding Loss ............         0.000         0.000
+  Flooding Loss ............         0.509         5.089
   Evaporation Loss .........         0.000         0.000
   Exfiltration Loss ........         0.000         0.000
   Initial Stored Volume ....         0.000         0.000
-  Final Stored Volume ......         0.000         0.000
-  Continuity Error (%) .....         0.000
+  Final Stored Volume ......         0.001         0.005
+  Continuity Error (%) .....         1.735
+  
+  
+  *************************
+  Highest Continuity Errors
+  *************************
+  Node OLND1 (1.85%)
+  Node OLND2 (1.81%)
   
   
   ***************************
@@ -93,8 +100,8 @@
   123C                 JUNCTION     0.00     0.00    44.00     0  00:00        0.00
   123E                 JUNCTION     0.00     0.00    44.00     0  00:00        0.00
   123F                 JUNCTION     0.00     0.00    44.00     0  00:00        0.00
-  OLND1                JUNCTION     0.00     0.00    39.40     0  00:00        0.00
-  OLND2                JUNCTION     0.00     0.00    37.40     0  00:00        0.00
+  OLND1                JUNCTION    39.64    40.00    79.40     0  00:26       40.00
+  OLND2                JUNCTION    37.46    37.78    75.18     0  00:26       37.78
   124A                 OUTFALL      0.00     0.00    44.00     0  00:00        0.00
   BASIN                STORAGE      0.00     0.00    44.00     0  00:00        0.00
   
@@ -112,8 +119,8 @@
   123C                 JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
   123E                 JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
   123F                 JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
-  OLND1                JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
-  OLND2                JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
+  OLND1                JUNCTION     0.030    0.030     0  00:00        2.59        2.59       1.884
+  OLND2                JUNCTION     0.030    0.030     0  00:00        2.59        2.59       1.848
   124A                 OUTFALL      0.000    0.000     0  00:00           0           0       0.000 ltr
   BASIN                STORAGE      0.000    0.000     0  00:00           0           0       0.000 ltr
   
@@ -129,13 +136,23 @@
   Node                 Type      Surcharged         Meters       Meters
   ---------------------------------------------------------------------
   123C                 JUNCTION       24.00          0.000        0.000
+  OLND1                JUNCTION       23.56          0.000        0.000
+  OLND2                JUNCTION       23.57          0.000        0.000
   
   
   *********************
   Node Flooding Summary
   *********************
   
-  No nodes were flooded.
+  Flooding refers to all water that overflows a node, whether it ponds or not.
+  --------------------------------------------------------------------------
+                                                             Total   Maximum
+                                 Maximum   Time of Max       Flood    Ponded
+                        Hours       Rate    Occurrence      Volume     Depth
+  Node                 Flooded       CMS   days hr:min    10^6 ltr    Meters
+  --------------------------------------------------------------------------
+  OLND1                  23.56     0.030      0  00:26       2.544     0.000
+  OLND2                  23.57     0.030      0  00:26       2.545     0.000
   
   
   **********************
@@ -174,8 +191,8 @@
   Link                 Type          CMS  days hr:min     m/sec    Flow   Depth
   -----------------------------------------------------------------------------
   3                    CONDUIT     0.000     0  00:00      0.00    0.00    0.00
-  PIPE1                CONDUIT     0.000     0  00:00      0.00    0.00    0.00
-  PIPE2                CONDUIT     0.000     0  00:00      0.00    0.00    0.00
+  PIPE1                CONDUIT     0.000     0  00:00      0.00    0.00    0.50
+  PIPE2                CONDUIT     0.000     0  00:00      0.00    0.00    0.50
   ETOB                 ORIFICE     0.000     0  00:00                      0.00
   FTOB                 WEIR        0.000     0  00:00                      0.00
   
@@ -190,8 +207,8 @@
   Conduit               Length    Dry  Dry   Dry   Crit  Crit  Crit  Crit  Ltd   Ctrl  
   -------------------------------------------------------------------------------------
   3                       1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
-  PIPE1                   1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
-  PIPE2                   1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  PIPE1                   1.00   0.02  0.98  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  PIPE2                   1.00   0.02  0.98  0.00  0.00  0.00  0.00  0.00  0.00  0.00
   
   
   *************************
@@ -201,6 +218,6 @@
   No conduits were surcharged.
   
 
-  Analysis begun on:  Sun Jul 19 15:22:41 2026
-  Analysis ended on:  Sun Jul 19 15:22:42 2026
-  Total elapsed time: 00:00:01
+  Analysis begun on:  Wed Jul 22 14:17:22 2026
+  Analysis ended on:  Wed Jul 22 14:17:22 2026
+  Total elapsed time: < 1 sec

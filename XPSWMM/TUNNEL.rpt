@@ -36,14 +36,14 @@
   Wet Weather Inflow .......         0.000         0.000
   Groundwater Inflow .......         0.000         0.000
   RDII Inflow ..............         0.000         0.000
-  External Inflow ..........         0.000         0.000
+  External Inflow ..........         3.967         1.293
   External Outflow .........         0.000         0.000
-  Flooding Loss ............         0.000         0.000
+  Flooding Loss ............         3.622         1.180
   Evaporation Loss .........         0.000         0.000
   Exfiltration Loss ........         0.000         0.000
   Initial Stored Volume ....         0.000         0.000
-  Final Stored Volume ......         0.000         0.000
-  Continuity Error (%) .....         0.000
+  Final Stored Volume ......         0.016         0.005
+  Continuity Error (%) .....         8.281
   
   
   ***************************
@@ -72,7 +72,7 @@
   Maximum Time Step           :     5.00 sec
   % of Time in Steady State   :     0.00
   Average Iterations per Step :     2.00
-  % of Steps Not Converging   :     0.00
+  % of Steps Not Converging   :     0.01
   Time Step Frequencies       :
       5.000 -  3.155 sec      :   100.00 %
       3.155 -  1.991 sec      :     0.00 %
@@ -90,13 +90,13 @@
                                    Depth    Depth      HGL   Occurrence   Max Depth
   Node                 Type         Feet     Feet     Feet  days hr:min        Feet
   ---------------------------------------------------------------------------------
-  TAPIN                JUNCTION     0.00     0.00   590.00     0  00:00        0.00
-  INFLOW               JUNCTION     0.00     0.00   582.00     0  00:00        0.00
+  TAPIN                JUNCTION   544.00   567.43  1157.43     0  02:06      567.43
+  INFLOW               JUNCTION   547.47   571.21  1153.21     0  02:01      571.21
   OUTFALL              OUTFALL      0.00     0.00   580.00     0  00:00        0.00
   003                  STORAGE      0.00     0.00   581.00     0  00:00        0.00
   002                  STORAGE      0.00     0.00   580.00     0  00:00        0.00
   OUTLET               STORAGE      0.00     0.00   592.00     0  00:00        0.00
-  DROP                 STORAGE      0.00     0.00   581.50     0  00:00        0.00
+  DROP                 STORAGE      9.15    10.00   591.50     0  02:05       10.00
   DROP_2               STORAGE      0.00     0.00   581.00     0  00:00        0.00
   
   
@@ -110,13 +110,13 @@
                                    Inflow   Inflow   Occurrence      Volume      Volume       Error
   Node                 Type           CFS      CFS  days hr:min    10^6 gal    10^6 gal     Percent
   -------------------------------------------------------------------------------------------------
-  TAPIN                JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
-  INFLOW               JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  TAPIN                JUNCTION      1.00     1.00     0  00:00       0.646       0.646       9.040
+  INFLOW               JUNCTION      1.00     1.00     0  00:00       0.646       0.646       9.095
   OUTFALL              OUTFALL       0.00     0.00     0  00:00           0           0       0.000 gal
   003                  STORAGE       0.00     0.00     0  00:00           0           0       0.000 gal
   002                  STORAGE       0.00     0.00     0  00:00           0           0       0.000 gal
   OUTLET               STORAGE       0.00     0.00     0  00:00           0           0       0.000 gal
-  DROP                 STORAGE       0.00     0.00     0  00:00           0           0       0.000 gal
+  DROP                 STORAGE       0.00     2.00     0  02:01           0        1.19       0.002
   DROP_2               STORAGE       0.00     0.00     0  00:00           0           0       0.000 gal
   
   
@@ -131,7 +131,14 @@
   Node Flooding Summary
   *********************
   
-  No nodes were flooded.
+  Flooding refers to all water that overflows a node, whether it ponds or not.
+  --------------------------------------------------------------------------
+                                                             Total   Maximum
+                                 Maximum   Time of Max       Flood    Ponded
+                        Hours       Rate    Occurrence      Volume     Depth
+  Node                 Flooded       CFS   days hr:min    10^6 gal      Feet
+  --------------------------------------------------------------------------
+  DROP                   21.92      2.00      0  02:06       1.180     0.000
   
   
   **********************
@@ -146,7 +153,7 @@
   003                      0.000    0.0    0.0    0.0       0.000    0.0       0  00:00       0.00
   002                      0.000    0.0    0.0    0.0       0.000    0.0       0  00:00       0.00
   OUTLET                   0.000    0.0    0.0    0.0       0.000    0.0       0  00:00       0.00
-  DROP                     0.000    0.0    0.0    0.0       0.000    0.0       0  00:00       0.00
+  DROP                     0.582   91.5    0.0    0.0       0.636  100.0       0  02:05       0.00
   DROP_2                   0.000    0.0    0.0    0.0       0.000    0.0       0  00:00       0.00
   
   
@@ -178,8 +185,8 @@
   0001                 CONDUIT      0.00     0  00:00      0.00    0.00    0.00
   DEAIR                CONDUIT      0.00     0  00:00      0.00    0.00    0.00
   DEAIR_2              CONDUIT      0.00     0  00:00      0.00    0.00    0.00
-  INLET                CONDUIT      0.00     0  00:00      0.00    0.00    0.00
-  681                  CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  INLET                CONDUIT      1.00     0  02:06      3.16    0.00    0.01
+  681                  CONDUIT      1.00     0  02:01      3.47    0.00    0.04
   
   
   ***************************
@@ -196,8 +203,8 @@
   0001                    1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
   DEAIR                   1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
   DEAIR_2                 1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
-  INLET                   1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
-  681                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  INLET                   1.00   0.08  0.00  0.00  0.00  0.00  0.00  0.92  0.00  0.00
+  681                     1.00   0.08  0.00  0.00  0.00  0.00  0.00  0.92  0.00  0.00
   
   
   *************************
@@ -207,6 +214,6 @@
   No conduits were surcharged.
   
 
-  Analysis begun on:  Sun Jul 19 15:24:36 2026
-  Analysis ended on:  Sun Jul 19 15:24:36 2026
+  Analysis begun on:  Wed Jul 22 14:25:13 2026
+  Analysis ended on:  Wed Jul 22 14:25:13 2026
   Total elapsed time: < 1 sec

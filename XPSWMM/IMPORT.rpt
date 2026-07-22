@@ -39,26 +39,34 @@
   Wet Weather Inflow .......         0.000         0.000
   Groundwater Inflow .......         0.000         0.000
   RDII Inflow ..............         0.000         0.000
-  External Inflow ..........         0.000         0.000
+  External Inflow ..........         3.967         1.293
   External Outflow .........         0.000         0.000
-  Flooding Loss ............         0.000         0.000
+  Flooding Loss ............         3.800         1.238
   Evaporation Loss .........         0.000         0.000
   Exfiltration Loss ........         0.000         0.000
   Initial Stored Volume ....         0.000         0.000
-  Final Stored Volume ......         0.000         0.000
-  Continuity Error (%) .....         0.000
+  Final Stored Volume ......         0.167         0.054
+  Continuity Error (%) .....         0.005
+  
+  
+  *************************
+  Highest Continuity Errors
+  *************************
+  Node CA-1 (94.16%)
+  Node CA-7 (3.80%)
   
   
   ***************************
   Time-Step Critical Elements
   ***************************
-  None
+  Link P011 (93.79%)
+  Link P005 (5.79%)
   
   
   ********************************
   Highest Flow Instability Indexes
   ********************************
-  All links are stable.
+  Link P005 (141)
   
   
   *********************************
@@ -70,17 +78,17 @@
   *************************
   Routing Time Step Summary
   *************************
-  Minimum Time Step           :    59.50 sec
-  Average Time Step           :    59.96 sec
+  Minimum Time Step           :     2.91 sec
+  Average Time Step           :    45.88 sec
   Maximum Time Step           :    60.00 sec
   % of Time in Steady State   :     0.00
-  Average Iterations per Step :     2.00
+  Average Iterations per Step :     2.01
   % of Steps Not Converging   :     0.00
   Time Step Frequencies       :
-     60.000 - 23.031 sec      :   100.00 %
-     23.031 -  8.841 sec      :     0.00 %
+     60.000 - 23.031 sec      :    98.99 %
+     23.031 -  8.841 sec      :     0.96 %
       8.841 -  3.393 sec      :     0.00 %
-      3.393 -  1.303 sec      :     0.00 %
+      3.393 -  1.303 sec      :     0.05 %
       1.303 -  0.500 sec      :     0.00 %
   
   
@@ -103,10 +111,11 @@
   mh_7                 JUNCTION     0.00     0.00   137.00     0  00:00        0.00
   mh_8                 JUNCTION     0.00     0.00   130.00     0  00:00        0.00
   mh_9                 JUNCTION     0.00     0.00   125.00     0  00:00        0.00
-  CA-1                 JUNCTION     0.00     0.00     0.00     0  00:00        0.00
-  CA-7                 JUNCTION     0.00     0.00     0.00     0  00:00        0.00
-  CA-8                 JUNCTION     0.00     0.00     0.00     0  00:00        0.00
-  CA-11                OUTFALL      0.00     0.00     0.00     0  00:00        0.00
+  CA-1                 JUNCTION     2.21     2.33     2.33     0  01:02        2.27
+  CA-7                 JUNCTION     2.21     2.32     2.32     0  01:02        2.27
+  CA-8                 JUNCTION     2.20     2.25     2.25     0  00:59        2.25
+  CA-11                JUNCTION     2.23     2.35     2.35     0  01:02        2.28
+  OUT_SYNTH            OUTFALL      0.00     0.00   137.00     0  00:00        0.00
   
   
   *******************
@@ -129,10 +138,11 @@
   mh_7                 JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
   mh_8                 JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
   mh_9                 JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
-  CA-1                 JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
-  CA-7                 JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
-  CA-8                 JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
-  CA-11                OUTFALL       0.00     0.00     0  00:00           0           0       0.000 gal
+  CA-1                 JUNCTION      0.00     0.99     0  00:14           0      0.0114    1611.543
+  CA-7                 JUNCTION      0.00     1.89     0  00:14           0       0.656       3.947
+  CA-8                 JUNCTION      1.00     2.64     0  01:05       0.646        1.27       0.599
+  CA-11                JUNCTION      1.00     1.00     0  00:00       0.646       0.646       1.763
+  OUT_SYNTH            OUTFALL       0.00     0.00     0  00:00           0           0       0.000 gal
   
   
   **********************
@@ -153,13 +163,21 @@
   mh_7                 JUNCTION       24.00          0.000        0.000
   mh_8                 JUNCTION       24.00          0.000        0.000
   mh_9                 JUNCTION       24.00          0.000        0.000
+  CA-8                 JUNCTION       23.01          0.000        0.000
   
   
   *********************
   Node Flooding Summary
   *********************
   
-  No nodes were flooded.
+  Flooding refers to all water that overflows a node, whether it ponds or not.
+  --------------------------------------------------------------------------
+                                                             Total   Maximum
+                                 Maximum   Time of Max       Flood    Ponded
+                        Hours       Rate    Occurrence      Volume     Depth
+  Node                 Flooded       CFS   days hr:min    10^6 gal      Feet
+  --------------------------------------------------------------------------
+  CA-8                   23.01      2.64      0  01:05       1.238     0.000
   
   
   ***********************
@@ -171,7 +189,7 @@
                          Freq      Flow      Flow      Volume
   Outfall Node           Pcnt       CFS       CFS    10^6 gal
   -----------------------------------------------------------
-  CA-11                  0.00      0.00      0.00       0.000
+  OUT_SYNTH              0.00      0.00      0.00       0.000
   -----------------------------------------------------------
   System                 0.00      0.00      0.00       0.000
   
@@ -194,10 +212,11 @@
   LB1                  CONDUIT      0.00     0  00:00      0.00    0.00    0.00
   LB2                  CONDUIT      0.00     0  00:00      0.00    0.00    0.00
   LB3                  CONDUIT      0.00     0  00:00      0.00    0.00    0.00
-  P001                 CONDUIT      0.00     0  00:00      0.00    0.00    0.00
-  P005                 CONDUIT      0.00     0  00:00      0.00    0.00    0.00
-  P009                 CONDUIT      0.00     0  00:00      0.00    0.00    0.00
-  P011                 CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  P001                 CONDUIT      0.00     0  00:00      0.00    0.00    0.29
+  P005                 CONDUIT      0.99     0  00:14      1.16    0.84    0.77
+  P009                 CONDUIT      1.64     0  01:05      1.00    6.95    1.00
+  P011                 CONDUIT      1.16     0  01:04      0.79    4.23    0.93
+  C_OUT_SYNTH          CONDUIT      0.00     0  00:00      0.00    0.00    0.00
   
   
   ***************************
@@ -218,19 +237,26 @@
   LB1                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
   LB2                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
   LB3                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
-  P001                    1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
-  P005                    1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
-  P009                    1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
-  P011                    1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  P001                    1.00   0.00  1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  P005                    1.00   0.00  0.00  0.00  1.00  0.00  0.00  0.00  0.00  0.00
+  P009                    1.00   0.00  0.00  0.00  1.00  0.00  0.00  0.00  0.00  0.00
+  P011                    1.00   0.00  0.00  0.00  1.00  0.00  0.00  0.00  0.00  0.00
+  C_OUT_SYNTH             1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
   
   
   *************************
   Conduit Surcharge Summary
   *************************
   
-  No conduits were surcharged.
+  ----------------------------------------------------------------------------
+                                                           Hours        Hours 
+                         --------- Hours Full --------   Above Full   Capacity
+  Conduit                Both Ends  Upstream  Dnstream   Normal Flow   Limited
+  ----------------------------------------------------------------------------
+  P009                       23.00     23.01     23.00     23.95         0.01
+  P011                        0.01      0.01      0.01     23.92         0.01
   
 
-  Analysis begun on:  Sun Jul 19 15:19:55 2026
-  Analysis ended on:  Sun Jul 19 15:19:55 2026
+  Analysis begun on:  Wed Jul 22 13:57:56 2026
+  Analysis ended on:  Wed Jul 22 13:57:56 2026
   Total elapsed time: < 1 sec

@@ -40,20 +40,20 @@
   Wet Weather Inflow .......         0.000         0.000
   Groundwater Inflow .......         0.000         0.000
   RDII Inflow ..............         0.000         0.000
-  External Inflow ..........         0.000         0.000
-  External Outflow .........         0.000         0.000
+  External Inflow ..........         1.983         0.646
+  External Outflow .........         1.981         0.646
   Flooding Loss ............         0.000         0.000
   Evaporation Loss .........         0.000         0.000
   Exfiltration Loss ........         0.000         0.000
   Initial Stored Volume ....         0.000         0.000
-  Final Stored Volume ......         0.000         0.000
-  Continuity Error (%) .....         0.000
+  Final Stored Volume ......         0.002         0.001
+  Continuity Error (%) .....        -0.007
   
   
   ***************************
   Time-Step Critical Elements
   ***************************
-  None
+  Link EDDIE2 (99.93%)
   
   
   ********************************
@@ -71,16 +71,16 @@
   *************************
   Routing Time Step Summary
   *************************
-  Minimum Time Step           :    59.50 sec
-  Average Time Step           :    59.96 sec
-  Maximum Time Step           :    60.00 sec
+  Minimum Time Step           :     4.69 sec
+  Average Time Step           :     5.65 sec
+  Maximum Time Step           :     7.08 sec
   % of Time in Steady State   :     0.00
   Average Iterations per Step :     2.00
   % of Steps Not Converging   :     0.00
   Time Step Frequencies       :
-     60.000 - 23.031 sec      :   100.00 %
+     60.000 - 23.031 sec      :     0.00 %
      23.031 -  8.841 sec      :     0.00 %
-      8.841 -  3.393 sec      :     0.00 %
+      8.841 -  3.393 sec      :   100.00 %
       3.393 -  1.303 sec      :     0.00 %
       1.303 -  0.500 sec      :     0.00 %
   
@@ -94,11 +94,11 @@
                                    Depth    Depth      HGL   Occurrence   Max Depth
   Node                 Type         Feet     Feet     Feet  days hr:min        Feet
   ---------------------------------------------------------------------------------
-  P36                  JUNCTION     0.00     0.00     0.00     0  00:00        0.00
-  P27                  JUNCTION     0.00     0.00     0.00     0  00:00        0.00
-  P23                  JUNCTION     0.00     0.00     0.00     0  00:00        0.00
-  P17                  JUNCTION     0.00     0.00     0.00     0  00:00        0.00
-  P9                   OUTFALL      0.00     0.00     0.00     0  00:00        0.00
+  P36                  JUNCTION     0.75     0.75     0.75     0  00:22        0.75
+  P27                  JUNCTION     0.70     0.70     0.70     0  00:20        0.70
+  P23                  JUNCTION     0.64     0.64     0.64     0  00:20        0.64
+  P17                  JUNCTION     0.55     0.55     0.55     0  00:21        0.55
+  P9                   OUTFALL      0.37     0.37     0.37     1  00:00        0.37
   
   
   *******************
@@ -111,11 +111,11 @@
                                    Inflow   Inflow   Occurrence      Volume      Volume       Error
   Node                 Type           CFS      CFS  days hr:min    10^6 gal    10^6 gal     Percent
   -------------------------------------------------------------------------------------------------
-  P36                  JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
-  P27                  JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
-  P23                  JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
-  P17                  JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
-  P9                   OUTFALL       0.00     0.00     0  00:00           0           0       0.000 gal
+  P36                  JUNCTION      1.00     1.00     0  00:00       0.646       0.646       0.019
+  P27                  JUNCTION      0.00     1.03     0  00:00           0       0.646       0.036
+  P23                  JUNCTION      0.00     1.00     0  00:23           0       0.646       0.031
+  P17                  JUNCTION      0.00     1.00     0  00:21           0       0.646       0.028
+  P9                   OUTFALL       0.00     1.00     1  00:00           0       0.646       0.000
   
   
   **********************
@@ -141,9 +141,9 @@
                          Freq      Flow      Flow      Volume
   Outfall Node           Pcnt       CFS       CFS    10^6 gal
   -----------------------------------------------------------
-  P9                     0.00      0.00      0.00       0.000
+  P9                    99.95      1.00      1.00       0.646
   -----------------------------------------------------------
-  System                 0.00      0.00      0.00       0.000
+  System                99.95      1.00      1.00       0.646
   
   
   ********************
@@ -155,10 +155,10 @@
                                   |Flow|   Occurrence   |Veloc|    Full    Full
   Link                 Type          CFS  days hr:min    ft/sec    Flow   Depth
   -----------------------------------------------------------------------------
-  EDDIE2               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
-  EDDIE3               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
-  EDDIE1               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
-  EDDIE4               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  EDDIE2               CONDUIT      1.00     0  00:23      2.66    5.69    0.67
+  EDDIE3               CONDUIT      1.00     0  00:21      2.53    5.71    0.60
+  EDDIE1               CONDUIT      1.03     0  00:00      3.09    6.02    0.72
+  EDDIE4               CONDUIT      1.00     1  00:00      2.50    5.78    0.46
   
   
   ***************************
@@ -170,19 +170,27 @@
                        /Actual         Up    Down  Sub   Sup   Up    Down  Norm  Inlet 
   Conduit               Length    Dry  Dry   Dry   Crit  Crit  Crit  Crit  Ltd   Ctrl  
   -------------------------------------------------------------------------------------
-  EDDIE2                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
-  EDDIE3                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
-  EDDIE1                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
-  EDDIE4                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  EDDIE2                  1.00   0.00  0.00  0.00  1.00  0.00  0.00  0.00  0.00  0.00
+  EDDIE3                  1.00   0.00  0.00  0.00  1.00  0.00  0.00  0.00  0.00  0.00
+  EDDIE1                  1.00   0.00  0.00  0.00  1.00  0.00  0.00  0.00  0.00  0.00
+  EDDIE4                  1.00   0.00  0.00  0.00  1.00  0.00  0.00  0.00  0.00  0.00
   
   
   *************************
   Conduit Surcharge Summary
   *************************
   
-  No conduits were surcharged.
+  ----------------------------------------------------------------------------
+                                                           Hours        Hours 
+                         --------- Hours Full --------   Above Full   Capacity
+  Conduit                Both Ends  Upstream  Dnstream   Normal Flow   Limited
+  ----------------------------------------------------------------------------
+  EDDIE2                      0.01      0.01      0.01     23.99         0.01
+  EDDIE3                      0.01      0.01      0.01     23.99         0.01
+  EDDIE1                      0.01      0.01      0.01     24.00         0.01
+  EDDIE4                      0.01      0.01      0.01     23.98         0.01
   
 
-  Analysis begun on:  Sun Jul 19 15:21:00 2026
-  Analysis ended on:  Sun Jul 19 15:21:00 2026
+  Analysis begun on:  Wed Jul 22 14:11:03 2026
+  Analysis ended on:  Wed Jul 22 14:11:03 2026
   Total elapsed time: < 1 sec

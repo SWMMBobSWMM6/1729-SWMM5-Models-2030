@@ -2,27 +2,247 @@
   EPA STORM WATER MANAGEMENT MODEL - VERSION 5.2 (Build 5.2.4)
   ------------------------------------------------------------
 
+  Converted from XPSWMM .xp file 
+  WARNING 04: minimum elevation drop used for Conduit spana
   
-  ERROR 211: invalid number  at line 74 of [XSECT] section:
-  207              POWER        5.00       5.00       0          0          1
-
+  ****************
+  Analysis Options
+  ****************
+  Flow Units ............... CMS
+  Process Models:
+    Rainfall/Runoff ........ NO
+    RDII ................... NO
+    Snowmelt ............... NO
+    Groundwater ............ NO
+    Flow Routing ........... YES
+    Ponding Allowed ........ NO
+    Water Quality .......... NO
+  Flow Routing Method ...... DYNWAVE
+  Surcharge Method ......... EXTRAN
+  Starting Date ............ 01/01/2001 00:00:00
+  Ending Date .............. 01/02/2001 00:00:00
+  Antecedent Dry Days ...... 0.0
+  Report Time Step ......... 00:15:00
+  Routing Time Step ........ 20.00 sec
+  Variable Time Step ....... YES
+  Maximum Trials ........... 50
+  Number of Threads ........ 1
+  Head Tolerance ........... 0.001000 m
   
-  ERROR 211: invalid number  at line 75 of [XSECT] section:
-  208              POWER        5.00       5.00       0          0          1
-
   
-  ERROR 211: invalid number  at line 76 of [XSECT] section:
-  209              POWER        5.00       5.00       0          0          1
-
+  **************************        Volume        Volume
+  Flow Routing Continuity        hectare-m      10^6 ltr
+  **************************     ---------     ---------
+  Dry Weather Inflow .......         0.000         0.000
+  Wet Weather Inflow .......         0.000         0.000
+  Groundwater Inflow .......         0.000         0.000
+  RDII Inflow ..............         0.000         0.000
+  External Inflow ..........         1.037        10.367
+  External Outflow .........         0.240         2.395
+  Flooding Loss ............        29.919       299.190
+  Evaporation Loss .........         0.000         0.000
+  Exfiltration Loss ........         0.000         0.000
+  Initial Stored Volume ....         0.000         0.000
+  Final Stored Volume ......         0.313         3.133
+  Continuity Error (%) .....     -2839.320
   
-  ERROR 211: invalid number  at line 77 of [XSECT] section:
-  210              POWER        5.00       5.00       0          0          1
-
   
-  ERROR 211: invalid number  at line 78 of [XSECT] section:
-  211              POWER        5.00       5.00       0          0          1
+  *************************
+  Highest Continuity Errors
+  *************************
+  Node Node5 (61.39%)
+  Node Node4 (36.41%)
+  Node Node3 (25.89%)
+  Node Node2 (19.40%)
+  
+  
+  ***************************
+  Time-Step Critical Elements
+  ***************************
+  Link spana (55.75%)
+  Node road (4.53%)
+  Node spanb (2.34%)
+  
+  
+  ********************************
+  Highest Flow Instability Indexes
+  ********************************
+  Link spana (49)
+  Link dnstrm (5)
+  Link 211 (2)
+  Link 210 (1)
+  Link 209 (1)
+  
+  
+  *********************************
+  Most Frequent Nonconverging Nodes
+  *********************************
+  Node U2 (44.28%)
+  Node road (44.05%)
+  Node spanb (44.01%)
+  Node Node2 (0.05%)
+  Node D2 (0.05%)
+  
+  
+  *************************
+  Routing Time Step Summary
+  *************************
+  Minimum Time Step           :     0.50 sec
+  Average Time Step           :    10.11 sec
+  Maximum Time Step           :    20.00 sec
+  % of Time in Steady State   :     0.00
+  Average Iterations per Step :    28.61
+  % of Steps Not Converging   :    44.28
+  Time Step Frequencies       :
+     20.000 -  9.564 sec      :    44.84 %
+      9.564 -  4.573 sec      :     7.05 %
+      4.573 -  2.187 sec      :    34.52 %
+      2.187 -  1.046 sec      :    13.52 %
+      1.046 -  0.500 sec      :     0.07 %
+  
+  
+  ******************
+  Node Depth Summary
+  ******************
+  
+  ---------------------------------------------------------------------------------
+                                 Average  Maximum  Maximum  Time of Max    Reported
+                                   Depth    Depth      HGL   Occurrence   Max Depth
+  Node                 Type       Meters   Meters   Meters  days hr:min      Meters
+  ---------------------------------------------------------------------------------
+  U1                   JUNCTION    87.50    88.40   186.45     0  03:11       88.40
+  D1                   JUNCTION    87.86    88.86   187.28     0  09:13       88.86
+  D2                   JUNCTION    87.01    88.93   187.28     0  09:12       88.93
+  Node1                JUNCTION    99.83   101.94   206.94     1  00:00      101.94
+  Node2                JUNCTION    97.23   101.94   206.94     1  00:00      101.94
+  Node3                JUNCTION    93.54   101.94   206.94     1  00:00      101.94
+  Node4                JUNCTION    88.90   101.94   206.94     1  00:00      101.94
+  Node5                JUNCTION    85.94   101.94   206.94     1  00:00      101.94
+  Node6                JUNCTION    83.30   101.94   206.94     1  00:00      101.94
+  road                 JUNCTION    81.28    89.01   177.02     0  01:29       89.01
+  spanb                JUNCTION    71.82    89.01   177.02     0  01:28       89.01
+  U2                   OUTFALL      0.00     0.00    98.43     0  00:00        0.00
+  
+  
+  *******************
+  Node Inflow Summary
+  *******************
+  
+  -------------------------------------------------------------------------------------------------
+                                  Maximum  Maximum                  Lateral       Total        Flow
+                                  Lateral    Total  Time of Max      Inflow      Inflow     Balance
+                                   Inflow   Inflow   Occurrence      Volume      Volume       Error
+  Node                 Type           CMS      CMS  days hr:min    10^6 ltr    10^6 ltr     Percent
+  -------------------------------------------------------------------------------------------------
+  U1                   JUNCTION     0.030    0.030     0  00:00        2.59        2.59       8.204
+  D1                   JUNCTION     0.030    0.414     0  01:02        2.59        2.77      19.580
+  D2                   JUNCTION     0.000    1.286     0  00:57           0        2.32       0.000
+  Node1                JUNCTION     0.030    0.030     0  00:00        2.59        2.59      11.748
+  Node2                JUNCTION     0.000    0.039     0  02:11           0        2.32      24.073
+  Node3                JUNCTION     0.000    0.037     0  03:16           0        1.87      34.928
+  Node4                JUNCTION     0.000    0.036     0  04:26           0        1.39      57.254
+  Node5                JUNCTION     0.000    0.044     0  04:26           0       0.883     159.010
+  Node6                JUNCTION     0.000    0.037     0  06:41           0       0.341       0.000
+  road                 JUNCTION     0.030   45.750     0  04:10        2.59         263     -33.556
+  spanb                JUNCTION     0.000   44.529     0  02:19           0         246       0.000
+  U2                   OUTFALL      0.000    0.030     0  06:30           0         2.4       0.000
+  
+  
+  **********************
+  Node Surcharge Summary
+  **********************
+  
+  Surcharging occurs when water rises above the top of the highest conduit.
+  ---------------------------------------------------------------------
+                                               Max. Height   Min. Depth
+                                   Hours       Above Crown    Below Rim
+  Node                 Type      Surcharged         Meters       Meters
+  ---------------------------------------------------------------------
+  D2                   JUNCTION       14.79          0.000        0.000
+  road                 JUNCTION        3.44          0.000        0.000
+  spanb                JUNCTION        3.23          0.000        0.000
+  
+  
+  *********************
+  Node Flooding Summary
+  *********************
+  
+  Flooding refers to all water that overflows a node, whether it ponds or not.
+  --------------------------------------------------------------------------
+                                                             Total   Maximum
+                                 Maximum   Time of Max       Flood    Ponded
+                        Hours       Rate    Occurrence      Volume     Depth
+  Node                 Flooded       CMS   days hr:min    10^6 ltr    Meters
+  --------------------------------------------------------------------------
+  D2                     14.79     0.042      0  09:14       1.597     0.000
+  road                    3.44    45.643      0  04:10     150.367     0.000
+  spanb                   3.23    22.265      0  02:20     147.520     0.000
+  
+  
+  ***********************
+  Outfall Loading Summary
+  ***********************
+  
+  -----------------------------------------------------------
+                         Flow       Avg       Max       Total
+                         Freq      Flow      Flow      Volume
+  Outfall Node           Pcnt       CMS       CMS    10^6 ltr
+  -----------------------------------------------------------
+  U2                    95.99     0.030     0.030       2.395
+  -----------------------------------------------------------
+  System                95.99     0.030     0.030       2.395
+  
+  
+  ********************
+  Link Flow Summary
+  ********************
+  
+  -----------------------------------------------------------------------------
+                                 Maximum  Time of Max   Maximum    Max/    Max/
+                                  |Flow|   Occurrence   |Veloc|    Full    Full
+  Link                 Type          CMS  days hr:min     m/sec    Flow   Depth
+  -----------------------------------------------------------------------------
+  upstrm               CONDUIT     0.030     0  06:30      0.02    0.00    0.02
+  dnstrm               CONDUIT     1.286     0  00:57      0.89    0.04    0.93
+  spana                CONDUIT    45.720     0  04:10      8.10   10.94    1.00
+  207                  CONDUIT     0.039     0  02:11      0.70    0.00    0.40
+  208                  CONDUIT     0.037     0  03:16      0.66    0.00    0.42
+  209                  CONDUIT     0.036     0  04:26      1.02    0.00    0.44
+  210                  CONDUIT     0.044     0  04:26      0.73    0.00    0.46
+  211                  CONDUIT     0.037     0  06:41      0.57    0.00    0.48
+  
+  
+  ***************************
+  Flow Classification Summary
+  ***************************
+  
+  -------------------------------------------------------------------------------------
+                      Adjusted    ---------- Fraction of Time in Flow Class ---------- 
+                       /Actual         Up    Down  Sub   Sup   Up    Down  Norm  Inlet 
+  Conduit               Length    Dry  Dry   Dry   Crit  Crit  Crit  Crit  Ltd   Ctrl  
+  -------------------------------------------------------------------------------------
+  upstrm                  1.00   0.04  0.03  0.00  0.00  0.00  0.93  0.00  0.00  0.00
+  dnstrm                  1.00   0.04  0.00  0.00  0.96  0.00  0.00  0.00  0.00  0.00
+  spana                   1.00   0.17  0.00  0.00  0.21  0.00  0.20  0.41  0.01  0.00
+  207                     1.00   0.05  0.00  0.00  0.91  0.00  0.00  0.05  0.22  0.00
+  208                     1.00   0.09  0.00  0.00  0.86  0.00  0.00  0.05  0.15  0.00
+  209                     1.00   0.14  0.00  0.00  0.82  0.00  0.00  0.05  0.10  0.00
+  210                     1.00   0.18  0.00  0.00  0.77  0.00  0.00  0.05  0.05  0.00
+  211                     1.00   0.23  0.00  0.00  0.72  0.00  0.00  0.05  0.00  0.00
+  
+  
+  *************************
+  Conduit Surcharge Summary
+  *************************
+  
+  ----------------------------------------------------------------------------
+                                                           Hours        Hours 
+                         --------- Hours Full --------   Above Full   Capacity
+  Conduit                Both Ends  Upstream  Dnstream   Normal Flow   Limited
+  ----------------------------------------------------------------------------
+  spana                       0.01      4.77      3.86      9.00         0.01
+  
 
-
-  Analysis begun on:  Sun Jul 19 15:23:58 2026
-  Analysis ended on:  Sun Jul 19 15:23:58 2026
-  Total elapsed time: < 1 sec
+  Analysis begun on:  Wed Jul 22 14:20:14 2026
+  Analysis ended on:  Wed Jul 22 14:20:15 2026
+  Total elapsed time: 00:00:01

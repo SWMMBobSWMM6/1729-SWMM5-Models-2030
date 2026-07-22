@@ -37,20 +37,21 @@
   Wet Weather Inflow .......         0.000         0.000
   Groundwater Inflow .......         0.000         0.000
   RDII Inflow ..............         0.000         0.000
-  External Inflow ..........         0.000         0.000
+  External Inflow ..........         0.259         2.592
   External Outflow .........         0.000         0.000
-  Flooding Loss ............         0.000         0.000
+  Flooding Loss ............        95.404       954.045
   Evaporation Loss .........         0.000         0.000
   Exfiltration Loss ........         0.000         0.000
   Initial Stored Volume ....         0.000         0.000
-  Final Stored Volume ......         0.000         0.000
-  Continuity Error (%) .....         0.000
+  Final Stored Volume ......         0.100         1.000
+  Continuity Error (%) .....    -36749.727
   
   
   ***************************
   Time-Step Critical Elements
   ***************************
-  None
+  Node INLET (17.65%)
+  Node 2 (5.88%)
   
   
   ********************************
@@ -68,15 +69,15 @@
   *************************
   Routing Time Step Summary
   *************************
-  Minimum Time Step           :  7199.50 sec
-  Average Time Step           :  6646.15 sec
+  Minimum Time Step           :   787.47 sec
+  Average Time Step           :  5082.35 sec
   Maximum Time Step           :  7200.00 sec
   % of Time in Steady State   :     0.00
-  Average Iterations per Step :     2.00
+  Average Iterations per Step :     2.41
   % of Steps Not Converging   :     0.00
   Time Step Frequencies       :
-     7200.000 - 1060.865 sec      :   100.00 %
-     1060.865 - 156.310 sec      :     0.00 %
+     7200.000 - 1060.865 sec      :    81.25 %
+     1060.865 - 156.310 sec      :    18.75 %
      156.310 - 23.031 sec      :     0.00 %
      23.031 -  3.393 sec      :     0.00 %
       3.393 -  0.500 sec      :     0.00 %
@@ -91,10 +92,10 @@
                                    Depth    Depth      HGL   Occurrence   Max Depth
   Node                 Type       Meters   Meters   Meters  days hr:min      Meters
   ---------------------------------------------------------------------------------
-  INLET                JUNCTION     0.00     0.00   104.00     0  00:00        0.00
+  INLET                JUNCTION     7.43    75.76   179.76     0  00:49        0.00
   3                    JUNCTION     0.00     0.00   105.00     0  00:00        0.00
   outlet               OUTFALL      0.00     0.00   104.00     0  00:00        0.00
-  2                    STORAGE      0.00     0.00   105.00     0  00:00        0.00
+  2                    STORAGE      8.24    10.00   115.00     0  01:05       10.00
   
   
   *******************
@@ -107,10 +108,10 @@
                                    Inflow   Inflow   Occurrence      Volume      Volume       Error
   Node                 Type           CMS      CMS  days hr:min    10^6 ltr    10^6 ltr     Percent
   -------------------------------------------------------------------------------------------------
-  INLET                JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
+  INLET                JUNCTION     0.030    0.030     0  00:00        2.59        2.59     -99.730
   3                    JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
   outlet               OUTFALL      0.000    0.000     0  00:00           0           0       0.000 ltr
-  2                    STORAGE      0.000    0.000     0  00:00           0           0       0.000 ltr
+  2                    STORAGE      0.000   23.002     0  01:05           0         960       0.487
   
   
   **********************
@@ -124,7 +125,14 @@
   Node Flooding Summary
   *********************
   
-  No nodes were flooded.
+  Flooding refers to all water that overflows a node, whether it ponds or not.
+  --------------------------------------------------------------------------
+                                                             Total   Maximum
+                                 Maximum   Time of Max       Flood    Ponded
+                        Hours       Rate    Occurrence      Volume     Depth
+  Node                 Flooded       CMS   days hr:min    10^6 ltr    Meters
+  --------------------------------------------------------------------------
+  2                      23.18    11.501      0  01:05     959.692     0.000
   
   
   **********************
@@ -136,7 +144,7 @@
                           Volume   Pcnt   Pcnt   Pcnt      Volume   Pcnt     Occurrence    Outflow
   Storage Unit           1000 m³   Full   Loss   Loss     1000 m³   Full    days hr:min        CMS
   ------------------------------------------------------------------------------------------------
-  2                        0.000    0.0    0.0    0.0       0.000    0.0       0  00:00      0.000
+  2                        0.824   82.4    0.0    0.0       1.000  100.0       0  01:05      0.000
   
   
   ***********************
@@ -162,7 +170,7 @@
                                   |Flow|   Occurrence   |Veloc|    Full    Full
   Link                 Type          CMS  days hr:min     m/sec    Flow   Depth
   -----------------------------------------------------------------------------
-  REACT                WEIR        0.000     0  00:00                      0.00
+  REACT                WEIR       23.002     0  01:05                      0.00
   REACT_2              WEIR        0.000     0  00:00                      0.00
   REACT_3              WEIR        0.000     0  00:00                      0.00
   
@@ -185,6 +193,6 @@
   No conduits were surcharged.
   
 
-  Analysis begun on:  Sun Jul 19 15:18:46 2026
-  Analysis ended on:  Sun Jul 19 15:18:46 2026
+  Analysis begun on:  Wed Jul 22 12:55:35 2026
+  Analysis ended on:  Wed Jul 22 12:55:35 2026
   Total elapsed time: < 1 sec

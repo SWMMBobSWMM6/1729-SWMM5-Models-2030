@@ -36,14 +36,21 @@
   Wet Weather Inflow .......         0.000         0.000
   Groundwater Inflow .......         0.000         0.000
   RDII Inflow ..............         0.000         0.000
-  External Inflow ..........         0.000         0.000
+  External Inflow ..........         0.518         5.183
   External Outflow .........         0.000         0.000
-  Flooding Loss ............         0.000         0.000
+  Flooding Loss ............         0.247         2.470
   Evaporation Loss .........         0.000         0.000
   Exfiltration Loss ........         0.000         0.000
   Initial Stored Volume ....         0.000         0.000
-  Final Stored Volume ......         0.000         0.000
-  Continuity Error (%) .....         0.000
+  Final Stored Volume ......         0.237         2.370
+  Continuity Error (%) .....         6.626
+  
+  
+  *************************
+  Highest Continuity Errors
+  *************************
+  Node 213.2 (4.70%)
+  Node MH2/2 (4.64%)
   
   
   ***************************
@@ -61,7 +68,10 @@
   *********************************
   Most Frequent Nonconverging Nodes
   *********************************
-  Convergence obtained at all time steps.
+  Node MH2/2 (0.03%)
+  Node OUTLET (0.03%)
+  Node 213.2 (0.02%)
+  Node MH1/2 (0.02%)
   
   
   *************************
@@ -71,8 +81,8 @@
   Average Time Step           :    15.00 sec
   Maximum Time Step           :    15.00 sec
   % of Time in Steady State   :     0.00
-  Average Iterations per Step :     2.00
-  % of Steps Not Converging   :     0.00
+  Average Iterations per Step :     2.18
+  % of Steps Not Converging   :     0.03
   Time Step Frequencies       :
      15.000 -  7.597 sec      :   100.00 %
       7.597 -  3.848 sec      :     0.00 %
@@ -91,13 +101,13 @@
   Node                 Type       Meters   Meters   Meters  days hr:min      Meters
   ---------------------------------------------------------------------------------
   MH2/1                JUNCTION     0.00     0.00   102.00     0  00:00        0.00
-  MH2/2                JUNCTION     0.00     0.00   102.00     0  00:00        0.00
+  MH2/2                JUNCTION    92.39    99.11   201.11     0  02:09       99.09
   MH4/1                JUNCTION     0.00     0.00   102.00     0  00:00        0.00
-  MH1/2                JUNCTION     0.00     0.00   102.00     0  00:00        0.00
+  MH1/2                JUNCTION    97.84   100.10   202.10     0  01:05      100.10
   MH1/1                JUNCTION     0.00     0.00   102.00     0  00:00        0.00
-  213.2                JUNCTION     0.00     0.00   100.00     0  00:00        0.00
+  213.2                JUNCTION    98.10   100.38   200.38     0  01:07      100.38
   OUTLET               OUTFALL      0.00     0.00   102.00     0  00:00        0.00
-  MH3/1                STORAGE      0.00     0.00   102.00     0  00:00        0.00
+  MH3/1                STORAGE      1.07     2.36   104.36     1  00:00        2.36
   
   
   *******************
@@ -111,13 +121,13 @@
   Node                 Type           CMS      CMS  days hr:min    10^6 ltr    10^6 ltr     Percent
   -------------------------------------------------------------------------------------------------
   MH2/1                JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
-  MH2/2                JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
+  MH2/2                JUNCTION     0.000    0.032     0  01:06           0        2.47       4.865
   MH4/1                JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
-  MH1/2                JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
+  MH1/2                JUNCTION     0.030    0.030     0  00:00        2.59        2.59       4.739
   MH1/1                JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
-  213.2                JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
+  213.2                JUNCTION     0.030    0.030     0  00:00        2.59        2.59       4.928
   OUTLET               OUTFALL      0.000    0.000     0  00:00           0           0       0.000 ltr
-  MH3/1                STORAGE      0.000    0.000     0  00:00           0           0       0.000 ltr
+  MH3/1                STORAGE      0.000    0.046     0  02:10           0        2.36       0.010
   
   
   **********************
@@ -131,13 +141,21 @@
   Node                 Type      Surcharged         Meters       Meters
   ---------------------------------------------------------------------
   MH1/1                JUNCTION       24.00          0.000        0.000
+  213.2                JUNCTION       22.87          0.000        0.000
   
   
   *********************
   Node Flooding Summary
   *********************
   
-  No nodes were flooded.
+  Flooding refers to all water that overflows a node, whether it ponds or not.
+  --------------------------------------------------------------------------
+                                                             Total   Maximum
+                                 Maximum   Time of Max       Flood    Ponded
+                        Hours       Rate    Occurrence      Volume     Depth
+  Node                 Flooded       CMS   days hr:min    10^6 ltr    Meters
+  --------------------------------------------------------------------------
+  213.2                  22.87     0.030      0  01:07       2.470     0.000
   
   
   **********************
@@ -149,7 +167,7 @@
                           Volume   Pcnt   Pcnt   Pcnt      Volume   Pcnt     Occurrence    Outflow
   Storage Unit           1000 m³   Full   Loss   Loss     1000 m³   Full    days hr:min        CMS
   ------------------------------------------------------------------------------------------------
-  MH3/1                    0.000    0.0    0.0    0.0       0.000    0.0       0  00:00      0.000
+  MH3/1                    1.074    2.2    0.0    0.0       2.360    4.9       1  00:00      0.000
   
   
   ***********************
@@ -176,10 +194,10 @@
   Link                 Type          CMS  days hr:min     m/sec    Flow   Depth
   -----------------------------------------------------------------------------
   203.1                CONDUIT     0.000     0  00:00      0.00    0.00    0.00
-  2/2-3/1              CONDUIT     0.000     0  00:00      0.00    0.00    0.00
+  2/2-3/1              CONDUIT     0.046     0  02:10      1.34    0.07    0.18
   209.1                CONDUIT     0.000     0  00:00      0.00    0.00    0.00
-  1/2-2/2              CONDUIT     0.000     0  00:00      0.00    0.00    0.00
-  213.1                CONDUIT     0.000     0  00:00      0.00    0.00    0.00
+  1/2-2/2              CONDUIT     0.032     0  01:06      1.27    0.16    0.28
+  213.1                CONDUIT     0.000     0  00:00      0.00    0.00    0.50
   4/1-OUTLET           CONDUIT     0.000     0  00:00      0.00    0.00    0.00
   
   
@@ -193,10 +211,10 @@
   Conduit               Length    Dry  Dry   Dry   Crit  Crit  Crit  Crit  Ltd   Ctrl  
   -------------------------------------------------------------------------------------
   203.1                   1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
-  2/2-3/1                 1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  2/2-3/1                 1.00   0.09  0.00  0.00  0.00  0.00  0.00  0.91  0.00  0.00
   209.1                   1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
-  1/2-2/2                 1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
-  213.1                   1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  1/2-2/2                 1.00   0.05  0.00  0.00  0.00  0.00  0.00  0.95  0.00  0.00
+  213.1                   1.00   0.05  0.95  0.00  0.00  0.00  0.00  0.00  0.00  0.00
   4/1-OUTLET              1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
   
   
@@ -207,6 +225,6 @@
   No conduits were surcharged.
   
 
-  Analysis begun on:  Sun Jul 19 15:24:36 2026
-  Analysis ended on:  Sun Jul 19 15:24:36 2026
+  Analysis begun on:  Wed Jul 22 14:25:14 2026
+  Analysis ended on:  Wed Jul 22 14:25:14 2026
   Total elapsed time: < 1 sec

@@ -2,11 +2,233 @@
   EPA STORM WATER MANAGEMENT MODEL - VERSION 5.2 (Build 5.2.4)
   ------------------------------------------------------------
 
+  Wolli Creek 
   
-  ERROR 211: invalid number  at line 73 of [XSECT] section:
-  125              POWER        7.00       5.00       0          0          1
+  ****************
+  Analysis Options
+  ****************
+  Flow Units ............... CMS
+  Process Models:
+    Rainfall/Runoff ........ NO
+    RDII ................... NO
+    Snowmelt ............... NO
+    Groundwater ............ NO
+    Flow Routing ........... YES
+    Ponding Allowed ........ NO
+    Water Quality .......... NO
+  Flow Routing Method ...... DYNWAVE
+  Surcharge Method ......... EXTRAN
+  Starting Date ............ 01/01/2001 00:00:00
+  Ending Date .............. 01/02/2001 00:00:00
+  Antecedent Dry Days ...... 0.0
+  Report Time Step ......... 00:15:00
+  Routing Time Step ........ 20.00 sec
+  Variable Time Step ....... YES
+  Maximum Trials ........... 8
+  Number of Threads ........ 1
+  Head Tolerance ........... 0.001524 m
+  
+  
+  **************************        Volume        Volume
+  Flow Routing Continuity        hectare-m      10^6 ltr
+  **************************     ---------     ---------
+  Dry Weather Inflow .......         0.000         0.000
+  Wet Weather Inflow .......         0.000         0.000
+  Groundwater Inflow .......         0.000         0.000
+  RDII Inflow ..............         0.000         0.000
+  External Inflow ..........         0.518         5.183
+  External Outflow .........         0.000         0.000
+  Flooding Loss ............        84.121       841.215
+  Evaporation Loss .........         0.000         0.000
+  Exfiltration Loss ........         0.000         0.000
+  Initial Stored Volume ....         0.000         0.000
+  Final Stored Volume ......         3.661        36.611
+  Continuity Error (%) .....    -16834.723
+  
+  
+  *************************
+  Highest Continuity Errors
+  *************************
+  Node 103 (100.00%)
+  Node 102 (57.30%)
+  Node 105 (1.98%)
+  
+  
+  ***************************
+  Time-Step Critical Elements
+  ***************************
+  None
+  
+  
+  ********************************
+  Highest Flow Instability Indexes
+  ********************************
+  All links are stable.
+  
+  
+  *********************************
+  Most Frequent Nonconverging Nodes
+  *********************************
+  Node 104 (0.62%)
+  Node 999 (0.46%)
+  Node 105 (0.09%)
+  Node 102 (0.07%)
+  Node 103 (0.05%)
+  
+  
+  *************************
+  Routing Time Step Summary
+  *************************
+  Minimum Time Step           :     0.57 sec
+  Average Time Step           :    19.98 sec
+  Maximum Time Step           :    20.00 sec
+  % of Time in Steady State   :     0.00
+  Average Iterations per Step :     2.05
+  % of Steps Not Converging   :     0.62
+  Time Step Frequencies       :
+     20.000 -  9.564 sec      :    99.93 %
+      9.564 -  4.573 sec      :     0.00 %
+      4.573 -  2.187 sec      :     0.02 %
+      2.187 -  1.046 sec      :     0.00 %
+      1.046 -  0.500 sec      :     0.05 %
+  
+  
+  ******************
+  Node Depth Summary
+  ******************
+  
+  ---------------------------------------------------------------------------------
+                                 Average  Maximum  Maximum  Time of Max    Reported
+                                   Depth    Depth      HGL   Occurrence   Max Depth
+  Node                 Type       Meters   Meters   Meters  days hr:min      Meters
+  ---------------------------------------------------------------------------------
+  100                  JUNCTION    10.09    10.20    10.20     0  00:13       10.20
+  102                  JUNCTION     9.72    10.10    10.10     1  00:00       10.10
+  103                  JUNCTION     3.87     8.45     8.45     1  00:00        8.45
+  105                  JUNCTION    16.92    17.00    17.00     0  00:38       17.00
+  999                  JUNCTION    16.88    16.99    16.99     0  00:35       16.99
+  240.2                JUNCTION     0.00     0.00    10.00     0  00:00        0.00
+  104                  OUTFALL      0.00     0.00     0.00     0  00:00        0.00
+  
+  
+  *******************
+  Node Inflow Summary
+  *******************
+  
+  -------------------------------------------------------------------------------------------------
+                                  Maximum  Maximum                  Lateral       Total        Flow
+                                  Lateral    Total  Time of Max      Inflow      Inflow     Balance
+                                   Inflow   Inflow   Occurrence      Volume      Volume       Error
+  Node                 Type           CMS      CMS  days hr:min    10^6 ltr    10^6 ltr     Percent
+  -------------------------------------------------------------------------------------------------
+  100                  JUNCTION     0.030    0.030     0  00:00        2.59        2.59      -1.498
+  102                  JUNCTION     0.000    0.087     0  00:14           0        2.63     134.172
+  103                  JUNCTION     0.000    0.030     1  00:00           0        1.12 1123585.779 ltr
+  105                  JUNCTION     0.000   12.320     0  00:37           0         864       2.024
+  999                  JUNCTION     0.000    6.043     0  00:21           0         163       0.000
+  240.2                JUNCTION     0.030    0.030     0  00:00        2.59        2.59     -99.700
+  104                  OUTFALL      0.000    0.000     0  00:00           0           0       0.000 ltr
+  
+  
+  **********************
+  Node Surcharge Summary
+  **********************
+  
+  Surcharging occurs when water rises above the top of the highest conduit.
+  ---------------------------------------------------------------------
+                                               Max. Height   Min. Depth
+                                   Hours       Above Crown    Below Rim
+  Node                 Type      Surcharged         Meters       Meters
+  ---------------------------------------------------------------------
+  105                  JUNCTION       23.37          0.000        0.000
+  999                  JUNCTION       23.28          0.000        0.000
+  240.2                JUNCTION       24.00          0.000        0.000
+  
+  
+  *********************
+  Node Flooding Summary
+  *********************
+  
+  Flooding refers to all water that overflows a node, whether it ponds or not.
+  --------------------------------------------------------------------------
+                                                             Total   Maximum
+                                 Maximum   Time of Max       Flood    Ponded
+                        Hours       Rate    Occurrence      Volume     Depth
+  Node                 Flooded       CMS   days hr:min    10^6 ltr    Meters
+  --------------------------------------------------------------------------
+  105                    23.37    12.272      0  00:38     684.128     0.000
+  999                    23.28     1.885      0  00:44     157.184     0.000
+  
+  
+  ***********************
+  Outfall Loading Summary
+  ***********************
+  
+  -----------------------------------------------------------
+                         Flow       Avg       Max       Total
+                         Freq      Flow      Flow      Volume
+  Outfall Node           Pcnt       CMS       CMS    10^6 ltr
+  -----------------------------------------------------------
+  104                    0.00     0.000     0.000       0.000
+  -----------------------------------------------------------
+  System                 0.00     0.000     0.000       0.000
+  
+  
+  ********************
+  Link Flow Summary
+  ********************
+  
+  -----------------------------------------------------------------------------
+                                 Maximum  Time of Max   Maximum    Max/    Max/
+                                  |Flow|   Occurrence   |Veloc|    Full    Full
+  Link                 Type          CMS  days hr:min     m/sec    Flow   Depth
+  -----------------------------------------------------------------------------
+  121                  CONDUIT     0.087     0  00:14      0.38    0.00    0.16
+  122                  CONDUIT     0.030     1  00:00      0.20    0.00    0.07
+  123                  CONDUIT     0.000     0  00:00      0.00    0.00    0.00
+  125                  CONDUIT     6.043     0  00:21      0.71    3.22    1.00
+  240.1                PUMP       10.000     0  00:00              1.00
+  
+  
+  ***************************
+  Flow Classification Summary
+  ***************************
+  
+  -------------------------------------------------------------------------------------
+                      Adjusted    ---------- Fraction of Time in Flow Class ---------- 
+                       /Actual         Up    Down  Sub   Sup   Up    Down  Norm  Inlet 
+  Conduit               Length    Dry  Dry   Dry   Crit  Crit  Crit  Crit  Ltd   Ctrl  
+  -------------------------------------------------------------------------------------
+  121                     1.00   0.00  0.00  0.00  0.99  0.00  0.00  0.00  0.99  0.00
+  122                     1.00   0.49  0.00  0.00  0.46  0.00  0.00  0.05  0.43  0.00
+  123                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  125                     1.00   0.00  0.00  0.00  1.00  0.00  0.00  0.00  0.00  0.00
+  
+  
+  *************************
+  Conduit Surcharge Summary
+  *************************
+  
+  ----------------------------------------------------------------------------
+                                                           Hours        Hours 
+                         --------- Hours Full --------   Above Full   Capacity
+  Conduit                Both Ends  Upstream  Dnstream   Normal Flow   Limited
+  ----------------------------------------------------------------------------
+  125                         0.01      0.01     23.28      0.34         0.01
+  
+  
+  ***************
+  Pumping Summary
+  ***************
+  
+  ---------------------------------------------------------------------------------------------------------
+                                                  Min       Avg       Max     Total     Power    % Time Off
+                        Percent   Number of      Flow      Flow      Flow    Volume     Usage    Pump Curve
+  Pump                 Utilized   Start-Ups       CMS       CMS       CMS  10^6 ltr     Kw-hr    Low   High
+  ---------------------------------------------------------------------------------------------------------
+  240.1                  100.00           1      0.00     10.00     10.00   863.908  16299.32    0.0    0.0
+  
 
-
-  Analysis begun on:  Sun Jul 19 15:23:58 2026
-  Analysis ended on:  Sun Jul 19 15:23:58 2026
+  Analysis begun on:  Wed Jul 22 14:20:17 2026
+  Analysis ended on:  Wed Jul 22 14:20:17 2026
   Total elapsed time: < 1 sec

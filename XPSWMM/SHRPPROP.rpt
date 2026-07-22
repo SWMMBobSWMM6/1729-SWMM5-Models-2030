@@ -36,14 +36,14 @@
   Wet Weather Inflow .......         0.000         0.000
   Groundwater Inflow .......         0.000         0.000
   RDII Inflow ..............         0.000         0.000
-  External Inflow ..........         0.000         0.000
-  External Outflow .........         0.000         0.000
-  Flooding Loss ............         0.000         0.000
+  External Inflow ..........         3.967         1.293
+  External Outflow .........         2.322         0.757
+  Flooding Loss ............         1.820         0.593
   Evaporation Loss .........         0.000         0.000
   Exfiltration Loss ........         0.000         0.000
   Initial Stored Volume ....         0.067         0.022
-  Final Stored Volume ......         0.067         0.022
-  Continuity Error (%) .....         0.000
+  Final Stored Volume ......         0.230         0.075
+  Continuity Error (%) .....        -8.381
   
   
   ***************************
@@ -55,13 +55,14 @@
   ********************************
   Highest Flow Instability Indexes
   ********************************
-  All links are stable.
+  Link WeirOF (37)
   
   
   *********************************
   Most Frequent Nonconverging Nodes
   *********************************
-  Convergence obtained at all time steps.
+  Node Altern2 (24.84%)
+  Node TW (24.84%)
   
   
   *************************
@@ -71,8 +72,8 @@
   Average Time Step           :    59.96 sec
   Maximum Time Step           :    60.00 sec
   % of Time in Steady State   :     0.00
-  Average Iterations per Step :     2.00
-  % of Steps Not Converging   :     0.00
+  Average Iterations per Step :    17.59
+  % of Steps Not Converging   :    24.84
   Time Step Frequencies       :
      60.000 - 23.031 sec      :   100.00 %
      23.031 -  8.841 sec      :     0.00 %
@@ -94,9 +95,9 @@
   EndOF                JUNCTION     0.00     0.00   119.40     0  00:00        0.00
   Connect              JUNCTION     0.00     0.00   119.00     0  00:00        0.00
   TW2                  JUNCTION     0.00     0.00   117.00     0  00:00        0.00
-  Altern2              JUNCTION     0.00     0.00   117.00     0  00:00        0.00
+  Altern2              JUNCTION   112.43   117.38   234.38     0  00:32      117.28
   TW                   OUTFALL      0.00     0.00   119.40     0  00:00        0.00
-  Detention            STORAGE      2.90     2.90   121.40     0  00:00        2.90
+  Detention            STORAGE      9.71    10.00   128.50     0  01:59       10.00
   
   
   *******************
@@ -113,9 +114,9 @@
   EndOF                JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
   Connect              JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
   TW2                  JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
-  Altern2              JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
-  TW                   OUTFALL       0.00     0.00     0  00:00           0           0       0.000 gal
-  Detention            STORAGE       0.00     0.00     0  00:00           0      0.0217       0.000
+  Altern2              JUNCTION      1.00     1.00     0  00:00       0.646       0.646     -14.571
+  TW                   OUTFALL       0.00     4.42     0  00:33           0       0.756       0.000
+  Detention            STORAGE       1.00     1.00     0  00:00       0.646       0.668       0.011
   
   
   **********************
@@ -129,7 +130,14 @@
   Node Flooding Summary
   *********************
   
-  No nodes were flooded.
+  Flooding refers to all water that overflows a node, whether it ponds or not.
+  --------------------------------------------------------------------------
+                                                             Total   Maximum
+                                 Maximum   Time of Max       Flood    Ponded
+                        Hours       Rate    Occurrence      Volume     Depth
+  Node                 Flooded       CFS   days hr:min    10^6 gal      Feet
+  --------------------------------------------------------------------------
+  Detention              22.03      1.00      0  01:59       0.593     0.000
   
   
   **********************
@@ -141,7 +149,7 @@
                           Volume   Pcnt   Pcnt   Pcnt      Volume   Pcnt     Occurrence    Outflow
   Storage Unit          1000 ft³   Full   Loss   Loss    1000 ft³   Full    days hr:min        CFS
   ------------------------------------------------------------------------------------------------
-  Detention                2.900   29.0    0.0    0.0       2.900   29.0       0  00:00       0.00
+  Detention                9.706   97.1    0.0    0.0      10.000  100.0       0  01:59       0.00
   
   
   ***********************
@@ -153,9 +161,9 @@
                          Freq      Flow      Flow      Volume
   Outfall Node           Pcnt       CFS       CFS    10^6 gal
   -----------------------------------------------------------
-  TW                     0.00      0.00      0.00       0.000
+  TW                    49.27      2.37      4.42       0.756
   -----------------------------------------------------------
-  System                 0.00      0.00      0.00       0.000
+  System                49.27      2.37      4.42       0.756
   
   
   ********************
@@ -171,7 +179,7 @@
   OFChannel            CONDUIT      0.00     0  00:00      0.00    0.00    0.00
   36inCTRL             CONDUIT      0.00     0  00:00      0.00    0.00    0.00
   Weir                 WEIR         0.00     0  00:00                      0.00
-  WeirOF               WEIR         0.00     0  00:00                      0.00
+  WeirOF               WEIR         4.42     0  00:33                      1.00
   
   
   ***************************
@@ -195,6 +203,6 @@
   No conduits were surcharged.
   
 
-  Analysis begun on:  Sun Jul 19 15:22:20 2026
-  Analysis ended on:  Sun Jul 19 15:22:20 2026
+  Analysis begun on:  Wed Jul 22 14:16:51 2026
+  Analysis ended on:  Wed Jul 22 14:16:51 2026
   Total elapsed time: < 1 sec

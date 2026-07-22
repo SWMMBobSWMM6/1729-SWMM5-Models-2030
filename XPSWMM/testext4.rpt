@@ -37,14 +37,21 @@
   Wet Weather Inflow .......         0.000         0.000
   Groundwater Inflow .......         0.000         0.000
   RDII Inflow ..............         0.000         0.000
-  External Inflow ..........         0.000         0.000
-  External Outflow .........         0.000         0.000
-  Flooding Loss ............         0.000         0.000
+  External Inflow ..........         0.778         7.775
+  External Outflow .........         0.238         2.384
+  Flooding Loss ............         0.419         4.185
   Evaporation Loss .........         0.000         0.000
   Exfiltration Loss ........         0.000         0.000
   Initial Stored Volume ....         0.000         0.000
-  Final Stored Volume ......         0.000         0.000
-  Continuity Error (%) .....         0.000
+  Final Stored Volume ......         0.077         0.766
+  Continuity Error (%) .....         5.661
+  
+  
+  *************************
+  Highest Continuity Errors
+  *************************
+  Node K4.2 (4.84%)
+  Node 213 (3.86%)
   
   
   ***************************
@@ -56,13 +63,17 @@
   ********************************
   Highest Flow Instability Indexes
   ********************************
-  All links are stable.
+  Link 212.1 (2)
   
   
   *********************************
   Most Frequent Nonconverging Nodes
   *********************************
-  Convergence obtained at all time steps.
+  Node K4.3 (0.08%)
+  Node 213 (0.05%)
+  Node 212.3 (0.02%)
+  Node 212.2 (0.01%)
+  Node K4.2 (0.01%)
   
   
   *************************
@@ -72,8 +83,8 @@
   Average Time Step           :    10.00 sec
   Maximum Time Step           :    10.00 sec
   % of Time in Steady State   :     0.00
-  Average Iterations per Step :     2.00
-  % of Steps Not Converging   :     0.00
+  Average Iterations per Step :     2.05
+  % of Steps Not Converging   :     0.08
   Time Step Frequencies       :
      10.000 -  5.493 sec      :   100.00 %
       5.493 -  3.017 sec      :     0.00 %
@@ -91,14 +102,14 @@
                                    Depth    Depth      HGL   Occurrence   Max Depth
   Node                 Type       Meters   Meters   Meters  days hr:min      Meters
   ---------------------------------------------------------------------------------
-  Inflow               JUNCTION     0.00     0.00   100.00     0  00:00        0.00
-  K4.2                 JUNCTION     0.00     0.00   100.00     0  00:00        0.00
+  Inflow               JUNCTION    89.21    91.08   191.08     0  03:08       91.08
+  K4.2                 JUNCTION    75.65    77.00   177.00     0  01:09       77.00
   Outfall              JUNCTION     0.00     0.00   100.00     0  00:00        0.00
-  213                  JUNCTION     0.00     0.00   100.00     0  00:00        0.00
+  213                  JUNCTION    84.31    90.11   190.11     0  02:01       90.04
   215                  JUNCTION     0.00     0.00   100.00     0  00:00        0.00
   NEWROUTE             JUNCTION     0.00     0.00     1.00     0  00:00        0.00
-  212.2                JUNCTION     0.00     0.00    75.00     0  00:00        0.00
-  212.3                JUNCTION     0.00     0.00    75.00     0  00:00        0.00
+  212.2                JUNCTION    74.69    76.20   151.20     0  08:05       76.20
+  212.3                JUNCTION    71.56    76.20   151.20     0  08:05       76.20
   K4.3                 OUTFALL      0.00     0.00   100.00     0  00:00        0.00
   
   
@@ -112,15 +123,15 @@
                                    Inflow   Inflow   Occurrence      Volume      Volume       Error
   Node                 Type           CMS      CMS  days hr:min    10^6 ltr    10^6 ltr     Percent
   -------------------------------------------------------------------------------------------------
-  Inflow               JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
-  K4.2                 JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
+  Inflow               JUNCTION     0.030    0.030     0  00:00        2.59        2.59       4.534
+  K4.2                 JUNCTION     0.030    0.030     0  00:00        2.59        2.59       5.091
   Outfall              JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
-  213                  JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
+  213                  JUNCTION     0.000    0.036     0  02:01           0        2.48       4.012
   215                  JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
   NEWROUTE             JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
-  212.2                JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
-  212.3                JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
-  K4.3                 OUTFALL      0.000    0.000     0  00:00           0           0       0.000 ltr
+  212.2                JUNCTION     0.030    0.076     0  01:51        2.59         2.6      21.172
+  212.3                JUNCTION     0.000    0.049     0  01:54           0        1.05       0.000
+  K4.3                 OUTFALL      0.000    0.248     0  02:01           0        2.38       0.000
   
   
   **********************
@@ -133,14 +144,26 @@
                                    Hours       Above Crown    Below Rim
   Node                 Type      Surcharged         Meters       Meters
   ---------------------------------------------------------------------
+  K4.2                 JUNCTION       22.84          0.000        0.000
   NEWROUTE             JUNCTION       24.00          0.000        0.000
+  212.2                JUNCTION       15.92          0.000        0.000
+  212.3                JUNCTION       15.92          0.000        0.000
   
   
   *********************
   Node Flooding Summary
   *********************
   
-  No nodes were flooded.
+  Flooding refers to all water that overflows a node, whether it ponds or not.
+  --------------------------------------------------------------------------
+                                                             Total   Maximum
+                                 Maximum   Time of Max       Flood    Ponded
+                        Hours       Rate    Occurrence      Volume     Depth
+  Node                 Flooded       CMS   days hr:min    10^6 ltr    Meters
+  --------------------------------------------------------------------------
+  K4.2                   22.84     0.030      0  01:09       2.466     0.000
+  212.2                  15.92     0.022      1  00:00       1.097     0.000
+  212.3                  15.92     0.015      0  08:05       0.622     0.000
   
   
   ***********************
@@ -152,9 +175,9 @@
                          Freq      Flow      Flow      Volume
   Outfall Node           Pcnt       CMS       CMS    10^6 ltr
   -----------------------------------------------------------
-  K4.3                   0.00     0.000     0.000       0.000
+  K4.3                  91.59     0.030     0.248       2.384
   -----------------------------------------------------------
-  System                 0.00     0.000     0.000       0.000
+  System                91.59     0.030     0.248       2.384
   
   
   ********************
@@ -166,11 +189,11 @@
                                   |Flow|   Occurrence   |Veloc|    Full    Full
   Link                 Type          CMS  days hr:min     m/sec    Flow   Depth
   -----------------------------------------------------------------------------
-  pipe1                CONDUIT     0.000     0  00:00      0.00    0.00    0.00
+  pipe1                CONDUIT     0.036     0  02:01      0.88    0.00    0.03
   pipe2                CONDUIT     0.000     0  00:00      0.00    0.00    0.00
-  212.1                CONDUIT     0.000     0  00:00      0.00    0.00    0.00
-  214                  CONDUIT     0.000     0  00:00      0.00    0.00    0.00
-  CHME216              CONDUIT     0.000     0  00:00      0.00    0.00    0.00
+  212.1                CONDUIT     0.049     0  01:54      0.15    0.10    1.00
+  214                  CONDUIT     0.248     0  02:01      8.09    0.00    0.05
+  CHME216              CONDUIT     0.000     0  00:00      0.00    0.00    0.50
   
   
   ***************************
@@ -182,20 +205,25 @@
                        /Actual         Up    Down  Sub   Sup   Up    Down  Norm  Inlet 
   Conduit               Length    Dry  Dry   Dry   Crit  Crit  Crit  Crit  Ltd   Ctrl  
   -------------------------------------------------------------------------------------
-  pipe1                   1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  pipe1                   1.00   0.04  0.00  0.00  0.00  0.00  0.00  0.96  0.00  0.00
   pipe2                   1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
-  212.1                   1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
-  214                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
-  CHME216                 1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  212.1                   1.00   0.03  0.00  0.00  0.92  0.00  0.00  0.04  0.00  0.00
+  214                     1.00   0.08  0.00  0.00  0.00  0.00  0.00  0.92  0.00  0.00
+  CHME216                 1.00   0.03  0.97  0.00  0.00  0.00  0.00  0.00  0.00  0.00
   
   
   *************************
   Conduit Surcharge Summary
   *************************
   
-  No conduits were surcharged.
+  ----------------------------------------------------------------------------
+                                                           Hours        Hours 
+                         --------- Hours Full --------   Above Full   Capacity
+  Conduit                Both Ends  Upstream  Dnstream   Normal Flow   Limited
+  ----------------------------------------------------------------------------
+  212.1                      15.92     15.92     15.92      0.01         0.01
   
 
-  Analysis begun on:  Sun Jul 19 15:24:11 2026
-  Analysis ended on:  Sun Jul 19 15:24:11 2026
+  Analysis begun on:  Wed Jul 22 14:23:58 2026
+  Analysis ended on:  Wed Jul 22 14:23:58 2026
   Total elapsed time: < 1 sec

@@ -36,14 +36,20 @@
   Wet Weather Inflow .......         0.000         0.000
   Groundwater Inflow .......         0.000         0.000
   RDII Inflow ..............         0.000         0.000
-  External Inflow ..........         0.000         0.000
-  External Outflow .........         0.000         0.000
+  External Inflow ..........         1.983         0.646
+  External Outflow .........         2.364         0.770
   Flooding Loss ............         0.000         0.000
   Evaporation Loss .........         0.000         0.000
   Exfiltration Loss ........         0.000         0.000
   Initial Stored Volume ....         0.000         0.000
-  Final Stored Volume ......         0.000         0.000
-  Continuity Error (%) .....         0.000
+  Final Stored Volume ......         0.026         0.008
+  Continuity Error (%) .....       -20.463
+  
+  
+  *************************
+  Highest Continuity Errors
+  *************************
+  Node mh (-19.18%)
   
   
   ***************************
@@ -67,12 +73,12 @@
   *************************
   Routing Time Step Summary
   *************************
-  Minimum Time Step           :    59.50 sec
-  Average Time Step           :    59.96 sec
+  Minimum Time Step           :    28.54 sec
+  Average Time Step           :    59.92 sec
   Maximum Time Step           :    60.00 sec
   % of Time in Steady State   :     0.00
-  Average Iterations per Step :     2.00
-  % of Steps Not Converging   :     0.00
+  Average Iterations per Step :     2.11
+  % of Steps Not Converging   :     0.21
   Time Step Frequencies       :
      60.000 - 23.031 sec      :   100.00 %
      23.031 -  8.841 sec      :     0.00 %
@@ -90,7 +96,7 @@
                                    Depth    Depth      HGL   Occurrence   Max Depth
   Node                 Type         Feet     Feet     Feet  days hr:min        Feet
   ---------------------------------------------------------------------------------
-  mh                   JUNCTION     0.00     0.00   200.00     0  00:00        0.00
+  mh                   JUNCTION   100.68   102.76   302.76     0  00:37      102.37
   mh_2                 JUNCTION     0.00     0.00   200.00     0  00:00        0.00
   mh_3                 JUNCTION     0.00     0.00   155.00     0  00:00        0.00
   mh_4                 JUNCTION     0.00     0.00   125.00     0  00:00        0.00
@@ -112,7 +118,7 @@
                                    Inflow   Inflow   Occurrence      Volume      Volume       Error
   Node                 Type           CFS      CFS  days hr:min    10^6 gal    10^6 gal     Percent
   -------------------------------------------------------------------------------------------------
-  mh                   JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  mh                   JUNCTION      1.00     1.00     0  00:00       0.646       0.646     -16.092
   mh_2                 JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
   mh_3                 JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
   mh_4                 JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
@@ -121,7 +127,7 @@
   mh_7                 JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
   mh_8                 JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
   mh_9                 JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
-  outlet               OUTFALL       0.00     0.00     0  00:00           0           0       0.000 gal
+  outlet               OUTFALL       0.00    63.52     0  00:37           0        0.77       0.000
   
   
   **********************
@@ -160,9 +166,9 @@
                          Freq      Flow      Flow      Volume
   Outfall Node           Pcnt       CFS       CFS    10^6 gal
   -----------------------------------------------------------
-  outlet                 0.00      0.00      0.00       0.000
+  outlet                97.43      1.22     63.52       0.770
   -----------------------------------------------------------
-  System                 0.00      0.00      0.00       0.000
+  System                97.43      1.22     63.52       0.770
   
   
   ********************
@@ -176,13 +182,13 @@
   -----------------------------------------------------------------------------
   LA1                  CONDUIT      0.00     0  00:00      0.00    0.00    0.00
   LA2                  CONDUIT      0.00     0  00:00      0.00    0.00    0.00
-  LA3                  CONDUIT      0.00     0  00:00      0.00    0.00    0.00
-  nacond               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
-  LA5                  CONDUIT      0.00     0  00:00      0.00    0.00    0.00
-  LA6                  CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  LA3                  CONDUIT      0.00     0  00:00      0.00    0.00    0.12
+  nacond               CONDUIT      0.00     0  00:00      0.00    0.00    0.26
+  LA5                  CONDUIT      0.00     0  00:00      0.00    0.00    0.24
+  LA6                  CONDUIT     63.52     0  00:37     24.49    0.02    0.13
   LB1                  CONDUIT      0.00     0  00:00      0.00    0.00    0.00
   LB2                  CONDUIT      0.00     0  00:00      0.00    0.00    0.00
-  LB3                  CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  LB3                  CONDUIT      0.00     0  00:00      0.00    0.00    0.18
   
   
   ***************************
@@ -197,12 +203,12 @@
   LA1                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
   LA2                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
   LA3                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
-  nacond                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
-  LA5                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
-  LA6                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  nacond                  1.00   0.98  0.02  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  LA5                     1.00   0.02  0.96  0.00  0.02  0.00  0.00  0.00  0.00  0.00
+  LA6                     1.00   0.02  0.00  0.00  0.00  0.00  0.00  0.98  0.00  0.00
   LB1                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
   LB2                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
-  LB3                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  LB3                     1.00   0.98  0.02  0.00  0.00  0.00  0.00  0.00  0.00  0.00
   
   
   *************************
@@ -212,6 +218,6 @@
   No conduits were surcharged.
   
 
-  Analysis begun on:  Sun Jul 19 15:23:52 2026
-  Analysis ended on:  Sun Jul 19 15:23:52 2026
+  Analysis begun on:  Wed Jul 22 14:20:05 2026
+  Analysis ended on:  Wed Jul 22 14:20:05 2026
   Total elapsed time: < 1 sec

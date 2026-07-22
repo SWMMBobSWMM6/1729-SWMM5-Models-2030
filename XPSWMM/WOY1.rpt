@@ -7,6 +7,8 @@
   WARNING 08: elevation drop exceeds length for Conduit L-WG1
   WARNING 04: minimum elevation drop used for Conduit 450
   WARNING 04: minimum elevation drop used for Conduit 892
+  WARNING 08: elevation drop exceeds length for Conduit 980
+  WARNING 08: elevation drop exceeds length for Conduit 982
   WARNING 08: elevation drop exceeds length for Conduit 1004
   
   ****************
@@ -41,14 +43,22 @@
   Wet Weather Inflow .......         0.000         0.000
   Groundwater Inflow .......         0.000         0.000
   RDII Inflow ..............         0.000         0.000
-  External Inflow ..........         0.000         0.000
+  External Inflow ..........         0.021         0.213
   External Outflow .........         0.000         0.000
   Flooding Loss ............         0.000         0.000
   Evaporation Loss .........         0.000         0.000
   Exfiltration Loss ........         0.000         0.000
   Initial Stored Volume ....         0.012         0.122
   Final Stored Volume ......         0.012         0.122
-  Continuity Error (%) .....         0.000
+  Continuity Error (%) .....        63.601
+  
+  
+  *************************
+  Highest Continuity Errors
+  *************************
+  Node CJ1 (100.00%)
+  Node CA1 (100.00%)
+  Node AT1 (100.00%)
   
   
   ***************************
@@ -239,7 +249,7 @@
   JU1                  JUNCTION     0.00     0.00   104.33     0  00:00        0.00
   JU6                  JUNCTION     0.00     0.00   104.10     0  00:00        0.00
   JU5                  JUNCTION     0.00     0.00   104.25     0  00:00        0.00
-  CJ1                  JUNCTION     0.00     0.00   101.39     0  00:00        0.00
+  CJ1                  JUNCTION    30.34    60.68   162.07     1  00:00       60.68
   CJ3                  JUNCTION     0.00     0.00   102.17     0  00:00        0.00
   CJ2                  JUNCTION     0.00     0.00   101.44     0  00:00        0.00
   CJ7                  JUNCTION     0.00     0.00   102.46     0  00:00        0.00
@@ -257,7 +267,7 @@
   CL1                  JUNCTION     0.00     0.00   101.44     0  00:00        0.00
   CS1                  JUNCTION     0.00     0.00   101.26     0  00:00        0.00
   CA2                  JUNCTION     0.00     0.00   101.27     0  00:00        0.00
-  CA1                  JUNCTION     0.00     0.00   101.33     0  00:00        0.00
+  CA1                  JUNCTION    30.34    60.68   162.01     1  00:00       60.68
   CA5                  JUNCTION     0.00     0.00   101.03     0  00:00        0.00
   CA4                  JUNCTION     0.00     0.00   101.21     0  00:00        0.00
   CA3                  JUNCTION     0.00     0.00   101.21     0  00:00        0.00
@@ -269,7 +279,7 @@
   CF6                  JUNCTION     0.00     0.00   101.38     0  00:00        0.00
   CF5                  JUNCTION     0.00     0.00   100.95     0  00:00        0.00
   CF4                  JUNCTION     0.00     0.00   100.99     0  00:00        0.00
-  AT1                  JUNCTION     0.00     0.00   100.91     0  00:00        0.00
+  AT1                  JUNCTION    30.34    60.68   161.59     1  00:00       60.68
   AT2                  JUNCTION     0.00     0.00   101.31     0  00:00        0.00
   CX1                  JUNCTION     0.00     0.00   101.97     0  00:00        0.00
   FU1                  JUNCTION     0.00     0.00   104.66     0  00:00        0.00
@@ -430,12 +440,22 @@
   FB1                  JUNCTION     0.00     0.00   101.05     0  00:00        0.00
   Node_804             JUNCTION     0.00     0.00   101.68     0  00:00        0.00
   Node_10011003        JUNCTION     0.00     0.00   101.52     0  00:00        0.00
+  HW_806               JUNCTION     0.00     0.00   101.52     0  00:00        0.00
+  HW_07                JUNCTION     0.00     0.00   101.32     0  00:00        0.00
+  Node_1005994         JUNCTION     0.00     0.00   101.22     0  00:00        0.00
+  HW_810               JUNCTION     0.00     0.00   101.34     0  00:00        0.00
+  HW_12                JUNCTION     0.00     0.00   101.06     0  00:00        0.00
+  Node_1009997         JUNCTION     0.00     0.00   100.72     0  00:00        0.00
+  HW_815               JUNCTION     0.00     0.00   102.08     0  00:00        0.00
   Node_816             JUNCTION     0.00     0.00   101.48     0  00:00        0.00
   Node_10141008        JUNCTION     0.00     0.00   101.34     0  00:00        0.00
+  HW_819               JUNCTION     0.00     0.00   102.74     0  00:00        0.00
   Node_820             JUNCTION     0.00     0.00   102.53     0  00:00        0.00
   Node_10181013        JUNCTION     0.00     0.00   102.08     0  00:00        0.00
   Node_823             JUNCTION     0.00     0.00    96.77     0  00:00        0.00
   Node_10211022        JUNCTION     0.00     0.00    96.73     0  00:00        0.00
+  HW_RM-WW5            JUNCTION     0.00     0.00    94.50     0  00:00        0.00
+  Node_1022894         JUNCTION     0.00     0.00   102.56     0  00:00        0.00
   Node_827             JUNCTION     0.00     0.00    99.35     0  00:00        0.00
   Node_10251026        JUNCTION     0.00     0.00    98.83     0  00:00        0.00
   Node_828             JUNCTION     0.00     0.00    98.83     0  00:00        0.00
@@ -446,24 +466,36 @@
   Node_10301032        JUNCTION     0.00     0.00   101.18     0  00:00        0.00
   Node_835             JUNCTION     0.00     0.00   101.18     0  00:00        0.00
   Node_10321034        JUNCTION     0.00     0.00   100.64     0  00:00        0.00
+  HW_837               JUNCTION     0.00     0.00    99.75     0  00:00        0.00
+  HW_838               JUNCTION     0.00     0.00    99.45     0  00:00        0.00
   Node_841             JUNCTION     0.00     0.00    97.02     0  00:00        0.00
   Node_10391040        JUNCTION     0.00     0.00    96.85     0  00:00        0.00
+  HW_842               JUNCTION     0.00     0.00    96.85     0  00:00        0.00
+  HW_844               JUNCTION     0.00     0.00    99.64     0  00:00        0.00
+  HW_847               JUNCTION     0.00     0.00    99.80     0  00:00        0.00
   Node_849             JUNCTION     0.00     0.00    99.43     0  00:00        0.00
   Node_10461048        JUNCTION     0.00     0.00    99.28     0  00:00        0.00
+  HW_850               JUNCTION     0.00     0.00    99.28     0  00:00        0.00
   Node_853             JUNCTION     0.00     0.00   101.18     0  00:00        0.00
   Node_10511052        JUNCTION     0.00     0.00   101.09     0  00:00        0.00
+  HW_855               JUNCTION     0.00     0.00   101.09     0  00:00        0.00
+  HW_856               JUNCTION     0.00     0.00   100.87     0  00:00        0.00
   Node_859             JUNCTION     0.00     0.00   101.17     0  00:00        0.00
   Node_10571058        JUNCTION     0.00     0.00   100.43     0  00:00        0.00
+  HW_861               JUNCTION     0.00     0.00   100.43     0  00:00        0.00
   Node_863             JUNCTION     0.00     0.00   100.29     0  00:00        0.00
   Node_10601062        JUNCTION     0.00     0.00    99.95     0  00:00        0.00
   Node_865             JUNCTION     0.00     0.00    99.94     0  00:00        0.00
   Node_10621064        JUNCTION     0.00     0.00    99.90     0  00:00        0.00
+  HW_868               JUNCTION     0.00     0.00   101.16     0  00:00        0.00
   Node_870             JUNCTION     0.00     0.00   100.72     0  00:00        0.00
   Node_10671069        JUNCTION     0.00     0.00   100.35     0  00:00        0.00
   Node_871             JUNCTION     0.00     0.00   100.03     0  00:00        0.00
   Node_10691062        JUNCTION     0.00     0.00    99.94     0  00:00        0.00
   Node_874             JUNCTION     0.00     0.00   100.90     0  00:00        0.00
   Node_10721073        JUNCTION     0.00     0.00   100.57     0  00:00        0.00
+  HW_875               JUNCTION     0.00     0.00   100.51     0  00:00        0.00
+  HW_878               JUNCTION     0.00     0.00   102.14     0  00:00        0.00
   Node_880             JUNCTION     0.00     0.00   101.62     0  00:00        0.00
   Node_10771079        JUNCTION     0.00     0.00   101.34     0  00:00        0.00
   Node_882             JUNCTION     0.00     0.00   101.34     0  00:00        0.00
@@ -474,98 +506,151 @@
   Node_1064837         JUNCTION     0.00     0.00   104.24     0  00:00        0.00
   Node_887             JUNCTION     0.00     0.00    99.91     0  00:00        0.00
   Node_10851086        JUNCTION     0.00     0.00    99.75     0  00:00        0.00
+  HW_889               JUNCTION     0.00     0.00    99.75     0  00:00        0.00
   Node_892             JUNCTION     0.00     0.00    98.71     0  00:00        0.00
   Node_10901091        JUNCTION     0.00     0.00    98.71     0  00:00        0.00
+  HW_894               JUNCTION     0.00     0.00    98.57     0  00:00        0.00
+  HW_896               JUNCTION     0.00     0.00    98.09     0  00:00        0.00
+  HW_899               JUNCTION     0.00     0.00   100.46     0  00:00        0.00
   Node_901             JUNCTION     0.00     0.00   100.24     0  00:00        0.00
   Node_10981100        JUNCTION     0.00     0.00    99.90     0  00:00        0.00
   Node_903             JUNCTION     0.00     0.00    99.90     0  00:00        0.00
   Node_11001102        JUNCTION     0.00     0.00    99.64     0  00:00        0.00
   Node_905             JUNCTION     0.00     0.00    99.14     0  00:00        0.00
   Node_11021104        JUNCTION     0.00     0.00    98.85     0  00:00        0.00
+  HW_906               JUNCTION     0.00     0.00    98.85     0  00:00        0.00
   Node_909             JUNCTION     0.00     0.00   102.47     0  00:00        0.00
   Node_11071108        JUNCTION     0.00     0.00   101.09     0  00:00        0.00
+  HW_911               JUNCTION     0.00     0.00   101.09     0  00:00        0.00
   Node_912             JUNCTION     0.00     0.00   100.55     0  00:00        0.00
   Node_11101097        JUNCTION     0.00     0.00   100.46     0  00:00        0.00
+  HW_RM-WW9            JUNCTION     0.00     0.00    98.50     0  00:00        0.00
+  HW_RM-WW8            JUNCTION     0.00     0.00    95.80     0  00:00        0.00
+  Node_1095844         JUNCTION     0.00     0.00   102.25     0  00:00        0.00
   Node_917             JUNCTION     0.00     0.00    99.69     0  00:00        0.00
   Node_11151116        JUNCTION     0.00     0.00    99.58     0  00:00        0.00
+  HW_919               JUNCTION     0.00     0.00    99.58     0  00:00        0.00
   Node_921             JUNCTION     0.00     0.00    99.35     0  00:00        0.00
   Node_11181120        JUNCTION     0.00     0.00    98.80     0  00:00        0.00
+  HW_922               JUNCTION     0.00     0.00    98.80     0  00:00        0.00
+  HW_925               JUNCTION     0.00     0.00   101.42     0  00:00        0.00
+  HW_927               JUNCTION     0.00     0.00   100.67     0  00:00        0.00
   Node_928             JUNCTION     0.00     0.00   100.22     0  00:00        0.00
   Node_11261115        JUNCTION     0.00     0.00    99.69     0  00:00        0.00
+  HW_931               JUNCTION     0.00     0.00   102.84     0  00:00        0.00
   Node_932             JUNCTION     0.00     0.00   102.37     0  00:00        0.00
   Node_11301123        JUNCTION     0.00     0.00   101.42     0  00:00        0.00
+  HW_935               JUNCTION     0.00     0.00   100.86     0  00:00        0.00
   Node_937             JUNCTION     0.00     0.00   100.59     0  00:00        0.00
   Node_11341136        JUNCTION     0.00     0.00   100.13     0  00:00        0.00
   Node_939             JUNCTION     0.00     0.00   100.13     0  00:00        0.00
   Node_11361138        JUNCTION     0.00     0.00    99.97     0  00:00        0.00
+  HW_940               JUNCTION     0.00     0.00    99.97     0  00:00        0.00
   Node_943             JUNCTION     0.00     0.00    99.49     0  00:00        0.00
   Node_11411142        JUNCTION     0.00     0.00    99.47     0  00:00        0.00
   Node_945             JUNCTION     0.00     0.00    99.47     0  00:00        0.00
   Node_11421144        JUNCTION     0.00     0.00    99.39     0  00:00        0.00
+  HW_946               JUNCTION     0.00     0.00    99.39     0  00:00        0.00
+  HW_949               JUNCTION     0.00     0.00    99.82     0  00:00        0.00
   Node_951             JUNCTION     0.00     0.00    99.60     0  00:00        0.00
   Node_11481150        JUNCTION     0.00     0.00    99.56     0  00:00        0.00
   Node_952             JUNCTION     0.00     0.00    99.56     0  00:00        0.00
   Node_11501141        JUNCTION     0.00     0.00    99.49     0  00:00        0.00
   Node_956             JUNCTION     0.00     0.00   100.01     0  00:00        0.00
   Node_11541155        JUNCTION     0.00     0.00    99.86     0  00:00        0.00
+  HW_957               JUNCTION     0.00     0.00    99.86     0  00:00        0.00
   Node_960             JUNCTION     0.00     0.00   100.40     0  00:00        0.00
   Node_11581159        JUNCTION     0.00     0.00   100.27     0  00:00        0.00
+  HW_962               JUNCTION     0.00     0.00   100.27     0  00:00        0.00
   Node_963             JUNCTION     0.00     0.00   100.21     0  00:00        0.00
   Node_11611154        JUNCTION     0.00     0.00   100.01     0  00:00        0.00
+  HW_966               JUNCTION     0.00     0.00   100.82     0  00:00        0.00
   Node_968             JUNCTION     0.00     0.00   100.69     0  00:00        0.00
   Node_11651167        JUNCTION     0.00     0.00   100.56     0  00:00        0.00
   Node_970             JUNCTION     0.00     0.00   100.56     0  00:00        0.00
   Node_11671169        JUNCTION     0.00     0.00   100.48     0  00:00        0.00
+  HW_971               JUNCTION     0.00     0.00   100.48     0  00:00        0.00
+  HW_974               JUNCTION     0.00     0.00    99.04     0  00:00        0.00
+  HW_976               JUNCTION     0.00     0.00    98.62     0  00:00        0.00
   Node_977             JUNCTION     0.00     0.00    98.31     0  00:00        0.00
   Node_11751093        JUNCTION     0.00     0.00    98.28     0  00:00        0.00
+  HW_980               JUNCTION     0.00     0.00    97.06     0  00:00        0.00
+  HW_982               JUNCTION     0.00     0.00    97.10     0  00:00        0.00
+  HW_RM-WW10           JUNCTION     0.00     0.00    94.50     0  00:00        0.00
+  Node_11791164        JUNCTION     0.00     0.00   100.82     0  00:00        0.00
+  HW_987               JUNCTION     0.00     0.00    98.04     0  00:00        0.00
   Node_989             JUNCTION     0.00     0.00    97.85     0  00:00        0.00
   Node_11861188        JUNCTION     0.00     0.00    97.28     0  00:00        0.00
+  HW_990               JUNCTION     0.00     0.00    97.28     0  00:00        0.00
   Node_993             JUNCTION     0.00     0.00    98.68     0  00:00        0.00
   Node_11911192        JUNCTION     0.00     0.00    98.36     0  00:00        0.00
+  HW_994               JUNCTION     0.00     0.00    98.34     0  00:00        0.00
   Node_996             JUNCTION     0.00     0.00    99.28     0  00:00        0.00
   Node_11951191        JUNCTION     0.00     0.00    98.68     0  00:00        0.00
   Node_999             JUNCTION     0.00     0.00   100.52     0  00:00        0.00
   Node_11971198        JUNCTION     0.00     0.00    99.41     0  00:00        0.00
   Node_1000            JUNCTION     0.00     0.00    99.41     0  00:00        0.00
   Node_11981195        JUNCTION     0.00     0.00    99.28     0  00:00        0.00
+  HW_1003              JUNCTION     0.00     0.00   108.74     0  00:00        0.00
   Node_1004            JUNCTION     0.00     0.00   106.09     0  00:00        0.00
   Node_12021197        JUNCTION     0.00     0.00   100.52     0  00:00        0.00
   Node_1007            JUNCTION     0.00     0.00   113.67     0  00:00        0.00
   Node_12051206        JUNCTION     0.00     0.00   113.64     0  00:00        0.00
+  HW_1008              JUNCTION     0.00     0.00   113.34     0  00:00        0.00
   Node_1011            JUNCTION     0.00     0.00    98.10     0  00:00        0.00
   Node_12091210        JUNCTION     0.00     0.00    97.73     0  00:00        0.00
   Node_1012            JUNCTION     0.00     0.00    97.27     0  00:00        0.00
   Node_12101181        JUNCTION     0.00     0.00    97.10     0  00:00        0.00
+  HW_1014              JUNCTION     0.00     0.00    98.33     0  00:00        0.00
+  HW_1017              JUNCTION     0.00     0.00    98.97     0  00:00        0.00
   Node_1019            JUNCTION     0.00     0.00    98.83     0  00:00        0.00
   Node_12161218        JUNCTION     0.00     0.00    98.61     0  00:00        0.00
   Node_1020            JUNCTION     0.00     0.00    98.61     0  00:00        0.00
   Node_12181213        JUNCTION     0.00     0.00    98.33     0  00:00        0.00
   Node_1023            JUNCTION     0.00     0.00    99.59     0  00:00        0.00
   Node_12211222        JUNCTION     0.00     0.00    99.49     0  00:00        0.00
+  HW_1025              JUNCTION     0.00     0.00    99.49     0  00:00        0.00
+  HW_1026              JUNCTION     0.00     0.00    99.08     0  00:00        0.00
+  HW_1029              JUNCTION     0.00     0.00   100.37     0  00:00        0.00
   Node_1031            JUNCTION     0.00     0.00   100.14     0  00:00        0.00
   Node_12281230        JUNCTION     0.00     0.00    99.95     0  00:00        0.00
+  HW_1032              JUNCTION     0.00     0.00    99.95     0  00:00        0.00
+  HW_1034              JUNCTION     0.00     0.00   101.05     0  00:00        0.00
   Node_1037            JUNCTION     0.00     0.00   100.58     0  00:00        0.00
   Node_12351236        JUNCTION     0.00     0.00   100.44     0  00:00        0.00
   Node_1038            JUNCTION     0.00     0.00   100.44     0  00:00        0.00
   Node_12361221        JUNCTION     0.00     0.00    99.63     0  00:00        0.00
   Node_1041            JUNCTION     0.00     0.00    99.92     0  00:00        0.00
   Node_12391240        JUNCTION     0.00     0.00    99.88     0  00:00        0.00
+  HW_RM-WW14B          JUNCTION     0.00     0.00    98.61     0  00:00        0.00
+  Node_12401205        JUNCTION     0.00     0.00   113.67     0  00:00        0.00
+  HW_1045              JUNCTION     0.00     0.00   100.49     0  00:00        0.00
   Node_1047            JUNCTION     0.00     0.00   100.38     0  00:00        0.00
   Node_12441246        JUNCTION     0.00     0.00   100.22     0  00:00        0.00
+  HW_1048              JUNCTION     0.00     0.00   100.22     0  00:00        0.00
+  HW_1051              JUNCTION     0.00     0.00   106.93     0  00:00        0.00
+  HW_1052              JUNCTION     0.00     0.00   104.29     0  00:00        0.00
   Node_1055            JUNCTION     0.00     0.00   108.80     0  00:00        0.00
   Node_12531254        JUNCTION     0.00     0.00   108.56     0  00:00        0.00
+  HW_1057              JUNCTION     0.00     0.00   108.56     0  00:00        0.00
+  HW_1058              JUNCTION     0.00     0.00   108.45     0  00:00        0.00
   Node_1061            JUNCTION     0.00     0.00   112.29     0  00:00        0.00
   Node_12591260        JUNCTION     0.00     0.00   112.06     0  00:00        0.00
   Node_1063            JUNCTION     0.00     0.00   112.06     0  00:00        0.00
   Node_12601262        JUNCTION     0.00     0.00   110.38     0  00:00        0.00
+  HW_1064              JUNCTION     0.00     0.00   110.38     0  00:00        0.00
+  HW_1066              JUNCTION     0.00     0.00   113.48     0  00:00        0.00
   Node_1071            JUNCTION     0.00     0.00   100.13     0  00:00        0.00
   Node_12681270        JUNCTION     0.00     0.00    99.84     0  00:00        0.00
+  HW_1073              JUNCTION     0.00     0.00    99.84     0  00:00        0.00
   Node_1074            JUNCTION     0.00     0.00    97.50     0  00:00        0.00
   Node_12721265        JUNCTION     0.00     0.00   113.48     0  00:00        0.00
   Node_76              JUNCTION     0.00     0.00    97.08     0  00:00        0.00
   Node_1275940         JUNCTION     0.00     0.00    96.96     0  00:00        0.00
+  HW_1079              JUNCTION     0.00     0.00    97.55     0  00:00        0.00
   Node_1080            JUNCTION     0.00     0.00    97.38     0  00:00        0.00
   Node_12781039        JUNCTION     0.00     0.00    97.05     0  00:00        0.00
+  HW_1081              JUNCTION     0.00     0.00   100.40     0  00:00        0.00
   CM                   OUTFALL      0.00     0.00   120.00     0  00:00        0.00
   WB3                  STORAGE      1.80     1.80   102.80     0  00:00        1.80
   WB2                  STORAGE      1.60     1.60   102.95     0  00:00        1.60
@@ -746,7 +831,7 @@
   JU1                  JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
   JU6                  JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
   JU5                  JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
-  CJ1                  JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
+  CJ1                  JUNCTION     0.001    0.001     0  00:00      0.0708      0.0708   70840.290 ltr
   CJ3                  JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
   CJ2                  JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
   CJ7                  JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
@@ -764,7 +849,7 @@
   CL1                  JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
   CS1                  JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
   CA2                  JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
-  CA1                  JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
+  CA1                  JUNCTION     0.001    0.001     0  00:00      0.0708      0.0708   70840.290 ltr
   CA5                  JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
   CA4                  JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
   CA3                  JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
@@ -776,7 +861,7 @@
   CF6                  JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
   CF5                  JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
   CF4                  JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
-  AT1                  JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
+  AT1                  JUNCTION     0.001    0.001     0  00:00      0.0708      0.0708   70840.290 ltr
   AT2                  JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
   CX1                  JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
   FU1                  JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
@@ -937,12 +1022,22 @@
   FB1                  JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
   Node_804             JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
   Node_10011003        JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
+  HW_806               JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
+  HW_07                JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
+  Node_1005994         JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
+  HW_810               JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
+  HW_12                JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
+  Node_1009997         JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
+  HW_815               JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
   Node_816             JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
   Node_10141008        JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
+  HW_819               JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
   Node_820             JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
   Node_10181013        JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
   Node_823             JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
   Node_10211022        JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
+  HW_RM-WW5            JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
+  Node_1022894         JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
   Node_827             JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
   Node_10251026        JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
   Node_828             JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
@@ -953,24 +1048,36 @@
   Node_10301032        JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
   Node_835             JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
   Node_10321034        JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
+  HW_837               JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
+  HW_838               JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
   Node_841             JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
   Node_10391040        JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
+  HW_842               JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
+  HW_844               JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
+  HW_847               JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
   Node_849             JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
   Node_10461048        JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
+  HW_850               JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
   Node_853             JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
   Node_10511052        JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
+  HW_855               JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
+  HW_856               JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
   Node_859             JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
   Node_10571058        JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
+  HW_861               JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
   Node_863             JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
   Node_10601062        JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
   Node_865             JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
   Node_10621064        JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
+  HW_868               JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
   Node_870             JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
   Node_10671069        JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
   Node_871             JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
   Node_10691062        JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
   Node_874             JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
   Node_10721073        JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
+  HW_875               JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
+  HW_878               JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
   Node_880             JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
   Node_10771079        JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
   Node_882             JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
@@ -981,98 +1088,151 @@
   Node_1064837         JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
   Node_887             JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
   Node_10851086        JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
+  HW_889               JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
   Node_892             JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
   Node_10901091        JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
+  HW_894               JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
+  HW_896               JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
+  HW_899               JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
   Node_901             JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
   Node_10981100        JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
   Node_903             JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
   Node_11001102        JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
   Node_905             JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
   Node_11021104        JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
+  HW_906               JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
   Node_909             JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
   Node_11071108        JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
+  HW_911               JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
   Node_912             JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
   Node_11101097        JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
+  HW_RM-WW9            JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
+  HW_RM-WW8            JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
+  Node_1095844         JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
   Node_917             JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
   Node_11151116        JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
+  HW_919               JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
   Node_921             JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
   Node_11181120        JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
+  HW_922               JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
+  HW_925               JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
+  HW_927               JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
   Node_928             JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
   Node_11261115        JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
+  HW_931               JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
   Node_932             JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
   Node_11301123        JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
+  HW_935               JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
   Node_937             JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
   Node_11341136        JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
   Node_939             JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
   Node_11361138        JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
+  HW_940               JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
   Node_943             JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
   Node_11411142        JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
   Node_945             JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
   Node_11421144        JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
+  HW_946               JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
+  HW_949               JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
   Node_951             JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
   Node_11481150        JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
   Node_952             JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
   Node_11501141        JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
   Node_956             JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
   Node_11541155        JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
+  HW_957               JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
   Node_960             JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
   Node_11581159        JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
+  HW_962               JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
   Node_963             JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
   Node_11611154        JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
+  HW_966               JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
   Node_968             JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
   Node_11651167        JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
   Node_970             JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
   Node_11671169        JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
+  HW_971               JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
+  HW_974               JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
+  HW_976               JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
   Node_977             JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
   Node_11751093        JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
+  HW_980               JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
+  HW_982               JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
+  HW_RM-WW10           JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
+  Node_11791164        JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
+  HW_987               JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
   Node_989             JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
   Node_11861188        JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
+  HW_990               JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
   Node_993             JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
   Node_11911192        JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
+  HW_994               JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
   Node_996             JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
   Node_11951191        JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
   Node_999             JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
   Node_11971198        JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
   Node_1000            JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
   Node_11981195        JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
+  HW_1003              JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
   Node_1004            JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
   Node_12021197        JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
   Node_1007            JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
   Node_12051206        JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
+  HW_1008              JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
   Node_1011            JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
   Node_12091210        JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
   Node_1012            JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
   Node_12101181        JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
+  HW_1014              JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
+  HW_1017              JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
   Node_1019            JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
   Node_12161218        JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
   Node_1020            JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
   Node_12181213        JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
   Node_1023            JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
   Node_12211222        JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
+  HW_1025              JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
+  HW_1026              JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
+  HW_1029              JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
   Node_1031            JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
   Node_12281230        JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
+  HW_1032              JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
+  HW_1034              JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
   Node_1037            JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
   Node_12351236        JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
   Node_1038            JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
   Node_12361221        JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
   Node_1041            JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
   Node_12391240        JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
+  HW_RM-WW14B          JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
+  Node_12401205        JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
+  HW_1045              JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
   Node_1047            JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
   Node_12441246        JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
+  HW_1048              JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
+  HW_1051              JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
+  HW_1052              JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
   Node_1055            JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
   Node_12531254        JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
+  HW_1057              JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
+  HW_1058              JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
   Node_1061            JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
   Node_12591260        JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
   Node_1063            JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
   Node_12601262        JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
+  HW_1064              JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
+  HW_1066              JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
   Node_1071            JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
   Node_12681270        JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
+  HW_1073              JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
   Node_1074            JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
   Node_12721265        JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
   Node_76              JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
   Node_1275940         JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
+  HW_1079              JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
   Node_1080            JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
   Node_12781039        JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
+  HW_1081              JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
   CM                   OUTFALL      0.000    0.000     0  00:00           0           0       0.000 ltr
   WB3                  STORAGE      0.000    0.000     0  00:00           0      0.0103       0.000
   WB2                  STORAGE      0.000    0.000     0  00:00           0     0.00912       0.000
@@ -1110,44 +1270,25 @@
   Node                 Type      Surcharged         Meters       Meters
   ---------------------------------------------------------------------
   FW5                  JUNCTION       24.00          0.000        0.000
-  FW4                  JUNCTION       24.00          0.000        0.000
   FW3                  JUNCTION       24.00          0.000        0.000
-  FV4                  JUNCTION       24.00          0.000        0.000
   FV3                  JUNCTION       24.00          0.000        0.000
   FV7                  JUNCTION       24.00          0.000        0.000
-  FV5                  JUNCTION       24.00          0.000        0.000
-  FV9                  JUNCTION       24.00          0.000        0.000
   FV8                  JUNCTION       24.00          0.000        0.000
   EJ1                  JUNCTION       24.00          0.000        0.000
-  EJ5                  JUNCTION       24.00          0.000        0.000
-  EJ2                  JUNCTION       24.00          0.000        0.000
-  EJ10                 JUNCTION       24.00          0.000        0.000
   EJ9                  JUNCTION       24.00          0.000        0.000
-  EJ8                  JUNCTION       24.00          0.000        0.000
-  EJ7                  JUNCTION       24.00          0.000        0.000
   EJ6                  JUNCTION       24.00          0.000        0.000
   EY2                  JUNCTION       24.00          0.000        0.000
   EY1                  JUNCTION       24.00          0.000        0.000
   EY5                  JUNCTION       24.00          0.000        0.000
-  FA4                  JUNCTION       24.00          0.000        0.000
   FA2                  JUNCTION       24.00          0.000        0.000
-  FA1                  JUNCTION       24.00          0.000        0.000
-  FA8                  JUNCTION       24.00          0.000        0.000
-  FA7                  JUNCTION       24.00          0.000        0.000
   FA6                  JUNCTION       24.00          0.000        0.000
-  HJ4                  JUNCTION       24.00          0.000        0.000
-  HJ2                  JUNCTION       24.00          0.000        0.000
   HJ1                  JUNCTION       24.00          0.000        0.000
   GX1                  JUNCTION       24.00          0.000        0.000
-  GW2                  JUNCTION       24.00          0.000        0.000
   GW1                  JUNCTION       24.00          0.000        0.000
   GX2                  JUNCTION       24.00          0.000        0.000
   GX5                  JUNCTION       24.00          0.000        0.000
-  GX3A                 JUNCTION       24.00          0.000        0.000
   GX10                 JUNCTION       24.00          0.000        0.000
   GX8                  JUNCTION       24.00          0.000        0.000
-  GX7                  JUNCTION       24.00          0.000        0.000
-  GX6                  JUNCTION       24.00          0.000        0.000
   MR1                  JUNCTION       24.00          0.000        0.000
   MR1A                 JUNCTION       24.00          0.000        0.000
   HU2                  JUNCTION       24.00          0.000        0.000
@@ -1240,8 +1381,17 @@
   AG1                  JUNCTION       24.00          0.000        0.000
   FB2                  JUNCTION       24.00          0.000        0.000
   FB1                  JUNCTION       24.00          0.000        0.000
+  HW_RM-WW5            JUNCTION       24.00          0.000        0.000
+  Node_1022894         JUNCTION       24.00          0.000        0.000
   Node_84              JUNCTION       24.00          0.000        0.000
   Node_1064837         JUNCTION       24.00          0.000        0.000
+  HW_RM-WW9            JUNCTION       24.00          0.000        0.000
+  HW_RM-WW8            JUNCTION       24.00          0.000        0.000
+  Node_1095844         JUNCTION       24.00          0.000        0.000
+  HW_RM-WW10           JUNCTION       24.00          0.000        0.000
+  Node_11791164        JUNCTION       24.00          0.000        0.000
+  HW_RM-WW14B          JUNCTION       24.00          0.000        0.000
+  Node_12401205        JUNCTION       24.00          0.000        0.000
   Node_1074            JUNCTION       24.00          0.000        0.000
   Node_12721265        JUNCTION       24.00          0.000        0.000
   
@@ -1517,7 +1667,13 @@
   798                  CONDUIT     0.000     0  00:00      0.00    0.00    0.00
   799                  CONDUIT     0.000     0  00:00      0.00    0.00    0.00
   804                  CONDUIT     0.000     0  00:00      0.00    0.00    0.00
+  806                  CONDUIT     0.000     0  00:00      0.00    0.00    0.00
+  07                   CONDUIT     0.000     0  00:00      0.00    0.00    0.00
+  810                  CONDUIT     0.000     0  00:00      0.00    0.00    0.00
+  12                   CONDUIT     0.000     0  00:00      0.00    0.00    0.00
+  815                  CONDUIT     0.000     0  00:00      0.00    0.00    0.00
   816                  CONDUIT     0.000     0  00:00      0.00    0.00    0.00
+  819                  CONDUIT     0.000     0  00:00      0.00    0.00    0.00
   820                  CONDUIT     0.000     0  00:00      0.00    0.00    0.00
   823                  CONDUIT     0.000     0  00:00      0.00    0.00    0.00
   827                  CONDUIT     0.000     0  00:00      0.00    0.00    0.00
@@ -1525,64 +1681,122 @@
   831                  CONDUIT     0.000     0  00:00      0.00    0.00    0.00
   833                  CONDUIT     0.000     0  00:00      0.00    0.00    0.00
   835                  CONDUIT     0.000     0  00:00      0.00    0.00    0.00
+  837                  CONDUIT     0.000     0  00:00      0.00    0.00    0.00
+  838                  CONDUIT     0.000     0  00:00      0.00    0.00    0.00
   841                  CONDUIT     0.000     0  00:00      0.00    0.00    0.00
+  842                  CONDUIT     0.000     0  00:00      0.00    0.00    0.00
+  844                  CONDUIT     0.000     0  00:00      0.00    0.00    0.00
+  847                  CONDUIT     0.000     0  00:00      0.00    0.00    0.00
   849                  CONDUIT     0.000     0  00:00      0.00    0.00    0.00
+  850                  CONDUIT     0.000     0  00:00      0.00    0.00    0.00
   853                  CONDUIT     0.000     0  00:00      0.00    0.00    0.00
+  855                  CONDUIT     0.000     0  00:00      0.00    0.00    0.00
+  856                  CONDUIT     0.000     0  00:00      0.00    0.00    0.00
   859                  CONDUIT     0.000     0  00:00      0.00    0.00    0.00
+  861                  CONDUIT     0.000     0  00:00      0.00    0.00    0.00
   863                  CONDUIT     0.000     0  00:00      0.00    0.00    0.00
   865                  CONDUIT     0.000     0  00:00      0.00    0.00    0.00
+  868                  CONDUIT     0.000     0  00:00      0.00    0.00    0.00
   870                  CONDUIT     0.000     0  00:00      0.00    0.00    0.00
   871                  CONDUIT     0.000     0  00:00      0.00    0.00    0.00
   874                  CONDUIT     0.000     0  00:00      0.00    0.00    0.00
+  875                  CONDUIT     0.000     0  00:00      0.00    0.00    0.00
+  878                  CONDUIT     0.000     0  00:00      0.00    0.00    0.00
   880                  CONDUIT     0.000     0  00:00      0.00    0.00    0.00
   882                  CONDUIT     0.000     0  00:00      0.00    0.00    0.00
   883                  CONDUIT     0.000     0  00:00      0.00    0.00    0.00
   887                  CONDUIT     0.000     0  00:00      0.00    0.00    0.00
+  889                  CONDUIT     0.000     0  00:00      0.00    0.00    0.00
   892                  CONDUIT     0.000     0  00:00      0.00    0.00    0.00
+  894                  CONDUIT     0.000     0  00:00      0.00    0.00    0.00
+  896                  CONDUIT     0.000     0  00:00      0.00    0.00    0.00
+  899                  CONDUIT     0.000     0  00:00      0.00    0.00    0.00
   901                  CONDUIT     0.000     0  00:00      0.00    0.00    0.00
   903                  CONDUIT     0.000     0  00:00      0.00    0.00    0.00
   905                  CONDUIT     0.000     0  00:00      0.00    0.00    0.00
+  906                  CONDUIT     0.000     0  00:00      0.00    0.00    0.00
   909                  CONDUIT     0.000     0  00:00      0.00    0.00    0.00
+  911                  CONDUIT     0.000     0  00:00      0.00    0.00    0.00
   912                  CONDUIT     0.000     0  00:00      0.00    0.00    0.00
   917                  CONDUIT     0.000     0  00:00      0.00    0.00    0.00
+  919                  CONDUIT     0.000     0  00:00      0.00    0.00    0.00
   921                  CONDUIT     0.000     0  00:00      0.00    0.00    0.00
+  922                  CONDUIT     0.000     0  00:00      0.00    0.00    0.00
+  925                  CONDUIT     0.000     0  00:00      0.00    0.00    0.00
+  927                  CONDUIT     0.000     0  00:00      0.00    0.00    0.00
   928                  CONDUIT     0.000     0  00:00      0.00    0.00    0.00
+  931                  CONDUIT     0.000     0  00:00      0.00    0.00    0.00
   932                  CONDUIT     0.000     0  00:00      0.00    0.00    0.00
+  935                  CONDUIT     0.000     0  00:00      0.00    0.00    0.00
   937                  CONDUIT     0.000     0  00:00      0.00    0.00    0.00
   939                  CONDUIT     0.000     0  00:00      0.00    0.00    0.00
+  940                  CONDUIT     0.000     0  00:00      0.00    0.00    0.00
   943                  CONDUIT     0.000     0  00:00      0.00    0.00    0.00
   945                  CONDUIT     0.000     0  00:00      0.00    0.00    0.00
+  946                  CONDUIT     0.000     0  00:00      0.00    0.00    0.00
+  949                  CONDUIT     0.000     0  00:00      0.00    0.00    0.00
   951                  CONDUIT     0.000     0  00:00      0.00    0.00    0.00
   952                  CONDUIT     0.000     0  00:00      0.00    0.00    0.00
   956                  CONDUIT     0.000     0  00:00      0.00    0.00    0.00
+  957                  CONDUIT     0.000     0  00:00      0.00    0.00    0.00
   960                  CONDUIT     0.000     0  00:00      0.00    0.00    0.00
+  962                  CONDUIT     0.000     0  00:00      0.00    0.00    0.00
   963                  CONDUIT     0.000     0  00:00      0.00    0.00    0.00
+  966                  CONDUIT     0.000     0  00:00      0.00    0.00    0.00
   968                  CONDUIT     0.000     0  00:00      0.00    0.00    0.00
   970                  CONDUIT     0.000     0  00:00      0.00    0.00    0.00
+  971                  CONDUIT     0.000     0  00:00      0.00    0.00    0.00
+  974                  CONDUIT     0.000     0  00:00      0.00    0.00    0.00
+  976                  CONDUIT     0.000     0  00:00      0.00    0.00    0.00
   977                  CONDUIT     0.000     0  00:00      0.00    0.00    0.00
+  980                  CONDUIT     0.000     0  00:00      0.00    0.00    0.00
+  982                  CONDUIT     0.000     0  00:00      0.00    0.00    0.00
+  987                  CONDUIT     0.000     0  00:00      0.00    0.00    0.00
   989                  CONDUIT     0.000     0  00:00      0.00    0.00    0.00
+  990                  CONDUIT     0.000     0  00:00      0.00    0.00    0.00
   993                  CONDUIT     0.000     0  00:00      0.00    0.00    0.00
+  994                  CONDUIT     0.000     0  00:00      0.00    0.00    0.00
   996                  CONDUIT     0.000     0  00:00      0.00    0.00    0.00
   999                  CONDUIT     0.000     0  00:00      0.00    0.00    0.00
   1000                 CONDUIT     0.000     0  00:00      0.00    0.00    0.00
+  1003                 CONDUIT     0.000     0  00:00      0.00    0.00    0.00
   1004                 CONDUIT     0.000     0  00:00      0.00    0.00    0.00
   1007                 CONDUIT     0.000     0  00:00      0.00    0.00    0.00
+  1008                 CONDUIT     0.000     0  00:00      0.00    0.00    0.00
   1011                 CONDUIT     0.000     0  00:00      0.00    0.00    0.00
   1012                 CONDUIT     0.000     0  00:00      0.00    0.00    0.00
+  1014                 CONDUIT     0.000     0  00:00      0.00    0.00    0.00
+  1017                 CONDUIT     0.000     0  00:00      0.00    0.00    0.00
   1019                 CONDUIT     0.000     0  00:00      0.00    0.00    0.00
   1020                 CONDUIT     0.000     0  00:00      0.00    0.00    0.00
   1023                 CONDUIT     0.000     0  00:00      0.00    0.00    0.00
+  1025                 CONDUIT     0.000     0  00:00      0.00    0.00    0.00
+  1026                 CONDUIT     0.000     0  00:00      0.00    0.00    0.00
+  1029                 CONDUIT     0.000     0  00:00      0.00    0.00    0.00
   1031                 CONDUIT     0.000     0  00:00      0.00    0.00    0.00
+  1032                 CONDUIT     0.000     0  00:00      0.00    0.00    0.00
+  1034                 CONDUIT     0.000     0  00:00      0.00    0.00    0.00
   1037                 CONDUIT     0.000     0  00:00      0.00    0.00    0.00
   1038                 CONDUIT     0.000     0  00:00      0.00    0.00    0.00
   1041                 CONDUIT     0.000     0  00:00      0.00    0.00    0.00
+  1045                 CONDUIT     0.000     0  00:00      0.00    0.00    0.00
   1047                 CONDUIT     0.000     0  00:00      0.00    0.00    0.00
+  1048                 CONDUIT     0.000     0  00:00      0.00    0.00    0.00
+  1051                 CONDUIT     0.000     0  00:00      0.00    0.00    0.00
+  1052                 CONDUIT     0.000     0  00:00      0.00    0.00    0.00
   1055                 CONDUIT     0.000     0  00:00      0.00    0.00    0.00
+  1057                 CONDUIT     0.000     0  00:00      0.00    0.00    0.00
+  1058                 CONDUIT     0.000     0  00:00      0.00    0.00    0.00
   1061                 CONDUIT     0.000     0  00:00      0.00    0.00    0.00
   1063                 CONDUIT     0.000     0  00:00      0.00    0.00    0.00
+  1064                 CONDUIT     0.000     0  00:00      0.00    0.00    0.00
+  1066                 CONDUIT     0.000     0  00:00      0.00    0.00    0.00
   1071                 CONDUIT     0.000     0  00:00      0.00    0.00    0.00
+  1073                 CONDUIT     0.000     0  00:00      0.00    0.00    0.00
   076                  CONDUIT     0.000     0  00:00      0.00    0.00    0.00
+  1079                 CONDUIT     0.000     0  00:00      0.00    0.00    0.00
   1080                 CONDUIT     0.000     0  00:00      0.00    0.00    0.00
+  1081                 CONDUIT     0.000     0  00:00      0.00    0.00    0.00
   RM-WB3               PUMP        0.000     0  00:00              0.00
   RM-WB2               PUMP        0.000     0  00:00              0.00
   RMWB1                PUMP        0.000     0  00:00              0.00
@@ -1594,7 +1808,12 @@
   RM-WW1               PUMP        0.000     0  00:00              0.00
   RM-WW6               PUMP        0.000     0  00:00              0.00
   RM-WW4               PUMP        0.000     0  00:00              0.00
+  RM-WW5               PUMP        0.000     0  00:00              0.00
   RM-WW7               PUMP        0.000     0  00:00              0.00
+  RM-WW9               PUMP        0.000     0  00:00              0.00
+  RM-WW8               PUMP        0.000     0  00:00              0.00
+  RM-WW10              PUMP        0.000     0  00:00              0.00
+  RM-WW14B             PUMP        0.000     0  00:00              0.00
   RM-WW14A             PUMP        0.000     0  00:00              0.00
   RM-WW13C             PUMP        0.000     0  00:00              0.00
   
@@ -1815,7 +2034,13 @@
   798                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
   799                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
   804                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  806                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  07                      1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  810                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  12                      1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  815                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
   816                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  819                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
   820                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
   823                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
   827                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
@@ -1823,64 +2048,122 @@
   831                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
   833                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
   835                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  837                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  838                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
   841                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  842                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  844                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  847                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
   849                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  850                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
   853                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  855                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  856                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
   859                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  861                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
   863                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
   865                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  868                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
   870                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
   871                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
   874                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  875                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  878                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
   880                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
   882                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
   883                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
   887                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  889                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
   892                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  894                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  896                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  899                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
   901                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
   903                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
   905                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  906                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
   909                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  911                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
   912                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
   917                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  919                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
   921                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  922                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  925                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  927                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
   928                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  931                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
   932                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  935                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
   937                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
   939                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  940                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
   943                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
   945                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  946                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  949                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
   951                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
   952                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
   956                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  957                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
   960                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  962                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
   963                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  966                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
   968                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
   970                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  971                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  974                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  976                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
   977                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  980                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  982                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  987                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
   989                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  990                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
   993                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  994                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
   996                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
   999                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
   1000                    1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  1003                    1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
   1004                    1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
   1007                    1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  1008                    1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
   1011                    1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
   1012                    1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  1014                    1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  1017                    1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
   1019                    1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
   1020                    1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
   1023                    1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  1025                    1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  1026                    1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  1029                    1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
   1031                    1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  1032                    1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  1034                    1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
   1037                    1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
   1038                    1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
   1041                    1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  1045                    1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
   1047                    1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  1048                    1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  1051                    1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  1052                    1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
   1055                    1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  1057                    1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  1058                    1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
   1061                    1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
   1063                    1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  1064                    1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  1066                    1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
   1071                    1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  1073                    1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
   076                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  1079                    1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
   1080                    1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  1081                    1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
   
   
   *************************
@@ -1910,11 +2193,16 @@
   RM-WW1                   0.00           0      0.00      0.00      0.00     0.000      0.00    0.0    0.0
   RM-WW6                   0.00           0      0.00      0.00      0.00     0.000      0.00    0.0    0.0
   RM-WW4                   0.00           0      0.00      0.00      0.00     0.000      0.00    0.0    0.0
+  RM-WW5                   0.00           0      0.00      0.00      0.00     0.000      0.00    0.0    0.0
   RM-WW7                   0.00           0      0.00      0.00      0.00     0.000      0.00    0.0    0.0
+  RM-WW9                   0.00           0      0.00      0.00      0.00     0.000      0.00    0.0    0.0
+  RM-WW8                   0.00           0      0.00      0.00      0.00     0.000      0.00    0.0    0.0
+  RM-WW10                  0.00           0      0.00      0.00      0.00     0.000      0.00    0.0    0.0
+  RM-WW14B                 0.00           0      0.00      0.00      0.00     0.000      0.00    0.0    0.0
   RM-WW14A                 0.00           0      0.00      0.00      0.00     0.000      0.00    0.0    0.0
   RM-WW13C                 0.00           0      0.00      0.00      0.00     0.000      0.00    0.0    0.0
   
 
-  Analysis begun on:  Sun Jul 19 15:25:08 2026
-  Analysis ended on:  Sun Jul 19 15:25:09 2026
+  Analysis begun on:  Wed Jul 22 14:27:49 2026
+  Analysis ended on:  Wed Jul 22 14:27:50 2026
   Total elapsed time: 00:00:01

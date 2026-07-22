@@ -39,14 +39,20 @@
   Wet Weather Inflow .......         0.000         0.000
   Groundwater Inflow .......         0.000         0.000
   RDII Inflow ..............         0.000         0.000
-  External Inflow ..........         0.000         0.000
-  External Outflow .........         0.000         0.000
+  External Inflow ..........         1.983         0.646
+  External Outflow .........        30.000         9.776
   Flooding Loss ............         0.000         0.000
   Evaporation Loss .........         0.000         0.000
   Exfiltration Loss ........         0.000         0.000
   Initial Stored Volume ....         0.101         0.033
   Final Stored Volume ......         0.101         0.033
-  Continuity Error (%) .....         0.000
+  Continuity Error (%) .....     -1344.091
+  
+  
+  *************************
+  Highest Continuity Errors
+  *************************
+  Node CB (-1412.55%)
   
   
   ***************************
@@ -58,7 +64,7 @@
   ********************************
   Highest Flow Instability Indexes
   ********************************
-  All links are stable.
+  Link C_OUT_SYNTH (150)
   
   
   *********************************
@@ -74,8 +80,8 @@
   Average Time Step           :    59.96 sec
   Maximum Time Step           :    60.00 sec
   % of Time in Steady State   :     0.00
-  Average Iterations per Step :     2.00
-  % of Steps Not Converging   :     0.00
+  Average Iterations per Step :    25.98
+  % of Steps Not Converging   :    49.97
   Time Step Frequencies       :
      60.000 - 23.031 sec      :   100.00 %
      23.031 -  8.841 sec      :     0.00 %
@@ -93,7 +99,7 @@
                                    Depth    Depth      HGL   Occurrence   Max Depth
   Node                 Type         Feet     Feet     Feet  days hr:min        Feet
   ---------------------------------------------------------------------------------
-  CB                   JUNCTION     0.00     0.00    19.00     0  00:00        0.00
+  CB                   JUNCTION     0.00     0.02    19.02     0  00:00        0.00
   CB_2                 JUNCTION     0.00     0.00    18.94     0  00:00        0.00
   CB_3                 JUNCTION     0.00     0.00    18.94     0  00:00        0.00
   CB_4                 JUNCTION     0.00     0.00    19.00     0  00:00        0.00
@@ -115,7 +121,8 @@
   CB_14                JUNCTION     0.00     0.00    18.94     0  00:00        0.00
   CB_15                JUNCTION     0.00     0.00    19.53     0  00:00        0.00
   CB_16                JUNCTION     0.00     0.00    18.94     0  00:00        0.00
-  OF_2                 OUTFALL      0.00     0.00    18.99     0  00:00        0.00
+  OF_2                 JUNCTION     0.00     0.00    18.99     0  00:00        0.00
+  OUT_SYNTH            OUTFALL      0.58     1.18    19.18     0  00:01        1.16
   DA                   STORAGE      0.00     0.00    20.00     0  00:00        0.00
   Wetland              STORAGE      0.80     0.80    20.80     0  00:00        0.80
   DA_2                 STORAGE      0.00     0.00    20.00     0  00:00        0.00
@@ -135,7 +142,7 @@
                                    Inflow   Inflow   Occurrence      Volume      Volume       Error
   Node                 Type           CFS      CFS  days hr:min    10^6 gal    10^6 gal     Percent
   -------------------------------------------------------------------------------------------------
-  CB                   JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  CB                   JUNCTION      1.00     1.00     0  00:00       0.646       0.646     -93.389
   CB_2                 JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
   CB_3                 JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
   CB_4                 JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
@@ -157,7 +164,8 @@
   CB_14                JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
   CB_15                JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
   CB_16                JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
-  OF_2                 OUTFALL       0.00     0.00     0  00:00           0           0       0.000 gal
+  OF_2                 JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  OUT_SYNTH            OUTFALL       0.00    30.65     0  00:01           0        9.78       0.000
   DA                   STORAGE       0.00     0.00     0  00:00           0           0       0.000 gal
   Wetland              STORAGE       0.00     0.00     0  00:00           0     0.00598       0.000
   DA_2                 STORAGE       0.00     0.00     0  00:00           0           0       0.000 gal
@@ -196,6 +204,7 @@
   CB_14                JUNCTION       24.00          0.000        0.000
   CB_15                JUNCTION       24.00          0.000        0.000
   CB_16                JUNCTION       24.00          0.000        0.000
+  OF_2                 JUNCTION       24.00          0.000        0.000
   
   
   *********************
@@ -232,9 +241,9 @@
                          Freq      Flow      Flow      Volume
   Outfall Node           Pcnt       CFS       CFS    10^6 gal
   -----------------------------------------------------------
-  OF_2                   0.00      0.00      0.00       0.000
+  OUT_SYNTH             49.97     30.25     30.65       9.775
   -----------------------------------------------------------
-  System                 0.00      0.00      0.00       0.000
+  System                49.97     30.25     30.65       9.775
   
   
   ********************
@@ -272,6 +281,7 @@
   1-32-24"             CONDUIT      0.00     0  00:00      0.00    0.00    0.00
   6-32-18"             CONDUIT      0.00     0  00:00      0.00    0.00    0.00
   51-15"               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  C_OUT_SYNTH          CONDUIT     30.65     0  00:01     38.87    0.32    0.17
   Control_1            ORIFICE      0.00     0  00:00                      0.00
   Control_2            ORIFICE      0.00     0  00:00                      0.00
   
@@ -311,6 +321,7 @@
   1-32-24"                1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
   6-32-18"                1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
   51-15"                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  C_OUT_SYNTH             1.00   0.50  0.00  0.00  0.50  0.00  0.00  0.00  0.50  0.00
   
   
   *************************
@@ -320,6 +331,6 @@
   No conduits were surcharged.
   
 
-  Analysis begun on:  Sun Jul 19 15:09:45 2026
-  Analysis ended on:  Sun Jul 19 15:09:45 2026
+  Analysis begun on:  Wed Jul 22 11:28:08 2026
+  Analysis ended on:  Wed Jul 22 11:28:08 2026
   Total elapsed time: < 1 sec

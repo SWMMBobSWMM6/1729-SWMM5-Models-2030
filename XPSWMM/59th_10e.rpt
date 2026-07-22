@@ -36,43 +36,56 @@
   Wet Weather Inflow .......         0.000         0.000
   Groundwater Inflow .......         0.000         0.000
   RDII Inflow ..............         0.000         0.000
-  External Inflow ..........         0.000         0.000
-  External Outflow .........         0.000         0.000
-  Flooding Loss ............         0.000         0.000
+  External Inflow ..........         3.967         1.293
+  External Outflow .........         1.246         0.406
+  Flooding Loss ............         0.165         0.054
   Evaporation Loss .........         0.000         0.000
   Exfiltration Loss ........         0.000         0.000
   Initial Stored Volume ....         0.000         0.000
-  Final Stored Volume ......         0.000         0.000
-  Continuity Error (%) .....         0.000
+  Final Stored Volume ......         0.007         0.002
+  Continuity Error (%) .....        64.232
+  
+  
+  *************************
+  Highest Continuity Errors
+  *************************
+  Node 665 (100.00%)
+  Node 310O (64.93%)
+  Node 666 (16.46%)
+  Node 9000 (14.08%)
   
   
   ***************************
   Time-Step Critical Elements
   ***************************
-  None
+  Link 9000_666 (82.60%)
   
   
   ********************************
   Highest Flow Instability Indexes
   ********************************
-  All links are stable.
+  Link Orifice (66)
   
   
   *********************************
   Most Frequent Nonconverging Nodes
   *********************************
-  Convergence obtained at all time steps.
+  Node 696 (27.30%)
+  Node 310O (27.26%)
+  Node Weir (25.76%)
+  Node 312 (0.36%)
+  Node 9000 (0.02%)
   
   
   *************************
   Routing Time Step Summary
   *************************
-  Minimum Time Step           :    14.50 sec
-  Average Time Step           :    15.00 sec
+  Minimum Time Step           :     7.66 sec
+  Average Time Step           :    10.51 sec
   Maximum Time Step           :    15.00 sec
   % of Time in Steady State   :     0.00
-  Average Iterations per Step :     2.00
-  % of Steps Not Converging   :     0.00
+  Average Iterations per Step :    16.84
+  % of Steps Not Converging   :    27.30
   Time Step Frequencies       :
      15.000 -  7.597 sec      :   100.00 %
       7.597 -  3.848 sec      :     0.00 %
@@ -90,7 +103,7 @@
                                    Depth    Depth      HGL   Occurrence   Max Depth
   Node                 Type         Feet     Feet     Feet  days hr:min        Feet
   ---------------------------------------------------------------------------------
-  312                  JUNCTION     0.00     0.00   881.06     0  00:00        0.00
+  312                  JUNCTION    44.49   114.73   995.79     0  23:50      114.73
   650                  JUNCTION     0.00     0.00   874.88     0  00:00        0.00
   652                  JUNCTION     0.00     0.00   874.57     0  00:00        0.00
   654                  JUNCTION     0.00     0.00   865.43     0  00:00        0.00
@@ -99,12 +112,12 @@
   694                  JUNCTION     0.00     0.00   862.11     0  00:00        0.00
   695                  JUNCTION     0.00     0.00   858.87     0  00:00        0.00
   667                  JUNCTION     0.00     0.00   857.73     0  00:00        0.00
-  665                  JUNCTION     0.00     0.00   856.81     0  00:00        0.00
-  9000                 JUNCTION     0.00     0.00   858.00     0  00:00        0.00
-  666                  JUNCTION     0.00     0.00   855.46     0  00:00        0.00
-  796                  JUNCTION     0.00     0.00   859.23     0  00:00        0.00
-  310O                 JUNCTION     0.00     0.00   884.50     0  00:00        0.00
-  Weir                 JUNCTION     0.00     0.00   877.89     0  00:00        0.00
+  665                  JUNCTION     0.10     0.12   856.93     0  05:57        0.12
+  9000                 JUNCTION   738.39   849.39  1707.39     0  05:57      849.26
+  666                  JUNCTION   642.72   847.49  1702.95     0  09:38      847.49
+  796                  JUNCTION   818.69   856.11  1715.34     0  02:59      856.11
+  310O                 JUNCTION   755.58   875.51  1760.01     0  13:26      873.67
+  Weir                 JUNCTION   839.84   880.39  1758.28     0  06:31      880.27
   696                  OUTFALL      0.00     0.00   849.23     0  00:00        0.00
   310                  STORAGE      0.00     0.00   884.50     0  00:00        0.00
   
@@ -128,13 +141,13 @@
   694                  JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
   695                  JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
   667                  JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
-  665                  JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
-  9000                 JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
-  666                  JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
-  796                  JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
-  310O                 JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
-  Weir                 JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
-  696                  OUTFALL       0.00     0.00     0  00:00           0           0       0.000 gal
+  665                  JUNCTION      0.00     0.09     0  05:57           0    1.02e-05      10.211 gal
+  9000                 JUNCTION      0.00     1.15     0  03:00           0       0.566      16.382
+  666                  JUNCTION      0.00     2.29     0  05:57           0       0.486      19.704
+  796                  JUNCTION      1.00     1.00     0  00:00       0.646       0.646      14.224
+  310O                 JUNCTION      0.00    36.45     0  06:31           0        0.66     185.183
+  Weir                 JUNCTION      1.00    47.16     0  06:31       0.646       0.878      22.939
+  696                  OUTFALL       0.00     1.00     0  15:19           0       0.406       0.000
   310                  STORAGE       0.00     0.00     0  00:00           0           0       0.000 gal
   
   
@@ -142,14 +155,27 @@
   Node Surcharge Summary
   **********************
   
-  No nodes were surcharged.
+  Surcharging occurs when water rises above the top of the highest conduit.
+  ---------------------------------------------------------------------
+                                               Max. Height   Min. Depth
+                                   Hours       Above Crown    Below Rim
+  Node                 Type      Surcharged           Feet         Feet
+  ---------------------------------------------------------------------
+  Weir                 JUNCTION        0.32          0.000        0.000
   
   
   *********************
   Node Flooding Summary
   *********************
   
-  No nodes were flooded.
+  Flooding refers to all water that overflows a node, whether it ponds or not.
+  --------------------------------------------------------------------------
+                                                             Total   Maximum
+                                 Maximum   Time of Max       Flood    Ponded
+                        Hours       Rate    Occurrence      Volume     Depth
+  Node                 Flooded       CFS   days hr:min    10^6 gal      Feet
+  --------------------------------------------------------------------------
+  Weir                    0.32     14.97      0  06:31       0.054     0.000
   
   
   **********************
@@ -173,9 +199,9 @@
                          Freq      Flow      Flow      Volume
   Outfall Node           Pcnt       CFS       CFS    10^6 gal
   -----------------------------------------------------------
-  696                    0.00      0.00      0.00       0.000
+  696                   69.01      1.00      1.00       0.406
   -----------------------------------------------------------
-  System                 0.00      0.00      0.00       0.000
+  System                69.01      1.00      1.00       0.406
   
   
   ********************
@@ -196,12 +222,12 @@
   694_695              CONDUIT      0.00     0  00:00      0.00    0.00    0.00
   695_667              CONDUIT      0.00     0  00:00      0.00    0.00    0.00
   667_665              CONDUIT      0.00     0  00:00      0.00    0.00    0.00
-  665_9000             CONDUIT      0.00     0  00:00      0.00    0.00    0.00
-  9000_666             CONDUIT      0.00     0  00:00      0.00    0.00    0.00
-  666_696              CONDUIT      0.00     0  00:00      0.00    0.00    0.00
-  796_9000             CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  665_9000             CONDUIT      0.09     0  05:57      0.39    0.00    0.05
+  9000_666             CONDUIT      2.29     0  05:57      4.58    0.01    0.08
+  666_696              CONDUIT      1.00     0  15:19      2.43    0.01    0.06
+  796_9000             CONDUIT      1.15     0  03:00      4.71    0.08    0.19
   97                   CONDUIT      0.00     0  00:00      0.00    0.00    0.00
-  Orifice              ORIFICE      0.00     0  00:00                      0.00
+  Orifice              ORIFICE     46.16     0  06:31                      1.00
   
   
   ***************************
@@ -222,10 +248,10 @@
   694_695                 1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
   695_667                 1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
   667_665                 1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
-  665_9000                1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
-  9000_666                1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
-  666_696                 1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
-  796_9000                1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  665_9000                1.00   0.25  0.75  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  9000_666                1.00   0.25  0.00  0.00  0.00  0.63  0.00  0.13  0.63  0.00
+  666_696                 1.00   0.37  0.00  0.00  0.00  0.00  0.00  0.63  0.00  0.00
+  796_9000                1.00   0.12  0.00  0.00  0.00  0.00  0.00  0.88  0.00  0.00
   97                      1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
   
   
@@ -236,6 +262,6 @@
   No conduits were surcharged.
   
 
-  Analysis begun on:  Sun Jul 19 15:11:00 2026
-  Analysis ended on:  Sun Jul 19 15:11:00 2026
+  Analysis begun on:  Wed Jul 22 11:34:56 2026
+  Analysis ended on:  Wed Jul 22 11:34:56 2026
   Total elapsed time: < 1 sec

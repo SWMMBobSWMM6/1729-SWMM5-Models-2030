@@ -36,21 +36,21 @@
   Wet Weather Inflow .......         0.000         0.000
   Groundwater Inflow .......         0.000         0.000
   RDII Inflow ..............         0.000         0.000
-  External Inflow ..........         0.000         0.000
+  External Inflow ..........         1.983         0.646
   External Outflow .........         0.000         0.000
-  Flooding Loss ............         0.000         0.000
+  Flooding Loss ............         1.976         0.644
   Evaporation Loss .........         0.000         0.000
   Exfiltration Loss ........         0.000         0.000
   Initial Stored Volume ....         0.733         0.239
-  Final Stored Volume ......         0.765         0.249
-  Continuity Error (%) .....        -4.421
+  Final Stored Volume ......         0.774         0.252
+  Continuity Error (%) .....        -1.259
   
   
   *************************
   Highest Continuity Errors
   *************************
-  Node 21 (4.10%)
-  Node 27 (2.00%)
+  Node 21 (7.90%)
+  Node 27 (3.32%)
   
   
   ***************************
@@ -70,8 +70,8 @@
   Most Frequent Nonconverging Nodes
   *********************************
   Node 951 (0.01%)
+  Node 21 (0.01%)
   Node 27 (0.00%)
-  Node 21 (0.00%)
   
   
   *************************
@@ -103,11 +103,11 @@
   Junction             JUNCTION     0.00     0.00    15.00     0  00:00        0.00
   Wet                  JUNCTION     0.00     0.00    15.00     0  00:00        0.00
   Wet_2                JUNCTION     0.00     0.00    15.00     0  00:00        0.00
-  21                   JUNCTION     9.77    10.37    25.37     0  00:00        9.83
+  21                   JUNCTION    10.00    10.55    25.55     0  00:00       10.06
   24                   JUNCTION     0.00     0.00    18.00     0  00:00        0.00
-  27                   JUNCTION     9.77    11.74    26.74     0  00:00        9.85
+  27                   JUNCTION    10.00    11.74    26.74     0  00:00       10.04
   951                  OUTFALL      0.00     0.00    15.00     0  00:00        0.00
-  Basin                STORAGE      9.77    10.00    25.00     0  00:00        9.81
+  Basin                STORAGE     10.00    10.00    25.00     0  00:04       10.00
   Basin_2              STORAGE     10.00    10.00    25.00     0  00:00       10.00
   Basin_3              STORAGE     10.00    10.00    25.00     0  00:00       10.00
   
@@ -125,11 +125,11 @@
   Junction             JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
   Wet                  JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
   Wet_2                JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
-  21                   JUNCTION      0.00    13.69     0  00:00           0      0.0382       4.280
+  21                   JUNCTION      0.00    12.02     0  00:00           0      0.0255       8.578
   24                   JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
-  27                   JUNCTION      0.00    50.23     0  00:00           0       0.101       2.044
+  27                   JUNCTION      0.00    50.26     0  00:00           0       0.069       3.434
   951                  OUTFALL       0.00     0.00     0  00:00           0           0       0.000 gal
-  Basin                STORAGE       0.00    29.26     0  00:00           0        0.21      -0.885
+  Basin                STORAGE       1.00    30.11     0  00:00       0.646       0.811      -0.243
   Basin_2              STORAGE       0.00     0.00     0  00:00           0      0.0748       0.000
   Basin_3              STORAGE       0.00     0.00     0  00:00           0      0.0748       0.000
   
@@ -151,7 +151,14 @@
   Node Flooding Summary
   *********************
   
-  No nodes were flooded.
+  Flooding refers to all water that overflows a node, whether it ponds or not.
+  --------------------------------------------------------------------------
+                                                             Total   Maximum
+                                 Maximum   Time of Max       Flood    Ponded
+                        Hours       Rate    Occurrence      Volume     Depth
+  Node                 Flooded       CFS   days hr:min    10^6 gal      Feet
+  --------------------------------------------------------------------------
+  Basin                  23.55     12.89      0  00:06       0.644     0.000
   
   
   **********************
@@ -163,7 +170,7 @@
                           Volume   Pcnt   Pcnt   Pcnt      Volume   Pcnt     Occurrence    Outflow
   Storage Unit          1000 ft³   Full   Loss   Loss    1000 ft³   Full    days hr:min        CFS
   ------------------------------------------------------------------------------------------------
-  Basin                    9.772   97.7    0.0    0.0      10.000  100.0       0  00:00      58.89
+  Basin                    9.999  100.0    0.0    0.0      10.000  100.0       0  00:04      58.96
   Basin_2                 10.000  100.0    0.0    0.0      10.000  100.0       0  00:00       0.00
   Basin_3                 10.000  100.0    0.0    0.0      10.000  100.0       0  00:00       0.00
   
@@ -194,12 +201,12 @@
   17                   CONDUIT      0.00     0  00:00      0.00    0.00    0.37
   18                   CONDUIT      0.00     0  00:00      0.00    0.00    0.10
   20                   CONDUIT      0.00     0  00:00      0.00    0.00    0.00
-  22                   CONDUIT     13.69     0  00:00      3.93    0.68    0.72
+  22                   CONDUIT     12.02     0  00:00      3.58    0.59    0.75
   25                   CONDUIT      0.00     0  00:00      0.00    0.00    0.25
-  28                   CONDUIT     50.23     0  00:00      4.74    1.19    1.00
+  28                   CONDUIT     50.26     0  00:00      4.74    1.19    1.00
   216.1                WEIR         0.00     0  00:00                      0.00
   215.1                WEIR         0.00     0  00:00                      0.00
-  219.1                WEIR        13.72     0  00:00                      0.84
+  219.1                WEIR        13.81     0  00:00                      0.85
   
   
   ***************************
@@ -212,7 +219,7 @@
   Conduit               Length    Dry  Dry   Dry   Crit  Crit  Crit  Crit  Ltd   Ctrl  
   -------------------------------------------------------------------------------------
   17                      1.00   0.00  1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
-  18                      1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  18                      1.00   0.00  1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
   20                      1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
   22                      1.00   0.00  0.00  0.00  1.00  0.00  0.00  0.00  0.00  0.00
   25                      1.00   0.00  1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
@@ -228,9 +235,9 @@
                          --------- Hours Full --------   Above Full   Capacity
   Conduit                Both Ends  Upstream  Dnstream   Normal Flow   Limited
   ----------------------------------------------------------------------------
-  28                         23.99     24.00     23.99      0.01         0.19
+  28                         23.99     24.00     23.99      0.01         0.11
   
 
-  Analysis begun on:  Sun Jul 19 15:18:43 2026
-  Analysis ended on:  Sun Jul 19 15:18:43 2026
+  Analysis begun on:  Wed Jul 22 12:55:12 2026
+  Analysis ended on:  Wed Jul 22 12:55:12 2026
   Total elapsed time: < 1 sec

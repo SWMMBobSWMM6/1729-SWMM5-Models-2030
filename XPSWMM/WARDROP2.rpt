@@ -36,14 +36,22 @@
   Wet Weather Inflow .......         0.000         0.000
   Groundwater Inflow .......         0.000         0.000
   RDII Inflow ..............         0.000         0.000
-  External Inflow ..........         0.000         0.000
-  External Outflow .........         0.000         0.000
+  External Inflow ..........         0.259         2.592
+  External Outflow .........         2.035        20.346
   Flooding Loss ............         0.000         0.000
   Evaporation Loss .........         0.000         0.000
   Exfiltration Loss ........         0.000         0.000
   Initial Stored Volume ....         0.000         0.000
-  Final Stored Volume ......         0.000         0.000
-  Continuity Error (%) .....         0.000
+  Final Stored Volume ......         0.010         0.103
+  Continuity Error (%) .....      -689.004
+  
+  
+  *************************
+  Highest Continuity Errors
+  *************************
+  Node pol3 (-817.61%)
+  Node pol14 (100.00%)
+  Node pol11 (12.01%)
   
   
   ***************************
@@ -55,13 +63,20 @@
   ********************************
   Highest Flow Instability Indexes
   ********************************
-  All links are stable.
+  Link pol_div (5)
+  Link pol2 (3)
+  Link pol12 (2)
+  Link 13 (2)
   
   
   *********************************
   Most Frequent Nonconverging Nodes
   *********************************
-  Convergence obtained at all time steps.
+  Node 13 (85.96%)
+  Node pol3 (85.84%)
+  Node pol11 (85.37%)
+  Node pol14 (1.09%)
+  Node pol1 (0.05%)
   
   
   *************************
@@ -71,8 +86,8 @@
   Average Time Step           :    15.00 sec
   Maximum Time Step           :    15.00 sec
   % of Time in Steady State   :     0.00
-  Average Iterations per Step :     2.00
-  % of Steps Not Converging   :     0.00
+  Average Iterations per Step :     7.18
+  % of Steps Not Converging   :    85.96
   Time Step Frequencies       :
      15.000 -  7.597 sec      :   100.00 %
       7.597 -  3.848 sec      :     0.00 %
@@ -90,11 +105,11 @@
                                    Depth    Depth      HGL   Occurrence   Max Depth
   Node                 Type       Meters   Meters   Meters  days hr:min      Meters
   ---------------------------------------------------------------------------------
-  pol1                 JUNCTION     0.00     0.00   230.00     0  00:00        0.00
-  pol3                 JUNCTION     0.00     0.00   230.00     0  00:00        0.00
-  pol11                JUNCTION     0.00     0.00   230.00     0  00:00        0.00
+  pol1                 JUNCTION   212.43   223.74   453.74     0  08:05      223.74
+  pol3                 JUNCTION   170.72   223.03   453.03     0  08:35      222.76
+  pol11                JUNCTION   170.82   222.39   452.39     0  08:39      222.34
   pol_out              JUNCTION     0.00     0.00   227.00     0  00:00        0.00
-  pol14                JUNCTION     0.00     0.00   230.00     0  00:00        0.00
+  pol14                JUNCTION    26.59    40.50   270.50     0  08:46       40.50
   13                   OUTFALL      0.00     0.00   230.00     0  00:00        0.00
   
   
@@ -108,12 +123,12 @@
                                    Inflow   Inflow   Occurrence      Volume      Volume       Error
   Node                 Type           CMS      CMS  days hr:min    10^6 ltr    10^6 ltr     Percent
   -------------------------------------------------------------------------------------------------
-  pol1                 JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
-  pol3                 JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
-  pol11                JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
+  pol1                 JUNCTION     0.030    0.030     0  08:34        2.59        2.59      13.275
+  pol3                 JUNCTION     0.000    0.756     0  08:04           0        2.56     -89.102
+  pol11                JUNCTION     0.000    0.729     0  08:35           0        23.4      13.645
   pol_out              JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
-  pol14                JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
-  13                   OUTFALL      0.000    0.000     0  00:00           0           0       0.000 ltr
+  pol14                JUNCTION     0.000    0.103     0  08:34           0      0.0229   22930.389 ltr
+  13                   OUTFALL      0.000    0.509     0  08:39           0        20.3       0.000
   
   
   **********************
@@ -139,9 +154,9 @@
                          Freq      Flow      Flow      Volume
   Outfall Node           Pcnt       CMS       CMS    10^6 ltr
   -----------------------------------------------------------
-  13                     0.00     0.000     0.000       0.000
+  13                    66.31     0.355     0.509      20.346
   -----------------------------------------------------------
-  System                 0.00     0.000     0.000       0.000
+  System                66.31     0.355     0.509      20.346
   
   
   ********************
@@ -153,11 +168,11 @@
                                   |Flow|   Occurrence   |Veloc|    Full    Full
   Link                 Type          CMS  days hr:min     m/sec    Flow   Depth
   -----------------------------------------------------------------------------
-  pol2                 CONDUIT     0.000     0  00:00      0.00    0.00    0.00
-  pol12                CONDUIT     0.000     0  00:00      0.00    0.00    0.00
+  pol2                 CONDUIT     0.049     0  08:26      0.56    0.01    0.19
+  pol12                CONDUIT     0.509     0  08:39      1.52    0.97    0.69
   pol_of               CONDUIT     0.000     0  00:00      0.00    0.00    0.00
-  pol_div              ORIFICE     0.000     0  00:00                      0.00
-  13                   WEIR        0.000     0  00:00                      0.00
+  pol_div              ORIFICE     0.729     0  08:35                      1.00
+  13                   WEIR        0.103     0  08:34                      0.01
   
   
   ***************************
@@ -169,8 +184,8 @@
                        /Actual         Up    Down  Sub   Sup   Up    Down  Norm  Inlet 
   Conduit               Length    Dry  Dry   Dry   Crit  Crit  Crit  Crit  Ltd   Ctrl  
   -------------------------------------------------------------------------------------
-  pol2                    1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
-  pol12                   1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  pol2                    1.00   0.10  0.00  0.00  0.65  0.00  0.00  0.25  0.01  0.00
+  pol12                   1.00   0.34  0.00  0.00  0.00  0.00  0.00  0.66  0.00  0.00
   pol_of                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
   
   
@@ -181,6 +196,6 @@
   No conduits were surcharged.
   
 
-  Analysis begun on:  Sun Jul 19 15:24:59 2026
-  Analysis ended on:  Sun Jul 19 15:24:59 2026
+  Analysis begun on:  Wed Jul 22 14:27:03 2026
+  Analysis ended on:  Wed Jul 22 14:27:03 2026
   Total elapsed time: < 1 sec

@@ -36,26 +36,37 @@
   Wet Weather Inflow .......         0.000         0.000
   Groundwater Inflow .......         0.000         0.000
   RDII Inflow ..............         0.000         0.000
-  External Inflow ..........         0.000         0.000
-  External Outflow .........         0.000         0.000
-  Flooding Loss ............         0.000         0.000
+  External Inflow ..........         3.967         1.293
+  External Outflow .........         0.691         0.225
+  Flooding Loss ............      5395.383      1758.166
   Evaporation Loss .........         0.000         0.000
   Exfiltration Loss ........         0.000         0.000
   Initial Stored Volume ....         0.000         0.000
-  Final Stored Volume ......         0.000         0.000
-  Continuity Error (%) .....         0.000
+  Final Stored Volume ......         0.012         0.004
+  Continuity Error (%) .....   -135931.708
+  
+  
+  *************************
+  Highest Continuity Errors
+  *************************
+  Node SCS (-2525169281.67%)
   
   
   ***************************
   Time-Step Critical Elements
   ***************************
-  None
+  Node timearea (1.68%)
+  Node RUNOFF (1.35%)
   
   
   ********************************
   Highest Flow Instability Indexes
   ********************************
-  All links are stable.
+  Link 215 (146)
+  Link 217 (146)
+  Link 219 (146)
+  Link 221 (146)
+  Link 223 (146)
   
   
   *********************************
@@ -67,17 +78,17 @@
   *************************
   Routing Time Step Summary
   *************************
-  Minimum Time Step           :   299.50 sec
-  Average Time Step           :   298.96 sec
+  Minimum Time Step           :     6.28 sec
+  Average Time Step           :   290.91 sec
   Maximum Time Step           :   300.00 sec
   % of Time in Steady State   :     0.00
-  Average Iterations per Step :     2.00
-  % of Steps Not Converging   :     0.00
+  Average Iterations per Step :    48.94
+  % of Steps Not Converging   :    97.64
   Time Step Frequencies       :
-     300.000 - 83.462 sec      :   100.00 %
-     83.462 - 23.220 sec      :     0.00 %
-     23.220 -  6.460 sec      :     0.00 %
-      6.460 -  1.797 sec      :     0.00 %
+     300.000 - 83.462 sec      :    97.30 %
+     83.462 - 23.220 sec      :     1.01 %
+     23.220 -  6.460 sec      :     1.35 %
+      6.460 -  1.797 sec      :     0.34 %
       1.797 -  0.500 sec      :     0.00 %
   
   
@@ -90,15 +101,15 @@
                                    Depth    Depth      HGL   Occurrence   Max Depth
   Node                 Type         Feet     Feet     Feet  days hr:min        Feet
   ---------------------------------------------------------------------------------
-  RUNOFF               JUNCTION     0.00     0.00    20.00     0  00:00        0.00
-  KINEMATIC            JUNCTION     0.00     0.00     0.00     0  00:00        0.00
-  SBUH                 JUNCTION     0.00     0.00     0.00     0  00:00        0.00
-  RATIONAL             JUNCTION     0.00     0.00     0.00     0  00:00        0.00
-  TRIANGULAR           JUNCTION     0.00     0.00     0.00     0  00:00        0.00
-  SCS-DEPTH            JUNCTION     0.00     0.00     0.00     0  00:00        0.00
-  timearea             JUNCTION     0.00     0.00     0.00     0  00:00        0.00
+  RUNOFF               JUNCTION    12.73    13.00    33.00     0  00:05       13.00
+  KINEMATIC            JUNCTION     0.97     1.00     1.00     0  00:03        1.00
+  SBUH                 JUNCTION     0.97     1.00     1.00     0  00:03        1.00
+  RATIONAL             JUNCTION     0.97     1.00     1.00     0  00:03        1.00
+  TRIANGULAR           JUNCTION     0.97     1.00     1.00     0  00:03        1.00
+  SCS-DEPTH            JUNCTION     0.97     1.00     1.00     0  00:03        1.00
+  timearea             JUNCTION     0.99     1.00     1.00     0  00:00        1.00
   LAURENSON            OUTFALL      0.00     0.00    15.00     0  00:00        0.00
-  SCS                  STORAGE      0.00     0.00    15.00     0  00:00        0.00
+  SCS                  STORAGE      0.00     0.00    15.00     0  00:02        0.00
   
   
   *******************
@@ -111,29 +122,54 @@
                                    Inflow   Inflow   Occurrence      Volume      Volume       Error
   Node                 Type           CFS      CFS  days hr:min    10^6 gal    10^6 gal     Percent
   -------------------------------------------------------------------------------------------------
-  RUNOFF               JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
-  KINEMATIC            JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
-  SBUH                 JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
-  RATIONAL             JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
-  TRIANGULAR           JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
-  SCS-DEPTH            JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
-  timearea             JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
-  LAURENSON            OUTFALL       0.00     0.00     0  00:00           0           0       0.000 gal
-  SCS                  STORAGE       0.00     0.00     0  00:00           0           0       0.000 gal
+  RUNOFF               JUNCTION      1.00     1.00     0  00:00       0.646       0.646       0.285
+  KINEMATIC            JUNCTION      0.00   910.43     0  00:10           0         293       0.000
+  SBUH                 JUNCTION      0.00   910.43     0  00:10           0         293       0.000
+  RATIONAL             JUNCTION      0.00   910.43     0  00:10           0         293       0.000
+  TRIANGULAR           JUNCTION      0.00   910.43     0  00:10           0         293       0.000
+  SCS-DEPTH            JUNCTION      0.00   910.43     0  00:10           0         293       0.000
+  timearea             JUNCTION      1.00   911.43     0  00:10       0.646         294       0.150
+  LAURENSON            OUTFALL       0.00     0.70     0  00:10           0       0.225       0.000
+  SCS                  STORAGE       0.00     0.16     0  00:02           0    6.97e-05    -100.000
   
   
   **********************
   Node Surcharge Summary
   **********************
   
-  No nodes were surcharged.
+  Surcharging occurs when water rises above the top of the highest conduit.
+  ---------------------------------------------------------------------
+                                               Max. Height   Min. Depth
+                                   Hours       Above Crown    Below Rim
+  Node                 Type      Surcharged           Feet         Feet
+  ---------------------------------------------------------------------
+  RUNOFF               JUNCTION       23.94          0.000        0.000
+  KINEMATIC            JUNCTION       23.96          0.000        0.000
+  SBUH                 JUNCTION       23.96          0.000        0.000
+  RATIONAL             JUNCTION       23.96          0.000        0.000
+  TRIANGULAR           JUNCTION       23.96          0.000        0.000
+  SCS-DEPTH            JUNCTION       23.96          0.000        0.000
+  timearea             JUNCTION       23.99          0.000        0.000
   
   
   *********************
   Node Flooding Summary
   *********************
   
-  No nodes were flooded.
+  Flooding refers to all water that overflows a node, whether it ponds or not.
+  --------------------------------------------------------------------------
+                                                             Total   Maximum
+                                 Maximum   Time of Max       Flood    Ponded
+                        Hours       Rate    Occurrence      Volume     Depth
+  Node                 Flooded       CFS   days hr:min    10^6 gal      Feet
+  --------------------------------------------------------------------------
+  RUNOFF                 23.94      1.00      0  00:05       0.645     0.000
+  KINEMATIC              23.96    455.22      0  00:10     293.238     0.000
+  SBUH                   23.96    455.22      0  00:10     293.238     0.000
+  RATIONAL               23.96    455.22      0  00:10     293.238     0.000
+  TRIANGULAR             23.96    455.22      0  00:10     293.238     0.000
+  SCS-DEPTH              23.96    455.22      0  00:10     293.238     0.000
+  timearea               23.99    456.22      0  00:10     293.902     0.000
   
   
   **********************
@@ -145,7 +181,7 @@
                           Volume   Pcnt   Pcnt   Pcnt      Volume   Pcnt     Occurrence    Outflow
   Storage Unit          1000 ft³   Full   Loss   Loss    1000 ft³   Full    days hr:min        CFS
   ------------------------------------------------------------------------------------------------
-  SCS                      0.000    0.0    0.0    0.0       0.000    0.0       0  00:00       0.00
+  SCS                      0.000    0.0    0.0    0.0       0.002    0.0       0  00:02    5463.30
   
   
   ***********************
@@ -157,9 +193,9 @@
                          Freq      Flow      Flow      Volume
   Outfall Node           Pcnt       CFS       CFS    10^6 gal
   -----------------------------------------------------------
-  LAURENSON              0.00      0.00      0.00       0.000
+  LAURENSON             48.48      0.70      0.70       0.225
   -----------------------------------------------------------
-  System                 0.00      0.00      0.00       0.000
+  System                48.48      0.70      0.70       0.225
   
   
   ********************
@@ -171,14 +207,14 @@
                                   |Flow|   Occurrence   |Veloc|    Full    Full
   Link                 Type          CFS  days hr:min    ft/sec    Flow   Depth
   -----------------------------------------------------------------------------
-  Conduit              CONDUIT      0.00     0  00:00      0.00    0.00    0.00
-  pipe                 CONDUIT      0.00     0  00:00      0.00    0.00    0.00
-  215                  CONDUIT      0.00     0  00:00      0.00    0.00    0.00
-  217                  CONDUIT      0.00     0  00:00      0.00    0.00    0.00
-  219                  CONDUIT      0.00     0  00:00      0.00    0.00    0.00
-  221                  CONDUIT      0.00     0  00:00      0.00    0.00    0.00
-  223                  CONDUIT      0.00     0  00:00      0.00    0.00    0.00
-  225                  CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  Conduit              CONDUIT      0.16     0  00:02     17.18    0.00    0.03
+  pipe                 CONDUIT      0.70     0  00:10      9.66    0.04    0.03
+  215                  CONDUIT    910.43     0  00:10    >50.00   65.61    1.00
+  217                  CONDUIT    910.43     0  00:10    >50.00   65.61    1.00
+  219                  CONDUIT    910.43     0  00:10    >50.00   65.61    1.00
+  221                  CONDUIT    910.43     0  00:10    >50.00   65.61    1.00
+  223                  CONDUIT    910.43     0  00:10    >50.00   65.61    1.00
+  225                  CONDUIT    910.43     0  00:10    >50.00   65.61    1.00
   
   
   ***************************
@@ -190,23 +226,34 @@
                        /Actual         Up    Down  Sub   Sup   Up    Down  Norm  Inlet 
   Conduit               Length    Dry  Dry   Dry   Crit  Crit  Crit  Crit  Ltd   Ctrl  
   -------------------------------------------------------------------------------------
-  Conduit                 1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
-  pipe                    1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
-  215                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
-  217                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
-  219                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
-  221                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
-  223                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
-  225                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  Conduit                 1.00   0.50  0.50  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  pipe                    1.00   0.50  0.00  0.00  0.00  0.00  0.00  0.50  0.00  0.00
+  215                     1.00   0.00  0.50  0.00  0.50  0.00  0.00  0.00  0.00  0.00
+  217                     1.00   0.00  0.50  0.00  0.50  0.00  0.00  0.00  0.00  0.00
+  219                     1.00   0.00  0.50  0.00  0.50  0.00  0.00  0.00  0.00  0.00
+  221                     1.00   0.00  0.50  0.00  0.50  0.00  0.00  0.00  0.00  0.00
+  223                     1.00   0.00  0.50  0.00  0.50  0.00  0.00  0.00  0.00  0.00
+  225                     1.00   0.00  0.50  0.00  0.50  0.00  0.00  0.00  0.00  0.00
   
   
   *************************
   Conduit Surcharge Summary
   *************************
   
-  No conduits were surcharged.
+  ----------------------------------------------------------------------------
+                                                           Hours        Hours 
+                         --------- Hours Full --------   Above Full   Capacity
+  Conduit                Both Ends  Upstream  Dnstream   Normal Flow   Limited
+  ----------------------------------------------------------------------------
+  Conduit                     0.01     23.94      0.01      0.01         0.01
+  215                        23.92     23.96     23.92     12.02         0.01
+  217                        23.92     23.96     23.92     12.02         0.01
+  219                        23.92     23.96     23.92     12.02         0.01
+  221                        23.92     23.96     23.92     12.02         0.01
+  223                        23.92     23.96     23.92     12.02         0.01
+  225                        23.96     23.96     23.98     12.02         0.01
   
 
-  Analysis begun on:  Sun Jul 19 15:21:56 2026
-  Analysis ended on:  Sun Jul 19 15:21:56 2026
+  Analysis begun on:  Wed Jul 22 14:15:47 2026
+  Analysis ended on:  Wed Jul 22 14:15:47 2026
   Total elapsed time: < 1 sec

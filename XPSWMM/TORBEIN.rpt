@@ -3,6 +3,22 @@
   ------------------------------------------------------------
 
   Converted from XPSWMM .xp file 
+  WARNING 04: minimum elevation drop used for Conduit 214
+  WARNING 04: minimum elevation drop used for Conduit 215
+  WARNING 04: minimum elevation drop used for Conduit 219
+  WARNING 04: minimum elevation drop used for Conduit 222
+  WARNING 04: minimum elevation drop used for Conduit 220
+  WARNING 04: minimum elevation drop used for Conduit 226
+  WARNING 04: minimum elevation drop used for Conduit 226_2
+  WARNING 04: minimum elevation drop used for Conduit 229
+  WARNING 04: minimum elevation drop used for Conduit 233
+  WARNING 04: minimum elevation drop used for Conduit 234
+  WARNING 04: minimum elevation drop used for Conduit 236
+  WARNING 04: minimum elevation drop used for Conduit 240
+  WARNING 04: minimum elevation drop used for Conduit 243
+  WARNING 04: minimum elevation drop used for Conduit 241
+  WARNING 04: minimum elevation drop used for Conduit 244
+  WARNING 04: minimum elevation drop used for Conduit 241_2
   
   ****************
   Analysis Options
@@ -13,13 +29,20 @@
     RDII ................... NO
     Snowmelt ............... NO
     Groundwater ............ NO
-    Flow Routing ........... NO
+    Flow Routing ........... YES
+    Ponding Allowed ........ NO
     Water Quality .......... NO
+  Flow Routing Method ...... DYNWAVE
   Surcharge Method ......... EXTRAN
   Starting Date ............ 01/01/2001 00:00:00
   Ending Date .............. 01/02/2001 00:00:00
   Antecedent Dry Days ...... 0.0
   Report Time Step ......... 00:15:00
+  Routing Time Step ........ 20.00 sec
+  Variable Time Step ....... YES
+  Maximum Trials ........... 8
+  Number of Threads ........ 1
+  Head Tolerance ........... 0.005000 ft
   
   
   **************************        Volume        Volume
@@ -29,16 +52,331 @@
   Wet Weather Inflow .......         0.000         0.000
   Groundwater Inflow .......         0.000         0.000
   RDII Inflow ..............         0.000         0.000
-  External Inflow ..........         0.000         0.000
-  External Outflow .........         0.000         0.000
-  Flooding Loss ............         0.000         0.000
+  External Inflow ..........        31.734        10.341
+  External Outflow .........         1.983         0.646
+  Flooding Loss ............        29.724         9.686
   Evaporation Loss .........         0.000         0.000
   Exfiltration Loss ........         0.000         0.000
   Initial Stored Volume ....         0.000         0.000
-  Final Stored Volume ......         0.000         0.000
-  Continuity Error (%) .....         0.000
+  Final Stored Volume ......         0.028         0.009
+  Continuity Error (%) .....        -0.002
+  
+  
+  ***************************
+  Time-Step Critical Elements
+  ***************************
+  Link 214 (99.87%)
+  
+  
+  ********************************
+  Highest Flow Instability Indexes
+  ********************************
+  All links are stable.
+  
+  
+  *********************************
+  Most Frequent Nonconverging Nodes
+  *********************************
+  Convergence obtained at all time steps.
+  
+  
+  *************************
+  Routing Time Step Summary
+  *************************
+  Minimum Time Step           :     2.56 sec
+  Average Time Step           :    12.34 sec
+  Maximum Time Step           :    14.88 sec
+  % of Time in Steady State   :     0.00
+  Average Iterations per Step :     2.00
+  % of Steps Not Converging   :     0.01
+  Time Step Frequencies       :
+     20.000 -  9.564 sec      :    99.94 %
+      9.564 -  4.573 sec      :     0.04 %
+      4.573 -  2.187 sec      :     0.01 %
+      2.187 -  1.046 sec      :     0.00 %
+      1.046 -  0.500 sec      :     0.00 %
+  
+  
+  ******************
+  Node Depth Summary
+  ******************
+  
+  ---------------------------------------------------------------------------------
+                                 Average  Maximum  Maximum  Time of Max    Reported
+                                   Depth    Depth      HGL   Occurrence   Max Depth
+  Node                 Type         Feet     Feet     Feet  days hr:min        Feet
+  ---------------------------------------------------------------------------------
+  215                  JUNCTION     1.00     1.00     1.00     0  00:01        1.00
+  217                  JUNCTION     0.00     0.00     0.00     0  00:00        0.00
+  219                  JUNCTION     1.00     1.00     1.00     0  00:01        1.00
+  220                  JUNCTION     1.00     1.00     1.00     0  00:01        1.00
+  222                  JUNCTION     1.00     1.00     1.00     0  00:01        1.00
+  224                  JUNCTION     0.00     0.00     0.00     0  00:00        0.00
+  226                  JUNCTION     1.00     1.00     1.00     0  00:01        1.00
+  227                  JUNCTION     0.00     0.00     0.00     0  00:00        0.00
+  229                  JUNCTION     1.00     1.00     1.00     0  00:01        1.00
+  231                  JUNCTION     0.00     0.00     0.00     0  00:00        0.00
+  233                  JUNCTION     1.00     1.00     1.00     0  00:01        1.00
+  234                  JUNCTION     1.00     1.00     1.00     0  00:01        1.00
+  236                  JUNCTION     1.00     1.00     1.00     0  00:01        1.00
+  238                  JUNCTION     0.00     0.00     0.00     0  00:00        0.00
+  240                  JUNCTION     1.00     1.00     1.00     0  00:01        1.00
+  241                  JUNCTION     1.00     1.00     1.00     0  00:01        1.00
+  243                  JUNCTION     1.00     1.00     1.00     0  00:01        1.00
+  244                  JUNCTION     1.00     1.00     1.00     0  00:01        1.00
+  246                  JUNCTION     0.00     0.00     0.00     0  00:00        0.00
+  248                  JUNCTION     0.00     0.00     0.00     0  00:00        0.00
+  HW_214               JUNCTION     0.70     0.70     0.70     0  00:02        0.70
+  HW_215               JUNCTION     1.00     1.00     1.00     0  00:01        1.00
+  HW_219               JUNCTION     1.00     1.00     1.00     0  00:01        1.00
+  HW_222               JUNCTION     1.00     1.00     1.00     0  00:01        1.00
+  HW_220               JUNCTION     1.00     1.00     1.00     0  00:01        1.00
+  HW_226               JUNCTION     1.00     1.00     1.00     0  00:01        1.00
+  HW_226_2             JUNCTION     1.00     1.00     1.00     0  00:01        1.00
+  HW_229               JUNCTION     1.00     1.00     1.00     0  00:01        1.00
+  HW_233               JUNCTION     1.00     1.00     1.00     0  00:01        1.00
+  HW_234               JUNCTION     1.00     1.00     1.00     0  00:01        1.00
+  HW_236               JUNCTION     1.00     1.00     1.00     0  00:01        1.00
+  HW_240               JUNCTION     1.00     1.00     1.00     0  00:01        1.00
+  HW_243               JUNCTION     1.00     1.00     1.00     0  00:01        1.00
+  HW_241               JUNCTION     1.00     1.00     1.00     0  00:01        1.00
+  HW_244               JUNCTION     1.00     1.00     1.00     0  00:01        1.00
+  HW_241_2             JUNCTION     1.00     1.00     1.00     0  00:01        1.00
+  214                  OUTFALL      0.42     0.42     0.42     0  00:02        0.42
+  
+  
+  *******************
+  Node Inflow Summary
+  *******************
+  
+  -------------------------------------------------------------------------------------------------
+                                  Maximum  Maximum                  Lateral       Total        Flow
+                                  Lateral    Total  Time of Max      Inflow      Inflow     Balance
+                                   Inflow   Inflow   Occurrence      Volume      Volume       Error
+  Node                 Type           CFS      CFS  days hr:min    10^6 gal    10^6 gal     Percent
+  -------------------------------------------------------------------------------------------------
+  215                  JUNCTION      0.00     0.92     0  00:00           0      0.0028       0.000
+  217                  JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  219                  JUNCTION      0.00     0.92     0  00:00           0      0.0028       0.000
+  220                  JUNCTION      0.00     0.92     0  00:00           0      0.0028       0.000
+  222                  JUNCTION      0.00     0.92     0  00:00           0      0.0028       0.000
+  224                  JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  226                  JUNCTION      0.00     1.85     0  00:00           0     0.00561       0.000
+  227                  JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  229                  JUNCTION      0.00     0.92     0  00:00           0      0.0028       0.000
+  231                  JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  233                  JUNCTION      0.00     0.92     0  00:00           0      0.0028       0.000
+  234                  JUNCTION      0.00     0.92     0  00:00           0      0.0028       0.000
+  236                  JUNCTION      0.00     0.92     0  00:00           0      0.0028       0.000
+  238                  JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  240                  JUNCTION      0.00     0.92     0  00:00           0      0.0028       0.000
+  241                  JUNCTION      0.00     1.85     0  00:00           0     0.00561       0.000
+  243                  JUNCTION      0.00     0.92     0  00:00           0      0.0028       0.000
+  244                  JUNCTION      0.00     0.92     0  00:00           0      0.0028       0.000
+  246                  JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  248                  JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  HW_214               JUNCTION      1.00     1.00     0  00:00       0.646       0.646       0.035
+  HW_215               JUNCTION      1.00     1.00     0  00:00       0.646       0.646       0.047
+  HW_219               JUNCTION      1.00     1.00     0  00:00       0.646       0.646       0.047
+  HW_222               JUNCTION      1.00     1.00     0  00:00       0.646       0.646       0.047
+  HW_220               JUNCTION      1.00     1.00     0  00:00       0.646       0.646       0.047
+  HW_226               JUNCTION      1.00     1.00     0  00:00       0.646       0.646       0.047
+  HW_226_2             JUNCTION      1.00     1.00     0  00:00       0.646       0.646       0.047
+  HW_229               JUNCTION      1.00     1.00     0  00:00       0.646       0.646       0.047
+  HW_233               JUNCTION      1.00     1.00     0  00:00       0.646       0.646       0.047
+  HW_234               JUNCTION      1.00     1.00     0  00:00       0.646       0.646       0.047
+  HW_236               JUNCTION      1.00     1.00     0  00:00       0.646       0.646       0.047
+  HW_240               JUNCTION      1.00     1.00     0  00:00       0.646       0.646       0.047
+  HW_243               JUNCTION      1.00     1.00     0  00:00       0.646       0.646       0.047
+  HW_241               JUNCTION      1.00     1.00     0  00:00       0.646       0.646       0.047
+  HW_244               JUNCTION      1.00     1.00     0  00:00       0.646       0.646       0.047
+  HW_241_2             JUNCTION      1.00     1.00     0  00:00       0.646       0.646       0.047
+  214                  OUTFALL       0.00     1.00     0  00:02           0       0.646       0.000
+  
+  
+  **********************
+  Node Surcharge Summary
+  **********************
+  
+  Surcharging occurs when water rises above the top of the highest conduit.
+  ---------------------------------------------------------------------
+                                               Max. Height   Min. Depth
+                                   Hours       Above Crown    Below Rim
+  Node                 Type      Surcharged           Feet         Feet
+  ---------------------------------------------------------------------
+  215                  JUNCTION       23.98          0.000        0.000
+  217                  JUNCTION       24.00          0.000        0.000
+  219                  JUNCTION       23.98          0.000        0.000
+  220                  JUNCTION       23.98          0.000        0.000
+  222                  JUNCTION       23.98          0.000        0.000
+  224                  JUNCTION       24.00          0.000        0.000
+  226                  JUNCTION       23.98          0.000        0.000
+  227                  JUNCTION       24.00          0.000        0.000
+  229                  JUNCTION       23.98          0.000        0.000
+  231                  JUNCTION       24.00          0.000        0.000
+  233                  JUNCTION       23.98          0.000        0.000
+  234                  JUNCTION       23.98          0.000        0.000
+  236                  JUNCTION       23.98          0.000        0.000
+  238                  JUNCTION       24.00          0.000        0.000
+  240                  JUNCTION       23.98          0.000        0.000
+  241                  JUNCTION       23.98          0.000        0.000
+  243                  JUNCTION       23.98          0.000        0.000
+  244                  JUNCTION       23.98          0.000        0.000
+  246                  JUNCTION       24.00          0.000        0.000
+  248                  JUNCTION       24.00          0.000        0.000
+  HW_215               JUNCTION       23.98          0.000        0.000
+  HW_219               JUNCTION       23.98          0.000        0.000
+  HW_222               JUNCTION       23.98          0.000        0.000
+  HW_220               JUNCTION       23.98          0.000        0.000
+  HW_226               JUNCTION       23.98          0.000        0.000
+  HW_226_2             JUNCTION       23.98          0.000        0.000
+  HW_229               JUNCTION       23.98          0.000        0.000
+  HW_233               JUNCTION       23.98          0.000        0.000
+  HW_234               JUNCTION       23.98          0.000        0.000
+  HW_236               JUNCTION       23.98          0.000        0.000
+  HW_240               JUNCTION       23.98          0.000        0.000
+  HW_243               JUNCTION       23.98          0.000        0.000
+  HW_241               JUNCTION       23.98          0.000        0.000
+  HW_244               JUNCTION       23.98          0.000        0.000
+  HW_241_2             JUNCTION       23.98          0.000        0.000
+  
+  
+  *********************
+  Node Flooding Summary
+  *********************
+  
+  Flooding refers to all water that overflows a node, whether it ponds or not.
+  --------------------------------------------------------------------------
+                                                             Total   Maximum
+                                 Maximum   Time of Max       Flood    Ponded
+                        Hours       Rate    Occurrence      Volume     Depth
+  Node                 Flooded       CFS   days hr:min    10^6 gal      Feet
+  --------------------------------------------------------------------------
+  215                    23.98      0.41      0  00:01       0.003     0.000
+  219                    23.98      0.41      0  00:01       0.003     0.000
+  220                    23.98      0.41      0  00:01       0.003     0.000
+  222                    23.98      0.41      0  00:01       0.003     0.000
+  226                    23.98      0.83      0  00:01       0.005     0.000
+  229                    23.98      0.41      0  00:01       0.003     0.000
+  233                    23.98      0.41      0  00:01       0.003     0.000
+  234                    23.98      0.41      0  00:01       0.003     0.000
+  236                    23.98      0.41      0  00:01       0.003     0.000
+  240                    23.98      0.41      0  00:01       0.003     0.000
+  241                    23.98      0.83      0  00:01       0.005     0.000
+  243                    23.98      0.41      0  00:01       0.003     0.000
+  244                    23.98      0.41      0  00:01       0.003     0.000
+  HW_215                 23.98      1.00      1  00:00       0.643     0.000
+  HW_219                 23.98      1.00      1  00:00       0.643     0.000
+  HW_222                 23.98      1.00      1  00:00       0.643     0.000
+  HW_220                 23.98      1.00      1  00:00       0.643     0.000
+  HW_226                 23.98      1.00      1  00:00       0.643     0.000
+  HW_226_2               23.98      1.00      1  00:00       0.643     0.000
+  HW_229                 23.98      1.00      1  00:00       0.643     0.000
+  HW_233                 23.98      1.00      1  00:00       0.643     0.000
+  HW_234                 23.98      1.00      1  00:00       0.643     0.000
+  HW_236                 23.98      1.00      1  00:00       0.643     0.000
+  HW_240                 23.98      1.00      1  00:00       0.643     0.000
+  HW_243                 23.98      1.00      1  00:00       0.643     0.000
+  HW_241                 23.98      1.00      1  00:00       0.643     0.000
+  HW_244                 23.98      1.00      1  00:00       0.643     0.000
+  HW_241_2               23.98      1.00      1  00:00       0.643     0.000
+  
+  
+  ***********************
+  Outfall Loading Summary
+  ***********************
+  
+  -----------------------------------------------------------
+                         Flow       Avg       Max       Total
+                         Freq      Flow      Flow      Volume
+  Outfall Node           Pcnt       CFS       CFS    10^6 gal
+  -----------------------------------------------------------
+  214                   99.99      1.00      1.00       0.646
+  -----------------------------------------------------------
+  System                99.99      1.00      1.00       0.646
+  
+  
+  ********************
+  Link Flow Summary
+  ********************
+  
+  -----------------------------------------------------------------------------
+                                 Maximum  Time of Max   Maximum    Max/    Max/
+                                  |Flow|   Occurrence   |Veloc|    Full    Full
+  Link                 Type          CFS  days hr:min    ft/sec    Flow   Depth
+  -----------------------------------------------------------------------------
+  214                  CONDUIT      1.00     0  00:02      2.22    8.89    0.56
+  215                  CONDUIT      0.92     0  00:00      2.41    8.20    1.00
+  219                  CONDUIT      0.92     0  00:00      2.41    8.20    1.00
+  222                  CONDUIT      0.92     0  00:00      2.41    8.20    1.00
+  220                  CONDUIT      0.92     0  00:00      2.41    8.20    1.00
+  226                  CONDUIT      0.92     0  00:00      2.41    8.20    1.00
+  226_2                CONDUIT      0.92     0  00:00      2.41    8.20    1.00
+  229                  CONDUIT      0.92     0  00:00      2.41    8.20    1.00
+  233                  CONDUIT      0.92     0  00:00      2.41    8.20    1.00
+  234                  CONDUIT      0.92     0  00:00      2.41    8.20    1.00
+  236                  CONDUIT      0.92     0  00:00      2.41    8.20    1.00
+  240                  CONDUIT      0.92     0  00:00      2.41    8.20    1.00
+  243                  CONDUIT      0.92     0  00:00      2.41    8.20    1.00
+  241                  CONDUIT      0.92     0  00:00      2.41    8.20    1.00
+  244                  CONDUIT      0.92     0  00:00      2.41    8.20    1.00
+  241_2                CONDUIT      0.92     0  00:00      2.41    8.20    1.00
+  
+  
+  ***************************
+  Flow Classification Summary
+  ***************************
+  
+  -------------------------------------------------------------------------------------
+                      Adjusted    ---------- Fraction of Time in Flow Class ---------- 
+                       /Actual         Up    Down  Sub   Sup   Up    Down  Norm  Inlet 
+  Conduit               Length    Dry  Dry   Dry   Crit  Crit  Crit  Crit  Ltd   Ctrl  
+  -------------------------------------------------------------------------------------
+  214                     1.00   0.00  0.00  0.00  1.00  0.00  0.00  0.00  0.00  0.00
+  215                     1.00   0.00  0.00  0.00  1.00  0.00  0.00  0.00  0.00  0.00
+  219                     1.00   0.00  0.00  0.00  1.00  0.00  0.00  0.00  0.00  0.00
+  222                     1.00   0.00  0.00  0.00  1.00  0.00  0.00  0.00  0.00  0.00
+  220                     1.00   0.00  0.00  0.00  1.00  0.00  0.00  0.00  0.00  0.00
+  226                     1.00   0.00  0.00  0.00  1.00  0.00  0.00  0.00  0.00  0.00
+  226_2                   1.00   0.00  0.00  0.00  1.00  0.00  0.00  0.00  0.00  0.00
+  229                     1.00   0.00  0.00  0.00  1.00  0.00  0.00  0.00  0.00  0.00
+  233                     1.00   0.00  0.00  0.00  1.00  0.00  0.00  0.00  0.00  0.00
+  234                     1.00   0.00  0.00  0.00  1.00  0.00  0.00  0.00  0.00  0.00
+  236                     1.00   0.00  0.00  0.00  1.00  0.00  0.00  0.00  0.00  0.00
+  240                     1.00   0.00  0.00  0.00  1.00  0.00  0.00  0.00  0.00  0.00
+  243                     1.00   0.00  0.00  0.00  1.00  0.00  0.00  0.00  0.00  0.00
+  241                     1.00   0.00  0.00  0.00  1.00  0.00  0.00  0.00  0.00  0.00
+  244                     1.00   0.00  0.00  0.00  1.00  0.00  0.00  0.00  0.00  0.00
+  241_2                   1.00   0.00  0.00  0.00  1.00  0.00  0.00  0.00  0.00  0.00
+  
+  
+  *************************
+  Conduit Surcharge Summary
+  *************************
+  
+  ----------------------------------------------------------------------------
+                                                           Hours        Hours 
+                         --------- Hours Full --------   Above Full   Capacity
+  Conduit                Both Ends  Upstream  Dnstream   Normal Flow   Limited
+  ----------------------------------------------------------------------------
+  214                         0.01      0.01      0.01     24.00         0.01
+  215                        23.98     23.98     23.98      0.11         0.01
+  219                        23.98     23.98     23.98      0.11         0.01
+  222                        23.98     23.98     23.98      0.11         0.01
+  220                        23.98     23.98     23.98      0.11         0.01
+  226                        23.98     23.98     23.98      0.11         0.01
+  226_2                      23.98     23.98     23.98      0.11         0.01
+  229                        23.98     23.98     23.98      0.11         0.01
+  233                        23.98     23.98     23.98      0.11         0.01
+  234                        23.98     23.98     23.98      0.11         0.01
+  236                        23.98     23.98     23.98      0.11         0.01
+  240                        23.98     23.98     23.98      0.11         0.01
+  243                        23.98     23.98     23.98      0.11         0.01
+  241                        23.98     23.98     23.98      0.11         0.01
+  244                        23.98     23.98     23.98      0.11         0.01
+  241_2                      23.98     23.98     23.98      0.11         0.01
   
 
-  Analysis begun on:  Sun Jul 19 15:24:16 2026
-  Analysis ended on:  Sun Jul 19 15:24:16 2026
+  Analysis begun on:  Wed Jul 22 14:24:36 2026
+  Analysis ended on:  Wed Jul 22 14:24:36 2026
   Total elapsed time: < 1 sec

@@ -36,20 +36,26 @@
   Wet Weather Inflow .......         0.000         0.000
   Groundwater Inflow .......         0.000         0.000
   RDII Inflow ..............         0.000         0.000
-  External Inflow ..........         0.000         0.000
+  External Inflow ..........         1.983         0.646
   External Outflow .........         0.000         0.000
-  Flooding Loss ............         0.000         0.000
+  Flooding Loss ............         1.667         0.543
   Evaporation Loss .........         0.000         0.000
   Exfiltration Loss ........         0.000         0.000
   Initial Stored Volume ....         0.000         0.000
-  Final Stored Volume ......         0.000         0.000
-  Continuity Error (%) .....         0.000
+  Final Stored Volume ......         0.230         0.075
+  Continuity Error (%) .....         4.353
+  
+  
+  *************************
+  Highest Continuity Errors
+  *************************
+  Node J-stand (100.00%)
   
   
   ***************************
   Time-Step Critical Elements
   ***************************
-  None
+  Link J0-0d (99.14%)
   
   
   ********************************
@@ -67,16 +73,16 @@
   *************************
   Routing Time Step Summary
   *************************
-  Minimum Time Step           :     9.50 sec
-  Average Time Step           :    10.00 sec
+  Minimum Time Step           :     1.65 sec
+  Average Time Step           :     2.03 sec
   Maximum Time Step           :    10.00 sec
   % of Time in Steady State   :     0.00
   Average Iterations per Step :     2.00
   % of Steps Not Converging   :     0.00
   Time Step Frequencies       :
-     10.000 -  5.493 sec      :   100.00 %
+     10.000 -  5.493 sec      :     0.85 %
       5.493 -  3.017 sec      :     0.00 %
-      3.017 -  1.657 sec      :     0.00 %
+      3.017 -  1.657 sec      :    99.14 %
       1.657 -  0.910 sec      :     0.00 %
       0.910 -  0.500 sec      :     0.00 %
   
@@ -93,10 +99,10 @@
   J-3                  JUNCTION     0.00     0.00   221.50     0  00:00        0.00
   J-1                  JUNCTION     0.00     0.00   284.76     0  00:00        0.00
   J-2                  JUNCTION     0.00     0.00   234.32     0  00:00        0.00
-  J-0                  JUNCTION     0.00     0.00   290.84     0  00:00        0.00
-  J-stand              JUNCTION     0.00     0.00   287.42     0  00:00        0.00
+  J-0                  JUNCTION   287.73   288.97   579.81     0  01:00      288.96
+  J-stand              JUNCTION     9.31    10.00   297.42     0  03:49       10.00
   J-4                  OUTFALL      0.00     0.00   220.50     0  00:00        0.00
-  J-0d                 STORAGE      0.00     0.00   287.42     0  00:00        0.00
+  J-0d                 STORAGE      9.31    10.00   297.42     0  03:49       10.00
   
   
   *******************
@@ -112,10 +118,10 @@
   J-3                  JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
   J-1                  JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
   J-2                  JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
-  J-0                  JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
-  J-stand              JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  J-0                  JUNCTION      1.00     1.00     0  00:00       0.646       0.646       4.391
+  J-stand              JUNCTION      0.00     0.04     0  01:03           0    0.000975     975.358 gal
   J-4                  OUTFALL       0.00     0.00     0  00:00           0           0       0.000 gal
-  J-0d                 STORAGE       0.00     0.00     0  00:00           0           0       0.000 gal
+  J-0d                 STORAGE       0.00     1.02     0  01:00           0       0.619      -0.001
   
   
   **********************
@@ -129,7 +135,14 @@
   Node Flooding Summary
   *********************
   
-  No nodes were flooded.
+  Flooding refers to all water that overflows a node, whether it ponds or not.
+  --------------------------------------------------------------------------
+                                                             Total   Maximum
+                                 Maximum   Time of Max       Flood    Ponded
+                        Hours       Rate    Occurrence      Volume     Depth
+  Node                 Flooded       CFS   days hr:min    10^6 gal      Feet
+  --------------------------------------------------------------------------
+  J-0d                   20.18      1.00      0  03:49       0.543     0.000
   
   
   **********************
@@ -141,7 +154,7 @@
                           Volume   Pcnt   Pcnt   Pcnt      Volume   Pcnt     Occurrence    Outflow
   Storage Unit          1000 ft³   Full   Loss   Loss    1000 ft³   Full    days hr:min        CFS
   ------------------------------------------------------------------------------------------------
-  J-0d                     0.000    0.0    0.0    0.0       0.000    0.0       0  00:00       0.00
+  J-0d                     9.307   93.1    0.0    0.0      10.000  100.0       0  03:49       0.04
   
   
   ***********************
@@ -171,8 +184,8 @@
   J2-3                 CONDUIT      0.00     0  00:00      0.00    0.00    0.00
   J3-4                 CONDUIT      0.00     0  00:00      0.00    0.00    0.00
   J0-1                 CONDUIT      0.00     0  00:00      0.00    0.00    0.00
-  J0-0d                CONDUIT      0.00     0  00:00      0.00    0.00    0.00
-  J-Mlink              ORIFICE      0.00     0  00:00                      0.00
+  J0-0d                CONDUIT      1.02     0  01:00     12.18    0.06    0.16
+  J-Mlink              ORIFICE      0.04     0  01:03                      1.00
   
   
   ***************************
@@ -188,7 +201,7 @@
   J2-3                    1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
   J3-4                    1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
   J0-1                    1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
-  J0-0d                   1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  J0-0d                   1.00   0.04  0.00  0.00  0.00  0.00  0.00  0.96  0.00  0.00
   
   
   *************************
@@ -198,6 +211,6 @@
   No conduits were surcharged.
   
 
-  Analysis begun on:  Sun Jul 19 15:19:58 2026
-  Analysis ended on:  Sun Jul 19 15:19:58 2026
+  Analysis begun on:  Wed Jul 22 13:59:01 2026
+  Analysis ended on:  Wed Jul 22 13:59:01 2026
   Total elapsed time: < 1 sec

@@ -39,14 +39,20 @@
   Wet Weather Inflow .......         0.000         0.000
   Groundwater Inflow .......         0.000         0.000
   RDII Inflow ..............         0.000         0.000
-  External Inflow ..........         0.000         0.000
-  External Outflow .........         0.000         0.000
+  External Inflow ..........         1.983         0.646
+  External Outflow .........         1.960         0.639
   Flooding Loss ............         0.000         0.000
   Evaporation Loss .........         0.000         0.000
   Exfiltration Loss ........         0.000         0.000
   Initial Stored Volume ....         0.000         0.000
-  Final Stored Volume ......         0.000         0.000
-  Continuity Error (%) .....         0.000
+  Final Stored Volume ......         0.026         0.008
+  Continuity Error (%) .....        -0.114
+  
+  
+  *************************
+  Highest Continuity Errors
+  *************************
+  Node Inlet (1.20%)
   
   
   ***************************
@@ -74,7 +80,7 @@
   Average Time Step           :    59.96 sec
   Maximum Time Step           :    60.00 sec
   % of Time in Steady State   :     0.00
-  Average Iterations per Step :     2.00
+  Average Iterations per Step :     2.01
   % of Steps Not Converging   :     0.00
   Time Step Frequencies       :
      60.000 - 23.031 sec      :   100.00 %
@@ -93,10 +99,10 @@
                                    Depth    Depth      HGL   Occurrence   Max Depth
   Node                 Type         Feet     Feet     Feet  days hr:min        Feet
   ---------------------------------------------------------------------------------
-  Inlet                JUNCTION     0.00     0.00    10.00     0  00:00        0.00
+  Inlet                JUNCTION     1.00     1.01    11.01     0  05:09        1.01
   Inlet_2              JUNCTION     0.00     0.00    10.00     0  00:00        0.00
   Inlet_3              JUNCTION     0.00     0.00    10.00     0  00:00        0.00
-  Outlet               OUTFALL      0.00     0.00    10.00     0  00:00        0.00
+  Outlet               OUTFALL      0.28     0.28    10.28     0  05:10        0.28
   
   
   *******************
@@ -109,10 +115,10 @@
                                    Inflow   Inflow   Occurrence      Volume      Volume       Error
   Node                 Type           CFS      CFS  days hr:min    10^6 gal    10^6 gal     Percent
   -------------------------------------------------------------------------------------------------
-  Inlet                JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  Inlet                JUNCTION      1.00     1.00     0  00:00       0.646       0.646       1.213
   Inlet_2              JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
   Inlet_3              JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
-  Outlet               OUTFALL       0.00     0.00     0  00:00           0           0       0.000 gal
+  Outlet               OUTFALL       0.00     1.00     0  05:10           0       0.639       0.000
   
   
   **********************
@@ -145,9 +151,9 @@
                          Freq      Flow      Flow      Volume
   Outfall Node           Pcnt       CFS       CFS    10^6 gal
   -----------------------------------------------------------
-  Outlet                 0.00      0.00      0.00       0.000
+  Outlet                99.93      0.99      1.00       0.639
   -----------------------------------------------------------
-  System                 0.00      0.00      0.00       0.000
+  System                99.93      0.99      1.00       0.639
   
   
   ********************
@@ -159,9 +165,9 @@
                                   |Flow|   Occurrence   |Veloc|    Full    Full
   Link                 Type          CFS  days hr:min    ft/sec    Flow   Depth
   -----------------------------------------------------------------------------
-  Pipe                 CONDUIT      0.00     0  00:00      0.00    0.00    0.00
-  Channel              CONDUIT      0.00     0  00:00      0.00    0.00    0.00
-  Pipe_2               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  Pipe                 CONDUIT      0.00     0  00:00      0.00    0.00    1.00
+  Channel              CONDUIT      1.00     0  05:10      0.94    1.04    0.22
+  Pipe_2               CONDUIT      0.00     0  00:00      0.00    0.00    0.34
   
   
   ***************************
@@ -173,18 +179,24 @@
                        /Actual         Up    Down  Sub   Sup   Up    Down  Norm  Inlet 
   Conduit               Length    Dry  Dry   Dry   Crit  Crit  Crit  Crit  Ltd   Ctrl  
   -------------------------------------------------------------------------------------
-  Pipe                    1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
-  Channel                 1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
-  Pipe_2                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  Pipe                    1.00   0.00  0.00  0.00  1.00  0.00  0.00  0.00  0.00  0.00
+  Channel                 1.00   0.00  0.00  0.00  1.00  0.00  0.00  0.00  0.00  0.00
+  Pipe_2                  1.00   0.00  0.00  0.00  1.00  0.00  0.00  0.00  0.00  0.00
   
   
   *************************
   Conduit Surcharge Summary
   *************************
   
-  No conduits were surcharged.
+  ----------------------------------------------------------------------------
+                                                           Hours        Hours 
+                         --------- Hours Full --------   Above Full   Capacity
+  Conduit                Both Ends  Upstream  Dnstream   Normal Flow   Limited
+  ----------------------------------------------------------------------------
+  Pipe                       23.28     23.28     23.28      0.01         0.01
+  Channel                     0.01      0.01      0.01     23.32         0.01
   
 
-  Analysis begun on:  Sun Jul 19 15:22:18 2026
-  Analysis ended on:  Sun Jul 19 15:22:18 2026
+  Analysis begun on:  Wed Jul 22 14:16:42 2026
+  Analysis ended on:  Wed Jul 22 14:16:42 2026
   Total elapsed time: < 1 sec

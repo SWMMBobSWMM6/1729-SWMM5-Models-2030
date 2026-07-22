@@ -36,14 +36,20 @@
   Wet Weather Inflow .......         0.000         0.000
   Groundwater Inflow .......         0.000         0.000
   RDII Inflow ..............         0.000         0.000
-  External Inflow ..........         0.000         0.000
+  External Inflow ..........         0.518         5.183
   External Outflow .........         0.000         0.000
-  Flooding Loss ............         0.000         0.000
+  Flooding Loss ............         0.496         4.957
   Evaporation Loss .........         0.000         0.000
   Exfiltration Loss ........         0.000         0.000
   Initial Stored Volume ....         0.000         0.000
-  Final Stored Volume ......         0.000         0.000
-  Continuity Error (%) .....         0.000
+  Final Stored Volume ......         0.002         0.020
+  Continuity Error (%) .....         3.997
+  
+  
+  *************************
+  Highest Continuity Errors
+  *************************
+  Node street2 (4.36%)
   
   
   ***************************
@@ -61,7 +67,8 @@
   *********************************
   Most Frequent Nonconverging Nodes
   *********************************
-  Convergence obtained at all time steps.
+  Node streeta (0.03%)
+  Node MH2 (0.03%)
   
   
   *************************
@@ -72,7 +79,7 @@
   Maximum Time Step           :    30.00 sec
   % of Time in Steady State   :     0.00
   Average Iterations per Step :     2.00
-  % of Steps Not Converging   :     0.00
+  % of Steps Not Converging   :     0.03
   Time Step Frequencies       :
      30.000 - 13.228 sec      :   100.00 %
      13.228 -  5.833 sec      :     0.00 %
@@ -94,8 +101,8 @@
   MH3                  JUNCTION     0.00     0.00    98.50     0  00:00        0.00
   MH4                  JUNCTION     0.00     0.00    98.00     0  00:00        0.00
   MH5_Out              JUNCTION     0.00     0.00    98.00     0  00:00        0.00
-  streeta              JUNCTION     0.00     0.00    97.00     0  00:00        0.00
-  street2              JUNCTION     0.00     0.00    96.50     0  00:00        0.00
+  streeta              JUNCTION    95.34    97.50   194.50     0  01:03       97.50
+  street2              JUNCTION    94.87    97.00   193.50     0  01:03       97.00
   MH2                  OUTFALL      0.00     0.00    99.00     0  00:00        0.00
   
   
@@ -113,8 +120,8 @@
   MH3                  JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
   MH4                  JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
   MH5_Out              JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
-  streeta              JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
-  street2              JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
+  streeta              JUNCTION     0.030    0.030     0  00:00        2.59        2.59       4.594
+  street2              JUNCTION     0.030    0.030     0  00:00        2.59        2.59       4.557
   MH2                  OUTFALL      0.000    0.000     0  00:00           0           0       0.000 ltr
   
   
@@ -129,13 +136,23 @@
   Node                 Type      Surcharged         Meters       Meters
   ---------------------------------------------------------------------
   MH1                  JUNCTION       24.00          0.000        0.000
+  streeta              JUNCTION       22.95          0.000        0.000
+  street2              JUNCTION       22.96          0.000        0.000
   
   
   *********************
   Node Flooding Summary
   *********************
   
-  No nodes were flooded.
+  Flooding refers to all water that overflows a node, whether it ponds or not.
+  --------------------------------------------------------------------------
+                                                             Total   Maximum
+                                 Maximum   Time of Max       Flood    Ponded
+                        Hours       Rate    Occurrence      Volume     Depth
+  Node                 Flooded       CMS   days hr:min    10^6 ltr    Meters
+  --------------------------------------------------------------------------
+  streeta                22.95     0.030      0  01:03       2.478     0.000
+  street2                22.96     0.030      0  01:03       2.479     0.000
   
   
   ***********************
@@ -161,8 +178,8 @@
                                   |Flow|   Occurrence   |Veloc|    Full    Full
   Link                 Type          CMS  days hr:min     m/sec    Flow   Depth
   -----------------------------------------------------------------------------
-  pipea                CONDUIT     0.000     0  00:00      0.00    0.00    0.00
-  pipe2                CONDUIT     0.000     0  00:00      0.00    0.00    0.00
+  pipea                CONDUIT     0.000     0  00:00      0.00    0.00    0.50
+  pipe2                CONDUIT     0.000     0  00:00      0.00    0.00    0.50
   224.1                CONDUIT     0.000     0  00:00      0.00    0.00    0.00
   220                  CONDUIT     0.000     0  00:00      0.00    0.00    0.00
   
@@ -176,8 +193,8 @@
                        /Actual         Up    Down  Sub   Sup   Up    Down  Norm  Inlet 
   Conduit               Length    Dry  Dry   Dry   Crit  Crit  Crit  Crit  Ltd   Ctrl  
   -------------------------------------------------------------------------------------
-  pipea                   1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
-  pipe2                   1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  pipea                   1.00   0.04  0.96  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  pipe2                   1.00   0.04  0.96  0.00  0.00  0.00  0.00  0.00  0.00  0.00
   224.1                   1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
   220                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
   
@@ -189,6 +206,6 @@
   No conduits were surcharged.
   
 
-  Analysis begun on:  Sun Jul 19 15:21:43 2026
-  Analysis ended on:  Sun Jul 19 15:21:43 2026
+  Analysis begun on:  Wed Jul 22 14:13:58 2026
+  Analysis ended on:  Wed Jul 22 14:13:58 2026
   Total elapsed time: < 1 sec

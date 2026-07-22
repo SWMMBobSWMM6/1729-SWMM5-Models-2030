@@ -37,20 +37,20 @@
   Wet Weather Inflow .......         0.000         0.000
   Groundwater Inflow .......         0.000         0.000
   RDII Inflow ..............         0.000         0.000
-  External Inflow ..........         0.000         0.000
+  External Inflow ..........         1.983         0.646
   External Outflow .........         0.000         0.000
-  Flooding Loss ............         0.000         0.000
+  Flooding Loss ............         1.608         0.524
   Evaporation Loss .........         0.000         0.000
   Exfiltration Loss ........         0.000         0.000
   Initial Stored Volume ....         0.094         0.031
-  Final Stored Volume ......         0.093         0.030
-  Continuity Error (%) .....         0.603
+  Final Stored Volume ......         0.461         0.150
+  Continuity Error (%) .....         0.408
   
   
   *************************
   Highest Continuity Errors
   *************************
-  Node junction (-203.21%)
+  Node junction (-123.91%)
   
   
   ***************************
@@ -78,8 +78,8 @@
   Average Time Step           :    15.00 sec
   Maximum Time Step           :    15.00 sec
   % of Time in Steady State   :     0.00
-  Average Iterations per Step :     8.00
-  % of Steps Not Converging   :     0.09
+  Average Iterations per Step :     7.98
+  % of Steps Not Converging   :    18.54
   Time Step Frequencies       :
      15.000 -  7.597 sec      :   100.00 %
       7.597 -  3.848 sec      :     0.00 %
@@ -97,10 +97,10 @@
                                    Depth    Depth      HGL   Occurrence   Max Depth
   Node                 Type         Feet     Feet     Feet  days hr:min        Feet
   ---------------------------------------------------------------------------------
-  junction             JUNCTION     2.00     2.01   102.01     0  00:02        2.00
+  junction             JUNCTION     9.25    10.01   110.01     0  04:35       10.01
   Outfall              OUTFALL      0.00     0.00   100.00     0  00:00        0.00
-  Storage              STORAGE      1.99     2.00   102.00     0  00:00        1.99
-  Pond                 STORAGE      1.99     2.00   102.00     0  00:00        1.99
+  Storage              STORAGE      9.24    10.00   110.00     0  04:33       10.00
+  Pond                 STORAGE      9.24    10.00   110.00     0  04:34       10.00
   
   
   *******************
@@ -113,10 +113,10 @@
                                    Inflow   Inflow   Occurrence      Volume      Volume       Error
   Node                 Type           CFS      CFS  days hr:min    10^6 gal    10^6 gal     Percent
   -------------------------------------------------------------------------------------------------
-  junction             JUNCTION      0.00     1.72     0  00:00           0    0.000225     -67.020
+  junction             JUNCTION      0.00     1.73     0  00:00           0    0.000346     -55.339
   Outfall              OUTFALL       0.00     0.00     0  00:00           0           0       0.000 gal
-  Storage              STORAGE       0.00     0.32     0  00:01           0      0.0172       3.844
-  Pond                 STORAGE       0.00     0.18     0  00:03           0      0.0165       0.020
+  Storage              STORAGE       1.00     1.18     0  00:00       0.646       0.662       0.309
+  Pond                 STORAGE       0.00     0.68     0  00:02           0      0.0784       1.492
   
   
   **********************
@@ -130,7 +130,15 @@
   Node Flooding Summary
   *********************
   
-  No nodes were flooded.
+  Flooding refers to all water that overflows a node, whether it ponds or not.
+  --------------------------------------------------------------------------
+                                                             Total   Maximum
+                                 Maximum   Time of Max       Flood    Ponded
+                        Hours       Rate    Occurrence      Volume     Depth
+  Node                 Flooded       CFS   days hr:min    10^6 gal      Feet
+  --------------------------------------------------------------------------
+  Storage                19.44      1.00      1  00:00       0.521     0.000
+  Pond                   19.43      0.41      0  04:34       0.002     0.000
   
   
   **********************
@@ -142,8 +150,8 @@
                           Volume   Pcnt   Pcnt   Pcnt      Volume   Pcnt     Occurrence    Outflow
   Storage Unit          1000 ft³   Full   Loss   Loss    1000 ft³   Full    days hr:min        CFS
   ------------------------------------------------------------------------------------------------
-  Storage                  1.987   19.9    0.0    0.0       2.000   20.0       0  00:00       1.72
-  Pond                     1.988   19.9    0.0    0.0       2.000   20.0       0  00:00       0.23
+  Storage                  9.239   92.4    0.0    0.0      10.000  100.0       0  04:33       1.73
+  Pond                     9.235   92.4    0.0    0.0      10.000  100.0       0  04:34       0.03
   
   
   ***********************
@@ -170,8 +178,8 @@
   Link                 Type          CFS  days hr:min    ft/sec    Flow   Depth
   -----------------------------------------------------------------------------
   conduit              CONDUIT      0.00     0  00:00      0.00    0.00    0.00
-  8                    CONDUIT      0.23     0  00:01      0.30    2.08    1.00
-  Out                  ORIFICE      1.72     0  00:00                      1.00
+  8                    CONDUIT      0.68     0  00:02      0.87    6.07    1.00
+  Out                  ORIFICE      1.73     0  00:00                      1.00
   
   
   ***************************
@@ -196,9 +204,9 @@
                          --------- Hours Full --------   Above Full   Capacity
   Conduit                Both Ends  Upstream  Dnstream   Normal Flow   Limited
   ----------------------------------------------------------------------------
-  8                          24.00     24.00     24.00      0.08         0.47
+  8                          24.00     24.00     24.00      4.65         4.57
   
 
-  Analysis begun on:  Sun Jul 19 15:20:51 2026
-  Analysis ended on:  Sun Jul 19 15:20:51 2026
+  Analysis begun on:  Wed Jul 22 14:10:32 2026
+  Analysis ended on:  Wed Jul 22 14:10:32 2026
   Total elapsed time: < 1 sec

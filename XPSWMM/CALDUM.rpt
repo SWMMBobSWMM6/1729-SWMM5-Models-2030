@@ -38,20 +38,20 @@
   Wet Weather Inflow .......         0.000         0.000
   Groundwater Inflow .......         0.000         0.000
   RDII Inflow ..............         0.000         0.000
-  External Inflow ..........         0.000         0.000
-  External Outflow .........         0.000         0.000
+  External Inflow ..........         1.983         0.646
+  External Outflow .........         1.983         0.646
   Flooding Loss ............         0.000         0.000
   Evaporation Loss .........         0.000         0.000
   Exfiltration Loss ........         0.000         0.000
   Initial Stored Volume ....         0.000         0.000
-  Final Stored Volume ......         0.000         0.000
-  Continuity Error (%) .....         0.000
+  Final Stored Volume ......         0.001         0.000
+  Continuity Error (%) .....        -0.027
   
   
   ***************************
   Time-Step Critical Elements
   ***************************
-  None
+  Link Dummy (99.99%)
   
   
   ********************************
@@ -69,17 +69,17 @@
   *************************
   Routing Time Step Summary
   *************************
-  Minimum Time Step           :    19.50 sec
-  Average Time Step           :    20.00 sec
-  Maximum Time Step           :    20.00 sec
+  Minimum Time Step           :     1.31 sec
+  Average Time Step           :     4.41 sec
+  Maximum Time Step           :     6.28 sec
   % of Time in Steady State   :     0.00
   Average Iterations per Step :     2.00
   % of Steps Not Converging   :     0.00
   Time Step Frequencies       :
-     20.000 -  9.564 sec      :   100.00 %
-      9.564 -  4.573 sec      :     0.00 %
-      4.573 -  2.187 sec      :     0.00 %
-      2.187 -  1.046 sec      :     0.00 %
+     20.000 -  9.564 sec      :     0.00 %
+      9.564 -  4.573 sec      :     0.03 %
+      4.573 -  2.187 sec      :    99.97 %
+      2.187 -  1.046 sec      :     0.01 %
       1.046 -  0.500 sec      :     0.00 %
   
   
@@ -92,9 +92,9 @@
                                    Depth    Depth      HGL   Occurrence   Max Depth
   Node                 Type         Feet     Feet     Feet  days hr:min        Feet
   ---------------------------------------------------------------------------------
-  Calibrate            JUNCTION     0.00     0.00     0.00     0  00:00        0.00
-  Watershed            JUNCTION     0.00     0.00     0.00     0  00:00        0.00
-  204                  OUTFALL      0.00     0.00     0.00     0  00:00        0.00
+  Calibrate            JUNCTION     0.55     0.67     0.67     0  00:00        0.55
+  Watershed            JUNCTION     0.13     0.16     0.16     0  00:00        0.13
+  204                  OUTFALL      0.00     0.01     0.01     0  00:00        0.00
   
   
   *******************
@@ -107,9 +107,9 @@
                                    Inflow   Inflow   Occurrence      Volume      Volume       Error
   Node                 Type           CFS      CFS  days hr:min    10^6 gal    10^6 gal     Percent
   -------------------------------------------------------------------------------------------------
-  Calibrate            JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
-  Watershed            JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
-  204                  OUTFALL       0.00     0.00     0  00:00           0           0       0.000 gal
+  Calibrate            JUNCTION      1.00     1.00     0  00:00       0.646       0.646       0.025
+  Watershed            JUNCTION      0.00     1.28     0  00:00           0       0.646       0.007
+  204                  OUTFALL       0.00     1.26     0  00:00           0       0.646       0.000
   
   
   **********************
@@ -135,9 +135,9 @@
                          Freq      Flow      Flow      Volume
   Outfall Node           Pcnt       CFS       CFS    10^6 gal
   -----------------------------------------------------------
-  204                    0.00      0.00      0.00       0.000
+  204                   99.99      1.00      1.26       0.646
   -----------------------------------------------------------
-  System                 0.00      0.00      0.00       0.000
+  System                99.99      1.00      1.26       0.646
   
   
   ********************
@@ -149,8 +149,8 @@
                                   |Flow|   Occurrence   |Veloc|    Full    Full
   Link                 Type          CFS  days hr:min    ft/sec    Flow   Depth
   -----------------------------------------------------------------------------
-  203                  CONDUIT      0.00     0  00:00      0.00    0.00    0.00
-  Dummy                CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  203                  CONDUIT      1.28     0  00:00      4.64   11.40    0.40
+  Dummy                CONDUIT      1.26     0  00:00      1.40    0.00    0.00
   
   
   ***************************
@@ -162,17 +162,22 @@
                        /Actual         Up    Down  Sub   Sup   Up    Down  Norm  Inlet 
   Conduit               Length    Dry  Dry   Dry   Crit  Crit  Crit  Crit  Ltd   Ctrl  
   -------------------------------------------------------------------------------------
-  203                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
-  Dummy                   1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  203                     1.00   0.00  0.00  0.00  0.00  1.00  0.00  0.00  0.00  0.00
+  Dummy                   1.00   0.00  0.00  0.00  1.00  0.00  0.00  0.00  0.00  0.00
   
   
   *************************
   Conduit Surcharge Summary
   *************************
   
-  No conduits were surcharged.
+  ----------------------------------------------------------------------------
+                                                           Hours        Hours 
+                         --------- Hours Full --------   Above Full   Capacity
+  Conduit                Both Ends  Upstream  Dnstream   Normal Flow   Limited
+  ----------------------------------------------------------------------------
+  203                         0.01      0.01      0.01     24.00         0.01
   
 
-  Analysis begun on:  Sun Jul 19 15:15:49 2026
-  Analysis ended on:  Sun Jul 19 15:15:49 2026
+  Analysis begun on:  Wed Jul 22 11:52:34 2026
+  Analysis ended on:  Wed Jul 22 11:52:34 2026
   Total elapsed time: < 1 sec

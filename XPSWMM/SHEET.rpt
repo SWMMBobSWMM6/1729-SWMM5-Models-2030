@@ -41,20 +41,20 @@
   Wet Weather Inflow .......         0.000         0.000
   Groundwater Inflow .......         0.000         0.000
   RDII Inflow ..............         0.000         0.000
-  External Inflow ..........         0.000         0.000
-  External Outflow .........         0.000         0.000
+  External Inflow ..........         1.983         0.646
+  External Outflow .........         1.979         0.645
   Flooding Loss ............         0.000         0.000
   Evaporation Loss .........         0.000         0.000
   Exfiltration Loss ........         0.000         0.000
   Initial Stored Volume ....         0.000         0.000
-  Final Stored Volume ......         0.000         0.000
+  Final Stored Volume ......         0.004         0.001
   Continuity Error (%) .....         0.000
   
   
   ***************************
   Time-Step Critical Elements
   ***************************
-  None
+  Link C_OUT_SYNTH (99.99%)
   
   
   ********************************
@@ -72,17 +72,17 @@
   *************************
   Routing Time Step Summary
   *************************
-  Minimum Time Step           :    59.50 sec
-  Average Time Step           :    59.96 sec
-  Maximum Time Step           :    60.00 sec
+  Minimum Time Step           :     1.48 sec
+  Average Time Step           :     5.74 sec
+  Maximum Time Step           :    31.85 sec
   % of Time in Steady State   :     0.00
   Average Iterations per Step :     2.00
   % of Steps Not Converging   :     0.00
   Time Step Frequencies       :
-     60.000 - 23.031 sec      :   100.00 %
-     23.031 -  8.841 sec      :     0.00 %
-      8.841 -  3.393 sec      :     0.00 %
-      3.393 -  1.303 sec      :     0.00 %
+     60.000 - 23.031 sec      :     0.01 %
+     23.031 -  8.841 sec      :     0.03 %
+      8.841 -  3.393 sec      :    99.96 %
+      3.393 -  1.303 sec      :     0.01 %
       1.303 -  0.500 sec      :     0.00 %
   
   
@@ -95,12 +95,13 @@
                                    Depth    Depth      HGL   Occurrence   Max Depth
   Node                 Type         Feet     Feet     Feet  days hr:min        Feet
   ---------------------------------------------------------------------------------
-  inlet                JUNCTION     0.00     0.00     0.00     0  00:00        0.00
+  inlet                JUNCTION     0.22     0.22     0.22     0  01:08        0.22
   inlet_2              JUNCTION     0.00     0.00     0.00     0  00:00        0.00
   inlet_3              JUNCTION     0.00     0.00     0.00     0  00:00        0.00
   inlet_4              JUNCTION     0.00     0.00     0.00     0  00:00        0.00
   inlet_5              JUNCTION     0.00     0.00     0.00     0  00:00        0.00
-  inlet_6              OUTFALL      0.00     0.00     0.00     0  00:00        0.00
+  inlet_6              JUNCTION     0.00     0.00     0.00     0  00:00        0.00
+  OUT_SYNTH            OUTFALL      0.22     0.22    -0.78     0  01:07        0.22
   
   
   *******************
@@ -113,12 +114,13 @@
                                    Inflow   Inflow   Occurrence      Volume      Volume       Error
   Node                 Type           CFS      CFS  days hr:min    10^6 gal    10^6 gal     Percent
   -------------------------------------------------------------------------------------------------
-  inlet                JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  inlet                JUNCTION      1.00     1.00     0  00:00       0.646       0.646       0.211
   inlet_2              JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
   inlet_3              JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
   inlet_4              JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
   inlet_5              JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
-  inlet_6              OUTFALL       0.00     0.00     0  00:00           0           0       0.000 gal
+  inlet_6              JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  OUT_SYNTH            OUTFALL       0.00     1.00     0  01:08           0       0.645       0.000
   
   
   **********************
@@ -135,6 +137,7 @@
   inlet_3              JUNCTION       24.00          0.000        0.000
   inlet_4              JUNCTION       24.00          0.000        0.000
   inlet_5              JUNCTION       24.00          0.000        0.000
+  inlet_6              JUNCTION       24.00          0.000        0.000
   
   
   *********************
@@ -153,9 +156,9 @@
                          Freq      Flow      Flow      Volume
   Outfall Node           Pcnt       CFS       CFS    10^6 gal
   -----------------------------------------------------------
-  inlet_6                0.00      0.00      0.00       0.000
+  OUT_SYNTH             99.99      1.00      1.00       0.645
   -----------------------------------------------------------
-  System                 0.00      0.00      0.00       0.000
+  System                99.99      1.00      1.00       0.645
   
   
   ********************
@@ -167,11 +170,12 @@
                                   |Flow|   Occurrence   |Veloc|    Full    Full
   Link                 Type          CFS  days hr:min    ft/sec    Flow   Depth
   -----------------------------------------------------------------------------
-  pipe                 CONDUIT      0.00     0  00:00      0.00    0.00    0.00
-  pipe_2               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
-  pipe_3               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
-  pipe_4               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
-  215                  CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  pipe                 CONDUIT      0.00     0  00:00      0.00    0.00    0.22
+  pipe_2               CONDUIT      0.00     0  00:00      0.00    0.00    0.07
+  pipe_3               CONDUIT      0.00     0  00:00      0.00    0.00    0.22
+  pipe_4               CONDUIT      0.00     0  00:00      0.00    0.00    0.07
+  215                  CONDUIT      0.00     0  00:00      0.00    0.00    0.22
+  C_OUT_SYNTH          CONDUIT      1.00     0  01:08      4.35    0.01    0.07
   
   
   ***************************
@@ -183,11 +187,12 @@
                        /Actual         Up    Down  Sub   Sup   Up    Down  Norm  Inlet 
   Conduit               Length    Dry  Dry   Dry   Crit  Crit  Crit  Crit  Ltd   Ctrl  
   -------------------------------------------------------------------------------------
-  pipe                    1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
-  pipe_2                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
-  pipe_3                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
-  pipe_4                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
-  215                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  pipe                    1.00   0.00  0.00  0.00  1.00  0.00  0.00  0.00  0.00  0.00
+  pipe_2                  1.00   0.00  0.00  0.00  1.00  0.00  0.00  0.00  0.00  0.00
+  pipe_3                  1.00   0.00  0.00  0.00  1.00  0.00  0.00  0.00  0.00  0.00
+  pipe_4                  1.00   0.00  0.00  0.00  1.00  0.00  0.00  0.00  0.00  0.00
+  215                     1.00   0.00  0.00  0.00  1.00  0.00  0.00  0.00  0.00  0.00
+  C_OUT_SYNTH             1.00   0.00  0.00  0.00  0.00  1.00  0.00  0.00  0.99  0.00
   
   
   *************************
@@ -197,6 +202,6 @@
   No conduits were surcharged.
   
 
-  Analysis begun on:  Sun Jul 19 15:22:20 2026
-  Analysis ended on:  Sun Jul 19 15:22:20 2026
+  Analysis begun on:  Wed Jul 22 14:16:50 2026
+  Analysis ended on:  Wed Jul 22 14:16:50 2026
   Total elapsed time: < 1 sec

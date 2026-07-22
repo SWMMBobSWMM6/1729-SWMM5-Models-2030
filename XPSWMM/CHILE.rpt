@@ -38,14 +38,21 @@
   Wet Weather Inflow .......         0.000         0.000
   Groundwater Inflow .......         0.000         0.000
   RDII Inflow ..............         0.000         0.000
-  External Inflow ..........         0.000         0.000
+  External Inflow ..........         0.259         2.592
   External Outflow .........         0.000         0.000
-  Flooding Loss ............         0.000         0.000
+  Flooding Loss ............         0.234         2.343
   Evaporation Loss .........         0.000         0.000
   Exfiltration Loss ........         0.000         0.000
   Initial Stored Volume ....         0.000         0.000
-  Final Stored Volume ......         0.000         0.000
-  Continuity Error (%) .....         0.000
+  Final Stored Volume ......         0.026         0.258
+  Continuity Error (%) .....        -0.372
+  
+  
+  *************************
+  Highest Continuity Errors
+  *************************
+  Node B12-E (99.01%)
+  Node B2-C (3.90%)
   
   
   ***************************
@@ -92,12 +99,12 @@
                                    Depth    Depth      HGL   Occurrence   Max Depth
   Node                 Type       Meters   Meters   Meters  days hr:min      Meters
   ---------------------------------------------------------------------------------
-  E6-C                 JUNCTION     0.00     0.00     5.87     0  00:00        0.00
-  E7-C                 JUNCTION     0.00     0.00     5.39     0  00:00        0.00
-  B2-C                 JUNCTION     0.00     0.00     5.10     0  00:00        0.00
-  B3-C                 JUNCTION     0.00     0.00     5.18     0  00:00        0.00
-  B8-C                 JUNCTION     0.00     0.00     5.18     0  00:00        0.00
-  B12-E                JUNCTION     0.00     0.00     5.18     0  00:00        0.00
+  E6-C                 JUNCTION     0.09     0.10     5.97     0  00:08        0.10
+  E7-C                 JUNCTION     0.12     0.14     5.53     0  00:25        0.14
+  B2-C                 JUNCTION     0.31     0.32     5.42     0  14:06        0.32
+  B3-C                 JUNCTION     0.22     0.23     5.41     0  14:01        0.23
+  B8-C                 JUNCTION     0.05     0.06     5.24     0  13:33        0.06
+  B12-E                JUNCTION     0.05     0.06     5.24     0  14:00        0.06
   B13-D                JUNCTION     0.00     0.00     5.33     0  00:00        0.00
   Z1-B                 JUNCTION     0.00     0.00     5.01     0  00:00        0.00
   Z2-B                 JUNCTION     0.00     0.00     4.99     0  00:00        0.00
@@ -106,7 +113,7 @@
   Z7-B                 JUNCTION     0.00     0.00     4.00     0  00:00        0.00
   Z9-D                 JUNCTION     0.00     0.00     5.48     0  00:00        0.00
   Z10-D                JUNCTION     0.00     0.00     5.45     0  00:00        0.00
-  newroute             JUNCTION     0.00     0.00     1.00     0  00:00        0.00
+  newroute             JUNCTION     0.93     1.00     2.00     0  01:59        1.00
   zref=0.1             JUNCTION     0.00     0.00     1.00     0  00:00        0.00
   Z11-A                OUTFALL      0.00     0.00     8.10     0  00:00        0.00
   
@@ -121,12 +128,12 @@
                                    Inflow   Inflow   Occurrence      Volume      Volume       Error
   Node                 Type           CMS      CMS  days hr:min    10^6 ltr    10^6 ltr     Percent
   -------------------------------------------------------------------------------------------------
-  E6-C                 JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
-  E7-C                 JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
-  B2-C                 JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
-  B3-C                 JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
-  B8-C                 JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
-  B12-E                JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
+  E6-C                 JUNCTION     0.030    0.030     0  00:00        2.59        2.59       0.162
+  E7-C                 JUNCTION     0.000    0.033     0  00:11           0        2.59       0.729
+  B2-C                 JUNCTION     0.000    0.038     0  00:31           0        2.57       4.061
+  B3-C                 JUNCTION     0.000    0.030     0  13:37           0        2.47       2.873
+  B8-C                 JUNCTION     0.000    0.030     0  13:28           0         2.4       0.453
+  B12-E                JUNCTION     0.000    0.001     0  02:54           0      0.0056    9971.714
   B13-D                JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
   Z1-B                 JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
   Z2-B                 JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
@@ -135,7 +142,7 @@
   Z7-B                 JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
   Z9-D                 JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
   Z10-D                JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
-  newroute             JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
+  newroute             JUNCTION     0.000    0.030     0  13:33           0        2.38       0.000
   zref=0.1             JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
   Z11-A                OUTFALL      0.000    0.000     0  00:00           0           0       0.000 ltr
   
@@ -150,6 +157,7 @@
                                    Hours       Above Crown    Below Rim
   Node                 Type      Surcharged         Meters       Meters
   ---------------------------------------------------------------------
+  newroute             JUNCTION       22.01          0.000        0.000
   zref=0.1             JUNCTION       24.00          0.000        0.000
   
   
@@ -157,7 +165,14 @@
   Node Flooding Summary
   *********************
   
-  No nodes were flooded.
+  Flooding refers to all water that overflows a node, whether it ponds or not.
+  --------------------------------------------------------------------------
+                                                             Total   Maximum
+                                 Maximum   Time of Max       Flood    Ponded
+                        Hours       Rate    Occurrence      Volume     Depth
+  Node                 Flooded       CMS   days hr:min    10^6 ltr    Meters
+  --------------------------------------------------------------------------
+  newroute               22.01     0.030      0  13:33       2.343     0.000
   
   
   ***********************
@@ -183,12 +198,12 @@
                                   |Flow|   Occurrence   |Veloc|    Full    Full
   Link                 Type          CMS  days hr:min     m/sec    Flow   Depth
   -----------------------------------------------------------------------------
-  E6-C_E7-C            CONDUIT     0.000     0  00:00      0.00    0.00    0.00
-  E7-C_B2-C            CONDUIT     0.000     0  00:00      0.00    0.00    0.00
-  B2-C_B3-C            CONDUIT     0.000     0  00:00      0.00    0.00    0.00
-  B3-C_B8-C            CONDUIT     0.000     0  00:00      0.00    0.00    0.00
-  B8-C_B12-E           CONDUIT     0.000     0  00:00      0.00    0.00    0.00
-  B12-EB13-D           CONDUIT     0.000     0  00:00      0.00    0.00    0.00
+  E6-C_E7-C            CONDUIT     0.033     0  00:11      0.75    0.00    0.06
+  E7-C_B2-C            CONDUIT     0.038     0  00:31      0.39    0.01    0.11
+  B2-C_B3-C            CONDUIT     0.030     0  13:37      0.18    0.01    0.13
+  B3-C_B8-C            CONDUIT     0.030     0  13:33      0.29    0.22    0.07
+  B8-C_B12-E           CONDUIT     0.001     0  02:54      0.05    0.01    0.03
+  B12-EB13-D           CONDUIT     0.000     0  00:00      0.00    0.00    0.01
   B13-D_Z1-B           CONDUIT     0.000     0  00:00      0.00    0.00    0.00
   Z1-B_Z2-B            CONDUIT     0.000     0  00:00      0.00    0.00    0.00
   Z2-B_Z3-C            CONDUIT     0.000     0  00:00      0.00    0.00    0.00
@@ -197,7 +212,7 @@
   Z7-B_Z9-D            CONDUIT     0.000     0  00:00      0.00    0.00    0.00
   Z9-D_Z10-D           CONDUIT     0.000     0  00:00      0.00    0.00    0.00
   Z10-DZ11-A           CONDUIT     0.000     0  00:00      0.00    0.00    0.00
-  32                   CONDUIT     0.000     0  00:00      0.00    0.00    0.00
+  32                   CONDUIT     0.030     0  13:33      0.21    0.01    0.53
   
   
   ***************************
@@ -209,12 +224,12 @@
                        /Actual         Up    Down  Sub   Sup   Up    Down  Norm  Inlet 
   Conduit               Length    Dry  Dry   Dry   Crit  Crit  Crit  Crit  Ltd   Ctrl  
   -------------------------------------------------------------------------------------
-  E6-C_E7-C               1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
-  E7-C_B2-C               1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
-  B2-C_B3-C               1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
-  B3-C_B8-C               1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
-  B8-C_B12-E              1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
-  B12-EB13-D              1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  E6-C_E7-C               1.00   0.00  0.00  0.00  1.00  0.00  0.00  0.00  0.99  0.00
+  E7-C_B2-C               1.00   0.00  0.00  0.00  1.00  0.00  0.00  0.00  0.98  0.00
+  B2-C_B3-C               1.00   0.00  0.02  0.00  0.98  0.00  0.00  0.00  0.00  0.00
+  B3-C_B8-C               1.00   0.02  0.00  0.00  0.98  0.00  0.00  0.00  0.00  0.00
+  B8-C_B12-E              1.00   0.02  0.00  0.00  0.98  0.00  0.00  0.00  0.00  0.00
+  B12-EB13-D              1.00   0.03  0.97  0.00  0.00  0.00  0.00  0.00  0.00  0.00
   B13-D_Z1-B              1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
   Z1-B_Z2-B               1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
   Z2-B_Z3-C               1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
@@ -223,16 +238,21 @@
   Z7-B_Z9-D               1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
   Z9-D_Z10-D              1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
   Z10-DZ11-A              1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
-  32                      1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  32                      1.00   0.02  0.00  0.00  0.98  0.00  0.00  0.00  0.98  0.00
   
   
   *************************
   Conduit Surcharge Summary
   *************************
   
-  No conduits were surcharged.
+  ----------------------------------------------------------------------------
+                                                           Hours        Hours 
+                         --------- Hours Full --------   Above Full   Capacity
+  Conduit                Both Ends  Upstream  Dnstream   Normal Flow   Limited
+  ----------------------------------------------------------------------------
+  32                          0.01      0.01     22.01      0.01         0.01
   
 
-  Analysis begun on:  Sun Jul 19 15:16:14 2026
-  Analysis ended on:  Sun Jul 19 15:16:14 2026
+  Analysis begun on:  Wed Jul 22 11:54:20 2026
+  Analysis ended on:  Wed Jul 22 11:54:20 2026
   Total elapsed time: < 1 sec

@@ -36,14 +36,14 @@
   Wet Weather Inflow .......         0.000         0.000
   Groundwater Inflow .......         0.000         0.000
   RDII Inflow ..............         0.000         0.000
-  External Inflow ..........         0.000         0.000
+  External Inflow ..........        11.900         3.878
   External Outflow .........         0.000         0.000
-  Flooding Loss ............         0.000         0.000
+  Flooding Loss ............        11.825         3.854
   Evaporation Loss .........         0.000         0.000
   Exfiltration Loss ........         0.000         0.000
   Initial Stored Volume ....         0.023         0.007
-  Final Stored Volume ......         0.023         0.007
-  Continuity Error (%) .....         0.000
+  Final Stored Volume ......         0.098         0.032
+  Continuity Error (%) .....        -0.004
   
   
   ***************************
@@ -108,12 +108,12 @@
   EXP20                JUNCTION     0.00     0.00   560.00     0  00:00        0.00
   ARV_2                JUNCTION     0.00     0.00   599.50     0  00:00        0.00
   outfall              OUTFALL      0.00     0.00   587.00     0  00:00        0.00
-  HANSEN               STORAGE      2.00     2.00   568.00     0  00:00        2.00
-  NASA                 STORAGE      1.00     1.00   562.00     0  00:00        1.00
-  MILLS                STORAGE      4.00     4.00   580.00     0  00:00        4.00
-  IMHOFF               STORAGE      0.00     0.00   572.00     0  00:00        0.00
-  THIOKOL              STORAGE      2.00     2.00   561.00     0  00:00        2.00
-  SPARKMAN             STORAGE      4.40     4.40   597.40     0  00:00        4.40
+  HANSEN               STORAGE      9.96    10.00   576.00     0  00:13       10.00
+  NASA                 STORAGE      9.95    10.00   571.00     0  00:15       10.00
+  MILLS                STORAGE      9.99    10.00   586.00     0  00:05       10.00
+  IMHOFF               STORAGE      9.99    10.00   582.00     0  00:02       10.00
+  THIOKOL              STORAGE      9.96    10.00   569.00     0  00:13       10.00
+  SPARKMAN             STORAGE      9.99    10.00   603.00     0  00:06       10.00
   
   
   *******************
@@ -144,12 +144,12 @@
   EXP20                JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
   ARV_2                JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
   outfall              OUTFALL       0.00     0.00     0  00:00           0           0       0.000 gal
-  HANSEN               STORAGE       0.00     0.00     0  00:00           0      0.0015       0.000
-  NASA                 STORAGE       0.00     0.00     0  00:00           0    0.000748       0.000
-  MILLS                STORAGE       0.00     0.00     0  00:00           0      0.0015       0.000
-  IMHOFF               STORAGE       0.00     0.00     0  00:00           0           0       0.000 gal
-  THIOKOL              STORAGE       0.00     0.00     0  00:00           0      0.0015       0.000
-  SPARKMAN             STORAGE       0.00     0.00     0  00:00           0     0.00211       0.000
+  HANSEN               STORAGE       1.00     1.00     0  00:00       0.646       0.648      -0.005
+  NASA                 STORAGE       1.00     1.00     0  00:00       0.646       0.647      -0.005
+  MILLS                STORAGE       1.00     1.00     0  00:00       0.646       0.648      -0.005
+  IMHOFF               STORAGE       1.00     1.00     0  00:00       0.646       0.646       0.000
+  THIOKOL              STORAGE       1.00     1.00     0  00:00       0.646       0.648      -0.005
+  SPARKMAN             STORAGE       1.00     1.00     0  00:00       0.646       0.648      -0.004
   
   
   **********************
@@ -175,7 +175,19 @@
   Node Flooding Summary
   *********************
   
-  No nodes were flooded.
+  Flooding refers to all water that overflows a node, whether it ponds or not.
+  --------------------------------------------------------------------------
+                                                             Total   Maximum
+                                 Maximum   Time of Max       Flood    Ponded
+                        Hours       Rate    Occurrence      Volume     Depth
+  Node                 Flooded       CFS   days hr:min    10^6 gal      Feet
+  --------------------------------------------------------------------------
+  HANSEN                 23.78      1.00      0  00:13       0.640     0.000
+  NASA                   23.75      1.00      0  00:15       0.640     0.000
+  MILLS                  23.92      1.00      0  00:05       0.644     0.000
+  IMHOFF                 23.97      1.00      0  00:02       0.645     0.000
+  THIOKOL                23.78      1.00      0  00:13       0.640     0.000
+  SPARKMAN               23.90      1.00      0  00:06       0.644     0.000
   
   
   **********************
@@ -187,12 +199,12 @@
                           Volume   Pcnt   Pcnt   Pcnt      Volume   Pcnt     Occurrence    Outflow
   Storage Unit          1000 ft³   Full   Loss   Loss    1000 ft³   Full    days hr:min        CFS
   ------------------------------------------------------------------------------------------------
-  HANSEN                   0.200   20.0    0.0    0.0       0.200   20.0       0  00:00       0.00
-  NASA                     0.100   10.0    0.0    0.0       0.100   10.0       0  00:00       0.00
-  MILLS                    0.200   40.0    0.0    0.0       0.200   40.0       0  00:00       0.00
-  IMHOFF                   0.000    0.0    0.0    0.0       0.000    0.0       0  00:00       0.00
-  THIOKOL                  0.200   20.0    0.0    0.0       0.200   20.0       0  00:00       0.00
-  SPARKMAN                 0.282   44.0    0.0    0.0       0.282   44.0       0  00:00       0.00
+  HANSEN                   0.996   99.6    0.0    0.0       1.000  100.0       0  00:13       0.00
+  NASA                     0.995   99.5    0.0    0.0       1.000  100.0       0  00:15       0.00
+  MILLS                    0.499   99.9    0.0    0.0       0.500  100.0       0  00:05       0.00
+  IMHOFF                   0.125   99.9    0.0    0.0       0.125  100.0       0  00:02       0.00
+  THIOKOL                  0.996   99.6    0.0    0.0       1.000  100.0       0  00:13       0.00
+  SPARKMAN                 0.639   99.9    0.0    0.0       0.640  100.0       0  00:06       0.00
   
   
   ***********************
@@ -295,6 +307,6 @@
   98                       0.00           0      0.00      0.00      0.00     0.000      0.00    0.0    0.0
   
 
-  Analysis begun on:  Sun Jul 19 15:22:10 2026
-  Analysis ended on:  Sun Jul 19 15:22:10 2026
+  Analysis begun on:  Wed Jul 22 14:16:07 2026
+  Analysis ended on:  Wed Jul 22 14:16:07 2026
   Total elapsed time: < 1 sec

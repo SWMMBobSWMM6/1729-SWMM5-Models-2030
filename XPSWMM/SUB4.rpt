@@ -40,14 +40,14 @@
   Wet Weather Inflow .......         0.000         0.000
   Groundwater Inflow .......         0.000         0.000
   RDII Inflow ..............         0.000         0.000
-  External Inflow ..........         0.000         0.000
-  External Outflow .........         0.000         0.000
+  External Inflow ..........         0.259         2.592
+  External Outflow .........         0.255         2.549
   Flooding Loss ............         0.000         0.000
   Evaporation Loss .........         0.000         0.000
   Exfiltration Loss ........         0.000         0.000
   Initial Stored Volume ....         0.000         0.000
-  Final Stored Volume ......         0.000         0.000
-  Continuity Error (%) .....         0.000
+  Final Stored Volume ......         0.005         0.045
+  Continuity Error (%) .....        -0.093
   
   
   ***************************
@@ -94,11 +94,11 @@
                                    Depth    Depth      HGL   Occurrence   Max Depth
   Node                 Type       Meters   Meters   Meters  days hr:min      Meters
   ---------------------------------------------------------------------------------
-  width1               JUNCTION     0.00     0.00     0.00     0  00:00        0.00
-  width10              JUNCTION     0.00     0.00     0.00     0  00:00        0.00
-  width225             JUNCTION     0.00     0.00     0.00     0  00:00        0.00
-  width1000            JUNCTION     0.00     0.00     0.00     0  00:00        0.00
-  width100             OUTFALL      0.00     0.00     0.00     0  00:00        0.00
+  width1               JUNCTION     0.24     0.24     0.24     0  06:08        0.24
+  width10              JUNCTION     0.21     0.21     0.21     0  06:09        0.21
+  width225             JUNCTION     0.23     0.23     0.23     0  06:07        0.23
+  width1000            JUNCTION     0.19     0.19     0.19     0  06:10        0.19
+  width100             OUTFALL      0.09     0.09     0.09     0  06:10        0.09
   
   
   *******************
@@ -111,11 +111,11 @@
                                    Inflow   Inflow   Occurrence      Volume      Volume       Error
   Node                 Type           CMS      CMS  days hr:min    10^6 ltr    10^6 ltr     Percent
   -------------------------------------------------------------------------------------------------
-  width1               JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
-  width10              JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
-  width225             JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
-  width1000            JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
-  width100             OUTFALL      0.000    0.000     0  00:00           0           0       0.000 ltr
+  width1               JUNCTION     0.030    0.030     0  00:00        2.59        2.59       0.255
+  width10              JUNCTION     0.000    0.030     0  06:08           0        2.57       0.478
+  width225             JUNCTION     0.000    0.032     0  00:06           0        2.59       0.525
+  width1000            JUNCTION     0.000    0.030     0  06:09           0        2.56       0.417
+  width100             OUTFALL      0.000    0.030     0  06:10           0        2.55       0.000
   
   
   **********************
@@ -141,9 +141,9 @@
                          Freq      Flow      Flow      Volume
   Outfall Node           Pcnt       CMS       CMS    10^6 ltr
   -----------------------------------------------------------
-  width100               0.00     0.000     0.000       0.000
+  width100              99.28     0.030     0.030       2.549
   -----------------------------------------------------------
-  System                 0.00     0.000     0.000       0.000
+  System                99.28     0.030     0.030       2.549
   
   
   ********************
@@ -155,10 +155,10 @@
                                   |Flow|   Occurrence   |Veloc|    Full    Full
   Link                 Type          CMS  days hr:min     m/sec    Flow   Depth
   -----------------------------------------------------------------------------
-  6                    CONDUIT     0.000     0  00:00      0.00    0.00    0.00
-  7                    CONDUIT     0.000     0  00:00      0.00    0.00    0.00
-  8                    CONDUIT     0.000     0  00:00      0.00    0.00    0.00
-  9                    CONDUIT     0.000     0  00:00      0.00    0.00    0.00
+  6                    CONDUIT     0.032     0  00:06      0.44    0.77    0.23
+  7                    CONDUIT     0.030     0  06:08      0.38    0.72    0.22
+  8                    CONDUIT     0.030     0  06:09      0.35    0.72    0.20
+  9                    CONDUIT     0.030     0  06:10      0.44    0.72    0.14
   
   
   ***************************
@@ -170,10 +170,10 @@
                        /Actual         Up    Down  Sub   Sup   Up    Down  Norm  Inlet 
   Conduit               Length    Dry  Dry   Dry   Crit  Crit  Crit  Crit  Ltd   Ctrl  
   -------------------------------------------------------------------------------------
-  6                       1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
-  7                       1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
-  8                       1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
-  9                       1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  6                       1.00   0.00  0.00  0.00  1.00  0.00  0.00  0.00  0.00  0.00
+  7                       1.00   0.00  0.00  0.00  1.00  0.00  0.00  0.00  0.00  0.00
+  8                       1.00   0.00  0.00  0.00  1.00  0.00  0.00  0.00  0.00  0.00
+  9                       1.00   0.00  0.00  0.00  1.00  0.00  0.00  0.00  0.00  0.00
   
   
   *************************
@@ -183,6 +183,6 @@
   No conduits were surcharged.
   
 
-  Analysis begun on:  Sun Jul 19 15:22:57 2026
-  Analysis ended on:  Sun Jul 19 15:22:57 2026
+  Analysis begun on:  Wed Jul 22 14:19:05 2026
+  Analysis ended on:  Wed Jul 22 14:19:05 2026
   Total elapsed time: < 1 sec

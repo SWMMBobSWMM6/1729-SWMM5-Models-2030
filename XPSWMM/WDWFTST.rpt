@@ -37,20 +37,26 @@
   Wet Weather Inflow .......         0.000         0.000
   Groundwater Inflow .......         0.000         0.000
   RDII Inflow ..............         0.000         0.000
-  External Inflow ..........         0.000         0.000
+  External Inflow ..........         3.967         1.293
   External Outflow .........         0.000         0.000
-  Flooding Loss ............         0.000         0.000
+  Flooding Loss ............         3.526         1.149
   Evaporation Loss .........         0.000         0.000
   Exfiltration Loss ........         0.000         0.000
   Initial Stored Volume ....         0.000         0.000
-  Final Stored Volume ......         0.000         0.000
-  Continuity Error (%) .....         0.000
+  Final Stored Volume ......         0.008         0.003
+  Continuity Error (%) .....        10.911
+  
+  
+  *************************
+  Highest Continuity Errors
+  *************************
+  Node 739 (11.84%)
   
   
   ***************************
   Time-Step Critical Elements
   ***************************
-  None
+  Link 1430 (93.79%)
   
   
   ********************************
@@ -62,24 +68,27 @@
   *********************************
   Most Frequent Nonconverging Nodes
   *********************************
-  Convergence obtained at all time steps.
+  Node 1333 (0.44%)
+  Node Node_1430 (0.43%)
+  Node Node_15331629 (0.07%)
+  Node 739 (0.01%)
   
   
   *************************
   Routing Time Step Summary
   *************************
-  Minimum Time Step           :    59.50 sec
-  Average Time Step           :    59.96 sec
+  Minimum Time Step           :     0.90 sec
+  Average Time Step           :     8.82 sec
   Maximum Time Step           :    60.00 sec
   % of Time in Steady State   :     0.00
-  Average Iterations per Step :     2.00
-  % of Steps Not Converging   :     0.00
+  Average Iterations per Step :     2.21
+  % of Steps Not Converging   :     0.44
   Time Step Frequencies       :
-     60.000 - 23.031 sec      :   100.00 %
-     23.031 -  8.841 sec      :     0.00 %
-      8.841 -  3.393 sec      :     0.00 %
-      3.393 -  1.303 sec      :     0.00 %
-      1.303 -  0.500 sec      :     0.00 %
+     60.000 - 23.031 sec      :     6.19 %
+     23.031 -  8.841 sec      :     0.01 %
+      8.841 -  3.393 sec      :    93.76 %
+      3.393 -  1.303 sec      :     0.03 %
+      1.303 -  0.500 sec      :     0.01 %
   
   
   ******************
@@ -92,10 +101,10 @@
   Node                 Type         Feet     Feet     Feet  days hr:min        Feet
   ---------------------------------------------------------------------------------
   491                  JUNCTION     0.00     0.00   875.00     0  00:00        0.00
-  739                  JUNCTION     0.00     0.00   817.00     0  00:00        0.00
+  739                  JUNCTION   796.15   803.08  1620.08     0  02:51      803.08
   1429                 JUNCTION     0.00     0.00   880.00     0  00:00        0.00
-  Node_1430            JUNCTION     0.00     0.00   803.75     0  00:00        0.00
-  Node_15331629        JUNCTION     0.00     0.00   799.92     0  00:00        0.00
+  Node_1430            JUNCTION   791.98   806.50  1610.25     0  08:05      803.89
+  Node_15331629        JUNCTION   786.59   802.92  1602.84     0  03:38      802.92
   1333                 OUTFALL      0.00     0.00   880.00     0  00:00        0.00
   
   
@@ -110,10 +119,10 @@
   Node                 Type           CFS      CFS  days hr:min    10^6 gal    10^6 gal     Percent
   -------------------------------------------------------------------------------------------------
   491                  JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
-  739                  JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  739                  JUNCTION      1.00     1.00     0  00:00       0.646       0.646      13.431
   1429                 JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
-  Node_1430            JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
-  Node_15331629        JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  Node_1430            JUNCTION      1.00     1.00     0  00:00       0.646       0.646      -5.212
+  Node_15331629        JUNCTION      0.00   255.08     0  03:38           0       0.682       0.000
   1333                 OUTFALL       0.00     0.00     0  00:00           0           0       0.000 gal
   
   
@@ -127,14 +136,24 @@
                                    Hours       Above Crown    Below Rim
   Node                 Type      Surcharged           Feet         Feet
   ---------------------------------------------------------------------
+  739                  JUNCTION       21.17          0.000        0.000
   1429                 JUNCTION       24.00          0.000        0.000
+  Node_15331629        JUNCTION       20.37          0.000        0.000
   
   
   *********************
   Node Flooding Summary
   *********************
   
-  No nodes were flooded.
+  Flooding refers to all water that overflows a node, whether it ponds or not.
+  --------------------------------------------------------------------------
+                                                             Total   Maximum
+                                 Maximum   Time of Max       Flood    Ponded
+                        Hours       Rate    Occurrence      Volume     Depth
+  Node                 Flooded       CFS   days hr:min    10^6 gal      Feet
+  --------------------------------------------------------------------------
+  739                    21.17      1.00      0  02:51       0.570     0.000
+  Node_15331629          14.28    127.54      0  03:38       0.588     0.000
   
   
   ***********************
@@ -160,8 +179,8 @@
                                   |Flow|   Occurrence   |Veloc|    Full    Full
   Link                 Type          CFS  days hr:min    ft/sec    Flow   Depth
   -----------------------------------------------------------------------------
-  743                  CONDUIT      0.00     0  00:00      0.00    0.00    0.00
-  1430                 CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  743                  CONDUIT      0.00     0  00:00      0.00    0.00    0.50
+  1430                 CONDUIT    255.08     0  03:38    >50.00    1.05    0.81
   YMCA                 PUMP         0.00     0  00:00              0.00
   
   
@@ -174,15 +193,20 @@
                        /Actual         Up    Down  Sub   Sup   Up    Down  Norm  Inlet 
   Conduit               Length    Dry  Dry   Dry   Crit  Crit  Crit  Crit  Ltd   Ctrl  
   -------------------------------------------------------------------------------------
-  743                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
-  1430                    1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  743                     1.00   0.12  0.88  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  1430                    1.00   0.15  0.26  0.00  0.59  0.00  0.00  0.00  0.75  0.00
   
   
   *************************
   Conduit Surcharge Summary
   *************************
   
-  No conduits were surcharged.
+  ----------------------------------------------------------------------------
+                                                           Hours        Hours 
+                         --------- Hours Full --------   Above Full   Capacity
+  Conduit                Both Ends  Upstream  Dnstream   Normal Flow   Limited
+  ----------------------------------------------------------------------------
+  1430                        0.96      0.96     18.90      0.02         0.01
   
   
   ***************
@@ -197,6 +221,6 @@
   YMCA                     0.00           0      0.00      0.00      0.00     0.000      0.00    0.0    0.0
   
 
-  Analysis begun on:  Sun Jul 19 15:25:00 2026
-  Analysis ended on:  Sun Jul 19 15:25:00 2026
+  Analysis begun on:  Wed Jul 22 14:27:28 2026
+  Analysis ended on:  Wed Jul 22 14:27:28 2026
   Total elapsed time: < 1 sec

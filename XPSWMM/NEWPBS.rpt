@@ -38,14 +38,14 @@
   Wet Weather Inflow .......         0.000         0.000
   Groundwater Inflow .......         0.000         0.000
   RDII Inflow ..............         0.000         0.000
-  External Inflow ..........         0.000         0.000
+  External Inflow ..........         1.983         0.646
   External Outflow .........         0.000         0.000
-  Flooding Loss ............         0.000         0.000
+  Flooding Loss ............         1.738         0.566
   Evaporation Loss .........         0.000         0.000
   Exfiltration Loss ........         0.000         0.000
   Initial Stored Volume ....         0.000         0.000
-  Final Stored Volume ......         0.000         0.000
-  Continuity Error (%) .....         0.000
+  Final Stored Volume ......         0.233         0.076
+  Continuity Error (%) .....         0.640
   
   
   ***************************
@@ -93,7 +93,7 @@
   Node                 Type         Feet     Feet     Feet  days hr:min        Feet
   ---------------------------------------------------------------------------------
   out                  OUTFALL      0.00     0.00   100.00     0  00:00        0.00
-  in                   STORAGE      0.00     0.00    50.00     0  00:00        0.00
+  in                   STORAGE      9.38    10.00    60.00     0  02:58       10.00
   7                    STORAGE      0.00     0.00   580.00     0  00:00        0.00
   mid                  STORAGE      0.00     0.00   500.00     0  00:00        0.00
   
@@ -109,7 +109,7 @@
   Node                 Type           CFS      CFS  days hr:min    10^6 gal    10^6 gal     Percent
   -------------------------------------------------------------------------------------------------
   out                  OUTFALL       0.00     0.00     0  00:00           0           0       0.000 gal
-  in                   STORAGE       0.00     0.00     0  00:00           0           0       0.000 gal
+  in                   STORAGE       1.00     1.00     0  00:00       0.646       0.646       0.829
   7                    STORAGE       0.00     0.00     0  00:00           0           0       0.000 gal
   mid                  STORAGE       0.00     0.00     0  00:00           0           0       0.000 gal
   
@@ -125,7 +125,14 @@
   Node Flooding Summary
   *********************
   
-  No nodes were flooded.
+  Flooding refers to all water that overflows a node, whether it ponds or not.
+  --------------------------------------------------------------------------
+                                                             Total   Maximum
+                                 Maximum   Time of Max       Flood    Ponded
+                        Hours       Rate    Occurrence      Volume     Depth
+  Node                 Flooded       CFS   days hr:min    10^6 gal      Feet
+  --------------------------------------------------------------------------
+  in                     21.03      1.00      0  02:58       0.566     0.000
   
   
   **********************
@@ -137,7 +144,7 @@
                           Volume   Pcnt   Pcnt   Pcnt      Volume   Pcnt     Occurrence    Outflow
   Storage Unit          1000 ft³   Full   Loss   Loss    1000 ft³   Full    days hr:min        CFS
   ------------------------------------------------------------------------------------------------
-  in                       0.000    0.0    0.0    0.0       0.000    0.0       0  00:00       0.00
+  in                       9.378   93.8    0.0    0.0      10.000  100.0       0  02:58       0.00
   7                        0.000    0.0    0.0    0.0       0.000    0.0       0  00:00       0.00
   mid                      0.000    0.0    0.0    0.0       0.000    0.0       0  00:00       0.00
   
@@ -165,7 +172,7 @@
                                   |Flow|   Occurrence   |Veloc|    Full    Full
   Link                 Type          CFS  days hr:min    ft/sec    Flow   Depth
   -----------------------------------------------------------------------------
-  8                    CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  8                    CONDUIT      0.00     0  00:00      0.00    0.00    0.50
   3                    CONDUIT      0.00     0  00:00      0.00    0.00    0.00
   pump1                PUMP         0.00     0  00:00              0.00
   
@@ -179,7 +186,7 @@
                        /Actual         Up    Down  Sub   Sup   Up    Down  Norm  Inlet 
   Conduit               Length    Dry  Dry   Dry   Crit  Crit  Crit  Crit  Ltd   Ctrl  
   -------------------------------------------------------------------------------------
-  8                       1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  8                       1.00   0.00  1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
   3                       1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
   
   
@@ -202,6 +209,6 @@
   pump1                    0.00           0      0.00      0.00      0.00     0.000      0.00    0.0    0.0
   
 
-  Analysis begun on:  Sun Jul 19 15:21:11 2026
-  Analysis ended on:  Sun Jul 19 15:21:11 2026
+  Analysis begun on:  Wed Jul 22 14:11:16 2026
+  Analysis ended on:  Wed Jul 22 14:11:16 2026
   Total elapsed time: < 1 sec

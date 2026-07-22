@@ -36,14 +36,20 @@
   Wet Weather Inflow .......         0.000         0.000
   Groundwater Inflow .......         0.000         0.000
   RDII Inflow ..............         0.000         0.000
-  External Inflow ..........         0.000         0.000
-  External Outflow .........         0.000         0.000
+  External Inflow ..........         1.983         0.646
+  External Outflow .........         1.916         0.625
   Flooding Loss ............         0.000         0.000
   Evaporation Loss .........         0.000         0.000
   Exfiltration Loss ........         0.000         0.000
   Initial Stored Volume ....         0.000         0.000
-  Final Stored Volume ......         0.000         0.000
-  Continuity Error (%) .....         0.000
+  Final Stored Volume ......         0.008         0.003
+  Continuity Error (%) .....         2.973
+  
+  
+  *************************
+  Highest Continuity Errors
+  *************************
+  Node 10A (1.05%)
   
   
   ***************************
@@ -90,11 +96,11 @@
                                    Depth    Depth      HGL   Occurrence   Max Depth
   Node                 Type         Feet     Feet     Feet  days hr:min        Feet
   ---------------------------------------------------------------------------------
-  10A                  JUNCTION     0.00     0.00    56.00     0  00:00        0.00
-  50A                  JUNCTION     0.00     0.00    56.00     0  00:00        0.00
-  50B                  JUNCTION     0.00     0.00    55.60     0  00:00        0.00
+  10A                  JUNCTION    51.35    51.97   107.97     0  01:37       51.97
+  50A                  JUNCTION    49.49    50.62   106.62     0  00:37       50.59
+  50B                  JUNCTION    48.87    50.35   105.95     0  01:38       50.35
   D.A.E1a              JUNCTION     0.00     0.00    55.00     0  00:00        0.00
-  228                  JUNCTION     0.00     0.00    56.00     0  00:00        0.00
+  228                  JUNCTION    52.13    52.33   108.33     0  00:12       52.33
   50-BOUNDRY           OUTFALL      0.00     0.00    55.50     0  00:00        0.00
   D.A.                 STORAGE      0.00     0.00    56.50     0  00:00        0.00
   D.A._2               STORAGE      0.00     0.00    56.50     0  00:00        0.00
@@ -112,12 +118,12 @@
                                    Inflow   Inflow   Occurrence      Volume      Volume       Error
   Node                 Type           CFS      CFS  days hr:min    10^6 gal    10^6 gal     Percent
   -------------------------------------------------------------------------------------------------
-  10A                  JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
-  50A                  JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
-  50B                  JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  10A                  JUNCTION      0.00     1.01     0  00:12           0       0.641       1.059
+  50A                  JUNCTION      0.00     1.00     1  00:00           0       0.634       0.758
+  50B                  JUNCTION      0.00     1.16     0  00:37           0        0.63       0.826
   D.A.E1a              JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
-  228                  JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
-  50-BOUNDRY           OUTFALL       0.00     0.00     0  00:00           0           0       0.000 gal
+  228                  JUNCTION      1.00     1.00     0  00:00       0.646       0.646       0.806
+  50-BOUNDRY           OUTFALL       0.00     1.00     0  01:39           0       0.624       0.000
   D.A.                 STORAGE       0.00     0.00     0  00:00           0           0       0.000 gal
   D.A._2               STORAGE       0.00     0.00     0  00:00           0           0       0.000 gal
   D.A._3               STORAGE       0.00     0.00     0  00:00           0           0       0.000 gal
@@ -162,9 +168,9 @@
                          Freq      Flow      Flow      Volume
   Outfall Node           Pcnt       CFS       CFS    10^6 gal
   -----------------------------------------------------------
-  50-BOUNDRY             0.00      0.00      0.00       0.000
+  50-BOUNDRY            96.69      1.00      1.00       0.624
   -----------------------------------------------------------
-  System                 0.00      0.00      0.00       0.000
+  System                96.69      1.00      1.00       0.624
   
   
   ********************
@@ -176,12 +182,12 @@
                                   |Flow|   Occurrence   |Veloc|    Full    Full
   Link                 Type          CFS  days hr:min    ft/sec    Flow   Depth
   -----------------------------------------------------------------------------
-  NEW                  CONDUIT      0.00     0  00:00      0.00    0.00    0.00
-  REACH                CONDUIT      0.00     0  00:00      0.00    0.00    0.00
-  REACH_2              CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  NEW                  CONDUIT      1.00     1  00:00      2.31    0.03    0.11
+  REACH                CONDUIT      1.16     0  00:37      5.50    0.01    0.07
+  REACH_2              CONDUIT      1.00     0  01:39      3.02    0.01    0.06
   REACH_3              CONDUIT      0.00     0  00:00      0.00    0.00    0.00
-  reach11c             CONDUIT      0.00     0  00:00      0.00    0.00    0.00
-  reach1a              CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  reach11c             CONDUIT      0.00     0  00:00      0.00    0.00    0.08
+  reach1a              CONDUIT      1.01     0  00:12      2.69    0.04    0.14
   REACH_11             ORIFICE      0.00     0  00:00                      0.00
   reach4               ORIFICE      0.00     0  00:00                      0.00
   reach2               WEIR         0.00     0  00:00                      0.00
@@ -196,12 +202,12 @@
                        /Actual         Up    Down  Sub   Sup   Up    Down  Norm  Inlet 
   Conduit               Length    Dry  Dry   Dry   Crit  Crit  Crit  Crit  Ltd   Ctrl  
   -------------------------------------------------------------------------------------
-  NEW                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
-  REACH                   1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
-  REACH_2                 1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  NEW                     1.00   0.02  0.00  0.00  0.00  0.00  0.00  0.98  0.00  0.00
+  REACH                   1.00   0.03  0.00  0.00  0.00  0.97  0.00  0.01  0.97  0.00
+  REACH_2                 1.00   0.03  0.00  0.00  0.00  0.00  0.00  0.97  0.00  0.00
   REACH_3                 1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
-  reach11c                1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
-  reach1a                 1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  reach11c                1.00   0.03  0.97  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  reach1a                 1.00   0.01  0.00  0.00  0.98  0.00  0.00  0.01  0.98  0.00
   
   
   *************************
@@ -211,6 +217,6 @@
   No conduits were surcharged.
   
 
-  Analysis begun on:  Sun Jul 19 15:21:44 2026
-  Analysis ended on:  Sun Jul 19 15:21:44 2026
+  Analysis begun on:  Wed Jul 22 14:14:25 2026
+  Analysis ended on:  Wed Jul 22 14:14:25 2026
   Total elapsed time: < 1 sec

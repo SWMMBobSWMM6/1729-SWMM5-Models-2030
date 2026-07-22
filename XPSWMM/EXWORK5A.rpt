@@ -39,14 +39,20 @@
   Wet Weather Inflow .......         0.000         0.000
   Groundwater Inflow .......         0.000         0.000
   RDII Inflow ..............         0.000         0.000
-  External Inflow ..........         0.000         0.000
-  External Outflow .........         0.000         0.000
+  External Inflow ..........         1.983         0.646
+  External Outflow .........         1.993         0.649
   Flooding Loss ............         0.000         0.000
   Evaporation Loss .........         0.000         0.000
   Exfiltration Loss ........         0.000         0.000
   Initial Stored Volume ....         0.000         0.000
-  Final Stored Volume ......         0.000         0.000
-  Continuity Error (%) .....         0.000
+  Final Stored Volume ......         0.069         0.023
+  Continuity Error (%) .....        -3.983
+  
+  
+  *************************
+  Highest Continuity Errors
+  *************************
+  Node 208 (-1.76%)
   
   
   ***************************
@@ -64,7 +70,10 @@
   *********************************
   Most Frequent Nonconverging Nodes
   *********************************
-  Convergence obtained at all time steps.
+  Node Outlet (0.01%)
+  Node 202 (0.01%)
+  Node 208 (0.00%)
+  Node Inflow (0.00%)
   
   
   *************************
@@ -74,8 +83,8 @@
   Average Time Step           :     2.00 sec
   Maximum Time Step           :     2.00 sec
   % of Time in Steady State   :     0.00
-  Average Iterations per Step :     2.00
-  % of Steps Not Converging   :     0.00
+  Average Iterations per Step :     2.01
+  % of Steps Not Converging   :     0.01
   Time Step Frequencies       :
       2.000 -  1.516 sec      :   100.00 %
       1.516 -  1.149 sec      :     0.00 %
@@ -93,11 +102,11 @@
                                    Depth    Depth      HGL   Occurrence   Max Depth
   Node                 Type         Feet     Feet     Feet  days hr:min        Feet
   ---------------------------------------------------------------------------------
-  Inflow               JUNCTION     0.00     0.00    25.00     0  00:00        0.00
-  202                  JUNCTION     0.00     0.00    25.00     0  00:00        0.00
-  204                  JUNCTION     0.00     0.00    25.00     0  00:00        0.00
-  208                  JUNCTION     0.00     0.00    25.00     0  00:00        0.00
-  Outlet               OUTFALL      0.00     0.00    25.00     0  00:00        0.00
+  Inflow               JUNCTION     1.22     1.41    26.41     0  00:00        1.27
+  202                  JUNCTION     1.22     1.66    26.66     0  00:00        1.25
+  204                  JUNCTION     0.05     0.05    25.05     0  00:12        0.05
+  208                  JUNCTION     1.22     1.46    26.46     0  00:00        1.26
+  Outlet               OUTFALL      0.01     0.01    25.01     0  00:12        0.01
   
   
   *******************
@@ -110,11 +119,11 @@
                                    Inflow   Inflow   Occurrence      Volume      Volume       Error
   Node                 Type           CFS      CFS  days hr:min    10^6 gal    10^6 gal     Percent
   -------------------------------------------------------------------------------------------------
-  Inflow               JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
-  202                  JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
-  204                  JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
-  208                  JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
-  Outlet               OUTFALL       0.00     0.00     0  00:00           0           0       0.000 gal
+  Inflow               JUNCTION      1.00    81.44     0  00:00       0.646       0.669       0.885
+  202                  JUNCTION      0.00    20.64     0  00:00           0       0.654      -0.119
+  204                  JUNCTION      0.00     7.15     0  00:00           0       0.653       0.526
+  208                  JUNCTION      0.00    65.18     0  00:01           0       0.665      -1.727
+  Outlet               OUTFALL       0.00     1.46     0  00:12           0       0.649       0.000
   
   
   **********************
@@ -140,9 +149,9 @@
                          Freq      Flow      Flow      Volume
   Outfall Node           Pcnt       CFS       CFS    10^6 gal
   -----------------------------------------------------------
-  Outlet                 0.00      0.00      0.00       0.000
+  Outlet                99.97      1.01      1.46       0.649
   -----------------------------------------------------------
-  System                 0.00      0.00      0.00       0.000
+  System                99.97      1.01      1.46       0.649
   
   
   ********************
@@ -154,10 +163,10 @@
                                   |Flow|   Occurrence   |Veloc|    Full    Full
   Link                 Type          CFS  days hr:min    ft/sec    Flow   Depth
   -----------------------------------------------------------------------------
-  Trapin               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
-  Culvert              CONDUIT      0.00     0  00:00      0.00    0.00    0.00
-  Trapout              CONDUIT      0.00     0  00:00      0.00    0.00    0.00
-  Extra                CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  Trapin               CONDUIT     80.44     0  00:00      1.46    0.01    0.02
+  Culvert              CONDUIT      7.15     0  00:00     21.89    0.04    0.10
+  Trapout              CONDUIT      1.46     0  00:12      0.22    0.00    0.00
+  Extra                CONDUIT     20.64     0  00:00      2.62    0.01    0.03
   
   
   ***************************
@@ -169,10 +178,10 @@
                        /Actual         Up    Down  Sub   Sup   Up    Down  Norm  Inlet 
   Conduit               Length    Dry  Dry   Dry   Crit  Crit  Crit  Crit  Ltd   Ctrl  
   -------------------------------------------------------------------------------------
-  Trapin                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
-  Culvert                 1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
-  Trapout                 1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
-  Extra                   1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  Trapin                  1.00   0.00  0.00  0.00  1.00  0.00  0.00  0.00  0.00  0.00
+  Culvert                 1.00   0.00  0.00  0.00  0.00  1.00  0.00  0.00  0.00  0.00
+  Trapout                 1.00   0.00  0.00  0.00  1.00  0.00  0.00  0.00  0.00  0.00
+  Extra                   1.00   0.00  0.00  0.00  1.00  0.00  0.00  0.00  0.00  0.00
   
   
   *************************
@@ -182,6 +191,6 @@
   No conduits were surcharged.
   
 
-  Analysis begun on:  Sun Jul 19 15:18:42 2026
-  Analysis ended on:  Sun Jul 19 15:18:42 2026
+  Analysis begun on:  Wed Jul 22 12:54:49 2026
+  Analysis ended on:  Wed Jul 22 12:54:49 2026
   Total elapsed time: < 1 sec

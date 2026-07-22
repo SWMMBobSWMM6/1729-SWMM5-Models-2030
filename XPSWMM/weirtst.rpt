@@ -36,13 +36,13 @@
   Wet Weather Inflow .......         0.000         0.000
   Groundwater Inflow .......         0.000         0.000
   RDII Inflow ..............         0.000         0.000
-  External Inflow ..........         0.000         0.000
+  External Inflow ..........         1.983         0.646
   External Outflow .........         0.000         0.000
-  Flooding Loss ............         0.000         0.000
+  Flooding Loss ............         1.977         0.644
   Evaporation Loss .........         0.000         0.000
   Exfiltration Loss ........         0.000         0.000
   Initial Stored Volume ....         0.000         0.000
-  Final Stored Volume ......         0.000         0.000
+  Final Stored Volume ......         0.006         0.002
   Continuity Error (%) .....         0.000
   
   
@@ -98,7 +98,7 @@
   300                  JUNCTION     0.00     0.00   600.00     0  00:00        0.00
   152                  JUNCTION     0.00     0.00   595.00     0  00:00        0.00
   OF#2                 OUTFALL      0.00     0.00   468.00     0  00:00        0.00
-  IC9                  STORAGE      0.00     0.00   592.00     0  00:00        0.00
+  IC9                  STORAGE      9.98    10.00   602.00     0  00:04       10.00
   IC8                  STORAGE      0.00     0.00   590.00     0  00:00        0.00
   IC6                  STORAGE      0.00     0.00   590.00     0  00:00        0.00
   SHAFT2               STORAGE      0.00     0.00   595.00     0  00:00        0.00
@@ -123,7 +123,7 @@
   300                  JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
   152                  JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
   OF#2                 OUTFALL       0.00     0.00     0  00:00           0           0       0.000 gal
-  IC9                  STORAGE       0.00     0.00     0  00:00           0           0       0.000 gal
+  IC9                  STORAGE       1.00     1.00     0  00:00       0.646       0.646      -0.001
   IC8                  STORAGE       0.00     0.00     0  00:00           0           0       0.000 gal
   IC6                  STORAGE       0.00     0.00     0  00:00           0           0       0.000 gal
   SHAFT2               STORAGE       0.00     0.00     0  00:00           0           0       0.000 gal
@@ -141,7 +141,14 @@
   Node Flooding Summary
   *********************
   
-  No nodes were flooded.
+  Flooding refers to all water that overflows a node, whether it ponds or not.
+  --------------------------------------------------------------------------
+                                                             Total   Maximum
+                                 Maximum   Time of Max       Flood    Ponded
+                        Hours       Rate    Occurrence      Volume     Depth
+  Node                 Flooded       CFS   days hr:min    10^6 gal      Feet
+  --------------------------------------------------------------------------
+  IC9                    23.93      1.00      0  00:04       0.644     0.000
   
   
   **********************
@@ -153,7 +160,7 @@
                           Volume   Pcnt   Pcnt   Pcnt      Volume   Pcnt     Occurrence    Outflow
   Storage Unit          1000 ft³   Full   Loss   Loss    1000 ft³   Full    days hr:min        CFS
   ------------------------------------------------------------------------------------------------
-  IC9                      0.000    0.0    0.0    0.0       0.000    0.0       0  00:00       0.00
+  IC9                      0.266   99.8    0.0    0.0       0.266  100.0       0  00:04       0.00
   IC8                      0.000    0.0    0.0    0.0       0.000    0.0       0  00:00       0.00
   IC6                      0.000    0.0    0.0    0.0       0.000    0.0       0  00:00       0.00
   SHAFT2                   0.000    0.0    0.0    0.0       0.000    0.0       0  00:00       0.00
@@ -226,6 +233,6 @@
   No conduits were surcharged.
   
 
-  Analysis begun on:  Sun Jul 19 15:25:00 2026
-  Analysis ended on:  Sun Jul 19 15:25:00 2026
+  Analysis begun on:  Wed Jul 22 14:27:29 2026
+  Analysis ended on:  Wed Jul 22 14:27:29 2026
   Total elapsed time: < 1 sec

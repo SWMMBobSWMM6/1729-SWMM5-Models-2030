@@ -36,13 +36,13 @@
   Wet Weather Inflow .......         0.000         0.000
   Groundwater Inflow .......         0.000         0.000
   RDII Inflow ..............         0.000         0.000
-  External Inflow ..........         0.000         0.000
+  External Inflow ..........         1.983         0.646
   External Outflow .........         0.000         0.000
-  Flooding Loss ............         0.000         0.000
+  Flooding Loss ............         1.754         0.572
   Evaporation Loss .........         0.000         0.000
   Exfiltration Loss ........         0.000         0.000
   Initial Stored Volume ....         0.000         0.000
-  Final Stored Volume ......         0.000         0.000
+  Final Stored Volume ......         0.230         0.075
   Continuity Error (%) .....         0.000
   
   
@@ -92,7 +92,7 @@
   ---------------------------------------------------------------------------------
   10000                JUNCTION     0.00     0.00   140.00     0  00:00        0.00
   11000                OUTFALL      0.00     0.00   140.00     0  00:00        0.00
-  26000                STORAGE      0.00     0.00   148.00     0  00:00        0.00
+  26000                STORAGE      9.42    10.00   158.00     0  02:46       10.00
   4                    STORAGE      0.00     0.00   140.00     0  00:00        0.00
   1                    STORAGE      0.00     0.00   140.00     0  00:00        0.00
   
@@ -109,7 +109,7 @@
   -------------------------------------------------------------------------------------------------
   10000                JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
   11000                OUTFALL       0.00     0.00     0  00:00           0           0       0.000 gal
-  26000                STORAGE       0.00     0.00     0  00:00           0           0       0.000 gal
+  26000                STORAGE       1.00     1.00     0  00:00       0.646       0.646      -0.001
   4                    STORAGE       0.00     0.00     0  00:00           0           0       0.000 gal
   1                    STORAGE       0.00     0.00     0  00:00           0           0       0.000 gal
   
@@ -125,7 +125,14 @@
   Node Flooding Summary
   *********************
   
-  No nodes were flooded.
+  Flooding refers to all water that overflows a node, whether it ponds or not.
+  --------------------------------------------------------------------------
+                                                             Total   Maximum
+                                 Maximum   Time of Max       Flood    Ponded
+                        Hours       Rate    Occurrence      Volume     Depth
+  Node                 Flooded       CFS   days hr:min    10^6 gal      Feet
+  --------------------------------------------------------------------------
+  26000                  21.22      1.00      0  02:46       0.571     0.000
   
   
   **********************
@@ -137,7 +144,7 @@
                           Volume   Pcnt   Pcnt   Pcnt      Volume   Pcnt     Occurrence    Outflow
   Storage Unit          1000 ft³   Full   Loss   Loss    1000 ft³   Full    days hr:min        CFS
   ------------------------------------------------------------------------------------------------
-  26000                    0.000    0.0    0.0    0.0       0.000    0.0       0  00:00       0.00
+  26000                    9.421   94.2    0.0    0.0      10.000  100.0       0  02:46       0.00
   4                        0.000    0.0    0.0    0.0       0.000    0.0       0  00:00       0.00
   1                        0.000    0.0    0.0    0.0       0.000    0.0       0  00:00       0.00
   
@@ -192,6 +199,6 @@
   No conduits were surcharged.
   
 
-  Analysis begun on:  Sun Jul 19 15:15:50 2026
-  Analysis ended on:  Sun Jul 19 15:15:50 2026
+  Analysis begun on:  Wed Jul 22 11:52:38 2026
+  Analysis ended on:  Wed Jul 22 11:52:38 2026
   Total elapsed time: < 1 sec

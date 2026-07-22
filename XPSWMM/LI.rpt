@@ -36,20 +36,27 @@
   Wet Weather Inflow .......         0.000         0.000
   Groundwater Inflow .......         0.000         0.000
   RDII Inflow ..............         0.000         0.000
-  External Inflow ..........         0.000         0.000
-  External Outflow .........         0.000         0.000
+  External Inflow ..........         1.983         0.646
+  External Outflow .........         1.877         0.612
   Flooding Loss ............         0.000         0.000
   Evaporation Loss .........         0.000         0.000
   Exfiltration Loss ........         0.000         0.000
   Initial Stored Volume ....         0.000         0.000
-  Final Stored Volume ......         0.000         0.000
-  Continuity Error (%) .....         0.000
+  Final Stored Volume ......         0.008         0.002
+  Continuity Error (%) .....         4.992
+  
+  
+  *************************
+  Highest Continuity Errors
+  *************************
+  Node C4 (1.77%)
+  Node C3 (1.69%)
   
   
   ***************************
   Time-Step Critical Elements
   ***************************
-  None
+  Link C4-O (97.98%)
   
   
   ********************************
@@ -61,23 +68,26 @@
   *********************************
   Most Frequent Nonconverging Nodes
   *********************************
-  Convergence obtained at all time steps.
+  Node OUTLET (0.06%)
+  Node C4 (0.04%)
+  Node C3 (0.03%)
+  Node C2 (0.01%)
   
   
   *************************
   Routing Time Step Summary
   *************************
-  Minimum Time Step           :    14.50 sec
-  Average Time Step           :    15.00 sec
+  Minimum Time Step           :     1.92 sec
+  Average Time Step           :     5.50 sec
   Maximum Time Step           :    15.00 sec
   % of Time in Steady State   :     0.00
-  Average Iterations per Step :     2.00
-  % of Steps Not Converging   :     0.00
+  Average Iterations per Step :     2.03
+  % of Steps Not Converging   :     0.06
   Time Step Frequencies       :
-     15.000 -  7.597 sec      :   100.00 %
-      7.597 -  3.848 sec      :     0.00 %
+     15.000 -  7.597 sec      :     2.01 %
+      7.597 -  3.848 sec      :    97.98 %
       3.848 -  1.949 sec      :     0.00 %
-      1.949 -  0.987 sec      :     0.00 %
+      1.949 -  0.987 sec      :     0.01 %
       0.987 -  0.500 sec      :     0.00 %
   
   
@@ -90,9 +100,9 @@
                                    Depth    Depth      HGL   Occurrence   Max Depth
   Node                 Type         Feet     Feet     Feet  days hr:min        Feet
   ---------------------------------------------------------------------------------
-  C2                   JUNCTION     0.00     0.00   134.45     0  00:00        0.00
-  C3                   JUNCTION     0.00     0.00   128.12     0  00:00        0.00
-  C4                   JUNCTION     0.00     0.00   128.66     0  00:00        0.00
+  C2                   JUNCTION   128.24   128.69   263.14     0  01:07      128.69
+  C3                   JUNCTION   120.64   122.08   250.20     0  00:55      121.96
+  C4                   JUNCTION   116.73   118.80   247.46     0  01:18      118.72
   OUTLET               OUTFALL      0.00     0.00   118.50     0  00:00        0.00
   
   
@@ -106,10 +116,10 @@
                                    Inflow   Inflow   Occurrence      Volume      Volume       Error
   Node                 Type           CFS      CFS  days hr:min    10^6 gal    10^6 gal     Percent
   -------------------------------------------------------------------------------------------------
-  C2                   JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
-  C3                   JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
-  C4                   JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
-  OUTLET               OUTFALL       0.00     0.00     0  00:00           0           0       0.000 gal
+  C2                   JUNCTION      1.00     1.00     0  00:00       0.646       0.646       2.063
+  C3                   JUNCTION      0.00     1.00     0  01:19           0       0.633       1.714
+  C4                   JUNCTION      0.00     1.83     0  00:55           0       0.623       1.797
+  OUTLET               OUTFALL       0.00     2.17     0  01:19           0       0.612       0.000
   
   
   **********************
@@ -135,9 +145,9 @@
                          Freq      Flow      Flow      Volume
   Outfall Node           Pcnt       CFS       CFS    10^6 gal
   -----------------------------------------------------------
-  OUTLET                 0.00      0.00      0.00       0.000
+  OUTLET                98.01      1.00      2.17       0.612
   -----------------------------------------------------------
-  System                 0.00      0.00      0.00       0.000
+  System                98.01      1.00      2.17       0.612
   
   
   ********************
@@ -149,9 +159,9 @@
                                   |Flow|   Occurrence   |Veloc|    Full    Full
   Link                 Type          CFS  days hr:min    ft/sec    Flow   Depth
   -----------------------------------------------------------------------------
-  C2-3                 CONDUIT      0.00     0  00:00      0.00    0.00    0.00
-  C3-4                 CONDUIT      0.00     0  00:00      0.00    0.00    0.00
-  C4-O                 CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  C2-3                 CONDUIT      1.00     0  01:19      5.63    0.03    0.12
+  C3-4                 CONDUIT      1.83     0  00:55      3.24    0.06    0.17
+  C4-O                 CONDUIT      2.17     0  01:19    >50.00    0.01    0.08
   
   
   ***************************
@@ -163,9 +173,9 @@
                        /Actual         Up    Down  Sub   Sup   Up    Down  Norm  Inlet 
   Conduit               Length    Dry  Dry   Dry   Crit  Crit  Crit  Crit  Ltd   Ctrl  
   -------------------------------------------------------------------------------------
-  C2-3                    1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
-  C3-4                    1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
-  C4-O                    1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  C2-3                    1.00   0.02  0.00  0.00  0.00  0.00  0.00  0.98  0.00  0.00
+  C3-4                    1.00   0.04  0.00  0.00  0.00  0.00  0.00  0.96  0.00  0.00
+  C4-O                    1.00   0.05  0.00  0.00  0.00  0.00  0.00  0.95  0.00  0.00
   
   
   *************************
@@ -175,6 +185,6 @@
   No conduits were surcharged.
   
 
-  Analysis begun on:  Sun Jul 19 15:20:29 2026
-  Analysis ended on:  Sun Jul 19 15:20:29 2026
-  Total elapsed time: < 1 sec
+  Analysis begun on:  Wed Jul 22 14:05:02 2026
+  Analysis ended on:  Wed Jul 22 14:05:03 2026
+  Total elapsed time: 00:00:01

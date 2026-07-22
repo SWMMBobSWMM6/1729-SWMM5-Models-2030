@@ -36,14 +36,21 @@
   Wet Weather Inflow .......         0.000         0.000
   Groundwater Inflow .......         0.000         0.000
   RDII Inflow ..............         0.000         0.000
-  External Inflow ..........         0.000         0.000
+  External Inflow ..........         1.983         0.646
   External Outflow .........         0.000         0.000
   Flooding Loss ............         0.000         0.000
   Evaporation Loss .........         0.000         0.000
   Exfiltration Loss ........         0.000         0.000
   Initial Stored Volume ....         0.000         0.000
-  Final Stored Volume ......         0.000         0.000
-  Continuity Error (%) .....         0.000
+  Final Stored Volume ......         1.127         0.367
+  Continuity Error (%) .....        43.186
+  
+  
+  *************************
+  Highest Continuity Errors
+  *************************
+  Node mh (93.79%)
+  Node 202 (7.68%)
   
   
   ***************************
@@ -55,13 +62,15 @@
   ********************************
   Highest Flow Instability Indexes
   ********************************
-  All links are stable.
+  Link 203 (144)
   
   
   *********************************
   Most Frequent Nonconverging Nodes
   *********************************
-  Convergence obtained at all time steps.
+  Node 202 (94.80%)
+  Node 204 (94.80%)
+  Node mh (94.66%)
   
   
   *************************
@@ -71,8 +80,8 @@
   Average Time Step           :    59.96 sec
   Maximum Time Step           :    60.00 sec
   % of Time in Steady State   :     0.00
-  Average Iterations per Step :     2.00
-  % of Steps Not Converging   :     0.00
+  Average Iterations per Step :    48.02
+  % of Steps Not Converging   :    94.80
   Time Step Frequencies       :
      60.000 - 23.031 sec      :   100.00 %
      23.031 -  8.841 sec      :     0.00 %
@@ -90,11 +99,11 @@
                                    Depth    Depth      HGL   Occurrence   Max Depth
   Node                 Type         Feet     Feet     Feet  days hr:min        Feet
   ---------------------------------------------------------------------------------
-  mh                   JUNCTION     0.00     0.00   138.00     0  00:00        0.00
+  mh                   JUNCTION   106.58   112.04   250.04     1  00:00      112.04
   mh_2                 JUNCTION     0.00     0.00   135.00     0  00:00        0.00
   mh_3                 JUNCTION     0.00     0.00   155.00     0  00:00        0.00
   mh_4                 JUNCTION     0.00     0.00   125.00     0  00:00        0.00
-  202                  JUNCTION     0.00     0.00   200.00     0  00:00        0.00
+  202                  JUNCTION    44.49    50.56   250.56     0  23:58       50.56
   204                  OUTFALL      0.00     0.00   200.00     0  00:00        0.00
   
   
@@ -108,11 +117,11 @@
                                    Inflow   Inflow   Occurrence      Volume      Volume       Error
   Node                 Type           CFS      CFS  days hr:min    10^6 gal    10^6 gal     Percent
   -------------------------------------------------------------------------------------------------
-  mh                   JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  mh                   JUNCTION      1.00     3.79     0  01:49       0.646       0.686    1511.335
   mh_2                 JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
   mh_3                 JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
   mh_4                 JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
-  202                  JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  202                  JUNCTION      0.00     2.69     0  02:15           0      0.0425       8.318
   204                  OUTFALL       0.00     0.00     0  00:00           0           0       0.000 gal
   
   
@@ -163,9 +172,9 @@
   -----------------------------------------------------------------------------
   la1                  CONDUIT      0.00     0  00:00      0.00    0.00    0.00
   la2                  CONDUIT      0.00     0  00:00      0.00    0.00    0.00
-  la3                  CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  la3                  CONDUIT      0.00     0  00:00      0.00    0.00    0.50
   205                  CONDUIT      0.00     0  00:00      0.00    0.00    0.00
-  203                  WEIR         0.00     0  00:00                      0.00
+  203                  WEIR         2.79     0  01:49                      1.00
   
   
   ***************************
@@ -179,7 +188,7 @@
   -------------------------------------------------------------------------------------
   la1                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
   la2                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
-  la3                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  la3                     1.00   0.02  0.98  0.00  0.00  0.00  0.00  0.00  0.00  0.00
   205                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
   
   
@@ -190,6 +199,6 @@
   No conduits were surcharged.
   
 
-  Analysis begun on:  Sun Jul 19 15:17:48 2026
-  Analysis ended on:  Sun Jul 19 15:17:48 2026
+  Analysis begun on:  Wed Jul 22 12:00:24 2026
+  Analysis ended on:  Wed Jul 22 12:00:24 2026
   Total elapsed time: < 1 sec

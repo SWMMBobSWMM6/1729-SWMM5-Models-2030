@@ -36,14 +36,14 @@
   Wet Weather Inflow .......         0.000         0.000
   Groundwater Inflow .......         0.000         0.000
   RDII Inflow ..............         0.000         0.000
-  External Inflow ..........         0.000         0.000
+  External Inflow ..........         1.983         0.646
   External Outflow .........         0.000         0.000
-  Flooding Loss ............         0.000         0.000
+  Flooding Loss ............         1.811         0.590
   Evaporation Loss .........         0.000         0.000
   Exfiltration Loss ........         0.000         0.000
   Initial Stored Volume ....         0.402         0.131
-  Final Stored Volume ......         0.402         0.131
-  Continuity Error (%) .....         0.000
+  Final Stored Volume ......         0.574         0.187
+  Continuity Error (%) .....        -0.005
   
   
   ***************************
@@ -93,7 +93,7 @@
   238                  JUNCTION     0.00     0.00    20.00     0  00:00        0.00
   240                  JUNCTION     0.00     0.00    20.00     0  00:00        0.00
   Outfall              OUTFALL      0.00     0.00    20.00     0  00:00        0.00
-  Duckpond             STORAGE      2.50     2.50    22.50     0  00:00        2.50
+  Duckpond             STORAGE      9.67    10.00    30.00     0  02:05       10.00
   202                  STORAGE      2.50     2.50    22.50     0  00:00        2.50
   203                  STORAGE      2.50     2.50    22.50     0  00:00        2.50
   204                  STORAGE      2.50     2.50    22.50     0  00:00        2.50
@@ -115,7 +115,7 @@
   238                  JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
   240                  JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
   Outfall              OUTFALL       0.00     0.00     0  00:00           0           0       0.000 gal
-  Duckpond             STORAGE       0.00     0.00     0  00:00           0      0.0187       0.000
+  Duckpond             STORAGE       1.00     1.00     0  00:00       0.646       0.665      -0.005
   202                  STORAGE       0.00     0.00     0  00:00           0      0.0187       0.000
   203                  STORAGE       0.00     0.00     0  00:00           0      0.0187       0.000
   204                  STORAGE       0.00     0.00     0  00:00           0      0.0187       0.000
@@ -135,7 +135,14 @@
   Node Flooding Summary
   *********************
   
-  No nodes were flooded.
+  Flooding refers to all water that overflows a node, whether it ponds or not.
+  --------------------------------------------------------------------------
+                                                             Total   Maximum
+                                 Maximum   Time of Max       Flood    Ponded
+                        Hours       Rate    Occurrence      Volume     Depth
+  Node                 Flooded       CFS   days hr:min    10^6 gal      Feet
+  --------------------------------------------------------------------------
+  Duckpond               21.92      1.00      0  02:05       0.590     0.000
   
   
   **********************
@@ -147,7 +154,7 @@
                           Volume   Pcnt   Pcnt   Pcnt      Volume   Pcnt     Occurrence    Outflow
   Storage Unit          1000 ft³   Full   Loss   Loss    1000 ft³   Full    days hr:min        CFS
   ------------------------------------------------------------------------------------------------
-  Duckpond                 2.500   25.0    0.0    0.0       2.500   25.0       0  00:00       0.00
+  Duckpond                 9.674   96.7    0.0    0.0      10.000  100.0       0  02:05       0.00
   202                      2.500   25.0    0.0    0.0       2.500   25.0       0  00:00       0.00
   203                      2.500   25.0    0.0    0.0       2.500   25.0       0  00:00       0.00
   204                      2.500   25.0    0.0    0.0       2.500   25.0       0  00:00       0.00
@@ -216,6 +223,6 @@
   No conduits were surcharged.
   
 
-  Analysis begun on:  Sun Jul 19 15:17:52 2026
-  Analysis ended on:  Sun Jul 19 15:17:52 2026
+  Analysis begun on:  Wed Jul 22 12:01:17 2026
+  Analysis ended on:  Wed Jul 22 12:01:17 2026
   Total elapsed time: < 1 sec

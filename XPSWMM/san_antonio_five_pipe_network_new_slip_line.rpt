@@ -36,14 +36,14 @@
   Wet Weather Inflow .......         0.000         0.000
   Groundwater Inflow .......         0.000         0.000
   RDII Inflow ..............         0.000         0.000
-  External Inflow ..........         0.000         0.000
+  External Inflow ..........         3.967         1.293
   External Outflow .........         0.000         0.000
-  Flooding Loss ............         0.000         0.000
+  Flooding Loss ............         3.153         1.027
   Evaporation Loss .........         0.000         0.000
   Exfiltration Loss ........         0.000         0.000
   Initial Stored Volume ....         0.000         0.000
-  Final Stored Volume ......         0.000         0.000
-  Continuity Error (%) .....         0.000
+  Final Stored Volume ......         0.545         0.178
+  Continuity Error (%) .....         6.783
   
   
   ***************************
@@ -61,7 +61,9 @@
   *********************************
   Most Frequent Nonconverging Nodes
   *********************************
-  Convergence obtained at all time steps.
+  Node PIPE_60a (0.07%)
+  Node tw2 (0.07%)
+  Node PIPE_66 (0.03%)
   
   
   *************************
@@ -71,8 +73,8 @@
   Average Time Step           :    29.99 sec
   Maximum Time Step           :    30.00 sec
   % of Time in Steady State   :     0.00
-  Average Iterations per Step :     2.00
-  % of Steps Not Converging   :     0.00
+  Average Iterations per Step :     2.04
+  % of Steps Not Converging   :     0.07
   Time Step Frequencies       :
      30.000 - 13.228 sec      :   100.00 %
      13.228 -  5.833 sec      :     0.00 %
@@ -94,10 +96,10 @@
   tw1                  JUNCTION     0.00     0.00   540.00     0  00:00        0.00
   tw4                  JUNCTION     0.00     0.00   540.00     0  00:00        0.00
   tw5                  JUNCTION     0.00     0.00   540.00     0  00:00        0.00
-  PIPE_66              JUNCTION     0.00     0.00   513.97     0  00:00        0.00
-  PIPE_60a             JUNCTION     0.00     0.00   513.75     0  00:00        0.00
+  PIPE_66              JUNCTION   498.87   519.54  1033.51     0  08:45      519.54
+  PIPE_60a             JUNCTION   456.69   519.75  1033.50     0  08:44      519.75
   tw2                  OUTFALL      0.00     0.00   540.00     0  00:00        0.00
-  HW                   STORAGE      0.00     0.00   532.50     0  00:00        0.00
+  HW                   STORAGE      9.77    10.00   542.50     0  01:07       10.00
   
   
   *******************
@@ -114,10 +116,10 @@
   tw1                  JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
   tw4                  JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
   tw5                  JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
-  PIPE_66              JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
-  PIPE_60a             JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  PIPE_66              JUNCTION      1.00     4.14     0  03:49       0.646       0.661      22.885
+  PIPE_60a             JUNCTION      0.00     3.18     0  03:53           0       0.538       0.000
   tw2                  OUTFALL       0.00     0.00     0  00:00           0           0       0.000 gal
-  HW                   STORAGE       0.00     0.00     0  00:00           0           0       0.000 gal
+  HW                   STORAGE       1.00     1.00     0  00:00       0.646       0.646       0.006
   
   
   **********************
@@ -131,13 +133,22 @@
   Node                 Type      Surcharged           Feet         Feet
   ---------------------------------------------------------------------
   tw3                  JUNCTION       24.00          0.000        0.000
+  PIPE_60a             JUNCTION       15.27          0.000        0.000
   
   
   *********************
   Node Flooding Summary
   *********************
   
-  No nodes were flooded.
+  Flooding refers to all water that overflows a node, whether it ponds or not.
+  --------------------------------------------------------------------------
+                                                             Total   Maximum
+                                 Maximum   Time of Max       Flood    Ponded
+                        Hours       Rate    Occurrence      Volume     Depth
+  Node                 Flooded       CFS   days hr:min    10^6 gal      Feet
+  --------------------------------------------------------------------------
+  PIPE_60a               15.27      1.32      0  08:46       0.411     0.000
+  HW                     22.89      1.00      0  01:07       0.616     0.000
   
   
   **********************
@@ -149,7 +160,7 @@
                           Volume   Pcnt   Pcnt   Pcnt      Volume   Pcnt     Occurrence    Outflow
   Storage Unit          1000 ft³   Full   Loss   Loss    1000 ft³   Full    days hr:min        CFS
   ------------------------------------------------------------------------------------------------
-  HW                       0.000    0.0    0.0    0.0       0.000    0.0       0  00:00       0.00
+  HW                       3.907   97.7    0.0    0.0       4.000  100.0       0  01:07       0.00
   
   
   ***********************
@@ -175,7 +186,7 @@
                                   |Flow|   Occurrence   |Veloc|    Full    Full
   Link                 Type          CFS  days hr:min    ft/sec    Flow   Depth
   -----------------------------------------------------------------------------
-  PIPE_72              CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  PIPE_72              CONDUIT      3.18     0  03:53      1.59    0.03    0.96
   pipe_60c             CONDUIT      0.00     0  00:00      0.00    0.00    0.00
   pipe_66              CONDUIT      0.00     0  00:00      0.00    0.00    0.00
   pipe_60b             CONDUIT      0.00     0  00:00      0.00    0.00    0.00
@@ -191,7 +202,7 @@
                        /Actual         Up    Down  Sub   Sup   Up    Down  Norm  Inlet 
   Conduit               Length    Dry  Dry   Dry   Crit  Crit  Crit  Crit  Ltd   Ctrl  
   -------------------------------------------------------------------------------------
-  PIPE_72                 1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  PIPE_72                 1.00   0.07  0.00  0.00  0.84  0.00  0.00  0.08  0.00  0.00
   pipe_60c                1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
   pipe_66                 1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
   pipe_60b                1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
@@ -202,9 +213,14 @@
   Conduit Surcharge Summary
   *************************
   
-  No conduits were surcharged.
+  ----------------------------------------------------------------------------
+                                                           Hours        Hours 
+                         --------- Hours Full --------   Above Full   Capacity
+  Conduit                Both Ends  Upstream  Dnstream   Normal Flow   Limited
+  ----------------------------------------------------------------------------
+  PIPE_72                     0.01      0.01     15.27      0.01         0.01
   
 
-  Analysis begun on:  Sun Jul 19 15:22:14 2026
-  Analysis ended on:  Sun Jul 19 15:22:14 2026
+  Analysis begun on:  Wed Jul 22 14:16:34 2026
+  Analysis ended on:  Wed Jul 22 14:16:34 2026
   Total elapsed time: < 1 sec

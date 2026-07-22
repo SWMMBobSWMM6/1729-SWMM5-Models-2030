@@ -5,7 +5,12 @@
   Converted from XPSWMM .xp file 
   WARNING 04: minimum elevation drop used for Conduit 201
   WARNING 04: minimum elevation drop used for Conduit 206
+  WARNING 04: minimum elevation drop used for Conduit 201_2
+  WARNING 04: minimum elevation drop used for Conduit 206_2
+  WARNING 04: minimum elevation drop used for Conduit 210_2
+  WARNING 04: minimum elevation drop used for Conduit 216
   WARNING 04: minimum elevation drop used for Conduit 221
+  WARNING 04: minimum elevation drop used for Conduit 211
   
   ****************
   Analysis Options
@@ -39,46 +44,63 @@
   Wet Weather Inflow .......         0.000         0.000
   Groundwater Inflow .......         0.000         0.000
   RDII Inflow ..............         0.000         0.000
-  External Inflow ..........         0.000         0.000
-  External Outflow .........         0.000         0.000
-  Flooding Loss ............         0.000         0.000
+  External Inflow ..........         1.555        15.550
+  External Outflow .........         0.259         2.586
+  Flooding Loss ............         1.099        10.990
   Evaporation Loss .........         0.000         0.000
   Exfiltration Loss ........         0.000         0.000
   Initial Stored Volume ....         0.000         0.000
-  Final Stored Volume ......         0.000         0.000
-  Continuity Error (%) .....         0.000
+  Final Stored Volume ......         0.197         1.975
+  Continuity Error (%) .....        -0.007
+  
+  
+  *************************
+  Highest Continuity Errors
+  *************************
+  Node Area (39.63%)
   
   
   ***************************
   Time-Step Critical Elements
   ***************************
-  None
+  Link 216 (75.22%)
+  Link 201_2 (16.85%)
+  Link 211 (4.95%)
+  Link 221 (2.70%)
   
   
   ********************************
   Highest Flow Instability Indexes
   ********************************
-  All links are stable.
+  Link 201_2 (29)
+  Link 206_2 (29)
+  Link 210_2 (29)
+  Link 206 (29)
+  Link 201 (29)
   
   
   *********************************
   Most Frequent Nonconverging Nodes
   *********************************
-  Convergence obtained at all time steps.
+  Node Sweeping (0.35%)
+  Node NoErosion (0.23%)
+  Node Erosion (0.23%)
+  Node HW_211 (0.12%)
+  Node HW_216 (0.06%)
   
   
   *************************
   Routing Time Step Summary
   *************************
-  Minimum Time Step           :    59.50 sec
-  Average Time Step           :    59.96 sec
+  Minimum Time Step           :    19.86 sec
+  Average Time Step           :    49.68 sec
   Maximum Time Step           :    60.00 sec
   % of Time in Steady State   :     0.00
-  Average Iterations per Step :     2.00
-  % of Steps Not Converging   :     0.00
+  Average Iterations per Step :     4.15
+  % of Steps Not Converging   :     0.35
   Time Step Frequencies       :
-     60.000 - 23.031 sec      :   100.00 %
-     23.031 -  8.841 sec      :     0.00 %
+     60.000 - 23.031 sec      :    97.18 %
+     23.031 -  8.841 sec      :     2.82 %
       8.841 -  3.393 sec      :     0.00 %
       3.393 -  1.303 sec      :     0.00 %
       1.303 -  0.500 sec      :     0.00 %
@@ -93,16 +115,21 @@
                                    Depth    Depth      HGL   Occurrence   Max Depth
   Node                 Type       Meters   Meters   Meters  days hr:min      Meters
   ---------------------------------------------------------------------------------
-  Area                 JUNCTION     0.00     0.00     0.00     0  00:00        0.00
-  Outlet               JUNCTION     0.00     0.00     0.00     0  00:00        0.00
+  Area                 JUNCTION     0.89     1.01     1.01     0  04:23        1.00
+  Outlet               JUNCTION     0.89     1.01     1.01     0  04:25        1.00
   Area_2               JUNCTION     0.00     0.00     0.00     0  00:00        0.00
   Outlet_2             JUNCTION     0.00     0.00     0.00     0  00:00        0.00
   Area_3               JUNCTION     0.00     0.00     5.00     0  00:00        0.00
   Outlet_3             JUNCTION     0.00     0.00     5.00     0  00:00        0.00
-  Sweeping             JUNCTION     0.00     0.00     0.00     0  00:00        0.00
   NoSweeping           JUNCTION     0.00     0.00     0.00     0  00:00        0.00
-  Erosion              JUNCTION     0.00     0.00     0.00     0  00:00        0.00
-  NoErosion            OUTFALL      0.00     0.00     0.00     0  00:00        0.00
+  Erosion              JUNCTION     0.98     1.00     1.00     0  00:44        1.00
+  NoErosion            JUNCTION     0.98     1.00     1.00     0  00:44        1.00
+  HW_201_2             JUNCTION     0.89     1.00     1.00     0  04:21        1.00
+  HW_206_2             JUNCTION     0.89     1.00     1.00     0  04:21        1.00
+  HW_210_2             JUNCTION     0.89     1.00     1.00     0  04:21        1.00
+  HW_216               JUNCTION     0.19     0.19     0.19     0  00:52        0.19
+  HW_211               JUNCTION     0.89     1.00     1.00     0  04:22        1.00
+  Sweeping             OUTFALL      0.09     0.09     0.09     0  00:53        0.09
   
   
   *******************
@@ -115,16 +142,21 @@
                                    Inflow   Inflow   Occurrence      Volume      Volume       Error
   Node                 Type           CMS      CMS  days hr:min    10^6 ltr    10^6 ltr     Percent
   -------------------------------------------------------------------------------------------------
-  Area                 JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
-  Outlet               JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
+  Area                 JUNCTION     0.000    0.213     0  11:36           0        1.73      65.658
+  Outlet               JUNCTION     0.000    0.312     0  04:16           0        1.45       0.000
   Area_2               JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
   Outlet_2             JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
   Area_3               JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
   Outlet_3             JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
-  Sweeping             JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
   NoSweeping           JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
-  Erosion              JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
-  NoErosion            OUTFALL      0.000    0.000     0  00:00           0           0       0.000 ltr
+  Erosion              JUNCTION     0.030    0.030     0  00:44        2.59        2.59       1.511
+  NoErosion            JUNCTION     0.000    0.045     0  00:43           0      0.0556       0.000
+  HW_201_2             JUNCTION     0.030    0.038     0  04:27        2.59        2.61       1.527
+  HW_206_2             JUNCTION     0.030    0.038     0  04:27        2.59        2.61       1.527
+  HW_210_2             JUNCTION     0.030    0.038     0  04:27        2.59        2.61       1.527
+  HW_216               JUNCTION     0.030    0.030     0  00:00        2.59        2.59       0.212
+  HW_211               JUNCTION     0.030    0.048     0  04:26        2.59         2.6       1.529
+  Sweeping             OUTFALL      0.000    0.030     0  00:53           0        2.59       0.000
   
   
   **********************
@@ -141,15 +173,32 @@
   Outlet_2             JUNCTION       24.00          0.000        0.000
   Area_3               JUNCTION       24.00          0.000        0.000
   Outlet_3             JUNCTION       24.00          0.000        0.000
-  Sweeping             JUNCTION       24.00          0.000        0.000
   NoSweeping           JUNCTION       24.00          0.000        0.000
+  Erosion              JUNCTION       23.27          0.000        0.000
+  NoErosion            JUNCTION       23.25          0.000        0.000
+  HW_201_2             JUNCTION       19.65          0.000        0.000
+  HW_206_2             JUNCTION       19.65          0.000        0.000
+  HW_210_2             JUNCTION       19.65          0.000        0.000
+  HW_211               JUNCTION       19.64          0.000        0.000
   
   
   *********************
   Node Flooding Summary
   *********************
   
-  No nodes were flooded.
+  Flooding refers to all water that overflows a node, whether it ponds or not.
+  --------------------------------------------------------------------------
+                                                             Total   Maximum
+                                 Maximum   Time of Max       Flood    Ponded
+                        Hours       Rate    Occurrence      Volume     Depth
+  Node                 Flooded       CMS   days hr:min    10^6 ltr    Meters
+  --------------------------------------------------------------------------
+  Erosion                23.27     0.030      0  00:44       2.498     0.000
+  NoErosion              23.25     0.022      0  00:44       0.015     0.000
+  HW_201_2               19.65     0.036      0  04:28       2.122     0.000
+  HW_206_2               19.65     0.036      0  04:28       2.122     0.000
+  HW_210_2               19.65     0.036      0  04:28       2.122     0.000
+  HW_211                 19.64     0.047      0  04:26       2.114     0.000
   
   
   ***********************
@@ -161,9 +210,9 @@
                          Freq      Flow      Flow      Volume
   Outfall Node           Pcnt       CMS       CMS    10^6 ltr
   -----------------------------------------------------------
-  NoErosion              0.00     0.000     0.000       0.000
+  Sweeping              99.94     0.030     0.030       2.586
   -----------------------------------------------------------
-  System                 0.00     0.000     0.000       0.000
+  System                99.94     0.030     0.030       2.586
   
   
   ********************
@@ -175,10 +224,15 @@
                                   |Flow|   Occurrence   |Veloc|    Full    Full
   Link                 Type          CMS  days hr:min     m/sec    Flow   Depth
   -----------------------------------------------------------------------------
-  201                  CONDUIT     0.000     0  00:00      0.00    0.00    0.00
-  206                  CONDUIT     0.000     0  00:00      0.00    0.00    0.00
-  210                  CONDUIT     0.000     0  00:00      0.00    0.00    0.00
-  221                  CONDUIT     0.000     0  00:00      0.00    0.00    0.00
+  201                  CONDUIT     0.109     0  04:16      0.11    0.03    0.25
+  206                  CONDUIT     0.109     0  04:16      0.11    0.03    0.25
+  210                  CONDUIT     0.067     0  04:16      0.02    0.00    0.16
+  201_2                CONDUIT     0.033     0  04:16      1.77    0.79    1.00
+  206_2                CONDUIT     0.033     0  04:16      1.77    0.79    1.00
+  210_2                CONDUIT     0.033     0  04:16      1.77    0.79    1.00
+  216                  CONDUIT     0.030     0  00:53      0.44    0.72    0.14
+  221                  CONDUIT     0.045     0  00:43      0.41    1.07    1.00
+  211                  CONDUIT     0.033     0  04:19      1.89    0.79    1.00
   
   
   ***************************
@@ -190,19 +244,33 @@
                        /Actual         Up    Down  Sub   Sup   Up    Down  Norm  Inlet 
   Conduit               Length    Dry  Dry   Dry   Crit  Crit  Crit  Crit  Ltd   Ctrl  
   -------------------------------------------------------------------------------------
-  201                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
-  206                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
-  210                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
-  221                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  201                     1.00   0.00  0.00  0.00  1.00  0.00  0.00  0.00  0.00  0.00
+  206                     1.00   0.00  0.00  0.00  1.00  0.00  0.00  0.00  0.00  0.00
+  210                     1.00   0.00  0.13  0.00  0.87  0.00  0.00  0.00  0.00  0.00
+  201_2                   1.00   0.00  0.00  0.00  1.00  0.00  0.00  0.00  0.00  0.00
+  206_2                   1.00   0.00  0.00  0.00  1.00  0.00  0.00  0.00  0.00  0.00
+  210_2                   1.00   0.00  0.00  0.00  1.00  0.00  0.00  0.00  0.00  0.00
+  216                     1.00   0.00  0.00  0.00  1.00  0.00  0.00  0.00  0.00  0.00
+  221                     1.00   0.00  0.00  0.00  1.00  0.00  0.00  0.00  0.00  0.00
+  211                     1.00   0.00  0.00  0.00  0.99  0.01  0.00  0.00  0.00  0.00
   
   
   *************************
   Conduit Surcharge Summary
   *************************
   
-  No conduits were surcharged.
+  ----------------------------------------------------------------------------
+                                                           Hours        Hours 
+                         --------- Hours Full --------   Above Full   Capacity
+  Conduit                Both Ends  Upstream  Dnstream   Normal Flow   Limited
+  ----------------------------------------------------------------------------
+  201_2                      10.56     19.64     10.56      0.01         0.01
+  206_2                      10.56     19.64     10.56      0.01         0.01
+  210_2                      10.56     19.64     10.56      0.01         0.01
+  221                        23.24     23.25     23.25      0.01         0.01
+  211                         9.04     19.64      9.04      0.01         0.01
   
 
-  Analysis begun on:  Sun Jul 19 15:19:57 2026
-  Analysis ended on:  Sun Jul 19 15:19:57 2026
+  Analysis begun on:  Wed Jul 22 13:58:05 2026
+  Analysis ended on:  Wed Jul 22 13:58:05 2026
   Total elapsed time: < 1 sec

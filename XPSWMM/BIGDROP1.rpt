@@ -36,14 +36,14 @@
   Wet Weather Inflow .......         0.000         0.000
   Groundwater Inflow .......         0.000         0.000
   RDII Inflow ..............         0.000         0.000
-  External Inflow ..........         0.000         0.000
-  External Outflow .........         0.000         0.000
-  Flooding Loss ............         0.000         0.000
+  External Inflow ..........         1.037        10.367
+  External Outflow .........         0.258         2.585
+  Flooding Loss ............         0.770         7.704
   Evaporation Loss .........         0.000         0.000
   Exfiltration Loss ........         0.000         0.000
   Initial Stored Volume ....         0.000         0.000
-  Final Stored Volume ......         0.000         0.000
-  Continuity Error (%) .....         0.000
+  Final Stored Volume ......         0.003         0.026
+  Continuity Error (%) .....         0.498
   
   
   ***************************
@@ -55,13 +55,18 @@
   ********************************
   Highest Flow Instability Indexes
   ********************************
-  All links are stable.
+  Link 212.1 (132)
+  Link 1pipe (43)
   
   
   *********************************
   Most Frequent Nonconverging Nodes
   *********************************
-  Convergence obtained at all time steps.
+  Node 4 (0.03%)
+  Node Surfacea (0.02%)
+  Node 2a (0.01%)
+  Node 2 (0.01%)
+  Node 1a (0.01%)
   
   
   *************************
@@ -71,8 +76,8 @@
   Average Time Step           :     5.00 sec
   Maximum Time Step           :     5.00 sec
   % of Time in Steady State   :     0.00
-  Average Iterations per Step :     2.00
-  % of Steps Not Converging   :     0.00
+  Average Iterations per Step :     2.84
+  % of Steps Not Converging   :     0.03
   Time Step Frequencies       :
       5.000 -  3.155 sec      :   100.00 %
       3.155 -  1.991 sec      :     0.00 %
@@ -90,15 +95,15 @@
                                    Depth    Depth      HGL   Occurrence   Max Depth
   Node                 Type       Meters   Meters   Meters  days hr:min      Meters
   ---------------------------------------------------------------------------------
-  1                    JUNCTION     0.00     0.00    10.00     0  00:00        0.00
-  2                    JUNCTION     0.00     0.00    10.00     0  00:00        0.00
-  1a                   JUNCTION     0.00     0.00    10.00     0  00:00        0.00
-  2a                   JUNCTION     0.00     0.00    10.00     0  00:00        0.00
-  4a                   JUNCTION     0.00     0.00    10.00     0  00:00        0.00
+  1                    JUNCTION     6.51     6.53    16.53     0  00:05        6.52
+  2                    JUNCTION     4.86     4.86    14.86     0  00:15        4.86
+  1a                   JUNCTION     5.82     5.84    15.84     0  00:11        5.84
+  2a                   JUNCTION     5.09     5.14    15.14     0  00:13        5.12
+  4a                   JUNCTION     5.08     5.10    15.10     0  00:12        5.10
   fuzzyq=4             JUNCTION     0.00     0.00     1.00     0  00:00        0.00
-  pipe2                JUNCTION     0.00     0.00     5.80     0  00:00        0.00
-  Surface              JUNCTION     0.00     0.00     5.55     0  00:00        0.00
-  Surfacea             JUNCTION     0.00     0.00     5.55     0  00:00        0.00
+  pipe2                JUNCTION     5.89     5.90    11.70     0  00:08        5.90
+  Surface              JUNCTION     5.97     6.00    11.55     0  00:10        6.00
+  Surfacea             JUNCTION     5.96     6.00    11.55     0  00:16        6.00
   4                    OUTFALL      0.00     0.00    10.00     0  00:00        0.00
   
   
@@ -112,16 +117,16 @@
                                    Inflow   Inflow   Occurrence      Volume      Volume       Error
   Node                 Type           CMS      CMS  days hr:min    10^6 ltr    10^6 ltr     Percent
   -------------------------------------------------------------------------------------------------
-  1                    JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
-  2                    JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
-  1a                   JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
-  2a                   JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
-  4a                   JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
+  1                    JUNCTION     0.030    0.030     0  00:00        2.59        2.59       0.321
+  2                    JUNCTION     0.030    0.030     0  00:00        2.59        2.59       0.268
+  1a                   JUNCTION     0.000    0.104     0  00:04           0        2.58       0.314
+  2a                   JUNCTION     0.030    0.039     0  00:11        2.59        2.59       0.400
+  4a                   JUNCTION     0.000    0.057     0  00:13           0        2.58       0.000
   fuzzyq=4             JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
-  pipe2                JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
-  Surface              JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
-  Surfacea             JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
-  4                    OUTFALL      0.000    0.000     0  00:00           0           0       0.000 ltr
+  pipe2                JUNCTION     0.030    0.030     0  00:00        2.59        2.59       0.318
+  Surface              JUNCTION     0.000    0.030     0  00:08           0        2.58       0.000
+  Surfacea             JUNCTION     0.000    0.030     0  00:12           0        2.58       0.000
+  4                    OUTFALL      0.000    0.030     0  00:15           0        2.58       0.000
   
   
   **********************
@@ -134,14 +139,26 @@
                                    Hours       Above Crown    Below Rim
   Node                 Type      Surcharged         Meters       Meters
   ---------------------------------------------------------------------
+  4a                   JUNCTION       23.80          0.000        0.000
   fuzzyq=4             JUNCTION       24.00          0.000        0.000
+  Surface              JUNCTION       23.83          0.000        0.000
+  Surfacea             JUNCTION       23.73          0.000        0.000
   
   
   *********************
   Node Flooding Summary
   *********************
   
-  No nodes were flooded.
+  Flooding refers to all water that overflows a node, whether it ponds or not.
+  --------------------------------------------------------------------------
+                                                             Total   Maximum
+                                 Maximum   Time of Max       Flood    Ponded
+                        Hours       Rate    Occurrence      Volume     Depth
+  Node                 Flooded       CMS   days hr:min    10^6 ltr    Meters
+  --------------------------------------------------------------------------
+  4a                     23.80     0.056      0  00:13       2.569     0.000
+  Surface                23.83     0.030      0  00:10       2.574     0.000
+  Surfacea               23.73     0.030      0  15:47       2.562     0.000
   
   
   ***********************
@@ -153,9 +170,9 @@
                          Freq      Flow      Flow      Volume
   Outfall Node           Pcnt       CMS       CMS    10^6 ltr
   -----------------------------------------------------------
-  4                      0.00     0.000     0.000       0.000
+  4                     99.77     0.030     0.030       2.585
   -----------------------------------------------------------
-  System                 0.00     0.000     0.000       0.000
+  System                99.77     0.030     0.030       2.585
   
   
   ********************
@@ -167,11 +184,11 @@
                                   |Flow|   Occurrence   |Veloc|    Full    Full
   Link                 Type          CMS  days hr:min     m/sec    Flow   Depth
   -----------------------------------------------------------------------------
-  pipe1                CONDUIT     0.000     0  00:00      0.00    0.00    0.00
-  5                    CONDUIT     0.000     0  00:00      0.00    0.00    0.00
-  1pipe                CONDUIT     0.000     0  00:00      0.00    0.00    0.00
-  5a                   CONDUIT     0.000     0  00:00      0.00    0.00    0.00
-  212.1                WEIR        0.000     0  00:00                      0.00
+  pipe1                CONDUIT     0.030     0  00:08      1.10    0.11    0.61
+  5                    CONDUIT     0.030     0  00:15      0.85    0.07    0.18
+  1pipe                CONDUIT     0.030     0  00:12      2.37    0.02    0.55
+  5a                   CONDUIT     0.057     0  00:13      0.85    0.14    0.82
+  212.1                WEIR        0.104     0  00:04                      0.03
   
   
   ***************************
@@ -183,19 +200,24 @@
                        /Actual         Up    Down  Sub   Sup   Up    Down  Norm  Inlet 
   Conduit               Length    Dry  Dry   Dry   Crit  Crit  Crit  Crit  Ltd   Ctrl  
   -------------------------------------------------------------------------------------
-  pipe1                   1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
-  5                       1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
-  1pipe                   1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
-  5a                      1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  pipe1                   1.00   0.00  0.00  0.00  0.99  0.00  0.00  0.00  0.99  0.00
+  5                       1.00   0.00  0.00  0.00  0.00  0.00  0.00  1.00  0.00  0.00
+  1pipe                   1.00   0.01  0.00  0.00  0.99  0.00  0.00  0.00  0.99  0.00
+  5a                      1.00   0.00  0.00  0.00  1.00  0.00  0.00  0.00  0.00  0.00
   
   
   *************************
   Conduit Surcharge Summary
   *************************
   
-  No conduits were surcharged.
+  ----------------------------------------------------------------------------
+                                                           Hours        Hours 
+                         --------- Hours Full --------   Above Full   Capacity
+  Conduit                Both Ends  Upstream  Dnstream   Normal Flow   Limited
+  ----------------------------------------------------------------------------
+  5a                          0.01      0.01     23.80      0.01         0.01
   
 
-  Analysis begun on:  Sun Jul 19 15:11:57 2026
-  Analysis ended on:  Sun Jul 19 15:11:57 2026
+  Analysis begun on:  Wed Jul 22 11:40:22 2026
+  Analysis ended on:  Wed Jul 22 11:40:22 2026
   Total elapsed time: < 1 sec

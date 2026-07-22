@@ -36,9 +36,9 @@
   Wet Weather Inflow .......         0.000         0.000
   Groundwater Inflow .......         0.000         0.000
   RDII Inflow ..............         0.000         0.000
-  External Inflow ..........         0.000         0.000
+  External Inflow ..........         0.259         2.592
   External Outflow .........         0.000         0.000
-  Flooding Loss ............         0.000         0.000
+  Flooding Loss ............         0.259         2.592
   Evaporation Loss .........         0.000         0.000
   Exfiltration Loss ........         0.000         0.000
   Initial Stored Volume ....         0.000         0.000
@@ -67,16 +67,16 @@
   *************************
   Routing Time Step Summary
   *************************
-  Minimum Time Step           :     4.50 sec
+  Minimum Time Step           :     1.58 sec
   Average Time Step           :     5.00 sec
   Maximum Time Step           :     5.00 sec
   % of Time in Steady State   :     0.00
   Average Iterations per Step :     2.00
   % of Steps Not Converging   :     0.00
   Time Step Frequencies       :
-      5.000 -  3.155 sec      :   100.00 %
-      3.155 -  1.991 sec      :     0.00 %
-      1.991 -  1.256 sec      :     0.00 %
+      5.000 -  3.155 sec      :    99.97 %
+      3.155 -  1.991 sec      :     0.01 %
+      1.991 -  1.256 sec      :     0.02 %
       1.256 -  0.792 sec      :     0.00 %
       0.792 -  0.500 sec      :     0.00 %
   
@@ -91,7 +91,7 @@
   Node                 Type       Meters   Meters   Meters  days hr:min      Meters
   ---------------------------------------------------------------------------------
   F6                   JUNCTION     0.00     0.00     9.72     0  00:00        0.00
-  F7L1_2               JUNCTION     0.00     0.00     0.00     0  00:00        0.00
+  F7L1_2               JUNCTION     0.09     0.09     0.09     0  00:00        0.09
   F4                   OUTFALL      0.00     0.00     8.72     0  00:00        0.00
   F5                   STORAGE      0.00     0.00     8.79     0  00:00        0.00
   F7                   STORAGE      0.00     0.00     9.73     0  00:00        0.00
@@ -109,7 +109,7 @@
   Node                 Type           CMS      CMS  days hr:min    10^6 ltr    10^6 ltr     Percent
   -------------------------------------------------------------------------------------------------
   F6                   JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
-  F7L1_2               JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
+  F7L1_2               JUNCTION     0.030    0.030     0  00:00        2.59        2.59       0.007
   F4                   OUTFALL      0.000    0.000     0  00:00           0           0       0.000 ltr
   F5                   STORAGE      0.000    0.000     0  00:00           0           0       0.000 ltr
   F7                   STORAGE      0.000    0.000     0  00:00           0           0       0.000 ltr
@@ -120,14 +120,27 @@
   Node Surcharge Summary
   **********************
   
-  No nodes were surcharged.
+  Surcharging occurs when water rises above the top of the highest conduit.
+  ---------------------------------------------------------------------
+                                               Max. Height   Min. Depth
+                                   Hours       Above Crown    Below Rim
+  Node                 Type      Surcharged         Meters       Meters
+  ---------------------------------------------------------------------
+  F7L1_2               JUNCTION       24.00          0.000        0.000
   
   
   *********************
   Node Flooding Summary
   *********************
   
-  No nodes were flooded.
+  Flooding refers to all water that overflows a node, whether it ponds or not.
+  --------------------------------------------------------------------------
+                                                             Total   Maximum
+                                 Maximum   Time of Max       Flood    Ponded
+                        Hours       Rate    Occurrence      Volume     Depth
+  Node                 Flooded       CMS   days hr:min    10^6 ltr    Meters
+  --------------------------------------------------------------------------
+  F7L1_2                 24.00     0.030      0  00:00       2.592     0.000
   
   
   **********************
@@ -170,7 +183,7 @@
   HP9_1                CONDUIT     0.000     0  00:00      0.00    0.00    0.00
   HP8_1                CONDUIT     0.000     0  00:00      0.00    0.00    0.00
   HP7_1                CONDUIT     0.000     0  00:00      0.00    0.00    0.00
-  F7L1_1               CONDUIT     0.000     0  00:00      0.00    0.00    0.00
+  F7L1_1               CONDUIT     0.000     0  00:00      0.00    0.00    0.50
   
   
   ***************************
@@ -185,7 +198,7 @@
   HP9_1                   1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
   HP8_1                   1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
   HP7_1                   1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
-  F7L1_1                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  F7L1_1                  1.00   0.00  1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
   
   
   *************************
@@ -195,6 +208,6 @@
   No conduits were surcharged.
   
 
-  Analysis begun on:  Sun Jul 19 15:19:56 2026
-  Analysis ended on:  Sun Jul 19 15:19:56 2026
+  Analysis begun on:  Wed Jul 22 13:58:01 2026
+  Analysis ended on:  Wed Jul 22 13:58:01 2026
   Total elapsed time: < 1 sec

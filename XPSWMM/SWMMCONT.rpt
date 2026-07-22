@@ -40,14 +40,14 @@
   Wet Weather Inflow .......         0.000         0.000
   Groundwater Inflow .......         0.000         0.000
   RDII Inflow ..............         0.000         0.000
-  External Inflow ..........         0.000         0.000
-  External Outflow .........         0.000         0.000
+  External Inflow ..........         3.967         1.293
+  External Outflow .........         3.910         1.274
   Flooding Loss ............         0.000         0.000
   Evaporation Loss .........         0.000         0.000
   Exfiltration Loss ........         0.000         0.000
   Initial Stored Volume ....         0.000         0.000
-  Final Stored Volume ......         0.000         0.000
-  Continuity Error (%) .....         0.000
+  Final Stored Volume ......         0.059         0.019
+  Continuity Error (%) .....        -0.049
   
   
   ***************************
@@ -94,11 +94,11 @@
                                    Depth    Depth      HGL   Occurrence   Max Depth
   Node                 Type         Feet     Feet     Feet  days hr:min        Feet
   ---------------------------------------------------------------------------------
-  CA-1                 JUNCTION     0.00     0.00     0.00     0  00:00        0.00
-  CA-7                 JUNCTION     0.00     0.00     0.00     0  00:00        0.00
-  CA-8                 JUNCTION     0.00     0.00     0.00     0  00:00        0.00
-  CA-11                JUNCTION     0.00     0.00     0.00     0  00:00        0.00
-  Outlet               OUTFALL      0.00     0.00     0.00     0  00:00        0.00
+  CA-1                 JUNCTION     0.75     0.76     0.76     0  05:02        0.76
+  CA-7                 JUNCTION     0.87     0.88     0.88     0  05:03        0.88
+  CA-8                 JUNCTION     1.01     1.01     1.01     0  05:01        1.01
+  CA-11                JUNCTION     1.02     1.02     1.02     0  05:03        1.02
+  Outlet               OUTFALL      0.39     0.40     0.40     0  05:02        0.40
   
   
   *******************
@@ -111,11 +111,11 @@
                                    Inflow   Inflow   Occurrence      Volume      Volume       Error
   Node                 Type           CFS      CFS  days hr:min    10^6 gal    10^6 gal     Percent
   -------------------------------------------------------------------------------------------------
-  CA-1                 JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
-  CA-7                 JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
-  CA-8                 JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
-  CA-11                JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
-  Outlet               OUTFALL       0.00     0.00     0  00:00           0           0       0.000 gal
+  CA-1                 JUNCTION      0.00     2.00     0  05:02           0        1.28       0.206
+  CA-7                 JUNCTION      0.00     2.00     1  00:00           0        1.29       0.676
+  CA-8                 JUNCTION      1.00     1.00     0  00:00       0.646       0.646       0.465
+  CA-11                JUNCTION      1.00     1.00     0  00:00       0.646       0.646       0.664
+  Outlet               OUTFALL       0.00     2.00     1  00:00           0        1.27       0.000
   
   
   **********************
@@ -141,9 +141,9 @@
                          Freq      Flow      Flow      Volume
   Outfall Node           Pcnt       CFS       CFS    10^6 gal
   -----------------------------------------------------------
-  Outlet                 0.00      0.00      0.00       0.000
+  Outlet                99.44      1.98      2.00       1.274
   -----------------------------------------------------------
-  System                 0.00      0.00      0.00       0.000
+  System                99.44      1.98      2.00       1.274
   
   
   ********************
@@ -155,10 +155,10 @@
                                   |Flow|   Occurrence   |Veloc|    Full    Full
   Link                 Type          CFS  days hr:min    ft/sec    Flow   Depth
   -----------------------------------------------------------------------------
-  P001                 CONDUIT      0.00     0  00:00      0.00    0.00    0.00
-  P005                 CONDUIT      0.00     0  00:00      0.00    0.00    0.00
-  P009                 CONDUIT      0.00     0  00:00      0.00    0.00    0.00
-  P011                 CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  P001                 CONDUIT      2.00     1  00:00      1.77    0.75    0.15
+  P005                 CONDUIT      2.00     0  05:02      1.27    1.69    0.27
+  P009                 CONDUIT      1.01     0  00:12      1.00    4.28    0.42
+  P011                 CONDUIT      1.00     0  04:58      0.79    3.64    0.38
   
   
   ***************************
@@ -170,19 +170,26 @@
                        /Actual         Up    Down  Sub   Sup   Up    Down  Norm  Inlet 
   Conduit               Length    Dry  Dry   Dry   Crit  Crit  Crit  Crit  Ltd   Ctrl  
   -------------------------------------------------------------------------------------
-  P001                    1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
-  P005                    1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
-  P009                    1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
-  P011                    1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  P001                    1.00   0.00  0.00  0.00  1.00  0.00  0.00  0.00  0.00  0.00
+  P005                    1.00   0.00  0.00  0.00  1.00  0.00  0.00  0.00  0.00  0.00
+  P009                    1.00   0.00  0.00  0.00  1.00  0.00  0.00  0.00  0.00  0.00
+  P011                    1.00   0.00  0.00  0.00  1.00  0.00  0.00  0.00  0.00  0.00
   
   
   *************************
   Conduit Surcharge Summary
   *************************
   
-  No conduits were surcharged.
+  ----------------------------------------------------------------------------
+                                                           Hours        Hours 
+                         --------- Hours Full --------   Above Full   Capacity
+  Conduit                Both Ends  Upstream  Dnstream   Normal Flow   Limited
+  ----------------------------------------------------------------------------
+  P005                        0.01      0.01      0.01     23.73         0.01
+  P009                        0.01      0.01      0.01     23.94         0.01
+  P011                        0.01      0.01      0.01     23.92         0.01
   
 
-  Analysis begun on:  Sun Jul 19 15:23:26 2026
-  Analysis ended on:  Sun Jul 19 15:23:26 2026
+  Analysis begun on:  Wed Jul 22 14:19:37 2026
+  Analysis ended on:  Wed Jul 22 14:19:37 2026
   Total elapsed time: < 1 sec

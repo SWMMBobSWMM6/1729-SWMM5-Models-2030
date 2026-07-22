@@ -36,20 +36,20 @@
   Wet Weather Inflow .......         0.000         0.000
   Groundwater Inflow .......         0.000         0.000
   RDII Inflow ..............         0.000         0.000
-  External Inflow ..........         0.000         0.000
-  External Outflow .........         0.092         0.030
-  Flooding Loss ............         0.000         0.000
+  External Inflow ..........         1.983         0.646
+  External Outflow .........         0.680         0.222
+  Flooding Loss ............         1.188         0.387
   Evaporation Loss .........         0.000         0.000
   Exfiltration Loss ........         0.000         0.000
   Initial Stored Volume ....         0.115         0.037
-  Final Stored Volume ......         0.023         0.008
-  Continuity Error (%) .....        -0.125
+  Final Stored Volume ......         0.230         0.075
+  Continuity Error (%) .....         0.022
   
   
   ***************************
   Time-Step Critical Elements
   ***************************
-  Link 3 (99.20%)
+  None
   
   
   ********************************
@@ -67,17 +67,17 @@
   *************************
   Routing Time Step Summary
   *************************
-  Minimum Time Step           :     1.76 sec
-  Average Time Step           :     6.44 sec
+  Minimum Time Step           :     2.10 sec
+  Average Time Step           :    59.92 sec
   Maximum Time Step           :    60.00 sec
   % of Time in Steady State   :     0.00
   Average Iterations per Step :     2.00
   % of Steps Not Converging   :     0.00
   Time Step Frequencies       :
-     60.000 - 23.031 sec      :     0.79 %
-     23.031 -  8.841 sec      :    25.53 %
-      8.841 -  3.393 sec      :    18.08 %
-      3.393 -  1.303 sec      :    55.60 %
+     60.000 - 23.031 sec      :    99.93 %
+     23.031 -  8.841 sec      :     0.00 %
+      8.841 -  3.393 sec      :     0.00 %
+      3.393 -  1.303 sec      :     0.07 %
       1.303 -  0.500 sec      :     0.00 %
   
   
@@ -91,7 +91,7 @@
   Node                 Type         Feet     Feet     Feet  days hr:min        Feet
   ---------------------------------------------------------------------------------
   2                    OUTFALL      0.00     0.00     5.00     0  00:00        0.00
-  1                    STORAGE      1.90     5.00    10.00     0  00:00        4.80
+  1                    STORAGE      9.80    10.00    15.00     0  01:59       10.00
   
   
   *******************
@@ -104,8 +104,8 @@
                                    Inflow   Inflow   Occurrence      Volume      Volume       Error
   Node                 Type           CFS      CFS  days hr:min    10^6 gal    10^6 gal     Percent
   -------------------------------------------------------------------------------------------------
-  2                    OUTFALL       0.00     0.24     0  00:00           0      0.0298       0.000
-  1                    STORAGE       0.00     0.00     0  00:00           0      0.0374      -0.134
+  2                    OUTFALL       0.00     0.35     0  02:02           0       0.222       0.000
+  1                    STORAGE       1.00     1.00     0  00:00       0.646       0.684       0.023
   
   
   **********************
@@ -119,7 +119,14 @@
   Node Flooding Summary
   *********************
   
-  No nodes were flooded.
+  Flooding refers to all water that overflows a node, whether it ponds or not.
+  --------------------------------------------------------------------------
+                                                             Total   Maximum
+                                 Maximum   Time of Max       Flood    Ponded
+                        Hours       Rate    Occurrence      Volume     Depth
+  Node                 Flooded       CFS   days hr:min    10^6 gal      Feet
+  --------------------------------------------------------------------------
+  1                      22.03      0.65      0  01:59       0.387     0.000
   
   
   **********************
@@ -131,7 +138,7 @@
                           Volume   Pcnt   Pcnt   Pcnt      Volume   Pcnt     Occurrence    Outflow
   Storage Unit          1000 ft³   Full   Loss   Loss    1000 ft³   Full    days hr:min        CFS
   ------------------------------------------------------------------------------------------------
-  1                        1.902   19.0    0.0    0.0       5.000   50.0       0  00:00       0.24
+  1                        9.796   98.0    0.0    0.0      10.000  100.0       0  01:59       0.35
   
   
   ***********************
@@ -143,9 +150,9 @@
                          Freq      Flow      Flow      Volume
   Outfall Node           Pcnt       CFS       CFS    10^6 gal
   -----------------------------------------------------------
-  2                     86.17      0.10      0.24       0.030
+  2                    100.00      0.34      0.35       0.222
   -----------------------------------------------------------
-  System                86.17      0.10      0.24       0.030
+  System               100.00      0.34      0.35       0.222
   
   
   ********************
@@ -157,7 +164,7 @@
                                   |Flow|   Occurrence   |Veloc|    Full    Full
   Link                 Type          CFS  days hr:min    ft/sec    Flow   Depth
   -----------------------------------------------------------------------------
-  3                    CONDUIT      0.24     0  00:00      4.84    6.44    1.00
+  3                    CONDUIT      0.35     0  02:02      7.08    9.41    1.00
   
   
   ***************************
@@ -181,9 +188,9 @@
                          --------- Hours Full --------   Above Full   Capacity
   Conduit                Both Ends  Upstream  Dnstream   Normal Flow   Limited
   ----------------------------------------------------------------------------
-  3                           1.75      7.50      1.75      7.76         1.75
+  3                          24.00     24.00     24.00     24.00        24.00
   
 
-  Analysis begun on:  Sun Jul 19 15:11:00 2026
-  Analysis ended on:  Sun Jul 19 15:11:00 2026
+  Analysis begun on:  Wed Jul 22 11:34:56 2026
+  Analysis ended on:  Wed Jul 22 11:34:56 2026
   Total elapsed time: < 1 sec

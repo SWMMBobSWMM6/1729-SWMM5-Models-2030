@@ -36,14 +36,14 @@
   Wet Weather Inflow .......         0.000         0.000
   Groundwater Inflow .......         0.000         0.000
   RDII Inflow ..............         0.000         0.000
-  External Inflow ..........         0.000         0.000
+  External Inflow ..........         0.259         2.592
   External Outflow .........         0.000         0.000
-  Flooding Loss ............         0.000         0.000
+  Flooding Loss ............         0.214         2.139
   Evaporation Loss .........         0.000         0.000
   Exfiltration Loss ........         0.000         0.000
   Initial Stored Volume ....         0.000         0.000
-  Final Stored Volume ......         0.000         0.000
-  Continuity Error (%) .....         0.000
+  Final Stored Volume ......         0.060         0.600
+  Continuity Error (%) .....        -5.691
   
   
   ***************************
@@ -61,18 +61,19 @@
   *********************************
   Most Frequent Nonconverging Nodes
   *********************************
-  Convergence obtained at all time steps.
+  Node reach2 (0.03%)
+  Node Bend1 (0.03%)
   
   
   *************************
   Routing Time Step Summary
   *************************
-  Minimum Time Step           :    29.50 sec
-  Average Time Step           :    29.99 sec
+  Minimum Time Step           :    19.12 sec
+  Average Time Step           :    29.98 sec
   Maximum Time Step           :    30.00 sec
   % of Time in Steady State   :     0.00
-  Average Iterations per Step :     2.00
-  % of Steps Not Converging   :     0.00
+  Average Iterations per Step :     2.02
+  % of Steps Not Converging   :     0.03
   Time Step Frequencies       :
      30.000 - 13.228 sec      :   100.00 %
      13.228 -  5.833 sec      :     0.00 %
@@ -91,7 +92,7 @@
   Node                 Type       Meters   Meters   Meters  days hr:min      Meters
   ---------------------------------------------------------------------------------
   Inflow               JUNCTION     0.00     0.00    15.00     0  00:00        0.00
-  reach2               JUNCTION     0.00     0.00     0.05     0  00:00        0.00
+  reach2               JUNCTION     0.99     1.05     1.10     0  04:11        1.05
   Bend1                OUTFALL      0.00     0.00    10.00     0  00:00        0.00
   
   
@@ -106,7 +107,7 @@
   Node                 Type           CMS      CMS  days hr:min    10^6 ltr    10^6 ltr     Percent
   -------------------------------------------------------------------------------------------------
   Inflow               JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
-  reach2               JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
+  reach2               JUNCTION     0.030    0.030     0  00:00        2.59        2.59      21.152
   Bend1                OUTFALL      0.000    0.000     0  00:00           0           0       0.000 ltr
   
   
@@ -121,13 +122,21 @@
   Node                 Type      Surcharged         Meters       Meters
   ---------------------------------------------------------------------
   Inflow               JUNCTION       24.00          0.000        0.000
+  reach2               JUNCTION       19.81          0.000        0.000
   
   
   *********************
   Node Flooding Summary
   *********************
   
-  No nodes were flooded.
+  Flooding refers to all water that overflows a node, whether it ponds or not.
+  --------------------------------------------------------------------------
+                                                             Total   Maximum
+                                 Maximum   Time of Max       Flood    Ponded
+                        Hours       Rate    Occurrence      Volume     Depth
+  Node                 Flooded       CMS   days hr:min    10^6 ltr    Meters
+  --------------------------------------------------------------------------
+  reach2                 19.81     0.030      0  04:11       2.140     0.000
   
   
   ***********************
@@ -153,7 +162,7 @@
                                   |Flow|   Occurrence   |Veloc|    Full    Full
   Link                 Type          CMS  days hr:min     m/sec    Flow   Depth
   -----------------------------------------------------------------------------
-  Reach1               CONDUIT     0.000     0  00:00      0.00    0.00    0.00
+  Reach1               CONDUIT     0.000     0  00:00      0.00    0.00    0.50
   
   
   ***************************
@@ -165,7 +174,7 @@
                        /Actual         Up    Down  Sub   Sup   Up    Down  Norm  Inlet 
   Conduit               Length    Dry  Dry   Dry   Crit  Crit  Crit  Crit  Ltd   Ctrl  
   -------------------------------------------------------------------------------------
-  Reach1                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  Reach1                  1.00   0.00  1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
   
   
   *************************
@@ -175,6 +184,6 @@
   No conduits were surcharged.
   
 
-  Analysis begun on:  Sun Jul 19 15:18:42 2026
-  Analysis ended on:  Sun Jul 19 15:18:42 2026
+  Analysis begun on:  Wed Jul 22 12:54:49 2026
+  Analysis ended on:  Wed Jul 22 12:54:49 2026
   Total elapsed time: < 1 sec

@@ -36,14 +36,14 @@
   Wet Weather Inflow .......         0.000         0.000
   Groundwater Inflow .......         0.000         0.000
   RDII Inflow ..............         0.000         0.000
-  External Inflow ..........         0.000         0.000
+  External Inflow ..........         0.259         2.592
   External Outflow .........         0.000         0.000
-  Flooding Loss ............         0.000         0.000
+  Flooding Loss ............         0.148         1.477
   Evaporation Loss .........         0.000         0.000
   Exfiltration Loss ........         0.000         0.000
   Initial Stored Volume ....         0.000         0.000
-  Final Stored Volume ......         0.000         0.000
-  Continuity Error (%) .....         0.000
+  Final Stored Volume ......         0.100         1.005
+  Continuity Error (%) .....         4.244
   
   
   ***************************
@@ -91,10 +91,10 @@
   Node                 Type       Meters   Meters   Meters  days hr:min      Meters
   ---------------------------------------------------------------------------------
   WQCP                 JUNCTION     0.00     0.00   109.60     0  00:00        0.00
-  Inlet                JUNCTION     0.00     0.00   110.00     0  00:00        0.00
+  Inlet                JUNCTION   100.62   103.02   213.02     0  01:06      103.01
   211                  JUNCTION     0.00     0.00   110.00     0  00:00        0.00
   Outlet               OUTFALL      0.00     0.00   110.00     0  00:00        0.00
-  GPT                  STORAGE      0.00     0.00   108.00     0  00:00        0.00
+  GPT                  STORAGE      7.63    10.00   118.00     0  10:19       10.00
   
   
   *******************
@@ -108,10 +108,10 @@
   Node                 Type           CMS      CMS  days hr:min    10^6 ltr    10^6 ltr     Percent
   -------------------------------------------------------------------------------------------------
   WQCP                 JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
-  Inlet                JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
+  Inlet                JUNCTION     0.030    0.030     0  00:00        2.59        2.59       4.627
   211                  JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
   Outlet               OUTFALL      0.000    0.000     0  00:00           0           0       0.000 ltr
-  GPT                  STORAGE      0.000    0.000     0  00:00           0           0       0.000 ltr
+  GPT                  STORAGE      0.000    0.104     0  01:06           0        2.48       0.004
   
   
   **********************
@@ -125,7 +125,14 @@
   Node Flooding Summary
   *********************
   
-  No nodes were flooded.
+  Flooding refers to all water that overflows a node, whether it ponds or not.
+  --------------------------------------------------------------------------
+                                                             Total   Maximum
+                                 Maximum   Time of Max       Flood    Ponded
+                        Hours       Rate    Occurrence      Volume     Depth
+  Node                 Flooded       CMS   days hr:min    10^6 ltr    Meters
+  --------------------------------------------------------------------------
+  GPT                    13.68     0.030      0  10:19       1.477     0.000
   
   
   **********************
@@ -137,7 +144,7 @@
                           Volume   Pcnt   Pcnt   Pcnt      Volume   Pcnt     Occurrence    Outflow
   Storage Unit           1000 m³   Full   Loss   Loss     1000 m³   Full    days hr:min        CMS
   ------------------------------------------------------------------------------------------------
-  GPT                      0.000    0.0    0.0    0.0       0.000    0.0       0  00:00      0.000
+  GPT                      0.763   76.3    0.0    0.0       1.000  100.0       0  10:19      0.000
   
   
   ***********************
@@ -163,7 +170,7 @@
                                   |Flow|   Occurrence   |Veloc|    Full    Full
   Link                 Type          CMS  days hr:min     m/sec    Flow   Depth
   -----------------------------------------------------------------------------
-  206                  CONDUIT     0.000     0  00:00      0.00    0.00    0.00
+  206                  CONDUIT     0.104     0  01:06      1.04    0.00    0.00
   207                  CONDUIT     0.000     0  00:00      0.00    0.00    0.00
   210                  CONDUIT     0.000     0  00:00      0.00    0.00    0.00
   212                  CONDUIT     0.000     0  00:00      0.00    0.00    0.00
@@ -178,7 +185,7 @@
                        /Actual         Up    Down  Sub   Sup   Up    Down  Norm  Inlet 
   Conduit               Length    Dry  Dry   Dry   Crit  Crit  Crit  Crit  Ltd   Ctrl  
   -------------------------------------------------------------------------------------
-  206                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  206                     1.00   0.05  0.00  0.00  0.00  0.00  0.00  0.95  0.00  0.00
   207                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
   210                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
   212                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
@@ -191,6 +198,6 @@
   No conduits were surcharged.
   
 
-  Analysis begun on:  Sun Jul 19 15:20:12 2026
-  Analysis ended on:  Sun Jul 19 15:20:12 2026
+  Analysis begun on:  Wed Jul 22 14:01:25 2026
+  Analysis ended on:  Wed Jul 22 14:01:25 2026
   Total elapsed time: < 1 sec

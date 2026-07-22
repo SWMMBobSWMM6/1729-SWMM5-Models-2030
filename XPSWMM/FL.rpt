@@ -37,20 +37,20 @@
   Wet Weather Inflow .......         0.000         0.000
   Groundwater Inflow .......         0.000         0.000
   RDII Inflow ..............         0.000         0.000
-  External Inflow ..........         0.000         0.000
-  External Outflow .........         0.000         0.000
+  External Inflow ..........         5.950         1.939
+  External Outflow .........         1.952         0.636
   Flooding Loss ............         0.000         0.000
   Evaporation Loss .........         0.000         0.000
   Exfiltration Loss ........         0.000         0.000
   Initial Stored Volume ....         0.000         0.000
-  Final Stored Volume ......         0.000         0.000
-  Continuity Error (%) .....         0.000
+  Final Stored Volume ......         3.999         1.303
+  Continuity Error (%) .....        -0.027
   
   
   ***************************
   Time-Step Critical Elements
   ***************************
-  None
+  Link U2 (99.22%)
   
   
   ********************************
@@ -68,17 +68,17 @@
   *************************
   Routing Time Step Summary
   *************************
-  Minimum Time Step           :    29.50 sec
-  Average Time Step           :    29.99 sec
+  Minimum Time Step           :     2.01 sec
+  Average Time Step           :    17.28 sec
   Maximum Time Step           :    30.00 sec
   % of Time in Steady State   :     0.00
-  Average Iterations per Step :     2.00
-  % of Steps Not Converging   :     0.00
+  Average Iterations per Step :     2.01
+  % of Steps Not Converging   :     0.02
   Time Step Frequencies       :
-     30.000 - 13.228 sec      :   100.00 %
+     30.000 - 13.228 sec      :    99.98 %
      13.228 -  5.833 sec      :     0.00 %
       5.833 -  2.572 sec      :     0.00 %
-      2.572 -  1.134 sec      :     0.00 %
+      2.572 -  1.134 sec      :     0.02 %
       1.134 -  0.500 sec      :     0.00 %
   
   
@@ -91,12 +91,12 @@
                                    Depth    Depth      HGL   Occurrence   Max Depth
   Node                 Type         Feet     Feet     Feet  days hr:min        Feet
   ---------------------------------------------------------------------------------
-  U1-W                 JUNCTION     0.00     0.00     6.40     0  00:00        0.00
-  U2-W                 JUNCTION     0.00     0.00     7.48     0  00:00        0.00
-  U1-E                 JUNCTION     0.00     0.00     7.48     0  00:00        0.00
-  U8-E                 OUTFALL      0.00     0.00     6.13     0  00:00        0.00
-  FC-N-1               STORAGE      0.00     0.00    10.00     0  00:00        0.00
-  FC-S-1               STORAGE      0.00     0.00    10.00     0  00:00        0.00
+  U1-W                 JUNCTION     1.48     1.52     7.92     0  00:02        1.48
+  U2-W                 JUNCTION     0.21     0.22     7.70     0  04:58        0.22
+  U1-E                 JUNCTION     0.27     0.27     7.75     0  04:55        0.27
+  U8-E                 OUTFALL      0.21     0.22     6.35     0  04:58        0.22
+  FC-N-1               STORAGE      0.02     0.05    10.05     1  00:00        0.05
+  FC-S-1               STORAGE      0.01     0.01    10.01     1  00:00        0.01
   
   
   *******************
@@ -109,12 +109,12 @@
                                    Inflow   Inflow   Occurrence      Volume      Volume       Error
   Node                 Type           CFS      CFS  days hr:min    10^6 gal    10^6 gal     Percent
   -------------------------------------------------------------------------------------------------
-  U1-W                 JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
-  U2-W                 JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
-  U1-E                 JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
-  U8-E                 OUTFALL       0.00     0.00     0  00:00           0           0       0.000 gal
-  FC-N-1               STORAGE       0.00     0.00     0  00:00           0           0       0.000 gal
-  FC-S-1               STORAGE       0.00     0.00     0  00:00           0           0       0.000 gal
+  U1-W                 JUNCTION      1.00     1.00     0  00:00       0.646       0.646       0.041
+  U2-W                 JUNCTION      0.00     1.00     0  04:57           0       0.641       0.694
+  U1-E                 JUNCTION      0.00     1.02     0  00:04           0       0.646       0.850
+  U8-E                 OUTFALL       0.00     1.00     0  04:58           0       0.636       0.000
+  FC-N-1               STORAGE       1.00     1.00     0  00:00       0.646       0.646       0.000
+  FC-S-1               STORAGE       1.00     1.00     0  00:00       0.646       0.646       0.000
   
   
   **********************
@@ -140,8 +140,8 @@
                           Volume   Pcnt   Pcnt   Pcnt      Volume   Pcnt     Occurrence    Outflow
   Storage Unit          1000 ft³   Full   Loss   Loss    1000 ft³   Full    days hr:min        CFS
   ------------------------------------------------------------------------------------------------
-  FC-N-1                   0.000    0.0    0.0    0.0       0.000    0.0       0  00:00       0.00
-  FC-S-1                   0.000    0.0    0.0    0.0       0.000    0.0       0  00:00       0.00
+  FC-N-1                  43.425    0.2    0.0    0.0      86.400    0.5       1  00:00       0.00
+  FC-S-1                  43.425    0.1    0.0    0.0      86.400    0.1       1  00:00       0.00
   
   
   ***********************
@@ -153,9 +153,9 @@
                          Freq      Flow      Flow      Volume
   Outfall Node           Pcnt       CFS       CFS    10^6 gal
   -----------------------------------------------------------
-  U8-E                   0.00      0.00      0.00       0.000
+  U8-E                  99.78      0.99      1.00       0.636
   -----------------------------------------------------------
-  System                 0.00      0.00      0.00       0.000
+  System                99.78      0.99      1.00       0.636
   
   
   ********************
@@ -167,9 +167,9 @@
                                   |Flow|   Occurrence   |Veloc|    Full    Full
   Link                 Type          CFS  days hr:min    ft/sec    Flow   Depth
   -----------------------------------------------------------------------------
-  U1                   CONDUIT      0.00     0  00:00      0.00    0.00    0.00
-  FC-C-1               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
-  U2                   CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  U1                   CONDUIT      1.02     0  00:04      3.21    0.01    0.10
+  FC-C-1               CONDUIT      1.00     0  04:57      0.48    0.63    0.24
+  U2                   CONDUIT      1.00     0  04:58      3.07    0.00    0.04
   FC-W-N-1             WEIR         0.00     0  00:00                      0.00
   FC-W-S-1             WEIR         0.00     0  00:00                      0.00
   
@@ -183,9 +183,9 @@
                        /Actual         Up    Down  Sub   Sup   Up    Down  Norm  Inlet 
   Conduit               Length    Dry  Dry   Dry   Crit  Crit  Crit  Crit  Ltd   Ctrl  
   -------------------------------------------------------------------------------------
-  U1                      1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
-  FC-C-1                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
-  U2                      1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  U1                      1.00   0.00  0.00  0.00  1.00  0.00  0.00  0.00  0.00  0.00
+  FC-C-1                  1.00   0.00  0.00  0.00  1.00  0.00  0.00  0.00  0.00  0.00
+  U2                      1.00   0.00  0.00  0.00  0.01  0.99  0.00  0.00  0.97  0.00
   
   
   *************************
@@ -195,6 +195,6 @@
   No conduits were surcharged.
   
 
-  Analysis begun on:  Sun Jul 19 15:18:43 2026
-  Analysis ended on:  Sun Jul 19 15:18:43 2026
+  Analysis begun on:  Wed Jul 22 12:55:13 2026
+  Analysis ended on:  Wed Jul 22 12:55:13 2026
   Total elapsed time: < 1 sec

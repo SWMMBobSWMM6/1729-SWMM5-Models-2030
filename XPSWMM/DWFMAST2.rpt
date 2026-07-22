@@ -40,20 +40,20 @@
   Wet Weather Inflow .......         0.000         0.000
   Groundwater Inflow .......         0.000         0.000
   RDII Inflow ..............         0.000         0.000
-  External Inflow ..........         0.000         0.000
-  External Outflow .........         0.000         0.000
+  External Inflow ..........         3.967         1.293
+  External Outflow .........         3.957         1.289
   Flooding Loss ............         0.000         0.000
   Evaporation Loss .........         0.000         0.000
   Exfiltration Loss ........         0.000         0.000
   Initial Stored Volume ....         0.000         0.000
-  Final Stored Volume ......         0.000         0.000
-  Continuity Error (%) .....         0.000
+  Final Stored Volume ......         0.011         0.004
+  Continuity Error (%) .....        -0.025
   
   
   ***************************
   Time-Step Critical Elements
   ***************************
-  None
+  Link 207 (99.82%)
   
   
   ********************************
@@ -71,17 +71,17 @@
   *************************
   Routing Time Step Summary
   *************************
-  Minimum Time Step           :    59.50 sec
-  Average Time Step           :    59.96 sec
+  Minimum Time Step           :     1.76 sec
+  Average Time Step           :    15.71 sec
   Maximum Time Step           :    60.00 sec
   % of Time in Steady State   :     0.00
   Average Iterations per Step :     2.00
   % of Steps Not Converging   :     0.00
   Time Step Frequencies       :
-     60.000 - 23.031 sec      :   100.00 %
-     23.031 -  8.841 sec      :     0.00 %
+     60.000 - 23.031 sec      :     0.04 %
+     23.031 -  8.841 sec      :    99.95 %
       8.841 -  3.393 sec      :     0.00 %
-      3.393 -  1.303 sec      :     0.00 %
+      3.393 -  1.303 sec      :     0.02 %
       1.303 -  0.500 sec      :     0.00 %
   
   
@@ -94,11 +94,11 @@
                                    Depth    Depth      HGL   Occurrence   Max Depth
   Node                 Type         Feet     Feet     Feet  days hr:min        Feet
   ---------------------------------------------------------------------------------
-  201                  JUNCTION     0.00     0.00    10.00     0  00:00        0.00
-  202                  JUNCTION     0.00     0.00    10.00     0  00:00        0.00
-  204                  JUNCTION     0.00     0.00    10.00     0  00:00        0.00
-  DWF=3                JUNCTION     0.00     0.00    10.00     0  00:00        0.00
-  206                  OUTFALL      0.00     0.00    10.00     0  00:00        0.00
+  201                  JUNCTION     0.41     0.41    10.41     0  01:55        0.41
+  202                  JUNCTION     0.39     0.39    10.39     0  01:22        0.39
+  204                  JUNCTION     0.41     0.41    10.41     0  01:56        0.41
+  DWF=3                JUNCTION     0.41     0.41    10.41     0  01:20        0.41
+  206                  OUTFALL      0.20     0.20    10.20     0  01:22        0.20
   
   
   *******************
@@ -111,11 +111,11 @@
                                    Inflow   Inflow   Occurrence      Volume      Volume       Error
   Node                 Type           CFS      CFS  days hr:min    10^6 gal    10^6 gal     Percent
   -------------------------------------------------------------------------------------------------
-  201                  JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
-  202                  JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
-  204                  JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
-  DWF=3                JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
-  206                  OUTFALL       0.00     0.00     0  00:00           0           0       0.000 gal
+  201                  JUNCTION      1.00     1.00     0  00:07       0.646       0.646       0.109
+  202                  JUNCTION      0.00     2.00     0  01:21           0        1.29       0.138
+  204                  JUNCTION      1.00     1.00     0  00:00       0.646       0.646       0.090
+  DWF=3                JUNCTION      0.00     0.10     0  00:02           0    0.000192       0.000
+  206                  OUTFALL       0.00     2.00     0  01:22           0        1.29       0.000
   
   
   **********************
@@ -141,9 +141,9 @@
                          Freq      Flow      Flow      Volume
   Outfall Node           Pcnt       CFS       CFS    10^6 gal
   -----------------------------------------------------------
-  206                    0.00      0.00      0.00       0.000
+  206                   99.98      2.00      2.00       1.289
   -----------------------------------------------------------
-  System                 0.00      0.00      0.00       0.000
+  System                99.98      2.00      2.00       1.289
   
   
   ********************
@@ -155,10 +155,10 @@
                                   |Flow|   Occurrence   |Veloc|    Full    Full
   Link                 Type          CFS  days hr:min    ft/sec    Flow   Depth
   -----------------------------------------------------------------------------
-  203                  CONDUIT      0.00     0  00:00      0.00    0.00    0.00
-  205                  CONDUIT      0.00     0  00:00      0.00    0.00    0.00
-  207                  CONDUIT      0.00     0  00:00      0.00    0.00    0.00
-  209                  CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  203                  CONDUIT      1.00     0  00:10      1.09    0.19    0.10
+  205                  CONDUIT      1.00     0  00:09      1.21    0.19    0.10
+  207                  CONDUIT      2.00     0  01:22      1.69    0.37    0.07
+  209                  CONDUIT      0.10     0  00:02      0.91    0.90    0.41
   
   
   ***************************
@@ -170,10 +170,10 @@
                        /Actual         Up    Down  Sub   Sup   Up    Down  Norm  Inlet 
   Conduit               Length    Dry  Dry   Dry   Crit  Crit  Crit  Crit  Ltd   Ctrl  
   -------------------------------------------------------------------------------------
-  203                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
-  205                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
-  207                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
-  209                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  203                     1.00   0.00  0.00  0.00  1.00  0.00  0.00  0.00  0.00  0.00
+  205                     1.00   0.00  0.00  0.00  1.00  0.00  0.00  0.00  0.00  0.00
+  207                     1.00   0.00  0.00  0.00  1.00  0.00  0.00  0.00  0.00  0.00
+  209                     1.00   0.00  0.00  0.00  1.00  0.00  0.00  0.00  0.00  0.00
   
   
   *************************
@@ -183,6 +183,6 @@
   No conduits were surcharged.
   
 
-  Analysis begun on:  Sun Jul 19 15:17:52 2026
-  Analysis ended on:  Sun Jul 19 15:17:52 2026
+  Analysis begun on:  Wed Jul 22 12:01:17 2026
+  Analysis ended on:  Wed Jul 22 12:01:17 2026
   Total elapsed time: < 1 sec

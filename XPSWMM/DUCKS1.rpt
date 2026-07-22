@@ -36,14 +36,14 @@
   Wet Weather Inflow .......         0.000         0.000
   Groundwater Inflow .......         0.000         0.000
   RDII Inflow ..............         0.000         0.000
-  External Inflow ..........         0.000         0.000
+  External Inflow ..........         3.967         1.293
   External Outflow .........         0.000         0.000
-  Flooding Loss ............         0.000         0.000
+  Flooding Loss ............         3.507         1.143
   Evaporation Loss .........         0.000         0.000
   Exfiltration Loss ........         0.000         0.000
   Initial Stored Volume ....         0.000         0.000
-  Final Stored Volume ......         0.000         0.000
-  Continuity Error (%) .....         0.000
+  Final Stored Volume ......         0.459         0.150
+  Continuity Error (%) .....         0.006
   
   
   ***************************
@@ -90,11 +90,12 @@
                                    Depth    Depth      HGL   Occurrence   Max Depth
   Node                 Type         Feet     Feet     Feet  days hr:min        Feet
   ---------------------------------------------------------------------------------
-  D                    OUTFALL      0.00     0.00    20.00     0  00:00        0.00
+  OUT_SYNTH            OUTFALL      0.00     0.00    19.00     0  00:00        0.00
   A                    STORAGE      0.00     0.00    20.00     0  00:00        0.00
   B                    STORAGE      0.00     0.00    20.00     0  00:00        0.00
-  E                    STORAGE      0.00     0.00    20.00     0  00:00        0.00
+  E                    STORAGE      9.42    10.00    30.00     0  02:46       10.00
   C                    STORAGE      0.00     0.00    20.00     0  00:00        0.00
+  D                    STORAGE      9.42    10.00    30.00     0  02:46       10.00
   
   
   *******************
@@ -107,11 +108,12 @@
                                    Inflow   Inflow   Occurrence      Volume      Volume       Error
   Node                 Type           CFS      CFS  days hr:min    10^6 gal    10^6 gal     Percent
   -------------------------------------------------------------------------------------------------
-  D                    OUTFALL       0.00     0.00     0  00:00           0           0       0.000 gal
+  OUT_SYNTH            OUTFALL       0.00     0.00     0  00:00           0           0       0.000 gal
   A                    STORAGE       0.00     0.00     0  00:00           0           0       0.000 gal
   B                    STORAGE       0.00     0.00     0  00:00           0           0       0.000 gal
-  E                    STORAGE       0.00     0.00     0  00:00           0           0       0.000 gal
+  E                    STORAGE       1.00     1.00     0  00:00       0.646       0.646       0.006
   C                    STORAGE       0.00     0.00     0  00:00           0           0       0.000 gal
+  D                    STORAGE       1.00     1.00     0  00:00       0.646       0.646       0.006
   
   
   **********************
@@ -125,7 +127,15 @@
   Node Flooding Summary
   *********************
   
-  No nodes were flooded.
+  Flooding refers to all water that overflows a node, whether it ponds or not.
+  --------------------------------------------------------------------------
+                                                             Total   Maximum
+                                 Maximum   Time of Max       Flood    Ponded
+                        Hours       Rate    Occurrence      Volume     Depth
+  Node                 Flooded       CFS   days hr:min    10^6 gal      Feet
+  --------------------------------------------------------------------------
+  E                      21.22      1.00      0  02:46       0.571     0.000
+  D                      21.22      1.00      0  02:46       0.571     0.000
   
   
   **********************
@@ -139,8 +149,9 @@
   ------------------------------------------------------------------------------------------------
   A                        0.000    0.0    0.0    0.0       0.000    0.0       0  00:00       0.00
   B                        0.000    0.0    0.0    0.0       0.000    0.0       0  00:00       0.00
-  E                        0.000    0.0    0.0    0.0       0.000    0.0       0  00:00       0.00
+  E                        9.421   94.2    0.0    0.0      10.000  100.0       0  02:46       0.00
   C                        0.000    0.0    0.0    0.0       0.000    0.0       0  00:00       0.00
+  D                        9.421   94.2    0.0    0.0      10.000  100.0       0  02:46       0.00
   
   
   ***********************
@@ -152,7 +163,7 @@
                          Freq      Flow      Flow      Volume
   Outfall Node           Pcnt       CFS       CFS    10^6 gal
   -----------------------------------------------------------
-  D                      0.00      0.00      0.00       0.000
+  OUT_SYNTH              0.00      0.00      0.00       0.000
   -----------------------------------------------------------
   System                 0.00      0.00      0.00       0.000
   
@@ -168,6 +179,7 @@
   -----------------------------------------------------------------------------
   Chan1                CONDUIT      0.00     0  00:00      0.00    0.00    0.00
   Chan2                CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  C_OUT_SYNTH          CONDUIT      0.00     0  00:00      0.00    0.00    0.00
   WeirAB               WEIR         0.00     0  00:00                      0.00
   WeirCA               WEIR         0.00     0  00:00                      0.00
   
@@ -183,6 +195,7 @@
   -------------------------------------------------------------------------------------
   Chan1                   1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
   Chan2                   1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  C_OUT_SYNTH             1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
   
   
   *************************
@@ -192,6 +205,6 @@
   No conduits were surcharged.
   
 
-  Analysis begun on:  Sun Jul 19 15:17:52 2026
-  Analysis ended on:  Sun Jul 19 15:17:52 2026
+  Analysis begun on:  Wed Jul 22 12:01:17 2026
+  Analysis ended on:  Wed Jul 22 12:01:17 2026
   Total elapsed time: < 1 sec

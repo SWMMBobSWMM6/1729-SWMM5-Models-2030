@@ -9,6 +9,7 @@
   WARNING 04: minimum elevation drop used for Conduit C100C-C-16
   WARNING 04: minimum elevation drop used for Conduit s-119
   WARNING 04: minimum elevation drop used for Conduit C100C-C-17
+  WARNING 04: minimum elevation drop used for Conduit seep_flap
   
   ****************
   Analysis Options
@@ -42,14 +43,24 @@
   Wet Weather Inflow .......         0.000         0.000
   Groundwater Inflow .......         0.000         0.000
   RDII Inflow ..............         0.000         0.000
-  External Inflow ..........         0.000         0.000
-  External Outflow .........         0.000         0.000
-  Flooding Loss ............         0.000         0.000
+  External Inflow ..........         3.967         1.293
+  External Outflow .........         1.714         0.558
+  Flooding Loss ............         1.754         0.572
   Evaporation Loss .........         0.000         0.000
   Exfiltration Loss ........         0.000         0.000
   Initial Stored Volume ....         0.000         0.000
-  Final Stored Volume ......         0.000         0.000
-  Continuity Error (%) .....         0.000
+  Final Stored Volume ......         0.516         0.168
+  Continuity Error (%) .....        -0.434
+  
+  
+  *************************
+  Highest Continuity Errors
+  *************************
+  Node HOWARDDR1 (3.63%)
+  Node U19-W (3.56%)
+  Node U19-E (2.52%)
+  Node S119-NW (2.32%)
+  Node S119-SE (2.15%)
   
   
   ***************************
@@ -96,16 +107,18 @@
                                    Depth    Depth      HGL   Occurrence   Max Depth
   Node                 Type         Feet     Feet     Feet  days hr:min        Feet
   ---------------------------------------------------------------------------------
-  U18-W                JUNCTION     0.00     0.00    20.00     0  00:00        0.00
-  HOWARDDR1            JUNCTION     0.00     0.00    20.00     0  00:00        0.00
-  U19-W                JUNCTION     0.00     0.00    20.00     0  00:00        0.00
-  U19-E                JUNCTION     0.00     0.00    20.00     0  00:00        0.00
+  U18-W                JUNCTION     0.45     0.46    20.46     1  00:00        0.46
+  HOWARDDR1            JUNCTION     0.43     0.45    20.45     1  00:00        0.45
+  U19-W                JUNCTION     0.41     0.43    20.43     1  00:00        0.43
+  U19-E                JUNCTION     0.32     0.35    20.35     1  00:00        0.35
   Node_564             JUNCTION     0.00     0.00     0.00     0  00:00        0.00
-  S119-NW              JUNCTION     0.00     0.00    20.00     0  00:00        0.00
-  S119-SE              JUNCTION     0.00     0.00    20.00     0  00:00        0.00
+  S119-NW              JUNCTION     0.27     0.31    20.31     1  00:00        0.31
+  S119-SE              JUNCTION     0.27     0.31    20.31     1  00:00        0.31
   FreeU19              JUNCTION     0.00     0.00    20.00     0  00:00        0.00
   mid_seep             JUNCTION     0.00     0.00    20.00     0  00:00        0.00
-  B16-NW               OUTFALL      0.00     0.00    20.00     0  00:00        0.00
+  HW_seep_flap         JUNCTION     9.42    10.00    10.00     0  02:46       10.00
+  Node_10661069        JUNCTION     9.42    10.00    10.00     0  02:46       10.00
+  B16-NW               OUTFALL      0.06     0.07    20.07     1  00:00        0.07
   
   
   *******************
@@ -118,16 +131,18 @@
                                    Inflow   Inflow   Occurrence      Volume      Volume       Error
   Node                 Type           CFS      CFS  days hr:min    10^6 gal    10^6 gal     Percent
   -------------------------------------------------------------------------------------------------
-  U18-W                JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
-  HOWARDDR1            JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
-  U19-W                JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
-  U19-E                JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  U18-W                JUNCTION      1.00     1.00     0  00:00       0.646       0.646       0.203
+  HOWARDDR1            JUNCTION      0.00     1.03     0  00:08           0       0.645       3.768
+  U19-W                JUNCTION      0.00     1.00     1  00:00           0       0.622       3.693
+  U19-E                JUNCTION      0.00     1.00     1  00:00           0       0.599       2.585
   Node_564             JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
-  S119-NW              JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
-  S119-SE              JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  S119-NW              JUNCTION      0.00     1.00     1  00:00           0       0.584       2.379
+  S119-SE              JUNCTION      0.00     1.00     1  00:00           0       0.571       2.199
   FreeU19              JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
   mid_seep             JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
-  B16-NW               OUTFALL       0.00     0.00     0  00:00           0           0       0.000 gal
+  HW_seep_flap         JUNCTION      1.00     1.00     0  00:00       0.646       0.646       6.137
+  Node_10661069        JUNCTION      0.00     0.99     0  00:02           0       0.285       0.000
+  B16-NW               OUTFALL       0.00     1.00     1  00:00           0       0.558       0.000
   
   
   **********************
@@ -143,13 +158,23 @@
   Node_564             JUNCTION       24.00          0.000        0.000
   FreeU19              JUNCTION       24.00          0.000        0.000
   mid_seep             JUNCTION       24.00          0.000        0.000
+  HW_seep_flap         JUNCTION       21.22          0.000        0.000
+  Node_10661069        JUNCTION       21.22          0.000        0.000
   
   
   *********************
   Node Flooding Summary
   *********************
   
-  No nodes were flooded.
+  Flooding refers to all water that overflows a node, whether it ponds or not.
+  --------------------------------------------------------------------------
+                                                             Total   Maximum
+                                 Maximum   Time of Max       Flood    Ponded
+                        Hours       Rate    Occurrence      Volume     Depth
+  Node                 Flooded       CFS   days hr:min    10^6 gal      Feet
+  --------------------------------------------------------------------------
+  HW_seep_flap           21.22      0.62      1  00:00       0.324     0.000
+  Node_10661069          21.22      0.50      0  02:46       0.248     0.000
   
   
   ***********************
@@ -161,9 +186,9 @@
                          Freq      Flow      Flow      Volume
   Outfall Node           Pcnt       CFS       CFS    10^6 gal
   -----------------------------------------------------------
-  B16-NW                 0.00      0.00      0.00       0.000
+  B16-NW                92.21      0.94      1.00       0.558
   -----------------------------------------------------------
-  System                 0.00      0.00      0.00       0.000
+  System                92.21      0.94      1.00       0.558
   
   
   ********************
@@ -175,12 +200,13 @@
                                   |Flow|   Occurrence   |Veloc|    Full    Full
   Link                 Type          CFS  days hr:min    ft/sec    Flow   Depth
   -----------------------------------------------------------------------------
-  U-18                 CONDUIT      0.00     0  00:00      0.00    0.00    0.00
-  C100C-C-15           CONDUIT      0.00     0  00:00      0.00    0.00    0.00
-  U-19                 CONDUIT      0.00     0  00:00      0.00    0.00    0.00
-  C100C-C-16           CONDUIT      0.00     0  00:00      0.00    0.00    0.00
-  s-119                CONDUIT      0.00     0  00:00      0.00    0.00    0.00
-  C100C-C-17           CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  U-18                 CONDUIT      1.03     0  00:08      0.82    0.00    0.02
+  C100C-C-15           CONDUIT      1.00     1  00:00      0.38    0.98    0.44
+  U-19                 CONDUIT      1.00     1  00:00      0.81    0.01    0.02
+  C100C-C-16           CONDUIT      1.00     1  00:00      0.37    0.91    0.33
+  s-119                CONDUIT      1.00     1  00:00      0.48    0.01    0.03
+  C100C-C-17           CONDUIT      1.00     1  00:00      0.52    0.88    0.19
+  seep_flap            CONDUIT      0.99     0  00:02      0.71    0.02    1.00
   
   
   ***************************
@@ -192,21 +218,27 @@
                        /Actual         Up    Down  Sub   Sup   Up    Down  Norm  Inlet 
   Conduit               Length    Dry  Dry   Dry   Crit  Crit  Crit  Crit  Ltd   Ctrl  
   -------------------------------------------------------------------------------------
-  U-18                    1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
-  C100C-C-15              1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
-  U-19                    1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
-  C100C-C-16              1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
-  s-119                   1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
-  C100C-C-17              1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  U-18                    1.00   0.00  0.00  0.00  1.00  0.00  0.00  0.00  0.00  0.00
+  C100C-C-15              1.00   0.00  0.00  0.00  1.00  0.00  0.00  0.00  0.00  0.00
+  U-19                    1.00   0.00  0.00  0.00  1.00  0.00  0.00  0.00  0.00  0.00
+  C100C-C-16              1.00   0.01  0.00  0.00  0.99  0.00  0.00  0.00  0.00  0.00
+  s-119                   1.00   0.04  0.00  0.00  0.96  0.00  0.00  0.00  0.00  0.00
+  C100C-C-17              1.00   0.05  0.00  0.00  0.95  0.00  0.00  0.00  0.00  0.00
+  seep_flap               1.00   0.00  0.00  0.00  1.00  0.00  0.00  0.00  0.00  0.00
   
   
   *************************
   Conduit Surcharge Summary
   *************************
   
-  No conduits were surcharged.
+  ----------------------------------------------------------------------------
+                                                           Hours        Hours 
+                         --------- Hours Full --------   Above Full   Capacity
+  Conduit                Both Ends  Upstream  Dnstream   Normal Flow   Limited
+  ----------------------------------------------------------------------------
+  seep_flap                  21.22     21.22     21.22      0.01         0.01
   
 
-  Analysis begun on:  Sun Jul 19 15:22:14 2026
-  Analysis ended on:  Sun Jul 19 15:22:14 2026
+  Analysis begun on:  Wed Jul 22 14:16:25 2026
+  Analysis ended on:  Wed Jul 22 14:16:25 2026
   Total elapsed time: < 1 sec

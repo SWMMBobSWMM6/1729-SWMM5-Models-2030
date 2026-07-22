@@ -37,14 +37,14 @@
   Wet Weather Inflow .......         0.000         0.000
   Groundwater Inflow .......         0.000         0.000
   RDII Inflow ..............         0.000         0.000
-  External Inflow ..........         0.000         0.000
+  External Inflow ..........         5.950         1.939
   External Outflow .........        19.834         6.463
-  Flooding Loss ............         0.000         0.000
+  Flooding Loss ............         3.851         1.255
   Evaporation Loss .........         0.000         0.000
   Exfiltration Loss ........         0.000         0.000
   Initial Stored Volume ....         0.000         0.000
-  Final Stored Volume ......         0.000         0.000
-  Continuity Error (%) .....-1264729856.831
+  Final Stored Volume ......         0.113         0.037
+  Continuity Error (%) .....      -299.960
   
   
   ***************************
@@ -95,10 +95,10 @@
   E09245               JUNCTION     0.00     0.00    10.00     0  00:00        0.00
   E09163               JUNCTION     0.00     0.00    10.00     0  00:00        0.00
   Node_8049            JUNCTION     0.00     0.00    -6.74     0  00:00        0.00
-  Node_2138            JUNCTION     0.00     0.00    -6.74     0  00:00        0.00
-  Node_19572337        JUNCTION     0.00     0.00    -6.74     0  00:00        0.00
-  Node_9163            JUNCTION     0.00     0.00    -6.74     0  00:00        0.00
-  Node_23372334        JUNCTION     0.00     0.00    -9.64     0  00:00        0.00
+  Node_2138            JUNCTION     0.99     1.00    -5.74     0  00:30        1.00
+  Node_19572337        JUNCTION     0.95     1.00    -5.74     0  01:51        1.00
+  Node_9163            JUNCTION     0.47     0.49    -6.25     0  00:11        0.48
+  Node_23372334        JUNCTION     1.48     1.50    -8.14     0  00:28        1.50
   Node_19591957        OUTFALL      0.00     0.00    -6.74     0  00:00        0.00
   S49                  STORAGE      0.00     0.00    10.00     0  00:00        0.00
   
@@ -116,11 +116,11 @@
   J049                 JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
   E09245               JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
   E09163               JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
-  Node_8049            JUNCTION      0.00     0.00     0  00:00           0           0    -100.000
-  Node_2138            JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
-  Node_19572337        JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
-  Node_9163            JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
-  Node_23372334        JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  Node_8049            JUNCTION      1.00     1.00     0  00:00       0.646       0.646     -90.000
+  Node_2138            JUNCTION      1.00     1.00     0  00:00       0.646       0.646       1.959
+  Node_19572337        JUNCTION      0.00     0.36     0  01:00           0      0.0143       0.000
+  Node_9163            JUNCTION      1.00     1.00     0  00:00       0.646       0.646       0.358
+  Node_23372334        JUNCTION      0.00     1.07     0  00:12           0       0.644       0.000
   Node_19591957        OUTFALL       0.00    10.00     0  00:00           0        6.46       0.000
   S49                  STORAGE       0.00     0.00     0  00:00           0           0       0.000 gal
   
@@ -139,13 +139,25 @@
   E09245               JUNCTION       24.00          0.000        0.000
   E09163               JUNCTION       24.00          0.000        0.000
   Node_8049            JUNCTION       24.00          0.000        0.000
+  Node_2138            JUNCTION       23.49          0.000        0.000
+  Node_19572337        JUNCTION       22.15          0.000        0.000
+  Node_23372334        JUNCTION       23.53          0.000        0.000
   
   
   *********************
   Node Flooding Summary
   *********************
   
-  No nodes were flooded.
+  Flooding refers to all water that overflows a node, whether it ponds or not.
+  --------------------------------------------------------------------------
+                                                             Total   Maximum
+                                 Maximum   Time of Max       Flood    Ponded
+                        Hours       Rate    Occurrence      Volume     Depth
+  Node                 Flooded       CFS   days hr:min    10^6 gal      Feet
+  --------------------------------------------------------------------------
+  Node_2138              23.49      1.00      1  00:00       0.620     0.000
+  Node_19572337          22.15      0.10      0  01:51       0.002     0.000
+  Node_23372334          23.53      1.00      0  00:28       0.634     0.000
   
   
   **********************
@@ -183,8 +195,8 @@
                                   |Flow|   Occurrence   |Veloc|    Full    Full
   Link                 Type          CFS  days hr:min    ft/sec    Flow   Depth
   -----------------------------------------------------------------------------
-  049                  CONDUIT      0.00     0  00:00      0.00    0.00    0.00
-  PE09163              CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  049                  CONDUIT      0.36     0  01:00      0.67   20.57    1.00
+  PE09163              CONDUIT      1.07     0  00:12      2.59    0.23    0.66
   8049                 PUMP        10.00     0  00:00              1.00
   
   
@@ -197,15 +209,21 @@
                        /Actual         Up    Down  Sub   Sup   Up    Down  Norm  Inlet 
   Conduit               Length    Dry  Dry   Dry   Crit  Crit  Crit  Crit  Ltd   Ctrl  
   -------------------------------------------------------------------------------------
-  049                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
-  PE09163                 1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  049                     1.00   0.00  0.00  0.00  1.00  0.00  0.00  0.00  0.00  0.00
+  PE09163                 1.00   0.00  0.00  0.00  1.00  0.00  0.00  0.00  0.99  0.00
   
   
   *************************
   Conduit Surcharge Summary
   *************************
   
-  No conduits were surcharged.
+  ----------------------------------------------------------------------------
+                                                           Hours        Hours 
+                         --------- Hours Full --------   Above Full   Capacity
+  Conduit                Both Ends  Upstream  Dnstream   Normal Flow   Limited
+  ----------------------------------------------------------------------------
+  049                        22.15     23.49     22.15      2.40         0.01
+  PE09163                     0.01      0.01     23.53      0.01         0.01
   
   
   ***************
@@ -220,6 +238,6 @@
   8049                   100.00           1      0.00     10.00     10.00     6.463      0.00    0.0    0.0
   
 
-  Analysis begun on:  Sun Jul 19 15:21:53 2026
-  Analysis ended on:  Sun Jul 19 15:21:53 2026
+  Analysis begun on:  Wed Jul 22 14:15:31 2026
+  Analysis ended on:  Wed Jul 22 14:15:31 2026
   Total elapsed time: < 1 sec

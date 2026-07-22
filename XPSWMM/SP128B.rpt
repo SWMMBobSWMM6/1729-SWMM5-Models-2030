@@ -37,14 +37,20 @@
   Wet Weather Inflow .......         0.000         0.000
   Groundwater Inflow .......         0.000         0.000
   RDII Inflow ..............         0.000         0.000
-  External Inflow ..........         0.000         0.000
+  External Inflow ..........         0.259         2.592
   External Outflow .........         0.000         0.000
   Flooding Loss ............         0.000         0.000
   Evaporation Loss .........         0.000         0.000
   Exfiltration Loss ........         0.000         0.000
   Initial Stored Volume ....         0.000         0.002
-  Final Stored Volume ......         0.000         0.002
-  Continuity Error (%) .....         0.000
+  Final Stored Volume ......         0.241         2.414
+  Continuity Error (%) .....         6.938
+  
+  
+  *************************
+  Highest Continuity Errors
+  *************************
+  Node B (99.97%)
   
   
   ***************************
@@ -56,7 +62,7 @@
   ********************************
   Highest Flow Instability Indexes
   ********************************
-  All links are stable.
+  Link R1 (2)
   
   
   *********************************
@@ -72,8 +78,8 @@
   Average Time Step           :     4.00 sec
   Maximum Time Step           :     4.00 sec
   % of Time in Steady State   :     0.00
-  Average Iterations per Step :     2.00
-  % of Steps Not Converging   :     0.00
+  Average Iterations per Step :     2.01
+  % of Steps Not Converging   :     0.01
   Time Step Frequencies       :
       4.000 -  2.639 sec      :   100.00 %
       2.639 -  1.741 sec      :     0.00 %
@@ -91,8 +97,8 @@
                                    Depth    Depth      HGL   Occurrence   Max Depth
   Node                 Type       Meters   Meters   Meters  days hr:min      Meters
   ---------------------------------------------------------------------------------
-  A                    JUNCTION     0.00     0.00   155.00     0  00:00        0.00
-  B                    JUNCTION     0.00     0.00   155.00     0  00:00        0.00
+  A                    JUNCTION   109.42   112.53   267.53     1  00:00      112.53
+  B                    JUNCTION   105.20   112.53   267.53     1  00:00      112.53
   C                    JUNCTION     0.00     0.00   145.00     0  00:00        0.00
   D                    JUNCTION     0.00     0.00   138.00     0  00:00        0.00
   E                    JUNCTION     0.00     0.00   116.00     0  00:00        0.00
@@ -116,8 +122,8 @@
                                    Inflow   Inflow   Occurrence      Volume      Volume       Error
   Node                 Type           CMS      CMS  days hr:min    10^6 ltr    10^6 ltr     Percent
   -------------------------------------------------------------------------------------------------
-  A                    JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
-  B                    JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
+  A                    JUNCTION     0.030    0.037     0  02:13        2.59        2.59      96.239
+  B                    JUNCTION     0.000    0.585     0  01:12           0        1.32  370758.762
   C                    JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
   D                    JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
   E                    JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
@@ -178,7 +184,7 @@
   R11                  CONDUIT     0.000     0  00:00      0.00    0.00    0.00
   R12                  CONDUIT     0.000     0  00:00      0.00    0.00    0.00
   R6                   CONDUIT     0.000     0  00:00      0.00    0.00    0.00
-  R1                   CONDUIT     0.000     0  00:00      0.00    0.00    0.00
+  R1                   CONDUIT     0.585     0  01:12      0.26    0.00    0.01
   WEIR                 WEIR        0.000     0  00:00                      0.00
   
   
@@ -201,7 +207,7 @@
   R11                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
   R12                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
   R6                      1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
-  R1                      1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  R1                      1.00   0.05  0.00  0.00  0.92  0.00  0.00  0.03  0.00  0.00
   
   
   *************************
@@ -211,6 +217,6 @@
   No conduits were surcharged.
   
 
-  Analysis begun on:  Sun Jul 19 15:22:44 2026
-  Analysis ended on:  Sun Jul 19 15:22:44 2026
-  Total elapsed time: < 1 sec
+  Analysis begun on:  Wed Jul 22 14:18:41 2026
+  Analysis ended on:  Wed Jul 22 14:18:42 2026
+  Total elapsed time: 00:00:01

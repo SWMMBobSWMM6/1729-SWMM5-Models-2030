@@ -36,20 +36,28 @@
   Wet Weather Inflow .......         0.000         0.000
   Groundwater Inflow .......         0.000         0.000
   RDII Inflow ..............         0.000         0.000
-  External Inflow ..........         0.000         0.000
-  External Outflow .........         0.000         0.000
-  Flooding Loss ............         0.000         0.000
+  External Inflow ..........         3.967         1.293
+  External Outflow .........         3.972         1.294
+  Flooding Loss ............         2.676         0.872
   Evaporation Loss .........         0.000         0.000
   Exfiltration Loss ........         0.000         0.000
   Initial Stored Volume ....         0.067         0.022
-  Final Stored Volume ......         0.067         0.022
-  Continuity Error (%) .....         0.000
+  Final Stored Volume ......         0.316         0.103
+  Continuity Error (%) .....       -72.654
+  
+  
+  *************************
+  Highest Continuity Errors
+  *************************
+  Node BEGOF (-140.17%)
+  Node EndOF (-44.26%)
+  Node Connect (41.26%)
   
   
   ***************************
   Time-Step Critical Elements
   ***************************
-  None
+  Link 36inCTRL (99.45%)
   
   
   ********************************
@@ -61,23 +69,27 @@
   *********************************
   Most Frequent Nonconverging Nodes
   *********************************
-  Convergence obtained at all time steps.
+  Node TW2 (0.15%)
+  Node EndOF (0.13%)
+  Node Altern2 (0.12%)
+  Node BEGOF (0.06%)
+  Node Connect (0.05%)
   
   
   *************************
   Routing Time Step Summary
   *************************
-  Minimum Time Step           :    59.50 sec
-  Average Time Step           :    59.96 sec
+  Minimum Time Step           :     2.00 sec
+  Average Time Step           :     8.27 sec
   Maximum Time Step           :    60.00 sec
   % of Time in Steady State   :     0.00
-  Average Iterations per Step :     2.00
-  % of Steps Not Converging   :     0.00
+  Average Iterations per Step :     2.08
+  % of Steps Not Converging   :     0.15
   Time Step Frequencies       :
-     60.000 - 23.031 sec      :   100.00 %
-     23.031 -  8.841 sec      :     0.00 %
-      8.841 -  3.393 sec      :     0.00 %
-      3.393 -  1.303 sec      :     0.00 %
+     60.000 - 23.031 sec      :     0.52 %
+     23.031 -  8.841 sec      :     0.02 %
+      8.841 -  3.393 sec      :    97.43 %
+      3.393 -  1.303 sec      :     2.04 %
       1.303 -  0.500 sec      :     0.00 %
   
   
@@ -90,13 +102,13 @@
                                    Depth    Depth      HGL   Occurrence   Max Depth
   Node                 Type         Feet     Feet     Feet  days hr:min        Feet
   ---------------------------------------------------------------------------------
-  BEGOF                JUNCTION     0.00     0.00   119.00     0  00:00        0.00
-  EndOF                JUNCTION     0.00     0.00   119.40     0  00:00        0.00
+  BEGOF                JUNCTION   110.51   118.50   237.50     0  00:49      112.01
+  EndOF                JUNCTION   110.24   118.40   237.80     0  00:50      111.37
   TW                   JUNCTION     0.00     0.00   119.40     0  00:00        0.00
-  Connect              JUNCTION     0.00     0.00   119.00     0  00:00        0.00
-  Altern2              JUNCTION     0.00     0.00   117.00     0  00:00        0.00
+  Connect              JUNCTION   110.98   115.50   234.50     0  00:52      111.75
+  Altern2              JUNCTION   117.28   118.00   235.00     0  00:50      117.43
   TW2                  OUTFALL      0.00     0.00   117.00     0  00:00        0.00
-  Detention            STORAGE      2.90     2.90   121.40     0  00:00        2.90
+  Detention            STORAGE      9.97    10.00   128.50     0  00:52       10.00
   
   
   *******************
@@ -109,13 +121,13 @@
                                    Inflow   Inflow   Occurrence      Volume      Volume       Error
   Node                 Type           CFS      CFS  days hr:min    10^6 gal    10^6 gal     Percent
   -------------------------------------------------------------------------------------------------
-  BEGOF                JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
-  EndOF                JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  BEGOF                JUNCTION      0.00   639.54     0  00:51           0       0.422     -58.364
+  EndOF                JUNCTION      0.00   550.43     0  00:50           0        1.17     -30.683
   TW                   JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
-  Connect              JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
-  Altern2              JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
-  TW2                  OUTFALL       0.00     0.00     0  00:00           0           0       0.000 gal
-  Detention            STORAGE       0.00     0.00     0  00:00           0      0.0217       0.000
+  Connect              JUNCTION      0.00   275.52     0  00:50           0       0.413      70.244
+  Altern2              JUNCTION      1.00    15.83     0  00:51       0.646       0.652       1.452
+  TW2                  OUTFALL       0.00   376.77     0  00:49           0        1.29       0.000
+  Detention            STORAGE       1.00    41.94     0  00:53       0.646       0.739       0.452
   
   
   **********************
@@ -128,14 +140,29 @@
                                    Hours       Above Crown    Below Rim
   Node                 Type      Surcharged           Feet         Feet
   ---------------------------------------------------------------------
+  BEGOF                JUNCTION        0.02          0.000        0.000
+  EndOF                JUNCTION        0.01          0.000        0.000
   TW                   JUNCTION       24.00          0.000        0.000
+  Connect              JUNCTION        0.03          0.000        0.000
+  Altern2              JUNCTION        0.03          0.000        0.000
   
   
   *********************
   Node Flooding Summary
   *********************
   
-  No nodes were flooded.
+  Flooding refers to all water that overflows a node, whether it ponds or not.
+  --------------------------------------------------------------------------
+                                                             Total   Maximum
+                                 Maximum   Time of Max       Flood    Ponded
+                        Hours       Rate    Occurrence      Volume     Depth
+  Node                 Flooded       CFS   days hr:min    10^6 gal      Feet
+  --------------------------------------------------------------------------
+  BEGOF                   0.02    153.70      0  00:49       0.069     0.000
+  EndOF                   0.01    115.68      0  00:50       0.013     0.000
+  Connect                 0.03    220.29      0  00:52       0.121     0.000
+  Altern2                 0.03      8.42      0  00:51       0.005     0.000
+  Detention              23.13     41.94      0  00:53       0.664     0.000
   
   
   **********************
@@ -147,7 +174,7 @@
                           Volume   Pcnt   Pcnt   Pcnt      Volume   Pcnt     Occurrence    Outflow
   Storage Unit          1000 ft³   Full   Loss   Loss    1000 ft³   Full    days hr:min        CFS
   ------------------------------------------------------------------------------------------------
-  Detention                2.900   29.0    0.0    0.0       2.900   29.0       0  00:00       0.00
+  Detention                9.972   99.7    0.0    0.0      10.000  100.0       0  00:52       0.00
   
   
   ***********************
@@ -159,9 +186,9 @@
                          Freq      Flow      Flow      Volume
   Outfall Node           Pcnt       CFS       CFS    10^6 gal
   -----------------------------------------------------------
-  TW2                    0.00      0.00      0.00       0.000
+  TW2                   99.51      2.87    376.77       1.294
   -----------------------------------------------------------
-  System                 0.00      0.00      0.00       0.000
+  System                99.51      2.87    376.77       1.294
   
   
   ********************
@@ -173,11 +200,11 @@
                                   |Flow|   Occurrence   |Veloc|    Full    Full
   Link                 Type          CFS  days hr:min    ft/sec    Flow   Depth
   -----------------------------------------------------------------------------
-  9x4STM               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
-  OFChannel            CONDUIT      0.00     0  00:00      0.00    0.00    0.00
-  36inCTRL             CONDUIT      0.00     0  00:00      0.00    0.00    0.00
-  Weir                 WEIR         0.00     0  00:00                      0.00
-  WeirOF               WEIR         0.00     0  00:00                      0.00
+  9x4STM               CONDUIT    275.52     0  00:50      7.65    1.08    1.00
+  OFChannel            CONDUIT    639.54     0  00:51      7.73    0.80    0.86
+  36inCTRL             CONDUIT    376.77     0  00:49    >50.00    3.06    1.00
+  Weir                 WEIR        40.94     0  00:53                      1.00
+  WeirOF               WEIR        14.83     0  00:51                      1.00
   
   
   ***************************
@@ -189,18 +216,25 @@
                        /Actual         Up    Down  Sub   Sup   Up    Down  Norm  Inlet 
   Conduit               Length    Dry  Dry   Dry   Crit  Crit  Crit  Crit  Ltd   Ctrl  
   -------------------------------------------------------------------------------------
-  9x4STM                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
-  OFChannel               1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
-  36inCTRL                1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  9x4STM                  1.00   0.03  0.68  0.00  0.29  0.00  0.00  0.00  0.96  0.00
+  OFChannel               1.00   0.03  0.00  0.00  0.97  0.00  0.00  0.00  0.00  0.00
+  36inCTRL                1.00   0.03  0.00  0.00  0.00  0.00  0.00  0.97  0.00  0.00
   
   
   *************************
   Conduit Surcharge Summary
   *************************
   
-  No conduits were surcharged.
+  ----------------------------------------------------------------------------
+                                                           Hours        Hours 
+                         --------- Hours Full --------   Above Full   Capacity
+  Conduit                Both Ends  Upstream  Dnstream   Normal Flow   Limited
+  ----------------------------------------------------------------------------
+  9x4STM                      0.07      0.11      0.07      0.02         0.01
+  OFChannel                   0.01      0.01      0.01      0.01         0.01
+  36inCTRL                    0.02      0.05      0.03      0.05         0.02
   
 
-  Analysis begun on:  Sun Jul 19 15:22:20 2026
-  Analysis ended on:  Sun Jul 19 15:22:20 2026
+  Analysis begun on:  Wed Jul 22 14:16:51 2026
+  Analysis ended on:  Wed Jul 22 14:16:51 2026
   Total elapsed time: < 1 sec

@@ -36,14 +36,14 @@
   Wet Weather Inflow .......         0.000         0.000
   Groundwater Inflow .......         0.000         0.000
   RDII Inflow ..............         0.000         0.000
-  External Inflow ..........         0.000         0.000
+  External Inflow ..........         3.967         1.293
   External Outflow .........         0.000         0.000
-  Flooding Loss ............         0.000         0.000
+  Flooding Loss ............         3.121         1.017
   Evaporation Loss .........         0.000         0.000
   Exfiltration Loss ........         0.000         0.000
   Initial Stored Volume ....         0.000         0.000
-  Final Stored Volume ......         0.000         0.000
-  Continuity Error (%) .....         0.000
+  Final Stored Volume ......         0.001         0.000
+  Continuity Error (%) .....        21.284
   
   
   ***************************
@@ -61,7 +61,9 @@
   *********************************
   Most Frequent Nonconverging Nodes
   *********************************
-  Convergence obtained at all time steps.
+  Node 6200 (0.01%)
+  Node 6242 (0.01%)
+  Node 6241 (0.01%)
   
   
   *************************
@@ -71,8 +73,8 @@
   Average Time Step           :     5.00 sec
   Maximum Time Step           :     5.00 sec
   % of Time in Steady State   :     0.00
-  Average Iterations per Step :     2.00
-  % of Steps Not Converging   :     0.00
+  Average Iterations per Step :     2.01
+  % of Steps Not Converging   :     0.01
   Time Step Frequencies       :
       5.000 -  3.155 sec      :   100.00 %
       3.155 -  1.991 sec      :     0.00 %
@@ -94,12 +96,12 @@
   6230                 JUNCTION     0.00     0.00   747.30     0  00:00        0.00
   6235                 JUNCTION     0.00     0.00   751.20     0  00:00        0.00
   6240                 JUNCTION     0.00     0.00   753.20     0  00:00        0.00
-  6241                 JUNCTION     0.00     0.00   753.20     0  00:00        0.00
-  6242                 JUNCTION     0.00     0.00   753.20     0  00:00        0.00
+  6241                 JUNCTION   695.13   734.37  1487.57     0  05:08      734.37
+  6242                 JUNCTION   616.23   734.06  1487.26     0  05:08      734.06
   6250                 JUNCTION     0.00     0.00   745.30     0  00:00        0.00
   6255                 JUNCTION     0.00     0.00   743.10     0  00:00        0.00
-  6256                 JUNCTION     0.00     0.00   743.10     0  00:00        0.00
-  6257                 JUNCTION     0.00     0.00   743.10     0  00:00        0.00
+  6256                 JUNCTION   690.27   729.05  1472.15     0  05:05      728.94
+  6257                 JUNCTION   612.78   728.85  1471.95     0  05:05      728.85
   6200                 OUTFALL      0.00     0.00   700.00     0  00:00        0.00
   6206                 STORAGE      0.00     0.00   723.30     0  00:00        0.00
   6205                 STORAGE      0.00     0.00   710.00     0  00:00        0.00
@@ -124,12 +126,12 @@
   6230                 JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
   6235                 JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
   6240                 JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
-  6241                 JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
-  6242                 JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  6241                 JUNCTION      1.00     1.00     0  00:00       0.646       0.646      11.999
+  6242                 JUNCTION      0.00     1.09     0  05:08           0       0.577       0.000
   6250                 JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
   6255                 JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
-  6256                 JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
-  6257                 JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  6256                 JUNCTION      1.00     1.00     0  00:00       0.646       0.646      11.892
+  6257                 JUNCTION      0.00     1.21     0  05:06           0       0.578       0.000
   6200                 OUTFALL       0.00     0.00     0  00:00           0           0       0.000 gal
   6206                 STORAGE       0.00     0.00     0  00:00           0           0       0.000 gal
   6205                 STORAGE       0.00     0.00     0  00:00           0           0       0.000 gal
@@ -144,14 +146,29 @@
   Node Surcharge Summary
   **********************
   
-  No nodes were surcharged.
+  Surcharging occurs when water rises above the top of the highest conduit.
+  ---------------------------------------------------------------------
+                                               Max. Height   Min. Depth
+                                   Hours       Above Crown    Below Rim
+  Node                 Type      Surcharged           Feet         Feet
+  ---------------------------------------------------------------------
+  6242                 JUNCTION       18.87          0.000        0.000
+  6257                 JUNCTION       18.91          0.000        0.000
   
   
   *********************
   Node Flooding Summary
   *********************
   
-  No nodes were flooded.
+  Flooding refers to all water that overflows a node, whether it ponds or not.
+  --------------------------------------------------------------------------
+                                                             Total   Maximum
+                                 Maximum   Time of Max       Flood    Ponded
+                        Hours       Rate    Occurrence      Volume     Depth
+  Node                 Flooded       CFS   days hr:min    10^6 gal      Feet
+  --------------------------------------------------------------------------
+  6242                   18.87      1.03      0  05:08       0.508     0.000
+  6257                   18.91      1.21      0  05:06       0.509     0.000
   
   
   **********************
@@ -204,12 +221,12 @@
   6230a                CONDUIT      0.00     0  00:00      0.00    0.00    0.00
   6235a                CONDUIT      0.00     0  00:00      0.00    0.00    0.00
   6240a                CONDUIT      0.00     0  00:00      0.00    0.00    0.00
-  62411                CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  62411                CONDUIT      1.09     0  05:08      2.80    6.04    1.00
   62412                CONDUIT      0.00     0  00:00      0.00    0.00    0.00
   6245a                CONDUIT      0.00     0  00:00      0.00    0.00    0.00
   6250a                CONDUIT      0.00     0  00:00      0.00    0.00    0.00
   6255a                CONDUIT      0.00     0  00:00      0.00    0.00    0.00
-  62561                CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  62561                CONDUIT      1.21     0  05:06      2.54    3.70    1.00
   62562                CONDUIT      0.00     0  00:00      0.00    0.00    0.00
   MUL1                 WEIR         0.00     0  00:00                      0.00
   
@@ -232,12 +249,12 @@
   6230a                   1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
   6235a                   1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
   6240a                   1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
-  62411                   1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  62411                   1.00   0.11  0.00  0.00  0.79  0.00  0.00  0.11  0.00  0.00
   62412                   1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
   6245a                   1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
   6250a                   1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
   6255a                   1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
-  62561                   1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  62561                   1.00   0.11  0.00  0.00  0.79  0.00  0.00  0.11  0.00  0.00
   62562                   1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
   
   
@@ -245,9 +262,15 @@
   Conduit Surcharge Summary
   *************************
   
-  No conduits were surcharged.
+  ----------------------------------------------------------------------------
+                                                           Hours        Hours 
+                         --------- Hours Full --------   Above Full   Capacity
+  Conduit                Both Ends  Upstream  Dnstream   Normal Flow   Limited
+  ----------------------------------------------------------------------------
+  62411                       0.01     21.43      0.01     21.43         0.01
+  62561                       0.01     18.91      0.01     21.45         0.01
   
 
-  Analysis begun on:  Sun Jul 19 15:24:20 2026
-  Analysis ended on:  Sun Jul 19 15:24:20 2026
+  Analysis begun on:  Wed Jul 22 14:24:55 2026
+  Analysis ended on:  Wed Jul 22 14:24:55 2026
   Total elapsed time: < 1 sec

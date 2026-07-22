@@ -41,14 +41,14 @@
   Wet Weather Inflow .......         0.000         0.000
   Groundwater Inflow .......         0.000         0.000
   RDII Inflow ..............         0.000         0.000
-  External Inflow ..........         0.000         0.000
+  External Inflow ..........         1.983         0.646
   External Outflow .........         0.000         0.000
-  Flooding Loss ............         0.000         0.000
+  Flooding Loss ............         1.976         0.644
   Evaporation Loss .........         0.000         0.000
   Exfiltration Loss ........         0.000         0.000
   Initial Stored Volume ....         0.000         0.000
-  Final Stored Volume ......         0.000         0.000
-  Continuity Error (%) .....         0.000
+  Final Stored Volume ......         0.007         0.002
+  Continuity Error (%) .....         0.008
   
   
   ***************************
@@ -66,21 +66,22 @@
   *********************************
   Most Frequent Nonconverging Nodes
   *********************************
-  Convergence obtained at all time steps.
+  Node 4b (0.02%)
+  Node 4 (0.02%)
   
   
   *************************
   Routing Time Step Summary
   *************************
-  Minimum Time Step           :    19.50 sec
-  Average Time Step           :    20.00 sec
+  Minimum Time Step           :     6.41 sec
+  Average Time Step           :    19.95 sec
   Maximum Time Step           :    20.00 sec
   % of Time in Steady State   :     0.00
-  Average Iterations per Step :     2.00
-  % of Steps Not Converging   :     0.00
+  Average Iterations per Step :     2.01
+  % of Steps Not Converging   :     0.02
   Time Step Frequencies       :
-     20.000 -  9.564 sec      :   100.00 %
-      9.564 -  4.573 sec      :     0.00 %
+     20.000 -  9.564 sec      :    99.88 %
+      9.564 -  4.573 sec      :     0.12 %
       4.573 -  2.187 sec      :     0.00 %
       2.187 -  1.046 sec      :     0.00 %
       1.046 -  0.500 sec      :     0.00 %
@@ -101,8 +102,8 @@
   2a                   JUNCTION     0.00     0.00     0.00     0  00:00        0.00
   4a                   JUNCTION     0.00     0.00     0.00     0  00:00        0.00
   1b                   JUNCTION     0.00     0.00     0.00     0  00:00        0.00
-  2b                   JUNCTION     0.00     0.00     0.00     0  00:00        0.00
-  4b                   JUNCTION     0.00     0.00     0.00     0  00:00        0.00
+  2b                   JUNCTION     1.99     2.00     2.00     0  00:05        2.00
+  4b                   JUNCTION     1.99     2.00     2.00     0  00:05        2.00
   4                    OUTFALL      0.00     0.00     0.00     0  00:00        0.00
   
   
@@ -121,9 +122,9 @@
   1a                   JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
   2a                   JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
   4a                   JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
-  1b                   JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
-  2b                   JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
-  4b                   JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  1b                   JUNCTION      1.00     1.00     0  00:00       0.646       0.646       0.000
+  2b                   JUNCTION      0.00     1.00     0  00:00           0       0.646       0.187
+  4b                   JUNCTION      0.00     1.00     0  00:01           0      0.0162       0.000
   4                    OUTFALL       0.00     0.00     0  00:00           0           0       0.000 gal
   
   
@@ -131,14 +132,29 @@
   Node Surcharge Summary
   **********************
   
-  No nodes were surcharged.
+  Surcharging occurs when water rises above the top of the highest conduit.
+  ---------------------------------------------------------------------
+                                               Max. Height   Min. Depth
+                                   Hours       Above Crown    Below Rim
+  Node                 Type      Surcharged           Feet         Feet
+  ---------------------------------------------------------------------
+  2b                   JUNCTION       23.91          0.000        0.000
+  4b                   JUNCTION       23.91          0.000        0.000
   
   
   *********************
   Node Flooding Summary
   *********************
   
-  No nodes were flooded.
+  Flooding refers to all water that overflows a node, whether it ponds or not.
+  --------------------------------------------------------------------------
+                                                             Total   Maximum
+                                 Maximum   Time of Max       Flood    Ponded
+                        Hours       Rate    Occurrence      Volume     Depth
+  Node                 Flooded       CFS   days hr:min    10^6 gal      Feet
+  --------------------------------------------------------------------------
+  2b                     23.91      0.99      1  00:00       0.629     0.000
+  4b                     23.91      0.49      0  00:05       0.015     0.000
   
   
   ***********************
@@ -166,12 +182,12 @@
   -----------------------------------------------------------------------------
   pipe                 CONDUIT      0.00     0  00:00      0.00    0.00    0.00
   pipea                CONDUIT      0.00     0  00:00      0.00    0.00    0.00
-  pipeb                CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  pipeb                CONDUIT      1.00     0  00:01      2.09    1.51    1.00
   18                   CONDUIT      0.00     0  00:00      0.00    0.00    0.00
   19                   CONDUIT      0.00     0  00:00      0.00    0.00    0.00
   3                    PUMP         0.00     0  00:00              0.00
   3a                   PUMP         0.00     0  00:00              0.00
-  3b                   PUMP         0.00     0  00:00              0.00
+  3b                   PUMP         1.00     0  00:00              0.10
   
   
   ***************************
@@ -185,7 +201,7 @@
   -------------------------------------------------------------------------------------
   pipe                    1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
   pipea                   1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
-  pipeb                   1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  pipeb                   1.00   0.00  0.00  0.00  1.00  0.00  0.00  0.00  0.00  0.00
   18                      1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
   19                      1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
   
@@ -194,7 +210,12 @@
   Conduit Surcharge Summary
   *************************
   
-  No conduits were surcharged.
+  ----------------------------------------------------------------------------
+                                                           Hours        Hours 
+                         --------- Hours Full --------   Above Full   Capacity
+  Conduit                Both Ends  Upstream  Dnstream   Normal Flow   Limited
+  ----------------------------------------------------------------------------
+  pipeb                      23.91     23.91     23.91      0.01         0.01
   
   
   ***************
@@ -208,9 +229,9 @@
   ---------------------------------------------------------------------------------------------------------
   3                        0.00           0      0.00      0.00      0.00     0.000      0.00    0.0    0.0
   3a                       0.00           0      0.00      0.00      0.00     0.000      0.00    0.0    0.0
-  3b                       0.00           0      0.00      0.00      0.00     0.000      0.00    0.0    0.0
+  3b                     100.00           1      0.00      1.00      1.00     0.646      4.05    0.0    0.0
   
 
-  Analysis begun on:  Sun Jul 19 15:20:46 2026
-  Analysis ended on:  Sun Jul 19 15:20:46 2026
+  Analysis begun on:  Wed Jul 22 14:10:26 2026
+  Analysis ended on:  Wed Jul 22 14:10:26 2026
   Total elapsed time: < 1 sec

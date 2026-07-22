@@ -36,20 +36,20 @@
   Wet Weather Inflow .......         0.000         0.000
   Groundwater Inflow .......         0.000         0.000
   RDII Inflow ..............         0.000         0.000
-  External Inflow ..........         0.000         0.000
-  External Outflow .........         0.000         0.000
+  External Inflow ..........         1.983         0.646
+  External Outflow .........         1.983         0.646
   Flooding Loss ............         0.000         0.000
   Evaporation Loss .........         0.000         0.000
   Exfiltration Loss ........         0.000         0.000
   Initial Stored Volume ....         0.000         0.000
   Final Stored Volume ......         0.000         0.000
-  Continuity Error (%) .....         0.000
+  Continuity Error (%) .....         0.015
   
   
   ***************************
   Time-Step Critical Elements
   ***************************
-  None
+  Link 245 (99.99%)
   
   
   ********************************
@@ -67,16 +67,16 @@
   *************************
   Routing Time Step Summary
   *************************
-  Minimum Time Step           :    14.50 sec
-  Average Time Step           :    15.00 sec
+  Minimum Time Step           :     1.21 sec
+  Average Time Step           :     3.08 sec
   Maximum Time Step           :    15.00 sec
   % of Time in Steady State   :     0.00
-  Average Iterations per Step :     2.00
-  % of Steps Not Converging   :     0.00
+  Average Iterations per Step :     2.01
+  % of Steps Not Converging   :     0.01
   Time Step Frequencies       :
-     15.000 -  7.597 sec      :   100.00 %
+     15.000 -  7.597 sec      :     0.01 %
       7.597 -  3.848 sec      :     0.00 %
-      3.848 -  1.949 sec      :     0.00 %
+      3.848 -  1.949 sec      :    99.99 %
       1.949 -  0.987 sec      :     0.00 %
       0.987 -  0.500 sec      :     0.00 %
   
@@ -90,8 +90,8 @@
                                    Depth    Depth      HGL   Occurrence   Max Depth
   Node                 Type         Feet     Feet     Feet  days hr:min        Feet
   ---------------------------------------------------------------------------------
-  242                  JUNCTION     0.00     0.00    10.00     0  00:00        0.00
-  244                  OUTFALL      0.00     0.00     9.00     0  00:00        0.00
+  242                  JUNCTION     1.17     1.40    11.40     0  00:00        1.17
+  244                  OUTFALL      0.17     0.26     9.26     0  00:00        0.17
   
   
   *******************
@@ -104,8 +104,8 @@
                                    Inflow   Inflow   Occurrence      Volume      Volume       Error
   Node                 Type           CFS      CFS  days hr:min    10^6 gal    10^6 gal     Percent
   -------------------------------------------------------------------------------------------------
-  242                  JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
-  244                  OUTFALL       0.00     0.00     0  00:00           0           0       0.000 gal
+  242                  JUNCTION      1.00     1.00     0  00:00       0.646       0.646       0.021
+  244                  OUTFALL       0.00     2.45     0  00:00           0       0.646       0.000
   
   
   **********************
@@ -131,9 +131,9 @@
                          Freq      Flow      Flow      Volume
   Outfall Node           Pcnt       CFS       CFS    10^6 gal
   -----------------------------------------------------------
-  244                    0.00      0.00      0.00       0.000
+  244                   99.99      1.00      2.45       0.646
   -----------------------------------------------------------
-  System                 0.00      0.00      0.00       0.000
+  System                99.99      1.00      2.45       0.646
   
   
   ********************
@@ -145,7 +145,7 @@
                                   |Flow|   Occurrence   |Veloc|    Full    Full
   Link                 Type          CFS  days hr:min    ft/sec    Flow   Depth
   -----------------------------------------------------------------------------
-  245                  CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  245                  CONDUIT      2.45     0  00:00     15.38    0.02    0.09
   
   
   ***************************
@@ -157,7 +157,7 @@
                        /Actual         Up    Down  Sub   Sup   Up    Down  Norm  Inlet 
   Conduit               Length    Dry  Dry   Dry   Crit  Crit  Crit  Crit  Ltd   Ctrl  
   -------------------------------------------------------------------------------------
-  245                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  245                     1.00   0.00  0.00  0.00  0.00  1.00  0.00  0.00  0.00  0.00
   
   
   *************************
@@ -167,6 +167,6 @@
   No conduits were surcharged.
   
 
-  Analysis begun on:  Sun Jul 19 15:18:43 2026
-  Analysis ended on:  Sun Jul 19 15:18:43 2026
+  Analysis begun on:  Wed Jul 22 12:55:12 2026
+  Analysis ended on:  Wed Jul 22 12:55:12 2026
   Total elapsed time: < 1 sec

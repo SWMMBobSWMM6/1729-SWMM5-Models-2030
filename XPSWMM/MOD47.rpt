@@ -37,14 +37,14 @@
   Wet Weather Inflow .......         0.000         0.000
   Groundwater Inflow .......         0.000         0.000
   RDII Inflow ..............         0.000         0.000
-  External Inflow ..........         0.000         0.000
+  External Inflow ..........         1.983         0.646
   External Outflow .........         0.000         0.000
-  Flooding Loss ............         0.000         0.000
+  Flooding Loss ............         1.679         0.547
   Evaporation Loss .........         0.000         0.000
   Exfiltration Loss ........         0.000         0.000
   Initial Stored Volume ....         0.163         0.053
-  Final Stored Volume ......         0.163         0.053
-  Continuity Error (%) .....         0.000
+  Final Stored Volume ......         0.461         0.150
+  Continuity Error (%) .....         0.277
   
   
   ***************************
@@ -93,8 +93,8 @@
   ---------------------------------------------------------------------------------
   junction             JUNCTION     0.00     0.00   100.00     0  00:00        0.00
   Outfall              OUTFALL      0.00     0.00   100.00     0  00:00        0.00
-  Storage              STORAGE      3.50     5.00   105.00     0  00:00        3.51
-  Pond                 STORAGE      3.50     3.53   103.53     0  00:08        3.50
+  Storage              STORAGE      9.51    10.00   110.00     0  03:40       10.00
+  Pond                 STORAGE      9.50    10.00   110.00     0  03:41       10.00
   
   
   *******************
@@ -109,8 +109,8 @@
   -------------------------------------------------------------------------------------------------
   junction             JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
   Outfall              OUTFALL       0.00     0.00     0  00:00           0           0       0.000 gal
-  Storage              STORAGE       0.00     0.46     0  00:09           0      0.0391      -0.309
-  Pond                 STORAGE       0.00     5.84     0  00:00           0       0.028       0.434
+  Storage              STORAGE       1.00     1.00     0  00:00       0.646       0.684       0.128
+  Pond                 STORAGE       0.00     5.86     0  00:00           0      0.0783       1.381
   
   
   **********************
@@ -124,7 +124,15 @@
   Node Flooding Summary
   *********************
   
-  No nodes were flooded.
+  Flooding refers to all water that overflows a node, whether it ponds or not.
+  --------------------------------------------------------------------------
+                                                             Total   Maximum
+                                 Maximum   Time of Max       Flood    Ponded
+                        Hours       Rate    Occurrence      Volume     Depth
+  Node                 Flooded       CFS   days hr:min    10^6 gal      Feet
+  --------------------------------------------------------------------------
+  Storage                20.32      1.00      1  00:00       0.545     0.000
+  Pond                   20.31      0.40      0  03:41       0.002     0.000
   
   
   **********************
@@ -136,8 +144,8 @@
                           Volume   Pcnt   Pcnt   Pcnt      Volume   Pcnt     Occurrence    Outflow
   Storage Unit          1000 ft³   Full   Loss   Loss    1000 ft³   Full    days hr:min        CFS
   ------------------------------------------------------------------------------------------------
-  Storage                  3.503   35.0    0.0    0.0       5.000   50.0       0  00:00       5.84
-  Pond                     3.497   35.0    0.0    0.0       3.527   35.3       0  00:08       0.46
+  Storage                  9.506   95.1    0.0    0.0      10.000  100.0       0  03:40       5.86
+  Pond                     9.496   95.0    0.0    0.0      10.000  100.0       0  03:41       0.00
   
   
   ***********************
@@ -164,7 +172,7 @@
   Link                 Type          CFS  days hr:min    ft/sec    Flow   Depth
   -----------------------------------------------------------------------------
   Trap                 CONDUIT      0.00     0  00:00      0.00    0.00    0.00
-  8                    CONDUIT      5.84     0  00:00      7.43   51.82    1.00
+  8                    CONDUIT      5.86     0  00:00      7.47   52.04    1.00
   Weirs                WEIR         0.00     0  00:00                      0.00
   
   
@@ -190,9 +198,9 @@
                          --------- Hours Full --------   Above Full   Capacity
   Conduit                Both Ends  Upstream  Dnstream   Normal Flow   Limited
   ----------------------------------------------------------------------------
-  8                          24.00     24.00     24.00      0.27         0.96
+  8                          24.00     24.00     24.00      3.78         3.68
   
 
-  Analysis begun on:  Sun Jul 19 15:20:51 2026
-  Analysis ended on:  Sun Jul 19 15:20:51 2026
+  Analysis begun on:  Wed Jul 22 14:10:32 2026
+  Analysis ended on:  Wed Jul 22 14:10:32 2026
   Total elapsed time: < 1 sec

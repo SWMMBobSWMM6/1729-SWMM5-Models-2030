@@ -2,15 +2,585 @@
   EPA STORM WATER MANAGEMENT MODEL - VERSION 5.2 (Build 5.2.4)
   ------------------------------------------------------------
 
+  Converted from XPSWMM .xp file 
+  WARNING 08: elevation drop exceeds length for Conduit Hwy68culv
+  WARNING 08: elevation drop exceeds length for Conduit CoRd15BC
+  WARNING 04: minimum elevation drop used for Conduit 633
+  WARNING 04: minimum elevation drop used for Conduit 636
+  WARNING 04: minimum elevation drop used for Conduit BassLk
+  WARNING 04: minimum elevation drop used for Conduit 645
+  WARNING 08: elevation drop exceeds length for Conduit Hwy96Culv
+  WARNING 04: minimum elevation drop used for Conduit WoodplOver
+  WARNING 04: minimum elevation drop used for Conduit 671
+  WARNING 04: minimum elevation drop used for Conduit 692
+  WARNING 04: minimum elevation drop used for Conduit LL-UBC-A4
+  WARNING 04: minimum elevation drop used for Conduit July
+  WARNING 04: minimum elevation drop used for Conduit 740
+  WARNING 04: minimum elevation drop used for Conduit 742
+  WARNING 04: minimum elevation drop used for Conduit 743
+  WARNING 04: minimum elevation drop used for Conduit 744
+  WARNING 08: elevation drop exceeds length for Conduit GSL-1ovflw
+  WARNING 04: minimum elevation drop used for Conduit LynchLkOvf
+  WARNING 08: elevation drop exceeds length for Conduit DrivewayC
+  WARNING 08: elevation drop exceeds length for Conduit GateC1
+  WARNING 08: elevation drop exceeds length for Conduit cattlepass
+  WARNING 08: elevation drop exceeds length for Conduit Bout#1llc2
+  WARNING 08: elevation drop exceeds length for Conduit MannCulv
+  WARNING 08: elevation drop exceeds length for Conduit Fish_Weir
+  WARNING 08: elevation drop exceeds length for Conduit Fish_Weir2
+  WARNING 04: minimum elevation drop used for Conduit 816
+  WARNING 10: crest elevation raised to downstream invert for regulator Link PlaistedLk
   
-  ERROR 211: invalid number  at line 217 of [XSECT] section:
-  GSL-1ovflw       CIRCULAR     0.00       0          0          0          1
-
+  ****************
+  Analysis Options
+  ****************
+  Flow Units ............... CFS
+  Process Models:
+    Rainfall/Runoff ........ NO
+    RDII ................... NO
+    Snowmelt ............... NO
+    Groundwater ............ NO
+    Flow Routing ........... YES
+    Ponding Allowed ........ NO
+    Water Quality .......... NO
+  Flow Routing Method ...... DYNWAVE
+  Surcharge Method ......... EXTRAN
+  Starting Date ............ 01/01/2001 00:00:00
+  Ending Date .............. 01/02/2001 00:00:00
+  Antecedent Dry Days ...... 0.0
+  Report Time Step ......... 00:15:00
+  Routing Time Step ........ 300.00 sec
+  Variable Time Step ....... YES
+  Maximum Trials ........... 50
+  Number of Threads ........ 1
+  Head Tolerance ........... 0.003300 ft
   
-  ERROR 211: invalid number  at line 219 of [XSECT] section:
-  LynchLkOvf       CIRCULAR     0.00       0          0          0          1
+  
+  **************************        Volume        Volume
+  Flow Routing Continuity        acre-feet      10^6 gal
+  **************************     ---------     ---------
+  Dry Weather Inflow .......         0.000         0.000
+  Wet Weather Inflow .......         0.000         0.000
+  Groundwater Inflow .......         0.000         0.000
+  RDII Inflow ..............         0.000         0.000
+  External Inflow ..........        14.875         4.847
+  External Outflow .........         0.000         0.000
+  Flooding Loss ............        28.177         9.182
+  Evaporation Loss .........         0.000         0.000
+  Exfiltration Loss ........         0.000         0.000
+  Initial Stored Volume ....         3.702         1.206
+  Final Stored Volume ......        16.410         5.347
+  Continuity Error (%) .....      -140.009
+  
+  
+  *************************
+  Highest Continuity Errors
+  *************************
+  Node LBC-A5 (-164.19%)
+  Node LBC-A3 (-38.50%)
+  Node KPL-A5 (-37.66%)
+  Node LBC-A4 (-22.10%)
+  Node SLB-A2/3 (-21.74%)
+  
+  
+  ***************************
+  Time-Step Critical Elements
+  ***************************
+  Link WoodplOver (30.66%)
+  Link 671 (28.09%)
+  Link LynchLkOvf (16.67%)
+  Link July (6.75%)
+  Link 816 (4.65%)
+  
+  
+  ********************************
+  Highest Flow Instability Indexes
+  ********************************
+  Link LL-UBC-A4 (25)
+  Link 740 (25)
+  Link LynchLkOvf (16)
+  Link 671 (10)
+  Link WoodplOver (10)
+  
+  
+  *********************************
+  Most Frequent Nonconverging Nodes
+  *********************************
+  Node CBC-A3 (1.77%)
+  Node SLB-A2/3 (1.27%)
+  Node UBC-A4 (1.24%)
+  Node UBC-A8 (1.24%)
+  Node UBC-A0 (1.18%)
+  
+  
+  *************************
+  Routing Time Step Summary
+  *************************
+  Minimum Time Step           :     0.50 sec
+  Average Time Step           :    14.30 sec
+  Maximum Time Step           :   300.00 sec
+  % of Time in Steady State   :     0.00
+  Average Iterations per Step :     3.10
+  % of Steps Not Converging   :     1.77
+  Time Step Frequencies       :
+     300.000 - 83.462 sec      :     1.34 %
+     83.462 - 23.220 sec      :     4.09 %
+     23.220 -  6.460 sec      :    64.32 %
+      6.460 -  1.797 sec      :    12.96 %
+      1.797 -  0.500 sec      :    17.28 %
+  
+  
+  ******************
+  Node Depth Summary
+  ******************
+  
+  ---------------------------------------------------------------------------------
+                                 Average  Maximum  Maximum  Time of Max    Reported
+                                   Depth    Depth      HGL   Occurrence   Max Depth
+  Node                 Type         Feet     Feet     Feet  days hr:min        Feet
+  ---------------------------------------------------------------------------------
+  UBC-A4               JUNCTION     0.52     1.00  1001.00     0  00:00        1.00
+  UBC-A8               JUNCTION     0.52     1.00  1001.00     0  00:00        1.00
+  CBC-A4               JUNCTION     1.00     1.00  1001.00     0  00:08        1.00
+  CBC-A2               JUNCTION     1.00     1.00  1001.00     0  00:08        1.00
+  SLB-A2/3             JUNCTION     0.74     1.00  1001.00     0  00:00        1.00
+  LL-A1                JUNCTION     0.06     1.00  1001.00     0  00:00        1.00
+  LBC-A2               JUNCTION     0.00     0.00  1000.00     0  00:00        0.00
+  LBC-A3               JUNCTION     1.25     1.60  1001.60     0  00:25        1.26
+  LBC-A4               JUNCTION   719.42   739.61  1739.61     0  01:13      739.32
+  LBC-A1               JUNCTION     1.00     1.00  1001.00     0  00:00        1.00
+  LBC-A5               JUNCTION   648.81   696.12  1696.12     0  01:15      696.11
+  BoundCond            JUNCTION   645.69   688.77  1688.77     1  00:00      688.77
+  Culv@12              JUNCTION     0.00     0.00  1000.00     0  00:00        0.00
+  CR7-top              JUNCTION     0.00     0.00   976.50     0  00:00        0.00
+  Mann-25B             JUNCTION     0.00     0.00   966.74     0  00:00        0.00
+  MannRdtopA           JUNCTION     0.00     0.00   965.77     0  00:00        0.00
+  Mann5Rdtop           JUNCTION     0.00     0.00   949.70     0  00:00        0.00
+  Mann7RdTop           JUNCTION     0.00     0.00   940.87     0  00:00        0.00
+  op                   JUNCTION     0.00     0.00   919.08     0  00:00        0.00
+  pRd                  JUNCTION     0.00     0.00   893.60     0  00:00        0.00
+  Mstrmnculv           JUNCTION     0.00     0.00   953.40     0  00:00        0.00
+  Hwy96Rd              JUNCTION     0.00     0.00   901.30     0  00:00        0.00
+  w                    JUNCTION     0.00     0.00   897.00     0  00:00        0.00
+  Hxw5C2               JUNCTION     0.00     0.00   906.90     0  00:00        0.00
+  PatLkDrvwy           JUNCTION     0.00     0.00   950.50     0  00:00        0.00
+  GSL1ovflw            JUNCTION     1.00     1.00     1.00     0  00:00        1.00
+  dovf                 JUNCTION   786.25   795.79   795.79     1  00:00      795.79
+  SSC2                 JUNCTION     0.00     0.00   971.00     0  00:00        0.00
+  SSRdtop              JUNCTION     0.00     0.00   970.80     0  00:00        0.00
+  Mann-GSL-6           JUNCTION     0.00     0.00   978.60     0  00:00        0.00
+  GSL3ovflw            JUNCTION     0.00     0.00     0.00     0  00:00        0.00
+  ayO                  JUNCTION     0.00     0.00   919.98     0  00:00        0.00
+  GateC2               JUNCTION     0.00     0.00   903.97     0  00:00        0.00
+  culvert              JUNCTION     0.00     0.00   897.10     0  00:00        0.00
+  llw2                 JUNCTION     0.00     0.00   878.00     0  00:00        0.00
+  rTop                 JUNCTION     0.00     0.00   908.00     0  00:00        0.00
+  vflw                 JUNCTION     0.00     0.00   861.70     0  00:00        0.00
+  RR_Oval              JUNCTION     0.00     0.00   857.00     0  00:00        0.00
+  f                    JUNCTION     0.00     0.00   856.50     0  00:00        0.00
+  Ovf                  JUNCTION     0.00     0.00   849.23     0  00:00        0.00
+  CBC-A3               OUTFALL      0.00     0.00  1000.00     0  00:00        0.00
+  UBC-A3               STORAGE      0.00     0.00  1000.00     0  00:00        0.00
+  UBC-A0               STORAGE      0.54     3.75  1003.75     0  00:02        2.54
+  UBC-A1               STORAGE      0.00     0.00  1000.00     0  00:00        0.00
+  UBC-A2               STORAGE      0.57     5.40  1005.40     0  00:00        2.89
+  UBC-A5               STORAGE      0.00     0.00  1000.00     0  00:00        0.00
+  UBC-A6               STORAGE      2.00     2.00  1002.00     0  00:00        2.00
+  UBC-A7               STORAGE      4.00     4.00  1004.00     0  00:00        4.00
+  UBC-A9               STORAGE     10.00    10.00  1010.00     0  00:00       10.00
+  CBC-A6               STORAGE      5.72    10.00  1010.00     0  00:24       10.00
+  CBC-A7               STORAGE      1.02     1.39  1001.39     0  00:19        1.10
+  KPL-A4               STORAGE     10.00    10.00  1010.00     0  00:00       10.00
+  KPL-A5               STORAGE      5.48    10.00  1010.00     0  00:19        9.78
+  KPL-A3               STORAGE      5.33    10.00  1010.00     0  09:32        9.91
+  KPL-A2               STORAGE      5.72    10.00  1010.00     0  00:19       10.00
+  KPL-A1               STORAGE      5.39    10.00  1010.00     0  03:12       10.00
+  CBC-A5               STORAGE      0.42     0.42  1000.42     0  00:00        0.42
+  CBC-A8               STORAGE      9.50    10.00  1010.00     0  02:18       10.00
+  CBC-A1               STORAGE      9.90     9.90  1009.90     0  00:00        9.90
+  CBC-A9a              STORAGE      0.00     0.00   901.40     0  00:00        0.00
+  SCT-A4               STORAGE      0.00     0.00  1000.00     0  00:00        0.00
+  SCT-A2               STORAGE      0.00     0.00  1000.00     0  00:00        0.00
+  SCT-A3               STORAGE      0.00     0.00  1000.00     0  00:00        0.00
+  SCT-A1a              STORAGE      0.66     1.29  1001.29     0  21:52        1.05
+  SLB-A1               STORAGE      0.88    10.00  1010.00     0  00:00        3.10
+  SCT-A1b              STORAGE      0.00     0.00  1000.00     0  00:00        0.00
+  LL-A5                STORAGE      1.00     1.00  1001.00     0  00:00        1.00
+  LL-A4                STORAGE      0.12     8.20  1008.20     0  00:00        2.28
+  LL-A2                STORAGE      0.00     0.00  1000.00     0  00:00        0.00
+  LL-A3                STORAGE      6.70     6.70  1006.70     0  00:00        6.70
+  CBC-A0               STORAGE      9.69    10.00  1010.00     0  01:48       10.00
+  CBC-A9b              STORAGE      0.00     0.00  1000.00     0  00:00        0.00
+  GSL-A1               STORAGE      7.00     7.00  1007.00     0  00:00        7.00
+  GSL-A2               STORAGE      0.00     9.94  1009.94     0  00:00        0.00
+  GSL-A5               STORAGE      0.12    10.00  1010.00     0  00:00        4.16
+  GSL-A7               STORAGE      0.62    10.00  1010.00     0  00:00        4.26
+  GSL-A3               STORAGE      2.00     2.00  1002.00     0  00:00        2.00
+  GSL-A4               STORAGE      4.99    10.00  1060.00     0  02:47        9.16
+  GSL-A6               STORAGE      5.05    10.00  1060.00     0  01:09        9.59
+  storage@68           STORAGE      0.00     0.00  1000.00     0  00:00        0.00
+  CBC-A9c              STORAGE      1.00     1.00  1001.00     0  00:00        1.00
+  
+  
+  *******************
+  Node Inflow Summary
+  *******************
+  
+  -------------------------------------------------------------------------------------------------
+                                  Maximum  Maximum                  Lateral       Total        Flow
+                                  Lateral    Total  Time of Max      Inflow      Inflow     Balance
+                                   Inflow   Inflow   Occurrence      Volume      Volume       Error
+  Node                 Type           CFS      CFS  days hr:min    10^6 gal    10^6 gal     Percent
+  -------------------------------------------------------------------------------------------------
+  UBC-A4               JUNCTION      0.00     5.91     0  00:02           0      0.0793      -6.728
+  UBC-A8               JUNCTION      0.00     5.91     0  00:02           0      0.0793      -6.728
+  CBC-A4               JUNCTION      0.00     0.84     0  00:14           0       0.383       0.100
+  CBC-A2               JUNCTION      0.00     0.84     0  00:14           0       0.383       0.100
+  SLB-A2/3             JUNCTION      0.00    10.49     0  00:00           0       0.347     -17.859
+  LL-A1                JUNCTION      0.00    12.10     0  00:33           0      0.0691       2.187
+  LBC-A2               JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  LBC-A3               JUNCTION      1.80     5.41     0  00:33        1.16        1.17     -27.798
+  LBC-A4               JUNCTION      2.10     2.10     0  00:00        1.36        1.36     -18.102
+  LBC-A1               JUNCTION      0.00   188.99     0  00:19           0        1.62       6.982
+  LBC-A5               JUNCTION      0.00   299.28     0  01:14           0        1.66     -62.148
+  BoundCond            JUNCTION      0.00  2025.27     0  01:15           0        4.38       0.000
+  Culv@12              JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  CR7-top              JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  Mann-25B             JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  MannRdtopA           JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  Mann5Rdtop           JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  Mann7RdTop           JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  op                   JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  pRd                  JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  Mstrmnculv           JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  Hwy96Rd              JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  w                    JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  Hxw5C2               JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  PatLkDrvwy           JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  GSL1ovflw            JUNCTION      0.00   804.35     0  00:00           0       0.113       0.772
+  dovf                 JUNCTION      0.00     8.02     0  00:00           0      0.0748   74777.773 gal
+  SSC2                 JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  SSRdtop              JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  Mann-GSL-6           JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  GSL3ovflw            JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  ayO                  JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  GateC2               JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  culvert              JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  llw2                 JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  rTop                 JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  vflw                 JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  RR_Oval              JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  f                    JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  Ovf                  JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  CBC-A3               OUTFALL       0.00     0.00     0  00:00           0           0       0.000 gal
+  UBC-A3               STORAGE       0.00     0.00     0  00:00           0           0       0.000 gal
+  UBC-A0               STORAGE       0.00    13.29     0  00:00           0       0.221       4.895
+  UBC-A1               STORAGE       0.00     0.00     0  00:00           0           0       0.000 gal
+  UBC-A2               STORAGE       0.00     2.23     0  15:21           0      0.0646      -5.512
+  UBC-A5               STORAGE       0.00     0.00     0  00:00           0           0       0.000 gal
+  UBC-A6               STORAGE       0.00     0.00     0  00:00           0       0.015       0.000
+  UBC-A7               STORAGE       0.00     0.00     0  00:00           0      0.0299       0.000
+  UBC-A9               STORAGE       0.00     0.00     0  00:00           0      0.0748       0.000
+  CBC-A6               STORAGE       0.00   116.34     0  03:59           0        1.55      -2.716
+  CBC-A7               STORAGE       1.20     1.90     0  00:01       0.776        0.78       0.690
+  KPL-A4               STORAGE       0.00     0.00     0  00:00           0      0.0748       0.000
+  KPL-A5               STORAGE       0.00   286.35     0  00:19           0         4.4     -27.355
+  KPL-A3               STORAGE       0.00   170.73     0  22:59           0        1.35     -27.589
+  KPL-A2               STORAGE       0.00   187.60     0  15:47           0        3.45     -10.645
+  KPL-A1               STORAGE       0.00   116.65     0  03:59           0        1.56     -30.434
+  CBC-A5               STORAGE       0.00     0.00     0  00:00           0     0.00314       0.000
+  CBC-A8               STORAGE       1.20     1.20     0  00:00       0.776       0.776      -0.004
+  CBC-A1               STORAGE       0.00     0.00     0  00:00           0      0.0741       0.000
+  CBC-A9a              STORAGE       0.00     0.00     0  00:00           0           0       0.000 gal
+  SCT-A4               STORAGE       0.00     0.00     0  00:00           0           0       0.000 gal
+  SCT-A2               STORAGE       0.00     0.00     0  00:00           0           0       0.000 gal
+  SCT-A3               STORAGE       0.00     0.00     0  00:00           0           0       0.000 gal
+  SCT-A1a              STORAGE       0.00     7.59     0  21:52           0        0.13     -14.639
+  SLB-A1               STORAGE       0.00    12.09     0  13:51           0       0.214       3.123
+  SCT-A1b              STORAGE       0.00     0.00     0  00:00           0           0       0.000 gal
+  LL-A5                STORAGE       0.00     0.00     0  00:00           0     0.00748       0.000
+  LL-A4                STORAGE       0.00     1.26     0  00:34           0      0.0617     -11.101
+  LL-A2                STORAGE       0.00     0.00     0  00:00           0           0       0.000 gal
+  LL-A3                STORAGE       0.00     0.00     0  00:00           0      0.0501       0.000
+  CBC-A0               STORAGE       1.20     1.20     0  00:00       0.776       0.792      -0.002
+  CBC-A9b              STORAGE       0.00     0.00     0  00:00           0           0       0.000 gal
+  GSL-A1               STORAGE       0.00     0.00     0  00:00           0      0.0524       0.000
+  GSL-A2               STORAGE       0.00     0.00     0  00:00           0      0.0748     -33.960
+  GSL-A5               STORAGE       0.00     0.00     0  00:00           0      0.0748       0.028
+  GSL-A7               STORAGE       0.00     2.23     0  15:21           0       0.099      -4.246
+  GSL-A3               STORAGE       0.00     0.00     0  00:00           0       0.015       0.000
+  GSL-A4               STORAGE       0.00   333.57     0  21:19           0        2.34     -15.768
+  GSL-A6               STORAGE       0.00   310.02     0  19:33           0        1.89     -37.998
+  storage@68           STORAGE       0.00     0.00     0  00:00           0           0       0.000 gal
+  CBC-A9c              STORAGE       0.00     0.00     0  00:00           0     0.00748       0.000
+  
+  
+  **********************
+  Node Surcharge Summary
+  **********************
+  
+  Surcharging occurs when water rises above the top of the highest conduit.
+  ---------------------------------------------------------------------
+                                               Max. Height   Min. Depth
+                                   Hours       Above Crown    Below Rim
+  Node                 Type      Surcharged           Feet         Feet
+  ---------------------------------------------------------------------
+  UBC-A4               JUNCTION        1.38          0.000        0.000
+  UBC-A8               JUNCTION        1.38          0.000        0.000
+  CBC-A4               JUNCTION       23.84          0.000        0.000
+  CBC-A2               JUNCTION       23.84          0.000        0.000
+  SLB-A2/3             JUNCTION        3.85          0.000        0.000
+  LL-A1                JUNCTION        0.55          0.000        0.000
+  LBC-A1               JUNCTION       23.98          0.000        0.000
+  GSL1ovflw            JUNCTION       24.00          0.000        0.000
+  GSL3ovflw            JUNCTION       24.00          0.000        0.000
+  
+  
+  *********************
+  Node Flooding Summary
+  *********************
+  
+  Flooding refers to all water that overflows a node, whether it ponds or not.
+  --------------------------------------------------------------------------
+                                                             Total   Maximum
+                                 Maximum   Time of Max       Flood    Ponded
+                        Hours       Rate    Occurrence      Volume     Depth
+  Node                 Flooded       CFS   days hr:min    10^6 gal      Feet
+  --------------------------------------------------------------------------
+  UBC-A4                  1.38      5.91      0  00:02       0.071     0.000
+  UBC-A8                  1.38      5.91      0  00:02       0.071     0.000
+  CBC-A4                 23.75      0.63      0  00:34       0.383     0.000
+  CBC-A2                 23.75      0.63      0  00:34       0.383     0.000
+  SLB-A2/3                3.84      8.25      0  00:00       0.200     0.000
+  LL-A1                   0.55     11.07      0  00:33       0.069     0.000
+  LBC-A1                 23.98     95.40      0  00:19       1.613     0.000
+  GSL1ovflw               0.01    532.89      0  00:00       0.113     0.000
+  CBC-A6                  0.94     58.42      0  03:59       0.921     0.000
+  KPL-A5                  1.04    124.33      0  00:19       1.816     0.000
+  KPL-A3                  0.56     85.72      0  22:59       0.492     0.000
+  KPL-A2                  1.06     93.52      0  15:47       1.359     0.000
+  KPL-A1                  0.78     58.58      0  03:59       0.815     0.000
+  CBC-A8                 21.69      1.20      0  02:18       0.701     0.000
+  CBC-A0                 22.20      1.20      0  01:48       0.717     0.000
+  GSL-A4                  0.42    166.78      0  21:19       1.677     0.000
+  GSL-A6                  0.37    155.01      0  19:33       1.364     0.000
+  
+  
+  **********************
+  Storage Volume Summary
+  **********************
+  
+  ------------------------------------------------------------------------------------------------
+                         Average    Avg   Evap  Exfil     Maximum    Max    Time of Max    Maximum
+                          Volume   Pcnt   Pcnt   Pcnt      Volume   Pcnt     Occurrence    Outflow
+  Storage Unit          1000 ft³   Full   Loss   Loss    1000 ft³   Full    days hr:min        CFS
+  ------------------------------------------------------------------------------------------------
+  UBC-A3                   0.000    0.0    0.0    0.0       0.000    0.0       0  00:00       0.00
+  UBC-A0                   0.545    5.4    0.0    0.0       3.748   37.5       0  00:02      11.81
+  UBC-A1                   0.000    0.0    0.0    0.0       0.000    0.0       0  00:00       0.00
+  UBC-A2                   0.572    5.7    0.0    0.0       5.400   54.0       0  00:00       4.52
+  UBC-A5                   0.000    0.0    0.0    0.0       0.000    0.0       0  00:00       0.00
+  UBC-A6                   2.000   20.0    0.0    0.0       2.000   20.0       0  00:00       0.00
+  UBC-A7                   4.000   40.0    0.0    0.0       4.000   40.0       0  00:00       0.00
+  UBC-A9                  10.000  100.0    0.0    0.0      10.000  100.0       0  00:00       0.00
+  CBC-A6                   5.716   57.2    0.0    0.0      10.000  100.0       0  00:24     129.36
+  CBC-A7                   1.025   10.2    0.0    0.0       1.392   13.9       0  00:19       1.69
+  KPL-A4                  10.000  100.0    0.0    0.0      10.000  100.0       0  00:00       0.00
+  KPL-A5                   5.485   54.8    0.0    0.0      10.000  100.0       0  00:19     232.99
+  KPL-A3                   5.333   53.3    0.0    0.0      10.000  100.0       0  09:32     117.80
+  KPL-A2                   5.722   57.2    0.0    0.0      10.000  100.0       0  00:19     186.91
+  KPL-A1                   5.388   53.9    0.0    0.0      10.000  100.0       0  03:12     286.35
+  CBC-A5                   0.420    4.2    0.0    0.0       0.420    4.2       0  00:00       0.00
+  CBC-A8                   9.503   95.0    0.0    0.0      10.000  100.0       0  02:18       0.00
+  CBC-A1                   9.900   99.0    0.0    0.0       9.900   99.0       0  00:00       0.00
+  CBC-A9a                  0.000    0.0    0.0    0.0       0.000    0.0       0  00:00       0.00
+  SCT-A4                   0.000    0.0    0.0    0.0       0.000    0.0       0  00:00       0.00
+  SCT-A2                   0.000    0.0    0.0    0.0       0.000    0.0       0  00:00       0.00
+  SCT-A3                   0.000    0.0    0.0    0.0       0.000    0.0       0  00:00       0.00
+  SCT-A1a                  0.656    6.6    0.0    0.0       1.293   12.9       0  21:52       8.92
+  SLB-A1                   0.883    8.8    0.0    0.0      10.000  100.0       0  00:00      10.49
+  SCT-A1b                  0.000    0.0    0.0    0.0       0.000    0.0       0  00:00       0.00
+  LL-A5                    1.000   10.0    0.0    0.0       1.000   10.0       0  00:00       0.00
+  LL-A4                    0.115    1.2    0.0    0.0       8.200   82.0       0  00:00      12.10
+  LL-A2                    0.000    0.0    0.0    0.0       0.000    0.0       0  00:00       0.00
+  LL-A3                    6.700   67.0    0.0    0.0       6.700   67.0       0  00:00       0.00
+  CBC-A0                   9.695   96.9    0.0    0.0      10.000  100.0       0  01:48       0.00
+  CBC-A9b                  0.000    0.0    0.0    0.0       0.000    0.0       0  00:00       0.00
+  GSL-A1                   7.000   70.0    0.0    0.0       7.000   70.0       0  00:00       0.00
+  GSL-A2                   0.002    0.0    0.0    0.0       9.937   99.4       0  00:00     804.35
+  GSL-A5                   0.120    1.2    0.0    0.0       9.998  100.0       0  00:00       8.02
+  GSL-A7                   0.616    6.2    0.0    0.0      10.000  100.0       0  00:00       8.77
+  GSL-A3                   2.000   20.0    0.0    0.0       2.000   20.0       0  00:00       0.00
+  GSL-A4                   4.986   49.9    0.0    0.0      10.000  100.0       0  02:47     310.02
+  GSL-A6                   5.053   50.5    0.0    0.0      10.000  100.0       0  01:09     333.57
+  storage@68               0.000    0.0    0.0    0.0       0.000    0.0       0  00:00       0.00
+  CBC-A9c                  1.000   10.0    0.0    0.0       1.000   10.0       0  00:00       0.00
+  
+  
+  ***********************
+  Outfall Loading Summary
+  ***********************
+  
+  -----------------------------------------------------------
+                         Flow       Avg       Max       Total
+                         Freq      Flow      Flow      Volume
+  Outfall Node           Pcnt       CFS       CFS    10^6 gal
+  -----------------------------------------------------------
+  CBC-A3                 0.00      0.00      0.00       0.000
+  -----------------------------------------------------------
+  System                 0.00      0.00      0.00       0.000
+  
+  
+  ********************
+  Link Flow Summary
+  ********************
+  
+  -----------------------------------------------------------------------------
+                                 Maximum  Time of Max   Maximum    Max/    Max/
+                                  |Flow|   Occurrence   |Veloc|    Full    Full
+  Link                 Type          CFS  days hr:min    ft/sec    Flow   Depth
+  -----------------------------------------------------------------------------
+  CR7-culvrt           CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  Mann-C5A             CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  Mann-C6              CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  Mann-C7              CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  Hwy68culv            CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  CoRd15BC             CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  633                  CONDUIT      0.84     0  00:14      1.81    7.48    1.00
+  636                  CONDUIT      0.84     0  00:14      1.81    7.48    1.00
+  BassLk               CONDUIT    187.60     0  15:47    >50.00  1665.06    1.00
+  645                  CONDUIT    286.35     0  00:19    >50.00  2541.59    1.00
+  Hwy96Culv            CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  WoodplOver           CONDUIT     12.09     0  13:51     17.61  107.34    1.00
+  671                  CONDUIT      8.92     0  13:20     33.90   79.14    1.00
+  CSAH12               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  692                  CONDUIT     12.10     0  00:33     24.24  107.38    1.00
+  LL-A2C               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  Hwy5C1               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  Reach_4              CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  LL-UBC-A4            CONDUIT      5.91     0  00:02      7.83   52.42    1.00
+  July                 CONDUIT      4.52     0  00:00     28.18   40.10    1.00
+  740                  CONDUIT      5.91     0  00:02      7.83   52.42    1.00
+  742                  CONDUIT    170.73     0  22:59    >50.00  1515.36    1.00
+  743                  CONDUIT    129.36     0  05:11    >50.00  1148.19    1.00
+  744                  CONDUIT    188.99     0  00:19    >50.00  1677.47    1.00
+  PatLkCulvt           CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  GSL-1ovflw           CONDUIT    804.35     0  00:00    >50.00    4.42    1.00
+  SSC1                 CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  LynchLkOvf           CONDUIT    333.57     0  21:19    >50.00  1831.61    1.00
+  CTYRD58C             CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  DrivewayC            CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  GateC1               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  cattlepass           CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  96-xing              CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  CS-7                 CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  Boutw1llc            CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  Bout#1llc2           CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  MannCulv             CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  SCT4-Chan            CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  Fish_Weir            CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  RR_Elipt             CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  Fish_Weir2           CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  Reach3LBC3           CONDUIT      0.00     0  00:00      0.00    0.00    0.04
+  Reach2LBC4           CONDUIT    299.28     0  01:14     16.40    0.01    0.55
+  Reach1LBC5           CONDUIT   2025.27     0  01:15     15.77    0.13    0.72
+  TrbRR-xing           CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  816                  CONDUIT      8.77     0  00:00     28.18   77.82    1.00
+  culv#2c              CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  Ovf                  WEIR         0.00     0  00:00                      0.00
+  BenzLkOutl           WEIR         0.00     0  00:00                      0.00
+  op                   WEIR         0.00     0  00:00                      0.00
+  special              WEIR         0.00     0  00:00                      0.00
+  PlaistedLk           WEIR         8.02     0  00:00                      1.00
+  
+  
+  ***************************
+  Flow Classification Summary
+  ***************************
+  
+  -------------------------------------------------------------------------------------
+                      Adjusted    ---------- Fraction of Time in Flow Class ---------- 
+                       /Actual         Up    Down  Sub   Sup   Up    Down  Norm  Inlet 
+  Conduit               Length    Dry  Dry   Dry   Crit  Crit  Crit  Crit  Ltd   Ctrl  
+  -------------------------------------------------------------------------------------
+  CR7-culvrt              1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  Mann-C5A                1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  Mann-C6                 1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  Mann-C7                 1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  Hwy68culv               1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  CoRd15BC                1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  633                     1.00   0.00  0.00  0.00  0.99  0.01  0.00  0.00  0.00  0.00
+  636                     1.00   0.00  0.00  0.00  0.99  0.01  0.00  0.00  0.00  0.00
+  BassLk                  1.00   0.00  0.00  0.00  0.94  0.05  0.00  0.00  0.00  0.00
+  645                     1.00   0.00  0.00  0.00  0.93  0.07  0.00  0.00  0.00  0.00
+  Hwy96Culv               1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  WoodplOver              1.00   0.00  0.00  0.00  0.94  0.06  0.00  0.00  0.07  0.00
+  671                     1.00   0.00  0.00  0.00  0.93  0.07  0.00  0.00  0.03  0.00
+  CSAH12                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  692                     1.00   0.00  0.00  0.00  1.00  0.00  0.00  0.00  0.00  0.00
+  LL-A2C                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  Hwy5C1                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  Reach_4                 1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  LL-UBC-A4               1.00   0.00  0.00  0.00  0.98  0.02  0.00  0.00  0.08  0.00
+  July                    1.00   0.00  0.00  0.00  0.98  0.02  0.00  0.00  0.07  0.00
+  740                     1.00   0.00  0.00  0.00  0.98  0.02  0.00  0.00  0.08  0.00
+  742                     1.00   0.00  0.00  0.00  0.95  0.05  0.00  0.00  0.00  0.00
+  743                     1.00   0.00  0.00  0.00  0.95  0.05  0.00  0.00  0.00  0.00
+  744                     1.00   0.00  0.00  0.00  1.00  0.00  0.00  0.00  0.00  0.00
+  PatLkCulvt              1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  GSL-1ovflw              1.00   0.00  1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  SSC1                    1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  LynchLkOvf              1.00   0.00  0.00  0.00  0.90  0.10  0.00  0.00  0.00  0.00
+  CTYRD58C                1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  DrivewayC               1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  GateC1                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  cattlepass              1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  96-xing                 1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  CS-7                    1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  Boutw1llc               1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  Bout#1llc2              1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  MannCulv                1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  SCT4-Chan               1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  Fish_Weir               1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  RR_Elipt                1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  Fish_Weir2              1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  Reach3LBC3              1.00   0.05  0.95  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  Reach2LBC4              1.00   0.05  0.00  0.00  0.04  0.91  0.00  0.00  0.95  0.00
+  Reach1LBC5              1.00   0.05  0.00  0.00  0.95  0.00  0.00  0.00  0.95  0.00
+  TrbRR-xing              1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  816                     1.00   0.00  0.00  0.00  0.98  0.02  0.00  0.00  0.07  0.00
+  culv#2c                 1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  
+  
+  *************************
+  Conduit Surcharge Summary
+  *************************
+  
+  ----------------------------------------------------------------------------
+                                                           Hours        Hours 
+                         --------- Hours Full --------   Above Full   Capacity
+  Conduit                Both Ends  Upstream  Dnstream   Normal Flow   Limited
+  ----------------------------------------------------------------------------
+  633                        23.65     23.75     23.74     23.74         0.01
+  636                        23.65     23.75     23.74     23.74         0.01
+  BassLk                     22.29     23.27     23.02     20.15        11.30
+  645                        22.15     23.21     22.94     19.33        10.43
+  WoodplOver                  1.08      2.42      3.56      7.71         1.00
+  671                         0.60      3.56      1.15      8.87         0.01
+  692                         0.33      0.47      0.33      0.53         0.01
+  LL-UBC-A4                   0.66      1.55      0.74      2.58         0.01
+  July                        0.64      0.72      0.74      5.44         0.53
+  740                         0.66      1.55      0.74      2.58         0.01
+  742                        22.40     23.21     23.18     20.51        10.51
+  743                        22.41     22.94     23.47     19.19        10.67
+  744                        23.81     23.98     23.81     23.91         0.12
+  GSL-1ovflw                 24.00     24.00     24.00      0.01         0.01
+  LynchLkOvf                 21.66     22.45     23.21     10.42        10.38
+  Reach2LBC4                  0.01      0.01      0.01      0.01         0.01
+  Reach1LBC5                  0.01      0.01      0.01      0.01         0.01
+  816                         0.64      0.72      0.74      5.43         0.62
+  
 
-
-  Analysis begun on:  Sun Jul 19 15:10:55 2026
-  Analysis ended on:  Sun Jul 19 15:10:55 2026
+  Analysis begun on:  Wed Jul 22 11:33:00 2026
+  Analysis ended on:  Wed Jul 22 11:33:00 2026
   Total elapsed time: < 1 sec

@@ -36,14 +36,21 @@
   Wet Weather Inflow .......         0.000         0.000
   Groundwater Inflow .......         0.000         0.000
   RDII Inflow ..............         0.000         0.000
-  External Inflow ..........         0.000         0.000
+  External Inflow ..........         1.037        10.367
   External Outflow .........         0.000         0.000
-  Flooding Loss ............         0.000         0.000
+  Flooding Loss ............         0.993         9.933
   Evaporation Loss .........         0.000         0.000
   Exfiltration Loss ........         0.000         0.000
   Initial Stored Volume ....         0.000         0.000
-  Final Stored Volume ......         0.000         0.000
-  Continuity Error (%) .....         0.000
+  Final Stored Volume ......         0.015         0.152
+  Continuity Error (%) .....         2.721
+  
+  
+  *************************
+  Highest Continuity Errors
+  *************************
+  Node streeta (4.39%)
+  Node street2 (4.36%)
   
   
   ***************************
@@ -61,18 +68,22 @@
   *********************************
   Most Frequent Nonconverging Nodes
   *********************************
-  Convergence obtained at all time steps.
+  Node Inlet2 (0.24%)
+  Node Street (0.21%)
+  Node street1 (0.07%)
+  Node streeta (0.03%)
+  Node Inlet4 (0.03%)
   
   
   *************************
   Routing Time Step Summary
   *************************
-  Minimum Time Step           :    29.50 sec
-  Average Time Step           :    29.99 sec
+  Minimum Time Step           :    15.03 sec
+  Average Time Step           :    29.98 sec
   Maximum Time Step           :    30.00 sec
   % of Time in Steady State   :     0.00
-  Average Iterations per Step :     2.00
-  % of Steps Not Converging   :     0.00
+  Average Iterations per Step :     2.03
+  % of Steps Not Converging   :     0.24
   Time Step Frequencies       :
      30.000 - 13.228 sec      :   100.00 %
      13.228 -  5.833 sec      :     0.00 %
@@ -91,18 +102,18 @@
   Node                 Type       Meters   Meters   Meters  days hr:min      Meters
   ---------------------------------------------------------------------------------
   Inlet1               JUNCTION     0.00     0.00   100.00     0  00:00        0.00
-  Inlet2               JUNCTION     0.00     0.00    99.00     0  00:00        0.00
   Inlet3               JUNCTION     0.00     0.00    98.50     0  00:00        0.00
-  Inlet4               JUNCTION     0.00     0.00    98.00     0  00:00        0.00
+  Inlet4               JUNCTION     0.45     0.47    98.47     0  01:09        0.47
+  Street               JUNCTION    93.29    98.00   196.00     0  01:55       98.00
   MH1                  JUNCTION     0.00     0.00   100.00     0  00:00        0.00
   MH2                  JUNCTION     0.00     0.00    99.00     0  00:00        0.00
   MH3                  JUNCTION     0.00     0.00    98.50     0  00:00        0.00
   MH4                  JUNCTION     0.00     0.00    98.00     0  00:00        0.00
   Pipe                 JUNCTION     0.00     0.00    98.00     0  00:00        0.00
-  street1              JUNCTION     0.00     0.00    99.75     0  00:00        0.00
-  streeta              JUNCTION     0.00     0.00    97.00     0  00:00        0.00
-  street2              JUNCTION     0.00     0.00    96.50     0  00:00        0.00
-  Street               OUTFALL      0.00     0.00    98.00     0  00:00        0.00
+  street1              JUNCTION    95.58    97.80   197.55     0  01:09       97.76
+  streeta              JUNCTION    95.34    97.50   194.50     0  01:03       97.50
+  street2              JUNCTION    94.87    97.00   193.50     0  01:03       97.00
+  Inlet2               OUTFALL      0.00     0.00    99.00     0  00:00        0.00
   
   
   *******************
@@ -115,19 +126,19 @@
                                    Inflow   Inflow   Occurrence      Volume      Volume       Error
   Node                 Type           CMS      CMS  days hr:min    10^6 ltr    10^6 ltr     Percent
   -------------------------------------------------------------------------------------------------
-  Inlet1               JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
-  Inlet2               JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
+  Inlet1               JUNCTION     0.030    0.030     0  00:00        2.59        2.59       0.000
   Inlet3               JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
   Inlet4               JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
+  Street               JUNCTION     0.000    3.533     0  01:09           0        2.58       0.000
   MH1                  JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
   MH2                  JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
   MH3                  JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
   MH4                  JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
   Pipe                 JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
-  street1              JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
-  streeta              JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
-  street2              JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
-  Street               OUTFALL      0.000    0.000     0  00:00           0           0       0.000 ltr
+  street1              JUNCTION     0.030    0.030     0  00:00        2.59        2.59       0.570
+  streeta              JUNCTION     0.030    0.030     0  00:00        2.59        2.59       4.594
+  street2              JUNCTION     0.030    0.030     0  00:00        2.59        2.59       4.557
+  Inlet2               OUTFALL      0.000    0.000     0  00:00           0           0       0.000 ltr
   
   
   **********************
@@ -141,14 +152,27 @@
   Node                 Type      Surcharged         Meters       Meters
   ---------------------------------------------------------------------
   Inlet1               JUNCTION       24.00          0.000        0.000
+  Street               JUNCTION       22.09          0.000        0.000
   MH1                  JUNCTION       24.00          0.000        0.000
+  streeta              JUNCTION       22.95          0.000        0.000
+  street2              JUNCTION       22.96          0.000        0.000
   
   
   *********************
   Node Flooding Summary
   *********************
   
-  No nodes were flooded.
+  Flooding refers to all water that overflows a node, whether it ponds or not.
+  --------------------------------------------------------------------------
+                                                             Total   Maximum
+                                 Maximum   Time of Max       Flood    Ponded
+                        Hours       Rate    Occurrence      Volume     Depth
+  Node                 Flooded       CMS   days hr:min    10^6 ltr    Meters
+  --------------------------------------------------------------------------
+  Inlet1                 24.00     0.030      0  00:00       2.592     0.000
+  Street                 22.09     0.030      0  01:55       2.386     0.000
+  streeta                22.95     0.030      0  01:03       2.478     0.000
+  street2                22.96     0.030      0  01:03       2.479     0.000
   
   
   ***********************
@@ -160,7 +184,7 @@
                          Freq      Flow      Flow      Volume
   Outfall Node           Pcnt       CMS       CMS    10^6 ltr
   -----------------------------------------------------------
-  Street                 0.00     0.000     0.000       0.000
+  Inlet2                 0.00     0.000     0.000       0.000
   -----------------------------------------------------------
   System                 0.00     0.000     0.000       0.000
   
@@ -177,9 +201,9 @@
   pipe1                CONDUIT     0.000     0  00:00      0.00    0.00    0.00
   pipe1_2              CONDUIT     0.000     0  00:00      0.00    0.00    0.00
   pipe1_3              CONDUIT     0.000     0  00:00      0.00    0.00    0.00
-  pipe1_4              CONDUIT     0.000     0  00:00      0.00    0.00    0.00
-  pipea                CONDUIT     0.000     0  00:00      0.00    0.00    0.00
-  pipe2                CONDUIT     0.000     0  00:00      0.00    0.00    0.00
+  pipe1_4              CONDUIT     3.533     0  01:09      2.64    0.35    0.60
+  pipea                CONDUIT     0.000     0  00:00      0.00    0.00    0.50
+  pipe2                CONDUIT     0.000     0  00:00      0.00    0.00    0.50
   219                  CONDUIT     0.000     0  00:00      0.00    0.00    0.00
   220                  CONDUIT     0.000     0  00:00      0.00    0.00    0.00
   
@@ -196,9 +220,9 @@
   pipe1                   1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
   pipe1_2                 1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
   pipe1_3                 1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
-  pipe1_4                 1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
-  pipea                   1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
-  pipe2                   1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  pipe1_4                 1.00   0.05  0.00  0.00  0.95  0.00  0.00  0.01  0.95  0.00
+  pipea                   1.00   0.04  0.96  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  pipe2                   1.00   0.04  0.96  0.00  0.00  0.00  0.00  0.00  0.00  0.00
   219                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
   220                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
   
@@ -207,9 +231,14 @@
   Conduit Surcharge Summary
   *************************
   
-  No conduits were surcharged.
+  ----------------------------------------------------------------------------
+                                                           Hours        Hours 
+                         --------- Hours Full --------   Above Full   Capacity
+  Conduit                Both Ends  Upstream  Dnstream   Normal Flow   Limited
+  ----------------------------------------------------------------------------
+  pipe1_3                     0.01     22.86      0.01      0.01         0.01
   
 
-  Analysis begun on:  Sun Jul 19 15:21:43 2026
-  Analysis ended on:  Sun Jul 19 15:21:43 2026
+  Analysis begun on:  Wed Jul 22 14:13:58 2026
+  Analysis ended on:  Wed Jul 22 14:13:58 2026
   Total elapsed time: < 1 sec

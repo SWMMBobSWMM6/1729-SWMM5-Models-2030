@@ -36,14 +36,20 @@
   Wet Weather Inflow .......         0.000         0.000
   Groundwater Inflow .......         0.000         0.000
   RDII Inflow ..............         0.000         0.000
-  External Inflow ..........         0.000         0.000
+  External Inflow ..........         1.983         0.646
   External Outflow .........         0.000         0.000
-  Flooding Loss ............         0.000         0.000
+  Flooding Loss ............         0.595         0.194
   Evaporation Loss .........         0.000         0.000
   Exfiltration Loss ........         0.000         0.000
   Initial Stored Volume ....         0.000         0.000
-  Final Stored Volume ......         0.000         0.000
-  Continuity Error (%) .....         0.000
+  Final Stored Volume ......         1.388         0.452
+  Continuity Error (%) .....         0.010
+  
+  
+  *************************
+  Highest Continuity Errors
+  *************************
+  Node 920360 (70.01%)
   
   
   ***************************
@@ -71,8 +77,8 @@
   Average Time Step           :    15.00 sec
   Maximum Time Step           :    15.00 sec
   % of Time in Steady State   :     0.00
-  Average Iterations per Step :     2.00
-  % of Steps Not Converging   :     0.00
+  Average Iterations per Step :     2.02
+  % of Steps Not Converging   :     0.03
   Time Step Frequencies       :
      15.000 -  7.597 sec      :   100.00 %
       7.597 -  3.848 sec      :     0.00 %
@@ -90,7 +96,7 @@
                                    Depth    Depth      HGL   Occurrence   Max Depth
   Node                 Type         Feet     Feet     Feet  days hr:min        Feet
   ---------------------------------------------------------------------------------
-  920360               JUNCTION     0.00     0.00   800.00     0  00:00        0.00
+  920360               JUNCTION   747.15   794.00  1594.00     0  16:48      794.00
   920350               JUNCTION     0.00     0.00   825.90     0  00:00        0.00
   920340               JUNCTION     0.00     0.00   820.70     0  00:00        0.00
   920330               OUTFALL      0.00     0.00   820.30     0  00:00        0.00
@@ -106,7 +112,7 @@
                                    Inflow   Inflow   Occurrence      Volume      Volume       Error
   Node                 Type           CFS      CFS  days hr:min    10^6 gal    10^6 gal     Percent
   -------------------------------------------------------------------------------------------------
-  920360               JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  920360               JUNCTION      1.00     1.00     0  00:00       0.646       0.646     233.435
   920350               JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
   920340               JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
   920330               OUTFALL       0.00     0.00     0  00:00           0           0       0.000 gal
@@ -116,14 +122,27 @@
   Node Surcharge Summary
   **********************
   
-  No nodes were surcharged.
+  Surcharging occurs when water rises above the top of the highest conduit.
+  ---------------------------------------------------------------------
+                                               Max. Height   Min. Depth
+                                   Hours       Above Crown    Below Rim
+  Node                 Type      Surcharged           Feet         Feet
+  ---------------------------------------------------------------------
+  920360               JUNCTION        7.20          0.000        0.000
   
   
   *********************
   Node Flooding Summary
   *********************
   
-  No nodes were flooded.
+  Flooding refers to all water that overflows a node, whether it ponds or not.
+  --------------------------------------------------------------------------
+                                                             Total   Maximum
+                                 Maximum   Time of Max       Flood    Ponded
+                        Hours       Rate    Occurrence      Volume     Depth
+  Node                 Flooded       CFS   days hr:min    10^6 gal      Feet
+  --------------------------------------------------------------------------
+  920360                  7.20      1.00      0  16:48       0.194     0.000
   
   
   ***********************
@@ -149,7 +168,7 @@
                                   |Flow|   Occurrence   |Veloc|    Full    Full
   Link                 Type          CFS  days hr:min    ft/sec    Flow   Depth
   -----------------------------------------------------------------------------
-  20360                CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  20360                CONDUIT      0.00     0  00:00      0.00    0.00    0.50
   20350                CONDUIT      0.00     0  00:00      0.00    0.00    0.00
   20340                CONDUIT      0.00     0  00:00      0.00    0.00    0.00
   
@@ -163,7 +182,7 @@
                        /Actual         Up    Down  Sub   Sup   Up    Down  Norm  Inlet 
   Conduit               Length    Dry  Dry   Dry   Crit  Crit  Crit  Crit  Ltd   Ctrl  
   -------------------------------------------------------------------------------------
-  20360                   1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  20360                   1.00   0.11  0.89  0.00  0.00  0.00  0.00  0.00  0.00  0.00
   20350                   1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
   20340                   1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
   
@@ -175,6 +194,6 @@
   No conduits were surcharged.
   
 
-  Analysis begun on:  Sun Jul 19 15:18:42 2026
-  Analysis ended on:  Sun Jul 19 15:18:42 2026
+  Analysis begun on:  Wed Jul 22 12:54:49 2026
+  Analysis ended on:  Wed Jul 22 12:54:49 2026
   Total elapsed time: < 1 sec

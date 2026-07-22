@@ -36,14 +36,20 @@
   Wet Weather Inflow .......         0.000         0.000
   Groundwater Inflow .......         0.000         0.000
   RDII Inflow ..............         0.000         0.000
-  External Inflow ..........         0.000         0.000
+  External Inflow ..........         0.778         7.775
   External Outflow .........         0.000         0.000
-  Flooding Loss ............        86.386       863.871
+  Flooding Loss ............        86.716       867.174
   Evaporation Loss .........         0.000         0.000
   Exfiltration Loss ........         0.000         0.000
   Initial Stored Volume ....         0.000         0.000
-  Final Stored Volume ......         0.000         0.000
-  Continuity Error (%) .....-1895782417.607
+  Final Stored Volume ......         0.197         1.971
+  Continuity Error (%) .....    -11078.368
+  
+  
+  *************************
+  Highest Continuity Errors
+  *************************
+  Node DAMY2 (39.56%)
   
   
   ***************************
@@ -55,27 +61,30 @@
   ********************************
   Highest Flow Instability Indexes
   ********************************
-  All links are stable.
+  Link 224 (41)
   
   
   *********************************
   Most Frequent Nonconverging Nodes
   *********************************
-  Convergence obtained at all time steps.
+  Node inlet4 (0.07%)
+  Node 30 (0.03%)
+  Node DAMY2 (0.03%)
+  Node 24 (0.03%)
   
   
   *************************
   Routing Time Step Summary
   *************************
-  Minimum Time Step           :    14.50 sec
-  Average Time Step           :    15.00 sec
+  Minimum Time Step           :     6.37 sec
+  Average Time Step           :    14.99 sec
   Maximum Time Step           :    15.00 sec
   % of Time in Steady State   :     0.00
-  Average Iterations per Step :     2.00
-  % of Steps Not Converging   :     0.00
+  Average Iterations per Step :     2.04
+  % of Steps Not Converging   :     0.07
   Time Step Frequencies       :
-     15.000 -  7.597 sec      :   100.00 %
-      7.597 -  3.848 sec      :     0.00 %
+     15.000 -  7.597 sec      :    99.98 %
+      7.597 -  3.848 sec      :     0.02 %
       3.848 -  1.949 sec      :     0.00 %
       1.949 -  0.987 sec      :     0.00 %
       0.987 -  0.500 sec      :     0.00 %
@@ -93,12 +102,12 @@
   Inlet                JUNCTION     0.00     0.00    10.00     0  00:00        0.00
   Inlet_2              JUNCTION     0.00     0.00    10.00     0  00:00        0.00
   Inlet_3              JUNCTION     0.00     0.00    10.00     0  00:00        0.00
-  24                   JUNCTION     0.00     0.00    10.00     0  00:00        0.00
+  24                   JUNCTION     8.51     8.80    18.80     0  13:54        8.80
   27                   JUNCTION     0.00     0.00    10.00     0  00:00        0.00
-  30                   JUNCTION     0.00     0.00    10.00     0  00:00        0.00
+  30                   JUNCTION     8.50     8.80    18.80     0  07:48        8.80
   pump.2               JUNCTION     0.00     0.00     0.00     0  00:00        0.00
   PIMP.3               JUNCTION     0.00     0.00     0.00     0  00:00        0.00
-  DAMY2                JUNCTION     0.00     0.00     6.02     0  00:00        0.00
+  DAMY2                JUNCTION     8.73     9.42    15.44     0  09:29        9.42
   inlet4               OUTFALL      0.00     0.00    10.00     0  00:00        0.00
   
   
@@ -115,12 +124,12 @@
   Inlet                JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
   Inlet_2              JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
   Inlet_3              JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
-  24                   JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
+  24                   JUNCTION     0.030    0.387     0  00:06        2.59        2.81      18.425
   27                   JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
-  30                   JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
-  pump.2               JUNCTION     0.000    0.000     0  00:00           0           0    -100.000
+  30                   JUNCTION     0.000    0.606     0  00:05           0        2.37       0.000
+  pump.2               JUNCTION     0.030    0.030     0  00:00        2.59        2.59     -99.700
   PIMP.3               JUNCTION     0.000   10.000     0  00:00           0         864       0.000
-  DAMY2                JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
+  DAMY2                JUNCTION     0.030    0.030     0  00:00        2.59        2.59      65.447
   inlet4               OUTFALL      0.000    0.000     0  00:00           0           0       0.000 ltr
   
   
@@ -136,8 +145,10 @@
   ---------------------------------------------------------------------
   Inlet_2              JUNCTION       24.00          0.000        0.000
   Inlet_3              JUNCTION       24.00          0.000        0.000
+  30                   JUNCTION       13.88          0.000        0.000
   pump.2               JUNCTION       24.00          0.000        0.000
   PIMP.3               JUNCTION       24.00          0.000        0.000
+  DAMY2                JUNCTION       14.51          0.000        0.000
   
   
   *********************
@@ -151,7 +162,9 @@
                         Hours       Rate    Occurrence      Volume     Depth
   Node                 Flooded       CMS   days hr:min    10^6 ltr    Meters
   --------------------------------------------------------------------------
+  30                     13.88     0.060      0  13:55       1.736     0.000
   PIMP.3                 24.00    10.000      0  00:00     863.906     0.000
+  DAMY2                  14.51     0.030      0  09:29       1.567     0.000
   
   
   ***********************
@@ -180,8 +193,8 @@
   213                  CONDUIT     0.000     0  00:00      0.00    0.00    0.00
   214                  CONDUIT     0.000     0  00:00      0.00    0.00    0.00
   216                  CONDUIT     0.000     0  00:00      0.00    0.00    0.00
-  damy                 CONDUIT     0.000     0  00:00      0.00    0.00    0.00
-  224                  CONDUIT     0.000     0  00:00      0.00    0.00    0.00
+  damy                 CONDUIT     0.000     0  00:00      0.00    0.00    0.50
+  224                  CONDUIT     0.606     0  00:05      0.95    0.02    0.95
   pump.1               PUMP       10.000     0  00:00              1.00
   
   
@@ -197,15 +210,20 @@
   213                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
   214                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
   216                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
-  damy                    1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
-  224                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  damy                    1.00   0.00  1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  224                     1.00   0.00  0.00  0.00  1.00  0.00  0.00  0.00  0.00  0.00
   
   
   *************************
   Conduit Surcharge Summary
   *************************
   
-  No conduits were surcharged.
+  ----------------------------------------------------------------------------
+                                                           Hours        Hours 
+                         --------- Hours Full --------   Above Full   Capacity
+  Conduit                Both Ends  Upstream  Dnstream   Normal Flow   Limited
+  ----------------------------------------------------------------------------
+  224                         0.01      0.01     13.88      0.01         0.01
   
   
   ***************
@@ -220,6 +238,6 @@
   pump.1                 100.00           1      0.00     10.00     10.00   863.908      0.00    0.0    0.0
   
 
-  Analysis begun on:  Sun Jul 19 15:11:57 2026
-  Analysis ended on:  Sun Jul 19 15:11:57 2026
+  Analysis begun on:  Wed Jul 22 11:40:22 2026
+  Analysis ended on:  Wed Jul 22 11:40:22 2026
   Total elapsed time: < 1 sec

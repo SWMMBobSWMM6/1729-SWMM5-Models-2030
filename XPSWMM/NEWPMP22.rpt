@@ -37,20 +37,20 @@
   Wet Weather Inflow .......         0.000         0.000
   Groundwater Inflow .......         0.000         0.000
   RDII Inflow ..............         0.000         0.000
-  External Inflow ..........         0.000         0.000
-  External Outflow .........         0.000         0.000
-  Flooding Loss ............         0.000         0.000
+  External Inflow ..........         1.983         0.646
+  External Outflow .........         1.939         0.632
+  Flooding Loss ............         0.003         0.001
   Evaporation Loss .........         0.000         0.000
   Exfiltration Loss ........         0.000         0.000
   Initial Stored Volume ....         0.000         0.000
-  Final Stored Volume ......         0.000         0.000
-  Continuity Error (%) .....         0.000
+  Final Stored Volume ......         0.042         0.014
+  Continuity Error (%) .....        -0.044
   
   
   ***************************
   Time-Step Critical Elements
   ***************************
-  None
+  Link 5 (1.33%)
   
   
   ********************************
@@ -68,15 +68,15 @@
   *************************
   Routing Time Step Summary
   *************************
-  Minimum Time Step           :     3.50 sec
-  Average Time Step           :     4.00 sec
+  Minimum Time Step           :     2.57 sec
+  Average Time Step           :     3.99 sec
   Maximum Time Step           :     4.00 sec
   % of Time in Steady State   :     0.00
-  Average Iterations per Step :     2.00
+  Average Iterations per Step :     2.02
   % of Steps Not Converging   :     0.00
   Time Step Frequencies       :
-      4.000 -  2.639 sec      :   100.00 %
-      2.639 -  1.741 sec      :     0.00 %
+      4.000 -  2.639 sec      :    99.86 %
+      2.639 -  1.741 sec      :     0.14 %
       1.741 -  1.149 sec      :     0.00 %
       1.149 -  0.758 sec      :     0.00 %
       0.758 -  0.500 sec      :     0.00 %
@@ -91,11 +91,11 @@
                                    Depth    Depth      HGL   Occurrence   Max Depth
   Node                 Type         Feet     Feet     Feet  days hr:min        Feet
   ---------------------------------------------------------------------------------
-  4                    JUNCTION     0.00     0.00    20.00     0  00:00        0.00
+  4                    JUNCTION     1.48     2.00    22.00     0  00:38        2.00
   PUMPWT               JUNCTION     0.00     0.00     1.00     0  00:00        0.00
   OLDVOL2              JUNCTION     0.00     0.00     1.00     0  00:00        0.00
   2                    OUTFALL      0.00     0.00   500.00     0  00:00        0.00
-  1                    STORAGE      0.00     0.00    20.00     0  00:00        0.00
+  1                    STORAGE      1.47     2.00    22.00     0  00:38        2.00
   
   
   *******************
@@ -108,11 +108,11 @@
                                    Inflow   Inflow   Occurrence      Volume      Volume       Error
   Node                 Type           CFS      CFS  days hr:min    10^6 gal    10^6 gal     Percent
   -------------------------------------------------------------------------------------------------
-  4                    JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  4                    JUNCTION      1.00     1.00     0  00:00       0.646       0.646       0.582
   PUMPWT               JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
   OLDVOL2              JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
-  2                    OUTFALL       0.00     0.00     0  00:00           0           0       0.000 gal
-  1                    STORAGE       0.00     0.00     0  00:00           0           0       0.000 gal
+  2                    OUTFALL       0.00    10.00     0  00:38           0       0.632       0.000
+  1                    STORAGE       0.00     1.72     0  01:45           0       0.642      -0.318
   
   
   **********************
@@ -125,6 +125,7 @@
                                    Hours       Above Crown    Below Rim
   Node                 Type      Surcharged           Feet         Feet
   ---------------------------------------------------------------------
+  4                    JUNCTION        0.32          0.000        0.000
   PUMPWT               JUNCTION       24.00          0.000        0.000
   OLDVOL2              JUNCTION       24.00          0.000        0.000
   
@@ -133,7 +134,14 @@
   Node Flooding Summary
   *********************
   
-  No nodes were flooded.
+  Flooding refers to all water that overflows a node, whether it ponds or not.
+  --------------------------------------------------------------------------
+                                                             Total   Maximum
+                                 Maximum   Time of Max       Flood    Ponded
+                        Hours       Rate    Occurrence      Volume     Depth
+  Node                 Flooded       CFS   days hr:min    10^6 gal      Feet
+  --------------------------------------------------------------------------
+  4                       0.32      0.19      0  21:55       0.001     0.000
   
   
   **********************
@@ -145,7 +153,7 @@
                           Volume   Pcnt   Pcnt   Pcnt      Volume   Pcnt     Occurrence    Outflow
   Storage Unit          1000 ft³   Full   Loss   Loss    1000 ft³   Full    days hr:min        CFS
   ------------------------------------------------------------------------------------------------
-  1                        0.000    0.0    0.0    0.0       0.000    0.0       0  00:00       0.00
+  1                        1.467   14.7    0.0    0.0       2.003   20.0       0  00:38      10.00
   
   
   ***********************
@@ -157,9 +165,9 @@
                          Freq      Flow      Flow      Volume
   Outfall Node           Pcnt       CFS       CFS    10^6 gal
   -----------------------------------------------------------
-  2                      0.00      0.00      0.00       0.000
+  2                      9.76     10.00     10.00       0.632
   -----------------------------------------------------------
-  System                 0.00      0.00      0.00       0.000
+  System                 9.76     10.00     10.00       0.632
   
   
   ********************
@@ -171,8 +179,8 @@
                                   |Flow|   Occurrence   |Veloc|    Full    Full
   Link                 Type          CFS  days hr:min    ft/sec    Flow   Depth
   -----------------------------------------------------------------------------
-  5                    CONDUIT      0.00     0  00:00      0.00    0.00    0.00
-  3                    PUMP         0.00     0  00:00              0.00
+  5                    CONDUIT      1.72     0  01:45      5.12    2.59    1.00
+  3                    PUMP        10.00     0  00:38              1.00
   
   
   ***************************
@@ -184,14 +192,19 @@
                        /Actual         Up    Down  Sub   Sup   Up    Down  Norm  Inlet 
   Conduit               Length    Dry  Dry   Dry   Crit  Crit  Crit  Crit  Ltd   Ctrl  
   -------------------------------------------------------------------------------------
-  5                       1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  5                       1.00   0.00  0.00  0.00  1.00  0.00  0.00  0.00  0.10  0.00
   
   
   *************************
   Conduit Surcharge Summary
   *************************
   
-  No conduits were surcharged.
+  ----------------------------------------------------------------------------
+                                                           Hours        Hours 
+                         --------- Hours Full --------   Above Full   Capacity
+  Conduit                Both Ends  Upstream  Dnstream   Normal Flow   Limited
+  ----------------------------------------------------------------------------
+  5                           0.07      0.36      0.07     23.31         0.01
   
   
   ***************
@@ -203,9 +216,9 @@
                         Percent   Number of      Flow      Flow      Flow    Volume     Usage    Pump Curve
   Pump                 Utilized   Start-Ups       CFS       CFS       CFS  10^6 gal     Kw-hr    Low   High
   ---------------------------------------------------------------------------------------------------------
-  3                        0.00           0      0.00      0.00      0.00     0.000      0.00    0.0    0.0
+  3                        9.78          64      0.00     10.00     10.00     0.632    950.04    0.0  100.0
   
 
-  Analysis begun on:  Sun Jul 19 15:21:11 2026
-  Analysis ended on:  Sun Jul 19 15:21:11 2026
+  Analysis begun on:  Wed Jul 22 14:11:16 2026
+  Analysis ended on:  Wed Jul 22 14:11:16 2026
   Total elapsed time: < 1 sec

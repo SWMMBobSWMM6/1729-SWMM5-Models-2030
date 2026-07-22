@@ -36,20 +36,26 @@
   Wet Weather Inflow .......         0.000         0.000
   Groundwater Inflow .......         0.000         0.000
   RDII Inflow ..............         0.000         0.000
-  External Inflow ..........         0.000         0.000
-  External Outflow .........         0.000         0.000
+  External Inflow ..........         1.983         0.646
+  External Outflow .........        55.022        17.930
   Flooding Loss ............         0.000         0.000
   Evaporation Loss .........         0.000         0.000
   Exfiltration Loss ........         0.000         0.000
   Initial Stored Volume ....         0.000         0.000
-  Final Stored Volume ......         0.000         0.000
-  Continuity Error (%) .....         0.000
+  Final Stored Volume ......         0.047         0.015
+  Continuity Error (%) .....     -2676.504
+  
+  
+  *************************
+  Highest Continuity Errors
+  *************************
+  Node BorderBas. (-2126.66%)
   
   
   ***************************
   Time-Step Critical Elements
   ***************************
-  None
+  Link Outlet (99.78%)
   
   
   ********************************
@@ -67,17 +73,17 @@
   *************************
   Routing Time Step Summary
   *************************
-  Minimum Time Step           :    59.50 sec
-  Average Time Step           :    59.96 sec
+  Minimum Time Step           :     2.06 sec
+  Average Time Step           :     5.93 sec
   Maximum Time Step           :    60.00 sec
   % of Time in Steady State   :     0.00
-  Average Iterations per Step :     2.00
-  % of Steps Not Converging   :     0.00
+  Average Iterations per Step :     2.01
+  % of Steps Not Converging   :     0.09
   Time Step Frequencies       :
-     60.000 - 23.031 sec      :   100.00 %
-     23.031 -  8.841 sec      :     0.00 %
-      8.841 -  3.393 sec      :     0.00 %
-      3.393 -  1.303 sec      :     0.00 %
+     60.000 - 23.031 sec      :     0.21 %
+     23.031 -  8.841 sec      :     0.01 %
+      8.841 -  3.393 sec      :    99.34 %
+      3.393 -  1.303 sec      :     0.45 %
       1.303 -  0.500 sec      :     0.00 %
   
   
@@ -90,8 +96,8 @@
                                    Depth    Depth      HGL   Occurrence   Max Depth
   Node                 Type         Feet     Feet     Feet  days hr:min        Feet
   ---------------------------------------------------------------------------------
-  BorderBas.           JUNCTION     0.00     0.00     0.00     0  00:00        0.00
-  Cent                 JUNCTION     0.00     0.00     0.00     0  00:00        0.00
+  BorderBas.           JUNCTION    16.12    17.20    17.20     0  00:29       17.02
+  Cent                 JUNCTION    38.27    39.71    39.71     0  00:09       39.15
   Outfall              OUTFALL      0.00     0.00     0.00     0  00:00        0.00
   
   
@@ -105,9 +111,9 @@
                                    Inflow   Inflow   Occurrence      Volume      Volume       Error
   Node                 Type           CFS      CFS  days hr:min    10^6 gal    10^6 gal     Percent
   -------------------------------------------------------------------------------------------------
-  BorderBas.           JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
-  Cent                 JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
-  Outfall              OUTFALL       0.00     0.00     0  00:00           0           0       0.000 gal
+  BorderBas.           JUNCTION      0.00    37.28     0  00:10           0       0.805     -95.509
+  Cent                 JUNCTION      1.00     1.00     0  00:00       0.646       0.646     -19.735
+  Outfall              OUTFALL       0.00  4858.47     0  00:11           0        17.9       0.000
   
   
   **********************
@@ -133,9 +139,9 @@
                          Freq      Flow      Flow      Volume
   Outfall Node           Pcnt       CFS       CFS    10^6 gal
   -----------------------------------------------------------
-  Outfall                0.00      0.00      0.00       0.000
+  Outfall               99.86      3.91   4858.47      17.929
   -----------------------------------------------------------
-  System                 0.00      0.00      0.00       0.000
+  System                99.86      3.91   4858.47      17.929
   
   
   ********************
@@ -147,8 +153,8 @@
                                   |Flow|   Occurrence   |Veloc|    Full    Full
   Link                 Type          CFS  days hr:min    ft/sec    Flow   Depth
   -----------------------------------------------------------------------------
-  Outlet               CONDUIT      0.00     0  00:00      0.00    0.00    0.00
-  Orifice              CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  Outlet               CONDUIT   4858.47     0  00:11    >50.00    3.53    0.50
+  Orifice              CONDUIT     37.28     0  00:10      6.89    0.22    0.67
   
   
   ***************************
@@ -160,17 +166,23 @@
                        /Actual         Up    Down  Sub   Sup   Up    Down  Norm  Inlet 
   Conduit               Length    Dry  Dry   Dry   Crit  Crit  Crit  Crit  Ltd   Ctrl  
   -------------------------------------------------------------------------------------
-  Outlet                  1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
-  Orifice                 1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  Outlet                  1.00   0.01  0.00  0.00  0.00  0.00  0.00  0.99  0.00  0.00
+  Orifice                 1.00   0.01  0.00  0.00  0.01  0.00  0.00  0.98  0.01  0.00
   
   
   *************************
   Conduit Surcharge Summary
   *************************
   
-  No conduits were surcharged.
+  ----------------------------------------------------------------------------
+                                                           Hours        Hours 
+                         --------- Hours Full --------   Above Full   Capacity
+  Conduit                Both Ends  Upstream  Dnstream   Normal Flow   Limited
+  ----------------------------------------------------------------------------
+  Outlet                      0.01      0.23      0.01      0.15         0.01
+  Orifice                     0.01      0.01      0.13      0.01         0.01
   
 
-  Analysis begun on:  Sun Jul 19 15:22:56 2026
-  Analysis ended on:  Sun Jul 19 15:22:56 2026
+  Analysis begun on:  Wed Jul 22 14:19:04 2026
+  Analysis ended on:  Wed Jul 22 14:19:04 2026
   Total elapsed time: < 1 sec

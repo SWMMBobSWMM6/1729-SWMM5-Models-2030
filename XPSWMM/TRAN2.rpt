@@ -37,14 +37,14 @@
   Wet Weather Inflow .......         0.000         0.000
   Groundwater Inflow .......         0.000         0.000
   RDII Inflow ..............         0.000         0.000
-  External Inflow ..........         0.000         0.000
-  External Outflow .........         0.000         0.000
+  External Inflow ..........         1.983         0.646
+  External Outflow .........         1.961         0.639
   Flooding Loss ............         0.000         0.000
   Evaporation Loss .........         0.000         0.000
   Exfiltration Loss ........         0.000         0.000
   Initial Stored Volume ....         0.000         0.000
-  Final Stored Volume ......         0.000         0.000
-  Continuity Error (%) .....         0.000
+  Final Stored Volume ......         0.029         0.010
+  Continuity Error (%) .....        -0.369
   
   
   ***************************
@@ -91,8 +91,8 @@
                                    Depth    Depth      HGL   Occurrence   Max Depth
   Node                 Type         Feet     Feet     Feet  days hr:min        Feet
   ---------------------------------------------------------------------------------
-  1000                 JUNCTION     0.00     0.00     0.00     0  00:00        0.00
-  3000                 OUTFALL      0.00     0.00     0.00     0  00:00        0.00
+  1000                 JUNCTION     0.83     0.84     0.84     0  05:01        0.84
+  3000                 OUTFALL      0.25     0.26     0.26     0  05:01        0.26
   
   
   *******************
@@ -105,8 +105,8 @@
                                    Inflow   Inflow   Occurrence      Volume      Volume       Error
   Node                 Type           CFS      CFS  days hr:min    10^6 gal    10^6 gal     Percent
   -------------------------------------------------------------------------------------------------
-  1000                 JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
-  3000                 OUTFALL       0.00     0.00     0  00:00           0           0       0.000 gal
+  1000                 JUNCTION      1.00     1.00     0  00:00       0.646       0.646       1.122
+  3000                 OUTFALL       0.00     1.00     0  05:02           0       0.639       0.000
   
   
   **********************
@@ -132,9 +132,9 @@
                          Freq      Flow      Flow      Volume
   Outfall Node           Pcnt       CFS       CFS    10^6 gal
   -----------------------------------------------------------
-  3000                   0.00      0.00      0.00       0.000
+  3000                  99.98      0.99      1.00       0.639
   -----------------------------------------------------------
-  System                 0.00      0.00      0.00       0.000
+  System                99.98      0.99      1.00       0.639
   
   
   ********************
@@ -146,7 +146,7 @@
                                   |Flow|   Occurrence   |Veloc|    Full    Full
   Link                 Type          CFS  days hr:min    ft/sec    Flow   Depth
   -----------------------------------------------------------------------------
-  2000                 CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  2000                 CONDUIT      1.00     0  05:02      0.86    0.59    0.11
   
   
   ***************************
@@ -158,7 +158,7 @@
                        /Actual         Up    Down  Sub   Sup   Up    Down  Norm  Inlet 
   Conduit               Length    Dry  Dry   Dry   Crit  Crit  Crit  Crit  Ltd   Ctrl  
   -------------------------------------------------------------------------------------
-  2000                    1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  2000                    1.00   0.00  0.00  0.00  1.00  0.00  0.00  0.00  0.00  0.00
   
   
   *************************
@@ -168,6 +168,6 @@
   No conduits were surcharged.
   
 
-  Analysis begun on:  Sun Jul 19 15:24:19 2026
-  Analysis ended on:  Sun Jul 19 15:24:19 2026
+  Analysis begun on:  Wed Jul 22 14:24:52 2026
+  Analysis ended on:  Wed Jul 22 14:24:52 2026
   Total elapsed time: < 1 sec

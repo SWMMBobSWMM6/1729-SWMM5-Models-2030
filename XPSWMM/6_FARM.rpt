@@ -44,20 +44,32 @@
   Wet Weather Inflow .......         0.000         0.000
   Groundwater Inflow .......         0.000         0.000
   RDII Inflow ..............         0.000         0.000
-  External Inflow ..........         0.000         0.000
-  External Outflow .........         0.000         0.000
+  External Inflow ..........         0.778         7.775
+  External Outflow .........         0.363         3.630
   Flooding Loss ............         0.000         0.000
   Evaporation Loss .........         0.000         0.000
   Exfiltration Loss ........         0.000         0.000
   Initial Stored Volume ....         0.000         0.001
-  Final Stored Volume ......         0.000         0.001
-  Continuity Error (%) .....         0.000
+  Final Stored Volume ......         0.416         4.161
+  Continuity Error (%) .....        -0.186
+  
+  
+  *************************
+  Highest Continuity Errors
+  *************************
+  Node J2 (50.95%)
+  Node J1 (48.69%)
+  Node NS1 (14.48%)
+  Node NS2 (14.00%)
+  Node NS3 (12.00%)
   
   
   ***************************
   Time-Step Critical Elements
   ***************************
-  None
+  Link S1 (43.88%)
+  Link S3 (33.25%)
+  Link S2 (22.87%)
   
   
   ********************************
@@ -75,18 +87,18 @@
   *************************
   Routing Time Step Summary
   *************************
-  Minimum Time Step           :    19.50 sec
-  Average Time Step           :    20.00 sec
-  Maximum Time Step           :    20.00 sec
+  Minimum Time Step           :     0.31 sec
+  Average Time Step           :     0.51 sec
+  Maximum Time Step           :    19.48 sec
   % of Time in Steady State   :     0.00
   Average Iterations per Step :     2.00
   % of Steps Not Converging   :     0.00
   Time Step Frequencies       :
-     20.000 -  9.564 sec      :   100.00 %
+     20.000 -  9.564 sec      :     0.00 %
       9.564 -  4.573 sec      :     0.00 %
       4.573 -  2.187 sec      :     0.00 %
-      2.187 -  1.046 sec      :     0.00 %
-      1.046 -  0.500 sec      :     0.00 %
+      2.187 -  1.046 sec      :     0.18 %
+      1.046 -  0.500 sec      :    99.82 %
   
   
   ******************
@@ -98,15 +110,16 @@
                                    Depth    Depth      HGL   Occurrence   Max Depth
   Node                 Type       Meters   Meters   Meters  days hr:min      Meters
   ---------------------------------------------------------------------------------
-  J1                   JUNCTION     0.00     0.00     0.00     0  00:00        0.00
-  J2                   JUNCTION     0.00     0.00     0.00     0  00:00        0.00
-  OUT                  JUNCTION     0.00     0.00     0.00     0  00:00        0.00
-  NS1                  JUNCTION     0.00     0.00     0.00     0  00:00        0.00
-  NS2                  JUNCTION     0.00     0.00     0.00     0  00:00        0.00
-  NS3                  JUNCTION     0.00     0.00     0.00     0  00:00        0.00
-  FL1                  JUNCTION     0.00     0.00     0.00     0  00:00        0.00
-  FL2                  JUNCTION     0.00     0.00     0.00     0  00:00        0.00
-  FL3                  OUTFALL      0.00     0.00     0.00     0  00:00        0.00
+  J1                   JUNCTION     0.16     0.26     0.26     1  00:00        0.26
+  J2                   JUNCTION     0.14     0.25     0.25     1  00:00        0.25
+  OUT                  JUNCTION     0.06     0.08     0.08     1  00:00        0.08
+  NS1                  JUNCTION     0.24     0.29     0.29     1  00:00        0.29
+  NS2                  JUNCTION     0.24     0.28     0.28     1  00:00        0.28
+  NS3                  JUNCTION     0.23     0.25     0.25     0  08:27        0.25
+  FL1                  JUNCTION     0.24     0.29     0.29     1  00:00        0.29
+  FL2                  JUNCTION     0.24     0.28     0.28     1  00:00        0.28
+  FL3                  JUNCTION     0.23     0.25     0.25     0  08:27        0.25
+  OUT_SYNTH            OUTFALL      0.05     0.08    -0.92     1  00:00        0.08
   
   
   *******************
@@ -119,15 +132,16 @@
                                    Inflow   Inflow   Occurrence      Volume      Volume       Error
   Node                 Type           CMS      CMS  days hr:min    10^6 ltr    10^6 ltr     Percent
   -------------------------------------------------------------------------------------------------
-  J1                   JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
-  J2                   JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
-  OUT                  JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
-  NS1                  JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
-  NS2                  JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
-  NS3                  JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
-  FL1                  JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
-  FL2                  JUNCTION     0.000    0.000     0  00:00           0           0       0.000 ltr
-  FL3                  OUTFALL      0.000    0.000     0  00:00           0           0       0.000 ltr
+  J1                   JUNCTION     0.000    0.031     0  07:22           0        2.22      94.881
+  J2                   JUNCTION     0.000    0.053     1  00:00           0        3.37     103.866
+  OUT                  JUNCTION     0.000    0.076     1  00:00           0        3.93       8.267
+  NS1                  JUNCTION     0.000    0.153     0  00:00           0        2.59      16.933
+  NS2                  JUNCTION     0.000    0.153     0  00:00           0        2.59      16.279
+  NS3                  JUNCTION     0.000    0.153     0  00:00           0        2.59      13.635
+  FL1                  JUNCTION     0.030    0.030     0  00:00        2.59        2.59       0.006
+  FL2                  JUNCTION     0.030    0.030     0  00:00        2.59        2.59       0.005
+  FL3                  JUNCTION     0.030    0.030     0  00:00        2.59        2.59       0.004
+  OUT_SYNTH            OUTFALL      0.000    0.075     1  00:00           0        3.63       0.000
   
   
   **********************
@@ -153,9 +167,9 @@
                          Freq      Flow      Flow      Volume
   Outfall Node           Pcnt       CMS       CMS    10^6 ltr
   -----------------------------------------------------------
-  FL3                    0.00     0.000     0.000       0.000
+  OUT_SYNTH             97.89     0.044     0.075       3.630
   -----------------------------------------------------------
-  System                 0.00     0.000     0.000       0.000
+  System                97.89     0.044     0.075       3.630
   
   
   ********************
@@ -167,14 +181,15 @@
                                   |Flow|   Occurrence   |Veloc|    Full    Full
   Link                 Type          CMS  days hr:min     m/sec    Flow   Depth
   -----------------------------------------------------------------------------
-  MD1                  CONDUIT     0.000     0  00:00      0.00    0.00    0.00
-  MD2                  CONDUIT     0.000     0  00:00      0.00    0.00    0.00
-  D2                   CONDUIT     0.000     0  00:00      0.00    0.00    0.00
-  D3                   CONDUIT     0.000     0  00:00      0.00    0.00    0.00
-  S1                   CONDUIT     0.000     0  00:00      0.00    0.00    0.00
-  S2                   CONDUIT     0.000     0  00:00      0.00    0.00    0.00
-  S3                   CONDUIT     0.000     0  00:00      0.00    0.00    0.00
-  D1                   CONDUIT     0.000     0  00:00      0.00    0.00    0.00
+  MD1                  CONDUIT     0.024     1  00:00      0.04    0.28    0.17
+  MD2                  CONDUIT     0.045     1  00:00      0.10    0.52    0.11
+  D2                   CONDUIT     0.031     0  08:22      0.12    1.00    0.27
+  D3                   CONDUIT     0.030     0  12:47      0.12    0.97    0.16
+  S1                   CONDUIT     0.153     0  00:00      1.70    0.13    0.29
+  S2                   CONDUIT     0.153     0  00:00      1.70    0.13    0.28
+  S3                   CONDUIT     0.153     0  00:00      1.70    0.13    0.25
+  D1                   CONDUIT     0.031     0  07:22      0.11    0.98    0.27
+  C_OUT_SYNTH          CONDUIT     0.075     1  00:00      1.50    0.00    0.03
   
   
   ***************************
@@ -186,23 +201,29 @@
                        /Actual         Up    Down  Sub   Sup   Up    Down  Norm  Inlet 
   Conduit               Length    Dry  Dry   Dry   Crit  Crit  Crit  Crit  Ltd   Ctrl  
   -------------------------------------------------------------------------------------
-  MD1                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
-  MD2                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
-  D2                      1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
-  D3                      1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
-  S1                      1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
-  S2                      1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
-  S3                      1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
-  D1                      1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  MD1                     1.00   0.01  0.00  0.00  0.99  0.00  0.00  0.00  0.00  0.00
+  MD2                     1.00   0.01  0.00  0.00  0.99  0.00  0.00  0.00  0.00  0.00
+  D2                      1.00   0.00  0.00  0.00  1.00  0.00  0.00  0.00  0.00  0.00
+  D3                      1.00   0.00  0.00  0.00  1.00  0.00  0.00  0.00  0.00  0.00
+  S1                      1.00   0.00  0.00  0.00  0.99  0.01  0.00  0.00  0.00  0.00
+  S2                      1.00   0.00  0.00  0.00  0.99  0.01  0.00  0.00  0.00  0.00
+  S3                      1.00   0.00  0.00  0.00  0.99  0.01  0.00  0.00  0.00  0.00
+  D1                      1.00   0.00  0.00  0.00  1.00  0.00  0.00  0.00  0.00  0.00
+  C_OUT_SYNTH             1.00   0.01  0.00  0.00  0.00  0.99  0.00  0.00  0.10  0.00
   
   
   *************************
   Conduit Surcharge Summary
   *************************
   
-  No conduits were surcharged.
+  ----------------------------------------------------------------------------
+                                                           Hours        Hours 
+                         --------- Hours Full --------   Above Full   Capacity
+  Conduit                Both Ends  Upstream  Dnstream   Normal Flow   Limited
+  ----------------------------------------------------------------------------
+  D2                          0.01      0.01      0.01      1.05         0.01
   
 
-  Analysis begun on:  Sun Jul 19 15:11:01 2026
-  Analysis ended on:  Sun Jul 19 15:11:01 2026
-  Total elapsed time: < 1 sec
+  Analysis begun on:  Wed Jul 22 11:35:01 2026
+  Analysis ended on:  Wed Jul 22 11:35:02 2026
+  Total elapsed time: 00:00:01

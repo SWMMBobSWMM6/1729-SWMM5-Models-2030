@@ -36,20 +36,30 @@
   Wet Weather Inflow .......         0.000         0.000
   Groundwater Inflow .......         0.000         0.000
   RDII Inflow ..............         0.000         0.000
-  External Inflow ..........         0.000         0.000
-  External Outflow .........         0.000         0.000
-  Flooding Loss ............         0.000         0.000
+  External Inflow ..........         3.967         1.293
+  External Outflow .........         1.514         0.493
+  Flooding Loss ............         1.579         0.515
   Evaporation Loss .........         0.000         0.000
   Exfiltration Loss ........         0.000         0.000
   Initial Stored Volume ....         0.000         0.000
-  Final Stored Volume ......         0.000         0.000
-  Continuity Error (%) .....         0.000
+  Final Stored Volume ......         0.167         0.054
+  Continuity Error (%) .....        17.827
+  
+  
+  *************************
+  Highest Continuity Errors
+  *************************
+  Node n2 (8.58%)
+  Node gate (8.02%)
+  Node weir (5.27%)
+  Node o1 (4.55%)
+  Node n1 (4.23%)
   
   
   ***************************
   Time-Step Critical Elements
   ***************************
-  None
+  Link NN0 (99.61%)
   
   
   ********************************
@@ -61,24 +71,28 @@
   *********************************
   Most Frequent Nonconverging Nodes
   *********************************
-  Convergence obtained at all time steps.
+  Node WARDS (0.11%)
+  Node weir (0.06%)
+  Node HOSMER1 (0.06%)
+  Node HOSMER (0.02%)
+  Node gate (0.02%)
   
   
   *************************
   Routing Time Step Summary
   *************************
-  Minimum Time Step           :    59.50 sec
-  Average Time Step           :    59.96 sec
+  Minimum Time Step           :     0.50 sec
+  Average Time Step           :     3.26 sec
   Maximum Time Step           :    60.00 sec
   % of Time in Steady State   :     0.00
-  Average Iterations per Step :     2.00
-  % of Steps Not Converging   :     0.00
+  Average Iterations per Step :     2.06
+  % of Steps Not Converging   :     0.11
   Time Step Frequencies       :
-     60.000 - 23.031 sec      :   100.00 %
-     23.031 -  8.841 sec      :     0.00 %
-      8.841 -  3.393 sec      :     0.00 %
-      3.393 -  1.303 sec      :     0.00 %
-      1.303 -  0.500 sec      :     0.00 %
+     60.000 - 23.031 sec      :     0.38 %
+     23.031 -  8.841 sec      :     0.54 %
+      8.841 -  3.393 sec      :     0.31 %
+      3.393 -  1.303 sec      :    98.67 %
+      1.303 -  0.500 sec      :     0.09 %
   
   
   ******************
@@ -90,15 +104,15 @@
                                    Depth    Depth      HGL   Occurrence   Max Depth
   Node                 Type         Feet     Feet     Feet  days hr:min        Feet
   ---------------------------------------------------------------------------------
-  HOSMER               JUNCTION     0.00     0.00   289.50     0  00:00        0.00
-  n1                   JUNCTION     0.00     0.00   289.50     0  00:00        0.00
-  n2                   JUNCTION     0.00     0.00   284.29     0  00:00        0.00
-  o1                   JUNCTION     0.00     0.00   286.39     0  00:00        0.00
-  31029                JUNCTION     0.00     0.00   286.39     0  00:00        0.00
-  WARDS1               JUNCTION     0.00     0.00   280.00     0  00:00        0.00
-  weir                 JUNCTION     0.00     0.00   289.50     0  00:00        0.00
-  gate                 JUNCTION     0.00     0.00   289.50     0  00:00        0.00
-  HOSMER1              JUNCTION     0.00     0.00   289.50     0  00:00        0.00
+  HOSMER               JUNCTION   276.39   278.58   568.08     0  00:59      278.42
+  n1                   JUNCTION   273.99   277.84   567.34     0  03:51      277.84
+  n2                   JUNCTION   261.51   278.73   563.02     0  07:30      278.73
+  o1                   JUNCTION   268.47   276.60   562.99     0  05:04      276.60
+  31029                JUNCTION   236.82   276.52   562.91     0  07:31      276.52
+  WARDS1               JUNCTION   257.92   278.68   558.68     0  04:54      278.68
+  weir                 JUNCTION   281.33   282.79   572.29     0  05:04      282.79
+  gate                 JUNCTION   277.76   280.14   569.64     0  01:39      278.41
+  HOSMER1              JUNCTION   287.85   288.99   578.49     0  01:12      288.19
   WARDS                OUTFALL      0.00     0.00   280.00     0  00:00        0.00
   
   
@@ -112,30 +126,45 @@
                                    Inflow   Inflow   Occurrence      Volume      Volume       Error
   Node                 Type           CFS      CFS  days hr:min    10^6 gal    10^6 gal     Percent
   -------------------------------------------------------------------------------------------------
-  HOSMER               JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
-  n1                   JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
-  n2                   JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
-  o1                   JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
-  31029                JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
-  WARDS1               JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
-  weir                 JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
-  gate                 JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
-  HOSMER1              JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
-  WARDS                OUTFALL       0.00     0.00     0  00:00           0           0       0.000 gal
+  HOSMER               JUNCTION      1.00    25.78     0  01:40       0.646       0.654       0.020
+  n1                   JUNCTION      0.00    20.52     0  01:39           0       0.594       4.418
+  n2                   JUNCTION      0.00     1.00     0  03:52           0       0.569       9.391
+  o1                   JUNCTION      0.00     1.00     1  00:00           0       0.588       4.770
+  31029                JUNCTION      0.00     1.00     0  07:31           0        0.52       5.380
+  WARDS1               JUNCTION      0.00     1.00     0  05:04           0       0.561       0.000
+  weir                 JUNCTION      0.00     5.89     0  01:05           0       0.621       5.559
+  gate                 JUNCTION      0.00   143.78     0  01:39           0       0.654       8.720
+  HOSMER1              JUNCTION      1.00     1.00     0  00:00       0.646       0.646       4.083
+  WARDS                OUTFALL       0.00     1.00     0  07:31           0       0.493       0.000
   
   
   **********************
   Node Surcharge Summary
   **********************
   
-  No nodes were surcharged.
+  Surcharging occurs when water rises above the top of the highest conduit.
+  ---------------------------------------------------------------------
+                                               Max. Height   Min. Depth
+                                   Hours       Above Crown    Below Rim
+  Node                 Type      Surcharged           Feet         Feet
+  ---------------------------------------------------------------------
+  WARDS1               JUNCTION       19.10          0.000        0.000
+  HOSMER1              JUNCTION        0.02          0.000        0.000
   
   
   *********************
   Node Flooding Summary
   *********************
   
-  No nodes were flooded.
+  Flooding refers to all water that overflows a node, whether it ponds or not.
+  --------------------------------------------------------------------------
+                                                             Total   Maximum
+                                 Maximum   Time of Max       Flood    Ponded
+                        Hours       Rate    Occurrence      Volume     Depth
+  Node                 Flooded       CFS   days hr:min    10^6 gal      Feet
+  --------------------------------------------------------------------------
+  WARDS1                 19.10      1.00      0  05:04       0.514     0.000
+  HOSMER1                 0.02      0.65      0  01:12       0.000     0.000
   
   
   ***********************
@@ -147,9 +176,9 @@
                          Freq      Flow      Flow      Volume
   Outfall Node           Pcnt       CFS       CFS    10^6 gal
   -----------------------------------------------------------
-  WARDS                  0.00      0.00      0.00       0.000
+  WARDS                 83.40      1.00      1.00       0.493
   -----------------------------------------------------------
-  System                 0.00      0.00      0.00       0.000
+  System                83.40      1.00      1.00       0.493
   
   
   ********************
@@ -161,14 +190,14 @@
                                   |Flow|   Occurrence   |Veloc|    Full    Full
   Link                 Type          CFS  days hr:min    ft/sec    Flow   Depth
   -----------------------------------------------------------------------------
-  NN1                  CONDUIT      0.00     0  00:00      0.00    0.00    0.00
-  NN2                  CONDUIT      0.00     0  00:00      0.00    0.00    0.00
-  NN3                  CONDUIT      0.00     0  00:00      0.00    0.00    0.00
-  OO1                  CONDUIT      0.00     0  00:00      0.00    0.00    0.00
-  OO2                  CONDUIT      0.00     0  00:00      0.00    0.00    0.00
-  NN4                  CONDUIT      0.00     0  00:00      0.00    0.00    0.00
-  NN0                  CONDUIT      0.00     0  00:00      0.00    0.00    0.00
-  WEIR                 WEIR         0.00     0  00:00                      0.00
+  NN1                  CONDUIT     20.52     0  01:39      5.18    0.96    0.63
+  NN2                  CONDUIT      1.00     0  03:52      3.04    0.02    0.38
+  NN3                  CONDUIT      1.00     0  07:31      0.40    0.02    0.39
+  OO1                  CONDUIT      1.00     1  00:00      3.03    0.02    0.10
+  OO2                  CONDUIT      1.00     0  05:04      4.01    0.01    0.53
+  NN4                  CONDUIT      1.00     0  07:31      3.96    0.01    0.05
+  NN0                  CONDUIT    143.78     0  01:39    >50.00    6.56    0.87
+  WEIR                 WEIR         5.89     0  01:05                      1.00
   
   
   ***************************
@@ -180,22 +209,29 @@
                        /Actual         Up    Down  Sub   Sup   Up    Down  Norm  Inlet 
   Conduit               Length    Dry  Dry   Dry   Crit  Crit  Crit  Crit  Ltd   Ctrl  
   -------------------------------------------------------------------------------------
-  NN1                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
-  NN2                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
-  NN3                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
-  OO1                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
-  OO2                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
-  NN4                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
-  NN0                     1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  NN1                     1.00   0.07  0.00  0.00  0.00  0.00  0.00  0.93  0.00  0.00
+  NN2                     1.00   0.12  0.00  0.00  0.84  0.00  0.00  0.04  0.84  0.00
+  NN3                     1.00   0.16  0.03  0.00  0.00  0.00  0.81  0.00  0.00  0.00
+  OO1                     1.00   0.08  0.00  0.00  0.00  0.00  0.00  0.92  0.00  0.00
+  OO2                     1.00   0.13  0.00  0.00  0.83  0.00  0.00  0.04  0.83  0.00
+  NN4                     1.00   0.24  0.00  0.00  0.00  0.00  0.00  0.76  0.00  0.00
+  NN0                     1.00   0.07  0.00  0.00  0.90  0.00  0.03  0.00  0.00  0.00
   
   
   *************************
   Conduit Surcharge Summary
   *************************
   
-  No conduits were surcharged.
+  ----------------------------------------------------------------------------
+                                                           Hours        Hours 
+                         --------- Hours Full --------   Above Full   Capacity
+  Conduit                Both Ends  Upstream  Dnstream   Normal Flow   Limited
+  ----------------------------------------------------------------------------
+  NN1                         0.01      0.60      0.01      0.01         0.01
+  OO2                         0.01      0.01     19.10      0.01         0.01
+  NN0                         0.01      0.01      0.01      0.04         0.01
   
 
-  Analysis begun on:  Sun Jul 19 15:11:56 2026
-  Analysis ended on:  Sun Jul 19 15:11:56 2026
+  Analysis begun on:  Wed Jul 22 11:40:20 2026
+  Analysis ended on:  Wed Jul 22 11:40:20 2026
   Total elapsed time: < 1 sec

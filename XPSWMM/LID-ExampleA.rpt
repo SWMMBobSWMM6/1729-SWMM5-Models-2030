@@ -36,14 +36,14 @@
   Wet Weather Inflow .......         0.000         0.000
   Groundwater Inflow .......         0.000         0.000
   RDII Inflow ..............         0.000         0.000
-  External Inflow ..........         0.000         0.000
+  External Inflow ..........         1.983         0.646
   External Outflow .........         0.000         0.000
-  Flooding Loss ............         0.000         0.000
+  Flooding Loss ............         1.702         0.555
   Evaporation Loss .........         0.000         0.000
   Exfiltration Loss ........         0.000         0.000
   Initial Stored Volume ....         0.000         0.000
-  Final Stored Volume ......         0.000         0.000
-  Continuity Error (%) .....         0.000
+  Final Stored Volume ......         0.011         0.004
+  Continuity Error (%) .....        13.639
   
   
   ***************************
@@ -61,7 +61,8 @@
   *********************************
   Most Frequent Nonconverging Nodes
   *********************************
-  Convergence obtained at all time steps.
+  Node street (0.14%)
+  Node MH2 (0.14%)
   
   
   *************************
@@ -71,8 +72,8 @@
   Average Time Step           :    59.96 sec
   Maximum Time Step           :    60.00 sec
   % of Time in Steady State   :     0.00
-  Average Iterations per Step :     2.00
-  % of Steps Not Converging   :     0.00
+  Average Iterations per Step :     2.70
+  % of Steps Not Converging   :     0.14
   Time Step Frequencies       :
      60.000 - 23.031 sec      :   100.00 %
      23.031 -  8.841 sec      :     0.00 %
@@ -91,7 +92,7 @@
   Node                 Type         Feet     Feet     Feet  days hr:min        Feet
   ---------------------------------------------------------------------------------
   MH1                  JUNCTION     0.00     0.00   942.00     0  00:00        0.00
-  street               JUNCTION     0.00     0.00   934.00     0  00:00        0.00
+  street               JUNCTION   871.58   935.50  1869.50     0  03:25      935.50
   MH2                  OUTFALL      0.00     0.00   941.00     0  00:00        0.00
   
   
@@ -106,7 +107,7 @@
   Node                 Type           CFS      CFS  days hr:min    10^6 gal    10^6 gal     Percent
   -------------------------------------------------------------------------------------------------
   MH1                  JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
-  street               JUNCTION      0.00     0.00     0  00:00           0           0       0.000 gal
+  street               JUNCTION      1.00     1.00     0  00:00       0.646       0.646      16.552
   MH2                  OUTFALL       0.00     0.00     0  00:00           0           0       0.000 gal
   
   
@@ -121,13 +122,21 @@
   Node                 Type      Surcharged           Feet         Feet
   ---------------------------------------------------------------------
   MH1                  JUNCTION       24.00          0.000        0.000
+  street               JUNCTION       20.60          0.000        0.000
   
   
   *********************
   Node Flooding Summary
   *********************
   
-  No nodes were flooded.
+  Flooding refers to all water that overflows a node, whether it ponds or not.
+  --------------------------------------------------------------------------
+                                                             Total   Maximum
+                                 Maximum   Time of Max       Flood    Ponded
+                        Hours       Rate    Occurrence      Volume     Depth
+  Node                 Flooded       CFS   days hr:min    10^6 gal      Feet
+  --------------------------------------------------------------------------
+  street                 20.60      1.00      0  03:25       0.555     0.000
   
   
   ***********************
@@ -153,7 +162,7 @@
                                   |Flow|   Occurrence   |Veloc|    Full    Full
   Link                 Type          CFS  days hr:min    ft/sec    Flow   Depth
   -----------------------------------------------------------------------------
-  pipe                 CONDUIT      0.00     0  00:00      0.00    0.00    0.00
+  pipe                 CONDUIT      0.00     0  00:00      0.00    0.00    0.50
   
   
   ***************************
@@ -165,7 +174,7 @@
                        /Actual         Up    Down  Sub   Sup   Up    Down  Norm  Inlet 
   Conduit               Length    Dry  Dry   Dry   Crit  Crit  Crit  Crit  Ltd   Ctrl  
   -------------------------------------------------------------------------------------
-  pipe                    1.00   1.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  pipe                    1.00   0.14  0.86  0.00  0.00  0.00  0.00  0.00  0.00  0.00
   
   
   *************************
@@ -175,6 +184,6 @@
   No conduits were surcharged.
   
 
-  Analysis begun on:  Sun Jul 19 15:20:29 2026
-  Analysis ended on:  Sun Jul 19 15:20:29 2026
+  Analysis begun on:  Wed Jul 22 14:05:03 2026
+  Analysis ended on:  Wed Jul 22 14:05:03 2026
   Total elapsed time: < 1 sec
