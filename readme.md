@@ -75,3 +75,8 @@ runswmm.exe  model.inp  model.rpt  model.out
 ---
 
 *EPA SWMM5 model library maintained by Robert (Bob) Dickinson.*
+
+
+## License and provenance
+
+This repository is dedicated to the public domain under The Unlicense (see LICENSE), matching EPA SWMM5's own public-domain status. Most models here are EPA public-domain examples, Open Water Analytics regression and example models, or Bob's own XPSWMM-to-SWMM5 conversions. A handful of folders, including Greenville, Matt_Anderson_Teams, Sam, logan, and Special, are contributed or special-case models from colleagues and students; confirm provenance before assuming the same public-domain terms apply if you plan to redistribute those specifically.
