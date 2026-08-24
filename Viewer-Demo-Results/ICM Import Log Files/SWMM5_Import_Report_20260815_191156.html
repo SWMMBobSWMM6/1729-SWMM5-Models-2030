@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en" data-theme="dark"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>SWMM5 Import Report</title>
+<style>
+:root{--bg:#0f172a;--panel:#1e293b;--line:#334155;--text:#e2e8f0;--muted:#94a3b8;
+  --ok:#22c55e;--bad:#f87171;--mid:#fb923c;--warn:#fbbf24}
+html[data-theme="light"]{--bg:#f8fafc;--panel:#fff;--line:#e2e8f0;--text:#0f172a;--muted:#64748b;
+  --ok:#15803d;--bad:#b91c1c;--mid:#c2410c;--warn:#a16207}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);
+  font:14px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif}
+.wrap{max-width:1400px;margin:0 auto;padding:28px 20px 80px}
+h1{font-size:22px;margin:0 0 4px} h2{font-size:16px;margin:28px 0 10px}
+.meta{color:var(--muted);font-size:13px;margin-bottom:20px}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:12px;margin-bottom:20px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:14px}
+.card .v{font-size:24px;font-weight:600}
+.card .k{color:var(--muted);font-size:12px;text-transform:uppercase;letter-spacing:.06em}
+.card.ok .v{color:var(--ok)} .card.bad .v{color:var(--bad)} .card.mid .v{color:var(--mid)}
+.controls{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:14px}
+button,input{background:var(--panel);color:var(--text);border:1px solid var(--line);
+  border-radius:8px;padding:8px 12px;font-size:13px;cursor:pointer}
+input{cursor:text;min-width:220px}
+.tablewrap{overflow-x:auto;border:1px solid var(--line);border-radius:10px;background:var(--panel)}
+table{border-collapse:collapse;width:100%;font-size:13px}
+th,td{padding:8px 10px;border-bottom:1px solid var(--line);text-align:left;white-space:nowrap}
+th{position:sticky;top:0;background:var(--panel);font-size:12px;text-transform:uppercase;
+  letter-spacing:.05em;color:var(--muted);cursor:pointer}
+td.num{text-align:right;font-variant-numeric:tabular-nums}
+td.delta{color:var(--bad);font-weight:600}
+.muted,td.muted{color:var(--muted)}
+td.name{white-space:normal;min-width:200px}
+td.notes{white-space:normal;color:var(--muted);min-width:200px}
+tr.ok td:first-child{box-shadow:inset 3px 0 0 var(--ok)}
+tr.bad td:first-child{box-shadow:inset 3px 0 0 var(--bad)}
+tr.mid td:first-child{box-shadow:inset 3px 0 0 var(--mid)}
+.pill{padding:2px 8px;border-radius:999px;font-size:11px;font-weight:600;border:1px solid}
+.pill.ok{color:var(--ok);border-color:var(--ok)}
+.pill.bad{color:var(--bad);border-color:var(--bad)}
+.pill.mid{color:var(--mid);border-color:var(--mid)}
+.pill.warn{color:var(--warn);border-color:var(--warn)}
+.where{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:12px 14px}
+</style></head><body><div class="wrap">
+
+<h1>SWMM5 Import Report</h1>
+<div class="meta">2026-08-15 19:11 &middot;
+ 17 file(s) &middot; 11.2s total</div>
+
+<div class="cards">
+  <div class="card ok"><div class="k">Committed</div><div class="v">17</div></div>
+  <div class="card bad"><div class="k">Failed</div><div class="v">0</div></div>
+  <div class="card mid"><div class="k">Not committed</div><div class="v">0</div></div>
+  <div class="card"><div class="k">Nodes</div><div class="v">789</div></div>
+  <div class="card"><div class="k">Links</div><div class="v">888</div></div>
+  <div class="card"><div class="k">Subcatchments</div><div class="v">500</div></div>
+  <div class="card"><div class="k">InfoWorks shells</div><div class="v">4</div></div>
+  <div class="card mid"><div class="k">Warnings</div><div class="v">15</div></div>
+</div>
+
+<div class="controls">
+  <button id="only">Show problems only</button>
+  <button id="theme">Light / dark</button>
+  <input id="q" placeholder="Filter...">
+  <span class="muted" id="count"></span>
+</div>
+
+<div class="tablewrap">
+<table id="t"><thead><tr>
+<th>File</th><th>Network</th><th>Status</th>
+<th class="num">Nodes</th><th class="num">Links</th><th class="num">Subs</th>
+<th class="num">Val err</th><th class="num">Val warn</th><th class="num">Labels</th>
+<th>IW shell</th><th class="num">Secs</th><th>Reason</th>
+</tr></thead><tbody>
+<tr class="ok"><td class="name">exam1.inp</td><td class="name">exam1_2</td><td><span class="pill ok">COMMITTED</span></td><td class="num">10</td><td class="num">9</td><td class="num">0</td><td class="num muted">0</td><td class="num muted">0</td><td class="num muted">0</td><td class="muted">exam1_2</td><td class="num muted">1.01</td><td class="notes"></td></tr>
+<tr class="ok"><td class="name">extran1.inp</td><td class="name">extran1_2</td><td><span class="pill ok">COMMITTED</span></td><td class="num">10</td><td class="num">9</td><td class="num">0</td><td class="num muted">0</td><td class="num muted">0</td><td class="num muted">0</td><td class="muted">extran1_2</td><td class="num muted">0.78</td><td class="notes"></td></tr>
+<tr class="ok"><td class="name">extran10.inp</td><td class="name">extran10</td><td><span class="pill ok">COMMITTED</span></td><td class="num">3</td><td class="num">6</td><td class="num">0</td><td class="num muted">0</td><td class="num muted">0</td><td class="num muted">0</td><td class="muted"></td><td class="num muted">0.45</td><td class="notes"></td></tr>
+<tr class="ok"><td class="name">extran2.inp</td><td class="name">extran2</td><td><span class="pill ok">COMMITTED</span></td><td class="num">10</td><td class="num">9</td><td class="num">0</td><td class="num muted">0</td><td class="num muted">0</td><td class="num muted">0</td><td class="muted"></td><td class="num muted">0.49</td><td class="notes"></td></tr>
+<tr class="ok"><td class="name">extran3.inp</td><td class="name">extran3</td><td><span class="pill ok">COMMITTED</span></td><td class="num">10</td><td class="num">10</td><td class="num">0</td><td class="num muted">0</td><td class="num muted">0</td><td class="num muted">0</td><td class="muted"></td><td class="num muted">0.43</td><td class="notes"></td></tr>
+<tr class="ok"><td class="name">extran4.inp</td><td class="name">extran4_2</td><td><span class="pill ok">COMMITTED</span></td><td class="num">10</td><td class="num">10</td><td class="num">0</td><td class="num muted">0</td><td class="num muted">0</td><td class="num muted">0</td><td class="muted">extran4_2</td><td class="num muted">0.74</td><td class="notes"></td></tr>
+<tr class="ok"><td class="name">extran5.inp</td><td class="name">extran5</td><td><span class="pill ok">COMMITTED</span></td><td class="num">11</td><td class="num">10</td><td class="num">0</td><td class="num muted">0</td><td class="num muted">0</td><td class="num muted">0</td><td class="muted"></td><td class="num muted">0.45</td><td class="notes"></td></tr>
+<tr class="ok"><td class="name">extran6.inp</td><td class="name">extran6</td><td><span class="pill ok">COMMITTED</span></td><td class="num">11</td><td class="num">11</td><td class="num">0</td><td class="num muted">0</td><td class="num muted">2</td><td class="num muted">0</td><td class="muted"></td><td class="num muted">0.58</td><td class="notes"></td></tr>
+<tr class="ok"><td class="name">extran7.inp</td><td class="name">extran7</td><td><span class="pill ok">COMMITTED</span></td><td class="num">10</td><td class="num">10</td><td class="num">0</td><td class="num muted">0</td><td class="num muted">0</td><td class="num muted">0</td><td class="muted"></td><td class="num muted">0.59</td><td class="notes"></td></tr>
+<tr class="ok"><td class="name">extran8a.inp</td><td class="name">extran8a</td><td><span class="pill ok">COMMITTED</span></td><td class="num">10</td><td class="num">9</td><td class="num">0</td><td class="num muted">0</td><td class="num muted">0</td><td class="num muted">0</td><td class="muted"></td><td class="num muted">0.48</td><td class="notes"></td></tr>
+<tr class="ok"><td class="name">extran8b.inp</td><td class="name">extran8b</td><td><span class="pill ok">COMMITTED</span></td><td class="num">10</td><td class="num">9</td><td class="num">0</td><td class="num muted">0</td><td class="num muted">0</td><td class="num muted">0</td><td class="muted"></td><td class="num muted">0.47</td><td class="notes"></td></tr>
+<tr class="ok"><td class="name">extran9.inp</td><td class="name">extran9</td><td><span class="pill ok">COMMITTED</span></td><td class="num">2</td><td class="num">1</td><td class="num">0</td><td class="num muted">0</td><td class="num muted">0</td><td class="num muted">0</td><td class="muted"></td><td class="num muted">0.48</td><td class="notes"></td></tr>
+<tr class="ok"><td class="name">user1.inp</td><td class="name">user1</td><td><span class="pill ok">COMMITTED</span></td><td class="num">60</td><td class="num">59</td><td class="num">58</td><td class="num muted">0</td><td class="num muted">0</td><td class="num muted">0</td><td class="muted"></td><td class="num muted">0.65</td><td class="notes"></td></tr>
+<tr class="ok"><td class="name">user2_slot.inp</td><td class="name">user2_slot</td><td><span class="pill ok">COMMITTED</span></td><td class="num">72</td><td class="num">102</td><td class="num">17</td><td class="num delta">44</td><td class="num muted">4</td><td class="num muted">0</td><td class="muted"></td><td class="num muted">0.57</td><td class="notes"></td></tr>
+<tr class="ok"><td class="name">user3.inp</td><td class="name">user3_2</td><td><span class="pill ok">COMMITTED</span></td><td class="num">141</td><td class="num">139</td><td class="num">168</td><td class="num muted">0</td><td class="num muted">0</td><td class="num muted">0</td><td class="muted">user3_2</td><td class="num muted">1.13</td><td class="notes"></td></tr>
+<tr class="ok"><td class="name">user4.inp</td><td class="name">user4</td><td><span class="pill ok">COMMITTED</span></td><td class="num">209</td><td class="num">209</td><td class="num">112</td><td class="num muted">0</td><td class="num muted">9</td><td class="num muted">0</td><td class="muted"></td><td class="num muted">1.01</td><td class="notes"></td></tr>
+<tr class="ok"><td class="name">user5_slot.inp</td><td class="name">user5_slot</td><td><span class="pill ok">COMMITTED</span></td><td class="num">200</td><td class="num">276</td><td class="num">145</td><td class="num delta">16</td><td class="num muted">0</td><td class="num muted">0</td><td class="muted"></td><td class="num muted">0.85</td><td class="notes"></td></tr>
+
+</tbody></table>
+</div>
+
+<h2>Where the networks were placed</h2>
+<div class="where">&gt;MODG~classicExtranUser (17)</div>
+
+<script>
+var only=false;
+function rowsOf(){return Array.prototype.slice.call(document.querySelectorAll('#t tbody tr'));}
+function apply(){
+  var q=document.getElementById('q').value.toLowerCase(), n=0;
+  rowsOf().forEach(function(tr){
+    var bad = tr.className.indexOf('ok') < 0;
+    var vis = (!only || bad) && tr.textContent.toLowerCase().indexOf(q)>=0;
+    tr.style.display = vis?'':'none'; if(vis)n++;
+  });
+  document.getElementById('count').textContent=n+' shown';
+}
+document.getElementById('only').onclick=function(){only=!only;
+  this.textContent=only?'Show all':'Show problems only';apply();};
+document.getElementById('q').oninput=apply;
+document.getElementById('theme').onclick=function(){var h=document.documentElement;
+  h.setAttribute('data-theme',h.getAttribute('data-theme')==='light'?'dark':'light');};
+document.querySelectorAll('#t thead th').forEach(function(th,i){
+  var asc=true;
+  th.onclick=function(){
+    var tb=document.querySelector('#t tbody'), rs=rowsOf();
+    rs.sort(function(a,b){
+      var x=a.children[i].textContent.trim(), y=b.children[i].textContent.trim();
+      var nx=parseFloat(x), ny=parseFloat(y);
+      if(!isNaN(nx)&&!isNaN(ny)) return asc?nx-ny:ny-nx;
+      return asc?x.localeCompare(y):y.localeCompare(x);
+    });
+    asc=!asc; rs.forEach(function(r){tb.appendChild(r);});
+  };
+});
+apply();
+</script>
+</div></body></html>

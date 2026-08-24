@@ -1,0 +1,479 @@
+# Logfile created on 2026-08-19 15:03:09 -0400 by logger.rb/v1.6.4
+2026-08-19 15:03:09 [INFO] ======================================================================
+2026-08-19 15:03:09 [INFO] SWMM5 Import to ICM (V3) - Exchange Script Initialized
+2026-08-19 15:03:09 [INFO] ======================================================================
+2026-08-19 15:03:09 [INFO] Database GUID: 8ACA688A-03AD-436D-ACF2-A78E65A39290
+2026-08-19 15:03:09 [INFO] Files to process: 18
+2026-08-19 15:03:09 [INFO] 
+======================================================================
+2026-08-19 15:03:09 [INFO] BATCH PROCESSING STARTING
+2026-08-19 15:03:09 [INFO] ======================================================================
+2026-08-19 15:03:09 [INFO] Target Model Group by id 8: 'Model group'
+2026-08-19 15:03:09 [INFO] Target Model Group: 'Model group' (ID: 8)
+2026-08-19 15:03:09 [INFO] 
+----------------------------------------------------------------------
+2026-08-19 15:03:09 [INFO] [1/18] Processing: bottom_vs_side_orifice_test.inp
+2026-08-19 15:03:09 [INFO] ----------------------------------------------------------------------
+2026-08-19 15:03:09 [INFO] PHASE 1: Importing SWMM5 data
+2026-08-19 15:03:10 [INFO]   Import duration: 0.63s
+2026-08-19 15:03:10 [INFO]   Imported 6 object(s); network 'bottom_vs_side_orifice_test' (ID: 467)
+2026-08-19 15:03:10 [INFO]   Actual location: >MODG~Model group>IWSWNET~bottom_vs_side_orifice_test
+2026-08-19 15:03:10 [INFO]   SUCCESS: Import completed.
+2026-08-19 15:03:10 [WARN]   importer: Outfalls of type Stage-Flow are not supported by EPA-SWMM. The following outfalls(s) [Outfall, Outfalla, Outfallb, Outfallc] have been reassigned to type Free. Verify the outfall properties prior to running a simulation.
+2026-08-19 15:03:10 [WARN]   importer: [TEMPERATURE] () has no matching [TIMESERIES]. Unable to create.
+2026-08-19 15:03:10 [INFO] PHASE 2: Cleaning up empty visualization labels (sw_label)
+2026-08-19 15:03:10 [INFO]   No 'sw_label' table in this network - nothing to clean.
+2026-08-19 15:03:10 [INFO] PHASE 3: Validation and Statistics
+2026-08-19 15:03:10 [INFO]   Statistics: Nodes=28, Links=24, Subs=0
+2026-08-19 15:03:10 [INFO]   Validation passed with no warnings.
+2026-08-19 15:03:10 [INFO] PHASE 4: ICM validation (scenario: Base)
+2026-08-19 15:03:10 [INFO]   Validation: 0 error(s), 0 warning(s)
+2026-08-19 15:03:10 [INFO] Network committed.
+2026-08-19 15:03:10 [INFO] SUCCESS: bottom_vs_side_orifice_test.inp
+2026-08-19 15:03:11 [INFO]   InfoWorks shell created: 'bottom_vs_side_orifice_test' (id 462)
+2026-08-19 15:03:11 [INFO]   Populated 'bottom_vs_side_orifice_test': 28 nodes, 16 conduits, 0 subs, 0 storage curve(s)
+2026-08-19 15:03:11 [INFO]     units: CMS (SI)
+2026-08-19 15:03:11 [INFO]     sw_node fields: invert=invert_elevation max_depth=maximum_depth type=node_type
+2026-08-19 15:03:11 [INFO]     sw_conduit fields: h=conduit_height w= shape=shape inverts=us_invert(abs)/ds_invert(abs)
+2026-08-19 15:03:11 [INFO]     4 terminal sink(s) - E2050 upstream of each unless made an outfall. SUGGESTED OUTFALLS (by upstream nodes): Surface(3 up), Surfacea(3 up), Surfaceb(3 up), Surfacec(3 up)
+2026-08-19 15:03:11 [INFO]     validation: 0 error(s), 32 warning(s)
+2026-08-19 15:03:11 [INFO]     committed
+2026-08-19 15:03:11 [WARN]     skipped 4 x storage->manhole (no tabular curve)
+2026-08-19 15:03:11 [INFO] 
+----------------------------------------------------------------------
+2026-08-19 15:03:11 [INFO] [2/18] Processing: extran3_bottom_orifice.inp
+2026-08-19 15:03:11 [INFO] ----------------------------------------------------------------------
+2026-08-19 15:03:11 [INFO] PHASE 1: Importing SWMM5 data
+2026-08-19 15:03:11 [INFO]   Import duration: 0.46s
+2026-08-19 15:03:11 [INFO]   Imported 6 object(s); network 'extran3_bottom_orifice!' (ID: 468)
+2026-08-19 15:03:11 [INFO]   Actual location: >MODG~Model group>IWSWNET~extran3_bottom_orifice!
+2026-08-19 15:03:11 [INFO]   Renamed network to 'extran3_bottom_orifice'
+2026-08-19 15:03:11 [INFO]   SUCCESS: Import completed.
+2026-08-19 15:03:12 [WARN]   importer: line 45: Unrecognized keyword "Outflows/Calibration" in [FILES] section:
+2026-08-19 15:03:12 [WARN]   importer: SAVE Outflows/Calibration "D:\SWMMandSoftware\SWMM5.013_June2018\EPASWMM5.1.013\Swmm5.1.013UpdateTests\OWA_EXTRAN\Extran3.txt"
+2026-08-19 15:03:12 [WARN]   importer: Outfalls of type Stage-Flow are not supported by EPA-SWMM. The following outfalls(s) [10208] have been reassigned to type Free. Verify the outfall properties prior to running a simulation.
+2026-08-19 15:03:12 [WARN]   importer: [TEMPERATURE] () has no matching [TIMESERIES]. Unable to create.
+2026-08-19 15:03:12 [INFO] PHASE 2: Cleaning up empty visualization labels (sw_label)
+2026-08-19 15:03:12 [INFO]   No 'sw_label' table in this network - nothing to clean.
+2026-08-19 15:03:12 [INFO] PHASE 3: Validation and Statistics
+2026-08-19 15:03:12 [INFO]   Statistics: Nodes=10, Links=10, Subs=0
+2026-08-19 15:03:12 [INFO]   Validation passed with no warnings.
+2026-08-19 15:03:12 [INFO] PHASE 4: ICM validation (scenario: Base)
+2026-08-19 15:03:12 [INFO]   Validation: 0 error(s), 0 warning(s)
+2026-08-19 15:03:12 [INFO] Network committed.
+2026-08-19 15:03:12 [INFO] SUCCESS: extran3_bottom_orifice.inp
+2026-08-19 15:03:12 [INFO]   InfoWorks shell skipped: a Model Network named 'extran3_bottom_orifice' already exists in Model group
+2026-08-19 15:03:12 [INFO] 
+----------------------------------------------------------------------
+2026-08-19 15:03:12 [INFO] [3/18] Processing: extran3_bottom_orifice_pid.inp
+2026-08-19 15:03:12 [INFO] ----------------------------------------------------------------------
+2026-08-19 15:03:12 [INFO] PHASE 1: Importing SWMM5 data
+2026-08-19 15:03:12 [INFO]   Import duration: 0.44s
+2026-08-19 15:03:12 [INFO]   Imported 6 object(s); network 'extran3_bottom_orifice_pid!' (ID: 469)
+2026-08-19 15:03:12 [INFO]   Actual location: >MODG~Model group>IWSWNET~extran3_bottom_orifice_pid!
+2026-08-19 15:03:12 [INFO]   Renamed network to 'extran3_bottom_orifice_pid'
+2026-08-19 15:03:12 [INFO]   SUCCESS: Import completed.
+2026-08-19 15:03:12 [WARN]   importer: Outfalls of type Stage-Flow are not supported by EPA-SWMM. The following outfalls(s) [10208] have been reassigned to type Free. Verify the outfall properties prior to running a simulation.
+2026-08-19 15:03:12 [WARN]   importer: [TEMPERATURE] () has no matching [TIMESERIES]. Unable to create.
+2026-08-19 15:03:12 [INFO] PHASE 2: Cleaning up empty visualization labels (sw_label)
+2026-08-19 15:03:12 [INFO]   No 'sw_label' table in this network - nothing to clean.
+2026-08-19 15:03:12 [INFO] PHASE 3: Validation and Statistics
+2026-08-19 15:03:12 [INFO]   Statistics: Nodes=10, Links=10, Subs=0
+2026-08-19 15:03:12 [INFO]   Validation passed with no warnings.
+2026-08-19 15:03:12 [INFO] PHASE 4: ICM validation (scenario: Base)
+2026-08-19 15:03:12 [INFO]   Validation: 0 error(s), 0 warning(s)
+2026-08-19 15:03:12 [INFO] Network committed.
+2026-08-19 15:03:12 [INFO] SUCCESS: extran3_bottom_orifice_pid.inp
+2026-08-19 15:03:12 [INFO]   InfoWorks shell skipped: a Model Network named 'extran3_bottom_orifice_pid' already exists in Model group
+2026-08-19 15:03:12 [INFO] 
+----------------------------------------------------------------------
+2026-08-19 15:03:12 [INFO] [4/18] Processing: extran3_bottom_orifice_si_units.inp
+2026-08-19 15:03:12 [INFO] ----------------------------------------------------------------------
+2026-08-19 15:03:12 [INFO] PHASE 1: Importing SWMM5 data
+2026-08-19 15:03:13 [INFO]   Import duration: 0.42s
+2026-08-19 15:03:13 [INFO]   Imported 6 object(s); network 'extran3_bottom_orifice_si_units!' (ID: 470)
+2026-08-19 15:03:13 [INFO]   Actual location: >MODG~Model group>IWSWNET~extran3_bottom_orifice_si_units!
+2026-08-19 15:03:13 [INFO]   Renamed network to 'extran3_bottom_orifice_si_units'
+2026-08-19 15:03:13 [INFO]   SUCCESS: Import completed.
+2026-08-19 15:03:13 [WARN]   importer: line 45: Unrecognized keyword "Outflows/Calibration" in [FILES] section:
+2026-08-19 15:03:13 [WARN]   importer: SAVE Outflows/Calibration "D:\SWMMandSoftware\SWMM5.013_June2018\EPASWMM5.1.013\Swmm5.1.013UpdateTests\OWA_EXTRAN\Extran3.txt"
+2026-08-19 15:03:13 [WARN]   importer: Outfalls of type Stage-Flow are not supported by EPA-SWMM. The following outfalls(s) [10208] have been reassigned to type Free. Verify the outfall properties prior to running a simulation.
+2026-08-19 15:03:13 [WARN]   importer: [TEMPERATURE] () has no matching [TIMESERIES]. Unable to create.
+2026-08-19 15:03:13 [INFO] PHASE 2: Cleaning up empty visualization labels (sw_label)
+2026-08-19 15:03:13 [INFO]   No 'sw_label' table in this network - nothing to clean.
+2026-08-19 15:03:13 [INFO] PHASE 3: Validation and Statistics
+2026-08-19 15:03:13 [INFO]   Statistics: Nodes=10, Links=10, Subs=0
+2026-08-19 15:03:13 [INFO]   Validation passed with no warnings.
+2026-08-19 15:03:13 [INFO] PHASE 4: ICM validation (scenario: Base)
+2026-08-19 15:03:13 [INFO]   Validation: 0 error(s), 0 warning(s)
+2026-08-19 15:03:13 [INFO] Network committed.
+2026-08-19 15:03:13 [INFO] SUCCESS: extran3_bottom_orifice_si_units.inp
+2026-08-19 15:03:13 [INFO]   InfoWorks shell skipped: a Model Network named 'extran3_bottom_orifice_si_units' already exists in Model group
+2026-08-19 15:03:13 [INFO] 
+----------------------------------------------------------------------
+2026-08-19 15:03:13 [INFO] [5/18] Processing: extran3_bottom_rect_orifice.inp
+2026-08-19 15:03:13 [INFO] ----------------------------------------------------------------------
+2026-08-19 15:03:13 [INFO] PHASE 1: Importing SWMM5 data
+2026-08-19 15:03:13 [INFO]   Import duration: 0.44s
+2026-08-19 15:03:13 [INFO]   Imported 6 object(s); network 'extran3_bottom_rect_orifice!' (ID: 471)
+2026-08-19 15:03:13 [INFO]   Actual location: >MODG~Model group>IWSWNET~extran3_bottom_rect_orifice!
+2026-08-19 15:03:13 [INFO]   Renamed network to 'extran3_bottom_rect_orifice'
+2026-08-19 15:03:13 [INFO]   SUCCESS: Import completed.
+2026-08-19 15:03:13 [WARN]   importer: line 45: Unrecognized keyword "Outflows/Calibration" in [FILES] section:
+2026-08-19 15:03:13 [WARN]   importer: SAVE Outflows/Calibration "D:\SWMMandSoftware\SWMM5.013_June2018\EPASWMM5.1.013\Swmm5.1.013UpdateTests\OWA_EXTRAN\Extran3.txt"
+2026-08-19 15:03:13 [WARN]   importer: Outfalls of type Stage-Flow are not supported by EPA-SWMM. The following outfalls(s) [10208] have been reassigned to type Free. Verify the outfall properties prior to running a simulation.
+2026-08-19 15:03:13 [WARN]   importer: [TEMPERATURE] () has no matching [TIMESERIES]. Unable to create.
+2026-08-19 15:03:13 [INFO] PHASE 2: Cleaning up empty visualization labels (sw_label)
+2026-08-19 15:03:13 [INFO]   No 'sw_label' table in this network - nothing to clean.
+2026-08-19 15:03:13 [INFO] PHASE 3: Validation and Statistics
+2026-08-19 15:03:13 [INFO]   Statistics: Nodes=10, Links=10, Subs=0
+2026-08-19 15:03:13 [INFO]   Validation passed with no warnings.
+2026-08-19 15:03:13 [INFO] PHASE 4: ICM validation (scenario: Base)
+2026-08-19 15:03:13 [INFO]   Validation: 0 error(s), 0 warning(s)
+2026-08-19 15:03:13 [INFO] Network committed.
+2026-08-19 15:03:13 [INFO] SUCCESS: extran3_bottom_rect_orifice.inp
+2026-08-19 15:03:13 [INFO]   InfoWorks shell skipped: a Model Network named 'extran3_bottom_rect_orifice' already exists in Model group
+2026-08-19 15:03:13 [INFO] 
+----------------------------------------------------------------------
+2026-08-19 15:03:13 [INFO] [6/18] Processing: extran3_bottom_rect_orifice_si_units.inp
+2026-08-19 15:03:13 [INFO] ----------------------------------------------------------------------
+2026-08-19 15:03:13 [INFO] PHASE 1: Importing SWMM5 data
+2026-08-19 15:03:14 [INFO]   Import duration: 0.44s
+2026-08-19 15:03:14 [INFO]   Imported 6 object(s); network 'extran3_bottom_rect_orifice_si_units!' (ID: 472)
+2026-08-19 15:03:14 [INFO]   Actual location: >MODG~Model group>IWSWNET~extran3_bottom_rect_orifice_si_units!
+2026-08-19 15:03:14 [INFO]   Renamed network to 'extran3_bottom_rect_orifice_si_units'
+2026-08-19 15:03:14 [INFO]   SUCCESS: Import completed.
+2026-08-19 15:03:14 [WARN]   importer: line 45: Unrecognized keyword "Outflows/Calibration" in [FILES] section:
+2026-08-19 15:03:14 [WARN]   importer: SAVE Outflows/Calibration "D:\SWMMandSoftware\SWMM5.013_June2018\EPASWMM5.1.013\Swmm5.1.013UpdateTests\OWA_EXTRAN\Extran3.txt"
+2026-08-19 15:03:14 [WARN]   importer: Outfalls of type Stage-Flow are not supported by EPA-SWMM. The following outfalls(s) [10208] have been reassigned to type Free. Verify the outfall properties prior to running a simulation.
+2026-08-19 15:03:14 [WARN]   importer: [TEMPERATURE] () has no matching [TIMESERIES]. Unable to create.
+2026-08-19 15:03:14 [INFO] PHASE 2: Cleaning up empty visualization labels (sw_label)
+2026-08-19 15:03:14 [INFO]   No 'sw_label' table in this network - nothing to clean.
+2026-08-19 15:03:14 [INFO] PHASE 3: Validation and Statistics
+2026-08-19 15:03:14 [INFO]   Statistics: Nodes=10, Links=10, Subs=0
+2026-08-19 15:03:14 [INFO]   Validation passed with no warnings.
+2026-08-19 15:03:14 [INFO] PHASE 4: ICM validation (scenario: Base)
+2026-08-19 15:03:14 [INFO]   Validation: 0 error(s), 0 warning(s)
+2026-08-19 15:03:14 [INFO] Network committed.
+2026-08-19 15:03:14 [INFO] SUCCESS: extran3_bottom_rect_orifice_si_units.inp
+2026-08-19 15:03:14 [INFO]   InfoWorks shell skipped: a Model Network named 'extran3_bottom_rect_orifice_si_units' already exists in Model group
+2026-08-19 15:03:14 [INFO] 
+----------------------------------------------------------------------
+2026-08-19 15:03:14 [INFO] [7/18] Processing: extran3_s_curve.inp
+2026-08-19 15:03:14 [INFO] ----------------------------------------------------------------------
+2026-08-19 15:03:14 [INFO] PHASE 1: Importing SWMM5 data
+2026-08-19 15:03:14 [INFO]   Import duration: 0.41s
+2026-08-19 15:03:14 [INFO]   Imported 6 object(s); network 'extran3_s_curve' (ID: 473)
+2026-08-19 15:03:14 [INFO]   Actual location: >MODG~Model group>IWSWNET~extran3_s_curve
+2026-08-19 15:03:14 [INFO]   SUCCESS: Import completed.
+2026-08-19 15:03:14 [WARN]   importer: line 46: Unrecognized keyword "Outflows/Calibration" in [FILES] section:
+2026-08-19 15:03:14 [WARN]   importer: SAVE Outflows/Calibration "D:\SWMMandSoftware\SWMM5.013_June2018\EPASWMM5.1.013\Swmm5.1.013UpdateTests\OWA_EXTRAN\Extran3.txt"
+2026-08-19 15:03:14 [WARN]   importer: Outfalls of type Stage-Flow are not supported by EPA-SWMM. The following outfalls(s) [10208] have been reassigned to type Free. Verify the outfall properties prior to running a simulation.
+2026-08-19 15:03:14 [WARN]   importer: [TEMPERATURE] () has no matching [TIMESERIES]. Unable to create.
+2026-08-19 15:03:14 [INFO] PHASE 2: Cleaning up empty visualization labels (sw_label)
+2026-08-19 15:03:14 [INFO]   No 'sw_label' table in this network - nothing to clean.
+2026-08-19 15:03:14 [INFO] PHASE 3: Validation and Statistics
+2026-08-19 15:03:14 [INFO]   Statistics: Nodes=10, Links=10, Subs=0
+2026-08-19 15:03:14 [INFO]   Validation passed with no warnings.
+2026-08-19 15:03:14 [INFO] PHASE 4: ICM validation (scenario: Base)
+2026-08-19 15:03:14 [INFO]   Validation: 0 error(s), 0 warning(s)
+2026-08-19 15:03:14 [INFO] Network committed.
+2026-08-19 15:03:14 [INFO] SUCCESS: extran3_s_curve.inp
+2026-08-19 15:03:15 [INFO]   InfoWorks shell created: 'extran3_s_curve' (id 463)
+2026-08-19 15:03:15 [INFO]   Populated 'extran3_s_curve': 10 nodes, 9 conduits, 0 subs, 0 storage curve(s)
+2026-08-19 15:03:15 [INFO]     units: CFS (US - converting ft/acre/in to SI)
+2026-08-19 15:03:15 [INFO]     sw_node fields: invert=invert_elevation max_depth=maximum_depth type=node_type
+2026-08-19 15:03:15 [INFO]     sw_conduit fields: h=conduit_height w=conduit_width shape=shape inverts=us_invert(abs)/ds_invert(abs)
+2026-08-19 15:03:15 [INFO]     2 conduit shape(s) approximated as RECT (flagged on user_text_3)
+2026-08-19 15:03:15 [INFO]     validation: 0 error(s), 18 warning(s)
+2026-08-19 15:03:15 [INFO]     committed
+2026-08-19 15:03:15 [WARN]     skipped 1 x sw_outlet (unconverted - mapping incomplete)
+2026-08-19 15:03:15 [INFO] 
+----------------------------------------------------------------------
+2026-08-19 15:03:15 [INFO] [8/18] Processing: extran3_side_open_close_orifice.inp
+2026-08-19 15:03:15 [INFO] ----------------------------------------------------------------------
+2026-08-19 15:03:15 [INFO] PHASE 1: Importing SWMM5 data
+2026-08-19 15:03:15 [INFO]   Import duration: 0.43s
+2026-08-19 15:03:15 [INFO]   Imported 6 object(s); network 'extran3_side_open_close_orifice!' (ID: 474)
+2026-08-19 15:03:15 [INFO]   Actual location: >MODG~Model group>IWSWNET~extran3_side_open_close_orifice!
+2026-08-19 15:03:15 [INFO]   Renamed network to 'extran3_side_open_close_orifice'
+2026-08-19 15:03:15 [INFO]   SUCCESS: Import completed.
+2026-08-19 15:03:15 [WARN]   importer: line 45: Unrecognized keyword "Outflows/Calibration" in [FILES] section:
+2026-08-19 15:03:15 [WARN]   importer: SAVE Outflows/Calibration "D:\SWMMandSoftware\SWMM5.013_June2018\EPASWMM5.1.013\Swmm5.1.013UpdateTests\OWA_EXTRAN\Extran3.txt"
+2026-08-19 15:03:15 [WARN]   importer: Outfalls of type Stage-Flow are not supported by EPA-SWMM. The following outfalls(s) [10208] have been reassigned to type Free. Verify the outfall properties prior to running a simulation.
+2026-08-19 15:03:15 [WARN]   importer: [TEMPERATURE] () has no matching [TIMESERIES]. Unable to create.
+2026-08-19 15:03:15 [INFO] PHASE 2: Cleaning up empty visualization labels (sw_label)
+2026-08-19 15:03:15 [INFO]   No 'sw_label' table in this network - nothing to clean.
+2026-08-19 15:03:15 [INFO] PHASE 3: Validation and Statistics
+2026-08-19 15:03:15 [INFO]   Statistics: Nodes=10, Links=10, Subs=0
+2026-08-19 15:03:15 [INFO]   Validation passed with no warnings.
+2026-08-19 15:03:15 [INFO] PHASE 4: ICM validation (scenario: Base)
+2026-08-19 15:03:15 [INFO]   Validation: 0 error(s), 0 warning(s)
+2026-08-19 15:03:15 [INFO] Network committed.
+2026-08-19 15:03:15 [INFO] SUCCESS: extran3_side_open_close_orifice.inp
+2026-08-19 15:03:15 [INFO]   InfoWorks shell skipped: a Model Network named 'extran3_side_open_close_orifice' already exists in Model group
+2026-08-19 15:03:15 [INFO] 
+----------------------------------------------------------------------
+2026-08-19 15:03:15 [INFO] [9/18] Processing: extran3_side_open_close_orifice_si_units.inp
+2026-08-19 15:03:15 [INFO] ----------------------------------------------------------------------
+2026-08-19 15:03:15 [INFO] PHASE 1: Importing SWMM5 data
+2026-08-19 15:03:16 [INFO]   Import duration: 0.45s
+2026-08-19 15:03:16 [INFO]   Imported 6 object(s); network 'extran3_side_open_close_orifice_si_units!' (ID: 475)
+2026-08-19 15:03:16 [INFO]   Actual location: >MODG~Model group>IWSWNET~extran3_side_open_close_orifice_si_units!
+2026-08-19 15:03:16 [INFO]   Renamed network to 'extran3_side_open_close_orifice_si_units'
+2026-08-19 15:03:16 [INFO]   SUCCESS: Import completed.
+2026-08-19 15:03:16 [WARN]   importer: line 45: Unrecognized keyword "Outflows/Calibration" in [FILES] section:
+2026-08-19 15:03:16 [WARN]   importer: SAVE Outflows/Calibration "D:\SWMMandSoftware\SWMM5.013_June2018\EPASWMM5.1.013\Swmm5.1.013UpdateTests\OWA_EXTRAN\Extran3.txt"
+2026-08-19 15:03:16 [WARN]   importer: Outfalls of type Stage-Flow are not supported by EPA-SWMM. The following outfalls(s) [10208] have been reassigned to type Free. Verify the outfall properties prior to running a simulation.
+2026-08-19 15:03:16 [WARN]   importer: [TEMPERATURE] () has no matching [TIMESERIES]. Unable to create.
+2026-08-19 15:03:16 [INFO] PHASE 2: Cleaning up empty visualization labels (sw_label)
+2026-08-19 15:03:16 [INFO]   No 'sw_label' table in this network - nothing to clean.
+2026-08-19 15:03:16 [INFO] PHASE 3: Validation and Statistics
+2026-08-19 15:03:16 [INFO]   Statistics: Nodes=10, Links=10, Subs=0
+2026-08-19 15:03:16 [INFO]   Validation passed with no warnings.
+2026-08-19 15:03:16 [INFO] PHASE 4: ICM validation (scenario: Base)
+2026-08-19 15:03:16 [INFO]   Validation: 0 error(s), 0 warning(s)
+2026-08-19 15:03:16 [INFO] Network committed.
+2026-08-19 15:03:16 [INFO] SUCCESS: extran3_side_open_close_orifice_si_units.inp
+2026-08-19 15:03:16 [INFO]   InfoWorks shell skipped: a Model Network named 'extran3_side_open_close_orifice_si_units' already exists in Model group
+2026-08-19 15:03:16 [INFO] 
+----------------------------------------------------------------------
+2026-08-19 15:03:16 [INFO] [10/18] Processing: extran3_side_open_close_rect_offset_orifice.inp
+2026-08-19 15:03:16 [INFO] ----------------------------------------------------------------------
+2026-08-19 15:03:16 [INFO] PHASE 1: Importing SWMM5 data
+2026-08-19 15:03:16 [INFO]   Import duration: 0.40s
+2026-08-19 15:03:16 [INFO]   Imported 6 object(s); network 'extran3_side_open_close_rect_offset_orifice!' (ID: 476)
+2026-08-19 15:03:16 [INFO]   Actual location: >MODG~Model group>IWSWNET~extran3_side_open_close_rect_offset_orifice!
+2026-08-19 15:03:16 [INFO]   Renamed network to 'extran3_side_open_close_rect_offset_orifice'
+2026-08-19 15:03:16 [INFO]   SUCCESS: Import completed.
+2026-08-19 15:03:16 [WARN]   importer: line 45: Unrecognized keyword "Outflows/Calibration" in [FILES] section:
+2026-08-19 15:03:16 [WARN]   importer: SAVE Outflows/Calibration "D:\SWMMandSoftware\SWMM5.013_June2018\EPASWMM5.1.013\Swmm5.1.013UpdateTests\OWA_EXTRAN\Extran3.txt"
+2026-08-19 15:03:16 [WARN]   importer: Outfalls of type Stage-Flow are not supported by EPA-SWMM. The following outfalls(s) [10208] have been reassigned to type Free. Verify the outfall properties prior to running a simulation.
+2026-08-19 15:03:16 [WARN]   importer: [TEMPERATURE] () has no matching [TIMESERIES]. Unable to create.
+2026-08-19 15:03:16 [INFO] PHASE 2: Cleaning up empty visualization labels (sw_label)
+2026-08-19 15:03:16 [INFO]   No 'sw_label' table in this network - nothing to clean.
+2026-08-19 15:03:16 [INFO] PHASE 3: Validation and Statistics
+2026-08-19 15:03:16 [INFO]   Statistics: Nodes=10, Links=10, Subs=0
+2026-08-19 15:03:16 [INFO]   Validation passed with no warnings.
+2026-08-19 15:03:16 [INFO] PHASE 4: ICM validation (scenario: Base)
+2026-08-19 15:03:16 [INFO]   Validation: 0 error(s), 0 warning(s)
+2026-08-19 15:03:16 [INFO] Network committed.
+2026-08-19 15:03:16 [INFO] SUCCESS: extran3_side_open_close_rect_offset_orifice.inp
+2026-08-19 15:03:16 [INFO]   InfoWorks shell skipped: a Model Network named 'extran3_side_open_close_rect_offset_orifice' already exists in Model group
+2026-08-19 15:03:16 [INFO] 
+----------------------------------------------------------------------
+2026-08-19 15:03:16 [INFO] [11/18] Processing: extran3_side_open_close_rect_offset_orifice_si_units.inp
+2026-08-19 15:03:16 [INFO] ----------------------------------------------------------------------
+2026-08-19 15:03:16 [INFO] PHASE 1: Importing SWMM5 data
+2026-08-19 15:03:17 [INFO]   Import duration: 0.44s
+2026-08-19 15:03:17 [INFO]   Imported 6 object(s); network 'extran3_side_open_close_rect_offset_orifice_si_units!' (ID: 477)
+2026-08-19 15:03:17 [INFO]   Actual location: >MODG~Model group>IWSWNET~extran3_side_open_close_rect_offset_orifice_si_units!
+2026-08-19 15:03:17 [INFO]   Renamed network to 'extran3_side_open_close_rect_offset_orifice_si_units'
+2026-08-19 15:03:17 [INFO]   SUCCESS: Import completed.
+2026-08-19 15:03:17 [WARN]   importer: line 45: Unrecognized keyword "Outflows/Calibration" in [FILES] section:
+2026-08-19 15:03:17 [WARN]   importer: SAVE Outflows/Calibration "D:\SWMMandSoftware\SWMM5.013_June2018\EPASWMM5.1.013\Swmm5.1.013UpdateTests\OWA_EXTRAN\Extran3.txt"
+2026-08-19 15:03:17 [WARN]   importer: Outfalls of type Stage-Flow are not supported by EPA-SWMM. The following outfalls(s) [10208] have been reassigned to type Free. Verify the outfall properties prior to running a simulation.
+2026-08-19 15:03:17 [WARN]   importer: [TEMPERATURE] () has no matching [TIMESERIES]. Unable to create.
+2026-08-19 15:03:17 [INFO] PHASE 2: Cleaning up empty visualization labels (sw_label)
+2026-08-19 15:03:17 [INFO]   No 'sw_label' table in this network - nothing to clean.
+2026-08-19 15:03:17 [INFO] PHASE 3: Validation and Statistics
+2026-08-19 15:03:17 [INFO]   Statistics: Nodes=10, Links=10, Subs=0
+2026-08-19 15:03:17 [INFO]   Validation passed with no warnings.
+2026-08-19 15:03:17 [INFO] PHASE 4: ICM validation (scenario: Base)
+2026-08-19 15:03:17 [INFO]   Validation: 0 error(s), 0 warning(s)
+2026-08-19 15:03:17 [INFO] Network committed.
+2026-08-19 15:03:17 [INFO] SUCCESS: extran3_side_open_close_rect_offset_orifice_si_units.inp
+2026-08-19 15:03:17 [INFO]   InfoWorks shell skipped: a Model Network named 'extran3_side_open_close_rect_offset_orifice_si_units' already exists in Model group
+2026-08-19 15:03:17 [INFO] 
+----------------------------------------------------------------------
+2026-08-19 15:03:17 [INFO] [12/18] Processing: extran3_side_open_close_rect_orifice.inp
+2026-08-19 15:03:17 [INFO] ----------------------------------------------------------------------
+2026-08-19 15:03:17 [INFO] PHASE 1: Importing SWMM5 data
+2026-08-19 15:03:17 [INFO]   Import duration: 0.43s
+2026-08-19 15:03:17 [INFO]   Imported 6 object(s); network 'extran3_side_open_close_rect_orifice!' (ID: 478)
+2026-08-19 15:03:17 [INFO]   Actual location: >MODG~Model group>IWSWNET~extran3_side_open_close_rect_orifice!
+2026-08-19 15:03:17 [INFO]   Renamed network to 'extran3_side_open_close_rect_orifice'
+2026-08-19 15:03:17 [INFO]   SUCCESS: Import completed.
+2026-08-19 15:03:17 [WARN]   importer: line 45: Unrecognized keyword "Outflows/Calibration" in [FILES] section:
+2026-08-19 15:03:17 [WARN]   importer: SAVE Outflows/Calibration "D:\SWMMandSoftware\SWMM5.013_June2018\EPASWMM5.1.013\Swmm5.1.013UpdateTests\OWA_EXTRAN\Extran3.txt"
+2026-08-19 15:03:17 [WARN]   importer: Outfalls of type Stage-Flow are not supported by EPA-SWMM. The following outfalls(s) [10208] have been reassigned to type Free. Verify the outfall properties prior to running a simulation.
+2026-08-19 15:03:17 [WARN]   importer: [TEMPERATURE] () has no matching [TIMESERIES]. Unable to create.
+2026-08-19 15:03:17 [INFO] PHASE 2: Cleaning up empty visualization labels (sw_label)
+2026-08-19 15:03:17 [INFO]   No 'sw_label' table in this network - nothing to clean.
+2026-08-19 15:03:17 [INFO] PHASE 3: Validation and Statistics
+2026-08-19 15:03:17 [INFO]   Statistics: Nodes=10, Links=10, Subs=0
+2026-08-19 15:03:17 [INFO]   Validation passed with no warnings.
+2026-08-19 15:03:17 [INFO] PHASE 4: ICM validation (scenario: Base)
+2026-08-19 15:03:17 [INFO]   Validation: 0 error(s), 0 warning(s)
+2026-08-19 15:03:17 [INFO] Network committed.
+2026-08-19 15:03:17 [INFO] SUCCESS: extran3_side_open_close_rect_orifice.inp
+2026-08-19 15:03:17 [INFO]   InfoWorks shell skipped: a Model Network named 'extran3_side_open_close_rect_orifice' already exists in Model group
+2026-08-19 15:03:17 [INFO] 
+----------------------------------------------------------------------
+2026-08-19 15:03:17 [INFO] [13/18] Processing: extran3_side_open_close_rect_orifice_si_units.inp
+2026-08-19 15:03:17 [INFO] ----------------------------------------------------------------------
+2026-08-19 15:03:17 [INFO] PHASE 1: Importing SWMM5 data
+2026-08-19 15:03:18 [INFO]   Import duration: 0.44s
+2026-08-19 15:03:18 [INFO]   Imported 6 object(s); network 'extran3_side_open_close_rect_orifice_si_units!' (ID: 479)
+2026-08-19 15:03:18 [INFO]   Actual location: >MODG~Model group>IWSWNET~extran3_side_open_close_rect_orifice_si_units!
+2026-08-19 15:03:18 [INFO]   Renamed network to 'extran3_side_open_close_rect_orifice_si_units'
+2026-08-19 15:03:18 [INFO]   SUCCESS: Import completed.
+2026-08-19 15:03:18 [WARN]   importer: line 45: Unrecognized keyword "Outflows/Calibration" in [FILES] section:
+2026-08-19 15:03:18 [WARN]   importer: SAVE Outflows/Calibration "D:\SWMMandSoftware\SWMM5.013_June2018\EPASWMM5.1.013\Swmm5.1.013UpdateTests\OWA_EXTRAN\Extran3.txt"
+2026-08-19 15:03:18 [WARN]   importer: Outfalls of type Stage-Flow are not supported by EPA-SWMM. The following outfalls(s) [10208] have been reassigned to type Free. Verify the outfall properties prior to running a simulation.
+2026-08-19 15:03:18 [WARN]   importer: [TEMPERATURE] () has no matching [TIMESERIES]. Unable to create.
+2026-08-19 15:03:18 [INFO] PHASE 2: Cleaning up empty visualization labels (sw_label)
+2026-08-19 15:03:18 [INFO]   No 'sw_label' table in this network - nothing to clean.
+2026-08-19 15:03:18 [INFO] PHASE 3: Validation and Statistics
+2026-08-19 15:03:18 [INFO]   Statistics: Nodes=10, Links=10, Subs=0
+2026-08-19 15:03:18 [INFO]   Validation passed with no warnings.
+2026-08-19 15:03:18 [INFO] PHASE 4: ICM validation (scenario: Base)
+2026-08-19 15:03:18 [INFO]   Validation: 0 error(s), 0 warning(s)
+2026-08-19 15:03:18 [INFO] Network committed.
+2026-08-19 15:03:18 [INFO] SUCCESS: extran3_side_open_close_rect_orifice_si_units.inp
+2026-08-19 15:03:18 [INFO]   InfoWorks shell skipped: a Model Network named 'extran3_side_open_close_rect_orifice_si_units' already exists in Model group
+2026-08-19 15:03:18 [INFO] 
+----------------------------------------------------------------------
+2026-08-19 15:03:18 [INFO] [14/18] Processing: extran3_side_orifice.inp
+2026-08-19 15:03:18 [INFO] ----------------------------------------------------------------------
+2026-08-19 15:03:18 [INFO] PHASE 1: Importing SWMM5 data
+2026-08-19 15:03:18 [INFO]   Import duration: 0.42s
+2026-08-19 15:03:18 [INFO]   Imported 6 object(s); network 'extran3_side_orifice!' (ID: 480)
+2026-08-19 15:03:18 [INFO]   Actual location: >MODG~Model group>IWSWNET~extran3_side_orifice!
+2026-08-19 15:03:18 [INFO]   Renamed network to 'extran3_side_orifice'
+2026-08-19 15:03:18 [INFO]   SUCCESS: Import completed.
+2026-08-19 15:03:18 [WARN]   importer: line 45: Unrecognized keyword "Outflows/Calibration" in [FILES] section:
+2026-08-19 15:03:18 [WARN]   importer: SAVE Outflows/Calibration "D:\SWMMandSoftware\SWMM5.013_June2018\EPASWMM5.1.013\Swmm5.1.013UpdateTests\OWA_EXTRAN\Extran3.txt"
+2026-08-19 15:03:18 [WARN]   importer: Outfalls of type Stage-Flow are not supported by EPA-SWMM. The following outfalls(s) [10208] have been reassigned to type Free. Verify the outfall properties prior to running a simulation.
+2026-08-19 15:03:18 [WARN]   importer: [TEMPERATURE] () has no matching [TIMESERIES]. Unable to create.
+2026-08-19 15:03:18 [INFO] PHASE 2: Cleaning up empty visualization labels (sw_label)
+2026-08-19 15:03:18 [INFO]   No 'sw_label' table in this network - nothing to clean.
+2026-08-19 15:03:18 [INFO] PHASE 3: Validation and Statistics
+2026-08-19 15:03:18 [INFO]   Statistics: Nodes=10, Links=10, Subs=0
+2026-08-19 15:03:18 [INFO]   Validation passed with no warnings.
+2026-08-19 15:03:18 [INFO] PHASE 4: ICM validation (scenario: Base)
+2026-08-19 15:03:18 [INFO]   Validation: 0 error(s), 0 warning(s)
+2026-08-19 15:03:18 [INFO] Network committed.
+2026-08-19 15:03:18 [INFO] SUCCESS: extran3_side_orifice.inp
+2026-08-19 15:03:18 [INFO]   InfoWorks shell skipped: a Model Network named 'extran3_side_orifice' already exists in Model group
+2026-08-19 15:03:18 [INFO] 
+----------------------------------------------------------------------
+2026-08-19 15:03:18 [INFO] [15/18] Processing: extran3_side_orifice_si_units.inp
+2026-08-19 15:03:18 [INFO] ----------------------------------------------------------------------
+2026-08-19 15:03:18 [INFO] PHASE 1: Importing SWMM5 data
+2026-08-19 15:03:19 [INFO]   Import duration: 0.43s
+2026-08-19 15:03:19 [INFO]   Imported 6 object(s); network 'extran3_side_orifice_si_units!' (ID: 481)
+2026-08-19 15:03:19 [INFO]   Actual location: >MODG~Model group>IWSWNET~extran3_side_orifice_si_units!
+2026-08-19 15:03:19 [INFO]   Renamed network to 'extran3_side_orifice_si_units'
+2026-08-19 15:03:19 [INFO]   SUCCESS: Import completed.
+2026-08-19 15:03:19 [WARN]   importer: line 45: Unrecognized keyword "Outflows/Calibration" in [FILES] section:
+2026-08-19 15:03:19 [WARN]   importer: SAVE Outflows/Calibration "D:\SWMMandSoftware\SWMM5.013_June2018\EPASWMM5.1.013\Swmm5.1.013UpdateTests\OWA_EXTRAN\Extran3.txt"
+2026-08-19 15:03:19 [WARN]   importer: Outfalls of type Stage-Flow are not supported by EPA-SWMM. The following outfalls(s) [10208] have been reassigned to type Free. Verify the outfall properties prior to running a simulation.
+2026-08-19 15:03:19 [WARN]   importer: [TEMPERATURE] () has no matching [TIMESERIES]. Unable to create.
+2026-08-19 15:03:19 [INFO] PHASE 2: Cleaning up empty visualization labels (sw_label)
+2026-08-19 15:03:19 [INFO]   No 'sw_label' table in this network - nothing to clean.
+2026-08-19 15:03:19 [INFO] PHASE 3: Validation and Statistics
+2026-08-19 15:03:19 [INFO]   Statistics: Nodes=10, Links=10, Subs=0
+2026-08-19 15:03:19 [INFO]   Validation passed with no warnings.
+2026-08-19 15:03:19 [INFO] PHASE 4: ICM validation (scenario: Base)
+2026-08-19 15:03:19 [INFO]   Validation: 0 error(s), 0 warning(s)
+2026-08-19 15:03:19 [INFO] Network committed.
+2026-08-19 15:03:19 [INFO] SUCCESS: extran3_side_orifice_si_units.inp
+2026-08-19 15:03:19 [INFO]   InfoWorks shell skipped: a Model Network named 'extran3_side_orifice_si_units' already exists in Model group
+2026-08-19 15:03:19 [INFO] 
+----------------------------------------------------------------------
+2026-08-19 15:03:19 [INFO] [16/18] Processing: extran3_side_rect_orifice _si_units.inp
+2026-08-19 15:03:19 [INFO] ----------------------------------------------------------------------
+2026-08-19 15:03:19 [INFO] PHASE 1: Importing SWMM5 data
+2026-08-19 15:03:20 [INFO]   Import duration: 0.47s
+2026-08-19 15:03:20 [INFO]   Imported 6 object(s); network 'extran3_side_rect_orifice _si_units!' (ID: 482)
+2026-08-19 15:03:20 [INFO]   Actual location: >MODG~Model group>IWSWNET~extran3_side_rect_orifice _si_units!
+2026-08-19 15:03:20 [INFO]   Renamed network to 'extran3_side_rect_orifice _si_units'
+2026-08-19 15:03:20 [INFO]   SUCCESS: Import completed.
+2026-08-19 15:03:20 [WARN]   importer: line 45: Unrecognized keyword "Outflows/Calibration" in [FILES] section:
+2026-08-19 15:03:20 [WARN]   importer: SAVE Outflows/Calibration "D:\SWMMandSoftware\SWMM5.013_June2018\EPASWMM5.1.013\Swmm5.1.013UpdateTests\OWA_EXTRAN\Extran3.txt"
+2026-08-19 15:03:20 [WARN]   importer: Outfalls of type Stage-Flow are not supported by EPA-SWMM. The following outfalls(s) [10208] have been reassigned to type Free. Verify the outfall properties prior to running a simulation.
+2026-08-19 15:03:20 [WARN]   importer: [TEMPERATURE] () has no matching [TIMESERIES]. Unable to create.
+2026-08-19 15:03:20 [INFO] PHASE 2: Cleaning up empty visualization labels (sw_label)
+2026-08-19 15:03:20 [INFO]   No 'sw_label' table in this network - nothing to clean.
+2026-08-19 15:03:20 [INFO] PHASE 3: Validation and Statistics
+2026-08-19 15:03:20 [INFO]   Statistics: Nodes=10, Links=10, Subs=0
+2026-08-19 15:03:20 [INFO]   Validation passed with no warnings.
+2026-08-19 15:03:20 [INFO] PHASE 4: ICM validation (scenario: Base)
+2026-08-19 15:03:20 [INFO]   Validation: 0 error(s), 0 warning(s)
+2026-08-19 15:03:20 [INFO] Network committed.
+2026-08-19 15:03:20 [INFO] SUCCESS: extran3_side_rect_orifice _si_units.inp
+2026-08-19 15:03:20 [INFO]   InfoWorks shell skipped: a Model Network named 'extran3_side_rect_orifice _si_units' already exists in Model group
+2026-08-19 15:03:20 [INFO] 
+----------------------------------------------------------------------
+2026-08-19 15:03:20 [INFO] [17/18] Processing: extran3_side_rect_orifice.inp
+2026-08-19 15:03:20 [INFO] ----------------------------------------------------------------------
+2026-08-19 15:03:20 [INFO] PHASE 1: Importing SWMM5 data
+2026-08-19 15:03:20 [INFO]   Import duration: 0.39s
+2026-08-19 15:03:20 [INFO]   Imported 6 object(s); network 'extran3_side_rect_orifice!' (ID: 483)
+2026-08-19 15:03:20 [INFO]   Actual location: >MODG~Model group>IWSWNET~extran3_side_rect_orifice!
+2026-08-19 15:03:20 [INFO]   Renamed network to 'extran3_side_rect_orifice'
+2026-08-19 15:03:20 [INFO]   SUCCESS: Import completed.
+2026-08-19 15:03:20 [WARN]   importer: line 45: Unrecognized keyword "Outflows/Calibration" in [FILES] section:
+2026-08-19 15:03:20 [WARN]   importer: SAVE Outflows/Calibration "D:\SWMMandSoftware\SWMM5.013_June2018\EPASWMM5.1.013\Swmm5.1.013UpdateTests\OWA_EXTRAN\Extran3.txt"
+2026-08-19 15:03:20 [WARN]   importer: Outfalls of type Stage-Flow are not supported by EPA-SWMM. The following outfalls(s) [10208] have been reassigned to type Free. Verify the outfall properties prior to running a simulation.
+2026-08-19 15:03:20 [WARN]   importer: [TEMPERATURE] () has no matching [TIMESERIES]. Unable to create.
+2026-08-19 15:03:20 [INFO] PHASE 2: Cleaning up empty visualization labels (sw_label)
+2026-08-19 15:03:20 [INFO]   No 'sw_label' table in this network - nothing to clean.
+2026-08-19 15:03:20 [INFO] PHASE 3: Validation and Statistics
+2026-08-19 15:03:20 [INFO]   Statistics: Nodes=10, Links=10, Subs=0
+2026-08-19 15:03:20 [INFO]   Validation passed with no warnings.
+2026-08-19 15:03:20 [INFO] PHASE 4: ICM validation (scenario: Base)
+2026-08-19 15:03:20 [INFO]   Validation: 0 error(s), 0 warning(s)
+2026-08-19 15:03:20 [INFO] Network committed.
+2026-08-19 15:03:20 [INFO] SUCCESS: extran3_side_rect_orifice.inp
+2026-08-19 15:03:20 [INFO]   InfoWorks shell skipped: a Model Network named 'extran3_side_rect_orifice' already exists in Model group
+2026-08-19 15:03:20 [INFO] 
+----------------------------------------------------------------------
+2026-08-19 15:03:20 [INFO] [18/18] Processing: extran3_side_rect_orifice_si_units.inp
+2026-08-19 15:03:20 [INFO] ----------------------------------------------------------------------
+2026-08-19 15:03:20 [INFO] PHASE 1: Importing SWMM5 data
+2026-08-19 15:03:21 [INFO]   Import duration: 0.40s
+2026-08-19 15:03:21 [INFO]   Imported 6 object(s); network 'extran3_side_rect_orifice_si_units' (ID: 484)
+2026-08-19 15:03:21 [INFO]   Actual location: >MODG~Model group>IWSWNET~extran3_side_rect_orifice_si_units
+2026-08-19 15:03:21 [INFO]   SUCCESS: Import completed.
+2026-08-19 15:03:21 [WARN]   importer: Outfalls of type Stage-Flow are not supported by EPA-SWMM. The following outfalls(s) [10208] have been reassigned to type Free. Verify the outfall properties prior to running a simulation.
+2026-08-19 15:03:21 [WARN]   importer: [TEMPERATURE] () has no matching [TIMESERIES]. Unable to create.
+2026-08-19 15:03:21 [INFO] PHASE 2: Cleaning up empty visualization labels (sw_label)
+2026-08-19 15:03:21 [INFO]   No 'sw_label' table in this network - nothing to clean.
+2026-08-19 15:03:21 [INFO] PHASE 3: Validation and Statistics
+2026-08-19 15:03:21 [INFO]   Statistics: Nodes=10, Links=10, Subs=0
+2026-08-19 15:03:21 [INFO]   Validation passed with no warnings.
+2026-08-19 15:03:21 [INFO] PHASE 4: ICM validation (scenario: Base)
+2026-08-19 15:03:21 [INFO]   Validation: 0 error(s), 0 warning(s)
+2026-08-19 15:03:21 [INFO] Network committed.
+2026-08-19 15:03:21 [INFO] SUCCESS: extran3_side_rect_orifice_si_units.inp
+2026-08-19 15:03:21 [INFO]   InfoWorks shell created: 'extran3_side_rect_orifice_si_units' (id 464)
+2026-08-19 15:03:21 [INFO]   Populated 'extran3_side_rect_orifice_si_units': 10 nodes, 9 conduits, 0 subs, 0 storage curve(s)
+2026-08-19 15:03:21 [INFO]     units: CFS (US - converting ft/acre/in to SI)
+2026-08-19 15:03:21 [INFO]     sw_node fields: invert=invert_elevation max_depth=maximum_depth type=node_type
+2026-08-19 15:03:21 [INFO]     sw_conduit fields: h=conduit_height w=conduit_width shape=shape inverts=us_invert(abs)/ds_invert(abs)
+2026-08-19 15:03:21 [INFO]     2 conduit shape(s) approximated as RECT (flagged on user_text_3)
+2026-08-19 15:03:21 [INFO]     validation: 0 error(s), 18 warning(s)
+2026-08-19 15:03:21 [INFO]     committed
+2026-08-19 15:03:21 [WARN]     skipped 1 x non-circular orifice -> equal-area diameter (approximation)
+2026-08-19 15:03:21 [INFO] 
+======================================================================
+2026-08-19 15:03:21 [INFO] BATCH IMPORT SUMMARY
+2026-08-19 15:03:21 [INFO] ======================================================================
+2026-08-19 15:03:21 [INFO] Total duration: 11.83s
+2026-08-19 15:03:21 [INFO] Files processed: 18
+2026-08-19 15:03:21 [INFO] Successful: 18
+2026-08-19 15:03:21 [INFO] Failed: 0
+2026-08-19 15:03:21 [INFO] Imported but NOT committed (validation errors): 0
+2026-08-19 15:03:21 [INFO] Blank InfoWorks shells: 3 created, 15 skipped, 0 failed
+2026-08-19 15:03:21 [INFO] 
+Aggregate Statistics:
+2026-08-19 15:03:21 [INFO]   Nodes: 198
+2026-08-19 15:03:21 [INFO]   Links: 194
+2026-08-19 15:03:21 [INFO]   Subcatchments: 0
+2026-08-19 15:03:21 [INFO]   Empty Labels Cleaned: 0
+2026-08-19 15:03:21 [INFO] 
+Performance Metrics:
+2026-08-19 15:03:21 [INFO]   Total Import Time: 7.94s (Avg: 0.44s)
+2026-08-19 15:03:21 [INFO] HTML report: C:/Users/rober/GitHub/1729-SWMM5-Models-2030/Orifices/ICM Import Log Files/SWMM5_Import_Report_20260819_150321.html

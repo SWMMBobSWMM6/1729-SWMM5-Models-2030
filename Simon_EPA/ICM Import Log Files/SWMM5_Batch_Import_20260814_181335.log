@@ -1,0 +1,41 @@
+# Logfile created on 2026-08-14 18:13:35 -0400 by logger.rb/v1.6.4
+2026-08-14 18:13:35 [INFO] ======================================================================
+2026-08-14 18:13:35 [INFO] SWMM5 Import to ICM (V3) - Exchange Script Initialized
+2026-08-14 18:13:35 [INFO] ======================================================================
+2026-08-14 18:13:35 [INFO] Database GUID: 4DA9E08B-9856-4B4D-8890-838A4BC7394E
+2026-08-14 18:13:35 [INFO] Files to process: 1
+2026-08-14 18:13:35 [INFO] 
+======================================================================
+2026-08-14 18:13:35 [INFO] BATCH PROCESSING STARTING
+2026-08-14 18:13:35 [INFO] ======================================================================
+2026-08-14 18:13:35 [INFO] Target Model Group: 'SWMM5 Imports' (ID: 145)
+2026-08-14 18:13:35 [INFO] 
+----------------------------------------------------------------------
+2026-08-14 18:13:35 [INFO] [1/1] Processing: Session2_user2.inp
+2026-08-14 18:13:35 [INFO] ----------------------------------------------------------------------
+2026-08-14 18:13:35 [INFO] PHASE 1: Importing SWMM5 data
+2026-08-14 18:13:35 [INFO]   Import duration: 0.50s
+2026-08-14 18:13:35 [INFO]   Imported 6 object(s); network 'Session2_user2' (ID: 47)
+2026-08-14 18:13:35 [INFO]   SUCCESS: Import completed.
+2026-08-14 18:13:35 [INFO] PHASE 2: Cleaning up empty visualization labels (sw_label)
+2026-08-14 18:13:35 [ERROR] FAILURE: Failed to process Session2_user2.inp. Reason: undefined method 'table_exists?' for an instance of WSOpenNetwork
+2026-08-14 18:13:35 [ERROR] Backtrace:
+C:/Users/rober/OneDrive/Documents/GitHub/Open-Source-Support/Open-Source-Support/01 InfoWorks ICM/01 Ruby/02 SWMM/0022 - Hackathon AWI OffShoots/SWMM5_Import_ICM_InfoWorks_with_Cleanup_Exchange.rb:187:in 'Object#cleanup_visualization_labels'
+C:/Users/rober/OneDrive/Documents/GitHub/Open-Source-Support/Open-Source-Support/01 InfoWorks ICM/01 Ruby/02 SWMM/0022 - Hackathon AWI OffShoots/SWMM5_Import_ICM_InfoWorks_with_Cleanup_Exchange.rb:339:in 'block in Object#main_process_loop'
+C:/Users/rober/OneDrive/Documents/GitHub/Open-Source-Support/Open-Source-Support/01 InfoWorks ICM/01 Ruby/02 SWMM/0022 - Hackathon AWI OffShoots/SWMM5_Import_ICM_InfoWorks_with_Cleanup_Exchange.rb:315:in 'Array#each'
+C:/Users/rober/OneDrive/Documents/GitHub/Open-Source-Support/Open-Source-Support/01 InfoWorks ICM/01 Ruby/02 SWMM/0022 - Hackathon AWI OffShoots/SWMM5_Import_ICM_InfoWorks_with_Cleanup_Exchange.rb:315:in 'Enumerable#each_with_index'
+C:/Users/rober/OneDrive/Documents/GitHub/Open-Source-Support/Open-Source-Support/01 InfoWorks ICM/01 Ruby/02 SWMM/0022 - Hackathon AWI OffShoots/SWMM5_Import_ICM_InfoWorks_with_Cleanup_Exchange.rb:315:in 'Object#main_process_loop'
+C:/Users/rober/OneDrive/Documents/GitHub/Open-Source-Support/Open-Source-Support/01 InfoWorks ICM/01 Ruby/02 SWMM/0022 - Hackathon AWI OffShoots/SWMM5_Import_ICM_InfoWorks_with_Cleanup_Exchange.rb:462:in '<top (required)>'
+2026-08-14 18:13:36 [INFO] Attempting to delete partially processed network 'Session2_user2'...
+2026-08-14 18:13:36 [ERROR] Could not delete network object during cleanup: Error 26 : Can't delete local database
+2026-08-14 18:13:36 [INFO] 
+======================================================================
+2026-08-14 18:13:36 [INFO] BATCH IMPORT SUMMARY
+2026-08-14 18:13:36 [INFO] ======================================================================
+2026-08-14 18:13:36 [INFO] Total duration: 0.93s
+2026-08-14 18:13:36 [INFO] Files processed: 1
+2026-08-14 18:13:36 [INFO] Successful: 0
+2026-08-14 18:13:36 [INFO] Failed: 1
+2026-08-14 18:13:36 [WARN] 
+Failed Files:
+2026-08-14 18:13:36 [WARN]   * Session2_user2.inp: undefined method 'table_exists?' for an instance of WSOpenNetwork

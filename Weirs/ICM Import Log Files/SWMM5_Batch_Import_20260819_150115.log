@@ -1,0 +1,736 @@
+# Logfile created on 2026-08-19 15:01:15 -0400 by logger.rb/v1.6.4
+2026-08-19 15:01:15 [INFO] ======================================================================
+2026-08-19 15:01:15 [INFO] SWMM5 Import to ICM (V3) - Exchange Script Initialized
+2026-08-19 15:01:15 [INFO] ======================================================================
+2026-08-19 15:01:15 [INFO] Database GUID: 8ACA688A-03AD-436D-ACF2-A78E65A39290
+2026-08-19 15:01:15 [INFO] Files to process: 23
+2026-08-19 15:01:15 [INFO] 
+======================================================================
+2026-08-19 15:01:15 [INFO] BATCH PROCESSING STARTING
+2026-08-19 15:01:15 [INFO] ======================================================================
+2026-08-19 15:01:15 [INFO] Target Model Group by id 8: 'Model group'
+2026-08-19 15:01:15 [INFO] Target Model Group: 'Model group' (ID: 8)
+2026-08-19 15:01:15 [INFO] 
+----------------------------------------------------------------------
+2026-08-19 15:01:15 [INFO] [1/23] Processing: 2_Weirs_4Subs.inp
+2026-08-19 15:01:15 [INFO] ----------------------------------------------------------------------
+2026-08-19 15:01:15 [INFO] PHASE 1: Importing SWMM5 data
+2026-08-19 15:01:16 [INFO]   Import duration: 1.42s
+2026-08-19 15:01:16 [INFO]   Imported 6 object(s); network '2_Weirs_4Subs' (ID: 444)
+2026-08-19 15:01:16 [INFO]   Actual location: >MODG~Model group>IWSWNET~2_Weirs_4Subs
+2026-08-19 15:01:16 [INFO]   SUCCESS: Import completed.
+2026-08-19 15:01:16 [WARN]   importer: Outfalls of type Stage-Flow are not supported by EPA-SWMM. The following outfalls(s) [OUTFALL, OVERFLOWOUTFALL] have been reassigned to type Free. Verify the outfall properties prior to running a simulation.
+2026-08-19 15:01:16 [WARN]   importer: [TEMPERATURE] () has no matching [TIMESERIES]. Unable to create.
+2026-08-19 15:01:16 [INFO] PHASE 2: Cleaning up empty visualization labels (sw_label)
+2026-08-19 15:01:16 [INFO]   No 'sw_label' table in this network - nothing to clean.
+2026-08-19 15:01:16 [INFO] PHASE 3: Validation and Statistics
+2026-08-19 15:01:16 [INFO]   Statistics: Nodes=8, Links=8, Subs=4
+2026-08-19 15:01:16 [ERROR]   ERROR during validation/statistics analysis: undefined method 'node_id' for an instance of WSRowObject
+2026-08-19 15:01:16 [INFO] PHASE 4: ICM validation (scenario: Base)
+2026-08-19 15:01:16 [INFO]   Validation: 0 error(s), 5 warning(s)
+2026-08-19 15:01:16 [INFO]   Validation messages written to: 2_Weirs_4Subs_Validation.txt
+2026-08-19 15:01:16 [WARN]   WARNING: ICM validation could not run: undefined method 'each_with_index' for an instance of WSValidations
+2026-08-19 15:01:16 [INFO] Network committed.
+2026-08-19 15:01:16 [INFO] SUCCESS: 2_Weirs_4Subs.inp
+2026-08-19 15:01:17 [INFO]   InfoWorks shell created: '2_Weirs_4Subs' (id 439)
+2026-08-19 15:01:17 [INFO]   Populated '2_Weirs_4Subs': 8 nodes, 6 conduits, 4 subs, 0 storage curve(s)
+2026-08-19 15:01:17 [INFO]     units: CFS (US - converting ft/acre/in to SI)
+2026-08-19 15:01:17 [INFO]     sw_node fields: invert=invert_elevation max_depth=maximum_depth type=node_type
+2026-08-19 15:01:17 [INFO]     sw_conduit fields: h=conduit_height w=conduit_width shape=shape inverts=us_invert(abs)/ds_invert(abs)
+2026-08-19 15:01:17 [INFO]     5 conduit shape(s) approximated as RECT (flagged on user_text_3)
+2026-08-19 15:01:17 [INFO]     2 chamber floor(s) lowered to lowest attached link invert (E2052/E2102 avoidance, flagged)
+2026-08-19 15:01:17 [INFO]     validation: 0 error(s), 13 warning(s)
+2026-08-19 15:01:17 [INFO]     committed
+2026-08-19 15:01:17 [WARN]     skipped 1 x weir (endpoint not found)
+2026-08-19 15:01:17 [INFO] 
+----------------------------------------------------------------------
+2026-08-19 15:01:17 [INFO] [2/23] Processing: extran3_bottom_orifice.inp
+2026-08-19 15:01:17 [INFO] ----------------------------------------------------------------------
+2026-08-19 15:01:17 [INFO] PHASE 1: Importing SWMM5 data
+2026-08-19 15:01:18 [INFO]   Import duration: 0.53s
+2026-08-19 15:01:18 [INFO]   Imported 6 object(s); network 'extran3_bottom_orifice' (ID: 445)
+2026-08-19 15:01:18 [INFO]   Actual location: >MODG~Model group>IWSWNET~extran3_bottom_orifice
+2026-08-19 15:01:18 [INFO]   SUCCESS: Import completed.
+2026-08-19 15:01:18 [WARN]   importer: line 45: Unrecognized keyword "Outflows/Calibration" in [FILES] section:
+2026-08-19 15:01:18 [WARN]   importer: SAVE Outflows/Calibration "D:\SWMMandSoftware\SWMM5.013_June2018\EPASWMM5.1.013\Swmm5.1.013UpdateTests\OWA_EXTRAN\Extran3.txt"
+2026-08-19 15:01:18 [WARN]   importer: Outfalls of type Stage-Flow are not supported by EPA-SWMM. The following outfalls(s) [10208] have been reassigned to type Free. Verify the outfall properties prior to running a simulation.
+2026-08-19 15:01:18 [WARN]   importer: [TEMPERATURE] () has no matching [TIMESERIES]. Unable to create.
+2026-08-19 15:01:18 [INFO] PHASE 2: Cleaning up empty visualization labels (sw_label)
+2026-08-19 15:01:18 [INFO]   No 'sw_label' table in this network - nothing to clean.
+2026-08-19 15:01:18 [INFO] PHASE 3: Validation and Statistics
+2026-08-19 15:01:18 [INFO]   Statistics: Nodes=10, Links=10, Subs=0
+2026-08-19 15:01:18 [INFO]   Validation passed with no warnings.
+2026-08-19 15:01:18 [INFO] PHASE 4: ICM validation (scenario: Base)
+2026-08-19 15:01:18 [INFO]   Validation: 0 error(s), 0 warning(s)
+2026-08-19 15:01:18 [INFO] Network committed.
+2026-08-19 15:01:18 [INFO] SUCCESS: extran3_bottom_orifice.inp
+2026-08-19 15:01:18 [INFO]   InfoWorks shell created: 'extran3_bottom_orifice' (id 440)
+2026-08-19 15:01:19 [INFO]   Populated 'extran3_bottom_orifice': 10 nodes, 9 conduits, 0 subs, 0 storage curve(s)
+2026-08-19 15:01:19 [INFO]     units: CFS (US - converting ft/acre/in to SI)
+2026-08-19 15:01:19 [INFO]     sw_node fields: invert=invert_elevation max_depth=maximum_depth type=node_type
+2026-08-19 15:01:19 [INFO]     sw_conduit fields: h=conduit_height w=conduit_width shape=shape inverts=us_invert(abs)/ds_invert(abs)
+2026-08-19 15:01:19 [INFO]     2 conduit shape(s) approximated as RECT (flagged on user_text_3)
+2026-08-19 15:01:19 [INFO]     validation: 0 error(s), 18 warning(s)
+2026-08-19 15:01:19 [INFO]     committed
+2026-08-19 15:01:19 [INFO] 
+----------------------------------------------------------------------
+2026-08-19 15:01:19 [INFO] [3/23] Processing: extran3_bottom_orifice_pid.inp
+2026-08-19 15:01:19 [INFO] ----------------------------------------------------------------------
+2026-08-19 15:01:19 [INFO] PHASE 1: Importing SWMM5 data
+2026-08-19 15:01:19 [INFO]   Import duration: 0.41s
+2026-08-19 15:01:19 [INFO]   Imported 6 object(s); network 'extran3_bottom_orifice_pid' (ID: 446)
+2026-08-19 15:01:19 [INFO]   Actual location: >MODG~Model group>IWSWNET~extran3_bottom_orifice_pid
+2026-08-19 15:01:19 [INFO]   SUCCESS: Import completed.
+2026-08-19 15:01:19 [WARN]   importer: Outfalls of type Stage-Flow are not supported by EPA-SWMM. The following outfalls(s) [10208] have been reassigned to type Free. Verify the outfall properties prior to running a simulation.
+2026-08-19 15:01:19 [WARN]   importer: [TEMPERATURE] () has no matching [TIMESERIES]. Unable to create.
+2026-08-19 15:01:19 [INFO] PHASE 2: Cleaning up empty visualization labels (sw_label)
+2026-08-19 15:01:19 [INFO]   No 'sw_label' table in this network - nothing to clean.
+2026-08-19 15:01:19 [INFO] PHASE 3: Validation and Statistics
+2026-08-19 15:01:19 [INFO]   Statistics: Nodes=10, Links=10, Subs=0
+2026-08-19 15:01:19 [INFO]   Validation passed with no warnings.
+2026-08-19 15:01:19 [INFO] PHASE 4: ICM validation (scenario: Base)
+2026-08-19 15:01:19 [INFO]   Validation: 0 error(s), 0 warning(s)
+2026-08-19 15:01:19 [INFO] Network committed.
+2026-08-19 15:01:19 [INFO] SUCCESS: extran3_bottom_orifice_pid.inp
+2026-08-19 15:01:20 [INFO]   InfoWorks shell created: 'extran3_bottom_orifice_pid' (id 441)
+2026-08-19 15:01:20 [INFO]   Populated 'extran3_bottom_orifice_pid': 10 nodes, 9 conduits, 0 subs, 0 storage curve(s)
+2026-08-19 15:01:20 [INFO]     units: CFS (US - converting ft/acre/in to SI)
+2026-08-19 15:01:20 [INFO]     sw_node fields: invert=invert_elevation max_depth=maximum_depth type=node_type
+2026-08-19 15:01:20 [INFO]     sw_conduit fields: h=conduit_height w=conduit_width shape=shape inverts=us_invert(abs)/ds_invert(abs)
+2026-08-19 15:01:20 [INFO]     2 conduit shape(s) approximated as RECT (flagged on user_text_3)
+2026-08-19 15:01:20 [INFO]     validation: 0 error(s), 18 warning(s)
+2026-08-19 15:01:20 [INFO]     committed
+2026-08-19 15:01:20 [INFO] 
+----------------------------------------------------------------------
+2026-08-19 15:01:20 [INFO] [4/23] Processing: extran3_bottom_orifice_si_units.inp
+2026-08-19 15:01:20 [INFO] ----------------------------------------------------------------------
+2026-08-19 15:01:20 [INFO] PHASE 1: Importing SWMM5 data
+2026-08-19 15:01:21 [INFO]   Import duration: 0.46s
+2026-08-19 15:01:21 [INFO]   Imported 6 object(s); network 'extran3_bottom_orifice_si_units' (ID: 447)
+2026-08-19 15:01:21 [INFO]   Actual location: >MODG~Model group>IWSWNET~extran3_bottom_orifice_si_units
+2026-08-19 15:01:21 [INFO]   SUCCESS: Import completed.
+2026-08-19 15:01:21 [WARN]   importer: line 45: Unrecognized keyword "Outflows/Calibration" in [FILES] section:
+2026-08-19 15:01:21 [WARN]   importer: SAVE Outflows/Calibration "D:\SWMMandSoftware\SWMM5.013_June2018\EPASWMM5.1.013\Swmm5.1.013UpdateTests\OWA_EXTRAN\Extran3.txt"
+2026-08-19 15:01:21 [WARN]   importer: Outfalls of type Stage-Flow are not supported by EPA-SWMM. The following outfalls(s) [10208] have been reassigned to type Free. Verify the outfall properties prior to running a simulation.
+2026-08-19 15:01:21 [WARN]   importer: [TEMPERATURE] () has no matching [TIMESERIES]. Unable to create.
+2026-08-19 15:01:21 [INFO] PHASE 2: Cleaning up empty visualization labels (sw_label)
+2026-08-19 15:01:21 [INFO]   No 'sw_label' table in this network - nothing to clean.
+2026-08-19 15:01:21 [INFO] PHASE 3: Validation and Statistics
+2026-08-19 15:01:21 [INFO]   Statistics: Nodes=10, Links=10, Subs=0
+2026-08-19 15:01:21 [INFO]   Validation passed with no warnings.
+2026-08-19 15:01:21 [INFO] PHASE 4: ICM validation (scenario: Base)
+2026-08-19 15:01:21 [INFO]   Validation: 0 error(s), 0 warning(s)
+2026-08-19 15:01:21 [INFO] Network committed.
+2026-08-19 15:01:21 [INFO] SUCCESS: extran3_bottom_orifice_si_units.inp
+2026-08-19 15:01:21 [INFO]   InfoWorks shell created: 'extran3_bottom_orifice_si_units' (id 442)
+2026-08-19 15:01:22 [INFO]   Populated 'extran3_bottom_orifice_si_units': 10 nodes, 9 conduits, 0 subs, 0 storage curve(s)
+2026-08-19 15:01:22 [INFO]     units: LPS (SI)
+2026-08-19 15:01:22 [INFO]     sw_node fields: invert=invert_elevation max_depth=maximum_depth type=node_type
+2026-08-19 15:01:22 [INFO]     sw_conduit fields: h=conduit_height w=conduit_width shape=shape inverts=us_invert(abs)/ds_invert(abs)
+2026-08-19 15:01:22 [INFO]     2 conduit shape(s) approximated as RECT (flagged on user_text_3)
+2026-08-19 15:01:22 [INFO]     validation: 1 error(s), 18 warning(s)
+2026-08-19 15:01:22 [INFO]     NOT committed (validation errors) - inspect and fix
+2026-08-19 15:01:22 [INFO] 
+----------------------------------------------------------------------
+2026-08-19 15:01:22 [INFO] [5/23] Processing: extran3_bottom_rect_orifice.inp
+2026-08-19 15:01:22 [INFO] ----------------------------------------------------------------------
+2026-08-19 15:01:22 [INFO] PHASE 1: Importing SWMM5 data
+2026-08-19 15:01:22 [INFO]   Import duration: 0.49s
+2026-08-19 15:01:22 [INFO]   Imported 6 object(s); network 'extran3_bottom_rect_orifice' (ID: 448)
+2026-08-19 15:01:22 [INFO]   Actual location: >MODG~Model group>IWSWNET~extran3_bottom_rect_orifice
+2026-08-19 15:01:22 [INFO]   SUCCESS: Import completed.
+2026-08-19 15:01:22 [WARN]   importer: line 45: Unrecognized keyword "Outflows/Calibration" in [FILES] section:
+2026-08-19 15:01:22 [WARN]   importer: SAVE Outflows/Calibration "D:\SWMMandSoftware\SWMM5.013_June2018\EPASWMM5.1.013\Swmm5.1.013UpdateTests\OWA_EXTRAN\Extran3.txt"
+2026-08-19 15:01:22 [WARN]   importer: Outfalls of type Stage-Flow are not supported by EPA-SWMM. The following outfalls(s) [10208] have been reassigned to type Free. Verify the outfall properties prior to running a simulation.
+2026-08-19 15:01:22 [WARN]   importer: [TEMPERATURE] () has no matching [TIMESERIES]. Unable to create.
+2026-08-19 15:01:22 [INFO] PHASE 2: Cleaning up empty visualization labels (sw_label)
+2026-08-19 15:01:22 [INFO]   No 'sw_label' table in this network - nothing to clean.
+2026-08-19 15:01:22 [INFO] PHASE 3: Validation and Statistics
+2026-08-19 15:01:22 [INFO]   Statistics: Nodes=10, Links=10, Subs=0
+2026-08-19 15:01:22 [INFO]   Validation passed with no warnings.
+2026-08-19 15:01:22 [INFO] PHASE 4: ICM validation (scenario: Base)
+2026-08-19 15:01:22 [INFO]   Validation: 0 error(s), 0 warning(s)
+2026-08-19 15:01:22 [INFO] Network committed.
+2026-08-19 15:01:22 [INFO] SUCCESS: extran3_bottom_rect_orifice.inp
+2026-08-19 15:01:23 [INFO]   InfoWorks shell created: 'extran3_bottom_rect_orifice' (id 443)
+2026-08-19 15:01:23 [INFO]   Populated 'extran3_bottom_rect_orifice': 10 nodes, 9 conduits, 0 subs, 0 storage curve(s)
+2026-08-19 15:01:23 [INFO]     units: CFS (US - converting ft/acre/in to SI)
+2026-08-19 15:01:23 [INFO]     sw_node fields: invert=invert_elevation max_depth=maximum_depth type=node_type
+2026-08-19 15:01:23 [INFO]     sw_conduit fields: h=conduit_height w=conduit_width shape=shape inverts=us_invert(abs)/ds_invert(abs)
+2026-08-19 15:01:23 [INFO]     2 conduit shape(s) approximated as RECT (flagged on user_text_3)
+2026-08-19 15:01:23 [INFO]     validation: 0 error(s), 18 warning(s)
+2026-08-19 15:01:23 [INFO]     committed
+2026-08-19 15:01:23 [WARN]     skipped 1 x non-circular orifice -> equal-area diameter (approximation)
+2026-08-19 15:01:23 [INFO] 
+----------------------------------------------------------------------
+2026-08-19 15:01:23 [INFO] [6/23] Processing: extran3_bottom_rect_orifice_si_units.inp
+2026-08-19 15:01:23 [INFO] ----------------------------------------------------------------------
+2026-08-19 15:01:23 [INFO] PHASE 1: Importing SWMM5 data
+2026-08-19 15:01:23 [INFO]   Import duration: 0.43s
+2026-08-19 15:01:23 [INFO]   Imported 6 object(s); network 'extran3_bottom_rect_orifice_si_units' (ID: 449)
+2026-08-19 15:01:23 [INFO]   Actual location: >MODG~Model group>IWSWNET~extran3_bottom_rect_orifice_si_units
+2026-08-19 15:01:23 [INFO]   SUCCESS: Import completed.
+2026-08-19 15:01:23 [WARN]   importer: line 45: Unrecognized keyword "Outflows/Calibration" in [FILES] section:
+2026-08-19 15:01:23 [WARN]   importer: SAVE Outflows/Calibration "D:\SWMMandSoftware\SWMM5.013_June2018\EPASWMM5.1.013\Swmm5.1.013UpdateTests\OWA_EXTRAN\Extran3.txt"
+2026-08-19 15:01:23 [WARN]   importer: Outfalls of type Stage-Flow are not supported by EPA-SWMM. The following outfalls(s) [10208] have been reassigned to type Free. Verify the outfall properties prior to running a simulation.
+2026-08-19 15:01:23 [WARN]   importer: [TEMPERATURE] () has no matching [TIMESERIES]. Unable to create.
+2026-08-19 15:01:23 [INFO] PHASE 2: Cleaning up empty visualization labels (sw_label)
+2026-08-19 15:01:23 [INFO]   No 'sw_label' table in this network - nothing to clean.
+2026-08-19 15:01:23 [INFO] PHASE 3: Validation and Statistics
+2026-08-19 15:01:23 [INFO]   Statistics: Nodes=10, Links=10, Subs=0
+2026-08-19 15:01:23 [INFO]   Validation passed with no warnings.
+2026-08-19 15:01:23 [INFO] PHASE 4: ICM validation (scenario: Base)
+2026-08-19 15:01:23 [INFO]   Validation: 0 error(s), 0 warning(s)
+2026-08-19 15:01:23 [INFO] Network committed.
+2026-08-19 15:01:23 [INFO] SUCCESS: extran3_bottom_rect_orifice_si_units.inp
+2026-08-19 15:01:24 [INFO]   InfoWorks shell created: 'extran3_bottom_rect_orifice_si_units' (id 444)
+2026-08-19 15:01:24 [INFO]   Populated 'extran3_bottom_rect_orifice_si_units': 10 nodes, 9 conduits, 0 subs, 0 storage curve(s)
+2026-08-19 15:01:24 [INFO]     units: LPS (SI)
+2026-08-19 15:01:24 [INFO]     sw_node fields: invert=invert_elevation max_depth=maximum_depth type=node_type
+2026-08-19 15:01:24 [INFO]     sw_conduit fields: h=conduit_height w=conduit_width shape=shape inverts=us_invert(abs)/ds_invert(abs)
+2026-08-19 15:01:24 [INFO]     2 conduit shape(s) approximated as RECT (flagged on user_text_3)
+2026-08-19 15:01:24 [INFO]     validation: 1 error(s), 18 warning(s)
+2026-08-19 15:01:24 [INFO]     NOT committed (validation errors) - inspect and fix
+2026-08-19 15:01:24 [WARN]     skipped 1 x non-circular orifice -> equal-area diameter (approximation)
+2026-08-19 15:01:24 [INFO] 
+----------------------------------------------------------------------
+2026-08-19 15:01:24 [INFO] [7/23] Processing: extran3_side_open_close_orifice.inp
+2026-08-19 15:01:24 [INFO] ----------------------------------------------------------------------
+2026-08-19 15:01:24 [INFO] PHASE 1: Importing SWMM5 data
+2026-08-19 15:01:24 [INFO]   Import duration: 0.43s
+2026-08-19 15:01:24 [INFO]   Imported 6 object(s); network 'extran3_side_open_close_orifice' (ID: 450)
+2026-08-19 15:01:24 [INFO]   Actual location: >MODG~Model group>IWSWNET~extran3_side_open_close_orifice
+2026-08-19 15:01:24 [INFO]   SUCCESS: Import completed.
+2026-08-19 15:01:24 [WARN]   importer: line 45: Unrecognized keyword "Outflows/Calibration" in [FILES] section:
+2026-08-19 15:01:24 [WARN]   importer: SAVE Outflows/Calibration "D:\SWMMandSoftware\SWMM5.013_June2018\EPASWMM5.1.013\Swmm5.1.013UpdateTests\OWA_EXTRAN\Extran3.txt"
+2026-08-19 15:01:24 [WARN]   importer: Outfalls of type Stage-Flow are not supported by EPA-SWMM. The following outfalls(s) [10208] have been reassigned to type Free. Verify the outfall properties prior to running a simulation.
+2026-08-19 15:01:24 [WARN]   importer: [TEMPERATURE] () has no matching [TIMESERIES]. Unable to create.
+2026-08-19 15:01:24 [INFO] PHASE 2: Cleaning up empty visualization labels (sw_label)
+2026-08-19 15:01:24 [INFO]   No 'sw_label' table in this network - nothing to clean.
+2026-08-19 15:01:24 [INFO] PHASE 3: Validation and Statistics
+2026-08-19 15:01:24 [INFO]   Statistics: Nodes=10, Links=10, Subs=0
+2026-08-19 15:01:24 [INFO]   Validation passed with no warnings.
+2026-08-19 15:01:24 [INFO] PHASE 4: ICM validation (scenario: Base)
+2026-08-19 15:01:24 [INFO]   Validation: 0 error(s), 0 warning(s)
+2026-08-19 15:01:24 [INFO] Network committed.
+2026-08-19 15:01:24 [INFO] SUCCESS: extran3_side_open_close_orifice.inp
+2026-08-19 15:01:25 [INFO]   InfoWorks shell created: 'extran3_side_open_close_orifice' (id 445)
+2026-08-19 15:01:25 [INFO]   Populated 'extran3_side_open_close_orifice': 10 nodes, 9 conduits, 0 subs, 0 storage curve(s)
+2026-08-19 15:01:25 [INFO]     units: CFS (US - converting ft/acre/in to SI)
+2026-08-19 15:01:25 [INFO]     sw_node fields: invert=invert_elevation max_depth=maximum_depth type=node_type
+2026-08-19 15:01:25 [INFO]     sw_conduit fields: h=conduit_height w=conduit_width shape=shape inverts=us_invert(abs)/ds_invert(abs)
+2026-08-19 15:01:25 [INFO]     2 conduit shape(s) approximated as RECT (flagged on user_text_3)
+2026-08-19 15:01:25 [INFO]     validation: 0 error(s), 18 warning(s)
+2026-08-19 15:01:25 [INFO]     committed
+2026-08-19 15:01:25 [INFO] 
+----------------------------------------------------------------------
+2026-08-19 15:01:25 [INFO] [8/23] Processing: extran3_side_open_close_orifice_si_units.inp
+2026-08-19 15:01:25 [INFO] ----------------------------------------------------------------------
+2026-08-19 15:01:25 [INFO] PHASE 1: Importing SWMM5 data
+2026-08-19 15:01:25 [INFO]   Import duration: 0.44s
+2026-08-19 15:01:25 [INFO]   Imported 6 object(s); network 'extran3_side_open_close_orifice_si_units' (ID: 451)
+2026-08-19 15:01:25 [INFO]   Actual location: >MODG~Model group>IWSWNET~extran3_side_open_close_orifice_si_units
+2026-08-19 15:01:25 [INFO]   SUCCESS: Import completed.
+2026-08-19 15:01:25 [WARN]   importer: line 45: Unrecognized keyword "Outflows/Calibration" in [FILES] section:
+2026-08-19 15:01:25 [WARN]   importer: SAVE Outflows/Calibration "D:\SWMMandSoftware\SWMM5.013_June2018\EPASWMM5.1.013\Swmm5.1.013UpdateTests\OWA_EXTRAN\Extran3.txt"
+2026-08-19 15:01:25 [WARN]   importer: Outfalls of type Stage-Flow are not supported by EPA-SWMM. The following outfalls(s) [10208] have been reassigned to type Free. Verify the outfall properties prior to running a simulation.
+2026-08-19 15:01:25 [WARN]   importer: [TEMPERATURE] () has no matching [TIMESERIES]. Unable to create.
+2026-08-19 15:01:25 [INFO] PHASE 2: Cleaning up empty visualization labels (sw_label)
+2026-08-19 15:01:25 [INFO]   No 'sw_label' table in this network - nothing to clean.
+2026-08-19 15:01:25 [INFO] PHASE 3: Validation and Statistics
+2026-08-19 15:01:25 [INFO]   Statistics: Nodes=10, Links=10, Subs=0
+2026-08-19 15:01:25 [INFO]   Validation passed with no warnings.
+2026-08-19 15:01:25 [INFO] PHASE 4: ICM validation (scenario: Base)
+2026-08-19 15:01:25 [INFO]   Validation: 0 error(s), 0 warning(s)
+2026-08-19 15:01:26 [INFO] Network committed.
+2026-08-19 15:01:26 [INFO] SUCCESS: extran3_side_open_close_orifice_si_units.inp
+2026-08-19 15:01:26 [INFO]   InfoWorks shell created: 'extran3_side_open_close_orifice_si_units' (id 446)
+2026-08-19 15:01:26 [INFO]   Populated 'extran3_side_open_close_orifice_si_units': 10 nodes, 9 conduits, 0 subs, 0 storage curve(s)
+2026-08-19 15:01:26 [INFO]     units: LPS (SI)
+2026-08-19 15:01:26 [INFO]     sw_node fields: invert=invert_elevation max_depth=maximum_depth type=node_type
+2026-08-19 15:01:26 [INFO]     sw_conduit fields: h=conduit_height w=conduit_width shape=shape inverts=us_invert(abs)/ds_invert(abs)
+2026-08-19 15:01:26 [INFO]     2 conduit shape(s) approximated as RECT (flagged on user_text_3)
+2026-08-19 15:01:26 [INFO]     validation: 1 error(s), 18 warning(s)
+2026-08-19 15:01:26 [INFO]     NOT committed (validation errors) - inspect and fix
+2026-08-19 15:01:26 [INFO] 
+----------------------------------------------------------------------
+2026-08-19 15:01:26 [INFO] [9/23] Processing: extran3_side_open_close_rect_offset_orifice.inp
+2026-08-19 15:01:26 [INFO] ----------------------------------------------------------------------
+2026-08-19 15:01:26 [INFO] PHASE 1: Importing SWMM5 data
+2026-08-19 15:01:27 [INFO]   Import duration: 1.05s
+2026-08-19 15:01:27 [INFO]   Imported 6 object(s); network 'extran3_side_open_close_rect_offset_orifice' (ID: 452)
+2026-08-19 15:01:27 [INFO]   Actual location: >MODG~Model group>IWSWNET~extran3_side_open_close_rect_offset_orifice
+2026-08-19 15:01:27 [INFO]   SUCCESS: Import completed.
+2026-08-19 15:01:27 [WARN]   importer: line 45: Unrecognized keyword "Outflows/Calibration" in [FILES] section:
+2026-08-19 15:01:27 [WARN]   importer: SAVE Outflows/Calibration "D:\SWMMandSoftware\SWMM5.013_June2018\EPASWMM5.1.013\Swmm5.1.013UpdateTests\OWA_EXTRAN\Extran3.txt"
+2026-08-19 15:01:27 [WARN]   importer: Outfalls of type Stage-Flow are not supported by EPA-SWMM. The following outfalls(s) [10208] have been reassigned to type Free. Verify the outfall properties prior to running a simulation.
+2026-08-19 15:01:27 [WARN]   importer: [TEMPERATURE] () has no matching [TIMESERIES]. Unable to create.
+2026-08-19 15:01:27 [INFO] PHASE 2: Cleaning up empty visualization labels (sw_label)
+2026-08-19 15:01:27 [INFO]   No 'sw_label' table in this network - nothing to clean.
+2026-08-19 15:01:27 [INFO] PHASE 3: Validation and Statistics
+2026-08-19 15:01:27 [INFO]   Statistics: Nodes=10, Links=10, Subs=0
+2026-08-19 15:01:27 [INFO]   Validation passed with no warnings.
+2026-08-19 15:01:27 [INFO] PHASE 4: ICM validation (scenario: Base)
+2026-08-19 15:01:27 [INFO]   Validation: 0 error(s), 0 warning(s)
+2026-08-19 15:01:27 [INFO] Network committed.
+2026-08-19 15:01:27 [INFO] SUCCESS: extran3_side_open_close_rect_offset_orifice.inp
+2026-08-19 15:01:28 [INFO]   InfoWorks shell created: 'extran3_side_open_close_rect_offset_orifice' (id 447)
+2026-08-19 15:01:28 [INFO]   Populated 'extran3_side_open_close_rect_offset_orifice': 10 nodes, 9 conduits, 0 subs, 0 storage curve(s)
+2026-08-19 15:01:28 [INFO]     units: CFS (US - converting ft/acre/in to SI)
+2026-08-19 15:01:28 [INFO]     sw_node fields: invert=invert_elevation max_depth=maximum_depth type=node_type
+2026-08-19 15:01:28 [INFO]     sw_conduit fields: h=conduit_height w=conduit_width shape=shape inverts=us_invert(abs)/ds_invert(abs)
+2026-08-19 15:01:28 [INFO]     2 conduit shape(s) approximated as RECT (flagged on user_text_3)
+2026-08-19 15:01:28 [INFO]     validation: 0 error(s), 18 warning(s)
+2026-08-19 15:01:28 [INFO]     committed
+2026-08-19 15:01:28 [WARN]     skipped 1 x non-circular orifice -> equal-area diameter (approximation)
+2026-08-19 15:01:28 [INFO] 
+----------------------------------------------------------------------
+2026-08-19 15:01:28 [INFO] [10/23] Processing: extran3_side_open_close_rect_offset_orifice_si_units.inp
+2026-08-19 15:01:28 [INFO] ----------------------------------------------------------------------
+2026-08-19 15:01:28 [INFO] PHASE 1: Importing SWMM5 data
+2026-08-19 15:01:28 [INFO]   Import duration: 0.40s
+2026-08-19 15:01:28 [INFO]   Imported 6 object(s); network 'extran3_side_open_close_rect_offset_orifice_si_units' (ID: 453)
+2026-08-19 15:01:28 [INFO]   Actual location: >MODG~Model group>IWSWNET~extran3_side_open_close_rect_offset_orifice_si_units
+2026-08-19 15:01:28 [INFO]   SUCCESS: Import completed.
+2026-08-19 15:01:28 [WARN]   importer: line 45: Unrecognized keyword "Outflows/Calibration" in [FILES] section:
+2026-08-19 15:01:28 [WARN]   importer: SAVE Outflows/Calibration "D:\SWMMandSoftware\SWMM5.013_June2018\EPASWMM5.1.013\Swmm5.1.013UpdateTests\OWA_EXTRAN\Extran3.txt"
+2026-08-19 15:01:28 [WARN]   importer: Outfalls of type Stage-Flow are not supported by EPA-SWMM. The following outfalls(s) [10208] have been reassigned to type Free. Verify the outfall properties prior to running a simulation.
+2026-08-19 15:01:28 [WARN]   importer: [TEMPERATURE] () has no matching [TIMESERIES]. Unable to create.
+2026-08-19 15:01:28 [INFO] PHASE 2: Cleaning up empty visualization labels (sw_label)
+2026-08-19 15:01:28 [INFO]   No 'sw_label' table in this network - nothing to clean.
+2026-08-19 15:01:28 [INFO] PHASE 3: Validation and Statistics
+2026-08-19 15:01:28 [INFO]   Statistics: Nodes=10, Links=10, Subs=0
+2026-08-19 15:01:28 [INFO]   Validation passed with no warnings.
+2026-08-19 15:01:28 [INFO] PHASE 4: ICM validation (scenario: Base)
+2026-08-19 15:01:28 [INFO]   Validation: 0 error(s), 0 warning(s)
+2026-08-19 15:01:28 [INFO] Network committed.
+2026-08-19 15:01:28 [INFO] SUCCESS: extran3_side_open_close_rect_offset_orifice_si_units.inp
+2026-08-19 15:01:29 [INFO]   InfoWorks shell created: 'extran3_side_open_close_rect_offset_orifice_si_units' (id 448)
+2026-08-19 15:01:29 [INFO]   Populated 'extran3_side_open_close_rect_offset_orifice_si_units': 10 nodes, 9 conduits, 0 subs, 0 storage curve(s)
+2026-08-19 15:01:29 [INFO]     units: CFS (US - converting ft/acre/in to SI)
+2026-08-19 15:01:29 [INFO]     sw_node fields: invert=invert_elevation max_depth=maximum_depth type=node_type
+2026-08-19 15:01:29 [INFO]     sw_conduit fields: h=conduit_height w=conduit_width shape=shape inverts=us_invert(abs)/ds_invert(abs)
+2026-08-19 15:01:29 [INFO]     2 conduit shape(s) approximated as RECT (flagged on user_text_3)
+2026-08-19 15:01:29 [INFO]     validation: 0 error(s), 18 warning(s)
+2026-08-19 15:01:29 [INFO]     committed
+2026-08-19 15:01:29 [WARN]     skipped 1 x non-circular orifice -> equal-area diameter (approximation)
+2026-08-19 15:01:29 [INFO] 
+----------------------------------------------------------------------
+2026-08-19 15:01:29 [INFO] [11/23] Processing: extran3_side_open_close_rect_orifice.inp
+2026-08-19 15:01:29 [INFO] ----------------------------------------------------------------------
+2026-08-19 15:01:29 [INFO] PHASE 1: Importing SWMM5 data
+2026-08-19 15:01:29 [INFO]   Import duration: 0.44s
+2026-08-19 15:01:29 [INFO]   Imported 6 object(s); network 'extran3_side_open_close_rect_orifice' (ID: 454)
+2026-08-19 15:01:29 [INFO]   Actual location: >MODG~Model group>IWSWNET~extran3_side_open_close_rect_orifice
+2026-08-19 15:01:29 [INFO]   SUCCESS: Import completed.
+2026-08-19 15:01:29 [WARN]   importer: line 45: Unrecognized keyword "Outflows/Calibration" in [FILES] section:
+2026-08-19 15:01:29 [WARN]   importer: SAVE Outflows/Calibration "D:\SWMMandSoftware\SWMM5.013_June2018\EPASWMM5.1.013\Swmm5.1.013UpdateTests\OWA_EXTRAN\Extran3.txt"
+2026-08-19 15:01:29 [WARN]   importer: Outfalls of type Stage-Flow are not supported by EPA-SWMM. The following outfalls(s) [10208] have been reassigned to type Free. Verify the outfall properties prior to running a simulation.
+2026-08-19 15:01:29 [WARN]   importer: [TEMPERATURE] () has no matching [TIMESERIES]. Unable to create.
+2026-08-19 15:01:29 [INFO] PHASE 2: Cleaning up empty visualization labels (sw_label)
+2026-08-19 15:01:29 [INFO]   No 'sw_label' table in this network - nothing to clean.
+2026-08-19 15:01:29 [INFO] PHASE 3: Validation and Statistics
+2026-08-19 15:01:29 [INFO]   Statistics: Nodes=10, Links=10, Subs=0
+2026-08-19 15:01:29 [INFO]   Validation passed with no warnings.
+2026-08-19 15:01:29 [INFO] PHASE 4: ICM validation (scenario: Base)
+2026-08-19 15:01:29 [INFO]   Validation: 0 error(s), 0 warning(s)
+2026-08-19 15:01:29 [INFO] Network committed.
+2026-08-19 15:01:29 [INFO] SUCCESS: extran3_side_open_close_rect_orifice.inp
+2026-08-19 15:01:30 [INFO]   InfoWorks shell created: 'extran3_side_open_close_rect_orifice' (id 449)
+2026-08-19 15:01:30 [INFO]   Populated 'extran3_side_open_close_rect_orifice': 10 nodes, 9 conduits, 0 subs, 0 storage curve(s)
+2026-08-19 15:01:30 [INFO]     units: CFS (US - converting ft/acre/in to SI)
+2026-08-19 15:01:30 [INFO]     sw_node fields: invert=invert_elevation max_depth=maximum_depth type=node_type
+2026-08-19 15:01:30 [INFO]     sw_conduit fields: h=conduit_height w=conduit_width shape=shape inverts=us_invert(abs)/ds_invert(abs)
+2026-08-19 15:01:30 [INFO]     2 conduit shape(s) approximated as RECT (flagged on user_text_3)
+2026-08-19 15:01:30 [INFO]     validation: 0 error(s), 18 warning(s)
+2026-08-19 15:01:30 [INFO]     committed
+2026-08-19 15:01:30 [WARN]     skipped 1 x non-circular orifice -> equal-area diameter (approximation)
+2026-08-19 15:01:30 [INFO] 
+----------------------------------------------------------------------
+2026-08-19 15:01:30 [INFO] [12/23] Processing: extran3_side_open_close_rect_orifice_si_units.inp
+2026-08-19 15:01:30 [INFO] ----------------------------------------------------------------------
+2026-08-19 15:01:30 [INFO] PHASE 1: Importing SWMM5 data
+2026-08-19 15:01:30 [INFO]   Import duration: 0.42s
+2026-08-19 15:01:30 [INFO]   Imported 6 object(s); network 'extran3_side_open_close_rect_orifice_si_units' (ID: 455)
+2026-08-19 15:01:30 [INFO]   Actual location: >MODG~Model group>IWSWNET~extran3_side_open_close_rect_orifice_si_units
+2026-08-19 15:01:30 [INFO]   SUCCESS: Import completed.
+2026-08-19 15:01:30 [WARN]   importer: line 45: Unrecognized keyword "Outflows/Calibration" in [FILES] section:
+2026-08-19 15:01:30 [WARN]   importer: SAVE Outflows/Calibration "D:\SWMMandSoftware\SWMM5.013_June2018\EPASWMM5.1.013\Swmm5.1.013UpdateTests\OWA_EXTRAN\Extran3.txt"
+2026-08-19 15:01:30 [WARN]   importer: Outfalls of type Stage-Flow are not supported by EPA-SWMM. The following outfalls(s) [10208] have been reassigned to type Free. Verify the outfall properties prior to running a simulation.
+2026-08-19 15:01:30 [WARN]   importer: [TEMPERATURE] () has no matching [TIMESERIES]. Unable to create.
+2026-08-19 15:01:30 [INFO] PHASE 2: Cleaning up empty visualization labels (sw_label)
+2026-08-19 15:01:30 [INFO]   No 'sw_label' table in this network - nothing to clean.
+2026-08-19 15:01:30 [INFO] PHASE 3: Validation and Statistics
+2026-08-19 15:01:30 [INFO]   Statistics: Nodes=10, Links=10, Subs=0
+2026-08-19 15:01:30 [INFO]   Validation passed with no warnings.
+2026-08-19 15:01:30 [INFO] PHASE 4: ICM validation (scenario: Base)
+2026-08-19 15:01:30 [INFO]   Validation: 0 error(s), 0 warning(s)
+2026-08-19 15:01:30 [INFO] Network committed.
+2026-08-19 15:01:30 [INFO] SUCCESS: extran3_side_open_close_rect_orifice_si_units.inp
+2026-08-19 15:01:31 [INFO]   InfoWorks shell created: 'extran3_side_open_close_rect_orifice_si_units' (id 450)
+2026-08-19 15:01:31 [INFO]   Populated 'extran3_side_open_close_rect_orifice_si_units': 10 nodes, 9 conduits, 0 subs, 0 storage curve(s)
+2026-08-19 15:01:31 [INFO]     units: LPS (SI)
+2026-08-19 15:01:31 [INFO]     sw_node fields: invert=invert_elevation max_depth=maximum_depth type=node_type
+2026-08-19 15:01:31 [INFO]     sw_conduit fields: h=conduit_height w=conduit_width shape=shape inverts=us_invert(abs)/ds_invert(abs)
+2026-08-19 15:01:31 [INFO]     2 conduit shape(s) approximated as RECT (flagged on user_text_3)
+2026-08-19 15:01:31 [INFO]     validation: 1 error(s), 18 warning(s)
+2026-08-19 15:01:31 [INFO]     NOT committed (validation errors) - inspect and fix
+2026-08-19 15:01:31 [WARN]     skipped 1 x non-circular orifice -> equal-area diameter (approximation)
+2026-08-19 15:01:31 [INFO] 
+----------------------------------------------------------------------
+2026-08-19 15:01:31 [INFO] [13/23] Processing: extran3_side_orifice.inp
+2026-08-19 15:01:31 [INFO] ----------------------------------------------------------------------
+2026-08-19 15:01:31 [INFO] PHASE 1: Importing SWMM5 data
+2026-08-19 15:01:31 [INFO]   Import duration: 0.43s
+2026-08-19 15:01:31 [INFO]   Imported 6 object(s); network 'extran3_side_orifice' (ID: 456)
+2026-08-19 15:01:31 [INFO]   Actual location: >MODG~Model group>IWSWNET~extran3_side_orifice
+2026-08-19 15:01:31 [INFO]   SUCCESS: Import completed.
+2026-08-19 15:01:31 [WARN]   importer: line 45: Unrecognized keyword "Outflows/Calibration" in [FILES] section:
+2026-08-19 15:01:31 [WARN]   importer: SAVE Outflows/Calibration "D:\SWMMandSoftware\SWMM5.013_June2018\EPASWMM5.1.013\Swmm5.1.013UpdateTests\OWA_EXTRAN\Extran3.txt"
+2026-08-19 15:01:31 [WARN]   importer: Outfalls of type Stage-Flow are not supported by EPA-SWMM. The following outfalls(s) [10208] have been reassigned to type Free. Verify the outfall properties prior to running a simulation.
+2026-08-19 15:01:31 [WARN]   importer: [TEMPERATURE] () has no matching [TIMESERIES]. Unable to create.
+2026-08-19 15:01:31 [INFO] PHASE 2: Cleaning up empty visualization labels (sw_label)
+2026-08-19 15:01:31 [INFO]   No 'sw_label' table in this network - nothing to clean.
+2026-08-19 15:01:31 [INFO] PHASE 3: Validation and Statistics
+2026-08-19 15:01:31 [INFO]   Statistics: Nodes=10, Links=10, Subs=0
+2026-08-19 15:01:31 [INFO]   Validation passed with no warnings.
+2026-08-19 15:01:31 [INFO] PHASE 4: ICM validation (scenario: Base)
+2026-08-19 15:01:31 [INFO]   Validation: 0 error(s), 0 warning(s)
+2026-08-19 15:01:32 [INFO] Network committed.
+2026-08-19 15:01:32 [INFO] SUCCESS: extran3_side_orifice.inp
+2026-08-19 15:01:32 [INFO]   InfoWorks shell created: 'extran3_side_orifice' (id 451)
+2026-08-19 15:01:32 [INFO]   Populated 'extran3_side_orifice': 10 nodes, 9 conduits, 0 subs, 0 storage curve(s)
+2026-08-19 15:01:32 [INFO]     units: CFS (US - converting ft/acre/in to SI)
+2026-08-19 15:01:32 [INFO]     sw_node fields: invert=invert_elevation max_depth=maximum_depth type=node_type
+2026-08-19 15:01:32 [INFO]     sw_conduit fields: h=conduit_height w=conduit_width shape=shape inverts=us_invert(abs)/ds_invert(abs)
+2026-08-19 15:01:32 [INFO]     2 conduit shape(s) approximated as RECT (flagged on user_text_3)
+2026-08-19 15:01:32 [INFO]     validation: 0 error(s), 18 warning(s)
+2026-08-19 15:01:32 [INFO]     committed
+2026-08-19 15:01:32 [INFO] 
+----------------------------------------------------------------------
+2026-08-19 15:01:32 [INFO] [14/23] Processing: extran3_side_orifice_si_units.inp
+2026-08-19 15:01:32 [INFO] ----------------------------------------------------------------------
+2026-08-19 15:01:32 [INFO] PHASE 1: Importing SWMM5 data
+2026-08-19 15:01:33 [INFO]   Import duration: 0.45s
+2026-08-19 15:01:33 [INFO]   Imported 6 object(s); network 'extran3_side_orifice_si_units' (ID: 457)
+2026-08-19 15:01:33 [INFO]   Actual location: >MODG~Model group>IWSWNET~extran3_side_orifice_si_units
+2026-08-19 15:01:33 [INFO]   SUCCESS: Import completed.
+2026-08-19 15:01:33 [WARN]   importer: line 45: Unrecognized keyword "Outflows/Calibration" in [FILES] section:
+2026-08-19 15:01:33 [WARN]   importer: SAVE Outflows/Calibration "D:\SWMMandSoftware\SWMM5.013_June2018\EPASWMM5.1.013\Swmm5.1.013UpdateTests\OWA_EXTRAN\Extran3.txt"
+2026-08-19 15:01:33 [WARN]   importer: Outfalls of type Stage-Flow are not supported by EPA-SWMM. The following outfalls(s) [10208] have been reassigned to type Free. Verify the outfall properties prior to running a simulation.
+2026-08-19 15:01:33 [WARN]   importer: [TEMPERATURE] () has no matching [TIMESERIES]. Unable to create.
+2026-08-19 15:01:33 [INFO] PHASE 2: Cleaning up empty visualization labels (sw_label)
+2026-08-19 15:01:33 [INFO]   No 'sw_label' table in this network - nothing to clean.
+2026-08-19 15:01:33 [INFO] PHASE 3: Validation and Statistics
+2026-08-19 15:01:33 [INFO]   Statistics: Nodes=10, Links=10, Subs=0
+2026-08-19 15:01:33 [INFO]   Validation passed with no warnings.
+2026-08-19 15:01:33 [INFO] PHASE 4: ICM validation (scenario: Base)
+2026-08-19 15:01:33 [INFO]   Validation: 0 error(s), 0 warning(s)
+2026-08-19 15:01:33 [INFO] Network committed.
+2026-08-19 15:01:33 [INFO] SUCCESS: extran3_side_orifice_si_units.inp
+2026-08-19 15:01:33 [INFO]   InfoWorks shell created: 'extran3_side_orifice_si_units' (id 452)
+2026-08-19 15:01:33 [INFO]   Populated 'extran3_side_orifice_si_units': 10 nodes, 9 conduits, 0 subs, 0 storage curve(s)
+2026-08-19 15:01:33 [INFO]     units: LPS (SI)
+2026-08-19 15:01:33 [INFO]     sw_node fields: invert=invert_elevation max_depth=maximum_depth type=node_type
+2026-08-19 15:01:33 [INFO]     sw_conduit fields: h=conduit_height w=conduit_width shape=shape inverts=us_invert(abs)/ds_invert(abs)
+2026-08-19 15:01:33 [INFO]     2 conduit shape(s) approximated as RECT (flagged on user_text_3)
+2026-08-19 15:01:33 [INFO]     validation: 1 error(s), 18 warning(s)
+2026-08-19 15:01:33 [INFO]     NOT committed (validation errors) - inspect and fix
+2026-08-19 15:01:33 [INFO] 
+----------------------------------------------------------------------
+2026-08-19 15:01:33 [INFO] [15/23] Processing: extran3_side_rect_orifice _si_units.inp
+2026-08-19 15:01:33 [INFO] ----------------------------------------------------------------------
+2026-08-19 15:01:33 [INFO] PHASE 1: Importing SWMM5 data
+2026-08-19 15:01:34 [INFO]   Import duration: 0.45s
+2026-08-19 15:01:34 [INFO]   Imported 6 object(s); network 'extran3_side_rect_orifice _si_units' (ID: 458)
+2026-08-19 15:01:34 [INFO]   Actual location: >MODG~Model group>IWSWNET~extran3_side_rect_orifice _si_units
+2026-08-19 15:01:34 [INFO]   SUCCESS: Import completed.
+2026-08-19 15:01:34 [WARN]   importer: line 45: Unrecognized keyword "Outflows/Calibration" in [FILES] section:
+2026-08-19 15:01:34 [WARN]   importer: SAVE Outflows/Calibration "D:\SWMMandSoftware\SWMM5.013_June2018\EPASWMM5.1.013\Swmm5.1.013UpdateTests\OWA_EXTRAN\Extran3.txt"
+2026-08-19 15:01:34 [WARN]   importer: Outfalls of type Stage-Flow are not supported by EPA-SWMM. The following outfalls(s) [10208] have been reassigned to type Free. Verify the outfall properties prior to running a simulation.
+2026-08-19 15:01:34 [WARN]   importer: [TEMPERATURE] () has no matching [TIMESERIES]. Unable to create.
+2026-08-19 15:01:34 [INFO] PHASE 2: Cleaning up empty visualization labels (sw_label)
+2026-08-19 15:01:34 [INFO]   No 'sw_label' table in this network - nothing to clean.
+2026-08-19 15:01:34 [INFO] PHASE 3: Validation and Statistics
+2026-08-19 15:01:34 [INFO]   Statistics: Nodes=10, Links=10, Subs=0
+2026-08-19 15:01:34 [INFO]   Validation passed with no warnings.
+2026-08-19 15:01:34 [INFO] PHASE 4: ICM validation (scenario: Base)
+2026-08-19 15:01:34 [INFO]   Validation: 0 error(s), 0 warning(s)
+2026-08-19 15:01:34 [INFO] Network committed.
+2026-08-19 15:01:34 [INFO] SUCCESS: extran3_side_rect_orifice _si_units.inp
+2026-08-19 15:01:34 [INFO]   InfoWorks shell created: 'extran3_side_rect_orifice _si_units' (id 453)
+2026-08-19 15:01:34 [INFO]   Populated 'extran3_side_rect_orifice _si_units': 10 nodes, 9 conduits, 0 subs, 0 storage curve(s)
+2026-08-19 15:01:34 [INFO]     units: CFS (US - converting ft/acre/in to SI)
+2026-08-19 15:01:34 [INFO]     sw_node fields: invert=invert_elevation max_depth=maximum_depth type=node_type
+2026-08-19 15:01:34 [INFO]     sw_conduit fields: h=conduit_height w=conduit_width shape=shape inverts=us_invert(abs)/ds_invert(abs)
+2026-08-19 15:01:34 [INFO]     2 conduit shape(s) approximated as RECT (flagged on user_text_3)
+2026-08-19 15:01:34 [INFO]     validation: 0 error(s), 18 warning(s)
+2026-08-19 15:01:34 [INFO]     committed
+2026-08-19 15:01:34 [WARN]     skipped 1 x non-circular orifice -> equal-area diameter (approximation)
+2026-08-19 15:01:34 [INFO] 
+----------------------------------------------------------------------
+2026-08-19 15:01:34 [INFO] [16/23] Processing: extran3_side_rect_orifice.inp
+2026-08-19 15:01:34 [INFO] ----------------------------------------------------------------------
+2026-08-19 15:01:34 [INFO] PHASE 1: Importing SWMM5 data
+2026-08-19 15:01:35 [INFO]   Import duration: 0.41s
+2026-08-19 15:01:35 [INFO]   Imported 6 object(s); network 'extran3_side_rect_orifice' (ID: 459)
+2026-08-19 15:01:35 [INFO]   Actual location: >MODG~Model group>IWSWNET~extran3_side_rect_orifice
+2026-08-19 15:01:35 [INFO]   SUCCESS: Import completed.
+2026-08-19 15:01:35 [WARN]   importer: line 45: Unrecognized keyword "Outflows/Calibration" in [FILES] section:
+2026-08-19 15:01:35 [WARN]   importer: SAVE Outflows/Calibration "D:\SWMMandSoftware\SWMM5.013_June2018\EPASWMM5.1.013\Swmm5.1.013UpdateTests\OWA_EXTRAN\Extran3.txt"
+2026-08-19 15:01:35 [WARN]   importer: Outfalls of type Stage-Flow are not supported by EPA-SWMM. The following outfalls(s) [10208] have been reassigned to type Free. Verify the outfall properties prior to running a simulation.
+2026-08-19 15:01:35 [WARN]   importer: [TEMPERATURE] () has no matching [TIMESERIES]. Unable to create.
+2026-08-19 15:01:35 [INFO] PHASE 2: Cleaning up empty visualization labels (sw_label)
+2026-08-19 15:01:35 [INFO]   No 'sw_label' table in this network - nothing to clean.
+2026-08-19 15:01:35 [INFO] PHASE 3: Validation and Statistics
+2026-08-19 15:01:35 [INFO]   Statistics: Nodes=10, Links=10, Subs=0
+2026-08-19 15:01:35 [INFO]   Validation passed with no warnings.
+2026-08-19 15:01:35 [INFO] PHASE 4: ICM validation (scenario: Base)
+2026-08-19 15:01:35 [INFO]   Validation: 0 error(s), 0 warning(s)
+2026-08-19 15:01:35 [INFO] Network committed.
+2026-08-19 15:01:35 [INFO] SUCCESS: extran3_side_rect_orifice.inp
+2026-08-19 15:01:35 [INFO]   InfoWorks shell created: 'extran3_side_rect_orifice' (id 454)
+2026-08-19 15:01:36 [INFO]   Populated 'extran3_side_rect_orifice': 10 nodes, 9 conduits, 0 subs, 0 storage curve(s)
+2026-08-19 15:01:36 [INFO]     units: CFS (US - converting ft/acre/in to SI)
+2026-08-19 15:01:36 [INFO]     sw_node fields: invert=invert_elevation max_depth=maximum_depth type=node_type
+2026-08-19 15:01:36 [INFO]     sw_conduit fields: h=conduit_height w=conduit_width shape=shape inverts=us_invert(abs)/ds_invert(abs)
+2026-08-19 15:01:36 [INFO]     2 conduit shape(s) approximated as RECT (flagged on user_text_3)
+2026-08-19 15:01:36 [INFO]     validation: 0 error(s), 18 warning(s)
+2026-08-19 15:01:36 [INFO]     committed
+2026-08-19 15:01:36 [WARN]     skipped 1 x non-circular orifice -> equal-area diameter (approximation)
+2026-08-19 15:01:36 [INFO] 
+----------------------------------------------------------------------
+2026-08-19 15:01:36 [INFO] [17/23] Processing: extran4.inp
+2026-08-19 15:01:36 [INFO] ----------------------------------------------------------------------
+2026-08-19 15:01:36 [INFO] PHASE 1: Importing SWMM5 data
+2026-08-19 15:01:36 [INFO]   Import duration: 0.39s
+2026-08-19 15:01:36 [INFO]   Imported 6 object(s); network 'extran4' (ID: 460)
+2026-08-19 15:01:36 [INFO]   Actual location: >MODG~Model group>IWSWNET~extran4
+2026-08-19 15:01:36 [INFO]   Renamed network to 'extran4_2'
+2026-08-19 15:01:36 [INFO]   SUCCESS: Import completed.
+2026-08-19 15:01:36 [WARN]   importer: line 46: Unrecognized keyword "Outflows/Calibration" in [FILES] section:
+2026-08-19 15:01:36 [WARN]   importer: SAVE Outflows/Calibration "D:\SWMMandSoftware\SWMM5.013_June2018\EPASWMM5.1.013\Swmm5.1.013UpdateTests\OWA_EXTRAN\Extran4.txt"
+2026-08-19 15:01:36 [WARN]   importer: Outfalls of type Stage-Flow are not supported by EPA-SWMM. The following outfalls(s) [10208] have been reassigned to type Free. Verify the outfall properties prior to running a simulation.
+2026-08-19 15:01:36 [WARN]   importer: [TEMPERATURE] () has no matching [TIMESERIES]. Unable to create.
+2026-08-19 15:01:36 [INFO] PHASE 2: Cleaning up empty visualization labels (sw_label)
+2026-08-19 15:01:36 [INFO]   No 'sw_label' table in this network - nothing to clean.
+2026-08-19 15:01:36 [INFO] PHASE 3: Validation and Statistics
+2026-08-19 15:01:36 [INFO]   Statistics: Nodes=10, Links=10, Subs=0
+2026-08-19 15:01:36 [INFO]   Validation passed with no warnings.
+2026-08-19 15:01:36 [INFO] PHASE 4: ICM validation (scenario: Base)
+2026-08-19 15:01:36 [INFO]   Validation: 0 error(s), 0 warning(s)
+2026-08-19 15:01:36 [INFO] Network committed.
+2026-08-19 15:01:36 [INFO] SUCCESS: extran4.inp
+2026-08-19 15:01:37 [INFO]   InfoWorks shell created: 'extran4_2' (id 455)
+2026-08-19 15:01:37 [INFO]   Populated 'extran4_2': 10 nodes, 9 conduits, 0 subs, 0 storage curve(s)
+2026-08-19 15:01:37 [INFO]     units: CFS (US - converting ft/acre/in to SI)
+2026-08-19 15:01:37 [INFO]     sw_node fields: invert=invert_elevation max_depth=maximum_depth type=node_type
+2026-08-19 15:01:37 [INFO]     sw_conduit fields: h=conduit_height w=conduit_width shape=shape inverts=us_invert(abs)/ds_invert(abs)
+2026-08-19 15:01:37 [INFO]     2 conduit shape(s) approximated as RECT (flagged on user_text_3)
+2026-08-19 15:01:37 [INFO]     validation: 0 error(s), 18 warning(s)
+2026-08-19 15:01:37 [INFO]     committed
+2026-08-19 15:01:37 [INFO] 
+----------------------------------------------------------------------
+2026-08-19 15:01:37 [INFO] [18/23] Processing: extran4_no_surcharge.inp
+2026-08-19 15:01:37 [INFO] ----------------------------------------------------------------------
+2026-08-19 15:01:37 [INFO] PHASE 1: Importing SWMM5 data
+2026-08-19 15:01:37 [INFO]   Import duration: 0.40s
+2026-08-19 15:01:37 [INFO]   Imported 6 object(s); network 'extran4_no_surcharge' (ID: 461)
+2026-08-19 15:01:37 [INFO]   Actual location: >MODG~Model group>IWSWNET~extran4_no_surcharge
+2026-08-19 15:01:37 [INFO]   SUCCESS: Import completed.
+2026-08-19 15:01:37 [WARN]   importer: line 46: Unrecognized keyword "Outflows/Calibration" in [FILES] section:
+2026-08-19 15:01:37 [WARN]   importer: SAVE Outflows/Calibration "D:\SWMMandSoftware\SWMM5.013_June2018\EPASWMM5.1.013\Swmm5.1.013UpdateTests\OWA_EXTRAN\Extran4.txt"
+2026-08-19 15:01:37 [WARN]   importer: Outfalls of type Stage-Flow are not supported by EPA-SWMM. The following outfalls(s) [10208] have been reassigned to type Free. Verify the outfall properties prior to running a simulation.
+2026-08-19 15:01:37 [WARN]   importer: [TEMPERATURE] () has no matching [TIMESERIES]. Unable to create.
+2026-08-19 15:01:37 [INFO] PHASE 2: Cleaning up empty visualization labels (sw_label)
+2026-08-19 15:01:37 [INFO]   No 'sw_label' table in this network - nothing to clean.
+2026-08-19 15:01:37 [INFO] PHASE 3: Validation and Statistics
+2026-08-19 15:01:37 [INFO]   Statistics: Nodes=10, Links=10, Subs=0
+2026-08-19 15:01:37 [INFO]   Validation passed with no warnings.
+2026-08-19 15:01:37 [INFO] PHASE 4: ICM validation (scenario: Base)
+2026-08-19 15:01:37 [INFO]   Validation: 0 error(s), 0 warning(s)
+2026-08-19 15:01:37 [INFO] Network committed.
+2026-08-19 15:01:37 [INFO] SUCCESS: extran4_no_surcharge.inp
+2026-08-19 15:01:38 [INFO]   InfoWorks shell created: 'extran4_no_surcharge' (id 456)
+2026-08-19 15:01:38 [INFO]   Populated 'extran4_no_surcharge': 10 nodes, 9 conduits, 0 subs, 0 storage curve(s)
+2026-08-19 15:01:38 [INFO]     units: CFS (US - converting ft/acre/in to SI)
+2026-08-19 15:01:38 [INFO]     sw_node fields: invert=invert_elevation max_depth=maximum_depth type=node_type
+2026-08-19 15:01:38 [INFO]     sw_conduit fields: h=conduit_height w=conduit_width shape=shape inverts=us_invert(abs)/ds_invert(abs)
+2026-08-19 15:01:38 [INFO]     2 conduit shape(s) approximated as RECT (flagged on user_text_3)
+2026-08-19 15:01:38 [INFO]     validation: 0 error(s), 18 warning(s)
+2026-08-19 15:01:38 [INFO]     committed
+2026-08-19 15:01:38 [INFO] 
+----------------------------------------------------------------------
+2026-08-19 15:01:38 [INFO] [19/23] Processing: extran4_roadway.inp
+2026-08-19 15:01:38 [INFO] ----------------------------------------------------------------------
+2026-08-19 15:01:38 [INFO] PHASE 1: Importing SWMM5 data
+2026-08-19 15:01:38 [INFO]   Import duration: 0.44s
+2026-08-19 15:01:38 [INFO]   Imported 6 object(s); network 'extran4_roadway' (ID: 462)
+2026-08-19 15:01:38 [INFO]   Actual location: >MODG~Model group>IWSWNET~extran4_roadway
+2026-08-19 15:01:38 [INFO]   SUCCESS: Import completed.
+2026-08-19 15:01:38 [WARN]   importer: line 46: Unrecognized keyword "Outflows/Calibration" in [FILES] section:
+2026-08-19 15:01:38 [WARN]   importer: SAVE Outflows/Calibration "D:\SWMMandSoftware\SWMM5.013_June2018\EPASWMM5.1.013\Swmm5.1.013UpdateTests\OWA_EXTRAN\Extran4.txt"
+2026-08-19 15:01:38 [WARN]   importer: Outfalls of type Stage-Flow are not supported by EPA-SWMM. The following outfalls(s) [10208] have been reassigned to type Free. Verify the outfall properties prior to running a simulation.
+2026-08-19 15:01:38 [WARN]   importer: [TEMPERATURE] () has no matching [TIMESERIES]. Unable to create.
+2026-08-19 15:01:38 [INFO] PHASE 2: Cleaning up empty visualization labels (sw_label)
+2026-08-19 15:01:38 [INFO]   No 'sw_label' table in this network - nothing to clean.
+2026-08-19 15:01:38 [INFO] PHASE 3: Validation and Statistics
+2026-08-19 15:01:38 [INFO]   Statistics: Nodes=10, Links=10, Subs=0
+2026-08-19 15:01:38 [INFO]   Validation passed with no warnings.
+2026-08-19 15:01:38 [INFO] PHASE 4: ICM validation (scenario: Base)
+2026-08-19 15:01:38 [INFO]   Validation: 0 error(s), 0 warning(s)
+2026-08-19 15:01:38 [INFO] Network committed.
+2026-08-19 15:01:38 [INFO] SUCCESS: extran4_roadway.inp
+2026-08-19 15:01:39 [INFO]   InfoWorks shell created: 'extran4_roadway' (id 457)
+2026-08-19 15:01:39 [INFO]   Populated 'extran4_roadway': 10 nodes, 9 conduits, 0 subs, 0 storage curve(s)
+2026-08-19 15:01:39 [INFO]     units: CFS (US - converting ft/acre/in to SI)
+2026-08-19 15:01:39 [INFO]     sw_node fields: invert=invert_elevation max_depth=maximum_depth type=node_type
+2026-08-19 15:01:39 [INFO]     sw_conduit fields: h=conduit_height w=conduit_width shape=shape inverts=us_invert(abs)/ds_invert(abs)
+2026-08-19 15:01:39 [INFO]     2 conduit shape(s) approximated as RECT (flagged on user_text_3)
+2026-08-19 15:01:39 [INFO]     validation: 0 error(s), 18 warning(s)
+2026-08-19 15:01:39 [INFO]     committed
+2026-08-19 15:01:39 [WARN]     skipped 1 x roadway weir approximated as transverse
+2026-08-19 15:01:39 [INFO] 
+----------------------------------------------------------------------
+2026-08-19 15:01:39 [INFO] [20/23] Processing: extran4_sideflow.inp
+2026-08-19 15:01:39 [INFO] ----------------------------------------------------------------------
+2026-08-19 15:01:39 [INFO] PHASE 1: Importing SWMM5 data
+2026-08-19 15:01:39 [INFO]   Import duration: 0.42s
+2026-08-19 15:01:39 [INFO]   Imported 6 object(s); network 'extran4_sideflow' (ID: 463)
+2026-08-19 15:01:39 [INFO]   Actual location: >MODG~Model group>IWSWNET~extran4_sideflow
+2026-08-19 15:01:39 [INFO]   SUCCESS: Import completed.
+2026-08-19 15:01:39 [WARN]   importer: line 46: Unrecognized keyword "Outflows/Calibration" in [FILES] section:
+2026-08-19 15:01:39 [WARN]   importer: SAVE Outflows/Calibration "D:\SWMMandSoftware\SWMM5.013_June2018\EPASWMM5.1.013\Swmm5.1.013UpdateTests\OWA_EXTRAN\Extran4.txt"
+2026-08-19 15:01:39 [WARN]   importer: Outfalls of type Stage-Flow are not supported by EPA-SWMM. The following outfalls(s) [10208] have been reassigned to type Free. Verify the outfall properties prior to running a simulation.
+2026-08-19 15:01:39 [WARN]   importer: [TEMPERATURE] () has no matching [TIMESERIES]. Unable to create.
+2026-08-19 15:01:39 [INFO] PHASE 2: Cleaning up empty visualization labels (sw_label)
+2026-08-19 15:01:39 [INFO]   No 'sw_label' table in this network - nothing to clean.
+2026-08-19 15:01:39 [INFO] PHASE 3: Validation and Statistics
+2026-08-19 15:01:39 [INFO]   Statistics: Nodes=10, Links=10, Subs=0
+2026-08-19 15:01:39 [INFO]   Validation passed with no warnings.
+2026-08-19 15:01:39 [INFO] PHASE 4: ICM validation (scenario: Base)
+2026-08-19 15:01:39 [INFO]   Validation: 0 error(s), 0 warning(s)
+2026-08-19 15:01:39 [INFO] Network committed.
+2026-08-19 15:01:39 [INFO] SUCCESS: extran4_sideflow.inp
+2026-08-19 15:01:40 [INFO]   InfoWorks shell created: 'extran4_sideflow' (id 458)
+2026-08-19 15:01:40 [INFO]   Populated 'extran4_sideflow': 10 nodes, 9 conduits, 0 subs, 0 storage curve(s)
+2026-08-19 15:01:40 [INFO]     units: CFS (US - converting ft/acre/in to SI)
+2026-08-19 15:01:40 [INFO]     sw_node fields: invert=invert_elevation max_depth=maximum_depth type=node_type
+2026-08-19 15:01:40 [INFO]     sw_conduit fields: h=conduit_height w=conduit_width shape=shape inverts=us_invert(abs)/ds_invert(abs)
+2026-08-19 15:01:40 [INFO]     2 conduit shape(s) approximated as RECT (flagged on user_text_3)
+2026-08-19 15:01:40 [INFO]     validation: 0 error(s), 18 warning(s)
+2026-08-19 15:01:40 [INFO]     committed
+2026-08-19 15:01:40 [INFO] 
+----------------------------------------------------------------------
+2026-08-19 15:01:40 [INFO] [21/23] Processing: extran4_trapezoidal.inp
+2026-08-19 15:01:40 [INFO] ----------------------------------------------------------------------
+2026-08-19 15:01:40 [INFO] PHASE 1: Importing SWMM5 data
+2026-08-19 15:01:41 [INFO]   Import duration: 0.43s
+2026-08-19 15:01:41 [INFO]   Imported 6 object(s); network 'extran4_trapezoidal' (ID: 464)
+2026-08-19 15:01:41 [INFO]   Actual location: >MODG~Model group>IWSWNET~extran4_trapezoidal
+2026-08-19 15:01:41 [INFO]   SUCCESS: Import completed.
+2026-08-19 15:01:41 [WARN]   importer: line 46: Unrecognized keyword "Outflows/Calibration" in [FILES] section:
+2026-08-19 15:01:41 [WARN]   importer: SAVE Outflows/Calibration "D:\SWMMandSoftware\SWMM5.013_June2018\EPASWMM5.1.013\Swmm5.1.013UpdateTests\OWA_EXTRAN\Extran4.txt"
+2026-08-19 15:01:41 [WARN]   importer: Outfalls of type Stage-Flow are not supported by EPA-SWMM. The following outfalls(s) [10208] have been reassigned to type Free. Verify the outfall properties prior to running a simulation.
+2026-08-19 15:01:41 [WARN]   importer: [TEMPERATURE] () has no matching [TIMESERIES]. Unable to create.
+2026-08-19 15:01:41 [INFO] PHASE 2: Cleaning up empty visualization labels (sw_label)
+2026-08-19 15:01:41 [INFO]   No 'sw_label' table in this network - nothing to clean.
+2026-08-19 15:01:41 [INFO] PHASE 3: Validation and Statistics
+2026-08-19 15:01:41 [INFO]   Statistics: Nodes=10, Links=10, Subs=0
+2026-08-19 15:01:41 [INFO]   Validation passed with no warnings.
+2026-08-19 15:01:41 [INFO] PHASE 4: ICM validation (scenario: Base)
+2026-08-19 15:01:41 [INFO]   Validation: 0 error(s), 0 warning(s)
+2026-08-19 15:01:41 [INFO] Network committed.
+2026-08-19 15:01:41 [INFO] SUCCESS: extran4_trapezoidal.inp
+2026-08-19 15:01:41 [INFO]   InfoWorks shell created: 'extran4_trapezoidal' (id 459)
+2026-08-19 15:01:41 [INFO]   Populated 'extran4_trapezoidal': 10 nodes, 9 conduits, 0 subs, 0 storage curve(s)
+2026-08-19 15:01:41 [INFO]     units: CFS (US - converting ft/acre/in to SI)
+2026-08-19 15:01:41 [INFO]     sw_node fields: invert=invert_elevation max_depth=maximum_depth type=node_type
+2026-08-19 15:01:41 [INFO]     sw_conduit fields: h=conduit_height w=conduit_width shape=shape inverts=us_invert(abs)/ds_invert(abs)
+2026-08-19 15:01:41 [INFO]     2 conduit shape(s) approximated as RECT (flagged on user_text_3)
+2026-08-19 15:01:41 [INFO]     validation: 0 error(s), 18 warning(s)
+2026-08-19 15:01:41 [INFO]     committed
+2026-08-19 15:01:41 [WARN]     skipped 1 x trapezoidal weir: coefficient left at ICM default (as ICM does)
+2026-08-19 15:01:41 [INFO] 
+----------------------------------------------------------------------
+2026-08-19 15:01:41 [INFO] [22/23] Processing: extran4_vnotch.inp
+2026-08-19 15:01:41 [INFO] ----------------------------------------------------------------------
+2026-08-19 15:01:41 [INFO] PHASE 1: Importing SWMM5 data
+2026-08-19 15:01:42 [INFO]   Import duration: 0.45s
+2026-08-19 15:01:42 [INFO]   Imported 6 object(s); network 'extran4_vnotch' (ID: 465)
+2026-08-19 15:01:42 [INFO]   Actual location: >MODG~Model group>IWSWNET~extran4_vnotch
+2026-08-19 15:01:42 [INFO]   SUCCESS: Import completed.
+2026-08-19 15:01:42 [WARN]   importer: line 46: Unrecognized keyword "Outflows/Calibration" in [FILES] section:
+2026-08-19 15:01:42 [WARN]   importer: SAVE Outflows/Calibration "Extran4.txt"
+2026-08-19 15:01:42 [WARN]   importer: Outfalls of type Stage-Flow are not supported by EPA-SWMM. The following outfalls(s) [10208] have been reassigned to type Free. Verify the outfall properties prior to running a simulation.
+2026-08-19 15:01:42 [WARN]   importer: [TEMPERATURE] () has no matching [TIMESERIES]. Unable to create.
+2026-08-19 15:01:42 [INFO] PHASE 2: Cleaning up empty visualization labels (sw_label)
+2026-08-19 15:01:42 [INFO]   No 'sw_label' table in this network - nothing to clean.
+2026-08-19 15:01:42 [INFO] PHASE 3: Validation and Statistics
+2026-08-19 15:01:42 [INFO]   Statistics: Nodes=10, Links=10, Subs=0
+2026-08-19 15:01:42 [INFO]   Validation passed with no warnings.
+2026-08-19 15:01:42 [INFO] PHASE 4: ICM validation (scenario: Base)
+2026-08-19 15:01:42 [INFO]   Validation: 0 error(s), 0 warning(s)
+2026-08-19 15:01:42 [INFO] Network committed.
+2026-08-19 15:01:42 [INFO] SUCCESS: extran4_vnotch.inp
+2026-08-19 15:01:42 [INFO]   InfoWorks shell created: 'extran4_vnotch' (id 460)
+2026-08-19 15:01:42 [INFO]   Populated 'extran4_vnotch': 10 nodes, 9 conduits, 0 subs, 0 storage curve(s)
+2026-08-19 15:01:42 [INFO]     units: CFS (US - converting ft/acre/in to SI)
+2026-08-19 15:01:42 [INFO]     sw_node fields: invert=invert_elevation max_depth=maximum_depth type=node_type
+2026-08-19 15:01:42 [INFO]     sw_conduit fields: h=conduit_height w=conduit_width shape=shape inverts=us_invert(abs)/ds_invert(abs)
+2026-08-19 15:01:42 [INFO]     2 conduit shape(s) approximated as RECT (flagged on user_text_3)
+2026-08-19 15:01:42 [INFO]     validation: 0 error(s), 18 warning(s)
+2026-08-19 15:01:42 [INFO]     committed
+2026-08-19 15:01:42 [INFO] 
+----------------------------------------------------------------------
+2026-08-19 15:01:42 [INFO] [23/23] Processing: v14RTCManyRules.inp
+2026-08-19 15:01:42 [INFO] ----------------------------------------------------------------------
+2026-08-19 15:01:42 [INFO] PHASE 1: Importing SWMM5 data
+2026-08-19 15:01:43 [INFO]   Import duration: 0.62s
+2026-08-19 15:01:43 [INFO]   Imported 7 object(s); network 'v14RTCManyRules' (ID: 466)
+2026-08-19 15:01:43 [INFO]   Actual location: >MODG~Model group>IWSWNET~v14RTCManyRules
+2026-08-19 15:01:43 [INFO]   SUCCESS: Import completed.
+2026-08-19 15:01:43 [WARN]   importer: Outfalls of type Stage-Flow are not supported by EPA-SWMM. The following outfalls(s) [10208, 10208B, 10208C, 10208D, 10208E] have been reassigned to type Free. Verify the outfall properties prior to running a simulation.
+2026-08-19 15:01:43 [WARN]   importer: [TEMPERATURE] () has no matching [TIMESERIES]. Unable to create.
+2026-08-19 15:01:43 [INFO] PHASE 2: Cleaning up empty visualization labels (sw_label)
+2026-08-19 15:01:43 [INFO]   No 'sw_label' table in this network - nothing to clean.
+2026-08-19 15:01:43 [INFO] PHASE 3: Validation and Statistics
+2026-08-19 15:01:43 [INFO]   Statistics: Nodes=61, Links=60, Subs=0
+2026-08-19 15:01:43 [INFO]   Validation passed with no warnings.
+2026-08-19 15:01:43 [INFO] PHASE 4: ICM validation (scenario: Base)
+2026-08-19 15:01:43 [INFO]   Validation: 0 error(s), 1 warning(s)
+2026-08-19 15:01:43 [INFO]   Validation messages written to: v14RTCManyRules_Validation.txt
+2026-08-19 15:01:43 [WARN]   WARNING: ICM validation could not run: undefined method 'each_with_index' for an instance of WSValidations
+2026-08-19 15:01:43 [INFO] Network committed.
+2026-08-19 15:01:43 [INFO] SUCCESS: v14RTCManyRules.inp
+2026-08-19 15:01:44 [INFO]   InfoWorks shell created: 'v14RTCManyRules' (id 461)
+2026-08-19 15:01:44 [INFO]   Populated 'v14RTCManyRules': 61 nodes, 54 conduits, 0 subs, 0 storage curve(s)
+2026-08-19 15:01:44 [INFO]     units: CFS (US - converting ft/acre/in to SI)
+2026-08-19 15:01:44 [INFO]     sw_node fields: invert=invert_elevation max_depth=maximum_depth type=node_type
+2026-08-19 15:01:44 [INFO]     sw_conduit fields: h=conduit_height w=conduit_width shape=shape inverts=us_invert(abs)/ds_invert(abs)
+2026-08-19 15:01:44 [INFO]     12 conduit shape(s) approximated as RECT (flagged on user_text_3)
+2026-08-19 15:01:44 [INFO]     7 terminal sink(s) - E2050 upstream of each unless made an outfall. SUGGESTED OUTFALLS (by upstream nodes): 16109(7 up), 16109A(7 up), 16109B(7 up), 16109C(7 up), 16109D(7 up), 16109E(7 up), 82308D(3 up)
+2026-08-19 15:01:44 [INFO]     validation: 0 error(s), 108 warning(s)
+2026-08-19 15:01:44 [INFO]     committed
+2026-08-19 15:01:44 [WARN]     skipped 2 x storage->manhole (no tabular curve)
+2026-08-19 15:01:44 [WARN]     skipped 3 x pump (curve 'PUMP1_CURVE' unreadable - pump not written)
+2026-08-19 15:01:44 [INFO] 
+======================================================================
+2026-08-19 15:01:44 [INFO] BATCH IMPORT SUMMARY
+2026-08-19 15:01:44 [INFO] ======================================================================
+2026-08-19 15:01:44 [INFO] Total duration: 29.02s
+2026-08-19 15:01:44 [INFO] Files processed: 23
+2026-08-19 15:01:44 [INFO] Successful: 23
+2026-08-19 15:01:44 [INFO] Failed: 0
+2026-08-19 15:01:44 [INFO] Imported but NOT committed (validation errors): 0
+2026-08-19 15:01:44 [INFO] Blank InfoWorks shells: 23 created, 0 skipped, 0 failed
+2026-08-19 15:01:44 [INFO] 
+Aggregate Statistics:
+2026-08-19 15:01:44 [INFO]   Nodes: 279
+2026-08-19 15:01:44 [INFO]   Links: 278
+2026-08-19 15:01:44 [INFO]   Subcatchments: 4
+2026-08-19 15:01:44 [INFO]   Empty Labels Cleaned: 0
+2026-08-19 15:01:44 [INFO] 
+Performance Metrics:
+2026-08-19 15:01:44 [INFO]   Total Import Time: 11.83s (Avg: 0.51s)
+2026-08-19 15:01:44 [INFO] HTML report: C:/Users/rober/GitHub/1729-SWMM5-Models-2030/Weirs/ICM Import Log Files/SWMM5_Import_Report_20260819_150144.html

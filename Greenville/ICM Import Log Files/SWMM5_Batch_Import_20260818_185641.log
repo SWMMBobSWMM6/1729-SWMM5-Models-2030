@@ -1,0 +1,107 @@
+# Logfile created on 2026-08-18 18:56:41 -0400 by logger.rb/v1.6.4
+2026-08-18 18:56:41 [INFO] ======================================================================
+2026-08-18 18:56:41 [INFO] SWMM5 Import to ICM (V3) - Exchange Script Initialized
+2026-08-18 18:56:41 [INFO] ======================================================================
+2026-08-18 18:56:41 [INFO] Database GUID: 8ACA688A-03AD-436D-ACF2-A78E65A39290
+2026-08-18 18:56:41 [INFO] Files to process: 3
+2026-08-18 18:56:41 [INFO] 
+======================================================================
+2026-08-18 18:56:41 [INFO] BATCH PROCESSING STARTING
+2026-08-18 18:56:41 [INFO] ======================================================================
+2026-08-18 18:56:41 [WARN] Could not resolve group id 16: Error 13 : File Not Found : C:\Users\rober\OneDrive\Documents\8ACA688A-03AD-436D-ACF2-A78E65A39290\MODG16.DAT (error=2: "The system cannot find the file specified."), ModelObject "Model Group"
+2026-08-18 18:56:41 [INFO] Target Model Group by name: 'user4'
+2026-08-18 18:56:41 [INFO] Target Model Group: 'user4' (ID: 2)
+2026-08-18 18:56:41 [INFO] 
+----------------------------------------------------------------------
+2026-08-18 18:56:41 [INFO] [1/3] Processing: Greenville_all_SWMM5_Features.inp
+2026-08-18 18:56:41 [INFO] ----------------------------------------------------------------------
+2026-08-18 18:56:41 [INFO] PHASE 1: Importing SWMM5 data
+2026-08-18 18:56:42 [INFO]   Import duration: 1.10s
+2026-08-18 18:56:42 [INFO]   Imported 7 object(s); network 'Greenville_all_SWMM5_Features' (ID: 19)
+2026-08-18 18:56:42 [INFO]   Actual location: >MODG~user4>IWSWNET~Greenville_all_SWMM5_Features
+2026-08-18 18:56:42 [INFO]   SUCCESS: Import completed.
+2026-08-18 18:56:42 [WARN]   importer: [DIVIDERS] unsupported. Converted [DIVIDERS] (333) into junction.
+2026-08-18 18:56:42 [WARN]   importer: Outfalls of type Stage-Flow are not supported by EPA-SWMM. The following outfalls(s) [DUMMYOUTFALL, OFALL-10, OFALL-12, VIADUCT1, VIADUCT2] have been reassigned to type Free. Verify the outfall properties prior to running a simulation.
+2026-08-18 18:56:42 [WARN]   importer: [XSECTIONS] (1307) uses an older format pre-defined shapes size - please use Standard Size material and size code accordingly.
+2026-08-18 18:56:42 [WARN]   importer: [XSECTIONS] (3690) uses an older format pre-defined shapes size - please use Standard Size material and size code accordingly.
+2026-08-18 18:56:42 [INFO] PHASE 2: Cleaning up empty visualization labels (sw_label)
+2026-08-18 18:56:42 [INFO]   No 'sw_label' table in this network - nothing to clean.
+2026-08-18 18:56:42 [INFO] PHASE 3: Validation and Statistics
+2026-08-18 18:56:42 [INFO]   Statistics: Nodes=172, Links=235, Subs=30
+2026-08-18 18:56:42 [ERROR]   ERROR during validation/statistics analysis: undefined method 'node_id' for an instance of WSRowObject
+2026-08-18 18:56:42 [INFO] PHASE 4: ICM validation (scenario: Base)
+2026-08-18 18:56:42 [INFO]   Validation: 0 error(s), 34 warning(s)
+2026-08-18 18:56:42 [INFO]   Validation messages written to: Greenville_all_SWMM5_Features_Validation.txt
+2026-08-18 18:56:42 [WARN]   WARNING: ICM validation could not run: undefined method 'each_with_index' for an instance of WSValidations
+2026-08-18 18:56:43 [INFO] Network committed.
+2026-08-18 18:56:43 [INFO] SUCCESS: Greenville_all_SWMM5_Features.inp
+2026-08-18 18:56:43 [INFO]   InfoWorks shell created: 'Greenville_all_SWMM5_Features' (id 18)
+2026-08-18 18:56:43 [INFO] 
+----------------------------------------------------------------------
+2026-08-18 18:56:43 [INFO] [2/3] Processing: Greenville_all_SWMM5_Features_SI_Units.inp
+2026-08-18 18:56:43 [INFO] ----------------------------------------------------------------------
+2026-08-18 18:56:43 [INFO] PHASE 1: Importing SWMM5 data
+2026-08-18 18:56:44 [INFO]   Import duration: 0.95s
+2026-08-18 18:56:44 [INFO]   Imported 7 object(s); network 'Greenville_all_SWMM5_Features_SI_Units' (ID: 20)
+2026-08-18 18:56:44 [INFO]   Actual location: >MODG~user4>IWSWNET~Greenville_all_SWMM5_Features_SI_Units
+2026-08-18 18:56:44 [INFO]   SUCCESS: Import completed.
+2026-08-18 18:56:44 [WARN]   importer: [DIVIDERS] unsupported. Converted [DIVIDERS] (333) into junction.
+2026-08-18 18:56:44 [WARN]   importer: Outfalls of type Stage-Flow are not supported by EPA-SWMM. The following outfalls(s) [DUMMYOUTFALL, OFALL-10, OFALL-12, VIADUCT1, VIADUCT2] have been reassigned to type Free. Verify the outfall properties prior to running a simulation.
+2026-08-18 18:56:44 [WARN]   importer: [XSECTIONS] (1307) uses an older format pre-defined shapes size - please use Standard Size material and size code accordingly.
+2026-08-18 18:56:44 [WARN]   importer: [XSECTIONS] (3690) uses an older format pre-defined shapes size - please use Standard Size material and size code accordingly.
+2026-08-18 18:56:44 [INFO] PHASE 2: Cleaning up empty visualization labels (sw_label)
+2026-08-18 18:56:44 [INFO]   No 'sw_label' table in this network - nothing to clean.
+2026-08-18 18:56:44 [INFO] PHASE 3: Validation and Statistics
+2026-08-18 18:56:44 [INFO]   Statistics: Nodes=172, Links=235, Subs=30
+2026-08-18 18:56:44 [ERROR]   ERROR during validation/statistics analysis: undefined method 'node_id' for an instance of WSRowObject
+2026-08-18 18:56:44 [INFO] PHASE 4: ICM validation (scenario: Base)
+2026-08-18 18:56:44 [INFO]   Validation: 0 error(s), 35 warning(s)
+2026-08-18 18:56:44 [INFO]   Validation messages written to: Greenville_all_SWMM5_Features_SI_Units_Validation.txt
+2026-08-18 18:56:44 [WARN]   WARNING: ICM validation could not run: undefined method 'each_with_index' for an instance of WSValidations
+2026-08-18 18:56:44 [INFO] Network committed.
+2026-08-18 18:56:44 [INFO] SUCCESS: Greenville_all_SWMM5_Features_SI_Units.inp
+2026-08-18 18:56:45 [INFO]   InfoWorks shell created: 'Greenville_all_SWMM5_Features_SI_Units' (id 19)
+2026-08-18 18:56:45 [INFO] 
+----------------------------------------------------------------------
+2026-08-18 18:56:45 [INFO] [3/3] Processing: Greenville_small_snowmelt_model.inp
+2026-08-18 18:56:45 [INFO] ----------------------------------------------------------------------
+2026-08-18 18:56:45 [INFO] PHASE 1: Importing SWMM5 data
+2026-08-18 18:56:46 [INFO]   Import duration: 0.73s
+2026-08-18 18:56:46 [INFO]   Imported 7 object(s); network 'Greenville_small_snowmelt_model' (ID: 21)
+2026-08-18 18:56:46 [INFO]   Actual location: >MODG~user4>IWSWNET~Greenville_small_snowmelt_model
+2026-08-18 18:56:46 [INFO]   SUCCESS: Import completed.
+2026-08-18 18:56:46 [WARN]   importer: line 58: Unrecognized keyword "FILE" in [TEMPERATURE] section:
+2026-08-18 18:56:46 [WARN]   importer: WINDSPEED FILE
+2026-08-18 18:56:46 [WARN]   importer: Outfalls of type Stage-Flow are not supported by EPA-SWMM. The following outfalls(s) [VIADUCT2] have been reassigned to type Free. Verify the outfall properties prior to running a simulation.
+2026-08-18 18:56:46 [INFO] PHASE 2: Cleaning up empty visualization labels (sw_label)
+2026-08-18 18:56:46 [INFO]   No 'sw_label' table in this network - nothing to clean.
+2026-08-18 18:56:46 [INFO] PHASE 3: Validation and Statistics
+2026-08-18 18:56:46 [INFO]   Statistics: Nodes=5, Links=5, Subs=2
+2026-08-18 18:56:46 [ERROR]   ERROR during validation/statistics analysis: undefined method 'node_id' for an instance of WSRowObject
+2026-08-18 18:56:46 [INFO] PHASE 4: ICM validation (scenario: Base)
+2026-08-18 18:56:46 [INFO]   Validation: 0 error(s), 14 warning(s)
+2026-08-18 18:56:46 [INFO]   Validation messages written to: Greenville_small_snowmelt_model_Validation.txt
+2026-08-18 18:56:46 [WARN]   WARNING: ICM validation could not run: undefined method 'each_with_index' for an instance of WSValidations
+2026-08-18 18:56:46 [INFO] Network committed.
+2026-08-18 18:56:46 [INFO] SUCCESS: Greenville_small_snowmelt_model.inp
+2026-08-18 18:56:46 [INFO]   InfoWorks shell created: 'Greenville_small_snowmelt_model' (id 20)
+2026-08-18 18:56:46 [INFO] 
+======================================================================
+2026-08-18 18:56:46 [INFO] BATCH IMPORT SUMMARY
+2026-08-18 18:56:46 [INFO] ======================================================================
+2026-08-18 18:56:46 [INFO] Total duration: 5.12s
+2026-08-18 18:56:46 [INFO] Files processed: 3
+2026-08-18 18:56:46 [INFO] Successful: 3
+2026-08-18 18:56:46 [INFO] Failed: 0
+2026-08-18 18:56:46 [INFO] Imported but NOT committed (validation errors): 0
+2026-08-18 18:56:46 [INFO] Blank InfoWorks shells: 3 created, 0 skipped, 0 failed
+2026-08-18 18:56:46 [INFO] 
+Aggregate Statistics:
+2026-08-18 18:56:46 [INFO]   Nodes: 349
+2026-08-18 18:56:46 [INFO]   Links: 475
+2026-08-18 18:56:46 [INFO]   Subcatchments: 62
+2026-08-18 18:56:46 [INFO]   Empty Labels Cleaned: 0
+2026-08-18 18:56:46 [INFO] 
+Performance Metrics:
+2026-08-18 18:56:46 [INFO]   Total Import Time: 2.79s (Avg: 0.93s)
+2026-08-18 18:56:46 [INFO] HTML report: C:/Users/rober/GitHub/1729-SWMM5-Models-2030/Greenville/ICM Import Log Files/SWMM5_Import_Report_20260818_185646.html

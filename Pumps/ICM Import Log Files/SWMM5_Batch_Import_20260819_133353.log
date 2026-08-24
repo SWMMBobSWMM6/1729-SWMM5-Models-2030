@@ -1,0 +1,453 @@
+# Logfile created on 2026-08-19 13:33:53 -0400 by logger.rb/v1.6.4
+2026-08-19 13:33:53 [INFO] ======================================================================
+2026-08-19 13:33:53 [INFO] SWMM5 Import to ICM (V3) - Exchange Script Initialized
+2026-08-19 13:33:53 [INFO] ======================================================================
+2026-08-19 13:33:53 [INFO] Database GUID: 8ACA688A-03AD-436D-ACF2-A78E65A39290
+2026-08-19 13:33:53 [INFO] Files to process: 12
+2026-08-19 13:33:53 [INFO] 
+======================================================================
+2026-08-19 13:33:53 [INFO] BATCH PROCESSING STARTING
+2026-08-19 13:33:53 [INFO] ======================================================================
+2026-08-19 13:33:53 [INFO] Target Model Group by id 8: 'Model group'
+2026-08-19 13:33:53 [INFO] Target Model Group: 'Model group' (ID: 8)
+2026-08-19 13:33:53 [INFO] 
+----------------------------------------------------------------------
+2026-08-19 13:33:53 [INFO] [1/12] Processing: 34Pumps.inp
+2026-08-19 13:33:53 [INFO] ----------------------------------------------------------------------
+2026-08-19 13:33:53 [INFO] PHASE 1: Importing SWMM5 data
+2026-08-19 13:33:55 [INFO]   Import duration: 2.29s
+2026-08-19 13:33:55 [INFO]   Imported 6 object(s); network '34Pumps' (ID: 432)
+2026-08-19 13:33:55 [INFO]   Actual location: >MODG~Model group>IWSWNET~34Pumps
+2026-08-19 13:33:55 [INFO]   SUCCESS: Import completed.
+2026-08-19 13:33:55 [WARN]   importer: line 44: "" is not a valid date format. Dates must be entered as month/day/year. Error found in [RAINGAGES] section:
+2026-08-19 13:33:55 [WARN]   importer: RG0	VOLUME	0.083333	1.000000	FILE	"../DataFiles/FM0RainData.txt"	RG0	IN
+2026-08-19 13:33:55 [WARN]   importer: line 45: "" is not a valid date format. Dates must be entered as month/day/year. Error found in [RAINGAGES] section:
+2026-08-19 13:33:55 [WARN]   importer: RG1	VOLUME	0.083333	1.000000	FILE	"../DataFiles/FM1RainData.txt"	RG1	IN
+2026-08-19 13:33:55 [INFO] PHASE 2: Cleaning up empty visualization labels (sw_label)
+2026-08-19 13:33:55 [INFO]   No 'sw_label' table in this network - nothing to clean.
+2026-08-19 13:33:55 [INFO] PHASE 3: Validation and Statistics
+2026-08-19 13:33:55 [INFO]   Statistics: Nodes=452, Links=471, Subs=0
+2026-08-19 13:33:55 [INFO]   Validation passed with no warnings.
+2026-08-19 13:33:55 [INFO] PHASE 4: ICM validation (scenario: Base)
+2026-08-19 13:33:55 [INFO]   Validation: 0 error(s), 31 warning(s)
+2026-08-19 13:33:55 [INFO]   Validation messages written to: 34Pumps_Validation.txt
+2026-08-19 13:33:55 [WARN]   WARNING: ICM validation could not run: undefined method 'each_with_index' for an instance of WSValidations
+2026-08-19 13:33:56 [INFO] Network committed.
+2026-08-19 13:33:56 [INFO] SUCCESS: 34Pumps.inp
+2026-08-19 13:33:57 [INFO]   InfoWorks shell created: '34Pumps' (id 427)
+2026-08-19 13:33:58 [INFO]   Populated '34Pumps': 452 nodes, 437 conduits, 0 subs, 0 storage curve(s)
+2026-08-19 13:33:58 [INFO]     units: MGD (US - converting ft/acre/in to SI)
+2026-08-19 13:33:58 [INFO]     sw_node fields: invert=invert_elevation max_depth=maximum_depth type=node_type
+2026-08-19 13:33:58 [INFO]     sw_conduit fields: h=conduit_height w= shape=shape inverts=us_invert(abs)/ds_invert(abs)
+2026-08-19 13:33:58 [INFO]     4 conduit shape(s) approximated as RECT (flagged on user_text_3)
+2026-08-19 13:33:58 [INFO]     20 chamber floor(s) lowered to lowest attached link invert (E2052/E2102 avoidance, flagged)
+2026-08-19 13:33:58 [INFO]     14 terminal sink(s) - E2050 upstream of each unless made an outfall. SUGGESTED OUTFALLS (by upstream nodes): PRWETWELL(171 up), SVWETWELL(84 up), EWWETWELL(49 up), SRWETWELL(42 up), CHWETWELL(26 up), LFWETWELL(15 up), SMH3187(6 up), PHWETWELL(2 up), PVWETWELL(2 up), RCWETWELL(1 up)
+2026-08-19 13:33:58 [INFO]     validation: 396 error(s), 876 warning(s)
+2026-08-19 13:33:58 [INFO]     NOT committed (validation errors) - inspect and fix
+2026-08-19 13:33:58 [WARN]     skipped 15 x storage->manhole (no tabular curve)
+2026-08-19 13:33:58 [WARN]     skipped 3 x pump (curve 'CHPUMP' unreadable - pump not written)
+2026-08-19 13:33:58 [WARN]     skipped 2 x pump (curve 'EWPUMP' unreadable - pump not written)
+2026-08-19 13:33:58 [WARN]     skipped 3 x pump (curve 'LFPUMP' unreadable - pump not written)
+2026-08-19 13:33:58 [WARN]     skipped 2 x pump (curve 'PHPUMP' unreadable - pump not written)
+2026-08-19 13:33:58 [WARN]     skipped 3 x pump (curve 'PRPUMP' unreadable - pump not written)
+2026-08-19 13:33:58 [WARN]     skipped 4 x pump (curve 'PVPUMP' unreadable - pump not written)
+2026-08-19 13:33:58 [WARN]     skipped 2 x pump (curve 'RCPUMP' unreadable - pump not written)
+2026-08-19 13:33:58 [WARN]     skipped 2 x pump (curve 'SCPUMP' unreadable - pump not written)
+2026-08-19 13:33:58 [WARN]     skipped 4 x pump (curve 'SMPUMP' unreadable - pump not written)
+2026-08-19 13:33:58 [WARN]     skipped 3 x pump (curve 'SRPUMP' unreadable - pump not written)
+2026-08-19 13:33:58 [WARN]     skipped 2 x pump (curve 'SVPUMP' unreadable - pump not written)
+2026-08-19 13:33:58 [WARN]     skipped 2 x pump (curve 'WEPUMP' unreadable - pump not written)
+2026-08-19 13:33:58 [WARN]     skipped 2 x pump (curve 'WSPUMP' unreadable - pump not written)
+2026-08-19 13:33:58 [INFO] 
+----------------------------------------------------------------------
+2026-08-19 13:33:58 [INFO] [2/12] Processing: 46_pumps.inp
+2026-08-19 13:33:58 [INFO] ----------------------------------------------------------------------
+2026-08-19 13:33:58 [INFO] PHASE 1: Importing SWMM5 data
+2026-08-19 13:33:59 [INFO]   Import duration: 1.06s
+2026-08-19 13:33:59 [INFO]   Imported 8 object(s); network '46_pumps' (ID: 433)
+2026-08-19 13:33:59 [INFO]   Actual location: >MODG~Model group>IWSWNET~46_pumps
+2026-08-19 13:33:59 [INFO]   SUCCESS: Import completed.
+2026-08-19 13:33:59 [WARN]   importer: Outfalls of type Stage-Flow are not supported by EPA-SWMM. The following outfalls(s) [WW-147_BC] have been reassigned to type Free. Verify the outfall properties prior to running a simulation.
+2026-08-19 13:33:59 [WARN]   importer: [TEMPERATURE] () has no matching [TIMESERIES]. Unable to create.
+2026-08-19 13:33:59 [INFO] PHASE 2: Cleaning up empty visualization labels (sw_label)
+2026-08-19 13:33:59 [INFO]   No 'sw_label' table in this network - nothing to clean.
+2026-08-19 13:33:59 [INFO] PHASE 3: Validation and Statistics
+2026-08-19 13:33:59 [INFO]   Statistics: Nodes=853, Links=875, Subs=0
+2026-08-19 13:33:59 [INFO]   Validation passed with no warnings.
+2026-08-19 13:33:59 [INFO] PHASE 4: ICM validation (scenario: Base)
+2026-08-19 13:33:59 [INFO]   Validation: 0 error(s), 46 warning(s)
+2026-08-19 13:33:59 [INFO]   Validation messages written to: 46_pumps_Validation.txt
+2026-08-19 13:33:59 [WARN]   WARNING: ICM validation could not run: undefined method 'each_with_index' for an instance of WSValidations
+2026-08-19 13:34:00 [INFO] Network committed.
+2026-08-19 13:34:00 [INFO] SUCCESS: 46_pumps.inp
+2026-08-19 13:34:00 [INFO]   InfoWorks shell created: '46_pumps' (id 428)
+2026-08-19 13:34:02 [INFO]   Populated '46_pumps': 853 nodes, 829 conduits, 0 subs, 0 storage curve(s)
+2026-08-19 13:34:02 [INFO]     units: GPM (US - converting ft/acre/in to SI)
+2026-08-19 13:34:02 [INFO]     sw_node fields: invert=invert_elevation max_depth=maximum_depth type=node_type
+2026-08-19 13:34:02 [INFO]     sw_conduit fields: h=conduit_height w= shape=shape inverts=us_invert(abs)/ds_invert(abs)
+2026-08-19 13:34:02 [INFO]     19 terminal sink(s) - E2050 upstream of each unless made an outfall. SUGGESTED OUTFALLS (by upstream nodes): WW-220(125 up), WW-225(120 up), WW-230(92 up), WW-221(82 up), WW-226(73 up), WW-231(40 up), WW-246(33 up), WW-223(31 up), WW-251(25 up), WW-229(24 up)
+2026-08-19 13:34:02 [INFO]     validation: 753 error(s), 1660 warning(s)
+2026-08-19 13:34:02 [INFO]     NOT committed (validation errors) - inspect and fix
+2026-08-19 13:34:02 [WARN]     skipped 23 x storage->manhole (no tabular curve)
+2026-08-19 13:34:02 [WARN]     skipped 4 x pump (curve 'CURVE_109' unreadable - pump not written)
+2026-08-19 13:34:02 [WARN]     skipped 2 x pump (curve 'CURVE_45' unreadable - pump not written)
+2026-08-19 13:34:02 [WARN]     skipped 2 x pump (curve 'CURVE_17' unreadable - pump not written)
+2026-08-19 13:34:02 [WARN]     skipped 2 x pump (curve 'CURVE_1' unreadable - pump not written)
+2026-08-19 13:34:02 [WARN]     skipped 2 x pump (curve 'CURVE_114' unreadable - pump not written)
+2026-08-19 13:34:02 [WARN]     skipped 2 x pump (curve 'CURVE_55' unreadable - pump not written)
+2026-08-19 13:34:02 [WARN]     skipped 2 x pump (curve 'CURVE_106' unreadable - pump not written)
+2026-08-19 13:34:02 [WARN]     skipped 2 x pump (curve 'CURVE_19' unreadable - pump not written)
+2026-08-19 13:34:02 [WARN]     skipped 2 x pump (curve 'CURVE_14' unreadable - pump not written)
+2026-08-19 13:34:02 [WARN]     skipped 2 x pump (curve 'CURVE_88' unreadable - pump not written)
+2026-08-19 13:34:02 [WARN]     skipped 2 x pump (curve 'CURVE_105' unreadable - pump not written)
+2026-08-19 13:34:02 [WARN]     skipped 2 x pump (curve 'CURVE_27' unreadable - pump not written)
+2026-08-19 13:34:02 [WARN]     skipped 2 x pump (curve 'CURVE_18' unreadable - pump not written)
+2026-08-19 13:34:02 [WARN]     skipped 2 x pump (curve 'CURVE_89' unreadable - pump not written)
+2026-08-19 13:34:02 [WARN]     skipped 2 x pump (curve 'CURVE_35' unreadable - pump not written)
+2026-08-19 13:34:02 [WARN]     skipped 2 x pump (curve 'CURVE_99' unreadable - pump not written)
+2026-08-19 13:34:02 [WARN]     skipped 2 x pump (curve 'CURVE_116' unreadable - pump not written)
+2026-08-19 13:34:02 [WARN]     skipped 2 x pump (curve 'CURVE_37' unreadable - pump not written)
+2026-08-19 13:34:02 [WARN]     skipped 2 x pump (curve 'CURVE_107' unreadable - pump not written)
+2026-08-19 13:34:02 [WARN]     skipped 2 x pump (curve 'CURVE_95' unreadable - pump not written)
+2026-08-19 13:34:02 [WARN]     skipped 2 x pump (curve 'CURVE_77' unreadable - pump not written)
+2026-08-19 13:34:02 [WARN]     skipped 2 x pump (curve 'CURVE_123' unreadable - pump not written)
+2026-08-19 13:34:02 [INFO] 
+----------------------------------------------------------------------
+2026-08-19 13:34:02 [INFO] [3/12] Processing: extran6_too_many_Ideal_pumps.inp
+2026-08-19 13:34:02 [INFO] ----------------------------------------------------------------------
+2026-08-19 13:34:02 [INFO] PHASE 1: Importing SWMM5 data
+2026-08-19 13:34:02 [INFO]   Import duration: 0.44s
+2026-08-19 13:34:02 [INFO]   Imported 6 object(s); network 'extran6_too_many_Ideal_pumps' (ID: 434)
+2026-08-19 13:34:02 [INFO]   Actual location: >MODG~Model group>IWSWNET~extran6_too_many_Ideal_pumps
+2026-08-19 13:34:02 [INFO]   SUCCESS: Import completed.
+2026-08-19 13:34:02 [WARN]   importer: Outfalls of type Stage-Flow are not supported by EPA-SWMM. The following outfalls(s) [10208] have been reassigned to type Free. Verify the outfall properties prior to running a simulation.
+2026-08-19 13:34:02 [WARN]   importer: [TEMPERATURE] () has no matching [TIMESERIES]. Unable to create.
+2026-08-19 13:34:02 [INFO] PHASE 2: Cleaning up empty visualization labels (sw_label)
+2026-08-19 13:34:02 [INFO]   No 'sw_label' table in this network - nothing to clean.
+2026-08-19 13:34:02 [INFO] PHASE 3: Validation and Statistics
+2026-08-19 13:34:02 [INFO]   Statistics: Nodes=11, Links=13, Subs=0
+2026-08-19 13:34:02 [INFO]   Validation passed with no warnings.
+2026-08-19 13:34:02 [INFO] PHASE 4: ICM validation (scenario: Base)
+2026-08-19 13:34:02 [INFO]   Validation: 3 error(s), 2 warning(s)
+2026-08-19 13:34:02 [INFO]   Validation messages written to: extran6_too_many_Ideal_pumps_Validation.txt
+2026-08-19 13:34:02 [WARN]   WARNING: ICM validation could not run: undefined method 'each_with_index' for an instance of WSValidations
+2026-08-19 13:34:02 [INFO] Network committed.
+2026-08-19 13:34:02 [INFO] SUCCESS: extran6_too_many_Ideal_pumps.inp
+2026-08-19 13:34:03 [INFO]   InfoWorks shell created: 'extran6_too_many_Ideal_pumps' (id 429)
+2026-08-19 13:34:03 [INFO]   Populated 'extran6_too_many_Ideal_pumps': 11 nodes, 10 conduits, 0 subs, 0 storage curve(s)
+2026-08-19 13:34:03 [INFO]     units: CFS (US - converting ft/acre/in to SI)
+2026-08-19 13:34:03 [INFO]     sw_node fields: invert=invert_elevation max_depth=maximum_depth type=node_type
+2026-08-19 13:34:03 [INFO]     sw_conduit fields: h=conduit_height w=conduit_width shape=shape inverts=us_invert(abs)/ds_invert(abs)
+2026-08-19 13:34:03 [INFO]     2 conduit shape(s) approximated as RECT (flagged on user_text_3)
+2026-08-19 13:34:03 [INFO]     1 terminal sink(s) - E2050 upstream of each unless made an outfall. SUGGESTED OUTFALLS (by upstream nodes): 82310(3 up)
+2026-08-19 13:34:03 [INFO]     validation: 0 error(s), 20 warning(s)
+2026-08-19 13:34:03 [INFO]     committed
+2026-08-19 13:34:03 [WARN]     skipped 3 x pump (curve '' unreadable - pump not written)
+2026-08-19 13:34:03 [INFO] 
+----------------------------------------------------------------------
+2026-08-19 13:34:03 [INFO] [4/12] Processing: extran6_type1.inp
+2026-08-19 13:34:03 [INFO] ----------------------------------------------------------------------
+2026-08-19 13:34:03 [INFO] PHASE 1: Importing SWMM5 data
+2026-08-19 13:34:03 [INFO]   Import duration: 0.39s
+2026-08-19 13:34:03 [INFO]   Imported 6 object(s); network 'extran6_type1' (ID: 435)
+2026-08-19 13:34:03 [INFO]   Actual location: >MODG~Model group>IWSWNET~extran6_type1
+2026-08-19 13:34:03 [INFO]   SUCCESS: Import completed.
+2026-08-19 13:34:03 [WARN]   importer: Outfalls of type Stage-Flow are not supported by EPA-SWMM. The following outfalls(s) [10208] have been reassigned to type Free. Verify the outfall properties prior to running a simulation.
+2026-08-19 13:34:03 [WARN]   importer: [TEMPERATURE] () has no matching [TIMESERIES]. Unable to create.
+2026-08-19 13:34:03 [INFO] PHASE 2: Cleaning up empty visualization labels (sw_label)
+2026-08-19 13:34:03 [INFO]   No 'sw_label' table in this network - nothing to clean.
+2026-08-19 13:34:03 [INFO] PHASE 3: Validation and Statistics
+2026-08-19 13:34:03 [INFO]   Statistics: Nodes=11, Links=11, Subs=0
+2026-08-19 13:34:03 [INFO]   Validation passed with no warnings.
+2026-08-19 13:34:03 [INFO] PHASE 4: ICM validation (scenario: Base)
+2026-08-19 13:34:03 [INFO]   Validation: 0 error(s), 2 warning(s)
+2026-08-19 13:34:03 [INFO]   Validation messages written to: extran6_type1_Validation.txt
+2026-08-19 13:34:03 [WARN]   WARNING: ICM validation could not run: undefined method 'each_with_index' for an instance of WSValidations
+2026-08-19 13:34:03 [INFO] Network committed.
+2026-08-19 13:34:03 [INFO] SUCCESS: extran6_type1.inp
+2026-08-19 13:34:04 [INFO]   InfoWorks shell created: 'extran6_type1' (id 430)
+2026-08-19 13:34:04 [INFO]   Populated 'extran6_type1': 11 nodes, 10 conduits, 0 subs, 0 storage curve(s)
+2026-08-19 13:34:04 [INFO]     units: CFS (US - converting ft/acre/in to SI)
+2026-08-19 13:34:04 [INFO]     sw_node fields: invert=invert_elevation max_depth=maximum_depth type=node_type
+2026-08-19 13:34:04 [INFO]     sw_conduit fields: h=conduit_height w=conduit_width shape=shape inverts=us_invert(abs)/ds_invert(abs)
+2026-08-19 13:34:04 [INFO]     2 conduit shape(s) approximated as RECT (flagged on user_text_3)
+2026-08-19 13:34:04 [INFO]     1 terminal sink(s) - E2050 upstream of each unless made an outfall. SUGGESTED OUTFALLS (by upstream nodes): 82310(3 up)
+2026-08-19 13:34:04 [INFO]     validation: 0 error(s), 20 warning(s)
+2026-08-19 13:34:04 [INFO]     committed
+2026-08-19 13:34:04 [WARN]     skipped 1 x pump (curve 'Curve1' unreadable - pump not written)
+2026-08-19 13:34:04 [INFO] 
+----------------------------------------------------------------------
+2026-08-19 13:34:04 [INFO] [5/12] Processing: extran6_type1_control_rule.inp
+2026-08-19 13:34:04 [INFO] ----------------------------------------------------------------------
+2026-08-19 13:34:04 [INFO] PHASE 1: Importing SWMM5 data
+2026-08-19 13:34:04 [INFO]   Import duration: 0.39s
+2026-08-19 13:34:04 [INFO]   Imported 6 object(s); network 'extran6_type1_control_rule' (ID: 436)
+2026-08-19 13:34:04 [INFO]   Actual location: >MODG~Model group>IWSWNET~extran6_type1_control_rule
+2026-08-19 13:34:04 [INFO]   SUCCESS: Import completed.
+2026-08-19 13:34:04 [WARN]   importer: Outfalls of type Stage-Flow are not supported by EPA-SWMM. The following outfalls(s) [10208] have been reassigned to type Free. Verify the outfall properties prior to running a simulation.
+2026-08-19 13:34:04 [WARN]   importer: [TEMPERATURE] () has no matching [TIMESERIES]. Unable to create.
+2026-08-19 13:34:04 [INFO] PHASE 2: Cleaning up empty visualization labels (sw_label)
+2026-08-19 13:34:04 [INFO]   No 'sw_label' table in this network - nothing to clean.
+2026-08-19 13:34:04 [INFO] PHASE 3: Validation and Statistics
+2026-08-19 13:34:04 [INFO]   Statistics: Nodes=11, Links=11, Subs=0
+2026-08-19 13:34:04 [INFO]   Validation passed with no warnings.
+2026-08-19 13:34:04 [INFO] PHASE 4: ICM validation (scenario: Base)
+2026-08-19 13:34:04 [INFO]   Validation: 0 error(s), 2 warning(s)
+2026-08-19 13:34:04 [INFO]   Validation messages written to: extran6_type1_control_rule_Validation.txt
+2026-08-19 13:34:04 [WARN]   WARNING: ICM validation could not run: undefined method 'each_with_index' for an instance of WSValidations
+2026-08-19 13:34:04 [INFO] Network committed.
+2026-08-19 13:34:04 [INFO] SUCCESS: extran6_type1_control_rule.inp
+2026-08-19 13:34:05 [INFO]   InfoWorks shell created: 'extran6_type1_control_rule' (id 431)
+2026-08-19 13:34:05 [INFO]   Populated 'extran6_type1_control_rule': 11 nodes, 10 conduits, 0 subs, 0 storage curve(s)
+2026-08-19 13:34:05 [INFO]     units: CFS (US - converting ft/acre/in to SI)
+2026-08-19 13:34:05 [INFO]     sw_node fields: invert=invert_elevation max_depth=maximum_depth type=node_type
+2026-08-19 13:34:05 [INFO]     sw_conduit fields: h=conduit_height w=conduit_width shape=shape inverts=us_invert(abs)/ds_invert(abs)
+2026-08-19 13:34:05 [INFO]     2 conduit shape(s) approximated as RECT (flagged on user_text_3)
+2026-08-19 13:34:05 [INFO]     1 terminal sink(s) - E2050 upstream of each unless made an outfall. SUGGESTED OUTFALLS (by upstream nodes): 82310(3 up)
+2026-08-19 13:34:05 [INFO]     validation: 0 error(s), 20 warning(s)
+2026-08-19 13:34:05 [INFO]     committed
+2026-08-19 13:34:05 [WARN]     skipped 1 x pump (curve 'Curve1' unreadable - pump not written)
+2026-08-19 13:34:05 [INFO] 
+----------------------------------------------------------------------
+2026-08-19 13:34:05 [INFO] [6/12] Processing: extran6_type2.inp
+2026-08-19 13:34:05 [INFO] ----------------------------------------------------------------------
+2026-08-19 13:34:05 [INFO] PHASE 1: Importing SWMM5 data
+2026-08-19 13:34:05 [INFO]   Import duration: 0.37s
+2026-08-19 13:34:05 [INFO]   Imported 6 object(s); network 'extran6_type2' (ID: 437)
+2026-08-19 13:34:05 [INFO]   Actual location: >MODG~Model group>IWSWNET~extran6_type2
+2026-08-19 13:34:05 [INFO]   SUCCESS: Import completed.
+2026-08-19 13:34:05 [WARN]   importer: Outfalls of type Stage-Flow are not supported by EPA-SWMM. The following outfalls(s) [10208] have been reassigned to type Free. Verify the outfall properties prior to running a simulation.
+2026-08-19 13:34:05 [WARN]   importer: [TEMPERATURE] () has no matching [TIMESERIES]. Unable to create.
+2026-08-19 13:34:05 [INFO] PHASE 2: Cleaning up empty visualization labels (sw_label)
+2026-08-19 13:34:05 [INFO]   No 'sw_label' table in this network - nothing to clean.
+2026-08-19 13:34:05 [INFO] PHASE 3: Validation and Statistics
+2026-08-19 13:34:05 [INFO]   Statistics: Nodes=11, Links=11, Subs=0
+2026-08-19 13:34:05 [INFO]   Validation passed with no warnings.
+2026-08-19 13:34:05 [INFO] PHASE 4: ICM validation (scenario: Base)
+2026-08-19 13:34:05 [INFO]   Validation: 0 error(s), 2 warning(s)
+2026-08-19 13:34:05 [INFO]   Validation messages written to: extran6_type2_Validation.txt
+2026-08-19 13:34:05 [WARN]   WARNING: ICM validation could not run: undefined method 'each_with_index' for an instance of WSValidations
+2026-08-19 13:34:05 [INFO] Network committed.
+2026-08-19 13:34:05 [INFO] SUCCESS: extran6_type2.inp
+2026-08-19 13:34:06 [INFO]   InfoWorks shell created: 'extran6_type2' (id 432)
+2026-08-19 13:34:06 [INFO]   Populated 'extran6_type2': 11 nodes, 10 conduits, 0 subs, 0 storage curve(s)
+2026-08-19 13:34:06 [INFO]     units: CFS (US - converting ft/acre/in to SI)
+2026-08-19 13:34:06 [INFO]     sw_node fields: invert=invert_elevation max_depth=maximum_depth type=node_type
+2026-08-19 13:34:06 [INFO]     sw_conduit fields: h=conduit_height w=conduit_width shape=shape inverts=us_invert(abs)/ds_invert(abs)
+2026-08-19 13:34:06 [INFO]     2 conduit shape(s) approximated as RECT (flagged on user_text_3)
+2026-08-19 13:34:06 [INFO]     1 terminal sink(s) - E2050 upstream of each unless made an outfall. SUGGESTED OUTFALLS (by upstream nodes): 82310(3 up)
+2026-08-19 13:34:06 [INFO]     validation: 0 error(s), 20 warning(s)
+2026-08-19 13:34:06 [INFO]     committed
+2026-08-19 13:34:06 [WARN]     skipped 1 x pump (curve 'Curve1' unreadable - pump not written)
+2026-08-19 13:34:06 [INFO] 
+----------------------------------------------------------------------
+2026-08-19 13:34:06 [INFO] [7/12] Processing: extran6_type2_control_rule.inp
+2026-08-19 13:34:06 [INFO] ----------------------------------------------------------------------
+2026-08-19 13:34:06 [INFO] PHASE 1: Importing SWMM5 data
+2026-08-19 13:34:06 [INFO]   Import duration: 0.31s
+2026-08-19 13:34:06 [INFO]   Imported 6 object(s); network 'extran6_type2_control_rule' (ID: 438)
+2026-08-19 13:34:06 [INFO]   Actual location: >MODG~Model group>IWSWNET~extran6_type2_control_rule
+2026-08-19 13:34:06 [INFO]   SUCCESS: Import completed.
+2026-08-19 13:34:06 [WARN]   importer: Outfalls of type Stage-Flow are not supported by EPA-SWMM. The following outfalls(s) [10208] have been reassigned to type Free. Verify the outfall properties prior to running a simulation.
+2026-08-19 13:34:06 [WARN]   importer: [TEMPERATURE] () has no matching [TIMESERIES]. Unable to create.
+2026-08-19 13:34:06 [INFO] PHASE 2: Cleaning up empty visualization labels (sw_label)
+2026-08-19 13:34:06 [INFO]   No 'sw_label' table in this network - nothing to clean.
+2026-08-19 13:34:06 [INFO] PHASE 3: Validation and Statistics
+2026-08-19 13:34:06 [INFO]   Statistics: Nodes=11, Links=11, Subs=0
+2026-08-19 13:34:06 [INFO]   Validation passed with no warnings.
+2026-08-19 13:34:06 [INFO] PHASE 4: ICM validation (scenario: Base)
+2026-08-19 13:34:06 [INFO]   Validation: 0 error(s), 2 warning(s)
+2026-08-19 13:34:06 [INFO]   Validation messages written to: extran6_type2_control_rule_Validation.txt
+2026-08-19 13:34:06 [WARN]   WARNING: ICM validation could not run: undefined method 'each_with_index' for an instance of WSValidations
+2026-08-19 13:34:06 [INFO] Network committed.
+2026-08-19 13:34:06 [INFO] SUCCESS: extran6_type2_control_rule.inp
+2026-08-19 13:34:06 [INFO]   InfoWorks shell created: 'extran6_type2_control_rule' (id 433)
+2026-08-19 13:34:07 [INFO]   Populated 'extran6_type2_control_rule': 11 nodes, 10 conduits, 0 subs, 0 storage curve(s)
+2026-08-19 13:34:07 [INFO]     units: CFS (US - converting ft/acre/in to SI)
+2026-08-19 13:34:07 [INFO]     sw_node fields: invert=invert_elevation max_depth=maximum_depth type=node_type
+2026-08-19 13:34:07 [INFO]     sw_conduit fields: h=conduit_height w=conduit_width shape=shape inverts=us_invert(abs)/ds_invert(abs)
+2026-08-19 13:34:07 [INFO]     2 conduit shape(s) approximated as RECT (flagged on user_text_3)
+2026-08-19 13:34:07 [INFO]     1 terminal sink(s) - E2050 upstream of each unless made an outfall. SUGGESTED OUTFALLS (by upstream nodes): 82310(3 up)
+2026-08-19 13:34:07 [INFO]     validation: 0 error(s), 20 warning(s)
+2026-08-19 13:34:07 [INFO]     committed
+2026-08-19 13:34:07 [WARN]     skipped 1 x pump (curve 'Curve1' unreadable - pump not written)
+2026-08-19 13:34:07 [INFO] 
+----------------------------------------------------------------------
+2026-08-19 13:34:07 [INFO] [8/12] Processing: extran6_type2_negative_inverts.inp
+2026-08-19 13:34:07 [INFO] ----------------------------------------------------------------------
+2026-08-19 13:34:07 [INFO] PHASE 1: Importing SWMM5 data
+2026-08-19 13:34:07 [INFO]   Import duration: 0.38s
+2026-08-19 13:34:07 [INFO]   Imported 6 object(s); network 'extran6_type2_negative_inverts' (ID: 439)
+2026-08-19 13:34:07 [INFO]   Actual location: >MODG~Model group>IWSWNET~extran6_type2_negative_inverts
+2026-08-19 13:34:07 [INFO]   SUCCESS: Import completed.
+2026-08-19 13:34:07 [WARN]   importer: Outfalls of type Stage-Flow are not supported by EPA-SWMM. The following outfalls(s) [10208] have been reassigned to type Free. Verify the outfall properties prior to running a simulation.
+2026-08-19 13:34:07 [WARN]   importer: [TEMPERATURE] () has no matching [TIMESERIES]. Unable to create.
+2026-08-19 13:34:07 [INFO] PHASE 2: Cleaning up empty visualization labels (sw_label)
+2026-08-19 13:34:07 [INFO]   No 'sw_label' table in this network - nothing to clean.
+2026-08-19 13:34:07 [INFO] PHASE 3: Validation and Statistics
+2026-08-19 13:34:07 [INFO]   Statistics: Nodes=10, Links=10, Subs=0
+2026-08-19 13:34:07 [INFO]   Validation passed with no warnings.
+2026-08-19 13:34:07 [INFO] PHASE 4: ICM validation (scenario: Base)
+2026-08-19 13:34:07 [INFO]   Validation: 0 error(s), 14 warning(s)
+2026-08-19 13:34:07 [INFO]   Validation messages written to: extran6_type2_negative_inverts_Validation.txt
+2026-08-19 13:34:07 [WARN]   WARNING: ICM validation could not run: undefined method 'each_with_index' for an instance of WSValidations
+2026-08-19 13:34:07 [INFO] Network committed.
+2026-08-19 13:34:07 [INFO] SUCCESS: extran6_type2_negative_inverts.inp
+2026-08-19 13:34:07 [INFO]   InfoWorks shell created: 'extran6_type2_negative_inverts' (id 434)
+2026-08-19 13:34:08 [INFO]   Populated 'extran6_type2_negative_inverts': 10 nodes, 9 conduits, 0 subs, 0 storage curve(s)
+2026-08-19 13:34:08 [INFO]     units: CFS (US - converting ft/acre/in to SI)
+2026-08-19 13:34:08 [INFO]     sw_node fields: invert=invert_elevation max_depth=maximum_depth type=node_type
+2026-08-19 13:34:08 [INFO]     sw_conduit fields: h=conduit_height w=conduit_width shape=shape inverts=us_invert(abs)/ds_invert(abs)
+2026-08-19 13:34:08 [INFO]     2 conduit shape(s) approximated as RECT (flagged on user_text_3)
+2026-08-19 13:34:08 [INFO]     validation: 0 error(s), 18 warning(s)
+2026-08-19 13:34:08 [INFO]     committed
+2026-08-19 13:34:08 [WARN]     skipped 1 x storage->manhole (no tabular curve)
+2026-08-19 13:34:08 [WARN]     skipped 1 x pump (curve 'Curve1' unreadable - pump not written)
+2026-08-19 13:34:08 [INFO] 
+----------------------------------------------------------------------
+2026-08-19 13:34:08 [INFO] [9/12] Processing: extran6_type3.inp
+2026-08-19 13:34:08 [INFO] ----------------------------------------------------------------------
+2026-08-19 13:34:08 [INFO] PHASE 1: Importing SWMM5 data
+2026-08-19 13:34:08 [INFO]   Import duration: 0.37s
+2026-08-19 13:34:08 [INFO]   Imported 6 object(s); network 'extran6_type3' (ID: 440)
+2026-08-19 13:34:08 [INFO]   Actual location: >MODG~Model group>IWSWNET~extran6_type3
+2026-08-19 13:34:08 [INFO]   SUCCESS: Import completed.
+2026-08-19 13:34:08 [WARN]   importer: Outfalls of type Stage-Flow are not supported by EPA-SWMM. The following outfalls(s) [10208] have been reassigned to type Free. Verify the outfall properties prior to running a simulation.
+2026-08-19 13:34:08 [WARN]   importer: [TEMPERATURE] () has no matching [TIMESERIES]. Unable to create.
+2026-08-19 13:34:08 [INFO] PHASE 2: Cleaning up empty visualization labels (sw_label)
+2026-08-19 13:34:08 [INFO]   No 'sw_label' table in this network - nothing to clean.
+2026-08-19 13:34:08 [INFO] PHASE 3: Validation and Statistics
+2026-08-19 13:34:08 [INFO]   Statistics: Nodes=11, Links=11, Subs=0
+2026-08-19 13:34:08 [INFO]   Validation passed with no warnings.
+2026-08-19 13:34:08 [INFO] PHASE 4: ICM validation (scenario: Base)
+2026-08-19 13:34:08 [INFO]   Validation: 0 error(s), 2 warning(s)
+2026-08-19 13:34:08 [INFO]   Validation messages written to: extran6_type3_Validation.txt
+2026-08-19 13:34:08 [WARN]   WARNING: ICM validation could not run: undefined method 'each_with_index' for an instance of WSValidations
+2026-08-19 13:34:08 [INFO] Network committed.
+2026-08-19 13:34:08 [INFO] SUCCESS: extran6_type3.inp
+2026-08-19 13:34:08 [INFO]   InfoWorks shell created: 'extran6_type3' (id 435)
+2026-08-19 13:34:09 [INFO]   Populated 'extran6_type3': 11 nodes, 10 conduits, 0 subs, 0 storage curve(s)
+2026-08-19 13:34:09 [INFO]     units: CFS (US - converting ft/acre/in to SI)
+2026-08-19 13:34:09 [INFO]     sw_node fields: invert=invert_elevation max_depth=maximum_depth type=node_type
+2026-08-19 13:34:09 [INFO]     sw_conduit fields: h=conduit_height w=conduit_width shape=shape inverts=us_invert(abs)/ds_invert(abs)
+2026-08-19 13:34:09 [INFO]     2 conduit shape(s) approximated as RECT (flagged on user_text_3)
+2026-08-19 13:34:09 [INFO]     1 terminal sink(s) - E2050 upstream of each unless made an outfall. SUGGESTED OUTFALLS (by upstream nodes): 82310(3 up)
+2026-08-19 13:34:09 [INFO]     validation: 0 error(s), 20 warning(s)
+2026-08-19 13:34:09 [INFO]     committed
+2026-08-19 13:34:09 [WARN]     skipped 1 x pump (curve 'Curve1' unreadable - pump not written)
+2026-08-19 13:34:09 [INFO] 
+----------------------------------------------------------------------
+2026-08-19 13:34:09 [INFO] [10/12] Processing: extran6_type3_control_rule.inp
+2026-08-19 13:34:09 [INFO] ----------------------------------------------------------------------
+2026-08-19 13:34:09 [INFO] PHASE 1: Importing SWMM5 data
+2026-08-19 13:34:09 [INFO]   Import duration: 0.40s
+2026-08-19 13:34:09 [INFO]   Imported 6 object(s); network 'extran6_type3_control_rule' (ID: 441)
+2026-08-19 13:34:09 [INFO]   Actual location: >MODG~Model group>IWSWNET~extran6_type3_control_rule
+2026-08-19 13:34:09 [INFO]   SUCCESS: Import completed.
+2026-08-19 13:34:09 [WARN]   importer: Outfalls of type Stage-Flow are not supported by EPA-SWMM. The following outfalls(s) [10208] have been reassigned to type Free. Verify the outfall properties prior to running a simulation.
+2026-08-19 13:34:09 [WARN]   importer: [TEMPERATURE] () has no matching [TIMESERIES]. Unable to create.
+2026-08-19 13:34:09 [INFO] PHASE 2: Cleaning up empty visualization labels (sw_label)
+2026-08-19 13:34:09 [INFO]   No 'sw_label' table in this network - nothing to clean.
+2026-08-19 13:34:09 [INFO] PHASE 3: Validation and Statistics
+2026-08-19 13:34:09 [INFO]   Statistics: Nodes=11, Links=11, Subs=0
+2026-08-19 13:34:09 [INFO]   Validation passed with no warnings.
+2026-08-19 13:34:09 [INFO] PHASE 4: ICM validation (scenario: Base)
+2026-08-19 13:34:09 [INFO]   Validation: 0 error(s), 2 warning(s)
+2026-08-19 13:34:09 [INFO]   Validation messages written to: extran6_type3_control_rule_Validation.txt
+2026-08-19 13:34:09 [WARN]   WARNING: ICM validation could not run: undefined method 'each_with_index' for an instance of WSValidations
+2026-08-19 13:34:09 [INFO] Network committed.
+2026-08-19 13:34:09 [INFO] SUCCESS: extran6_type3_control_rule.inp
+2026-08-19 13:34:09 [INFO]   InfoWorks shell created: 'extran6_type3_control_rule' (id 436)
+2026-08-19 13:34:10 [INFO]   Populated 'extran6_type3_control_rule': 11 nodes, 10 conduits, 0 subs, 0 storage curve(s)
+2026-08-19 13:34:10 [INFO]     units: CFS (US - converting ft/acre/in to SI)
+2026-08-19 13:34:10 [INFO]     sw_node fields: invert=invert_elevation max_depth=maximum_depth type=node_type
+2026-08-19 13:34:10 [INFO]     sw_conduit fields: h=conduit_height w=conduit_width shape=shape inverts=us_invert(abs)/ds_invert(abs)
+2026-08-19 13:34:10 [INFO]     2 conduit shape(s) approximated as RECT (flagged on user_text_3)
+2026-08-19 13:34:10 [INFO]     1 terminal sink(s) - E2050 upstream of each unless made an outfall. SUGGESTED OUTFALLS (by upstream nodes): 82310(3 up)
+2026-08-19 13:34:10 [INFO]     validation: 0 error(s), 20 warning(s)
+2026-08-19 13:34:10 [INFO]     committed
+2026-08-19 13:34:10 [WARN]     skipped 1 x pump (curve 'Curve1' unreadable - pump not written)
+2026-08-19 13:34:10 [INFO] 
+----------------------------------------------------------------------
+2026-08-19 13:34:10 [INFO] [11/12] Processing: extran6_type4.inp
+2026-08-19 13:34:10 [INFO] ----------------------------------------------------------------------
+2026-08-19 13:34:10 [INFO] PHASE 1: Importing SWMM5 data
+2026-08-19 13:34:10 [INFO]   Import duration: 0.40s
+2026-08-19 13:34:10 [INFO]   Imported 6 object(s); network 'extran6_type4' (ID: 442)
+2026-08-19 13:34:10 [INFO]   Actual location: >MODG~Model group>IWSWNET~extran6_type4
+2026-08-19 13:34:10 [INFO]   SUCCESS: Import completed.
+2026-08-19 13:34:10 [WARN]   importer: Outfalls of type Stage-Flow are not supported by EPA-SWMM. The following outfalls(s) [10208] have been reassigned to type Free. Verify the outfall properties prior to running a simulation.
+2026-08-19 13:34:10 [WARN]   importer: [TEMPERATURE] () has no matching [TIMESERIES]. Unable to create.
+2026-08-19 13:34:10 [INFO] PHASE 2: Cleaning up empty visualization labels (sw_label)
+2026-08-19 13:34:10 [INFO]   No 'sw_label' table in this network - nothing to clean.
+2026-08-19 13:34:10 [INFO] PHASE 3: Validation and Statistics
+2026-08-19 13:34:10 [INFO]   Statistics: Nodes=11, Links=11, Subs=0
+2026-08-19 13:34:10 [INFO]   Validation passed with no warnings.
+2026-08-19 13:34:10 [INFO] PHASE 4: ICM validation (scenario: Base)
+2026-08-19 13:34:10 [INFO]   Validation: 0 error(s), 2 warning(s)
+2026-08-19 13:34:10 [INFO]   Validation messages written to: extran6_type4_Validation.txt
+2026-08-19 13:34:10 [WARN]   WARNING: ICM validation could not run: undefined method 'each_with_index' for an instance of WSValidations
+2026-08-19 13:34:10 [INFO] Network committed.
+2026-08-19 13:34:10 [INFO] SUCCESS: extran6_type4.inp
+2026-08-19 13:34:11 [INFO]   InfoWorks shell created: 'extran6_type4' (id 437)
+2026-08-19 13:34:11 [INFO]   Populated 'extran6_type4': 11 nodes, 10 conduits, 0 subs, 0 storage curve(s)
+2026-08-19 13:34:11 [INFO]     units: CFS (US - converting ft/acre/in to SI)
+2026-08-19 13:34:11 [INFO]     sw_node fields: invert=invert_elevation max_depth=maximum_depth type=node_type
+2026-08-19 13:34:11 [INFO]     sw_conduit fields: h=conduit_height w=conduit_width shape=shape inverts=us_invert(abs)/ds_invert(abs)
+2026-08-19 13:34:11 [INFO]     2 conduit shape(s) approximated as RECT (flagged on user_text_3)
+2026-08-19 13:34:11 [INFO]     1 terminal sink(s) - E2050 upstream of each unless made an outfall. SUGGESTED OUTFALLS (by upstream nodes): 82310(3 up)
+2026-08-19 13:34:11 [INFO]     validation: 0 error(s), 20 warning(s)
+2026-08-19 13:34:11 [INFO]     committed
+2026-08-19 13:34:11 [WARN]     skipped 1 x pump (curve 'Curve1' unreadable - pump not written)
+2026-08-19 13:34:11 [INFO] 
+----------------------------------------------------------------------
+2026-08-19 13:34:11 [INFO] [12/12] Processing: extran6_type4_control_rule.inp
+2026-08-19 13:34:11 [INFO] ----------------------------------------------------------------------
+2026-08-19 13:34:11 [INFO] PHASE 1: Importing SWMM5 data
+2026-08-19 13:34:11 [INFO]   Import duration: 0.44s
+2026-08-19 13:34:11 [INFO]   Imported 6 object(s); network 'extran6_type4_control_rule' (ID: 443)
+2026-08-19 13:34:11 [INFO]   Actual location: >MODG~Model group>IWSWNET~extran6_type4_control_rule
+2026-08-19 13:34:11 [INFO]   SUCCESS: Import completed.
+2026-08-19 13:34:11 [WARN]   importer: Outfalls of type Stage-Flow are not supported by EPA-SWMM. The following outfalls(s) [10208] have been reassigned to type Free. Verify the outfall properties prior to running a simulation.
+2026-08-19 13:34:11 [WARN]   importer: [TEMPERATURE] () has no matching [TIMESERIES]. Unable to create.
+2026-08-19 13:34:11 [INFO] PHASE 2: Cleaning up empty visualization labels (sw_label)
+2026-08-19 13:34:11 [INFO]   No 'sw_label' table in this network - nothing to clean.
+2026-08-19 13:34:11 [INFO] PHASE 3: Validation and Statistics
+2026-08-19 13:34:11 [INFO]   Statistics: Nodes=11, Links=11, Subs=0
+2026-08-19 13:34:11 [INFO]   Validation passed with no warnings.
+2026-08-19 13:34:11 [INFO] PHASE 4: ICM validation (scenario: Base)
+2026-08-19 13:34:11 [INFO]   Validation: 0 error(s), 2 warning(s)
+2026-08-19 13:34:11 [INFO]   Validation messages written to: extran6_type4_control_rule_Validation.txt
+2026-08-19 13:34:11 [WARN]   WARNING: ICM validation could not run: undefined method 'each_with_index' for an instance of WSValidations
+2026-08-19 13:34:11 [INFO] Network committed.
+2026-08-19 13:34:11 [INFO] SUCCESS: extran6_type4_control_rule.inp
+2026-08-19 13:34:12 [INFO]   InfoWorks shell created: 'extran6_type4_control_rule' (id 438)
+2026-08-19 13:34:12 [INFO]   Populated 'extran6_type4_control_rule': 11 nodes, 10 conduits, 0 subs, 0 storage curve(s)
+2026-08-19 13:34:12 [INFO]     units: CFS (US - converting ft/acre/in to SI)
+2026-08-19 13:34:12 [INFO]     sw_node fields: invert=invert_elevation max_depth=maximum_depth type=node_type
+2026-08-19 13:34:12 [INFO]     sw_conduit fields: h=conduit_height w=conduit_width shape=shape inverts=us_invert(abs)/ds_invert(abs)
+2026-08-19 13:34:12 [INFO]     2 conduit shape(s) approximated as RECT (flagged on user_text_3)
+2026-08-19 13:34:12 [INFO]     1 terminal sink(s) - E2050 upstream of each unless made an outfall. SUGGESTED OUTFALLS (by upstream nodes): 82310(3 up)
+2026-08-19 13:34:12 [INFO]     validation: 0 error(s), 20 warning(s)
+2026-08-19 13:34:12 [INFO]     committed
+2026-08-19 13:34:12 [WARN]     skipped 1 x pump (curve 'Curve1' unreadable - pump not written)
+2026-08-19 13:34:12 [INFO] 
+======================================================================
+2026-08-19 13:34:12 [INFO] BATCH IMPORT SUMMARY
+2026-08-19 13:34:12 [INFO] ======================================================================
+2026-08-19 13:34:12 [INFO] Total duration: 19.26s
+2026-08-19 13:34:12 [INFO] Files processed: 12
+2026-08-19 13:34:12 [INFO] Successful: 12
+2026-08-19 13:34:12 [INFO] Failed: 0
+2026-08-19 13:34:12 [INFO] Imported but NOT committed (validation errors): 0
+2026-08-19 13:34:12 [INFO] Blank InfoWorks shells: 12 created, 0 skipped, 0 failed
+2026-08-19 13:34:12 [INFO] 
+Aggregate Statistics:
+2026-08-19 13:34:12 [INFO]   Nodes: 1414
+2026-08-19 13:34:12 [INFO]   Links: 1457
+2026-08-19 13:34:12 [INFO]   Subcatchments: 0
+2026-08-19 13:34:12 [INFO]   Empty Labels Cleaned: 0
+2026-08-19 13:34:12 [INFO] 
+Performance Metrics:
+2026-08-19 13:34:12 [INFO]   Total Import Time: 7.23s (Avg: 0.60s)
+2026-08-19 13:34:12 [INFO] HTML report: C:/Users/rober/GitHub/1729-SWMM5-Models-2030/Pumps/ICM Import Log Files/SWMM5_Import_Report_20260819_133412.html
