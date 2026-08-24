@@ -1,0 +1,218 @@
+; SWMM5 60-second dwell / persistence test - hydraulic version
+; ----------------------------------------------------------------------
+; This version contains REAL FLOW.
+;
+; Purpose:
+;   Compare:
+;     A) TIMECLOSED on the controlled gate itself
+;     B) TIMECLOSED on a separate Dummy_Trigger gate
+;
+; Hydraulic arrangement:
+;
+;   RCI_PULSE --> [RCI_chamber_W3LIT00 storage]
+;                         |
+;                     RCI_drain
+;                         |
+;                    RCI_DrainNode ---- RCI_DrainPipe ---- RCI_Outfall
+;
+;   Gate_Inflow --> [GateSupply storage]
+;                      | | | | |
+;                      controlled orifices
+;                      | | | | |
+;                    GateManifold ---- GatePipe ---- Gate_Outfall
+;
+; The RCI chamber hydraulics create the threshold crossings.
+; The GateSupply hydraulics provide real flow through the controlled gates
+; without letting those gates alter the RCI chamber level.
+;
+; Approximate intended chamber behavior:
+;   Initial depth = 0.85 m
+;   ~84 s:  depth falls below 0.70 m
+;   90-110 s: short inflow pulse lifts depth back above 0.70 m
+;   ~201 s: depth falls below 0.70 m again
+;
+; Therefore:
+;   Direct_mod has already been closed >60 s at the first low crossing,
+;   so Direct_Return can act immediately.
+;
+;   Dummy_Trigger closes only while depth <0.70 m.
+;   The first short low excursion is much less than 60 s and is reset
+;   when the pulse lifts the chamber above 0.70 m.
+;   On the second sustained low excursion, Dummy_Return should act after
+;   about 60 continuous seconds below the threshold.
+;
+; SI units: CMS, metres.
+
+[TITLE]
+SWMM5 hydraulic 60-second dwell test - direct timer versus dummy trigger
+
+[OPTIONS]
+FLOW_UNITS           CMS
+INFILTRATION         HORTON
+FLOW_ROUTING         DYNWAVE
+LINK_OFFSETS         DEPTH
+MIN_SLOPE            0
+ALLOW_PONDING        NO
+SKIP_STEADY_STATE    NO
+START_DATE           08/24/2026
+START_TIME           00:00:00
+REPORT_START_DATE    08/24/2026
+REPORT_START_TIME    00:00:00
+END_DATE             08/24/2026
+END_TIME             00:05:00
+SWEEP_START          01/01
+SWEEP_END            12/31
+DRY_DAYS             0
+REPORT_STEP          00:00:01
+WET_STEP             00:00:01
+DRY_STEP             00:00:01
+ROUTING_STEP         00:00:01
+RULE_STEP            00:00:01
+VARIABLE_STEP        0
+LENGTHENING_STEP     0
+MIN_SURFAREA         0
+NORMAL_FLOW_LIMITED  BOTH
+FORCE_MAIN_EQUATION  H-W
+IGNORE_RAINFALL      YES
+IGNORE_SNOWMELT      YES
+IGNORE_GROUNDWATER   YES
+IGNORE_RDII          YES
+IGNORE_QUALITY       YES
+
+[JUNCTIONS]
+;;Name           Elevation  MaxDepth  InitDepth  SurDepth  Aponded
+RCI_DrainNode    0.000      1.500     0.000      0.000     0.000
+GateManifold     0.000      2.000     0.000      0.000     0.000
+
+[STORAGE]
+;;Name                  Elev.   MaxDepth InitDepth Shape       A1     A2   A0    Apond Fevap
+RCI_chamber_W3LIT00     0.000   2.000    0.850     FUNCTIONAL  0.0    0.0  1.0   0     0
+GateSupply              0.000   2.000    1.000     FUNCTIONAL  0.0    0.0 10.0   0     0
+
+[OUTFALLS]
+;;Name           Elevation  Type  Stage Data  Gated  Route To
+RCI_Outfall      -0.100     FREE              NO
+Gate_Outfall     -0.100     FREE              NO
+
+[CONDUITS]
+;;Name           From Node      To Node       Length  Roughness  InOffset  OutOffset  InitFlow  MaxFlow
+RCI_DrainPipe    RCI_DrainNode  RCI_Outfall   5.0     0.013      0.000     0.000      0.000     0.000
+GatePipe         GateManifold   Gate_Outfall  5.0     0.013      0.000     0.000      0.000     0.000
+
+[ORIFICES]
+;;Name          From Node               To Node        Type    Offset  Qcoeff  Gated  CloseTime
+RCI_drain       RCI_chamber_W3LIT00     RCI_DrainNode BOTTOM  0.000   0.65    NO     0
+Direct_mod      GateSupply              GateManifold   BOTTOM  0.000   0.65    NO     0
+Direct_iso      GateSupply              GateManifold   BOTTOM  0.000   0.65    NO     0
+Dummy_mod       GateSupply              GateManifold   BOTTOM  0.000   0.65    NO     0
+Dummy_iso       GateSupply              GateManifold   BOTTOM  0.000   0.65    NO     0
+Dummy_Trigger   GateSupply              GateManifold   BOTTOM  0.000   0.65    NO     0
+
+[XSECTIONS]
+;;Link           Shape         Geom1  Geom2  Geom3  Geom4  Barrels
+RCI_DrainPipe    CIRCULAR      0.200  0      0      0      1
+GatePipe         CIRCULAR      0.300  0      0      0      1
+RCI_drain        CIRCULAR      0.030  0      0      0      1
+Direct_mod       RECT_CLOSED   0.100  0.100  0      0      1
+Direct_iso       RECT_CLOSED   0.100  0.100  0      0      1
+Dummy_mod        RECT_CLOSED   0.100  0.100  0      0      1
+Dummy_iso        RECT_CLOSED   0.100  0.100  0      0      1
+Dummy_Trigger    CIRCULAR      0.010  0      0      0      1
+
+[INFLOWS]
+;;Node                  Constituent  Time Series  Type  Mfactor  Sfactor  Baseline  Pattern
+RCI_chamber_W3LIT00     FLOW         RCI_PULSE    FLOW  1.0      1.0      0
+GateSupply              FLOW         GATE_INFLOW  FLOW  1.0      1.0      0
+
+[TIMESERIES]
+;;Name        Date  Time(hr from start)  Value (CMS)
+; RCI chamber pulse:
+; 0 flow while the chamber initially drains.
+; 89-90 s ramps to 0.010 CMS.
+; 90-110 s remains at 0.010 CMS.
+; 110-111 s ramps back to zero.
+RCI_PULSE          0.000000   0.000
+RCI_PULSE          0.024722   0.000
+RCI_PULSE          0.025000   0.010
+RCI_PULSE          0.030556   0.010
+RCI_PULSE          0.030833   0.000
+RCI_PULSE          0.083333   0.000
+
+; Constant 0.010 CMS supply to the gate-test reservoir.
+GATE_INFLOW        0.000000   0.010
+GATE_INFLOW        0.083333   0.010
+
+[CONTROLS]
+; ----------------------------------------------------------------------
+; When chamber depth is at or above 0.70 m, both controlled-gate pairs
+; are in High RCI Mode (closed).
+; ----------------------------------------------------------------------
+RULE High_RCI_Mode
+IF NODE RCI_chamber_W3LIT00 DEPTH >= 0.70
+THEN ORIFICE Direct_mod SETTING = 0.0
+AND ORIFICE Direct_iso SETTING = 0.0
+AND ORIFICE Dummy_mod SETTING = 0.0
+AND ORIFICE Dummy_iso SETTING = 0.0
+PRIORITY 1
+
+; ----------------------------------------------------------------------
+; A) DIRECT TIMER METHOD
+;
+; Direct_mod is already closed for >1 minute when the chamber first
+; drops below 0.70 m. Therefore its TIMECLOSED condition is already true.
+; It should open immediately at that first threshold crossing.
+; ----------------------------------------------------------------------
+RULE Direct_Return
+IF NODE RCI_chamber_W3LIT00 DEPTH < 0.70
+AND LINK Direct_mod TIMECLOSED >= 0:01
+THEN ORIFICE Direct_mod SETTING = 0.13
+AND ORIFICE Direct_iso SETTING = 0.40
+PRIORITY 4
+
+; ----------------------------------------------------------------------
+; B) DUMMY TRIGGER METHOD
+;
+; Dummy_Trigger is OPEN whenever the depth condition is false.
+; It is CLOSED only while depth is continuously below 0.70 m.
+; This makes its TIMECLOSED value a persistence timer for the node state.
+; ----------------------------------------------------------------------
+RULE Dummy_Trigger_Rule
+IF NODE RCI_chamber_W3LIT00 DEPTH < 0.70
+THEN ORIFICE Dummy_Trigger SETTING = 0.0
+ELSE ORIFICE Dummy_Trigger SETTING = 1.0
+PRIORITY 2
+
+RULE Dummy_Return
+IF NODE RCI_chamber_W3LIT00 DEPTH < 0.70
+AND LINK Dummy_Trigger TIMECLOSED >= 0:01
+THEN ORIFICE Dummy_mod SETTING = 0.13
+AND ORIFICE Dummy_iso SETTING = 0.40
+PRIORITY 4
+
+[REPORT]
+INPUT      YES
+CONTROLS   YES
+SUBCATCHMENTS NONE
+NODES      ALL
+LINKS      ALL
+
+[MAP]
+DIMENSIONS 0.000 0.000 1000.000 500.000
+Units      Meters
+
+[COORDINATES]
+;;Node                  X-Coord  Y-Coord
+RCI_chamber_W3LIT00     100.0    350.0
+RCI_DrainNode           300.0    350.0
+RCI_Outfall             500.0    350.0
+GateSupply              100.0    120.0
+GateManifold            650.0    120.0
+Gate_Outfall            900.0    120.0
+
+[VERTICES]
+;;Link          X-Coord  Y-Coord
+Direct_mod      220.0    180.0
+Direct_iso      320.0    160.0
+Dummy_mod       420.0    100.0
+Dummy_iso       520.0     80.0
+Dummy_Trigger   370.0    120.0
