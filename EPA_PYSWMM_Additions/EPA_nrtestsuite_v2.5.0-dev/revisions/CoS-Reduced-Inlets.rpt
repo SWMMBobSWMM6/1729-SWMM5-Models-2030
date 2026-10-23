@@ -1,0 +1,1667 @@
+
+  EPA STORM WATER MANAGEMENT MODEL - VERSION 5.2 (Build 5.2.4)
+  ------------------------------------------------------------
+
+  Parkway project with inlets 
+  represented with Custom inlets 
+  using same capture curves as 
+  WARNING 03: negative offset ignored for Link R4459
+  WARNING 03: negative offset ignored for Link R4459B
+  WARNING 03: negative offset ignored for Link R4459D
+  WARNING 03: negative offset ignored for Link R4459F
+  
+  *************
+  Element Count
+  *************
+  Number of rain gages ...... 1
+  Number of subcatchments ... 163
+  Number of nodes ........... 128
+  Number of links ........... 121
+  Number of pollutants ...... 0
+  Number of land uses ....... 0
+  
+  
+  ****************
+  Raingage Summary
+  ****************
+                                                      Data       Recording
+  Name                 Data Source                    Type       Interval 
+  ------------------------------------------------------------------------
+  RainGauge_1          CoS-100-Year                   INTENSITY   10 min.
+  
+  
+  ********************
+  Subcatchment Summary
+  ********************
+  Name                       Area     Width   %Imperv    %Slope Rain Gage            Outlet              
+  -----------------------------------------------------------------------------------------------------------
+  S-D3751-1                  0.12     15.80      5.00   20.0000 RainGauge_1          S-R3750-1           
+  S-D3751-2                  0.05     59.10      5.00   20.0000 RainGauge_1          S-R3851B-1          
+  S-D3751A-1                 0.05     59.60      5.00   20.0000 RainGauge_1          S-R3851C-1          
+  S-D3752-1                  0.05     58.50      5.00   20.0000 RainGauge_1          S-R3852C-1          
+  S-D3752A-1                 0.05     59.10      5.00   20.0000 RainGauge_1          S-R3852D-1          
+  S-D3850-1                  0.07     89.80      5.00   20.0000 RainGauge_1          S-R3850-1           
+  S-D3850A-1                 0.04     53.40      5.00   20.0000 RainGauge_1          S-R3850B-1          
+  S-D3851-1                  0.04     53.40      5.00   20.0000 RainGauge_1          S-R3851-1           
+  S-D3851A-1                 0.04     52.90      5.00   20.0000 RainGauge_1          S-R3852-1           
+  S-D3851B-1                 0.04     53.90      5.00   20.0000 RainGauge_1          S-R3851A-1          
+  S-D3852-1                  0.04     53.40      5.00   20.0000 RainGauge_1          S-R3852A-1          
+  S-D3852A-1                 0.04     53.90      5.00   20.0000 RainGauge_1          S-R3852B-1          
+  S-D3853-1                  0.04     52.90      5.00   20.0000 RainGauge_1          S-R3853-1           
+  S-D3853A-1                 0.05     59.60      5.00   20.0000 RainGauge_1          S-R3852E-1          
+  S-D3853B-1                 0.05     58.50      5.00   20.0000 RainGauge_1          S-R3853B-1          
+  S-D3853C-1                 0.04     49.80      5.00   20.0000 RainGauge_1          S-R3853C-1          
+  S-D3854A-1                 0.06     68.90      5.00   20.0000 RainGauge_1          S-R3854-1           
+  S-D3953-1                  0.04     45.00      5.00   20.0000 RainGauge_1          S-R3853A-1          
+  S-D3954-1                  0.05     62.80      5.00   20.0000 RainGauge_1          S-R3953-1           
+  S-D3954A-1                 0.04     52.90      5.00   20.0000 RainGauge_1          S-R3954C-1          
+  S-D3954B-1                 0.05     58.50      5.00   20.0000 RainGauge_1          S-R3954G-1          
+  S-D3955-1                  0.05     67.70      5.00   20.0000 RainGauge_1          S-R3955A-1          
+  S-D3955A-1                 0.06     70.60      5.00   20.0000 RainGauge_1          S-R4055B-1          
+  S-D4054-1                  0.05     61.18      5.00   20.0000 RainGauge_1          S-R3955-1           
+  S-D4055-1                  0.05     63.70      5.00   20.0000 RainGauge_1          S-R4055-1           
+  S-D4055A-1                 0.04     56.00      5.00   20.0000 RainGauge_1          S-R4055A-1          
+  S-D4055B-1                 0.03     10.30      5.00   20.0000 RainGauge_1          S-R4156-1           
+  S-D4055B-2                 0.04     56.80      5.00   20.0000 RainGauge_1          S-R4056-1           
+  S-D4056-1                  0.04     56.80      5.00   20.0000 RainGauge_1          S-R4055C-1          
+  S-D4056A-1                 0.04     56.80      5.00   20.0000 RainGauge_1          S-R4056B-1          
+  S-D4056B-1                 0.03     32.18      5.00   20.0000 RainGauge_1          S-R4156D-1          
+  S-D4156A-2                 0.03     10.76      5.00   20.0000 RainGauge_1          S-R4156C-1          
+  S-D4157A-1                 0.05     58.00      5.00   20.0000 RainGauge_1          S-R4157F-1          
+  S-D4157B-2                 0.04     12.46      5.00   20.0000 RainGauge_1          S-R4156G-1          
+  S-D4257-1                  0.05     57.90      5.00   20.0000 RainGauge_1          S-R4257-1           
+  S-D4257A-1                 0.04     56.30      5.00   20.0000 RainGauge_1          S-R4257A-1          
+  S-D4257B-1                 0.04     56.30      5.00   20.0000 RainGauge_1          S-R4257B-1          
+  S-D4257C-1                 0.04     56.30      5.00   20.0000 RainGauge_1          S-R4257C-1          
+  S-D4258-1                  0.04     56.60      5.00   20.0000 RainGauge_1          S-R4258-1           
+  S-D4258A-1                 0.05     65.50      5.00   20.0000 RainGauge_1          S-R4258A-1          
+  S-D4358-1                  0.05     65.40      5.00   20.0000 RainGauge_1          S-R4358-1           
+  S-D4358C-1                 0.05     59.20      5.00   20.0000 RainGauge_1          S-R4358A-1          
+  S-D4358D-1                 0.05     59.20      5.00   20.0000 RainGauge_1          S-R4358C-1          
+  S-D4359D-1                 0.06     69.30      5.00   20.0000 RainGauge_1          S-R4359E-1          
+  S-D4459A-1                 0.04     56.30      5.00   20.0000 RainGauge_1          S-R4459C-1          
+  S-D4459B-1                 0.04     56.60      5.00   20.0000 RainGauge_1          S-R4460-1           
+  S-D4459C-1                 0.04     56.30      5.00   20.0000 RainGauge_1          S-R4459G-1          
+  S-D4459D-1                 0.06     69.30      5.00   20.0000 RainGauge_1          S-R4359B-1          
+  S-D4460-1                  0.04     56.30      5.00   20.0000 RainGauge_1          S-R4460A-1          
+  S-D4460A-1                 0.04     56.30      5.00   20.0000 RainGauge_1          S-R4460B-1          
+  S-D4560-1                  0.04     90.00      5.00   20.0000 RainGauge_1          S-R4560-1           
+  S-D4560A-1                 0.06     69.40      5.00   20.0000 RainGauge_1          S-R4560A-1          
+  S-D4560B-1                 0.03     33.60      5.00   20.0000 RainGauge_1          S-R4560B-1          
+  S-D4560D-1                 0.06     69.40      5.00   20.0000 RainGauge_1          S-R4560C-1          
+  S-D4561-1                  0.03     35.50      5.00   20.0000 RainGauge_1          S-R4560D-1          
+  S-D4561C-1                 0.04     11.90      5.00   20.0000 RainGauge_1          S-R4661E-1          
+  S-D4661A-1                 0.04     12.80      5.00   20.0000 RainGauge_1          S-R4661A-1          
+  S-D4661D-1                 0.05     57.80      5.00   20.0000 RainGauge_1          S-R4662-1           
+  S-D4662A-1                 0.05     57.80      5.00   20.0000 RainGauge_1          S-R4662B-1          
+  S-D4662B-1                 0.04     56.30      5.00   20.0000 RainGauge_1          S-R4662C-1          
+  S-D4762-1                  0.04     56.20      5.00   20.0000 RainGauge_1          S-R4762-1           
+  S-D4762A-1                 0.04     56.20      5.00   20.0000 RainGauge_1          S-R4762A-1          
+  S-D4762B-1                 0.04     56.30      5.00   20.0000 RainGauge_1          S-R4762B-1          
+  S-D4762C-1                 0.04     56.60      5.00   20.0000 RainGauge_1          S-R4762C-1          
+  S-D4763-1                  0.04     56.30      5.00   20.0000 RainGauge_1          S-R4763A-1          
+  S-D4763A-1                 0.04     45.20      5.00   20.0000 RainGauge_1          S-R4763B-1          
+  S-D4763D-1                 0.02     20.20      5.00   20.0000 RainGauge_1          S-R4863D-1          
+  S-D4862-1                  0.04     45.20      5.00   20.0000 RainGauge_1          S-R4763-1           
+  S-D4863A-1                 0.02     20.20      5.00   20.0000 RainGauge_1          S-R4863-1           
+  S-R3750-1                  0.07     62.30     75.20    2.5000 RainGauge_1          R3750               
+  S-R3750-2                  0.04     56.67     83.70    2.5000 RainGauge_1          R3750               
+  S-R3750B-1                 0.06     49.10     75.20    2.5000 RainGauge_1          R3750B              
+  S-R3850-1                  0.06     68.30     75.70    2.5000 RainGauge_1          R3850               
+  S-R3850-2                  0.04     53.10     82.20    2.5000 RainGauge_1          R3850               
+  S-R3850B-1                 0.05     54.00     75.70    2.5000 RainGauge_1          R3850B              
+  S-R3851-1                  0.05     53.80     75.70    2.5000 RainGauge_1          R3851               
+  S-R3851A-1                 0.05     54.10     75.70    2.5000 RainGauge_1          R3851A              
+  S-R3851B-1                 0.06     49.20     75.20    2.5000 RainGauge_1          R3851B              
+  S-R3851C-1                 0.06     49.80     75.20    2.5000 RainGauge_1          R3851C              
+  S-R3852-1                  0.05     56.40     75.70    2.5000 RainGauge_1          R3852               
+  S-R3852A-1                 0.05     57.30     75.70    2.5000 RainGauge_1          R3852A              
+  S-R3852B-1                 0.05     57.80     75.70    2.5000 RainGauge_1          R3852B              
+  S-R3852C-1                 0.05     46.30     75.20    2.5000 RainGauge_1          R3852C              
+  S-R3852D-1                 0.05     53.40     75.20    2.5000 RainGauge_1          R3852D              
+  S-R3852E-1                 0.05     53.90     75.20    2.5000 RainGauge_1          R3852E              
+  S-R3853-1                  0.05     56.80     75.70    2.5000 RainGauge_1          R3853               
+  S-R3853A-1                 0.04     45.50     75.70    2.5000 RainGauge_1          R3853A              
+  S-R3853B-1                 0.05     52.90     75.20    2.5000 RainGauge_1          R3853B              
+  S-R3853C-1                 0.04     45.00     75.20    2.5000 RainGauge_1          R3853C              
+  S-R3854-1                  0.03     33.40     75.20    2.5000 RainGauge_1          R3854               
+  S-R3953-1                  0.03     34.00     75.70    2.5000 RainGauge_1          R3953               
+  S-R3954A-1                 0.01     13.90     75.70    2.5000 RainGauge_1          R3954A              
+  S-R3954B-1                 0.01     12.70     75.70    2.5000 RainGauge_1          R3954B              
+  S-R3954C-1                 0.05     51.10     75.70    2.5000 RainGauge_1          R3954C              
+  S-R3954E-1                 0.01     14.40     75.20    2.5000 RainGauge_1          R3954E              
+  S-R3954F-1                 0.01     14.40     75.20    2.5000 RainGauge_1          R3954F              
+  S-R3954G-1                 0.05     55.70     75.20    2.5000 RainGauge_1          R3954G              
+  S-R3955-1                  0.06     49.22     75.70    2.5000 RainGauge_1          R3955               
+  S-R3955A-1                 0.06     63.00     75.20    2.5000 RainGauge_1          R3955A              
+  S-R4055-1                  0.07     52.73     78.00    2.5000 RainGauge_1          R4055               
+  S-R4055A-1                 0.07     45.50     80.00    2.5000 RainGauge_1          R4055A              
+  S-R4055B-1                 0.06     63.20     75.20    2.5000 RainGauge_1          R4055B              
+  S-R4055C-1                 0.05     49.70     75.20    2.5000 RainGauge_1          R4055C              
+  S-R4056-1                  0.07     44.80     80.00    2.5000 RainGauge_1          R4056               
+  S-R4056A-1                 0.03     18.00     81.90    2.5000 RainGauge_1          R4056A              
+  S-R4056B-1                 0.05     50.10     75.20    2.5000 RainGauge_1          R4056B              
+  S-R4056C-1                 0.02     20.90     76.50    2.5000 RainGauge_1          R4056C              
+  S-R4156-1                  0.04     18.95     91.80    2.5000 RainGauge_1          R4156               
+  S-R4156C-1                 0.05     38.50     75.90    2.5000 RainGauge_1          R4156C              
+  S-R4156D-1                 0.04     18.95     89.40    2.5000 RainGauge_1          R4156D              
+  S-R4156G-1                 0.06     33.25     81.60    2.5000 RainGauge_1          R4156G              
+  S-R4157-1                  0.01     16.40     73.90    2.5000 RainGauge_1          R4157               
+  S-R4157B-1                 0.01     12.00     73.90    2.5000 RainGauge_1          R4157B              
+  S-R4157C-1                 0.02     13.60     80.40    2.5000 RainGauge_1          R4157C              
+  S-R4157E-1                 0.01      9.90     80.40    2.5000 RainGauge_1          R4157E              
+  S-R4157F-1                 0.03     23.00     80.40    2.5000 RainGauge_1          R4157F              
+  S-R4257-1                  0.03     28.80     73.90    2.5000 RainGauge_1          R4257               
+  S-R4257A-1                 0.05     54.40     73.90    2.5000 RainGauge_1          R4257A              
+  S-R4257B-1                 0.05     55.00     74.40    2.5000 RainGauge_1          R4257B              
+  S-R4257C-1                 0.07     45.70     80.40    2.5000 RainGauge_1          R4257C              
+  S-R4258-1                  0.06     47.60     78.50    2.5000 RainGauge_1          R4258               
+  S-R4258A-1                 0.06     60.10     75.60    2.5000 RainGauge_1          R4258A              
+  S-R4358-1                  0.06     59.20     74.40    2.5000 RainGauge_1          R4358               
+  S-R4358A-1                 0.04     35.90     74.40    2.5000 RainGauge_1          R4358A              
+  S-R4358B-1                 0.03     27.30     79.40    2.5000 RainGauge_1          R4358B              
+  S-R4358C-1                 0.04     36.20     75.60    2.5000 RainGauge_1          R4358C              
+  S-R4358D-1                 0.03     27.40     79.40    2.5000 RainGauge_1          R4358D              
+  S-R4359A-1                 0.03     25.20     79.40    2.5000 RainGauge_1          R4359A              
+  S-R4359B-1                 0.04     45.30     75.60    2.5000 RainGauge_1          R4359B              
+  S-R4359D-1                 0.03     26.10     79.40    2.5000 RainGauge_1          R4359D              
+  S-R4359E-1                 0.04     43.50     75.30    2.5000 RainGauge_1          R4359E              
+  S-R4459-1                  0.02     17.30     75.60    2.5000 RainGauge_1          R4459               
+  S-R4459B-1                 0.02     17.40     75.60    2.5000 RainGauge_1          R4459B              
+  S-R4459C-1                 0.02     17.60     75.60    2.5000 RainGauge_1          R4459C              
+  S-R4459D-1                 0.02     16.30     75.30    2.5000 RainGauge_1          R4459D              
+  S-R4459F-1                 0.02     17.00     75.30    2.5000 RainGauge_1          R4459F              
+  S-R4459G-1                 0.02     17.10     75.30    2.5000 RainGauge_1          R4459G              
+  S-R4460-1                  0.06     42.60     75.60    2.5000 RainGauge_1          R4460               
+  S-R4460A-1                 0.05     52.30     75.30    2.5000 RainGauge_1          R4460A              
+  S-R4460B-1                 0.05     50.70     75.30    2.5000 RainGauge_1          R4460B              
+  S-R4560-1                  0.07     43.80     80.50    2.5000 RainGauge_1          R4560               
+  S-R4560A-1                 0.08     54.60     80.50    2.5000 RainGauge_1          R4560A              
+  S-R4560B-1                 0.06     30.54     84.10    2.5000 RainGauge_1          R4560B              
+  S-R4560C-1                 0.06     64.20     75.30    2.5000 RainGauge_1          R4560C              
+  S-R4560D-1                 0.04     32.50     78.90    2.5000 RainGauge_1          R4560D              
+  S-R4661A-1                 0.06     39.30     78.00    2.5000 RainGauge_1          R4661A              
+  S-R4661B-1                 0.02     17.70     74.40    2.5000 RainGauge_1          R4661B              
+  S-R4661D-1                 0.01     16.90     74.40    2.5000 RainGauge_1          R4661D              
+  S-R4661E-1                 0.07     35.80     83.40    2.5000 RainGauge_1          R4661E              
+  S-R4661F-1                 0.02     15.00     80.40    2.5000 RainGauge_1          R4661F              
+  S-R4662-1                  0.02     20.80     74.40    2.5000 RainGauge_1          R4662               
+  S-R4662A-1                 0.02     13.70     80.40    2.5000 RainGauge_1          R4662A              
+  S-R4662B-1                 0.03     17.00     80.40    2.5000 RainGauge_1          R4662B              
+  S-R4662C-1                 0.07     43.30     80.40    2.5000 RainGauge_1          R4662C              
+  S-R4762-1                  0.05     55.10     74.40    2.5000 RainGauge_1          R4762               
+  S-R4762A-1                 0.05     48.80     74.40    2.5000 RainGauge_1          R4762A              
+  S-R4762B-1                 0.05     47.80     74.40    2.5000 RainGauge_1          R4762B              
+  S-R4762C-1                 0.06     40.90     78.40    2.5000 RainGauge_1          R4762C              
+  S-R4763-1                  0.04     40.20     74.40    2.5000 RainGauge_1          R4763               
+  S-R4763A-1                 0.05     50.50     75.60    2.5000 RainGauge_1          R4763A              
+  S-R4763B-1                 0.04     40.20     75.60    2.5000 RainGauge_1          R4763B              
+  S-R4863-1                  0.03     27.00     79.10    2.5000 RainGauge_1          R4863               
+  S-R4863D-1                 0.03     24.90     79.10    2.5000 RainGauge_1          R4863D              
+  
+  
+  ************
+  Node Summary
+  ************
+                                           Invert      Max.    Ponded    External
+  Name                 Type                 Elev.     Depth      Area    Inflow  
+  -------------------------------------------------------------------------------
+  34161                JUNCTION            474.00     15.39     500.0
+  34162                JUNCTION            488.24      7.11     500.0
+  L3750                JUNCTION            489.98      7.32     100.0
+  L3850                JUNCTION            490.02      7.18     100.0
+  L3852                JUNCTION            491.67      4.75       0.0
+  L3853                JUNCTION            491.78      3.87       0.0
+  L3854A               JUNCTION            491.86      3.24       0.0
+  L3955                JUNCTION            493.20      2.79       0.0
+  L4056                JUNCTION            493.55      3.01     100.0
+  L4157                JUNCTION            493.80      2.73       0.0
+  L4258                JUNCTION            496.00      2.51     100.0
+  L4359                JUNCTION            496.59      2.48       0.0
+  L4560                JUNCTION            497.55      2.57     100.0
+  L4662                JUNCTION            497.90      2.23       0.0
+  Node64               JUNCTION            472.05     15.95     500.0
+  Node66               JUNCTION            472.00     16.00     500.0
+  O3854                JUNCTION            495.04      1.00       0.0
+  O3954                JUNCTION            495.03      1.00       0.0
+  R3750                JUNCTION            497.10      1.00       0.0
+  R3750A               JUNCTION            497.04      1.00       0.0
+  R3750B               JUNCTION            496.81      1.00       0.0
+  R3850                JUNCTION            497.10      1.00       0.0
+  R3850A               JUNCTION            497.04      1.00       0.0
+  R3850B               JUNCTION            496.81      1.00       0.0
+  R3851                JUNCTION            496.59      1.00       0.0
+  R3851A               JUNCTION            496.36      1.00       0.0
+  R3851B               JUNCTION            496.59      1.00       0.0
+  R3851C               JUNCTION            496.36      1.00       0.0
+  R3852                JUNCTION            496.13      1.00       0.0
+  R3852A               JUNCTION            495.88      1.00       0.0
+  R3852B               JUNCTION            495.62      1.00       0.0
+  R3852C               JUNCTION            496.13      1.00       0.0
+  R3852D               JUNCTION            495.88      1.00       0.0
+  R3852E               JUNCTION            495.62      1.00       0.0
+  R3853                JUNCTION            495.37      1.00       0.0
+  R3853A               JUNCTION            495.11      1.00       0.0
+  R3853B               JUNCTION            495.37      1.00       0.0
+  R3853C               JUNCTION            495.11      1.00       0.0
+  R3854                JUNCTION            494.90      1.00       0.0
+  R3953                JUNCTION            494.90      1.00       0.0
+  R3954                JUNCTION            494.78      1.00       0.0
+  R3954A               JUNCTION            494.82      1.00       0.0
+  R3954B               JUNCTION            494.88      1.00       0.0
+  R3954C               JUNCTION            495.17      1.00       0.0
+  R3954D               JUNCTION            494.78      1.00       0.0
+  R3954E               JUNCTION            494.82      1.00       0.0
+  R3954F               JUNCTION            494.88      1.00       0.0
+  R3954G               JUNCTION            495.17      1.00       0.0
+  R3955                JUNCTION            495.49      1.00       0.0
+  R3955A               JUNCTION            495.53      1.00       0.0
+  R4055                JUNCTION            495.74      1.00       0.0
+  R4055A               JUNCTION            495.99      1.00       0.0
+  R4055B               JUNCTION            495.82      1.00       0.0
+  R4055C               JUNCTION            496.08      1.00       0.0
+  R4056                JUNCTION            496.22      1.00       0.0
+  R4056A               JUNCTION            496.28      1.00       0.0
+  R4056B               JUNCTION            496.31      1.00       0.0
+  R4056C               JUNCTION            496.37      1.00       0.0
+  R4156                JUNCTION            496.47      1.00       0.0
+  R4156C               JUNCTION            496.57      1.00       0.0
+  R4156D               JUNCTION            496.38      1.00       0.0
+  R4156G               JUNCTION            496.41      1.00       0.0
+  R4157                JUNCTION            496.38      1.00       0.0
+  R4157A               JUNCTION            496.32      1.00       0.0
+  R4157B               JUNCTION            496.37      1.00       0.0
+  R4157C               JUNCTION            496.29      1.00       0.0
+  R4157D               JUNCTION            496.24      1.00       0.0
+  R4157E               JUNCTION            496.29      1.00       0.0
+  R4157F               JUNCTION            496.45      1.00       0.0
+  R4257                JUNCTION            496.54      1.00       0.0
+  R4257A               JUNCTION            497.05      1.00       0.0
+  R4257B               JUNCTION            497.55      1.00       0.0
+  R4257C               JUNCTION            496.96      1.00       0.0
+  R4258                JUNCTION            497.54      1.00       0.0
+  R4258A               JUNCTION            498.13      1.00       0.0
+  R4358                JUNCTION            498.13      1.00       0.0
+  R4358A               JUNCTION            498.50      1.00       0.0
+  R4358B               JUNCTION            498.68      1.00       0.0
+  R4358C               JUNCTION            498.50      1.00       0.0
+  R4358D               JUNCTION            498.68      1.00       0.0
+  R4359A               JUNCTION            498.94      0.62       0.0
+  R4359B               JUNCTION            498.85      0.62       0.0
+  R4359D               JUNCTION            498.88      0.62       0.0
+  R4359E               JUNCTION            498.85      0.62       0.0
+  R4459                JUNCTION            498.73      0.62       0.0
+  R4459A               JUNCTION            498.69      0.62       0.0
+  R4459B               JUNCTION            498.73      0.62       0.0
+  R4459C               JUNCTION            498.80      0.62       0.0
+  R4459D               JUNCTION            498.73      0.62       0.0
+  R4459E               JUNCTION            498.69      0.62       0.0
+  R4459F               JUNCTION            498.73      0.62       0.0
+  R4459G               JUNCTION            498.80      0.62       0.0
+  R4460                JUNCTION            499.02      0.62       0.0
+  R4460A               JUNCTION            499.11      0.62       0.0
+  R4460B               JUNCTION            499.41      0.62       0.0
+  R4560                JUNCTION            499.32      0.62       0.0
+  R4560A               JUNCTION            499.68      0.62       0.0
+  R4560B               JUNCTION            499.79      0.62       0.0
+  R4560C               JUNCTION            499.76      0.62       0.0
+  R4560D               JUNCTION            499.88      0.62       0.0
+  R4661A               JUNCTION            500.24      0.62       0.0
+  R4661B               JUNCTION            499.98      0.62       0.0
+  R4661C               JUNCTION            499.92      0.62     100.0
+  R4661D               JUNCTION            499.99      0.62       0.0
+  R4661E               JUNCTION            500.02      0.62       0.0
+  R4661F               JUNCTION            499.89      0.62       0.0
+  R4662                JUNCTION            500.08      0.62       0.0
+  R4662A               JUNCTION            499.90      0.62       0.0
+  R4662B               JUNCTION            499.99      0.62       0.0
+  R4662C               JUNCTION            500.34      0.62       0.0
+  R4762                JUNCTION            500.42      0.62       0.0
+  R4762A               JUNCTION            500.76      0.62       0.0
+  R4762B               JUNCTION            501.10      0.62       0.0
+  R4762C               JUNCTION            500.76      0.62       0.0
+  R4763                JUNCTION            501.38      0.62       0.0
+  R4763A               JUNCTION            501.10      0.62       0.0
+  R4763B               JUNCTION            501.38      0.62       0.0
+  R4863                JUNCTION            501.46      0.62       0.0
+  R4863D               JUNCTION            501.46      0.62       0.0
+  R4661G               JUNCTION            499.83      0.62     400.0
+  D4156A               OUTFALL             495.42      0.62       0.0
+  D4157B               OUTFALL             495.80      0.62       0.0
+  D4359A               OUTFALL             498.19      0.62       0.0
+  D4458A               OUTFALL             497.71      0.62       0.0
+  D4561C               OUTFALL             499.39      0.62       0.0
+  D4661A               OUTFALL             498.99      0.62       0.0
+  Node67               OUTFALL             470.00      1.00       0.0
+  O3854A               STORAGE             494.07      1.00       0.0
+  
+  
+  ************
+  Link Summary
+  ************
+  Name             From Node        To Node          Type            Length    %Slope Roughness
+  ---------------------------------------------------------------------------------------------
+  25073B           L3750            34162            CONDUIT          100.0    0.2390    0.0130
+  25074            34162            34161            CONDUIT           80.0    3.4283    0.0130
+  C1               O3854A           L3854A           CONDUIT           11.3    6.5895    0.0130
+  L3850            L3850            L3750            CONDUIT           20.0    0.1950    0.0130
+  L3852            L3852            L3750            CONDUIT          120.6    0.8828    0.0130
+  L3853            L3853            L3852            CONDUIT           92.3    0.1213    0.0130
+  L3854A           L3854A           L3853            CONDUIT           67.2    0.1205    0.0130
+  L3955            L3955            L3854A           CONDUIT          127.7    0.9359    0.0130
+  L4056            L4056            L3955            CONDUIT           93.2    0.3766    0.0130
+  L4157            L4157            L4056            CONDUIT           72.2    0.3407    0.0130
+  L4258            L4258            L4157            CONDUIT          120.0    1.6461    0.0130
+  L4359            L4359            L4258            CONDUIT          113.8    0.5185    0.0130
+  L4560            L4560            L4359            CONDUIT          120.0    0.6750    0.0130
+  L4662            L4662            L4560            CONDUIT          109.2    0.3205    0.0130
+  Link92           34161            Node64           CONDUIT           71.7    1.6743    0.0130
+  Link93           Node64           Node66           CONDUIT           10.3    0.4831    0.0300
+  Link94           Node66           Node67           CONDUIT           10.0   20.4124    0.0300
+  O3854            O3854            O3854A           CONDUIT           15.1    6.3620    0.0300
+  O3954A           R3954            O3954            CONDUIT            5.6   -4.5010    0.0160
+  O3954B           O3954            R3954D           CONDUIT            5.7    4.4057    0.0160
+  O3954D           R3954D           O3854            CONDUIT           13.3   -1.9419    0.0300
+  R3750            R3750            R3750A           CONDUIT            7.6    0.8553    0.0160
+  R3750A           R3750A           R3750B           CONDUIT           29.9    0.7458    0.0160
+  R3750B           R3750B           R3851B           CONDUIT           30.3    0.7426    0.0160
+  R3850            R3850            R3850A           CONDUIT            7.6    0.8553    0.0160
+  R3850A           R3850A           R3850B           CONDUIT           29.7    0.7509    0.0160
+  R3850B           R3850B           R3851            CONDUIT           29.7    0.7576    0.0160
+  R3851            R3851            R3851A           CONDUIT           29.7    0.7576    0.0160
+  R3851A           R3851A           R3852            CONDUIT           30.0    0.7734    0.0160
+  R3851B           R3851B           R3851C           CONDUIT           30.3    0.7426    0.0160
+  R3851C           R3851C           R3852C           CONDUIT           30.6    0.7582    0.0160
+  R3852            R3852            R3852A           CONDUIT           29.4    0.8606    0.0160
+  R3852A           R3852A           R3852B           CONDUIT           29.7    0.8586    0.0160
+  R3852B           R3852B           R3853            CONDUIT           30.0    0.8567    0.0160
+  R3852C           R3852C           R3852D           CONDUIT           30.0    0.8434    0.0160
+  R3852D           R3852D           R3852E           CONDUIT           30.3    0.8416    0.0160
+  R3852E           R3852E           R3853B           CONDUIT           30.6    0.8399    0.0160
+  R3853            R3853            R3853A           CONDUIT           29.4    0.8606    0.0160
+  R3853A           R3853A           R3953            CONDUIT           25.0    0.8600    0.0160
+  R3853B           R3853B           R3853C           CONDUIT           30.0    0.8434    0.0160
+  R3853C           R3853C           R3854            CONDUIT           25.5    0.8432    0.0160
+  R3854            R3854            R3954D           CONDUIT           19.0    0.6369    0.0160
+  R3953            R3953            R3954            CONDUIT           18.6    0.6506    0.0160
+  R3954A           R3954A           R3954            CONDUIT            8.0    0.5000    0.0160
+  R3954B           R3954B           R3954A           CONDUIT            8.0    0.7625    0.0160
+  R3954C           R3954C           R3954B           CONDUIT           29.4    1.0103    0.0160
+  R3954E           R3954E           R3954D           CONDUIT            8.2    0.4878    0.0160
+  R3954F           R3954F           R3954E           CONDUIT            8.2    0.7439    0.0160
+  R3954G           R3954G           R3954F           CONDUIT           30.0    0.9900    0.0160
+  R3955            R3955            R3954C           CONDUIT           34.0    0.9412    0.0160
+  R3955A           R3955A           R3954G           CONDUIT           34.7    1.0173    0.0160
+  R4055            R4055            R3955            CONDUIT           35.5    0.6845    0.0160
+  R4055A           R4055A           R4055            CONDUIT           30.1    0.8472    0.0160
+  R4055B           R4055B           R3955A           CONDUIT           36.2    0.8232    0.0160
+  R4055C           R4055C           R4055B           CONDUIT           30.1    0.8472    0.0160
+  R4056            R4056            R4055A           CONDUIT           30.0    0.7667    0.0160
+  R4056A           R4056A           R4056            CONDUIT           12.8    0.4844    0.0160
+  R4056B           R4056B           R4055C           CONDUIT           30.0    0.7667    0.0160
+  R4056C           R4056C           R4056B           CONDUIT           12.8    0.4844    0.0160
+  R4156            R4156            R4056A           CONDUIT           18.2    1.0330    0.0160
+  R4156C           R4156C           R4157            CONDUIT           24.5    0.8000    0.0160
+  R4156D           R4156D           R4056C           CONDUIT           18.2    0.0714    0.0160
+  R4156G           R4156G           R4157C           CONDUIT           24.5    0.5061    0.0160
+  R4157            R4157            R4157A           CONDUIT            8.8    0.5909    0.0160
+  R4157B           R4157B           R4157A           CONDUIT            6.6    0.7424    0.0160
+  R4157C           R4157C           R4157D           CONDUIT            8.8    0.5909    0.0160
+  R4157E           R4157E           R4157D           CONDUIT            6.6    0.7273    0.0160
+  R4157F           R4157F           R4157E           CONDUIT           15.5    1.0904    0.0160
+  R4257            R4257            R4157B           CONDUIT           15.5    1.0904    0.0160
+  R4257A           R4257A           R4257            CONDUIT           30.0    1.6769    0.0160
+  R4257B           R4257B           R4257A           CONDUIT           30.0    1.6769    0.0160
+  R4257C           R4257C           R4157F           CONDUIT           30.0    1.6869    0.0160
+  R4258            R4258            R4257C           CONDUIT           30.0    1.9470    0.0160
+  R4258A           R4258A           R4258            CONDUIT           34.9    1.6908    0.0160
+  R4358            R4358            R4257B           CONDUIT           34.9    1.6793    0.0160
+  R4358A           R4358A           R4358            CONDUIT           20.9    1.7515    0.0160
+  R4358B           R4358B           R4358A           CONDUIT           19.8    0.8839    0.0160
+  R4358C           R4358C           R4258A           CONDUIT           20.9    1.7515    0.0160
+  R4358D           R4358D           R4358C           CONDUIT           19.8    0.8839    0.0160
+  R4359A           R4359A           R4359B           CONDUIT           10.9    0.7615    0.0160
+  R4359B           R4359B           R4459            CONDUIT           25.9    0.4826    0.0160
+  R4359D           R4359D           R4359E           CONDUIT           10.9    0.2752    0.0160
+  R4359E           R4359E           R4459D           CONDUIT           25.9    0.4826    0.0160
+  R4459            R4459            R4459A           CONDUIT           10.0    0.3900    0.0160
+  R4459B           R4459B           R4459A           CONDUIT           10.0    0.3900    0.0160
+  R4459C           R4459C           R4459B           CONDUIT           10.1    0.7030    0.0160
+  R4459D           R4459D           R4459E           CONDUIT           10.0    0.3900    0.0160
+  R4459F           R4459F           R4459E           CONDUIT           10.0    0.3900    0.0160
+  R4459G           R4459G           R4459F           CONDUIT           10.1    0.7426    0.0160
+  R4460            R4460            R4459C           CONDUIT           30.0    0.7367    0.0160
+  R4460A           R4460A           R4459G           CONDUIT           30.0    1.0067    0.0160
+  R4460B           R4460B           R4460A           CONDUIT           30.0    1.0034    0.0160
+  R4560            R4560            R4460            CONDUIT           30.0    0.9934    0.0160
+  R4560A           R4560A           R4560            CONDUIT           37.0    0.9703    0.0160
+  R4560B           R4560B           R4560A           CONDUIT           17.1    0.6667    0.0160
+  R4560C           R4560C           R4460B           CONDUIT           37.0    0.9676    0.0160
+  R4560D           R4560D           R4560C           CONDUIT           17.1    0.6667    0.0160
+  R4661A           R4661A           R4661B           CONDUIT           25.0    1.0241    0.0160
+  R4661B           R4661B           R4661C           CONDUIT           10.1    0.6040    0.0160
+  R4661D           R4661D           R4661C           CONDUIT            9.2    0.6957    0.0160
+  R4661E           R4661E           R4661F           CONDUIT           25.0    0.5000    0.0160
+  R4661F           R4661F           R4661G           CONDUIT           10.1    0.6139    0.0160
+  R4662            R4662            R4661D           CONDUIT           11.6    0.8104    0.0160
+  R4662A           R4662A           R4661G           CONDUIT            9.2    0.7065    0.0160
+  R4662B           R4662B           R4662A           CONDUIT           11.6    0.8104    0.0160
+  R4662C           R4662C           R4662B           CONDUIT           30.0    1.1467    0.0160
+  R4762            R4762            R4662            CONDUIT           30.0    1.1334    0.0160
+  R4762A           R4762A           R4762            CONDUIT           30.0    1.1334    0.0160
+  R4762B           R4762B           R4762A           CONDUIT           30.0    1.1367    0.0160
+  R4762C           R4762C           R4662C           CONDUIT           30.0    1.4001    0.0160
+  R4763            R4763            R4762B           CONDUIT           24.1    1.1744    0.0160
+  R4763A           R4763A           R4762C           CONDUIT           30.0    1.1501    0.0160
+  R4763B           R4763B           R4763A           CONDUIT           24.1    1.1744    0.0160
+  R4863            R4863            R4763            CONDUIT           19.9    0.3970    0.0160
+  R4863D           R4863D           R4763B           CONDUIT           19.9    0.3970    0.0160
+  RSpill_R4156C    R4156C           D4156A           CONDUIT           31.1    3.7120    0.0160
+  RSpill_R4156G    R4156G           D4157B           CONDUIT           31.0    1.9862    0.0160
+  RSpill_R4359A    R4359A           D4458A           CONDUIT           30.9    3.9889    0.0160
+  RSpill_R4359D    R4359D           D4359A           CONDUIT           31.9    2.1781    0.0160
+  RSpill_R4661A    R4661A           D4661A           CONDUIT           26.6    4.6929    0.0160
+  RSpill_R4661E    R4661E           D4561C           CONDUIT           30.1    2.0980    0.0160
+  
+  
+  *********************
+  Cross Section Summary
+  *********************
+                                        Full     Full     Hyd.     Max.   No. of     Full
+  Conduit          Shape               Depth     Area     Rad.    Width  Barrels     Flow
+  ---------------------------------------------------------------------------------------
+  25073B           CIRCULAR             1.50     1.77     0.38     1.50        1     3.46
+  25074            CIRCULAR             1.50     1.77     0.38     1.50        1    13.09
+  C1               CIRCULAR             0.60     0.28     0.15     0.60        1     1.58
+  L3850            CIRCULAR             1.50     1.77     0.38     1.50        1     3.12
+  L3852            CIRCULAR             0.90     0.64     0.23     0.90        1     1.70
+  L3853            CIRCULAR             0.90     0.64     0.23     0.90        1     0.63
+  L3854A           CIRCULAR             0.90     0.64     0.23     0.90        1     0.63
+  L3955            CIRCULAR             0.75     0.44     0.19     0.75        1     1.08
+  L4056            CIRCULAR             0.75     0.44     0.19     0.75        1     0.68
+  L4157            CIRCULAR             0.75     0.44     0.19     0.75        1     0.65
+  L4258            CIRCULAR             0.53     0.22     0.13     0.53        1     0.55
+  L4359            CIRCULAR             0.53     0.22     0.13     0.53        1     0.31
+  L4560            CIRCULAR             0.38     0.11     0.09     0.38        1     0.14
+  L4662            CIRCULAR             0.38     0.11     0.09     0.38        1     0.10
+  Link92           CIRCULAR             1.50     1.77     0.38     1.50        1     9.15
+  Link93           TRAPEZOIDAL          1.00     6.60     0.67     9.60        1    11.65
+  Link94           TRAPEZOIDAL          1.00     8.50     0.72    11.50        1   102.74
+  O3854            TRAPEZOIDAL          1.00    13.00     0.56    23.00        1    74.52
+  O3954A           TRAPEZOIDAL          1.00    13.00     0.56    23.00        1   117.52
+  O3954B           TRAPEZOIDAL          1.00    13.00     0.56    23.00        1   116.27
+  O3954D           TRAPEZOIDAL          1.00    13.00     0.56    23.00        1    41.17
+  R3750            Road                 0.62     5.57     0.37    15.10        1    16.47
+  R3750A           Road                 0.62     5.57     0.37    15.10        1    15.38
+  R3750B           Road                 0.62     5.57     0.37    15.10        1    15.35
+  R3850            Road                 0.62     5.57     0.37    15.10        1    16.47
+  R3850A           Road                 0.62     5.57     0.37    15.10        1    15.43
+  R3850B           Road                 0.62     5.57     0.37    15.10        1    15.50
+  R3851            Road                 0.62     5.57     0.37    15.10        1    15.50
+  R3851A           Road                 0.62     5.57     0.37    15.10        1    15.66
+  R3851B           Road                 0.62     5.57     0.37    15.10        1    15.35
+  R3851C           Road                 0.62     5.57     0.37    15.10        1    15.51
+  R3852            Road                 0.62     5.57     0.37    15.10        1    16.52
+  R3852A           Road                 0.62     5.57     0.37    15.10        1    16.50
+  R3852B           Road                 0.62     5.57     0.37    15.10        1    16.49
+  R3852C           Road                 0.62     5.57     0.37    15.10        1    16.36
+  R3852D           Road                 0.62     5.57     0.37    15.10        1    16.34
+  R3852E           Road                 0.62     5.57     0.37    15.10        1    16.32
+  R3853            Road                 0.62     5.57     0.37    15.10        1    16.52
+  R3853A           Road                 0.62     5.57     0.37    15.10        1    16.52
+  R3853B           Road                 0.62     5.57     0.37    15.10        1    16.36
+  R3853C           Road                 0.62     5.57     0.37    15.10        1    16.36
+  R3854            Road                 0.62     5.57     0.37    15.10        1    14.21
+  R3953            Road                 0.62     5.57     0.37    15.10        1    14.37
+  R3954A           Road                 0.62     5.57     0.37    15.10        1    12.59
+  R3954B           Road                 0.62     5.57     0.37    15.10        1    15.55
+  R3954C           Road                 0.62     5.57     0.37    15.10        1    17.90
+  R3954E           Road                 0.62     5.57     0.37    15.10        1    12.44
+  R3954F           Road                 0.62     5.57     0.37    15.10        1    15.36
+  R3954G           Road                 0.62     5.57     0.37    15.10        1    17.72
+  R3955            Road                 0.62     5.57     0.37    15.10        1    17.28
+  R3955A           Road                 0.62     5.57     0.37    15.10        1    17.97
+  R4055            Road                 0.62     5.57     0.37    15.10        1    14.74
+  R4055A           Road                 0.62     5.57     0.37    15.10        1    16.39
+  R4055B           Road                 0.62     5.57     0.37    15.10        1    16.16
+  R4055C           Road                 0.62     5.57     0.37    15.10        1    16.39
+  R4056            Road                 0.62     5.57     0.37    15.10        1    15.60
+  R4056A           Road                 0.62     5.57     0.37    15.10        1    12.40
+  R4056B           Road                 0.62     5.57     0.37    15.10        1    15.60
+  R4056C           Road                 0.62     5.57     0.37    15.10        1    12.40
+  R4156            Road                 0.62     5.57     0.37    15.10        1    18.10
+  R4156C           Road                 0.62     5.57     0.37    15.10        1    15.93
+  R4156D           Road                 0.62     5.57     0.37    15.10        1     4.76
+  R4156G           Road                 0.62     5.57     0.37    15.10        1    12.67
+  R4157            Road                 0.62     5.57     0.37    15.10        1    13.69
+  R4157B           Road                 0.62     5.57     0.37    15.10        1    15.35
+  R4157C           Road                 0.62     5.57     0.37    15.10        1    13.69
+  R4157E           Road                 0.62     5.57     0.37    15.10        1    15.19
+  R4157F           Road                 0.62     5.57     0.37    15.10        1    18.60
+  R4257            Road                 0.62     5.57     0.37    15.10        1    18.60
+  R4257A           Road                 0.62     5.57     0.37    15.10        1    23.07
+  R4257B           Road                 0.62     5.57     0.37    15.10        1    23.07
+  R4257C           Road                 0.62     5.57     0.37    15.10        1    23.13
+  R4258            Road                 0.62     5.57     0.37    15.10        1    24.85
+  R4258A           Road                 0.62     5.57     0.37    15.10        1    23.16
+  R4358            Road                 0.62     5.57     0.37    15.10        1    23.08
+  R4358A           Road                 0.62     5.57     0.37    15.10        1    23.57
+  R4358B           Road                 0.62     5.57     0.37    15.10        1    16.75
+  R4358C           Road                 0.62     5.57     0.37    15.10        1    23.57
+  R4358D           Road                 0.62     5.57     0.37    15.10        1    16.75
+  R4359A           Road                 0.62     5.57     0.37    15.10        1    15.54
+  R4359B           Road                 0.62     5.57     0.37    15.10        1    12.37
+  R4359D           Road                 0.62     5.57     0.37    15.10        1     9.34
+  R4359E           Road                 0.62     5.57     0.37    15.10        1    12.37
+  R4459            Road                 0.62     5.57     0.37    15.10        1    11.12
+  R4459B           Road                 0.62     5.57     0.37    15.10        1    11.12
+  R4459C           Road                 0.62     5.57     0.37    15.10        1    14.93
+  R4459D           Road                 0.62     5.57     0.37    15.10        1    11.12
+  R4459F           Road                 0.62     5.57     0.37    15.10        1    11.12
+  R4459G           Road                 0.62     5.57     0.37    15.10        1    15.35
+  R4460            Road                 0.62     5.57     0.37    15.10        1    15.29
+  R4460A           Road                 0.62     5.57     0.37    15.10        1    17.87
+  R4460B           Road                 0.62     5.57     0.37    15.10        1    17.84
+  R4560            Road                 0.62     5.57     0.37    15.10        1    17.75
+  R4560A           Road                 0.62     5.57     0.37    15.10        1    17.55
+  R4560B           Road                 0.62     5.57     0.37    15.10        1    14.54
+  R4560C           Road                 0.62     5.57     0.37    15.10        1    17.52
+  R4560D           Road                 0.62     5.57     0.37    15.10        1    14.54
+  R4661A           Road                 0.62     5.57     0.37    15.10        1    18.02
+  R4661B           Road                 0.62     5.57     0.37    15.10        1    13.84
+  R4661D           Road                 0.62     5.57     0.37    15.10        1    14.86
+  R4661E           Road                 0.62     5.57     0.37    15.10        1    12.59
+  R4661F           Road                 0.62     5.57     0.37    15.10        1    13.96
+  R4662            Road                 0.62     5.57     0.37    15.10        1    16.03
+  R4662A           Road                 0.62     5.57     0.37    15.10        1    14.97
+  R4662B           Road                 0.62     5.57     0.37    15.10        1    16.03
+  R4662C           Road                 0.62     5.57     0.37    15.10        1    19.07
+  R4762            Road                 0.62     5.57     0.37    15.10        1    18.96
+  R4762A           Road                 0.62     5.57     0.37    15.10        1    18.96
+  R4762B           Road                 0.62     5.57     0.37    15.10        1    18.99
+  R4762C           Road                 0.62     5.57     0.37    15.10        1    21.08
+  R4763            Road                 0.62     5.57     0.37    15.10        1    19.30
+  R4763A           Road                 0.62     5.57     0.37    15.10        1    19.10
+  R4763B           Road                 0.62     5.57     0.37    15.10        1    19.30
+  R4863            Road                 0.62     5.57     0.37    15.10        1    11.22
+  R4863D           Road                 0.62     5.57     0.37    15.10        1    11.22
+  RSpill_R4156C    Road                 0.62     5.57     0.37    15.10        1    34.32
+  RSpill_R4156G    Road                 0.62     5.57     0.37    15.10        1    25.10
+  RSpill_R4359A    Road                 0.62     5.57     0.37    15.10        1    35.57
+  RSpill_R4359D    Road                 0.62     5.57     0.37    15.10        1    26.29
+  RSpill_R4661A    Road                 0.62     5.57     0.37    15.10        1    38.59
+  RSpill_R4661E    Road                 0.62     5.57     0.37    15.10        1    25.80
+  
+  
+  **************
+  Street Summary
+  **************
+
+  Street Road
+  Area:  
+              0.0005     0.0022     0.0049     0.0088     0.0137 
+              0.0198     0.0269     0.0352     0.0445     0.0550 
+              0.0665     0.0792     0.0929     0.1077     0.1237 
+              0.1406     0.1579     0.1756     0.1939     0.2126 
+              0.2318     0.2515     0.2717     0.2923     0.3135 
+              0.3351     0.3572     0.3798     0.4029     0.4265 
+              0.4506     0.4751     0.5001     0.5257     0.5517 
+              0.5782     0.6051     0.6326     0.6605     0.6890 
+              0.7179     0.7473     0.7772     0.8076     0.8384 
+              0.8698     0.9016     0.9339     0.9667     1.0000 
+  Hrad:  
+              0.0164     0.0329     0.0493     0.0658     0.0822 
+              0.0987     0.1151     0.1316     0.1480     0.1645 
+              0.1809     0.1973     0.2138     0.2302     0.2467 
+              0.2703     0.3026     0.3338     0.3640     0.3931 
+              0.4214     0.4488     0.4753     0.5012     0.5263 
+              0.5507     0.5745     0.5977     0.6203     0.6424 
+              0.6640     0.6850     0.7056     0.7257     0.7454 
+              0.7647     0.7836     0.8021     0.8203     0.8381 
+              0.8555     0.8727     0.8896     0.9061     0.9224 
+              0.9384     0.9542     0.9697     0.9850     1.0000 
+  Width: 
+              0.0328     0.0656     0.0984     0.1311     0.1639 
+              0.1967     0.2295     0.2623     0.2951     0.3279 
+              0.3606     0.3934     0.4262     0.4590     0.4918 
+              0.5099     0.5221     0.5366     0.5511     0.5656 
+              0.5800     0.5945     0.6090     0.6235     0.6380 
+              0.6524     0.6669     0.6814     0.6959     0.7104 
+              0.7249     0.7393     0.7538     0.7683     0.7828 
+              0.7973     0.8117     0.8262     0.8407     0.8552 
+              0.8697     0.8841     0.8986     0.9131     0.9276 
+              0.9421     0.9566     0.9710     0.9855     1.0000 
+  
+  
+  ****************
+  Analysis Options
+  ****************
+  Flow Units ............... CMS
+  Process Models:
+    Rainfall/Runoff ........ YES
+    RDII ................... NO
+    Snowmelt ............... NO
+    Groundwater ............ NO
+    Flow Routing ........... YES
+    Ponding Allowed ........ YES
+    Water Quality .......... NO
+  Infiltration Method ...... HORTON
+  Flow Routing Method ...... DYNWAVE
+  Surcharge Method ......... EXTRAN
+  Starting Date ............ 01/01/2016 00:00:00
+  Ending Date .............. 01/01/2016 06:00:00
+  Antecedent Dry Days ...... 0.0
+  Report Time Step ......... 00:01:00
+  Wet Time Step ............ 00:01:00
+  Dry Time Step ............ 00:01:00
+  Routing Time Step ........ 1.00 sec
+  Variable Time Step ....... YES
+  Maximum Trials ........... 8
+  Number of Threads ........ 4
+  Head Tolerance ........... 0.000100 m
+  
+  
+  **************************        Volume         Depth
+  Runoff Quantity Continuity     hectare-m            mm
+  **************************     ---------       -------
+  Total Precipitation ......         0.611        85.563
+  Evaporation Loss .........         0.000         0.000
+  Infiltration Loss ........         0.205        28.706
+  Surface Runoff ...........         0.401        56.204
+  Final Storage ............         0.006         0.772
+  Continuity Error (%) .....        -0.139
+  
+  
+  **************************        Volume        Volume
+  Flow Routing Continuity        hectare-m      10^6 ltr
+  **************************     ---------     ---------
+  Dry Weather Inflow .......         0.000         0.000
+  Wet Weather Inflow .......         0.401         4.013
+  Groundwater Inflow .......         0.000         0.000
+  RDII Inflow ..............         0.000         0.000
+  External Inflow ..........         0.000         0.000
+  External Outflow .........         0.397         3.966
+  Flooding Loss ............         0.000         0.000
+  Evaporation Loss .........         0.000         0.000
+  Exfiltration Loss ........         0.000         0.000
+  Initial Stored Volume ....         0.000         0.000
+  Final Stored Volume ......         0.004         0.037
+  Continuity Error (%) .....         0.240
+  
+  
+  *************************
+  Highest Continuity Errors
+  *************************
+  Node R4661B (1.30%)
+  
+  
+  ***************************
+  Time-Step Critical Elements
+  ***************************
+  None
+  
+  
+  ********************************
+  Highest Flow Instability Indexes
+  ********************************
+  Link R4560 (85)
+  Link R4358D (55)
+  Link R4560B (54)
+  Link R4459G (52)
+  Link R4763A (51)
+  
+  
+  *********************************
+  Most Frequent Nonconverging Nodes
+  *********************************
+  Node D4156A (5.02%)
+  Node D4157B (5.02%)
+  Node D4359A (5.02%)
+  Node D4458A (5.02%)
+  Node D4561C (5.02%)
+  
+  
+  *************************
+  Routing Time Step Summary
+  *************************
+  Minimum Time Step           :     0.50 sec
+  Average Time Step           :     1.00 sec
+  Maximum Time Step           :     1.00 sec
+  % of Time in Steady State   :     0.00
+  Average Iterations per Step :     2.36
+  % of Steps Not Converging   :     5.02
+  Time Step Frequencies       :
+      1.000 -  0.871 sec      :    99.98 %
+      0.871 -  0.758 sec      :     0.00 %
+      0.758 -  0.660 sec      :     0.00 %
+      0.660 -  0.574 sec      :     0.00 %
+      0.574 -  0.500 sec      :     0.01 %
+  
+  
+  ***************************
+  Subcatchment Runoff Summary
+  ***************************
+  
+  ------------------------------------------------------------------------------------------------------------------------------
+                            Total      Total      Total      Total     Imperv       Perv      Total       Total     Peak  Runoff
+                           Precip      Runon       Evap      Infil     Runoff     Runoff     Runoff      Runoff   Runoff   Coeff
+  Subcatchment                 mm         mm         mm         mm         mm         mm         mm    10^6 ltr      CMS
+  ------------------------------------------------------------------------------------------------------------------------------
+  S-D3751-1                 85.56       0.00       0.00      51.49       4.20      29.83      34.03        0.04     0.03   0.398
+  S-D3751-2                 85.56       0.00       0.00      50.06       4.21      31.35      35.56        0.02     0.02   0.416
+  S-D3751A-1                85.56       0.00       0.00      50.07       4.21      31.34      35.55        0.02     0.02   0.415
+  S-D3752-1                 85.56       0.00       0.00      50.07       4.21      31.34      35.55        0.02     0.02   0.415
+  S-D3752A-1                85.56       0.00       0.00      50.06       4.21      31.35      35.56        0.02     0.02   0.416
+  S-D3850-1                 85.56       0.00       0.00      50.07       4.21      31.35      35.55        0.03     0.03   0.415
+  S-D3850A-1                85.56       0.00       0.00      50.07       4.21      31.34      35.55        0.02     0.02   0.415
+  S-D3851-1                 85.56       0.00       0.00      50.07       4.21      31.34      35.55        0.02     0.02   0.415
+  S-D3851A-1                85.56       0.00       0.00      50.06       4.21      31.35      35.56        0.01     0.02   0.416
+  S-D3851B-1                85.56       0.00       0.00      50.06       4.21      31.35      35.55        0.02     0.02   0.416
+  S-D3852-1                 85.56       0.00       0.00      50.07       4.21      31.34      35.55        0.02     0.02   0.415
+  S-D3852A-1                85.56       0.00       0.00      50.06       4.21      31.35      35.55        0.02     0.02   0.416
+  S-D3853-1                 85.56       0.00       0.00      50.06       4.21      31.35      35.56        0.01     0.02   0.416
+  S-D3853A-1                85.56       0.00       0.00      50.07       4.21      31.34      35.55        0.02     0.02   0.415
+  S-D3853B-1                85.56       0.00       0.00      50.07       4.21      31.34      35.55        0.02     0.02   0.415
+  S-D3853C-1                85.56       0.00       0.00      50.07       4.21      31.34      35.55        0.01     0.02   0.415
+  S-D3854A-1                85.56       0.00       0.00      50.06       4.21      31.35      35.56        0.02     0.02   0.416
+  S-D3953-1                 85.56       0.00       0.00      50.07       4.21      31.35      35.55        0.01     0.01   0.416
+  S-D3954-1                 85.56       0.00       0.00      50.07       4.21      31.34      35.55        0.02     0.02   0.415
+  S-D3954A-1                85.56       0.00       0.00      50.06       4.21      31.35      35.56        0.01     0.02   0.416
+  S-D3954B-1                85.56       0.00       0.00      50.07       4.21      31.34      35.55        0.02     0.02   0.415
+  S-D3955-1                 85.56       0.00       0.00      50.06       4.21      31.35      35.56        0.02     0.02   0.416
+  S-D3955A-1                85.56       0.00       0.00      50.07       4.21      31.34      35.55        0.02     0.02   0.415
+  S-D4054-1                 85.56       0.00       0.00      50.06       4.21      31.35      35.55        0.02     0.02   0.416
+  S-D4055-1                 85.56       0.00       0.00      50.07       4.21      31.35      35.55        0.02     0.02   0.416
+  S-D4055A-1                85.56       0.00       0.00      50.07       4.21      31.34      35.55        0.02     0.02   0.415
+  S-D4055B-1                85.56       0.00       0.00      50.44       4.20      30.91      35.11        0.01     0.01   0.410
+  S-D4055B-2                85.56       0.00       0.00      50.06       4.21      31.35      35.56        0.02     0.02   0.416
+  S-D4056-1                 85.56       0.00       0.00      50.06       4.21      31.35      35.56        0.02     0.02   0.416
+  S-D4056A-1                85.56       0.00       0.00      50.06       4.21      31.35      35.56        0.02     0.02   0.416
+  S-D4056B-1                85.56       0.00       0.00      50.06       4.21      31.35      35.56        0.01     0.01   0.416
+  S-D4156A-2                85.56       0.00       0.00      50.58       4.20      30.75      34.96        0.01     0.01   0.409
+  S-D4157A-1                85.56       0.00       0.00      50.06       4.21      31.35      35.56        0.02     0.02   0.416
+  S-D4157B-2                85.56       0.00       0.00      50.55       4.20      30.79      34.99        0.01     0.01   0.409
+  S-D4257-1                 85.56       0.00       0.00      50.06       4.21      31.35      35.55        0.02     0.02   0.416
+  S-D4257A-1                85.56       0.00       0.00      50.06       4.21      31.35      35.55        0.02     0.02   0.416
+  S-D4257B-1                85.56       0.00       0.00      50.06       4.21      31.35      35.55        0.02     0.02   0.416
+  S-D4257C-1                85.56       0.00       0.00      50.06       4.21      31.35      35.55        0.02     0.02   0.416
+  S-D4258-1                 85.56       0.00       0.00      50.06       4.21      31.35      35.56        0.02     0.02   0.416
+  S-D4258A-1                85.56       0.00       0.00      50.06       4.21      31.35      35.56        0.02     0.02   0.416
+  S-D4358-1                 85.56       0.00       0.00      50.06       4.21      31.35      35.56        0.02     0.02   0.416
+  S-D4358C-1                85.56       0.00       0.00      50.06       4.21      31.35      35.56        0.02     0.02   0.416
+  S-D4358D-1                85.56       0.00       0.00      50.06       4.21      31.35      35.56        0.02     0.02   0.416
+  S-D4359D-1                85.56       0.00       0.00      50.06       4.21      31.35      35.56        0.02     0.02   0.416
+  S-D4459A-1                85.56       0.00       0.00      50.06       4.21      31.35      35.55        0.02     0.02   0.416
+  S-D4459B-1                85.56       0.00       0.00      50.06       4.21      31.35      35.56        0.02     0.02   0.416
+  S-D4459C-1                85.56       0.00       0.00      50.06       4.21      31.35      35.55        0.02     0.02   0.416
+  S-D4459D-1                85.56       0.00       0.00      50.06       4.21      31.35      35.56        0.02     0.02   0.416
+  S-D4460-1                 85.56       0.00       0.00      50.06       4.21      31.35      35.55        0.02     0.02   0.416
+  S-D4460A-1                85.56       0.00       0.00      50.06       4.21      31.35      35.55        0.02     0.02   0.416
+  S-D4560-1                 85.56       0.00       0.00      49.99       4.21      31.46      35.67        0.02     0.02   0.417
+  S-D4560A-1                85.56       0.00       0.00      50.06       4.21      31.35      35.56        0.02     0.02   0.416
+  S-D4560B-1                85.56       0.00       0.00      50.07       4.21      31.34      35.55        0.01     0.01   0.415
+  S-D4560D-1                85.56       0.00       0.00      50.06       4.21      31.35      35.56        0.02     0.02   0.416
+  S-D4561-1                 85.56       0.00       0.00      50.06       4.21      31.35      35.56        0.01     0.01   0.416
+  S-D4561C-1                85.56       0.00       0.00      50.57       4.20      30.77      34.98        0.01     0.01   0.409
+  S-D4661A-1                85.56       0.00       0.00      50.55       4.20      30.79      34.99        0.01     0.01   0.409
+  S-D4661D-1                85.56       0.00       0.00      50.06       4.21      31.35      35.56        0.02     0.02   0.416
+  S-D4662A-1                85.56       0.00       0.00      50.06       4.21      31.35      35.56        0.02     0.02   0.416
+  S-D4662B-1                85.56       0.00       0.00      50.06       4.21      31.35      35.55        0.02     0.02   0.416
+  S-D4762-1                 85.56       0.00       0.00      50.07       4.21      31.35      35.55        0.02     0.02   0.416
+  S-D4762A-1                85.56       0.00       0.00      50.07       4.21      31.35      35.55        0.02     0.02   0.416
+  S-D4762B-1                85.56       0.00       0.00      50.06       4.21      31.35      35.55        0.02     0.02   0.416
+  S-D4762C-1                85.56       0.00       0.00      50.06       4.21      31.35      35.56        0.02     0.02   0.416
+  S-D4763-1                 85.56       0.00       0.00      50.06       4.21      31.35      35.55        0.02     0.02   0.416
+  S-D4763A-1                85.56       0.00       0.00      50.06       4.21      31.35      35.55        0.01     0.01   0.416
+  S-D4763D-1                85.56       0.00       0.00      50.06       4.21      31.35      35.56        0.01     0.01   0.416
+  S-D4862-1                 85.56       0.00       0.00      50.06       4.21      31.35      35.55        0.01     0.01   0.416
+  S-D4863A-1                85.56       0.00       0.00      50.06       4.21      31.35      35.56        0.01     0.01   0.416
+  S-R3750-1                 85.56      58.19       0.00      13.54     106.90      22.14     129.04        0.09     0.06   0.898
+  S-R3750-2                 85.56       0.00       0.00       8.57      70.33       5.41      75.74        0.03     0.02   0.885
+  S-R3750B-1                85.56       0.00       0.00      13.07      63.16       8.18      71.34        0.04     0.03   0.834
+  S-R3850-1                 85.56      41.96       0.00      13.02      95.35      18.01     113.36        0.07     0.06   0.889
+  S-R3850-2                 85.56       0.00       0.00       9.36      69.07       5.91      74.97        0.03     0.02   0.876
+  S-R3850B-1                85.56      31.20       0.00      12.97      87.20      15.45     102.65        0.05     0.04   0.879
+  S-R3851-1                 85.56      31.85       0.00      12.97      87.70      15.60     103.30        0.05     0.04   0.880
+  S-R3851A-1                85.56      31.20       0.00      12.97      87.20      15.45     102.65        0.05     0.04   0.879
+  S-R3851B-1                85.56      29.32       0.00      13.24      85.20      15.29     100.48        0.06     0.04   0.875
+  S-R3851C-1                85.56      29.94       0.00      13.25      85.66      15.44     101.10        0.06     0.05   0.875
+  S-R3852-1                 85.56      29.28       0.00      12.96      85.75      14.99     100.74        0.05     0.04   0.877
+  S-R3852A-1                85.56      29.40       0.00      12.96      85.84      15.02     100.86        0.05     0.04   0.877
+  S-R3852B-1                85.56      29.40       0.00      12.96      85.84      15.02     100.86        0.05     0.04   0.877
+  S-R3852C-1                85.56      31.52       0.00      13.25      86.86      15.82     102.68        0.05     0.04   0.877
+  S-R3852D-1                85.56      31.53       0.00      13.25      86.87      15.84     102.71        0.05     0.04   0.877
+  S-R3852E-1                85.56      31.60       0.00      13.25      86.92      15.85     102.78        0.06     0.04   0.877
+  S-R3853-1                 85.56      29.28       0.00      12.96      85.75      14.99     100.74        0.05     0.04   0.877
+  S-R3853A-1                85.56      29.76       0.00      12.97      86.12      15.10     101.22        0.04     0.03   0.878
+  S-R3853B-1                85.56      31.52       0.00      13.25      86.87      15.83     102.70        0.05     0.04   0.877
+  S-R3853C-1                85.56      31.60       0.00      13.25      86.92      15.85     102.78        0.05     0.04   0.877
+  S-R3854-1                 85.56      59.26       0.00      13.38     107.73      22.58     130.30        0.04     0.04   0.900
+  S-R3953-1                 85.56      55.99       0.00      13.10     105.97      21.35     127.32        0.04     0.03   0.899
+  S-R3954A-1                85.56       0.00       0.00      12.80      63.59       8.02      71.61        0.01     0.01   0.837
+  S-R3954B-1                85.56       0.00       0.00      12.81      63.58       8.02      71.60        0.01     0.01   0.837
+  S-R3954C-1                85.56      29.28       0.00      12.97      85.75      14.98     100.73        0.05     0.04   0.877
+  S-R3954E-1                85.56       0.00       0.00      13.06      63.17       8.19      71.36        0.01     0.01   0.834
+  S-R3954F-1                85.56       0.00       0.00      13.06      63.17       8.19      71.36        0.01     0.01   0.834
+  S-R3954G-1                85.56      31.52       0.00      13.24      86.87      15.84     102.71        0.05     0.04   0.877
+  S-R3955-1                 85.56      28.08       0.00      12.97      84.82      14.68      99.50        0.06     0.05   0.876
+  S-R3955A-1                85.56      32.00       0.00      13.25      87.23      15.95     103.18        0.06     0.05   0.878
+  S-R4055-1                 85.56      24.43       0.00      11.73      84.54      12.50      97.04        0.07     0.05   0.882
+  S-R4055A-1                85.56      24.24       0.00      10.66      86.54      11.33      97.87        0.06     0.05   0.891
+  S-R4055B-1                85.56      33.77       0.00      13.25      88.56      16.38     104.94        0.06     0.05   0.879
+  S-R4055C-1                85.56      32.00       0.00      13.25      87.22      15.95     103.17        0.05     0.04   0.878
+  S-R4056-1                 85.56      23.88       0.00      10.66      86.25      11.26      97.51        0.07     0.05   0.891
+  S-R4056A-1                85.56       0.00       0.00       9.54      68.72       5.96      74.69        0.02     0.01   0.873
+  S-R4056B-1                85.56      32.00       0.00      13.25      87.23      15.95     103.18        0.05     0.04   0.878
+  S-R4056C-1                85.56       0.00       0.00      12.38      64.25       7.75      72.00        0.02     0.01   0.841
+  S-R4156-1                 85.56      20.46       0.00       4.36      95.74       4.35     100.08        0.04     0.03   0.944
+  S-R4156C-1                85.56      25.85       0.00      12.89      83.35      14.00      97.35        0.04     0.03   0.874
+  S-R4156D-1                85.56      25.06       0.00       5.64      97.39       6.10     103.49        0.04     0.03   0.936
+  S-R4156G-1                85.56      22.02       0.00       9.83      86.43       9.99      96.42        0.06     0.04   0.896
+  S-R4157-1                 85.56       0.00       0.00      13.75      62.08       8.62      70.70        0.01     0.01   0.826
+  S-R4157B-1                85.56       0.00       0.00      13.75      62.08       8.62      70.70        0.01     0.00   0.826
+  S-R4157C-1                85.56       0.00       0.00      10.33      67.49       6.47      73.96        0.01     0.01   0.864
+  S-R4157E-1                85.56       0.00       0.00      10.33      67.48       6.46      73.95        0.01     0.01   0.864
+  S-R4157F-1                85.56      48.10       0.00      10.54     106.16      15.69     121.85        0.04     0.03   0.912
+  S-R4257-1                 85.56      62.90       0.00      14.10     108.57      24.70     133.26        0.03     0.03   0.898
+  S-R4257A-1                85.56      32.00       0.00      13.94      85.72      16.79     102.51        0.05     0.04   0.872
+  S-R4257B-1                85.56      32.00       0.00      13.67      86.30      16.47     102.77        0.05     0.04   0.874
+  S-R4257C-1                85.56      24.24       0.00      10.44      86.97      11.11      98.08        0.06     0.05   0.893
+  S-R4258-1                 85.56      26.67       0.00      11.47      86.84      12.70      99.54        0.06     0.05   0.887
+  S-R4258A-1                85.56      29.82       0.00      13.02      86.04      15.17     101.21        0.06     0.05   0.877
+  S-R4358-1                 85.56      30.31       0.00      13.67      85.04      16.04     101.07        0.06     0.05   0.872
+  S-R4358A-1                85.56      45.17       0.00      13.75      96.09      19.76     115.85        0.04     0.04   0.886
+  S-R4358B-1                85.56       0.00       0.00      10.85      66.68       6.80      73.48        0.02     0.01   0.859
+  S-R4358C-1                85.56      45.17       0.00      13.10      97.64      18.84     116.48        0.04     0.04   0.891
+  S-R4358D-1                85.56       0.00       0.00      10.85      66.68       6.81      73.48        0.02     0.01   0.859
+  S-R4359A-1                85.56       0.00       0.00      10.85      66.67       6.80      73.48        0.02     0.01   0.859
+  S-R4359B-1                85.56      43.46       0.00      13.09      96.35      18.43     114.78        0.05     0.04   0.890
+  S-R4359D-1                85.56       0.00       0.00      10.85      66.68       6.80      73.48        0.02     0.01   0.859
+  S-R4359E-1                85.56      43.46       0.00      13.26      95.97      18.66     114.62        0.05     0.04   0.888
+  S-R4459-1                 85.56       0.00       0.00      12.85      63.51       8.06      71.56        0.01     0.01   0.836
+  S-R4459B-1                85.56       0.00       0.00      12.86      63.50       8.06      71.56        0.01     0.01   0.836
+  S-R4459C-1                85.56      88.88       0.00      13.31     130.70      29.31     160.01        0.03     0.03   0.917
+  S-R4459D-1                85.56       0.00       0.00      13.01      63.25       8.15      71.40        0.01     0.01   0.834
+  S-R4459F-1                85.56       0.00       0.00      13.01      63.25       8.16      71.41        0.01     0.01   0.835
+  S-R4459G-1                85.56      94.11       0.00      13.50     134.12      30.94     165.06        0.03     0.03   0.919
+  S-R4460-1                 85.56      26.67       0.00      13.03      83.63      14.39      98.02        0.06     0.05   0.873
+  S-R4460A-1                85.56      32.00       0.00      13.19      87.34      15.89     103.23        0.05     0.04   0.878
+  S-R4460B-1                85.56      32.00       0.00      13.19      87.34      15.89     103.23        0.05     0.04   0.878
+  S-R4560-1                 85.56      24.32       0.00      10.39      87.14      11.07      98.21        0.06     0.05   0.894
+  S-R4560A-1                85.56      23.85       0.00      10.39      86.76      10.97      97.74        0.08     0.06   0.893
+  S-R4560B-1                85.56      17.17       0.00       8.45      84.99       7.91      92.90        0.05     0.04   0.904
+  S-R4560C-1                85.56      32.06       0.00      13.19      87.39      15.90     103.29        0.06     0.05   0.878
+  S-R4560D-1                85.56      22.63       0.00      11.24      84.09      11.62      95.71        0.04     0.03   0.885
+  S-R4661A-1                85.56      24.17       0.00      11.76      84.33      12.41      96.74        0.05     0.04   0.882
+  S-R4661B-1                85.56       0.00       0.00      13.49      62.50       8.45      70.95        0.01     0.01   0.829
+  S-R4661D-1                85.56       0.00       0.00      13.48      62.51       8.46      70.96        0.01     0.01   0.829
+  S-R4661E-1                85.56      18.25       0.00       8.85      85.17       8.41      93.58        0.06     0.04   0.901
+  S-R4661F-1                85.56       0.00       0.00      10.33      67.49       6.46      73.95        0.02     0.01   0.864
+  S-R4662-1                 85.56      86.08       0.00      13.95     126.55      30.05     156.60        0.03     0.03   0.912
+  S-R4662A-1                85.56       0.00       0.00      10.33      67.49       6.46      73.95        0.01     0.01   0.864
+  S-R4662B-1                85.56      65.42       0.00      10.61     120.09      19.02     139.11        0.03     0.03   0.921
+  S-R4662C-1                85.56      24.24       0.00      10.45      86.97      11.10      98.07        0.06     0.05   0.893
+  S-R4762-1                 85.56      32.00       0.00      13.67      86.30      16.47     102.77        0.05     0.04   0.874
+  S-R4762A-1                85.56      32.00       0.00      13.68      86.29      16.46     102.75        0.05     0.04   0.874
+  S-R4762B-1                85.56      30.77       0.00      13.68      85.37      16.15     101.52        0.05     0.04   0.873
+  S-R4762C-1                85.56      26.67       0.00      11.53      86.71      12.75      99.46        0.06     0.05   0.886
+  S-R4763-1                 85.56      30.47       0.00      13.67      85.16      16.08     101.24        0.04     0.03   0.872
+  S-R4763A-1                85.56      30.18       0.00      13.03      86.31      15.26     101.57        0.05     0.04   0.878
+  S-R4763B-1                85.56      30.47       0.00      13.03      86.53      15.33     101.86        0.04     0.03   0.878
+  S-R4863-1                 85.56      18.35       0.00      11.10      80.94      10.65      91.59        0.03     0.02   0.881
+  S-R4863D-1                85.56      18.35       0.00      11.11      80.93      10.65      91.57        0.03     0.02   0.881
+  
+  
+  ******************
+  Node Depth Summary
+  ******************
+  
+  ---------------------------------------------------------------------------------
+                                 Average  Maximum  Maximum  Time of Max    Reported
+                                   Depth    Depth      HGL   Occurrence   Max Depth
+  Node                 Type       Meters   Meters   Meters  days hr:min      Meters
+  ---------------------------------------------------------------------------------
+  34161                JUNCTION     0.10     0.47   474.47     0  02:33        0.47
+  34162                JUNCTION     0.08     0.39   488.63     0  02:33        0.39
+  L3750                JUNCTION     0.16     0.77   490.75     0  02:32        0.77
+  L3850                JUNCTION     0.13     0.73   490.75     0  02:32        0.73
+  L3852                JUNCTION     0.15     2.75   494.41     0  02:31        1.03
+  L3853                JUNCTION     0.24     2.48   494.26     0  02:31        1.90
+  L3854A               JUNCTION     0.26     2.70   494.56     0  02:31        2.49
+  L3955                JUNCTION     0.14     2.79   495.99     0  02:28        1.98
+  L4056                JUNCTION     0.17     2.85   496.40     0  02:28        2.24
+  L4157                JUNCTION     0.17     2.73   496.53     0  02:28        2.46
+  L4258                JUNCTION     0.11     2.51   498.51     0  02:29        1.70
+  L4359                JUNCTION     0.18     2.48   499.06     0  02:24        2.47
+  L4560                JUNCTION     0.18     2.57   500.12     0  02:23        2.07
+  L4662                JUNCTION     0.26     2.23   500.13     0  02:22        2.23
+  Node64               JUNCTION     0.06     0.28   472.33     0  02:33        0.28
+  Node66               JUNCTION     0.02     0.10   472.10     0  02:33        0.10
+  O3854                JUNCTION     0.00     0.05   495.09     0  02:32        0.05
+  O3954                JUNCTION     0.00     0.07   495.10     0  02:31        0.07
+  R3750                JUNCTION     0.02     0.08   497.18     0  02:30        0.08
+  R3750A               JUNCTION     0.02     0.08   497.11     0  02:30        0.08
+  R3750B               JUNCTION     0.02     0.09   496.90     0  02:30        0.09
+  R3850                JUNCTION     0.02     0.08   497.18     0  02:30        0.08
+  R3850A               JUNCTION     0.02     0.08   497.11     0  02:30        0.08
+  R3850B               JUNCTION     0.02     0.09   496.90     0  02:30        0.09
+  R3851                JUNCTION     0.02     0.10   496.69     0  02:30        0.10
+  R3851A               JUNCTION     0.03     0.11   496.47     0  02:30        0.11
+  R3851B               JUNCTION     0.03     0.10   496.69     0  02:30        0.10
+  R3851C               JUNCTION     0.03     0.11   496.47     0  02:30        0.11
+  R3852                JUNCTION     0.03     0.11   496.24     0  02:30        0.11
+  R3852A               JUNCTION     0.03     0.12   495.99     0  02:30        0.12
+  R3852B               JUNCTION     0.03     0.12   495.75     0  02:30        0.12
+  R3852C               JUNCTION     0.03     0.11   496.24     0  02:30        0.11
+  R3852D               JUNCTION     0.03     0.12   495.99     0  02:30        0.12
+  R3852E               JUNCTION     0.03     0.12   495.75     0  02:30        0.12
+  R3853                JUNCTION     0.03     0.12   495.49     0  02:30        0.12
+  R3853A               JUNCTION     0.03     0.13   495.24     0  02:30        0.13
+  R3853B               JUNCTION     0.03     0.12   495.49     0  02:30        0.12
+  R3853C               JUNCTION     0.03     0.13   495.24     0  02:30        0.13
+  R3854                JUNCTION     0.03     0.20   495.10     0  02:32        0.20
+  R3953                JUNCTION     0.03     0.20   495.10     0  02:31        0.20
+  R3954                JUNCTION     0.03     0.33   495.10     0  02:32        0.32
+  R3954A               JUNCTION     0.04     0.29   495.10     0  02:32        0.28
+  R3954B               JUNCTION     0.03     0.22   495.10     0  02:32        0.22
+  R3954C               JUNCTION     0.03     0.11   495.29     0  02:30        0.11
+  R3954D               JUNCTION     0.03     0.33   495.10     0  02:32        0.32
+  R3954E               JUNCTION     0.04     0.28   495.10     0  02:32        0.28
+  R3954F               JUNCTION     0.03     0.22   495.10     0  02:33        0.22
+  R3954G               JUNCTION     0.03     0.11   495.29     0  02:30        0.11
+  R3955                JUNCTION     0.03     0.11   495.60     0  02:30        0.11
+  R3955A               JUNCTION     0.02     0.10   495.63     0  02:30        0.10
+  R4055                JUNCTION     0.02     0.10   495.84     0  02:30        0.10
+  R4055A               JUNCTION     0.03     0.10   496.09     0  02:30        0.10
+  R4055B               JUNCTION     0.02     0.10   495.92     0  02:30        0.10
+  R4055C               JUNCTION     0.02     0.09   496.17     0  02:30        0.09
+  R4056                JUNCTION     0.02     0.08   496.31     0  02:30        0.08
+  R4056A               JUNCTION     0.02     0.06   496.35     0  02:30        0.06
+  R4056B               JUNCTION     0.02     0.08   496.39     0  02:30        0.08
+  R4056C               JUNCTION     0.02     0.06   496.43     0  02:30        0.06
+  R4156                JUNCTION     0.01     0.05   496.52     0  02:30        0.05
+  R4156C               JUNCTION     0.01     0.04   496.61     0  02:30        0.04
+  R4156D               JUNCTION     0.02     0.08   496.47     0  02:30        0.08
+  R4156G               JUNCTION     0.01     0.04   496.46     0  02:30        0.04
+  R4157                JUNCTION     0.01     0.13   496.51     0  02:31        0.13
+  R4157A               JUNCTION     0.02     0.18   496.51     0  02:31        0.18
+  R4157B               JUNCTION     0.03     0.13   496.51     0  02:31        0.13
+  R4157C               JUNCTION     0.02     0.15   496.44     0  02:31        0.15
+  R4157D               JUNCTION     0.02     0.21   496.44     0  02:31        0.21
+  R4157E               JUNCTION     0.03     0.16   496.44     0  02:31        0.16
+  R4157F               JUNCTION     0.03     0.11   496.56     0  02:30        0.11
+  R4257                JUNCTION     0.03     0.11   496.65     0  02:30        0.11
+  R4257A               JUNCTION     0.02     0.09   497.14     0  02:30        0.09
+  R4257B               JUNCTION     0.02     0.08   497.63     0  02:30        0.08
+  R4257C               JUNCTION     0.02     0.10   497.06     0  02:30        0.10
+  R4258                JUNCTION     0.02     0.08   497.63     0  02:30        0.08
+  R4258A               JUNCTION     0.02     0.07   498.21     0  02:30        0.07
+  R4358                JUNCTION     0.02     0.07   498.21     0  02:30        0.07
+  R4358A               JUNCTION     0.01     0.06   498.56     0  02:30        0.06
+  R4358B               JUNCTION     0.01     0.04   498.72     0  02:30        0.04
+  R4358C               JUNCTION     0.01     0.06   498.56     0  02:30        0.06
+  R4358D               JUNCTION     0.01     0.04   498.72     0  02:30        0.04
+  R4359A               JUNCTION     0.01     0.03   498.96     0  02:30        0.03
+  R4359B               JUNCTION     0.02     0.07   498.93     0  02:32        0.07
+  R4359D               JUNCTION     0.01     0.03   498.92     0  02:30        0.03
+  R4359E               JUNCTION     0.02     0.06   498.92     0  02:30        0.06
+  R4459                JUNCTION     0.02     0.20   498.93     0  02:31        0.19
+  R4459A               JUNCTION     0.02     0.24   498.93     0  02:32        0.23
+  R4459B               JUNCTION     0.04     0.20   498.92     0  02:32        0.20
+  R4459C               JUNCTION     0.03     0.12   498.92     0  02:32        0.12
+  R4459D               JUNCTION     0.02     0.17   498.90     0  02:32        0.17
+  R4459E               JUNCTION     0.02     0.21   498.90     0  02:32        0.21
+  R4459F               JUNCTION     0.03     0.17   498.90     0  02:32        0.17
+  R4459G               JUNCTION     0.03     0.11   498.91     0  02:30        0.11
+  R4460                JUNCTION     0.03     0.11   499.13     0  02:30        0.11
+  R4460A               JUNCTION     0.02     0.10   499.20     0  02:30        0.10
+  R4460B               JUNCTION     0.02     0.09   499.50     0  02:30        0.09
+  R4560                JUNCTION     0.02     0.09   499.41     0  02:30        0.09
+  R4560A               JUNCTION     0.02     0.08   499.76     0  02:30        0.08
+  R4560B               JUNCTION     0.02     0.06   499.85     0  02:30        0.06
+  R4560C               JUNCTION     0.02     0.08   499.84     0  02:30        0.08
+  R4560D               JUNCTION     0.01     0.06   499.94     0  02:30        0.06
+  R4661A               JUNCTION     0.01     0.04   500.28     0  02:35        0.04
+  R4661B               JUNCTION     0.03     0.29   500.28     0  02:35        0.29
+  R4661C               JUNCTION     0.03     0.35   500.28     0  02:36        0.35
+  R4661D               JUNCTION     0.04     0.29   500.27     0  02:36        0.29
+  R4661E               JUNCTION     0.01     0.08   500.10     0  02:31        0.08
+  R4661F               JUNCTION     0.03     0.23   500.13     0  02:31        0.23
+  R4662                JUNCTION     0.03     0.20   500.28     0  02:35        0.20
+  R4662A               JUNCTION     0.04     0.23   500.13     0  02:32        0.23
+  R4662B               JUNCTION     0.03     0.14   500.13     0  02:32        0.14
+  R4662C               JUNCTION     0.03     0.10   500.44     0  02:30        0.10
+  R4762                JUNCTION     0.02     0.10   500.52     0  02:30        0.10
+  R4762A               JUNCTION     0.02     0.09   500.85     0  02:30        0.09
+  R4762B               JUNCTION     0.02     0.08   501.18     0  02:30        0.08
+  R4762C               JUNCTION     0.02     0.09   500.84     0  02:30        0.09
+  R4763                JUNCTION     0.02     0.06   501.45     0  02:30        0.06
+  R4763A               JUNCTION     0.02     0.08   501.18     0  02:30        0.08
+  R4763B               JUNCTION     0.02     0.06   501.45     0  02:30        0.06
+  R4863                JUNCTION     0.01     0.05   501.51     0  02:30        0.05
+  R4863D               JUNCTION     0.01     0.05   501.51     0  02:30        0.05
+  R4661G               JUNCTION     0.03     0.30   500.13     0  02:31        0.30
+  D4156A               OUTFALL      0.01     0.04   495.45     0  02:30        0.04
+  D4157B               OUTFALL      0.01     0.04   495.84     0  02:30        0.04
+  D4359A               OUTFALL      0.01     0.03   498.22     0  02:30        0.03
+  D4458A               OUTFALL      0.01     0.03   497.73     0  02:30        0.03
+  D4561C               OUTFALL      0.01     0.08   499.47     0  02:31        0.08
+  D4661A               OUTFALL      0.01     0.04   499.03     0  02:35        0.04
+  Node67               OUTFALL      0.02     0.10   470.10     0  02:33        0.10
+  O3854A               STORAGE      0.00     0.23   494.31     0  02:33        0.23
+  
+  
+  *******************
+  Node Inflow Summary
+  *******************
+  
+  -------------------------------------------------------------------------------------------------
+                                  Maximum  Maximum                  Lateral       Total        Flow
+                                  Lateral    Total  Time of Max      Inflow      Inflow     Balance
+                                   Inflow   Inflow   Occurrence      Volume      Volume       Error
+  Node                 Type           CMS      CMS  days hr:min    10^6 ltr    10^6 ltr     Percent
+  -------------------------------------------------------------------------------------------------
+  34161                JUNCTION     0.000    1.908     0  02:33           0        3.72       0.037
+  34162                JUNCTION     0.000    1.907     0  02:33           0        3.72       0.032
+  L3750                JUNCTION     0.000    1.927     0  02:31           0        3.74       0.113
+  L3850                JUNCTION     0.000    0.017     0  02:27           0      0.0109       6.594
+  L3852                JUNCTION     0.061    1.999     0  02:31      0.0999        3.73       0.111
+  L3853                JUNCTION     0.097    1.943     0  02:31       0.174        3.63       0.119
+  L3854A               JUNCTION     0.761    1.853     0  02:31        1.42        3.46       0.040
+  L3955                JUNCTION     0.067    0.988     0  02:29       0.116        1.98       0.089
+  L4056                JUNCTION     0.000    0.921     0  02:29           0        1.87       0.108
+  L4157                JUNCTION     0.430    0.922     0  02:29       0.636        1.87       0.134
+  L4258                JUNCTION     0.000    0.566     0  02:29           0        1.24       0.021
+  L4359                JUNCTION     0.462    0.582     0  02:32       0.715        1.27       0.144
+  L4560                JUNCTION     0.000    0.224     0  02:23           0       0.553      -0.177
+  L4662                JUNCTION     0.554    0.554     0  02:33        1.11        1.11       0.079
+  Node64               JUNCTION     0.000    1.911     0  02:33           0        3.72       0.023
+  Node66               JUNCTION     0.000    1.911     0  02:33           0        3.72       0.013
+  O3854                JUNCTION     0.000    0.190     0  02:32           0      0.0595      -0.190
+  O3954                JUNCTION     0.000    0.136     0  02:32           0      0.0358       0.027
+  R3750                JUNCTION     0.075    0.075     0  02:30        0.12        0.12       0.136
+  R3750A               JUNCTION     0.000    0.075     0  02:30           0        0.12       0.133
+  R3750B               JUNCTION     0.025    0.100     0  02:30      0.0399        0.16       0.116
+  R3850                JUNCTION     0.074    0.074     0  02:30      0.0976      0.0976       0.160
+  R3850A               JUNCTION     0.000    0.074     0  02:30           0      0.0975       0.126
+  R3850B               JUNCTION     0.040    0.114     0  02:30      0.0503       0.148       0.130
+  R3851                JUNCTION     0.039    0.152     0  02:30      0.0496       0.197       0.118
+  R3851A               JUNCTION     0.040    0.191     0  02:30      0.0503       0.247       0.106
+  R3851B               JUNCTION     0.045    0.142     0  02:30      0.0573       0.217       0.111
+  R3851C               JUNCTION     0.045    0.184     0  02:30      0.0576       0.274       0.104
+  R3852                JUNCTION     0.012    0.199     0  02:30     0.00393       0.254       0.097
+  R3852A               JUNCTION     0.041    0.238     0  02:30      0.0524       0.303       0.087
+  R3852B               JUNCTION     0.041    0.276     0  02:30      0.0524       0.355       0.081
+  R3852C               JUNCTION     0.013    0.195     0  02:30     0.00191       0.281       0.095
+  R3852D               JUNCTION     0.043    0.235     0  02:30      0.0544        0.33       0.086
+  R3852E               JUNCTION     0.044    0.276     0  02:30      0.0555       0.385       0.082
+  R3853                JUNCTION    -0.023    0.275     0  02:30     -0.0322       0.356       0.069
+  R3853A               JUNCTION     0.034    0.296     0  02:30      0.0435       0.366      -0.028
+  R3853B               JUNCTION    -0.021    0.274     0  02:30     -0.0359       0.386       0.070
+  R3853C               JUNCTION     0.037    0.300     0  02:30      0.0462       0.395      -0.020
+  R3854                JUNCTION    -0.085    0.298     0  02:30     -0.0798       0.395       0.067
+  R3953                JUNCTION    -0.085    0.293     0  02:30     -0.0764       0.366       0.098
+  R3954                JUNCTION    -0.281    0.478     0  02:32       -0.59       0.625       0.085
+  R3954A               JUNCTION     0.006    0.317     0  02:31        0.01       0.335       0.104
+  R3954B               JUNCTION     0.006    0.245     0  02:30        0.01       0.326       0.238
+  R3954C               JUNCTION     0.040    0.241     0  02:30      0.0514       0.315      -0.087
+  R3954D               JUNCTION    -0.280    0.576     0  02:31      -0.591       0.653       0.122
+  R3954E               JUNCTION     0.006    0.240     0  02:33     0.00999       0.304       0.107
+  R3954F               JUNCTION     0.006    0.231     0  02:30     0.00999       0.294       0.267
+  R3954G               JUNCTION     0.043    0.227     0  02:30      0.0544       0.284      -0.127
+  R3955                JUNCTION     0.048    0.203     0  02:29      0.0616       0.264       0.109
+  R3955A               JUNCTION     0.049    0.186     0  02:30      0.0619        0.23       0.102
+  R4055                JUNCTION     0.088    0.222     0  02:28     0.00759       0.207       0.094
+  R4055A               JUNCTION     0.048    0.139     0  02:30      0.0646       0.196       0.127
+  R4055B               JUNCTION     0.089    0.204     0  02:28      0.0112       0.171       0.110
+  R4055C               JUNCTION     0.041    0.119     0  02:30      0.0516       0.157       0.130
+  R4056                JUNCTION     0.049    0.091     0  02:30      0.0653       0.131       0.125
+  R4056A               JUNCTION     0.014    0.043     0  02:30      0.0231       0.066       0.204
+  R4056B               JUNCTION     0.041    0.078     0  02:30      0.0516       0.106       0.147
+  R4056C               JUNCTION     0.011    0.038     0  02:30      0.0173      0.0542       0.224
+  R4156                JUNCTION     0.029    0.029     0  02:30      0.0429      0.0429       0.270
+  R4156C               JUNCTION     0.031    0.031     0  02:30      0.0441      0.0441       0.050
+  R4156D               JUNCTION     0.027    0.027     0  02:30      0.0371      0.0371       0.541
+  R4156G               JUNCTION     0.039    0.039     0  02:30      0.0567      0.0567       0.004
+  R4157                JUNCTION     0.007    0.018     0  02:27      0.0106      0.0257       0.727
+  R4157A               JUNCTION    -0.208    0.212     0  02:30      -0.296       0.297       0.000
+  R4157B               JUNCTION     0.005    0.212     0  02:30     0.00778       0.271       0.095
+  R4157C               JUNCTION     0.009    0.025     0  02:29       0.014      0.0359       0.691
+  R4157D               JUNCTION    -0.223    0.234     0  02:30       -0.34        0.34       0.000
+  R4157E               JUNCTION     0.007    0.231     0  02:30      0.0111       0.305       0.106
+  R4157F               JUNCTION     0.034    0.225     0  02:30      0.0414       0.294       0.062
+  R4257                JUNCTION     0.030    0.209     0  02:30      0.0346       0.264       0.079
+  R4257A               JUNCTION     0.041    0.179     0  02:30      0.0512       0.229       0.085
+  R4257B               JUNCTION     0.041    0.139     0  02:30      0.0514       0.178       0.115
+  R4257C               JUNCTION     0.048    0.192     0  02:30      0.0647       0.252       0.080
+  R4258                JUNCTION     0.046    0.144     0  02:30      0.0597       0.188       0.109
+  R4258A               JUNCTION     0.049    0.099     0  02:30      0.0627       0.128       0.110
+  R4358                JUNCTION     0.049    0.098     0  02:30      0.0616       0.127       0.106
+  R4358A               JUNCTION     0.036    0.050     0  02:30      0.0429      0.0655       0.157
+  R4358B               JUNCTION     0.014    0.014     0  02:30      0.0228      0.0228       0.464
+  R4358C               JUNCTION     0.036    0.050     0  02:30      0.0431      0.0658       0.157
+  R4358D               JUNCTION     0.014    0.014     0  02:30      0.0228      0.0228       0.468
+  R4359A               JUNCTION     0.014    0.014     0  02:30       0.022       0.022       0.246
+  R4359B               JUNCTION     0.043    0.047     0  02:30      0.0516      0.0586      -0.221
+  R4359D               JUNCTION     0.014    0.015     0  02:30       0.022      0.0223       0.310
+  R4359E               JUNCTION     0.043    0.043     0  02:30      0.0516       0.058      -0.138
+  R4459                JUNCTION     0.008    0.060     0  02:29      0.0122      0.0708       0.672
+  R4459A               JUNCTION    -0.220    0.245     0  02:29      -0.366       0.366       0.000
+  R4459B               JUNCTION     0.008    0.221     0  02:30      0.0129       0.296       0.096
+  R4459C               JUNCTION     0.026    0.214     0  02:30      0.0288       0.284       0.115
+  R4459D               JUNCTION     0.008    0.054     0  02:29      0.0121        0.07       0.555
+  R4459E               JUNCTION    -0.197    0.223     0  02:29      -0.317       0.317       0.000
+  R4459F               JUNCTION     0.008    0.193     0  02:30      0.0121       0.248       0.087
+  R4459G               JUNCTION     0.026    0.187     0  02:30      0.0281       0.236       0.109
+  R4460                JUNCTION     0.045    0.189     0  02:30      0.0588       0.255       0.061
+  R4460A               JUNCTION     0.041    0.162     0  02:30      0.0516       0.208       0.092
+  R4460B               JUNCTION     0.041    0.122     0  02:30      0.0516       0.156       0.140
+  R4560                JUNCTION     0.049    0.144     0  02:30      0.0648       0.197       0.130
+  R4560A               JUNCTION     0.060    0.098     0  02:29      0.0801       0.132       0.088
+  R4560B               JUNCTION     0.037    0.037     0  02:30      0.0519      0.0519       0.322
+  R4560C               JUNCTION     0.050    0.083     0  02:29       0.063       0.105       0.085
+  R4560D               JUNCTION     0.031    0.031     0  02:30      0.0421      0.0421       0.350
+  R4661A               JUNCTION     0.037    0.042     0  02:35      0.0532      0.0551      -0.634
+  R4661B               JUNCTION     0.008    0.099     0  02:30      0.0121      0.0529       1.316
+  R4661C               JUNCTION    -0.140    0.186     0  02:33      -0.292       0.316       0.000
+  R4661D               JUNCTION     0.007    0.221     0  02:30      0.0106       0.266       0.145
+  R4661E               JUNCTION     0.043    0.157     0  02:31      0.0646       0.132      -0.084
+  R4661F               JUNCTION     0.010    0.152     0  02:31      0.0163       0.099       0.407
+  R4662                JUNCTION     0.027    0.202     0  02:30      0.0298       0.256       0.268
+  R4662A               JUNCTION     0.009    0.224     0  02:29      0.0148       0.298       0.130
+  R4662B               JUNCTION     0.030    0.218     0  02:30      0.0348       0.283       0.062
+  R4662C               JUNCTION     0.048    0.189     0  02:30      0.0647       0.249       0.026
+  R4762                JUNCTION     0.041    0.176     0  02:30      0.0514       0.226      -0.184
+  R4762A               JUNCTION     0.041    0.136     0  02:30      0.0514       0.175       0.110
+  R4762B               JUNCTION     0.042    0.096     0  02:30      0.0528       0.123       0.125
+  R4762C               JUNCTION     0.045    0.141     0  02:30      0.0597       0.184       0.099
+  R4763                JUNCTION     0.034    0.054     0  02:30      0.0425      0.0708       0.193
+  R4763A               JUNCTION     0.042    0.096     0  02:30      0.0538       0.125       0.134
+  R4763B               JUNCTION     0.034    0.054     0  02:30      0.0428      0.0711       0.193
+  R4863                JUNCTION     0.021    0.021     0  02:30      0.0284      0.0284       0.301
+  R4863D               JUNCTION     0.021    0.021     0  02:30      0.0284      0.0284       0.304
+  R4661G               JUNCTION    -0.122    0.223     0  02:30      -0.262       0.329       0.000
+  D4156A               OUTFALL      0.000    0.021     0  02:30           0      0.0291       0.000
+  D4157B               OUTFALL      0.000    0.024     0  02:30           0      0.0348       0.000
+  D4359A               OUTFALL      0.000    0.015     0  02:30           0      0.0158       0.000
+  D4458A               OUTFALL      0.000    0.010     0  02:30           0      0.0151       0.000
+  D4561C               OUTFALL      0.000    0.155     0  02:31           0       0.116       0.000
+  D4661A               OUTFALL      0.000    0.026     0  02:35           0      0.0386       0.000
+  Node67               OUTFALL      0.000    1.911     0  02:33           0        3.72       0.000
+  O3854A               STORAGE      0.000    0.183     0  02:32           0      0.0593       0.359
+  
+  
+  **********************
+  Node Surcharge Summary
+  **********************
+  
+  Surcharging occurs when water rises above the top of the highest conduit.
+  ---------------------------------------------------------------------
+                                               Max. Height   Min. Depth
+                                   Hours       Above Crown    Below Rim
+  Node                 Type      Surcharged         Meters       Meters
+  ---------------------------------------------------------------------
+  L3852                JUNCTION        0.07          1.849        1.996
+  L3853                JUNCTION        0.29          1.583        1.390
+  L3854A               JUNCTION        0.09          0.626        0.537
+  L3955                JUNCTION        0.17          2.036        0.000
+  L4056                JUNCTION        0.18          2.098        0.159
+  L4157                JUNCTION        0.20          1.980        0.000
+  L4258                JUNCTION        0.14          1.982        0.000
+  L4359                JUNCTION        0.33          1.950        0.000
+  L4560                JUNCTION        0.50          2.194        0.000
+  L4662                JUNCTION        0.53          1.852        0.000
+  
+  
+  *********************
+  Node Flooding Summary
+  *********************
+  
+  Flooding refers to all water that overflows a node, whether it ponds or not.
+  --------------------------------------------------------------------------
+                                                             Total   Maximum
+                                 Maximum   Time of Max       Flood    Ponded
+                        Hours       Rate    Occurrence      Volume     Depth
+  Node                 Flooded       CMS   days hr:min    10^6 ltr    Meters
+  --------------------------------------------------------------------------
+  L3955                   0.01     0.139      0  02:28       0.000     0.000
+  L4157                   0.01     0.024      0  02:28       0.000     0.000
+  L4258                   0.01     0.051      0  02:29       0.000     0.001
+  L4359                   0.11     0.112      0  02:31       0.032     0.000
+  L4560                   0.01     0.057      0  02:23       0.000     0.000
+  L4662                   0.50     0.435      0  02:33       0.555     0.000
+  
+  
+  **********************
+  Storage Volume Summary
+  **********************
+  
+  ------------------------------------------------------------------------------------------------
+                         Average    Avg   Evap  Exfil     Maximum    Max    Time of Max    Maximum
+                          Volume   Pcnt   Pcnt   Pcnt      Volume   Pcnt     Occurrence    Outflow
+  Storage Unit           1000 m³   Full   Loss   Loss     1000 m³   Full    days hr:min        CMS
+  ------------------------------------------------------------------------------------------------
+  O3854A                   0.000    0.1    0.0    0.0       0.009    6.8       0  02:33      0.260
+  
+  
+  ***********************
+  Outfall Loading Summary
+  ***********************
+  
+  -----------------------------------------------------------
+                         Flow       Avg       Max       Total
+                         Freq      Flow      Flow      Volume
+  Outfall Node           Pcnt       CMS       CMS    10^6 ltr
+  -----------------------------------------------------------
+  D4156A                92.20     0.001     0.021       0.029
+  D4157B                92.69     0.002     0.024       0.035
+  D4359A                89.08     0.001     0.015       0.016
+  D4458A                89.46     0.001     0.010       0.015
+  D4561C                93.17     0.006     0.155       0.116
+  D4661A                93.16     0.002     0.026       0.039
+  Node67                86.79     0.198     1.911       3.717
+  -----------------------------------------------------------
+  System                90.94     0.211     2.099       3.966
+  
+  
+  *******************
+  Street Flow Summary
+  *******************
+  
+  ---------------------------------------------------------------------------------------------------------------------------------------
+                                                                                        Peak     Avg.   Bypass     Back     Peak     Peak
+                        Peak   Maximum   Maximum                                        Flow     Flow     Flow     Flow  Capture   Bypass
+                        Flow    Spread     Depth  Inlet             Inlet     Inlet  Capture  Capture     Freq     Freq  / Inlet     Flow
+  Street Conduit         CMS         m         m  Design            Location            Pcnt     Pcnt     Pcnt     Pcnt      CMS      CMS
+  ---------------------------------------------------------------------------------------------------------------------------------------
+  R3750                0.075     3.080     0.077
+  R3750A               0.075     3.281     0.082
+  R3750B               0.097     3.708     0.093
+  R3850                0.074     3.075     0.077
+  R3850A               0.074     3.374     0.084
+  R3850B               0.113     3.850     0.096
+  R3851                0.151     4.236     0.106
+  R3851A               0.190     4.396     0.110  1CB-1             ON-GRADE      1    16.18    27.04    96.80     0.00     0.03     0.16
+  R3851B               0.140     4.160     0.104
+  R3851C               0.183     4.359     0.109  1CB-1             ON-GRADE      1    16.62    26.03    97.26     0.00     0.03     0.15
+  R3852                0.197     4.535     0.113
+  R3852A               0.236     4.833     0.121
+  R3852B               0.275     4.930     0.123  2CB-75            ON-GRADE      1    17.58    37.91    92.89     0.00     0.05     0.23
+  R3852C               0.193     4.520     0.113
+  R3852D               0.233     4.837     0.121
+  R3852E               0.274     4.953     0.124  2CB-75            ON-GRADE      1    17.83    36.85    93.76     0.00     0.05     0.23
+  R3853                0.263     4.984     0.125
+  R3853A               0.293     6.555     0.164  2CB-50            ON-SAG        1    31.01    40.83    92.98     0.00     0.09     0.20
+  R3853B               0.265     5.024     0.126
+  R3853C               0.298     6.517     0.163  2CB-50            ON-SAG        1    30.56    40.18    93.01     0.00     0.09     0.21
+  R3854                0.244     7.700     0.263
+  R3953                0.266     7.700     0.263
+  R3954A               0.295     7.700     0.306  SAG-2             ON-SAG        1    93.88    99.14     3.18     0.00     0.28     0.02
+  R3954B               0.313     7.700     0.252
+  R3954C               0.239     6.702     0.168
+  R3954E               0.254     7.700     0.303  SAG-2             ON-SAG        1   100.00    98.49     4.70     0.00     0.25     0.00
+  R3954F               0.238     7.700     0.252
+  R3954G               0.225     6.568     0.164
+  R3955                0.201     4.455     0.111
+  R3955A               0.184     4.313     0.108
+  R4055                0.156     4.252     0.106
+  R4055A               0.138     4.001     0.100  2CB-75            ON-GRADE      1    25.99    49.44    91.72     0.00     0.04     0.10
+  R4055B               0.137     3.993     0.100
+  R4055C               0.118     3.736     0.093  2CB-75            ON-GRADE      1    26.09    52.35    91.85     0.01     0.03     0.09
+  R4056                0.090     3.589     0.090
+  R4056A               0.042     2.940     0.074
+  R4056B               0.078     3.391     0.085
+  R4056C               0.038     2.793     0.070
+  R4156                0.028     2.292     0.057
+  R4156C               0.010     3.327     0.083
+  R4156D               0.027     2.833     0.071
+  R4156G               0.017     3.867     0.097
+  R4157                0.035     6.349     0.159
+  R4157B               0.206     6.354     0.159  SAG-2             ON-SAG        1    99.68    99.77     1.74     0.00     0.20     0.00
+  R4157C               0.043     7.198     0.180
+  R4157E               0.223     7.243     0.181  SAG-2             ON-SAG        1    98.47    99.83     1.76     0.00     0.22     0.00
+  R4157F               0.224     5.266     0.132
+  R4257                0.208     4.760     0.119
+  R4257A               0.178     3.995     0.100
+  R4257B               0.138     3.551     0.089
+  R4257C               0.191     4.106     0.103
+  R4258                0.144     3.574     0.089
+  R4258A               0.099     3.157     0.079
+  R4358                0.098     3.180     0.079
+  R4358A               0.050     2.629     0.066
+  R4358B               0.014     1.947     0.049
+  R4358C               0.050     2.630     0.066
+  R4358D               0.014     1.948     0.049
+  R4359A               0.005     1.875     0.047
+  R4359B               0.052     5.337     0.133
+  R4359D               0.004     1.984     0.050
+  R4359E               0.046     4.571     0.114
+  R4459                0.080     7.700     0.215
+  R4459B               0.213     7.700     0.214  SAG-2             ON-SAG        1    94.46    99.96     0.47     0.00     0.20     0.01
+  R4459C               0.213     6.386     0.160
+  R4459D               0.063     7.576     0.192
+  R4459F               0.188     7.573     0.192  SAG-2             ON-SAG        1    97.48    99.99     0.32     0.00     0.18     0.00
+  R4459G               0.186     5.517     0.138
+  R4460                0.188     4.557     0.114
+  R4460A               0.161     4.174     0.104
+  R4460B               0.121     3.743     0.094
+  R4560                0.144     4.107     0.103
+  R4560A               0.096     3.523     0.088
+  R4560B               0.038     2.823     0.071
+  R4560C               0.081     3.305     0.083
+  R4560D               0.033     2.655     0.066
+  R4661A               0.025     6.549     0.164
+  R4661B               0.085     7.700     0.324
+  R4661D               0.186     7.700     0.320  SAG-2             ON-SAG        1    39.27    98.43     4.34     0.00     0.07     0.11
+  R4661E               0.131     6.389     0.160
+  R4661F               0.147     7.700     0.266
+  R4662                0.217     7.700     0.242
+  R4662A               0.223     7.700     0.264  SAG-2             ON-SAG        1    24.92    97.41     5.65     0.00     0.06     0.17
+  R4662B               0.215     7.340     0.184
+  R4662C               0.188     4.654     0.116
+  R4762                0.175     5.470     0.137
+  R4762A               0.135     3.796     0.095
+  R4762B               0.095     3.386     0.085
+  R4762C               0.141     3.799     0.095
+  R4763                0.054     2.851     0.071
+  R4763A               0.096     3.342     0.084
+  R4763B               0.054     2.851     0.071
+  R4863                0.021     2.255     0.056
+  R4863D               0.021     2.254     0.056
+  RSpill_R4156C        0.021     1.436     0.036
+  RSpill_R4156G        0.024     1.693     0.042
+  RSpill_R4359A        0.010     1.047     0.026
+  RSpill_R4359D        0.015     1.377     0.034
+  RSpill_R4661A        0.026     1.499     0.037
+  RSpill_R4661E        0.155     3.389     0.085
+  
+  
+  ********************
+  Link Flow Summary
+  ********************
+  
+  -----------------------------------------------------------------------------
+                                 Maximum  Time of Max   Maximum    Max/    Max/
+                                  |Flow|   Occurrence   |Veloc|    Full    Full
+  Link                 Type          CMS  days hr:min     m/sec    Flow   Depth
+  -----------------------------------------------------------------------------
+  25073B               CONDUIT     1.907     0  02:33      2.21    0.55    0.49
+  25074                CONDUIT     1.908     0  02:33      5.28    0.15    0.26
+  C1                   CONDUIT     0.260     0  02:35      1.72    0.17    0.69
+  L3850                CONDUIT     0.017     0  02:38      0.10    0.01    0.50
+  L3852                CONDUIT     1.927     0  02:31      3.10    1.13    0.94
+  L3853                CONDUIT     1.943     0  02:31      3.09    3.08    1.00
+  L3854A               CONDUIT     1.851     0  02:31      2.91    2.94    1.00
+  L3955                CONDUIT     0.991     0  02:29      2.24    0.92    1.00
+  L4056                CONDUIT     0.921     0  02:29      2.21    1.35    1.00
+  L4157                CONDUIT     0.921     0  02:29      2.09    1.42    1.00
+  L4258                CONDUIT     0.544     0  02:38      2.75    0.99    1.00
+  L4359                CONDUIT     0.566     0  02:29      2.64    1.83    1.00
+  L4560                CONDUIT     0.211     0  02:24      1.96    1.46    1.00
+  L4662                CONDUIT     0.224     0  02:23      2.03    2.26    1.00
+  Link92               CONDUIT     1.911     0  02:33      4.09    0.21    0.31
+  Link93               CONDUIT     1.911     0  02:33      2.36    0.16    0.19
+  Link94               CONDUIT     1.911     0  02:33      3.18    0.02    0.10
+  O3854                CONDUIT     0.183     0  02:32      0.63    0.00    0.14
+  O3954A               CONDUIT     0.136     0  02:32      0.15    0.00    0.20
+  O3954B               CONDUIT     0.152     0  02:31      0.16    0.00    0.20
+  O3954D               CONDUIT     0.190     0  02:32      0.21    0.00    0.19
+  R3750                CONDUIT     0.075     0  02:30      0.63    0.00    0.12
+  R3750A               CONDUIT     0.075     0  02:30      0.55    0.00    0.13
+  R3750B               CONDUIT     0.097     0  02:30      0.56    0.01    0.15
+  R3850                CONDUIT     0.074     0  02:30      0.63    0.00    0.12
+  R3850A               CONDUIT     0.074     0  02:30      0.52    0.00    0.14
+  R3850B               CONDUIT     0.113     0  02:30      0.61    0.01    0.16
+  R3851                CONDUIT     0.151     0  02:30      0.67    0.01    0.17
+  R3851A               CONDUIT     0.190     0  02:30      0.78    0.01    0.18
+  R3851B               CONDUIT     0.140     0  02:30      0.64    0.01    0.17
+  R3851C               CONDUIT     0.183     0  02:30      0.77    0.01    0.18
+  R3852                CONDUIT     0.197     0  02:30      0.77    0.01    0.18
+  R3852A               CONDUIT     0.236     0  02:30      0.81    0.01    0.20
+  R3852B               CONDUIT     0.275     0  02:30      0.90    0.02    0.20
+  R3852C               CONDUIT     0.193     0  02:30      0.75    0.01    0.18
+  R3852D               CONDUIT     0.233     0  02:30      0.79    0.01    0.20
+  R3852E               CONDUIT     0.274     0  02:30      0.89    0.02    0.20
+  R3853                CONDUIT     0.263     0  02:30      0.85    0.02    0.20
+  R3853A               CONDUIT     0.293     0  02:30      0.84    0.02    0.26
+  R3853B               CONDUIT     0.265     0  02:30      0.84    0.02    0.20
+  R3853C               CONDUIT     0.298     0  02:30      0.86    0.02    0.26
+  R3854                CONDUIT     0.244     0  02:27      0.54    0.02    0.43
+  R3953                CONDUIT     0.266     0  02:32      0.50    0.02    0.43
+  R3954A               CONDUIT     0.295     0  02:31      0.50    0.02    0.50
+  R3954B               CONDUIT     0.313     0  02:31      0.63    0.02    0.41
+  R3954C               CONDUIT     0.239     0  02:30      0.82    0.01    0.27
+  R3954E               CONDUIT     0.254     0  02:33      0.50    0.02    0.49
+  R3954F               CONDUIT     0.238     0  02:33      0.62    0.02    0.41
+  R3954G               CONDUIT     0.225     0  02:30      0.81    0.01    0.27
+  R3955                CONDUIT     0.201     0  02:30      0.81    0.01    0.18
+  R3955A               CONDUIT     0.184     0  02:30      0.79    0.01    0.17
+  R4055                CONDUIT     0.156     0  02:30      0.69    0.01    0.17
+  R4055A               CONDUIT     0.138     0  02:30      0.69    0.01    0.16
+  R4055B               CONDUIT     0.137     0  02:30      0.69    0.01    0.16
+  R4055C               CONDUIT     0.118     0  02:30      0.67    0.01    0.15
+  R4056                CONDUIT     0.090     0  02:30      0.56    0.01    0.14
+  R4056A               CONDUIT     0.042     0  02:30      0.39    0.00    0.12
+  R4056B               CONDUIT     0.078     0  02:30      0.54    0.01    0.14
+  R4056C               CONDUIT     0.038     0  02:30      0.38    0.00    0.11
+  R4156                CONDUIT     0.028     0  02:30      0.43    0.00    0.09
+  R4156C               CONDUIT     0.010     0  02:30      0.30    0.00    0.13
+  R4156D               CONDUIT     0.027     0  02:30      0.26    0.01    0.11
+  R4156G               CONDUIT     0.017     0  02:29      0.30    0.00    0.16
+  R4157                CONDUIT     0.035     0  02:34      0.26    0.00    0.26
+  R4157B               CONDUIT     0.206     0  02:30      0.72    0.01    0.26
+  R4157C               CONDUIT     0.043     0  02:33      0.27    0.00    0.29
+  R4157E               CONDUIT     0.223     0  02:30      0.70    0.01    0.29
+  R4157F               CONDUIT     0.224     0  02:30      0.81    0.01    0.21
+  R4257                CONDUIT     0.208     0  02:30      0.81    0.01    0.19
+  R4257A               CONDUIT     0.178     0  02:30      0.89    0.01    0.16
+  R4257B               CONDUIT     0.138     0  02:30      0.87    0.01    0.14
+  R4257C               CONDUIT     0.191     0  02:30      0.90    0.01    0.17
+  R4258                CONDUIT     0.144     0  02:30      0.90    0.01    0.14
+  R4258A               CONDUIT     0.099     0  02:30      0.79    0.00    0.13
+  R4358                CONDUIT     0.098     0  02:30      0.77    0.00    0.13
+  R4358A               CONDUIT     0.050     0  02:30      0.57    0.00    0.11
+  R4358B               CONDUIT     0.014     0  02:30      0.36    0.00    0.08
+  R4358C               CONDUIT     0.050     0  02:30      0.57    0.00    0.11
+  R4358D               CONDUIT     0.014     0  02:30      0.36    0.00    0.08
+  R4359A               CONDUIT     0.005     0  02:26      0.12    0.00    0.08
+  R4359B               CONDUIT     0.052     0  02:29      0.39    0.00    0.22
+  R4359D               CONDUIT     0.004     0  02:22      0.14    0.00    0.08
+  R4359E               CONDUIT     0.046     0  02:29      0.40    0.00    0.18
+  R4459                CONDUIT     0.080     0  02:36      0.31    0.01    0.35
+  R4459B               CONDUIT     0.213     0  02:29      0.59    0.02    0.35
+  R4459C               CONDUIT     0.213     0  02:30      0.64    0.01    0.26
+  R4459D               CONDUIT     0.063     0  02:35      0.33    0.01    0.31
+  R4459F               CONDUIT     0.188     0  02:29      0.57    0.02    0.31
+  R4459G               CONDUIT     0.186     0  02:30      0.64    0.01    0.22
+  R4460                CONDUIT     0.188     0  02:30      0.72    0.01    0.18
+  R4460A               CONDUIT     0.161     0  02:30      0.74    0.01    0.17
+  R4460B               CONDUIT     0.121     0  02:30      0.69    0.01    0.15
+  R4560                CONDUIT     0.144     0  02:30      0.68    0.01    0.17
+  R4560A               CONDUIT     0.096     0  02:30      0.62    0.01    0.14
+  R4560B               CONDUIT     0.038     0  02:30      0.38    0.00    0.11
+  R4560C               CONDUIT     0.081     0  02:30      0.59    0.00    0.13
+  R4560D               CONDUIT     0.033     0  02:30      0.38    0.00    0.11
+  R4661A               CONDUIT     0.025     0  02:35      0.30    0.00    0.26
+  R4661B               CONDUIT     0.085     0  02:30      0.32    0.01    0.52
+  R4661D               CONDUIT     0.186     0  02:33      0.69    0.01    0.52
+  R4661E               CONDUIT     0.131     0  02:31      0.31    0.01    0.26
+  R4661F               CONDUIT     0.147     0  02:31      0.30    0.01    0.43
+  R4662                CONDUIT     0.217     0  02:30      0.73    0.01    0.39
+  R4662A               CONDUIT     0.223     0  02:30      0.68    0.01    0.43
+  R4662B               CONDUIT     0.215     0  02:29      0.73    0.01    0.30
+  R4662C               CONDUIT     0.188     0  02:30      0.80    0.01    0.19
+  R4762                CONDUIT     0.175     0  02:30      0.78    0.01    0.22
+  R4762A               CONDUIT     0.135     0  02:30      0.75    0.01    0.15
+  R4762B               CONDUIT     0.095     0  02:30      0.66    0.01    0.14
+  R4762C               CONDUIT     0.141     0  02:30      0.78    0.01    0.15
+  R4763                CONDUIT     0.054     0  02:30      0.53    0.00    0.12
+  R4763A               CONDUIT     0.096     0  02:30      0.68    0.01    0.14
+  R4763B               CONDUIT     0.054     0  02:30      0.53    0.00    0.12
+  R4863                CONDUIT     0.021     0  02:30      0.32    0.00    0.09
+  R4863D               CONDUIT     0.021     0  02:30      0.32    0.00    0.09
+  RSpill_R4156C        CONDUIT     0.021     0  02:30      0.81    0.00    0.06
+  RSpill_R4156G        CONDUIT     0.024     0  02:30      0.66    0.00    0.07
+  RSpill_R4359A        CONDUIT     0.010     0  02:30      0.68    0.00    0.04
+  RSpill_R4359D        CONDUIT     0.015     0  02:30      0.60    0.00    0.06
+  RSpill_R4661A        CONDUIT     0.026     0  02:35      0.94    0.00    0.06
+  RSpill_R4661E        CONDUIT     0.155     0  02:31      1.08    0.01    0.14
+  
+  
+  ***************************
+  Flow Classification Summary
+  ***************************
+  
+  -------------------------------------------------------------------------------------
+                      Adjusted    ---------- Fraction of Time in Flow Class ---------- 
+                       /Actual         Up    Down  Sub   Sup   Up    Down  Norm  Inlet 
+  Conduit               Length    Dry  Dry   Dry   Crit  Crit  Crit  Crit  Ltd   Ctrl  
+  -------------------------------------------------------------------------------------
+  25073B                  1.00   0.05  0.00  0.00  0.00  0.00  0.00  0.95  0.00  0.00
+  25074                   1.00   0.07  0.00  0.00  0.00  0.00  0.00  0.93  0.00  0.00
+  C1                      1.00   0.41  0.00  0.00  0.03  0.00  0.00  0.56  0.02  0.00
+  L3850                   1.00   0.05  0.13  0.00  0.82  0.00  0.00  0.00  0.00  0.00
+  L3852                   1.00   0.04  0.00  0.00  0.00  0.00  0.00  0.96  0.00  0.00
+  L3853                   1.00   0.03  0.00  0.00  0.97  0.00  0.00  0.00  0.00  0.00
+  L3854A                  1.00   0.03  0.00  0.00  0.96  0.00  0.00  0.00  0.00  0.00
+  L3955                   1.00   0.03  0.00  0.00  0.09  0.10  0.00  0.78  0.14  0.00
+  L4056                   1.00   0.03  0.07  0.00  0.26  0.63  0.00  0.00  0.03  0.00
+  L4157                   1.00   0.08  0.00  0.00  0.90  0.02  0.00  0.00  0.00  0.00
+  L4258                   1.00   0.11  0.00  0.00  0.03  0.02  0.00  0.84  0.01  0.00
+  L4359                   1.00   0.08  0.00  0.00  0.09  0.83  0.00  0.00  0.00  0.00
+  L4560                   1.00   0.11  0.00  0.00  0.06  0.00  0.00  0.83  0.00  0.00
+  L4662                   1.00   0.08  0.00  0.00  0.87  0.06  0.00  0.00  0.00  0.00
+  Link92                  1.00   0.08  0.00  0.00  0.00  0.00  0.00  0.92  0.00  0.00
+  Link93                  1.00   0.09  0.00  0.00  0.64  0.27  0.00  0.00  0.00  0.00
+  Link94                  1.48   0.12  0.00  0.00  0.01  0.87  0.00  0.00  0.00  0.00
+  O3854                   1.00   0.41  0.48  0.00  0.11  0.00  0.00  0.00  0.59  0.00
+  O3954A                  2.05   0.11  0.82  0.00  0.07  0.00  0.00  0.00  0.56  0.00
+  O3954B                  1.99   0.11  0.82  0.00  0.07  0.00  0.00  0.00  0.56  0.00
+  O3954D                  1.00   0.11  0.78  0.00  0.11  0.00  0.00  0.00  0.56  0.00
+  R3750                   1.00   0.03  0.00  0.00  0.88  0.09  0.00  0.00  0.03  0.00
+  R3750A                  1.00   0.03  0.02  0.00  0.95  0.00  0.00  0.00  0.05  0.00
+  R3750B                  1.00   0.03  0.00  0.00  0.95  0.02  0.00  0.00  0.07  0.00
+  R3850                   1.00   0.03  0.00  0.00  0.88  0.09  0.00  0.00  0.01  0.00
+  R3850A                  1.00   0.03  0.02  0.00  0.95  0.00  0.00  0.00  0.08  0.00
+  R3850B                  1.00   0.03  0.00  0.00  0.94  0.03  0.00  0.00  0.07  0.00
+  R3851                   1.00   0.03  0.00  0.00  0.94  0.03  0.00  0.00  0.07  0.00
+  R3851A                  1.00   0.03  0.00  0.00  0.82  0.15  0.00  0.00  0.02  0.00
+  R3851B                  1.00   0.03  0.00  0.00  0.94  0.03  0.00  0.00  0.07  0.00
+  R3851C                  1.00   0.03  0.00  0.00  0.83  0.14  0.00  0.00  0.02  0.00
+  R3852                   1.00   0.03  0.00  0.00  0.94  0.03  0.00  0.00  0.17  0.00
+  R3852A                  1.00   0.03  0.00  0.00  0.91  0.05  0.00  0.00  0.20  0.00
+  R3852B                  1.00   0.03  0.00  0.00  0.63  0.33  0.00  0.00  0.02  0.00
+  R3852C                  1.00   0.03  0.00  0.00  0.94  0.03  0.00  0.00  0.16  0.00
+  R3852D                  1.00   0.03  0.00  0.00  0.92  0.05  0.00  0.00  0.19  0.00
+  R3852E                  1.00   0.03  0.00  0.00  0.65  0.32  0.00  0.00  0.02  0.00
+  R3853                   1.00   0.03  0.00  0.00  0.92  0.05  0.00  0.00  0.20  0.00
+  R3853A                  1.00   0.03  0.00  0.00  0.78  0.19  0.00  0.00  0.06  0.00
+  R3853B                  1.00   0.03  0.00  0.00  0.93  0.04  0.00  0.00  0.19  0.00
+  R3853C                  1.00   0.03  0.00  0.00  0.79  0.18  0.00  0.00  0.07  0.00
+  R3854                   1.00   0.03  0.00  0.00  0.22  0.75  0.00  0.00  0.01  0.00
+  R3953                   1.00   0.03  0.00  0.00  0.27  0.70  0.00  0.00  0.01  0.00
+  R3954A                  1.00   0.03  0.00  0.00  0.21  0.76  0.00  0.00  0.00  0.00
+  R3954B                  1.00   0.03  0.00  0.00  0.90  0.07  0.00  0.00  0.02  0.00
+  R3954C                  1.00   0.03  0.00  0.00  0.84  0.13  0.00  0.00  0.21  0.00
+  R3954E                  1.00   0.03  0.00  0.00  0.27  0.70  0.00  0.00  0.00  0.00
+  R3954F                  1.00   0.03  0.00  0.00  0.90  0.07  0.00  0.00  0.01  0.00
+  R3954G                  1.00   0.03  0.00  0.00  0.88  0.09  0.00  0.00  0.18  0.00
+  R3955                   1.00   0.03  0.00  0.00  0.87  0.09  0.00  0.00  0.21  0.00
+  R3955A                  1.00   0.03  0.00  0.00  0.88  0.09  0.00  0.00  0.35  0.00
+  R4055                   1.00   0.03  0.00  0.00  0.96  0.01  0.00  0.00  0.08  0.00
+  R4055A                  1.00   0.03  0.00  0.00  0.86  0.11  0.00  0.00  0.06  0.00
+  R4055B                  1.00   0.03  0.00  0.00  0.97  0.00  0.00  0.00  0.17  0.00
+  R4055C                  1.00   0.03  0.00  0.00  0.84  0.13  0.00  0.00  0.05  0.00
+  R4056                   1.00   0.03  0.00  0.00  0.94  0.03  0.00  0.00  0.09  0.00
+  R4056A                  1.00   0.03  0.00  0.00  0.97  0.00  0.00  0.00  0.05  0.00
+  R4056B                  1.00   0.03  0.00  0.00  0.94  0.03  0.00  0.00  0.12  0.00
+  R4056C                  1.00   0.03  0.00  0.00  0.97  0.00  0.00  0.00  0.09  0.00
+  R4156                   1.00   0.03  0.00  0.00  0.92  0.05  0.00  0.00  0.91  0.00
+  R4156C                  1.00   0.03  0.00  0.00  0.90  0.07  0.00  0.00  0.68  0.00
+  R4156D                  1.00   0.03  0.00  0.00  0.97  0.00  0.00  0.00  0.00  0.00
+  R4156G                  1.00   0.03  0.00  0.00  0.92  0.05  0.00  0.00  0.11  0.00
+  R4157                   1.00   0.03  0.00  0.00  0.86  0.11  0.00  0.00  0.04  0.00
+  R4157B                  1.00   0.04  0.00  0.00  0.08  0.89  0.00  0.00  0.01  0.00
+  R4157C                  1.00   0.03  0.00  0.00  0.86  0.10  0.00  0.00  0.03  0.00
+  R4157E                  1.00   0.04  0.00  0.00  0.08  0.89  0.00  0.00  0.00  0.00
+  R4157F                  1.00   0.03  0.00  0.00  0.85  0.12  0.00  0.00  0.87  0.00
+  R4257                   1.00   0.03  0.00  0.00  0.84  0.13  0.00  0.00  0.86  0.00
+  R4257A                  1.00   0.03  0.00  0.00  0.45  0.52  0.00  0.00  0.90  0.00
+  R4257B                  1.00   0.03  0.00  0.00  0.22  0.75  0.00  0.00  0.96  0.00
+  R4257C                  1.00   0.03  0.00  0.00  0.47  0.50  0.00  0.00  0.91  0.00
+  R4258                   1.00   0.03  0.00  0.00  0.15  0.82  0.00  0.00  0.96  0.00
+  R4258A                  1.00   0.03  0.00  0.00  0.55  0.42  0.00  0.00  0.92  0.00
+  R4358                   1.00   0.03  0.00  0.00  0.59  0.37  0.00  0.00  0.91  0.00
+  R4358A                  1.00   0.03  0.00  0.00  0.93  0.04  0.00  0.00  0.96  0.00
+  R4358B                  1.00   0.03  0.00  0.00  0.94  0.03  0.00  0.00  0.49  0.00
+  R4358C                  1.00   0.03  0.00  0.00  0.93  0.04  0.00  0.00  0.96  0.00
+  R4358D                  1.00   0.03  0.00  0.00  0.94  0.03  0.00  0.00  0.50  0.00
+  R4359A                  1.00   0.03  0.00  0.00  0.97  0.00  0.00  0.00  0.95  0.00
+  R4359B                  1.00   0.03  0.00  0.00  0.91  0.05  0.00  0.00  0.11  0.00
+  R4359D                  1.00   0.03  0.00  0.00  0.97  0.00  0.00  0.00  0.20  0.00
+  R4359E                  1.00   0.03  0.00  0.00  0.91  0.05  0.00  0.00  0.11  0.00
+  R4459                   1.00   0.03  0.00  0.00  0.87  0.10  0.00  0.00  0.00  0.00
+  R4459B                  1.00   0.03  0.00  0.00  0.10  0.87  0.00  0.00  0.00  0.00
+  R4459C                  1.00   0.03  0.00  0.00  0.91  0.06  0.00  0.00  0.11  0.00
+  R4459D                  1.00   0.03  0.00  0.00  0.86  0.10  0.00  0.00  0.00  0.00
+  R4459F                  1.00   0.03  0.00  0.00  0.10  0.87  0.00  0.00  0.00  0.00
+  R4459G                  1.00   0.03  0.00  0.00  0.90  0.06  0.00  0.00  0.21  0.00
+  R4460                   1.00   0.03  0.00  0.00  0.91  0.05  0.00  0.00  0.03  0.00
+  R4460A                  1.00   0.03  0.00  0.00  0.87  0.09  0.00  0.00  0.16  0.00
+  R4460B                  1.00   0.03  0.00  0.00  0.90  0.06  0.00  0.00  0.26  0.00
+  R4560                   1.00   0.03  0.00  0.00  0.93  0.04  0.00  0.00  0.59  0.00
+  R4560A                  1.00   0.03  0.00  0.00  0.93  0.04  0.00  0.00  0.28  0.00
+  R4560B                  1.00   0.03  0.00  0.00  0.97  0.00  0.00  0.00  0.27  0.00
+  R4560C                  1.00   0.03  0.00  0.00  0.92  0.05  0.00  0.00  0.19  0.00
+  R4560D                  1.00   0.03  0.00  0.00  0.97  0.00  0.00  0.00  0.28  0.00
+  R4661A                  1.00   0.03  0.00  0.00  0.90  0.06  0.00  0.00  0.85  0.00
+  R4661B                  1.00   0.03  0.00  0.00  0.81  0.15  0.00  0.00  0.02  0.00
+  R4661D                  1.00   0.03  0.00  0.00  0.13  0.84  0.00  0.00  0.00  0.00
+  R4661E                  1.00   0.03  0.00  0.00  0.92  0.04  0.00  0.00  0.11  0.00
+  R4661F                  1.00   0.03  0.00  0.00  0.86  0.11  0.00  0.00  0.02  0.00
+  R4662                   1.00   0.03  0.00  0.00  0.90  0.07  0.00  0.00  0.06  0.00
+  R4662A                  1.00   0.03  0.00  0.00  0.12  0.85  0.00  0.00  0.00  0.00
+  R4662B                  1.00   0.03  0.00  0.00  0.91  0.06  0.00  0.00  0.07  0.00
+  R4662C                  1.00   0.03  0.00  0.00  0.86  0.11  0.00  0.00  0.47  0.00
+  R4762                   1.00   0.03  0.00  0.00  0.85  0.12  0.00  0.00  0.37  0.00
+  R4762A                  1.00   0.03  0.00  0.00  0.86  0.10  0.00  0.00  0.60  0.00
+  R4762B                  1.00   0.03  0.00  0.00  0.89  0.08  0.00  0.00  0.60  0.00
+  R4762C                  1.00   0.03  0.00  0.00  0.84  0.13  0.00  0.00  0.96  0.00
+  R4763                   1.00   0.03  0.00  0.00  0.94  0.03  0.00  0.00  0.96  0.00
+  R4763A                  1.00   0.03  0.00  0.00  0.89  0.07  0.00  0.00  0.67  0.00
+  R4763B                  1.00   0.03  0.00  0.00  0.94  0.02  0.00  0.00  0.96  0.00
+  R4863                   1.00   0.03  0.00  0.00  0.97  0.00  0.00  0.00  0.04  0.00
+  R4863D                  1.00   0.03  0.00  0.00  0.97  0.00  0.00  0.00  0.04  0.00
+  RSpill_R4156C           1.00   0.03  0.00  0.00  0.02  0.95  0.00  0.00  0.03  0.00
+  RSpill_R4156G           1.00   0.03  0.00  0.00  0.02  0.95  0.00  0.00  0.04  0.00
+  RSpill_R4359A           1.00   0.03  0.00  0.00  0.03  0.94  0.00  0.00  0.02  0.00
+  RSpill_R4359D           1.00   0.03  0.00  0.00  0.03  0.94  0.00  0.00  0.02  0.00
+  RSpill_R4661A           1.00   0.03  0.00  0.00  0.02  0.95  0.00  0.00  0.03  0.00
+  RSpill_R4661E           1.00   0.03  0.00  0.00  0.02  0.95  0.00  0.00  0.04  0.00
+  
+  
+  *************************
+  Conduit Surcharge Summary
+  *************************
+  
+  ----------------------------------------------------------------------------
+                                                           Hours        Hours 
+                         --------- Hours Full --------   Above Full   Capacity
+  Conduit                Both Ends  Upstream  Dnstream   Normal Flow   Limited
+  ----------------------------------------------------------------------------
+  C1                          0.01      0.01      0.09      0.01         0.01
+  L3852                       0.01      0.07      0.01      0.12         0.01
+  L3853                       0.07      0.29      0.07      0.46         0.07
+  L3854A                      0.29      0.33      0.29      0.44         0.29
+  L3955                       0.17      0.17      0.33      0.01         0.01
+  L4056                       0.17      0.18      0.17      0.24         0.17
+  L4157                       0.18      0.20      0.18      0.24         0.18
+  L4258                       0.14      0.14      0.20      0.01         0.01
+  L4359                       0.14      0.33      0.14      0.38         0.14
+  L4560                       0.33      0.50      0.33      0.40         0.20
+  L4662                       0.50      0.53      0.50      0.55         0.50
+  
+
+  Analysis begun on:  Fri Oct 23 19:49:27 2026
+  Analysis ended on:  Fri Oct 23 19:49:29 2026
+  Total elapsed time: 00:00:02
