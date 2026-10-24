@@ -1,6 +1,6 @@
 # 1729-SWMM5-Models-2030
 
-A reference library of 3,854 EPA SWMM5 input (`.inp`) files covering hydrology, hydraulics, low impact development (LID), water quality, force mains, pumps, weirs, orifices, and dynamic-wave routing. The collection also includes XPSWMM conversions, training examples, and version-specific regression cases.
+A reference library of 4,540 EPA SWMM5 input (`.inp`) files covering hydrology, hydraulics, low impact development (LID), water quality, force mains, pumps, weirs, orifices, and dynamic-wave routing. The collection also includes XPSWMM conversions, training examples, and version-specific regression cases.
 
 Maintained by Robert (Bob) Dickinson.
 
@@ -40,14 +40,17 @@ Both are Apache-2.0 material from HydroCouple; each folder carries its license a
 
 ## Collection overview
 
-Counts below come from a local inventory of the maintainer's working copy taken October 23, 2026: 20,463 files totaling 15,962 MB (about 15.6 GB), excluding the `.git` directory. The working copy includes generated results and other files that Git may ignore, so these figures may differ from the files tracked on GitHub and are not a download-size estimate.
+Counts below come from a local inventory of the maintainer's working copy, last updated October 23, 2026: 22,208 files totaling 15,977 MB (about 15.6 GB), excluding the `.git` directory. The working copy includes generated results and other files that Git may ignore, so these figures may differ from the files tracked on GitHub and are not a download-size estimate.
 
-All 42 top-level folders and the repository root are listed, ordered by file count. Sizes are rounded to the nearest MB; folders shown as 0 MB are under 0.5 MB.
+All 44 top-level folders and the repository root are listed, ordered by file count. Sizes are rounded to the nearest MB, so folder sizes may not add exactly to the total; folders shown as 0 MB are under 0.5 MB.
+
+The two OpenSWMM folders added October 23, 2026, account for the entire increase from the previous scan (1,745 files, about 16 MB). None of their 686 inputs has stored `.out` results yet, and only 19 have `.rpt` files, so the collection now has 4,540 `.inp` files against 3,461 `.out` files.
 
 | Folder | `.inp` | `.rpt` | `.out` | `.md` | All files | MB | Contents |
 |---|--:|--:|--:|--:|--:|--:|---|
 | [`XPSWMM`](XPSWMM/) | 1,859 | 1,859 | 1,859 | 1,859 | 9,461 | 1,906 | XPSWMM-to-EPA-SWMM5 conversions using the XPSWMM Card Reader; also 1,859 `.xp` and 111 `.xpx` files |
 | [`SWMM5_NCIMM`](SWMM5_NCIMM/) | 589 | 589 | 386 | 589 | 2,177 | 6,388 | Examples and stress tests, from small cases to large networks |
+| [`OpenSWMM_Code_Review_2026`](OpenSWMM_Code_Review_2026/) | 351 | 0 | 0 | 212 | 1,307 | 5 | NEW. Code-review reproducer decks with 400 `.c` source files and 326 `.patch` files; no results yet (see above) |
 | [`EPA`](EPA/) | 154 | 154 | 149 | 154 | 899 | 995 | EPA examples, Extran-manual cases, and hydraulic-structure tests |
 | [`OWA_USER`](OWA_USER/) | 151 | 151 | 120 | 151 | 854 | 406 | Open Water Analytics user and regression examples |
 | [`Simon_EPA`](Simon_EPA/) | 86 | 86 | 84 | 86 | 848 | 691 | Session 1–81 training collection |
@@ -57,6 +60,7 @@ All 42 top-level folders and the repository root are listed, ordered by file cou
 | [`LID`](LID/) | 95 | 95 | 78 | 95 | 528 | 7 | Bioretention, permeable pavement, green roofs, and other LID controls |
 | [`OWA_EXTRAN`](OWA_EXTRAN/) | 82 | 82 | 76 | 82 | 470 | 13 | Extran-style hydraulic cases |
 | [`Semi_Real_Models`](Semi_Real_Models/) | 78 | 78 | 60 | 78 | 455 | 566 | Semi-realistic and real-world-style networks |
+| [`OpenSWMM_Engine_Test_Decks`](OpenSWMM_Engine_Test_Decks/) | 335 | 19 | 0 | 15 | 438 | 11 | NEW. OpenSWMM engine test inputs with their data files (`.dat`, `.h5`, `.json`, `.rxn`, others); no `.out` files yet |
 | [`Training`](Training/) | 69 | 69 | 57 | 69 | 380 | 259 | General training examples |
 | [`january5_2003_examples`](january5_2003_examples/) | 0 | 16 | 16 | 0 | 311 | 1 | Historical examples: 276 `.dat` files plus reports and outputs; no `.inp` files |
 | [`Viewer-Demo-Results`](Viewer-Demo-Results/) | 17 | 17 | 17 | 1 | 244 | 18 | Viewer demonstration models and results |
@@ -89,7 +93,7 @@ All 42 top-level folders and the repository root are listed, ordered by file cou
 | [`RED_Files`](RED_Files/) | 1 | 1 | 0 | 1 | 3 | 0 | Single test model |
 | [`Test_Interface_Files`](Test_Interface_Files/) | 1 | 0 | 0 | 1 | 2 | 0 | Interface-file test |
 | [`Simple Test Models`](Simple%20Test%20Models/) | 1 | 0 | 0 | 0 | 2 | 0 | Simple test model |
-| Total | 3,854 | 4,080 | 3,461 | 3,802 | 20,463 | 15,962 | |
+| Total | 4,540 | 4,099 | 3,461 | 4,029 | 22,208 | 15,977 | |
 
 Equal counts of `.inp`, `.rpt`, `.out`, and `.md` files in a folder do not by themselves prove that each input has a matching report, output, and summary. Confirming result coverage requires matching files by folder and base name. Likewise, `.inp` totals are file counts, not counts of distinct networks or passing tests.
 
@@ -97,20 +101,26 @@ Preserve each model's accompanying files when copying an example.
 
 ### By file type
 
-| File type | Files | Size (MB) |
-|---|--:|--:|
-| Binary results (`.out`) | 3,461 | 10,464.6 |
-| SWMM input files (`.inp`) | 3,854 | 2,161.8 |
-| Data files (`.dat`) | 688 | 1,700.8 |
-| XPSWMM files (`.xp`) | 1,859 | 793.2 |
-| Text reports (`.rpt`) | 4,080 | 531.1 |
-| XPSWMM `.xpx` files | 111 | 119.0 |
-| Text files (`.txt`) | 1,762 | 30.5 |
-| Markdown files (`.md`) | 3,802 | 5.1 |
-| Other files | 846 | about 156 |
-| Total | 20,463 | 15,962 |
+| File type | Files |
+|---|--:|
+| SWMM input files (`.inp`) | 4,540 |
+| Text reports (`.rpt`) | 4,099 |
+| Markdown files (`.md`) | 4,029 |
+| Binary results (`.out`) | 3,461 |
+| XPSWMM files (`.xp`) | 1,859 |
+| Text files (`.txt`) | 1,766 |
+| Data files (`.dat`) | 704 |
+| C source files (`.c`) | 400 |
+| Configuration files (`.ini`) | 333 |
+| Patch files (`.patch`) | 326 |
+| Log files (`.log`) | 304 |
+| XPSWMM `.xpx` files | 111 |
+| Other files | 276 |
+| Total | 22,208 |
 
-Binary `.out` results account for about two-thirds (65.6%) of the local collection's size. `SWMM5_NCIMM` is the largest folder by size (6,388 MB), while `XPSWMM` holds 46% of all files but about 12% of the space.
+Newer file types from the OpenSWMM folders include `.h5` (12), `.rxn` (9), `.h` (2), `.tsv` (2), `.tsf` (2), `.heat` (2), `.age` (1), and `.ard` (1).
+
+Binary `.out` results (10,464.6 MB) account for about two-thirds (65.5%) of the local collection's size. `SWMM5_NCIMM` is the largest folder by size (6,388 MB), while `XPSWMM` holds about 43% of all files but about 12% of the space. The two OpenSWMM folders together use about 16 MB.
 
 ## Per-model Markdown summaries
 
