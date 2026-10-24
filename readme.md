@@ -18,6 +18,17 @@ Added October 23, 2026: [EPA_PYSWMM_Additions](EPA_PYSWMM_Additions/), assembled
 
 The addition's README reports 40 previously missing models and separately lists four alternate or updated revisions. Matching used file content rather than filenames, including normalized comparisons and nearest-neighbor similarity. See the [addition's README](EPA_PYSWMM_Additions/README.md) for the comparison method, source revision, licensing, and AI-use disclosure. These are documented corpus-comparison results, not a claim that every input is unique or independently validated.
 
+## Recent additions: code-review and OpenSWMM test decks
+
+Added October 23, 2026, after measuring the corpus against the 200 findings of the [HydroCouple swmm-code-review](https://github.com/HydroCouple/swmm-code-review): before these folders, 53 of its input-reachable findings had no corpus model and 25 had only one to three.
+
+| Folder | Contents |
+|---|---|
+| [`OpenSWMM_Code_Review_2026`](OpenSWMM_Code_Review_2026/) | The review's 351 reproducer decks, one folder per finding, with write-ups, data files, test programs and patches; a coverage table of all 200 findings against this corpus; and an EPA SWMM 5.2.4 status for every deck. 11 decks crash or hang EPA SWMM 5.2.4 and are listed in its README. |
+| [`OpenSWMM_Engine_Test_Decks`](OpenSWMM_Engine_Test_Decks/) | The 335 input files from the OpenSWMM engine repository that were not already here, in their original paths with their data files. 250 need OpenSWMM 6. |
+
+Both are Apache-2.0 material from HydroCouple; each folder carries its license and an AI-use note.
+
 ## Start here
 
 - Learning SWMM: [Training](Training/), [Simon_EPA](Simon_EPA/), and [NCIMM_Training](NCIMM_Training/).
