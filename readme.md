@@ -1,82 +1,113 @@
-# 1729-SWMM5-Models
+# 1729-SWMM5-Models-2030
 
-A reference library of **~3,800 EPA SWMM5 (`.inp`) models** — hydrology, hydraulics, LID, water quality, force mains, pumps, weirs, orifices, and dynamic-wave routing, plus XPSWMM conversions and training examples. Every model is paired with an auto-generated Markdown summary.
+A reference library of approximately 3,800 EPA SWMM5 (`.inp`) models covering hydrology, hydraulics, low impact development (LID), water quality, force mains, pumps, weirs, orifices, and dynamic-wave routing. The collection also includes XPSWMM conversions, training examples, and version-specific regression cases.
 
-## Repository at a glance
+Maintained by Robert (Bob) Dickinson.
 
-| | |
+## Recent additions: EPA and PySWMM test models
+
+Added October 23, 2026: [EPA_PYSWMM_Additions](EPA_PYSWMM_Additions/), assembled by comparing EPA, PySWMM, and swmm-python test inputs against the existing corpus.
+
+| Subfolder | Contents |
 |---|---|
-| SWMM5 input models (`.inp`) | ~3,800 |
-| Per-model summaries (`.md`) | one per model |
-| Report files (`.rpt`) | ~2,100 |
-| Tracked files | ~13,100 |
-| Repository size (`.git`) | ~670 MB |
-| Output files (`.out`) | kept on disk, **not** tracked (see below) |
+| `EPA_nrtestsuite_v2.5.0-dev/swc/` | 25 National Stormwater Calculator input decks, three NCDC rainfall files, and EPA documentation |
+| `EPA_nrtestsuite_v2.5.0-dev/examples/` | Example2 and Example3 |
+| `EPA_nrtestsuite_v2.5.0-dev/revisions/` | Four alternate or updated inputs: Example4, user2, CoS-Reduced-Inlets, and CoS-Reduced-Outlets |
+| `PYSWMM_tests/` | Seven PySWMM test and documentation models |
+| `SWMM_PYTHON_tests/` | test_Example3 and test_Example3.old |
 
-## Folder breakdown
+The addition's README reports 40 previously missing models and separately lists four alternate or updated revisions. Matching used file content rather than filenames, including normalized comparisons and nearest-neighbor similarity. See the [addition's README](EPA_PYSWMM_Additions/README.md) for the comparison method, source revision, licensing, and AI-use disclosure. These are documented corpus-comparison results, not a claim that every input is unique or independently validated.
 
-| Folder | Models | Contents |
+## Start here
+
+- Learning SWMM: [Training](Training/), [Simon_EPA](Simon_EPA/), and [NCIMM_Training](NCIMM_Training/).
+- Rainfall-runoff processes: [Hydrology](Hydrology/) and shared forcing data in [DataFiles](DataFiles/).
+- Hydraulic routing and structures: [Hydraulics](Hydraulics/), [Pumps](Pumps/), [Weirs](Weirs/), and [Orifices](Orifices/).
+- Green infrastructure and water quality: [LID](LID/) and [WQ](WQ/).
+- Solver comparisons and regression work: OWA and version-specific folders, plus [EPA_PYSWMM_Additions](EPA_PYSWMM_Additions/).
+- Converted XPSWMM models: [XPSWMM](XPSWMM/).
+
+## Collection overview
+
+The following model counts are approximate figures from the existing catalog, not a fresh inventory. They should not be interpreted as counts of distinct networks or passing tests.
+
+| Folder | Approximate models | Contents |
 |---|--:|---|
-| `XPSWMM` | ~1,860 | Models converted from XPSWMM (`.xp`) to EPA SWMM5 via the XPSWMM Card Reader |
-| `SWMM5_NCIMM` | ~590 | Core EPA SWMM5 examples and stress tests, from tiny cases to very large networks |
-| `EPA` | ~150 | EPA SWMM5 examples, Extran-manual cases, and hydraulic-structure tests |
-| `OWA_USER` | ~150 | Open Water Analytics user and regression examples |
-| `Hydrology` | ~150 | Runoff/infiltration, snowmelt, RDII, and continuous-simulation models |
-| `Hydraulics` | ~140 | Dynamic-wave routing, force mains, and structure tests |
-| `LID` | ~95 | Low Impact Development controls (bioretention, permeable pavement, green roofs, …) |
-| `Simon_EPA` | ~86 | Curated Session 1–81 training set |
-| `OWA_EXTRAN` | ~82 | Open Water Analytics Extran-style hydraulic cases |
-| `NCIMM_Training` | ~82 | NC IMM training-course models |
-| `Semi_Real_Models` | ~78 | Semi-realistic / real-world-style networks |
-| `Training` | ~69 | General training and course examples |
-| `OWA_ROUTING` | ~45 | OWA routing regression cases |
-| `NCIMM_ROUTING` | ~30 | NCIMM routing analyses |
-| `LEW_update_v5113` / `LEW_update_v5115` | ~27 / ~11 | Version-specific regression sets (SWMM 5.1.013 / 5.1.015) |
-| `SWMM5_1_014_Bug_Examples` | ~24 | Cases reproducing SWMM 5.1.014 issues |
-| `LEW_CHI_SWMM5.2` | ~23 | LEW / CHI SWMM5.2 test cases |
-| `Weirs` / `Orifices` / `Pumps` | ~23 / ~18 / ~12 | Hydraulic-structure test models |
-| `z1000Years` | ~9 | Long continuous (1,000-year) simulations |
-| `WQ` | ~9 | Water-quality / pollutant-routing models |
-| `OWA_update_v5111` | ~8 | OWA SWMM 5.1.011 regression set |
-| `VRough_Tests` / `VRough_Tests_EPA` | ~3 | Variable Manning's-roughness tests |
-| `Greenville`, `Matt_Anderson_Teams`, `Sam`, `logan`, `Special`, `AD_SSF`, `15100`, `RED_Files`, `Test_Interface_Files` | misc | Named, contributed, and special-case models |
-| `DataFiles` | — | Shared rainfall and external data files (`.dat`, `.rff`, …) referenced by the models |
+| `XPSWMM` | 1,860 | XPSWMM-to-EPA-SWMM5 conversions using the XPSWMM Card Reader |
+| `SWMM5_NCIMM` | 590 | Examples and stress tests, from small cases to large networks |
+| `EPA` | 150 | EPA examples, Extran-manual cases, and hydraulic-structure tests |
+| `OWA_USER` | 150 | Open Water Analytics user and regression examples |
+| `Hydrology` | 150 | Runoff, infiltration, snowmelt, RDII, and continuous simulation |
+| `Hydraulics` | 140 | Dynamic-wave routing, force mains, and hydraulic structures |
+| `LID` | 95 | Bioretention, permeable pavement, green roofs, and other LID controls |
+| `Simon_EPA` | 86 | Session 1–81 training collection |
+| `OWA_EXTRAN` | 82 | Extran-style hydraulic cases |
+| `NCIMM_Training` | 82 | Training-course models |
+| `Semi_Real_Models` | 78 | Semi-realistic and real-world-style networks |
+| `Training` | 69 | General training examples |
+| `OWA_ROUTING` / `NCIMM_ROUTING` | 45 / 30 | Routing test collections |
+| `LEW_update_v5113` / `LEW_update_v5115` | 27 / 11 | SWMM 5.1.013 and 5.1.015 regression collections |
+| `SWMM5_1_014_Bug_Examples` | 24 | Historical issue-reproduction cases |
+| `LEW_CHI_SWMM5.2` | 23 | SWMM 5.2 test cases |
+| `Weirs` / `Orifices` / `Pumps` | 23 / 18 / 12 | Hydraulic-structure examples |
+| `z1000Years` | 9 | Long continuous-simulation cases |
+| `WQ` | 9 | Water-quality and pollutant-routing examples |
+| `OWA_update_v5111` | 8 | SWMM 5.1.011 regression cases |
 
-*Counts are approximate; the `XPSWMM` set dominates the file total.*
+Other collections include variable-roughness tests, named contributions, interface-file tests, and special cases. Preserve each model's accompanying files when copying an example.
 
 ## Per-model Markdown summaries
 
-Every `<model>.inp` has a matching `<model>.md` beside it — a one-page summary you can read on GitHub without opening SWMM. Each summary includes:
+The library includes auto-generated Markdown summaries alongside model inputs. Where available, these provide:
 
-- **Badges** — flow units, routing method, infiltration method, and node / link / subcatchment counts
-- **Run status** — a colored callout pulled from the model's `.rpt` (clean / warnings / errors, with continuity error)
-- **Configuration** — flow units, infiltration, routing, simulation window, and time steps
-- **Inventory** — junctions, outfalls, storage, conduits, pumps, orifices, weirs, outlets, plus subcatchment count and total area
-- **LID, water quality, controls, and forcing** sections, shown only when the model uses them
+- Flow units, routing and infiltration methods, and object counts.
+- Simulation dates, time steps, and model configuration.
+- Inventories of subcatchments, nodes, links, and hydraulic structures.
+- LID, water-quality, control-rule, and forcing details where applicable.
+- Report-derived run status, warnings, errors, and continuity information when an accompanying report is available.
 
-The summaries are generated directly from each `.inp` (and its sibling `.rpt`), so they stay in step with the models.
-
-## Output files (`.out`) are not tracked
-
-SWMM5 binary results files (`*.out`, roughly **8.8 GB** across the library) are **git-ignored**. They stay on disk for immediate use but are kept out of version control so the repository stays small — `.git` is ~670 MB instead of several GB. Hot-start interface files (`*.hsf`) are excluded for the same reason. See [`.gitignore`](.gitignore).
-
-To recreate any `.out`, re-run its model in EPA SWMM 5.2.
+Check the actual `.inp` and `.rpt` files before relying on a summary. A stored report describes a particular run; it does not establish that a changed input or a different solver version will produce the same result. Summary coverage should not be assumed for newly added files.
 
 ## Running a model
 
-Open any `.inp` in **EPA SWMM 5.2**, or run it from the command line:
+1. Clone or download the repository:
 
-```
-runswmm.exe  model.inp  model.rpt  model.out
-```
+   ```bash
+   git clone https://github.com/SWMMBobSWMM6/1729-SWMM5-Models-2030.git
+   cd 1729-SWMM5-Models-2030
+   ```
 
-`runswmm.bat` in the repository root wraps this for batch runs.
+2. Select an input and review its title, options, external-file references, and any accompanying documentation.
+3. Use EPA SWMM 5.2 as a starting point, while checking version requirements for historical regression cases. Confirm rainfall, time-series, and interface-file paths before running.
+4. Open the input in the SWMM interface, or run an installed command-line solver:
 
----
+   ```text
+   runswmm.exe model.inp model.rpt model.out
+   ```
 
-*EPA SWMM5 model library maintained by Robert (Bob) Dickinson.*
+   Replace the executable name or path with your installed solver. The repository also includes `runswmm.bat`; review its local paths and settings before use.
 
+5. Inspect the new report for errors, warnings, continuity, and numerical behavior before interpreting results. For comparisons, record the solver version and preserve the input and supporting data used.
+
+The collection includes stress tests and historical bug-reproduction inputs. Inclusion is not a guarantee of successful execution, calibration, or suitability for design.
+
+## Reports, binary results, and ignored files
+
+- `.inp`: model input.
+- `.md`: documentation and model summaries where available.
+- `.rpt`: text reports from stored runs where included.
+- `.out`: binary simulation results; availability varies by folder.
+
+The root [`.gitignore`](.gitignore) excludes `.out`, `.hsf`, and `.rdii` files in upper- and lowercase forms, along with temporary artifacts. Ignore rules do not remove files already tracked in Git, so selected committed outputs may still be present. Do not assume that every model includes binary results; regenerate outputs using the intended solver and required supporting data.
+
+Repository size, report counts, and summary coverage change as the collection grows; earlier local disk-size estimates are not download guarantees.
 
 ## License and provenance
 
-This repository is dedicated to the public domain under The Unlicense (see LICENSE), matching EPA SWMM5's own public-domain status. Most models here are EPA public-domain examples, Open Water Analytics regression and example models, or Bob's own XPSWMM-to-SWMM5 conversions. A handful of folders, including Greenville, Matt_Anderson_Teams, Sam, logan, and Special, are contributed or special-case models from colleagues and students; confirm provenance before assuming the same public-domain terms apply if you plan to redistribute those specifically.
+The repository-level dedication is [The Unlicense](LICENSE). Source-specific terms and provenance still need to be checked for contributed or imported material.
+
+- The existing collection includes EPA examples, Open Water Analytics examples and regression models, and Bob Dickinson's XPSWMM-to-SWMM5 conversions.
+- Named or contributed folders, including `Greenville`, `Matt_Anderson_Teams`, `Sam`, `logan`, and `Special`, require provenance checks before redistribution.
+- The new PySWMM inputs include a BSD-2-Clause license; the swmm-python material includes its own license notice. The addition's README notes that the EPA regression-suite source repository carries no license file.
+
+Consult the [EPA/PySWMM provenance notes](EPA_PYSWMM_Additions/README.md) and accompanying license files rather than assuming the repository-level dedication overrides third-party terms.
